@@ -1,28 +1,17 @@
 {
-  "generatedAt": "2026-11-08T17:05:56.458Z",
+  "generatedAt": "2026-11-08T18:34:55.383Z",
   "templates": 39,
-  "ai": 1545,
-  "consideredSections": 60,
+  "ai": 1549,
+  "consideredSections": 4,
   "usage": {
-    "calls": 86,
-    "promptTokens": 140602,
-    "completionTokens": 131071
+    "calls": 4,
+    "promptTokens": 9337,
+    "completionTokens": 2695
   },
-  "rejections": {
-    "unparseable-response": 4,
-    "option-unbound-reference": 9,
-    "meta-reference-to-source": 30,
-    "empty-option": 1,
-    "unbound-reference": 5,
-    "quote-too-short": 5,
-    "missing-rationale": 1,
-    "duplicate-option-text": 1,
-    "attachment-not-in-source": 1,
-    "response-shape": 1
-  },
+  "rejections": {},
   "coverage": {
     "architecture": {
-      "count": 292,
+      "count": 294,
       "floor": 100,
       "weight": 20,
       "met": true
@@ -46,7 +35,7 @@
       "met": true
     },
     "installation": {
-      "count": 165,
+      "count": 166,
       "floor": 50,
       "weight": 10,
       "met": true
@@ -64,7 +53,7 @@
       "met": true
     },
     "bgp": {
-      "count": 152,
+      "count": 153,
       "floor": 30,
       "weight": 6,
       "met": true

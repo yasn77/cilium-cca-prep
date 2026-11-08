@@ -1,6 +1,6 @@
 # Corpus report
 
-Generated 2026-11-08T17:30:36.923Z
+Generated 2026-11-08T18:42:43.168Z
 
 ## Source
 
@@ -27,39 +27,39 @@ Dropped:
 
 ## Corpus
 
-**680 questions** in the shipped corpus, **904** quarantined.
+**683 questions** in the shipped corpus, **905** quarantined.
 
 | Domain | Weight | Questions | Floor | Status |
 |---|---|---|---|---|
-| Architecture | 20% | 155 | 100 | met |
-| Network Policy | 18% | 105 | 90 | met |
-| Service Mesh | 16% | 113 | 80 | met |
-| Network Observability | 10% | 59 | 50 | met |
-| Installation and Configuration | 10% | 78 | 50 | met |
-| Cluster Mesh | 10% | 64 | 50 | met |
+| Architecture | 20% | 154 | 100 | met |
+| Network Policy | 18% | 104 | 90 | met |
+| Service Mesh | 16% | 114 | 80 | met |
+| Network Observability | 10% | 60 | 50 | met |
+| Installation and Configuration | 10% | 77 | 50 | met |
+| Cluster Mesh | 10% | 67 | 50 | met |
 | eBPF | 10% | 26 | 25 | met |
-| BGP and External Networking | 6% | 80 | 30 | met |
+| BGP and External Networking | 6% | 81 | 30 | met |
 
 <details><summary>Coverage by competency</summary>
 
 **Architecture**
 
-- `unmapped` — 146
+- `unmapped` — 145
 - `component-roles` — 8 _(thin)_
 - `datapath-models` — 1 _(thin)_
 
 **BGP and External Networking**
 
-- `bgp-peering` — 28
+- `bgp-peering` — 27
 - `bgp-advertisement` — 22 _(thin)_
-- `egress-gateway` — 18 _(thin)_
+- `egress-gateway` — 20 _(thin)_
 - `bgp-control-plane` — 12 _(thin)_
 
 **Cluster Mesh**
 
 - `unmapped` — 24
-- `mesh-benefits` — 22 _(thin)_
-- `global-services` — 16 _(thin)_
+- `mesh-benefits` — 23 _(thin)_
+- `global-services` — 18 _(thin)_
 - `mesh-setup` — 2 _(thin)_
 
 **eBPF**
@@ -71,17 +71,17 @@ Dropped:
 
 **Installation and Configuration**
 
-- `unmapped` — 56
-- `upgrade` — 9 _(thin)_
-- `cli-configuration` — 6 _(thin)_
+- `unmapped` — 57
+- `upgrade` — 8 _(thin)_
 - `install` — 6 _(thin)_
+- `cli-configuration` — 5 _(thin)_
 - `connectivity-test` — 1 _(thin)_
 
 **Network Policy**
 
 - `unmapped` — 75
 - `policy-rule-structure` — 24 _(thin)_
-- `policy-intent` — 5 _(thin)_
+- `policy-intent` — 4 _(thin)_
 - `identity-model` — 1 _(thin)_
 
 **Network Observability**
@@ -89,13 +89,13 @@ Dropped:
 - `hubble-capabilities` — 32
 - `hubble-cli` — 19 _(thin)_
 - `l7-visibility` — 4 _(thin)_
+- `unmapped` — 3
 - `metrics` — 2 _(thin)_
-- `unmapped` — 2
 
 **Service Mesh**
 
 - `unmapped` — 73
-- `ingress` — 20 _(thin)_
+- `ingress` — 21 _(thin)_
 - `encryption` — 10 _(thin)_
 - `sidecar-versus-sidecarless` — 6 _(thin)_
 - `gateway-api` — 4 _(thin)_
@@ -104,12 +104,12 @@ Dropped:
 
 | Yield source | Count |
 |---|---|
-| scenario | 286 |
+| scenario | 290 |
 | attribute | 187 |
 | definition | 115 |
-| contrast | 92 |
+| contrast | 91 |
 
-Scenario share: **42.1%** (floor 25%).
+Scenario share: **42.5%** (floor 25%).
 
 ## Verification
 
@@ -125,25 +125,25 @@ Quarantine by gate:
 | Gate | Rejected |
 |---|---|
 | shape | 409 |
-| judge | 252 |
+| judge | 250 |
 | entail | 211 |
-| duplicate | 21 |
+| duplicate | 24 |
 | quote | 11 |
 
 Judge histogram:
 
 | Category | Count |
 |---|---|
-| distractors_too_obvious | 49 |
-| good_exam_item | 1172 |
-| trivia_not_in_blueprint | 174 |
-| wording_broken | 75 |
+| distractors_too_obvious | 50 |
+| good_exam_item | 1174 |
+| trivia_not_in_blueprint | 177 |
+| wording_broken | 66 |
 | ambiguity_two_correct | 3 |
-| answer_not_determinable | 111 |
+| answer_not_determinable | 118 |
 
 ## Known weak points
 
-100 of 680 questions (14.7%) are flagged here as weaker than the rest: either they survived without a judge verdict, or the correct answer is a term short enough that the entailment check is close to a string match rather than a claim about meaning.
+101 of 683 questions (14.8%) are flagged here as weaker than the rest: either they survived without a judge verdict, or the correct answer is a term short enough that the entailment check is close to a string match rather than a claim about meaning.
 
 <details><summary>List</summary>
 
@@ -207,6 +207,7 @@ Judge histogram:
 - `caadee6363c83ea4` — installation — You want to keep the any-cluster behaviour for a single CiliumNetworkPolicy even though `p
 - `cd26eb87b8bab42c` — installation — A cluster uses Cilium in VXLAN overlay network mode, and Linux has not been configured oth
 - `d6da07fbf00cf725` — installation — Which port is described as the Mutual Authentication port that should be available on each
+- `da68852cecf8975e` — installation — When checking the Envoy Discovery Service for a backend, what naming convention does the E
 - `2ce7b40dff281619` — network-policy — An engineer deploys the Cloud City demo and wants to confirm that the door manager service
 - `5e6fab343b239c46` — network-policy — A cluster administrator notices that `XfrmInNoStates` errors are increasing after a key ro
 - `6d9cd2c4983f7386` — network-policy — A Cilium log contains a warning similar to `Device eth0 does not exist`. Which Helm settin
@@ -216,7 +217,6 @@ Judge histogram:
 - `a6ea2fe404760362` — network-policy — Which label is used in the example to define the pods that are part of the elasticsearch s
 - `aa3bcbb23a132136` — network-policy — A platform team runs Cilium with WireGuard enabled on nodes that sit behind firewalls, and
 - `d4934fe7fe8e009a` — network-policy — An engineer is preparing to deploy the demo application for the first time. The guide note
-- `ef723ee8992971a8` — network-policy — An engineer is deploying the demo application described in the guide to secure communicati
 - `f5fdd29cfca22937` — network-policy — You need to determine whether the derivative policy generated from a ToGroups rule is actu
 - `fddea97dd4ba2db2` — network-policy — An engineer is writing a CiliumNetworkPolicy for endpoints with label env=prod. They want 
 - `0406c752e9069e48` — observability — A network engineer wants to configure Hubble metrics to include the Kubernetes namespace n
@@ -233,11 +233,12 @@ Judge histogram:
 - `07aa7c31eead4d9d` — service-mesh — Which resource kind is defined by the envoy-traffic-management-test.yaml file to configure
 - `175ed6c3580a4b31` — service-mesh — An engineer runs `kubectl get cep -l app=echo -o=jsonpath='{.items[0].status.identity.id}'
 - `26de10fc6cf5877b` — service-mesh — An engineer wants to expose the Cilium ingress controller Envoy listener on the host netwo
+- `3609a0ba0fa39d0e` — service-mesh — After applying a default deny policy, an engineer observes that the HTTP response to a den
 - `4016973c94f97897` — service-mesh — An engineer enables the Cilium ingress controller in host network mode and does not set in
 - `47d1ca85a8c1636b` — service-mesh — In a RequestHeaderModifier filter, which action is used to change the value of an existing
 - `5bacf65cef4c970b` — service-mesh — Which field is used to specify the IP address of a Cilium Gateway?
-- `5c5b21836387ddad` — service-mesh — You apply the following Service manifest to prepare the backend for TLS. A client connects
 - `7e3e7d5c8d560787` — service-mesh — A colleague has retrieved the Cilium Identity for the echo Pod and now wants to check that
+- `8cbdf3736112ea28` — service-mesh — An engineer applies a `CiliumClusterwideNetworkPolicy` to deny all traffic by default. Whe
 - `ace5ee02d23ee35f` — service-mesh — You have a local Kubernetes cluster running Cilium and Istio, and you want to follow the d
 - `b44e7c47c5a088dd` — service-mesh — An engineer wants to pin a Cilium Gateway to a specific IP address using the Gateway API's
 - `c4efbbbdc8bc1810` — service-mesh — You are checking an HTTPRoute and want to confirm that the services it references were fou
@@ -246,7 +247,7 @@ Judge histogram:
 - `e4a7de15750109cd` — service-mesh — Which condition type indicates that all referenced secrets were found and have permission 
 - `eb7842579ba27879` — service-mesh — You have a local Kubernetes cluster running Cilium and Istio, and you want to follow the d
 - `f3025dcb567a41bb` — service-mesh — An engineer is exposing Cilium's Envoy DaemonSet through a Loadbalancer Service in a clust
-- `fe3303dc8df83522` — service-mesh — Which keyword is used in a RequestHeaderModifier filter to delete one or more headers from
+- …and 1 more
 
 </details>
 

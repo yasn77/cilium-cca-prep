@@ -136,7 +136,11 @@ async function main() {
     provenance: {
       ...q.provenance,
       docsSha: q.provenance?.docsSha && q.provenance.docsSha !== 'unknown' ? q.provenance.docsSha : docsSha,
-      createdAt: q.provenance?.createdAt ?? verdictsRaw?.generatedAt ?? new Date().toISOString(),
+      // createdAt must describe the question, not the run. Stamping the run
+      // clock here rewrote every question's provenance on every refresh, which
+      // turned a no-op run into a 1,500-line diff on the corpus and 2,000 on the
+      // quarantine. It is carried forward when present.
+      createdAt: q.provenance?.createdAt ?? null,
     },
   }));
 

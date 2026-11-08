@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T18:44:53.882Z",
+  "generatedAt": "2026-11-08T18:47:01.302Z",
   "model": "jev-latest",
   "configured": true,
   "categories": [
@@ -11,8 +11,8 @@
     "wording_broken"
   ],
   "histogram": {
-    "good_exam_item": 1172,
-    "wording_broken": 75,
+    "good_exam_item": 1174,
+    "wording_broken": 76,
     "trivia_not_in_blueprint": 174,
     "answer_not_determinable": 111,
     "distractors_too_obvious": 49,
@@ -4399,6 +4399,18 @@
       },
       "confidence": 0.56
     },
+    "3c2bedf06b4ceb03": {
+      "choice": "wording_broken",
+      "probabilities": {
+        "good_exam_item": 0.05,
+        "answer_not_determinable": 0.11,
+        "distractors_too_obvious": 0.03,
+        "ambiguity_two_correct": 0.01,
+        "trivia_not_in_blueprint": 0.06,
+        "wording_broken": 0.74
+      },
+      "confidence": 0.69
+    },
     "3c65c8d45a0725e5": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -5070,6 +5082,18 @@
         "wording_broken": 0.01
       },
       "confidence": 0.45
+    },
+    "44e2dfd94e2121f3": {
+      "choice": "good_exam_item",
+      "probabilities": {
+        "good_exam_item": 0.71,
+        "answer_not_determinable": 0.01,
+        "distractors_too_obvious": 0.08,
+        "ambiguity_two_correct": 0.02,
+        "trivia_not_in_blueprint": 0.17,
+        "wording_broken": 0.01
+      },
+      "confidence": 0.65
     },
     "459f5631b12ab900": {
       "choice": "good_exam_item",
@@ -14010,6 +14034,18 @@
         "wording_broken": 0.01
       },
       "confidence": 0.46
+    },
+    "bcb2002cd0408e0b": {
+      "choice": "good_exam_item",
+      "probabilities": {
+        "good_exam_item": 0.77,
+        "answer_not_determinable": 0.02,
+        "distractors_too_obvious": 0.09,
+        "ambiguity_two_correct": 0.05,
+        "trivia_not_in_blueprint": 0.05,
+        "wording_broken": 0.02
+      },
+      "confidence": 0.72
     },
     "bcfc05530a57f00c": {
       "choice": "answer_not_determinable",

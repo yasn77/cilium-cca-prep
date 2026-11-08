@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-08T18:52:35.261Z",
+  "generatedAt": "2026-11-08T18:54:14.418Z",
   "counts": {
-    "total": 908,
+    "total": 911,
     "byGate": {
-      "judge": 255,
+      "judge": 258,
       "quote": 11,
       "duplicate": 22,
       "shape": 409,
@@ -55245,6 +55245,213 @@
       "rejection": {
         "gate": "duplicate",
         "reason": "near-duplicate-stem"
+      }
+    },
+    {
+      "stem": "A platform team has installed Cilium with the bandwidth manager enabled and has annotated a Pod with `kubernetes.io/egress-bandwidth: \"10M\"`. They want to confirm that the feature is active and see which devices are enforcing the egress limit. Which command and output line should they look for?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`kubectl -n kube-system exec ds/cilium -- cilium-dbg status | grep BandwidthManager`, which prints a line such as `BandwidthManager:       EDT with BPF [BBR] [eth0]`"
+        },
+        {
+          "id": "b",
+          "text": "`kubectl -n kube-system exec ds/cilium -- cilium-dbg status | grep BandwidthManager`, which prints a line such as `BandwidthManager:       TBF [eth0]`"
+        },
+        {
+          "id": "c",
+          "text": "`kubectl -n kube-system get pods -l k8s-app=cilium`, which lists the Cilium Pods and the devices they shape traffic on"
+        },
+        {
+          "id": "d",
+          "text": "`kubectl -n kube-system exec ds/cilium -- cilium-dbg status | grep BandwidthManager`, which prints a line such as `BandwidthManager:       EDT with BPF [eth0]` with no congestion control shown"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The `cilium status` CLI command exposes the bandwidth manager through the `BandwidthManager` info line, and it also dumps the list of devices on which the egress bandwidth limitation is enforced. In the documented example the line reads `BandwidthManager:       EDT with BPF [BBR] [eth0]`, showing EDT with BPF, the BBR congestion control and the device `eth0`.",
+      "optionRationale": {
+        "b": "The bandwidth manager uses EDT rather than the TBF (Token Bucket Filter) approach associated with the bandwidth CNI plugin, so the status line would not report TBF.",
+        "c": "Listing the Cilium Pods only verifies that the Cilium Pods have come up correctly; it does not report the bandwidth manager state or the devices used for egress limitation.",
+        "d": "The documented status line includes the congestion control in brackets alongside the device, so a line showing only the device does not match the expected output."
+      },
+      "yieldSource": "attribute",
+      "attachments": [
+        {
+          "kind": "output",
+          "title": "Documented status output",
+          "language": "shell-session",
+          "body": " $ kubectl -n kube-system exec ds/cilium -- cilium-dbg status | grep BandwidthManager\n BandwidthManager:       EDT with BPF [BBR] [eth0]"
+        }
+      ],
+      "citations": [
+        {
+          "file": "network/kubernetes/bandwidth-manager.rst",
+          "anchor": "bandwidth-manager",
+          "title": "Bandwidth Manager",
+          "quote": "the ``cilium status`` CLI command provides visibility through the ``BandwidthManager``\ninfo line. It also dumps a list of devices on which the egress bandwidth limitation\nis enforced:",
+          "url": "https://docs.cilium.io/en/stable/network/kubernetes/bandwidth-manager/#bandwidth-manager"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "openrouter.ai",
+          "model": "deepseek/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/kubernetes/bandwidth-manager.rst#bandwidth-manager",
+        "createdAt": null
+      },
+      "ordinal": 24,
+      "id": "cddacc607fdbbe5c",
+      "domain": "architecture",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "judge",
+        "reason": "judge:trivia_not_in_blueprint",
+        "confidence": 0.21
+      }
+    },
+    {
+      "stem": "The CiliumNetworkPolicy rule1 shown in the attachment is applied in the default namespace. A pod labelled org=empire, class=deathstar runs the deathstar service. An empire ship pod labelled org=empire sends a PUT request to deathstar.default.svc.cluster.local/v1/exhaust-port, and a pod labelled org=rebel sends a POST request to deathstar.default.svc.cluster.local/v1/request-landing. What happens in each case?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The PUT from the empire ship is answered with \"Access denied\", while the request from the pod without the org=empire label is dropped and the connection times out."
+        },
+        {
+          "id": "b",
+          "text": "The PUT from the empire ship is answered with \"Access denied\", and the request from the pod without the org=empire label is also answered with \"Access denied\"."
+        },
+        {
+          "id": "c",
+          "text": "The PUT from the empire ship reaches the maintenance API and the deathstar panics, because the policy only restricts POST requests."
+        },
+        {
+          "id": "d",
+          "text": "The PUT from the empire ship is dropped and the connection times out, while the request from the pod without the org=empire label is answered with \"Access denied\"."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The policy restricts tiefighter to a single allowed HTTP call, POST /v1/request-landing, and disallows all other calls, so the PUT to /v1/exhaust-port is rejected at L7 with \"Access denied\". Because the rule also builds on the identity-aware rule, traffic from pods that do not carry the org=empire label is still dropped at the identity level, so the connection simply times out rather than returning an HTTP error.",
+      "optionRationale": {
+        "b": "The L7 denial message applies only to traffic that is already permitted by identity; pods outside org=empire never reach the HTTP proxy, so they time out instead of receiving \"Access denied\".",
+        "c": "The whole point of the L7 policy is to disallow all calls other than POST /v1/request-landing, explicitly including PUT /v1/exhaust-port, so the panic is prevented rather than permitted.",
+        "d": "The two outcomes are swapped: the labelled empire ship is the one subject to the HTTP rule and gets \"Access denied\", while the unlabelled pod is dropped by identity and times out."
+      },
+      "yieldSource": "scenario",
+      "attachments": [
+        {
+          "kind": "manifest",
+          "title": "The policy under test",
+          "language": "yaml",
+          "body": "apiVersion: \"cilium.io/v2\"\nkind: CiliumNetworkPolicy\nmetadata:\n  name: \"rule1\"\nspec:\n  description: \"L7 policy to restrict access to specific HTTP call\"\n  endpointSelector:\n    matchLabels:\n      org: empire\n      class: deathstar\n  ingress:\n  - fromEndpoints:\n    - matchLabels:\n        org: empire\n    toPorts:\n    - ports:\n      - port: \"80\"\n        protocol: TCP\n      rules:\n        http:\n        - method: \"POST\"\n          path: \"/v1/request-landing\""
+        }
+      ],
+      "citations": [
+        {
+          "file": "gettingstarted/demo.rst",
+          "anchor": "apply-and-test-http-aware-l7-policy",
+          "title": "Apply and Test HTTP-aware L7 Policy",
+          "quote": "As this rule builds on the identity-aware rule, traffic from pods without the label\n``org=empire`` will continue to be dropped causing the connection to time out:",
+          "url": "https://docs.cilium.io/en/stable/gettingstarted/demo/#apply-and-test-http-aware-l7-policy"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "openrouter.ai",
+          "model": "deepseek/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "gettingstarted/demo.rst#apply-and-test-http-aware-l7-policy",
+        "createdAt": null
+      },
+      "ordinal": 16,
+      "id": "abcf6c1db21b5964",
+      "domain": "installation",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "judge",
+        "reason": "judge:wording_broken",
+        "confidence": 0.74
+      }
+    },
+    {
+      "stem": "A kind cluster is being migrated from cluster-pool IPAM to multi-pool IPAM. The Helm upgrade has already been run with `ipam.mode=multi-pool`, `ipam.operator.autoCreateCiliumPodIPPools.default.ipv4.cidrs='{10.0.0.0/8}'`, `ipam.operator.autoCreateCiliumPodIPPools.default.ipv4.maskSize=24` and `extraConfig.enable-cluster-pool-to-multi-pool-migration=true`, and the operator has been restarted. The Cilium agents have not yet been restarted. An engineer inspects `kind-worker` and sees the output in the attachment. What does this output indicate about the state of that node?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The operator has performed the migration: the node's per-node CIDR is now allocated from the `default` multi-pool IP pool, but the agent is still running in cluster-pool mode until it is restarted."
+        },
+        {
+          "id": "b",
+          "text": "The migration has not started on this node, because `spec.ipam.pools` is populated only after the Cilium agent itself is restarted in multi-pool mode."
+        },
+        {
+          "id": "c",
+          "text": "The node has already been fully migrated and its agent restarted, because a `requested` entry for the `default` pool appears alongside the allocation."
+        },
+        {
+          "id": "d",
+          "text": "The node has lost its per-node PodCIDR, because the `podCIDRs` field is no longer present and no replacement allocation has been made."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The output shows `spec.ipam.pools.allocated` with the CIDR `10.0.3.0/24` and `pool: default`, which is the post-migration shape: after the operator performs the migration, each node has the same per-node CIDR allocated from the default multi-pool IP pool. There is no `requested` section, which only appears once the agent has restarted and is requesting IPs from the default pool. The excerpt notes that cluster-pool agents continue to use their existing cluster-pool allocations until they are restarted, so the node is migrated at the operator level while its agent still runs in cluster-pool mode.",
+      "optionRationale": {
+        "b": "The `pools` field is already populated in the output, and the excerpt shows it being filled by the operator's migration before any agent restart is described.",
+        "c": "A `requested` entry appears only after the agent restarts, as shown in the later output where the agent requests `ipv4-addrs: 16` from the `default` pool; the attached output has no such entry.",
+        "d": "The CIDR is not lost: it has moved from `spec.ipam.podCIDRs` into `spec.ipam.pools.allocated` with `pool: default`, preserving the same `10.0.3.0/24` value."
+      },
+      "yieldSource": "scenario",
+      "attachments": [
+        {
+          "kind": "output",
+          "title": "Inspection of kind-worker after the operator restart",
+          "language": "shell",
+          "body": "  $ kubectl get ciliumnode kind-worker -o yaml | yq .spec.ipam\n  pools:\n    allocated:\n      - cidrs:\n          - 10.0.3.0/24\n        pool: default"
+        }
+      ],
+      "citations": [
+        {
+          "file": "network/concepts/ipam/cluster-pool-to-multi-pool.rst",
+          "anchor": "practical-example",
+          "title": "Practical Example",
+          "quote": "After the operator performs the migration, each node has the same per-node CIDR\nallocated from the default multi-pool IP pool:",
+          "url": "https://docs.cilium.io/en/stable/network/concepts/ipam/cluster-pool-to-multi-pool/#practical-example"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "openrouter.ai",
+          "model": "deepseek/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/concepts/ipam/cluster-pool-to-multi-pool.rst#practical-example",
+        "createdAt": null
+      },
+      "ordinal": 19,
+      "id": "88c5bbe744680b30",
+      "domain": "architecture",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "judge",
+        "reason": "judge:wording_broken",
+        "confidence": 0.66
       }
     }
   ]

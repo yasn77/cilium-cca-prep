@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T18:52:17.618Z",
+  "generatedAt": "2026-11-08T18:53:55.655Z",
   "model": "jev-latest",
   "configured": true,
   "categories": [
@@ -11,9 +11,9 @@
     "wording_broken"
   ],
   "histogram": {
-    "good_exam_item": 1175,
-    "wording_broken": 77,
-    "trivia_not_in_blueprint": 174,
+    "good_exam_item": 1176,
+    "wording_broken": 79,
+    "trivia_not_in_blueprint": 175,
     "answer_not_determinable": 112,
     "distractors_too_obvious": 50,
     "ambiguity_two_correct": 3
@@ -7747,6 +7747,18 @@
       },
       "confidence": 0.27
     },
+    "69955fc20c653224": {
+      "choice": "good_exam_item",
+      "probabilities": {
+        "good_exam_item": 0.78,
+        "answer_not_determinable": 0.01,
+        "distractors_too_obvious": 0.13,
+        "ambiguity_two_correct": 0.01,
+        "trivia_not_in_blueprint": 0.06,
+        "wording_broken": 0.01
+      },
+      "confidence": 0.74
+    },
     "699ff7b67caa885b": {
       "choice": "wording_broken",
       "probabilities": {
@@ -10122,6 +10134,18 @@
         "wording_broken": 0.01
       },
       "confidence": 0.6
+    },
+    "88c5bbe744680b30": {
+      "choice": "wording_broken",
+      "probabilities": {
+        "good_exam_item": 0.09,
+        "answer_not_determinable": 0.09,
+        "distractors_too_obvious": 0.01,
+        "ambiguity_two_correct": 0.02,
+        "trivia_not_in_blueprint": 0.07,
+        "wording_broken": 0.72
+      },
+      "confidence": 0.66
     },
     "88dedaf32614e7b3": {
       "choice": "good_exam_item",
@@ -12726,6 +12750,18 @@
         "wording_broken": 0.02
       },
       "confidence": 0.36
+    },
+    "abcf6c1db21b5964": {
+      "choice": "wording_broken",
+      "probabilities": {
+        "good_exam_item": 0.08,
+        "answer_not_determinable": 0.09,
+        "distractors_too_obvious": 0.01,
+        "ambiguity_two_correct": 0.02,
+        "trivia_not_in_blueprint": 0.02,
+        "wording_broken": 0.78
+      },
+      "confidence": 0.74
     },
     "abe18548e6e1e80d": {
       "choice": "good_exam_item",
@@ -15486,6 +15522,18 @@
         "wording_broken": 0.03
       },
       "confidence": 0.54
+    },
+    "cddacc607fdbbe5c": {
+      "choice": "trivia_not_in_blueprint",
+      "probabilities": {
+        "good_exam_item": 0.14,
+        "answer_not_determinable": 0.25,
+        "distractors_too_obvious": 0.1,
+        "ambiguity_two_correct": 0.11,
+        "trivia_not_in_blueprint": 0.34,
+        "wording_broken": 0.06
+      },
+      "confidence": 0.21
     },
     "ce142e7ce920fba3": {
       "choice": "good_exam_item",

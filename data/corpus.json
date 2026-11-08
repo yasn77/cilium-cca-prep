@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "docsRef": "v1.20.4",
   "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
-  "generatedAt": "2026-11-08T18:52:35.245Z",
+  "generatedAt": "2026-11-08T18:54:14.394Z",
   "counts": {
-    "total": 683,
+    "total": 684,
     "byDomain": {
       "architecture": 156,
       "network-policy": 105,
@@ -13,15 +13,15 @@
       "installation": 78,
       "cluster-mesh": 64,
       "ebpf": 26,
-      "bgp": 82
+      "bgp": 83
     },
     "byYieldSource": {
       "definition": 115,
-      "scenario": 287,
+      "scenario": 288,
       "attribute": 188,
       "contrast": 93
     },
-    "scenarioShare": 0.42,
+    "scenarioShare": 0.421,
     "judgeRan": true,
     "judgeSource": "systemone+adversarial",
     "retired": 0
@@ -11565,6 +11565,76 @@
       "id": "674c0160083b5815",
       "domain": "bgp",
       "competency": "bgp-peering",
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "A CiliumEgressGatewayPolicy selects a gateway node with a nodeSelector, and its egressGateway spec sets both `interface: eth1` and `egressIP: 10.0.0.5`. What does Cilium do with this policy?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It ignores the policy, because the egressIP and interface properties cannot both be specified in the egressGateway spec."
+        },
+        {
+          "id": "b",
+          "text": "It uses eth1 as the egress interface and 10.0.0.5 as the egress IP, with the interface taking precedence."
+        },
+        {
+          "id": "c",
+          "text": "It uses 10.0.0.5 as the egress IP and determines the interface dynamically by route lookup in the datapath."
+        },
+        {
+          "id": "d",
+          "text": "It applies the policy but drops matching traffic with the reason `No Egress IP configured`."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The egressIP and interface properties are mutually exclusive. A policy that specifies both is not partially honoured and does not fall back to one of the other selection methods: Cilium ignores it entirely.",
+      "optionRationale": {
+        "b": "There is no precedence rule between the two properties; specifying both makes the policy invalid rather than letting one win.",
+        "c": "Dynamic route lookup is how the interface is chosen when only egressIP is given, but here interface is also set, so the policy is ignored.",
+        "d": "The `No Egress IP configured` drop reason applies when Cilium cannot select an Egress IP, for example when the specified egressIP is not configured on any interface of the gateway node — not when both properties are set."
+      },
+      "yieldSource": "scenario",
+      "attachments": [
+        {
+          "kind": "manifest",
+          "title": "The egress gateway spec under test",
+          "language": "yaml",
+          "body": "  egressGateway:\n    nodeSelector:\n      matchLabels:\n        testLabel: testVal\n    interface: ethX"
+        }
+      ],
+      "citations": [
+        {
+          "file": "network/egress-gateway/egress-gateway.rst",
+          "anchor": "selecting-and-configuring-the-gateway-node",
+          "title": "Selecting and configuring the gateway node",
+          "quote": "The ``egressIP`` and ``interface`` properties cannot both be specified in the ``egressGateway`` spec. Egress Gateway Policies that contain both of these properties will be ignored by Cilium.",
+          "url": "https://docs.cilium.io/en/stable/network/egress-gateway/egress-gateway/#selecting-and-configuring-the-gateway-node"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "openrouter.ai",
+          "model": "deepseek/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/egress-gateway/egress-gateway.rst#selecting-and-configuring-the-gateway-node",
+        "createdAt": null,
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "good_exam_item"
+        }
+      },
+      "ordinal": 8,
+      "id": "69955fc20c653224",
+      "domain": "bgp",
+      "competency": "egress-gateway",
       "type": "single",
       "schemaVersion": 1
     },

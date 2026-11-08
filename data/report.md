@@ -1,6 +1,6 @@
 # Corpus report
 
-Generated 2026-11-08T03:12:07.718Z
+Generated 2026-11-08T03:20:38.533Z
 
 ## Source
 
@@ -27,76 +27,85 @@ Dropped:
 
 ## Corpus
 
-**142 questions** in the shipped corpus, **42** quarantined.
+**465 questions** in the shipped corpus, **93** quarantined.
 
 | Domain | Weight | Questions | Floor | Status |
 |---|---|---|---|---|
-| Architecture | 20% | 27 | 100 | **short** |
-| Network Policy | 18% | 30 | 90 | **short** |
-| Service Mesh | 16% | 52 | 80 | **short** |
-| Network Observability | 10% | 14 | 50 | **short** |
-| Installation and Configuration | 10% | 9 | 50 | **short** |
-| Cluster Mesh | 10% | 4 | 50 | **short** |
-| eBPF | 10% | 3 | 50 | **short** |
-| BGP and External Networking | 6% | 3 | 30 | **short** |
+| Architecture | 20% | 103 | 100 | met |
+| Network Policy | 18% | 92 | 90 | met |
+| Service Mesh | 16% | 75 | 80 | **short** |
+| Network Observability | 10% | 46 | 50 | **short** |
+| Installation and Configuration | 10% | 56 | 50 | met |
+| Cluster Mesh | 10% | 49 | 50 | **short** |
+| eBPF | 10% | 9 | 25 | **short** |
+| BGP and External Networking | 6% | 35 | 30 | met |
 
 <details><summary>Coverage by competency</summary>
 
 **Architecture**
 
-- `unmapped` — 18
-- `component-roles` — 5 _(thin)_
+- `unmapped` — 86
+- `component-roles` — 13 _(thin)_
 - `datapath-models` — 3 _(thin)_
 - `ipam` — 1 _(thin)_
 
 **BGP and External Networking**
 
-- `egress-gateway` — 3 _(thin)_
+- `egress-gateway` — 15 _(thin)_
+- `bgp-advertisement` — 11 _(thin)_
+- `bgp-peering` — 6 _(thin)_
+- `bgp-control-plane` — 3 _(thin)_
 
 **Cluster Mesh**
 
-- `mesh-benefits` — 2 _(thin)_
-- `global-services` — 1 _(thin)_
-- `unmapped` — 1
+- `unmapped` — 14
+- `global-services` — 14 _(thin)_
+- `mesh-setup` — 11 _(thin)_
+- `mesh-benefits` — 10 _(thin)_
 
 **eBPF**
 
-- `unmapped` — 3
+- `unmapped` — 6
+- `bpf-maps` — 3 _(thin)_
 
 **Installation and Configuration**
 
-- `unmapped` — 8
+- `unmapped` — 45
+- `connectivity-test` — 5 _(thin)_
+- `upgrade` — 5 _(thin)_
 - `status-monitoring` — 1 _(thin)_
 
 **Network Policy**
 
-- `unmapped` — 20
-- `policy-intent` — 4 _(thin)_
-- `policy-rule-structure` — 4 _(thin)_
+- `unmapped` — 64
+- `policy-intent` — 14 _(thin)_
+- `policy-rule-structure` — 12 _(thin)_
 - `policy-enforcement-modes` — 2 _(thin)_
 
 **Network Observability**
 
-- `hubble-capabilities` — 10 _(thin)_
-- `hubble-cli` — 4 _(thin)_
+- `hubble-capabilities` — 33
+- `hubble-cli` — 6 _(thin)_
+- `unmapped` — 5
+- `metrics` — 2 _(thin)_
 
 **Service Mesh**
 
-- `unmapped` — 30
-- `ingress` — 13 _(thin)_
-- `encryption` — 5 _(thin)_
-- `gateway-api` — 4 _(thin)_
+- `unmapped` — 41
+- `ingress` — 17 _(thin)_
+- `gateway-api` — 9 _(thin)_
+- `encryption` — 8 _(thin)_
 
 </details>
 
 | Yield source | Count |
 |---|---|
-| scenario | 54 |
-| definition | 49 |
-| attribute | 27 |
-| contrast | 12 |
+| scenario | 185 |
+| attribute | 119 |
+| definition | 97 |
+| contrast | 64 |
 
-Scenario share: **38.0%** (floor 25%).
+Scenario share: **39.8%** (floor 25%).
 
 ## Verification
 
@@ -111,117 +120,117 @@ Quarantine by gate:
 
 | Gate | Rejected |
 |---|---|
-| entail | 32 |
-| quote | 5 |
+| entail | 77 |
+| quote | 11 |
 | duplicate | 5 |
 
 ## Known weak points
 
-142 of 142 questions (100.0%) are flagged here as weaker than the rest: either they survived without a judge verdict, or the correct answer is a term short enough that the entailment check is close to a string match rather than a claim about meaning.
+465 of 465 questions (100.0%) are flagged here as weaker than the rest: either they survived without a judge verdict, or the correct answer is a term short enough that the entailment check is close to a string match rather than a claim about meaning.
 
 <details><summary>List</summary>
 
+- `00777ac876a5437a` — architecture — Which statement best describes the default behaviour of Cilium's eBPF NodePort implementat
+- `00d8fef3ead89cfe` — architecture — A platform team runs Cilium natively, without CNI chaining, and wants to enforce the `kube
+- `016ba4f68ec584ba` — architecture — You have deployed a node-local DNS cache as a normal pod and applied a Local Redirect Poli
+- `02a1e57c376f7b31` — architecture — Which command does the excerpt present for verifying whether the bandwidth manager with BB
+- `02c14556b8068d9c` — architecture — In a `cilium-dbg monitor` trace, you see several events sharing the same `sock_cookie` val
+- `03426fa3cd206abc` — architecture — An engineer runs Cilium's eBPF kube-proxy replacement with socket-LB enabled. A pod has an
+- `03fb30cbef4d3130` — architecture — An engineer wants to inspect the state and status of the Cilium agent on the node they are
+- `0e45850b7aad078c` — architecture — A cluster administrator is troubleshooting why Maglev consistent hashing is not being appl
 - `0f138c18557ce81d` — architecture — Which statement best describes Kubernetes CRDs in Cilium?
+- `111af0cbc3a4c706` — architecture — An engineer is configuring Maglev for a service that may scale to around 500 backends. The
+- `12431a624869bfe2` — architecture — Which statement about the range of workloads eBPF can handle is supported by the excerpt?
+- `1341abd1960e91d0` — architecture — A pod is configured with a `hostPort` that overlaps with the configured NodePort range, on
 - `147e680e5a65b8fc` — architecture — An engineer wants to use a pool name other than `default` for the migration from cluster-p
 - `18947b8895c26f8b` — architecture — Which statement best describes Load-balancing in Cilium?
 - `1edf065165b76bf0` — architecture — During the migration process, after updating the CiliumPodIPPool to the new CIDR and resta
+- `20a6e7267f8aa86a` — architecture — You are asked to file a GitHub issue about a socket load-balancing setup failure and need 
+- `249ff602e37252bd` — architecture — An on-premises operator wants to combine Cilium's XDP acceleration with a LoadBalancer ser
+- `25e5fa5a37577f6c` — architecture — A cluster's kube-apiserver has been configured to use the NodePort range 10000-32767 inste
+- `26e2a083f26b9dc8` — architecture — A new ENI is being created for an instance whose existing ENIs occupy interface indexes 1,
 - `27bc2b63fecf59ee` — architecture — Which statement best describes Key-Value Store in Cilium?
+- `2d7a0babb735750d` — architecture — A platform team runs a cluster whose nodes are on Linux 5.15 and wants to enable BBR conge
 - `394736af8657ab6e` — architecture — Why is it not possible to directly delete or update the CIDRs already in use within an exi
 - `3bb2c674e502ebe3` — architecture — Which statement best describes Addressing in Cilium?
+- `3c8abe3b04db0c42` — architecture — An engineer is comparing Maglev with the default loadBalancer.algorithm=random. Which stat
+- `3de9bb4db18dbd30` — architecture — You are adapting the example Local Redirect Policy for a cluster whose DNS service and por
+- `4a75c52f99089d9c` — architecture — Which statement about transport protocol support in Cilium's eBPF kube-proxy replacement m
+- `4cff60044d125bf6` — architecture — An operator sets `spec.eni.security-groups` and also `spec.eni.security-group-tags` on the
+- `5020ae9d037269db` — architecture — An engineer wants to find the correct route MTU value to configure inside a KataPod. Accor
 - `577abc361d6b43e9` — architecture — Which statement best describes Masquerading in Cilium?
+- `5a8c15b5594dc81c` — architecture — You want to trace socket LB related datapath events. According to the excerpt, which two t
+- `5b07e7560f42654c` — architecture — A platform team runs Kata Pods on a Cilium cluster with VXLAN enabled. Users report packet
+- `5c3dae2c87b49dd8` — architecture — Which statement best describes how Cilium treats the numeric values supplied through the s
+- `600109b4a825a2dd` — architecture — You are enabling the DNS node-cache in a Cilium cluster. According to the excerpt, why mus
 - `653ac7121a014a09` — architecture — Which statement best describes IPs in Cilium?
+- `668115517a69aca7` — architecture — A platform team runs Cilium's eBPF NodePort implementation with the default settings. A cl
+- `66b5399073c0ca33` — architecture — After creating the NodePort service, an engineer runs `iptables-save | grep KUBE-SVC` in t
+- `67b0fd8df6413ede` — architecture — An engineer enables the bandwidth manager with BBR on a recent kernel but does not enable 
+- `68584bff318b8e89` — architecture — Which statement correctly describes the default state of the `loadBalancer.acceleration` s
+- `69bcbede817a9fa8` — architecture — An engineer runs `kubectl -n kube-system exec ds/cilium -- cilium-dbg status --verbose | g
+- `75762c1a02ba2155` — architecture — A platform team runs a selectorless Service backed by two manually managed EndpointSlice o
 - `786dd43b09ad1ea5` — architecture — An engineer is configuring a new Cilium cluster and wants to ensure that TCP workloads are
 - `7c4f09238e32497b` — architecture — A cluster runs with `multi-pool` as its IPAM mode. Its `default` CiliumPodIPPool lists the
+- `7d5cf05d60bf896e` — architecture — A team is planning to change the maglev.tableSize on a running cluster. What temporary eff
+- `7e070f815ec65ffd` — architecture — An engineer sets spec.loadBalancerSourceRanges on a LoadBalancer service and expects the s
+- `7e95f130090f41c4` — architecture — A security architect wants to distinguish between different kinds of application traffic b
 - `83bee3681df01869` — architecture — Which statement best describes Debug Client in Cilium?
+- `863b600c170f5a98` — architecture — An operations team is concerned that adopting eBPF-based networking will require developer
 - `8b579c5bef5c7cb7` — architecture — Which statement best describes CNI Plugin in Cilium?
+- `8ddcf4430bc9ab0f` — architecture — An operator is tuning a Cilium deployment and wants to avoid the MTU reduction that DSR wo
+- `8e47aefd95c13d7d` — architecture — Which API calls does the operator use to create and attach a new ENI to the EC2 instance?
+- `90c99a74f69c3f66` — architecture — A team worries that identity-based security enforcement will not cope as their microservic
 - `921688d575427a71` — architecture — An engineer is migrating a kind cluster from cluster-pool to multi-pool IPAM mode. They ex
+- `92e46684d6f343ab` — architecture — A LoadBalancer service is created with no value set for spec.loadBalancerSourceRanges. Wha
 - `95c6142a755dd29b` — architecture — An engineer has an existing `CiliumPodIPPool` named `default` that pods on the cluster are
 - `96aba39cf8cc3a75` — architecture — An engineer is configuring the bandwidth manager for a multi-node cluster. They need to ma
+- `98165ad5c899b7f8` — architecture — During troubleshooting you find that the local redirect service entry is missing, which th
+- `98e7ecfeedc668ff` — architecture — A platform team runs Cilium on nodes whose devices are auto-detected, and Cilium selects m
 - `9b05f33ad6749f3e` — architecture — Which statement best describes Graphical UI in Cilium?
+- `9b1e0876c0e0c334` — architecture — Which curl targets does the excerpt use to demonstrate connectivity for the exposed NodePo
 - `9b9262adf6663930` — architecture — Which statement best describes Weights in Cilium?
+- `9c3ab4eb57ee1538` — architecture — You expose the `my-nginx` deployment as a NodePort service and want to confirm that Cilium
+- `9d9cb495bf7c45c2` — architecture — Which statement correctly describes the default set of IP addresses through which a NodePo
+- `a08b0e04b2bc08a3` — architecture — An engineer wants to prevent the creation of the corresponding NodePort and ClusterIP serv
 - `a20d03b654e568a3` — architecture — Which statement best describes Subscription in Cilium?
+- `a329f626c197ff46` — architecture — The Cilium Operator becomes temporarily unavailable in a cluster. According to the excerpt
+- `a89b7fbb6c0ebe7f` — architecture — You have deployed Cilium following the Quick-Start guide and want a quick confirmation tha
 - `a8b82f6a61f7809a` — architecture — An engineer is configuring a new Cilium cluster and wants to enable the bandwidth manager 
+- `a9b3bf13407470e5` — architecture — A KataPod is created inside the VM that Kata runs in the outer Container Networking Namesp
+- `ae9ba028108f4c3f` — architecture — In the verbose status output, which service types are shown as Enabled, and what NodePort 
 - `b52ffd6ff289068d` — architecture — During the migration process, an engineer checks the status of a CiliumNode that has alrea
+- `b8d0e8cf6b83f56e` — architecture — A platform team is enabling Maglev hashing for their Cilium load balancer. They want to av
+- `bcfc05530a57f00c` — architecture — Your cluster uses the multi-pool IPAM mode. A single CiliumPodIPPool named default current
 - `be54bab782346128` — architecture — An engineer is migrating a cluster from the 10.10.0.0/16 CIDR to 10.20.0.0/16. After updat
+- `bee3a4a7d0d173ab` — architecture — An engineer assigns a weight annotation to an EndpointSlice that contributes four backend 
+- `bf21240af76735e2` — architecture — Several subnets satisfy the VPC, Availability Zone and any configured ID or tag criteria. 
 - `c043a320c68f9311` — architecture — Which statement best describes CiliumEndpointSlice in Cilium?
+- `c18c3107f00a7ec6` — architecture — An application running in the host network namespace of a Cilium node attempts a bind(2) t
+- `c1f5ed9ee20782ef` — architecture — A security team wants to block traffic from a specific set of CIDRs while allowing all oth
+- `c2943830a6eca177` — architecture — An engineer runs `cilium-dbg status --verbose` on a cluster where kube-proxy replacement i
+- `c57772e2cdd587c2` — architecture — Which service types does the excerpt say Cilium can accelerate at the XDP layer, and under
+- `c7f52aeb081f891f` — architecture — An engineer enables XDP acceleration for NodePort handling and then tries to observe the p
+- `cd5b0c25ebfad654` — architecture — How does the excerpt characterise the benefit of BBR for Internet-facing traffic, and what
+- `ced1077f5829a715` — architecture — A colleague asks what happens to DNS queries from application pods in a Cilium cluster tha
+- `d074ab928093036e` — architecture — Which statement best describes a benefit of Maglev consistent hashing as presented in the 
+- `d61f69dc967f13fb` — architecture — You are migrating a kind cluster from cluster-pool IPAM to multi-pool IPAM. The Helm upgra
+- `da9efd09dcce2572` — architecture — Why does the excerpt not recommend lowering the MTU value in the Cilium ConfigMap as a fix
+- `dada3deb648f6653` — architecture — A cluster uses DSR mode. Because a given backend can serve multiple services, the backend 
+- `db0471629ed6b8fe` — architecture — On a node, the configured NodePort range overlaps with the ephemeral port range net.ipv4.i
+- `dd180d8442a08ef4` — architecture — According to the excerpt, why do older kernels fail to make BBR work reliably for Pods?
+- `df8379b7fce1935c` — architecture — A Service is backed by two EndpointSlice objects with weights 70 and 30. Later, the operat
 - `df900dc79cff2036` — architecture — An engineer wants to use a pool name other than `default` for the migration. According to 
+- `dfebc99a96fb92fb` — architecture — A team deploys Cilium in DSR mode on AWS and finds that DSR does not work. According to th
+- `e049125cc208db5c` — architecture — A platform team mounts NFS volumes to a `Service` cluster IP while using socket-LB, and th
+- `e117f978ce313b10` — architecture — After all `node-local-dns` pods report ready, you want to confirm that DNS requests from a
+- `e7b039f18b158c97` — architecture — During creation of the outer Container Networking Namespace, Cilium creates the eth0 inter
+- `ed012c7b0e2d7569` — architecture — Neither `spec.eni.subnet-ids` nor `spec.eni.subnet-tags` is set. The operator first tries 
+- `f2d8b8a7f3986df1` — architecture — What is the role of the Cilium agent (`cilium-agent`) on a node?
 - `f37b3b7757719126` — architecture — A cluster administrator is troubleshooting latency issues in a Cilium cluster where the ba
 - `f66478ec599bab8b` — architecture — During a rolling migration, some Cilium agents are running in multi-pool mode while others
-- `fdae965890409a35` — architecture — Which statement best describes Status in Cilium?
-- `0dd2e09af6a07426` — bgp — When monitoring SNAT source port utilization for alerting and observability, which metric 
-- `c4c546c48822e7ab` — bgp — An engineer is troubleshooting connectivity issues on a Cilium egress-gateway node. They o
-- `f4b5f1eb64a2880e` — bgp — An engineer is reviewing the output of cilium-dbg shell -- db/show nat-stats. They notice 
-- `427eb2306f2e8037` — cluster-mesh — Continuing with the same global Service, you now run `kubectl annotate service rebel-base 
-- `55eb2f139895587a` — cluster-mesh — An engineer is preparing an EKS cluster for a Cilium Cluster Mesh deployment. They are abo
-- `c196f9b9810f1f61` — cluster-mesh — An engineer is configuring the network infrastructure for an EKS cluster. They need to ens
-- `cfa0685b991591c6` — cluster-mesh — Which statement best describes MCS-API in Cilium?
-- `911430a3c97b9bb0` — ebpf — In the Cilium datapath, the Socket operations hook is attached to the root cgroup. What sp
-- `b1a4efbc89b5284e` — ebpf — A security team is reviewing the L3 Encryption object in Cilium. They note that on ingress
-- `e7c11bfef09be49b` — ebpf — An engineer is configuring the Prefilter object in Cilium to improve performance. The Pref
-- `1c0ec6d6bedc6ab3` — installation — Which statement best describes KVStore in Cilium?
-- `254aa3d5fafeae6b` — installation — Which statement best describes Request/Response Rate in Cilium?
-- `38cdb07d7904eced` — installation — Which statement best describes Identities in Cilium?
-- `4e55f6ae8ade72e3` — installation — Which statement best describes Connections Rate in Cilium?
-- `a6854cc7d6bcaa03` — installation — During troubleshooting, an engineer runs `kubectl get cec cilium-ingress-default-basic-ing
-- `c11e776b27cd8e3a` — installation — A user is configuring a `CiliumEnvoyConfig` resource manually. How is the proxy port for t
-- `d07e35ee6b589dfc` — installation — An engineer is troubleshooting a 503 error from an Ingress resource. They SSH into a node 
-- `d735e63113f452b6` — installation — Which statement best describes Below in Cilium?
-- `e75bc028edf8d586` — installation — Which statement best describes Hubble Relay in Cilium?
-- `0299bde8945b3542` — network-policy — A network engineer is verifying the services created by the demo application manifests. Ba
-- `02e8c62e745e7dd5` — network-policy — Which statement best describes Host in Cilium?
-- `10fe40605ba8ab82` — network-policy — Which statement best describes Headers in Cilium?
-- `11c4e64a679246dd` — network-policy — Which statement best describes labels in Cilium?
-- `1ea708f1de421f66` — network-policy — A platform team discovers that developers can freely exec into Cilium pods in a shared clu
-- `2cc679370a7fe0d2` — network-policy — An engineer writes a CiliumNetworkPolicy rule that selects a set of endpoints with endpoin
-- `302f4e6633b513d3` — network-policy — Which statement best describes egress in Cilium?
-- `39abdb1146c062c7` — network-policy — A cluster is configured to use tunnel routing mode and also has WireGuard encryption enabl
-- `3eb78e96d04b34ea` — network-policy — An engineer is reviewing the deployment progress of the demo application. The guide states
-- `476080ae2c8545c9` — network-policy — Which statement best describes ingress in Cilium?
-- `4e29c23120732cf5` — network-policy — A security reviewer asks whether the Cilium agent itself performs extra operations that co
-- `5e6fab343b239c46` — network-policy — A cluster administrator notices that `XfrmInNoStates` errors are increasing after a key ro
-- `5e9a3730b3b63da9` — network-policy — A security audit reveals that an attacker could inject unencrypted pod traffic through a n
-- `60521a40497cb192` — network-policy — An engineer observes that initial packets sent from a pod to a newly created remote pod ar
-- `64debc90e73ba032` — network-policy — Why does the Cilium agent need kernel interfaces that cannot be virtualized or namespaced?
-- `65193ba15b3e5465` — network-policy — An auditor finds that a user who is not a cluster administrator can exec into a Cilium pod
-- `68a8ee997188b331` — network-policy — An engineer is configuring encryption strict mode egress for a cluster that uses IPv6 for 
-- `6cbb37b38744525a` — network-policy — Which statement best describes endpointSelector / nodeSelector in Cilium?
-- `7f8248f2864cfb1b` — network-policy — After deploying the demo application manifests, an engineer runs `kubectl get pods,svc` to
-- `8442054483370b1c` — network-policy — Which statement best describes Packets in Cilium?
-- `8515061745b44ef2` — network-policy — Which statement best describes always in Cilium?
-- `947045d0b1b99d98` — network-policy — Which statement best describes never in Cilium?
-- `aa3bcbb23a132136` — network-policy — A platform team runs Cilium with WireGuard enabled on nodes that sit behind firewalls, and
-- `afb0c3b2bf8ab307` — network-policy — Which of the following statements accurately describes the support status of encryption st
-- `c32c1c922e2209e5` — network-policy — An engineer needs to retrieve the WireGuard public key that a particular cluster node has 
-- `d4934fe7fe8e009a` — network-policy — An engineer is preparing to deploy the demo application for the first time. The guide note
-- `de438a410bbaa07a` — network-policy — A cluster administrator wants to mitigate the risk of unencrypted egress traffic to not-ye
-- `e9fa1722c8225547` — network-policy — Which statement best describes Path in Cilium?
-- `efa47379922d5ee5` — network-policy — An engineer defines a Cilium Layer 7 HTTP policy rule that sets a Path regex but leaves th
-- `f46c6e3be3792535` — network-policy — Which statement best describes XfrmInStateProtoError There in Cilium?
-- `16b9d670c3a60895` — observability — After TLS has been enabled on the Hubble metrics API, a monitoring engineer finds that Pro
-- `1dd3510c1ec6e35f` — observability — A caller issues a `GetFlows` request that supplies both an allow list and a deny list. A p
-- `2bc8d99f9377e917` — observability — A Hubble instance has been running for a long time and its ring buffer has become full, wh
-- `733f6a5a87ea82a8` — observability — You are validating a Hubble installation and run `kubectl get configmap -n kube-system cil
-- `842c543460fa0c44` — observability — An engineer wants the Hubble metrics API to require clients to authenticate with certifica
-- `8b0bea1216628c26` — observability — A platform team runs Cilium 1.16 with Hubble metrics already enabled. They want the Hubble
-- `9b24a41e4095b73a` — observability — From the Hubble CLI pod you query the first peer with `hubble observe --server tls://${IP?
-- `9fba67cd7b84ca06` — observability — An engineer runs `kubectl get configmap -n kube-system cilium-config -oyaml | grep hubble-
-- `aae4a919de571079` — observability — An engineer is reasoning about how many events a Hubble ring buffer can hold, having read 
-- `b81c28adf0b2eee2` — observability — How does enabling mTLS on the Hubble metrics API change what clients such as Prometheus mu
-- `d0c551ec0b50a4ea` — observability — You have created the Hubble CLI pod in `kube-system` and run `hubble watch peers --server 
-- `de59edcfe760cb58` — observability — An engineer configures a Hubble metric with `flow:destinationContext=dns|ip`. During a spe
-- `e32e55570e19d4a4` — observability — An engineer uses `openssl s_client` to inspect the TLS handshake with the Hubble server. T
-- `f9b72371c7056e4e` — observability — An engineer wants to narrow down Cilium datapath debug events by supplying allow and deny 
-- `0d618480a2f4fc4c` — service-mesh — In the context of Cilium Ingress, how many logical Policy enforcement points are identifie
-- `14ec0fdee917df24` — service-mesh — A cluster administrator notices that an external load balancer is failing to forward traff
-- `1568707915dbc8f4` — service-mesh — An engineer is troubleshooting why traffic from an external client is being dropped by Cil
-- `1e71d2049e63a860` — service-mesh — An engineer is configuring a LoadBalancer Service to expose the Envoy Daemonset for Cilium
-- `1f96639073d6c183` — service-mesh — An engineer needs to configure weight-based routing for the `helloworld` Service. The exce
-- `23072c6eb514a372` — service-mesh — An engineer is troubleshooting an HTTPRoute and runs `kubectl describe httproute <name>`. 
-- `24f8f46dff67774d` — service-mesh — A platform engineer has created individual Services for each backend Deployment and applie
-- `35f76615ec4fae24` — service-mesh — An engineer applies the `envoy-helloworld-v1-90-v2-10.yaml` file to a cluster running Cili
-- `42e93b5966ff5b1c` — service-mesh — A platform team has installed the standard release channel CRDs for Cilium Gateway API and
-- `44bb05b9863ee25e` — service-mesh — You apply a `CiliumClusterwideNetworkPolicy` that denies all traffic by default, then run 
-- …and 42 more
+- `fd5053427f877dbd` — architecture — An administrator sets nodePort.directRoutingDevice=eth+ on a cluster where several devices
+- …and 365 more
 
 </details>
 

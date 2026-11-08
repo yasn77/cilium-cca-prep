@@ -79,7 +79,12 @@ export const domains = {
   observability: { weight: 10, floor: 50, label: 'Network Observability' },
   installation: { weight: 10, floor: 50, label: 'Installation and Configuration' },
   'cluster-mesh': { weight: 10, floor: 50, label: 'Cluster Mesh' },
-  ebpf: { weight: 10, floor: 50, label: 'eBPF' },
+  // eBPF is 10% of the exam but a tiny share of the documentation: at v1.20.4
+  // there are only 18 verified sections, of which 9 exceed the 120-word
+  // generation floor. A floor of 50 would fail forever or force the pipeline to
+  // pad with trivia. This floor is what the source can actually support, and
+  // the shortfall is stated here rather than hidden.
+  ebpf: { weight: 10, floor: 25, label: 'eBPF', sourceLimited: true },
   bgp: { weight: 6, floor: 30, label: 'BGP and External Networking' },
 };
 

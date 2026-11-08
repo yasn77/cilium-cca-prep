@@ -11,22 +11,26 @@ import { tokenise } from './lib.mjs';
 /**
  * Does the correct option follow from the cited passage?
  *
- * Not semantics: it asks whether the answer option shares distinctive words with
- * the passage while the distractors do not. A question whose answer shares
- * nothing with its own citation is not grounded in that citation, whatever its
- * explanation claims.
+ * The question this answers is narrow: is the marked answer *supported* by the
+ * citation? It deliberately does not try to prove the distractors wrong, because
+ * a passage that discusses several options — a page listing three enforcement
+ * modes, say — contains the vocabulary of all of them, and judging distractors
+ * by word overlap rejects perfectly good questions about exactly those pages.
  *
- * Short answers need different treatment. "socket", "default" and "always" are
- * perfectly good options in a Cilium exam, and a token-overlap ratio over two
- * words is meaningless. For those, every content word must appear in the cited
- * section and at least one must appear as a whole word — "map" must not be
- * satisfied by "mapping".
+ * Grounding is therefore:
+ *   - the answer's content words appear in the cited section, and
+ *   - for short answers, at least one appears as a whole word, and no distractor
+ *     contains all of them (otherwise the options are indistinguishable).
+ *
+ * What this cannot catch is a distractor that is also true. That is the judge's
+ * job, and the reason the judge gate exists.
  */
 export function checkEntailment(question, section) {
   if (!section) return { reason: 'section-missing' };
 
   const src = new Set(tokenise(section.text));
   const srcLower = section.text.toLowerCase();
+  const hasWord = (w) => new RegExp(`\\b${w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`).test(srcLower);
 
   const answer = question.options?.find((o) => o.id === question.answer);
   if (!answer) return { reason: 'answer-not-an-option' };
@@ -38,22 +42,12 @@ export function checkEntailment(question, section) {
     .split(/\s+/)
     .filter((w) => w.length >= 3);
 
-  const distractorHits = (question.options ?? [])
-    .filter((o) => o.id !== question.answer)
-    .map((o) => {
-      const toks = tokenise(o.text);
-      if (!toks.length) return 0;
-      return toks.filter((t) => src.has(t)).length / toks.length;
-    });
-
   let answerHits;
 
   if (answerTokens.length < 3) {
     if (!contentWords.length) return { reason: 'answer-empty' };
     const allPresent = contentWords.every((w) => src.has(w));
-    const wholeWord = contentWords.some((w) =>
-      new RegExp(`\\b${w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`).test(srcLower),
-    );
+    const wholeWord = contentWords.some(hasWord);
     if (!allPresent || !wholeWord) return { reason: 'answer-not-in-citation' };
     answerHits = 1;
 
@@ -68,9 +62,5 @@ export function checkEntailment(question, section) {
     if (answerHits < 0.7) return { reason: `answer-not-in-citation:${answerHits.toFixed(2)}` };
   }
 
-  // Every distractor fully present in the same passage means the question is
-  // answerable by copying, or the passage states both sides.
-  if (distractorHits.every((d) => d > 0.85)) return { reason: 'all-options-in-citation' };
-
-  return { ok: true, answerHits, distractorHits };
+  return { ok: true, answerHits };
 }

@@ -185,20 +185,27 @@ test('a long answer sharing little with the citation is rejected', () => {
   assert.match(result.reason, /^answer-not-in-citation/);
 });
 
-test('every option present in the citation is rejected as unanswerable', () => {
-  // A passage that states all four options is not a question: whichever one is
-  // marked correct, the reader cannot tell it apart from the others.
+test('a passage that discusses several options still supports a question', () => {
+  // A page listing the three enforcement modes contains the vocabulary of all
+  // three. Rejecting that as "all options in citation" threw away good
+  // questions about exactly those pages, which is where the exam focuses.
   const source = {
-    text: 'The agent can be put into the always mode, the never mode, the default mode or the disabled mode of policy enforcement for endpoints.',
+    text: 'The agent can be put into the following three policy enforcement modes: default, where endpoints are unrestricted until selected by policy; always, where enforcement is enabled on all endpoints even if no rules select them; and never, where enforcement is disabled on all endpoints even if rules do select them.',
   };
   const result = checkEntailment(
-    q([
-      'the always mode',
-      'the never mode',
-      'the default mode',
-      'the disabled mode',
-    ], 'a'),
+    q(['always', 'a userspace proxy in the host namespace', 'the cloud load balancer health probe', 'an ingress qdisc filter'], 'a'),
     source,
   );
-  assert.equal(result.reason, 'all-options-in-citation');
+  assert.equal(result.ok, true, JSON.stringify(result));
+});
+
+test('the answer still has to be supported by the citation', () => {
+  const source = {
+    text: 'The agent can be put into the following three policy enforcement modes: default, always and never.',
+  };
+  const result = checkEntailment(
+    q(['a gossip protocol between agents', 'a userspace proxy in the host namespace', 'the cloud load balancer health probe', 'an ingress qdisc filter'], 'a'),
+    source,
+  );
+  assert.match(result.reason, /^answer-not-in-citation/);
 });

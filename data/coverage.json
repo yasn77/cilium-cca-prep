@@ -1,62 +1,66 @@
 {
-  "generatedAt": "2026-11-08T02:52:52.818Z",
+  "generatedAt": "2026-11-08T03:19:30.546Z",
   "templates": 39,
-  "ai": 145,
-  "consideredSections": 422,
+  "ai": 519,
+  "consideredSections": 175,
   "usage": {
-    "calls": 422,
-    "promptTokens": 421558,
-    "completionTokens": 1243913
+    "calls": 175,
+    "promptTokens": 219770,
+    "completionTokens": 419479
   },
-  "rejections": {},
+  "rejections": {
+    "empty-option": 2,
+    "quote-not-in-source": 14,
+    "quote-too-short": 6
+  },
   "coverage": {
     "architecture": {
-      "count": 17,
+      "count": 106,
       "floor": 100,
       "weight": 20,
-      "met": false
+      "met": true
     },
     "network-policy": {
-      "count": 23,
+      "count": 103,
       "floor": 90,
       "weight": 18,
-      "met": false
+      "met": true
     },
     "service-mesh": {
-      "count": 60,
+      "count": 83,
       "floor": 80,
       "weight": 16,
-      "met": false
+      "met": true
     },
     "observability": {
-      "count": 17,
+      "count": 60,
       "floor": 50,
       "weight": 10,
-      "met": false
+      "met": true
     },
     "installation": {
-      "count": 5,
+      "count": 53,
       "floor": 50,
       "weight": 10,
-      "met": false
+      "met": true
     },
     "cluster-mesh": {
-      "count": 10,
+      "count": 64,
       "floor": 50,
       "weight": 10,
-      "met": false
+      "met": true
     },
     "ebpf": {
-      "count": 10,
+      "count": 12,
       "floor": 50,
       "weight": 10,
       "met": false
     },
     "bgp": {
-      "count": 3,
+      "count": 38,
       "floor": 30,
       "weight": 6,
-      "met": false
+      "met": true
     }
   }
 }

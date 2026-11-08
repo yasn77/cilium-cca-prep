@@ -80,6 +80,26 @@ Do not lower the floors in `config.mjs` to make a build pass. They are derived
 from the official weights, and a corpus that does not cover a 10% domain is a
 corpus that will let you fail that domain.
 
+## Running the pipeline
+
+There is no schedule. Every run is a `workflow_dispatch`:
+
+```bash
+# Exercise the real path without spending much: a few sections, manifests only
+gh workflow run ingest.yml -f per_section=4 -f limit=4 -f manifests_only=true
+
+# Top up a domain that is short
+gh workflow run ingest.yml -f per_section=8
+
+# Full refresh: every candidate, about 20 minutes
+gh workflow run ingest.yml
+```
+
+`manifests_only` ignores the coverage deficits and generates from the 109
+sections that contain a YAML or JSON block, which is what you want once the
+floors are met and you are adding attachment-bearing questions rather than
+volume.
+
 ## Regenerating from a different docs version
 
 ```bash

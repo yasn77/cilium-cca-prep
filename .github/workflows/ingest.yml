@@ -5,11 +5,12 @@ name: Ingest corpus
 # what the learner studies from, so a human reads the diff before it ships.
 
 on:
-  schedule:
-    # Weekly. The docs are pinned to a tag, so nothing changes until a human
-    # bumps docs.ref in tools/config.mjs; this run exists to re-verify anchors
-    # against the live site and to catch a quote that has drifted.
-    - cron: '17 4 * * 1'
+  # Manual only, deliberately.
+  #
+  # The documentation is pinned to a tag, so nothing changes underneath the
+  # corpus until someone bumps docs.ref. A scheduled run would spend API credit
+  # re-judging an unchanged candidate set and open a pull request that says
+  # nothing. The trigger is a decision, so leave it to a person.
   workflow_dispatch:
     inputs:
       limit:

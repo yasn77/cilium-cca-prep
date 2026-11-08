@@ -157,9 +157,19 @@ in the Pages workflow.
 **Decision.** `.github/workflows/ingest.yml` writes to `corpus/refresh` and opens
 a PR.
 
-**Why.** The corpus is what the learner studies from. A scheduled job that
-rewrites it silently is a job that will one day remove a hundred questions and
-nobody will notice until the exam is tomorrow.
+**Why.** The corpus is what the learner studies from. A job that rewrites it
+silently is a job that will one day remove a hundred questions and nobody will
+notice until the exam is tomorrow. The open PR is the review step.
+
+### The ingest workflow is manual, with no schedule
+
+**Decision.** `workflow_dispatch` only. There is no cron entry.
+
+**Why.** The documentation is pinned to a tag. Nothing changes underneath the
+corpus until someone bumps `docs.ref`, so a scheduled run would spend API credit
+re-judging an unchanged candidate set and open a pull request that says nothing.
+Even with incremental judging, the honest answer is that the trigger is a
+decision and decisions belong to a person.
 
 ## Known discrepancy
 

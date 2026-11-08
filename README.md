@@ -199,6 +199,13 @@ Five gates, all of which must pass:
 Whatever fails lands in `data/quarantine.json` with a machine-readable reason and
 appears in the app's Review tab.
 
+## Free courses to follow
+
+`docs/RESOURCES.md` has a verified list: the three Cilium Week sessions, the
+Isovalent CCA playlist, the free labs, and a nine-day plan. Every link was
+checked for status and duration, and the ones that look free but are not
+(KodeKloud's Pro-only course, the dead edX listing) are called out.
+
 ## The evaluation set
 
 `data/blind-set.json` holds 102 questions from the public CNCF practice-exam

@@ -1,0 +1,3599 @@
+{
+  "schemaVersion": 1,
+  "docsRef": "v1.20.4",
+  "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+  "generatedAt": "2026-11-08T00:52:53.445Z",
+  "counts": {
+    "total": 58,
+    "byDomain": {
+      "architecture": 20,
+      "network-policy": 11,
+      "service-mesh": 20,
+      "observability": 0,
+      "installation": 6,
+      "cluster-mesh": 1,
+      "ebpf": 0,
+      "bgp": 0
+    },
+    "byYieldSource": {
+      "definition": 39,
+      "attribute": 9,
+      "scenario": 8,
+      "contrast": 2
+    },
+    "scenarioShare": 0.138,
+    "judgeRan": false,
+    "retired": 0
+  },
+  "questions": [
+    {
+      "id": "0f138c18557ce81d",
+      "ordinal": 0,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes Kubernetes CRDs in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Due to not depending on any underlying networking limitations, the available addressing space is potentially much larger and allows to run any number of pods per node if the PodCIDR size is configured accordingly."
+        },
+        {
+          "id": "b",
+          "text": "When running together with an orchestration system such as Kubernetes, the list of all nodes in the cluster including their associated allocation prefix node is made available to each agent automatically. New nodes joining the cluster will automatically be incorporated into the mesh."
+        },
+        {
+          "id": "c",
+          "text": "All traffic not staying with the ``ipv4-native-routing-cidr`` will be masqueraded to the node's IP address to become publicly routable."
+        },
+        {
+          "id": "d",
+          "text": "The default choice to store any data and propagate state is to use Kubernetes custom resource definitions (CRDs). CRDs are offered by Kubernetes for cluster components to represent configurations and state via Kubernetes resources."
+        }
+      ],
+      "answer": "d",
+      "explanation": "The default choice to store any data and propagate state is to use Kubernetes custom resource definitions (CRDs). CRDs are offered by Kubernetes for cluster components to represent configurations and state via Kubernetes resources.",
+      "optionRationale": {
+        "a": "This describes Addressing space, not Kubernetes CRDs.",
+        "b": "This describes Auto-configuration, not Kubernetes CRDs.",
+        "c": "This describes Masquerading, not Kubernetes CRDs."
+      },
+      "citations": [
+        {
+          "file": "overview/component-overview.rst",
+          "anchor": "data-store",
+          "title": "Data Store",
+          "quote": "The default choice to store any data and propagate state is to use Kubernetes custom resource definitions (CRDs). CRDs are offered by Kubernetes for cluster components to represent configurations and state via Kubernetes resources.",
+          "url": "https://docs.cilium.io/en/stable/overview/component-overview/#data-store"
+        }
+      ],
+      "domain": "architecture",
+      "competency": "component-roles",
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "overview/component-overview.rst#data-store",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer wants to use a pool name other than `default` for the migration from cluster-pool to multi-pool IPAM. According to the provided procedure, how should this be configured?",
+      "options": [
+        {
+          "id": "a",
+          "text": "By setting the `ipam.operator.autoCreateCiliumPodIPPools.<pool-name>` parameters in the Helm upgrade command."
+        },
+        {
+          "id": "b",
+          "text": "By using the flag `--set-string extraConfig.ipam-default-ip-pool=<pool-name>` in the same Helm upgrade that restarts the operator."
+        },
+        {
+          "id": "c",
+          "text": "By manually creating a `CiliumPodIPPool` resource with the desired name before running the Helm upgrade."
+        },
+        {
+          "id": "d",
+          "text": "By modifying the `spec.ipam.podCIDRs` field in the `CiliumNode` resources to reference the new pool name."
+        }
+      ],
+      "answer": "b",
+      "explanation": "The excerpt explicitly states: 'If you want to use a different default pool name for the migration, configure it globally in the same Helm upgrade that restarts the operator, with `--set-string extraConfig.ipam-default-ip-pool=<pool-name>`.'",
+      "optionRationale": {
+        "a": "The `ipam.operator.autoCreateCiliumPodIPPools` parameter is used to define the CIDR and mask size for the pool, but the specific flag for changing the *name* of the default pool is `extraConfig.ipam-default-ip-pool`.",
+        "c": "The procedure relies on the operator to create the pool automatically (`autoCreateCiliumPodIPPools`), not on manual creation beforehand.",
+        "d": "The `CiliumNode` resources are updated *after* the migration by the operator; they are not used to configure the migration target pool name."
+      },
+      "yieldSource": "definition",
+      "citations": [
+        {
+          "file": "network/concepts/ipam/cluster-pool-to-multi-pool.rst",
+          "anchor": "practical-example",
+          "title": "Practical Example",
+          "quote": "If you want to use a different default pool name for the migration, configure it globally in the same Helm upgrade that restarts the operator, with ``--set-string extraConfig.ipam-default-ip-pool=<pool-name>``.",
+          "url": "https://docs.cilium.io/en/stable/network/concepts/ipam/cluster-pool-to-multi-pool/#practical-example"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/concepts/ipam/cluster-pool-to-multi-pool.rst#practical-example",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "147e680e5a65b8fc",
+      "domain": "architecture",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "id": "18947b8895c26f8b",
+      "ordinal": 2,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes Load-balancing in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "All traffic not staying with the ``ipv4-native-routing-cidr`` will be masqueraded to the node's IP address to become publicly routable."
+        },
+        {
+          "id": "b",
+          "text": "Concept that is specific to Cilium and is not related to `Kubernetes' EndpointSlice`_."
+        },
+        {
+          "id": "c",
+          "text": "Only honored for the Service referenced by that ``EndpointSlice`` when it uses the Maglev load-balancing algorithm, whether Maglev is configured globally or selected per service through ``service."
+        },
+        {
+          "id": "d",
+          "text": "ClusterIP load-balancing will be performed using eBPF for all version of GKE."
+        }
+      ],
+      "answer": "d",
+      "explanation": "ClusterIP load-balancing will be performed using eBPF for all version of GKE.",
+      "optionRationale": {
+        "c": "This describes Weights, not Load-balancing.",
+        "a": "This describes Masquerading, not Load-balancing.",
+        "b": "This describes CiliumEndpointSlice, not Load-balancing."
+      },
+      "citations": [
+        {
+          "file": "network/concepts/routing.rst",
+          "anchor": "google-cloud",
+          "title": "Google Cloud",
+          "quote": "ClusterIP load-balancing will be performed using eBPF for all version of GKE.",
+          "url": "https://docs.cilium.io/en/stable/network/concepts/routing/#google-cloud"
+        }
+      ],
+      "domain": "architecture",
+      "competency": "datapath-models",
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/concepts/routing.rst#google-cloud",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "schemaVersion": 1
+    },
+    {
+      "stem": "During the migration process, after updating the CiliumPodIPPool to the new CIDR and restarting the operator, what warning message does the Cilium operator log for nodes that are still using the old CIDR?",
+      "options": [
+        {
+          "id": "a",
+          "text": "\"CIDR from pool still in use by node\""
+        },
+        {
+          "id": "b",
+          "text": "\"Pool CIDR mismatch detected on node\""
+        },
+        {
+          "id": "c",
+          "text": "\"Invalid CIDR range assigned to node\""
+        },
+        {
+          "id": "d",
+          "text": "\"Node IPAM configuration out of sync\""
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt shows the operator logs containing the message: `msg=\"CIDR from pool still in use by node\"`.",
+      "optionRationale": {
+        "b": "Incorrect because this specific message is not present in the excerpt.",
+        "c": "Incorrect because this specific message is not present in the excerpt.",
+        "d": "Incorrect because this specific message is not present in the excerpt."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/concepts/ipam/multi-pool.rst",
+          "anchor": "updating-existing-ciliumpodippools",
+          "title": "Updating existing CiliumPodIPPools",
+          "quote": "time=2025-11-01T11:24:13.076246842Z level=warn msg=\"CIDR from pool still in use by node\" module=operator.operator-controlplane.leader-lifecycle.legacy-cell cidr=10.10.0.0/24 poolName=default node=kind-control-plane",
+          "url": "https://docs.cilium.io/en/stable/network/concepts/ipam/multi-pool/#updating-existing-ciliumpodippools"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/concepts/ipam/multi-pool.rst#updating-existing-ciliumpodippools",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "1edf065165b76bf0",
+      "domain": "architecture",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "id": "27bc2b63fecf59ee",
+      "ordinal": 1,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes Key-Value Store in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "When running together with an orchestration system such as Kubernetes, the list of all nodes in the cluster including their associated allocation prefix node is made available to each agent automatically. New nodes joining the cluster will automatically be incorporated into the mesh."
+        },
+        {
+          "id": "b",
+          "text": "The CNI plugin (``cilium-cni``) is invoked by Kubernetes when a pod is scheduled or terminated on a node. It interacts with the Cilium API of the node to trigger the necessary datapath configuration to provide networking, load-balancing and network policies for the pod."
+        },
+        {
+          "id": "c",
+          "text": "Encapsulation protocols allow for the carrying of metadata along with the network packet. Cilium makes use of this ability to transfer metadata such as the source security identity. The identity transfer is an optimization designed to avoid one identity lookup on the remote node."
+        },
+        {
+          "id": "d",
+          "text": "All requirements for state storage and propagation can be met with Kubernetes CRDs as configured in the default configuration of Cilium. A key-value store can optionally be used as an optimization to improve the scalability of a cluster as change notifications and storage requirements are more efficient with direct key-value store usage."
+        }
+      ],
+      "answer": "d",
+      "explanation": "All requirements for state storage and propagation can be met with Kubernetes CRDs as configured in the default configuration of Cilium. A key-value store can optionally be used as an optimization to improve the scalability of a cluster as change notifications and storage requirements are more efficient with direct key-value store usage.",
+      "optionRationale": {
+        "a": "This describes Auto-configuration, not Key-Value Store.",
+        "c": "This describes Identity context, not Key-Value Store.",
+        "b": "This describes CNI Plugin, not Key-Value Store."
+      },
+      "citations": [
+        {
+          "file": "overview/component-overview.rst",
+          "anchor": "data-store",
+          "title": "Data Store",
+          "quote": "All requirements for state storage and propagation can be met with Kubernetes CRDs as configured in the default configuration of Cilium. A key-value store can optionally be used as an optimization to improve the scalability of a cluster as change notifications and storage requirements are more effic",
+          "url": "https://docs.cilium.io/en/stable/overview/component-overview/#data-store"
+        }
+      ],
+      "domain": "architecture",
+      "competency": "component-roles",
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "overview/component-overview.rst#data-store",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "schemaVersion": 1
+    },
+    {
+      "stem": "Why is it not possible to directly delete or update the CIDRs already in use within an existing CiliumPodIPPool resource?",
+      "options": [
+        {
+          "id": "a",
+          "text": "To prevent pods from receiving IPs from a new range while some pods still use the old IP pool on the same nodes."
+        },
+        {
+          "id": "b",
+          "text": "Because the Cilium operator does not support modifying the spec.ipv4.cidrs field of an existing resource."
+        },
+        {
+          "id": "c",
+          "text": "To ensure that all nodes in the cluster are updated simultaneously to avoid network partitioning."
+        },
+        {
+          "id": "d",
+          "text": "Because the Kubernetes API server rejects any changes to the CIDR maskSize of an active pool."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt explicitly states: \"This restriction prevents pods from receiving IPs from a new range while some pods still use the old IP pool on the same nodes.\"",
+      "optionRationale": {
+        "b": "Incorrect because the excerpt shows that the CIDR can be updated, but it requires a specific migration process involving node groups.",
+        "c": "Incorrect because the process involves splitting the cluster into two node groups, not updating all nodes simultaneously.",
+        "d": "Incorrect because the restriction is about the CIDR range itself, not specifically the maskSize, and the API does allow the update as part of the migration steps."
+      },
+      "yieldSource": "definition",
+      "citations": [
+        {
+          "file": "network/concepts/ipam/multi-pool.rst",
+          "anchor": "updating-existing-ciliumpodippools",
+          "title": "Updating existing CiliumPodIPPools",
+          "quote": "This restriction prevents pods from receiving IPs from a new range while some pods still use the old IP pool on the same nodes.",
+          "url": "https://docs.cilium.io/en/stable/network/concepts/ipam/multi-pool/#updating-existing-ciliumpodippools"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/concepts/ipam/multi-pool.rst#updating-existing-ciliumpodippools",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "394736af8657ab6e",
+      "domain": "architecture",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "id": "3bb2c674e502ebe3",
+      "ordinal": 0,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes Addressing in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Due to not depending on any underlying networking limitations, the available addressing space is potentially much larger and allows to run any number of pods per node if the PodCIDR size is configured accordingly."
+        },
+        {
+          "id": "b",
+          "text": "The Cilium debug CLI client (``cilium-dbg``) is a command-line tool that is installed along with the Cilium agent. It interacts with the REST API of the Cilium agent running on the same node. The debug CLI allows inspecting the state and status of the local agent. It also provides tooling to directly access the eBPF maps to validate their state."
+        },
+        {
+          "id": "c",
+          "text": "Encapsulation protocols allow for the carrying of metadata along with the network packet. Cilium makes use of this ability to transfer metadata such as the source security identity. The identity transfer is an optimization designed to avoid one identity lookup on the remote node."
+        },
+        {
+          "id": "d",
+          "text": "Cilium will assign IPs to pods out of the PodCIDR assigned to the specific Kubernetes node. By using `Alias IP ranges <https://cloud.google.com/vpc/docs/alias-ip>`_, these IPs are natively routable on Google Cloud's network without additional encapsulation or route distribution."
+        }
+      ],
+      "answer": "d",
+      "explanation": "Cilium will assign IPs to pods out of the PodCIDR assigned to the specific Kubernetes node. By using `Alias IP ranges <https://cloud.google.com/vpc/docs/alias-ip>`_, these IPs are natively routable on Google Cloud's network without additional encapsulation or route distribution.",
+      "optionRationale": {
+        "a": "This describes Addressing space, not Addressing.",
+        "b": "This describes Debug Client, not Addressing.",
+        "c": "This describes Identity context, not Addressing."
+      },
+      "citations": [
+        {
+          "file": "network/concepts/routing.rst",
+          "anchor": "google-cloud",
+          "title": "Google Cloud",
+          "quote": "Cilium will assign IPs to pods out of the PodCIDR assigned to the specific Kubernetes node. By using `Alias IP ranges <https://cloud.google.com/vpc/docs/alias-ip>`_, these IPs are natively routable on Google Cloud's network without additional encapsulation or route distribution.",
+          "url": "https://docs.cilium.io/en/stable/network/concepts/routing/#google-cloud"
+        }
+      ],
+      "domain": "architecture",
+      "competency": "datapath-models",
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/concepts/routing.rst#google-cloud",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "schemaVersion": 1
+    },
+    {
+      "id": "577abc361d6b43e9",
+      "ordinal": 1,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes Masquerading in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ClusterIP load-balancing will be performed using eBPF for all version of GKE."
+        },
+        {
+          "id": "b",
+          "text": "Due to not depending on any underlying networking limitations, the available addressing space is potentially much larger and allows to run any number of pods per node if the PodCIDR size is configured accordingly."
+        },
+        {
+          "id": "c",
+          "text": "Provides visibility into whether the policy has been successfully applied."
+        },
+        {
+          "id": "d",
+          "text": "All traffic not staying with the ``ipv4-native-routing-cidr`` will be masqueraded to the node's IP address to become publicly routable."
+        }
+      ],
+      "answer": "d",
+      "explanation": "All traffic not staying with the ``ipv4-native-routing-cidr`` will be masqueraded to the node's IP address to become publicly routable.",
+      "optionRationale": {
+        "a": "This describes Load-balancing, not Masquerading.",
+        "c": "This describes Status, not Masquerading.",
+        "b": "This describes Addressing space, not Masquerading."
+      },
+      "citations": [
+        {
+          "file": "network/concepts/routing.rst",
+          "anchor": "google-cloud",
+          "title": "Google Cloud",
+          "quote": "All traffic not staying with the ``ipv4-native-routing-cidr`` will be masqueraded to the node's IP address to become publicly routable.",
+          "url": "https://docs.cilium.io/en/stable/network/concepts/routing/#google-cloud"
+        }
+      ],
+      "domain": "architecture",
+      "competency": "datapath-models",
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/concepts/routing.rst#google-cloud",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "schemaVersion": 1
+    },
+    {
+      "id": "653ac7121a014a09",
+      "ordinal": 0,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes IPs in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ClusterIP load-balancing will be performed using eBPF for all version of GKE."
+        },
+        {
+          "id": "b",
+          "text": "Only honored for the Service referenced by that ``EndpointSlice`` when it uses the Maglev load-balancing algorithm, whether Maglev is configured globally or selected per service through ``service."
+        },
+        {
+          "id": "c",
+          "text": "Concept that is specific to Cilium and is not related to `Kubernetes' EndpointSlice`_."
+        },
+        {
+          "id": "d",
+          "text": "Allocated via ``AssignPrivateIpAddresses`` EC2 API calls."
+        }
+      ],
+      "answer": "d",
+      "explanation": "IPs are allocated via ``AssignPrivateIpAddresses`` EC2 API calls. When no more ENIs are available meeting the above criteria, a new ENI is created.",
+      "optionRationale": {
+        "a": "This describes Load-balancing, not IPs.",
+        "b": "This describes Weights, not IPs.",
+        "c": "This describes CiliumEndpointSlice, not IPs."
+      },
+      "citations": [
+        {
+          "file": "network/concepts/ipam/eni.rst",
+          "anchor": "ip-allocation",
+          "title": "IP Allocation",
+          "quote": "IPs are allocated via ``AssignPrivateIpAddresses`` EC2 API calls. When no more ENIs are available meeting the above criteria, a new ENI is created.",
+          "url": "https://docs.cilium.io/en/stable/network/concepts/ipam/eni/#ip-allocation"
+        }
+      ],
+      "domain": "architecture",
+      "competency": null,
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/concepts/ipam/eni.rst#ip-allocation",
+        "createdAt": "2026-11-08T00:52:53.392Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer is configuring a new Cilium cluster and wants to ensure that TCP workloads are optimized using BBR congestion control. According to the documentation, what is a prerequisite for enabling BBR congestion control for Pods?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Enabling the bandwidth manager"
+        },
+        {
+          "id": "b",
+          "text": "Installing the bandwidth CNI plugin"
+        },
+        {
+          "id": "c",
+          "text": "Configuring TBF (Token Bucket Filter) on the host"
+        },
+        {
+          "id": "d",
+          "text": "Disabling BPF Host Routing"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The source explicitly states that \"Cilium's bandwidth manager is also prerequisite for enabling BBR congestion control for Pods\". It also notes that the bandwidth CNI plugin is not used and that TBF is not recommended.",
+      "optionRationale": {
+        "b": "The excerpt states that the bandwidth manager \"does not make use of the bandwidth CNI plugin\" and that it is \"not recommended to use the bandwidth CNI plugin\".",
+        "c": "The excerpt states that the bandwidth CNI plugin is based on TBF and is not recommended, whereas the bandwidth manager uses EDT.",
+        "d": "The excerpt strongly recommends using the Bandwidth Manager in combination with BPF Host Routing, not disabling it."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/kubernetes/bandwidth-manager.rst",
+          "anchor": "bandwidth-manager",
+          "title": "Bandwidth Manager",
+          "quote": "Cilium's bandwidth manager is also prerequisite for enabling BBR congestion control for Pods as outlined below.",
+          "url": "https://docs.cilium.io/en/stable/network/kubernetes/bandwidth-manager/#bandwidth-manager"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/kubernetes/bandwidth-manager.rst#bandwidth-manager",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "786dd43b09ad1ea5",
+      "domain": "architecture",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "id": "83bee3681df01869",
+      "ordinal": 0,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes Debug Client in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Relay (``hubble-relay``) is a standalone component which is aware of all running Hubble servers and offers cluster-wide visibility by connecting to their respective gRPC APIs and providing an API that represents all servers in the cluster."
+        },
+        {
+          "id": "b",
+          "text": "Encapsulation protocols allow for the carrying of metadata along with the network packet. Cilium makes use of this ability to transfer metadata such as the source security identity. The identity transfer is an optimization designed to avoid one identity lookup on the remote node."
+        },
+        {
+          "id": "c",
+          "text": "All requirements for state storage and propagation can be met with Kubernetes CRDs as configured in the default configuration of Cilium. A key-value store can optionally be used as an optimization to improve the scalability of a cluster as change notifications and storage requirements are more efficient with direct key-value store usage."
+        },
+        {
+          "id": "d",
+          "text": "The Cilium debug CLI client (``cilium-dbg``) is a command-line tool that is installed along with the Cilium agent. It interacts with the REST API of the Cilium agent running on the same node. The debug CLI allows inspecting the state and status of the local agent. It also provides tooling to directly access the eBPF maps to validate their state."
+        }
+      ],
+      "answer": "d",
+      "explanation": "The Cilium debug CLI client (``cilium-dbg``) is a command-line tool that is installed along with the Cilium agent. It interacts with the REST API of the Cilium agent running on the same node. The debug CLI allows inspecting the state and status of the local agent. It also provides tooling to directly access the eBPF maps to validate their state.",
+      "optionRationale": {
+        "a": "This describes Relay, not Debug Client.",
+        "c": "This describes Key-Value Store, not Debug Client.",
+        "b": "This describes Identity context, not Debug Client."
+      },
+      "citations": [
+        {
+          "file": "overview/component-overview.rst",
+          "anchor": "cilium",
+          "title": "Cilium",
+          "quote": "The Cilium debug CLI client (``cilium-dbg``) is a command-line tool that is installed along with the Cilium agent. It interacts with the REST API of the Cilium agent running on the same node. The debug CLI allows inspecting the state and status of the local agent. It also provides tooling to directl",
+          "url": "https://docs.cilium.io/en/stable/overview/component-overview/#cilium"
+        }
+      ],
+      "domain": "architecture",
+      "competency": "component-roles",
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "overview/component-overview.rst#cilium",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "schemaVersion": 1
+    },
+    {
+      "id": "8b579c5bef5c7cb7",
+      "ordinal": 1,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes CNI Plugin in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "All traffic not staying with the ``ipv4-native-routing-cidr`` will be masqueraded to the node's IP address to become publicly routable."
+        },
+        {
+          "id": "b",
+          "text": "Cilium will assign IPs to pods out of the PodCIDR assigned to the specific Kubernetes node. By using `Alias IP ranges <https://cloud.google.com/vpc/docs/alias-ip>`_, these IPs are natively routable on Google Cloud's network without additional encapsulation or route distribution."
+        },
+        {
+          "id": "c",
+          "text": "The graphical user interface (``hubble-ui``) utilizes relay-based visibility to provide a graphical service dependency and connectivity map."
+        },
+        {
+          "id": "d",
+          "text": "The CNI plugin (``cilium-cni``) is invoked by Kubernetes when a pod is scheduled or terminated on a node. It interacts with the Cilium API of the node to trigger the necessary datapath configuration to provide networking, load-balancing and network policies for the pod."
+        }
+      ],
+      "answer": "d",
+      "explanation": "The CNI plugin (``cilium-cni``) is invoked by Kubernetes when a pod is scheduled or terminated on a node. It interacts with the Cilium API of the node to trigger the necessary datapath configuration to provide networking, load-balancing and network policies for the pod.",
+      "optionRationale": {
+        "c": "This describes Graphical UI, not CNI Plugin.",
+        "a": "This describes Masquerading, not CNI Plugin.",
+        "b": "This describes Addressing, not CNI Plugin."
+      },
+      "citations": [
+        {
+          "file": "overview/component-overview.rst",
+          "anchor": "cilium",
+          "title": "Cilium",
+          "quote": "The CNI plugin (``cilium-cni``) is invoked by Kubernetes when a pod is scheduled or terminated on a node. It interacts with the Cilium API of the node to trigger the necessary datapath configuration to provide networking, load-balancing and network policies for the pod.",
+          "url": "https://docs.cilium.io/en/stable/overview/component-overview/#cilium"
+        }
+      ],
+      "domain": "architecture",
+      "competency": "component-roles",
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "overview/component-overview.rst#cilium",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer is configuring the bandwidth manager for a multi-node cluster. They need to manually specify the network devices on which egress bandwidth limitation is enforced because the auto-detection is not suitable for their setup. Which Helm option should they use to specify the device names?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The `devices` helm option"
+        },
+        {
+          "id": "b",
+          "text": "The `bandwidth` helm option"
+        },
+        {
+          "id": "c",
+          "text": "The `egress-bandwidth` annotation"
+        },
+        {
+          "id": "d",
+          "text": "The `ingress-bandwidth` annotation"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt states: \"To change and manually specify the devices, set their names in the `devices` helm option (e.g. `devices='eth0,eth1,eth2'`)\".",
+      "optionRationale": {
+        "b": "The excerpt does not mention a `bandwidth` helm option for specifying devices; it mentions the `devices` option.",
+        "c": "The `egress-bandwidth` annotation is used to set the bandwidth limit for a Pod, not to specify the network devices for the bandwidth manager.",
+        "d": "The `ingress-bandwidth` annotation is used to set the bandwidth limit for a Pod, not to specify the network devices for the bandwidth manager."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/kubernetes/bandwidth-manager.rst",
+          "anchor": "bandwidth-manager",
+          "title": "Bandwidth Manager",
+          "quote": "To change and manually specify the devices, set their names in the ``devices`` helm option (e.g. ``devices='eth0,eth1,eth2'``).",
+          "url": "https://docs.cilium.io/en/stable/network/kubernetes/bandwidth-manager/#bandwidth-manager"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/kubernetes/bandwidth-manager.rst#bandwidth-manager",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "96aba39cf8cc3a75",
+      "domain": "architecture",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "id": "9b05f33ad6749f3e",
+      "ordinal": 2,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes Graphical UI in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Relay (``hubble-relay``) is a standalone component which is aware of all running Hubble servers and offers cluster-wide visibility by connecting to their respective gRPC APIs and providing an API that represents all servers in the cluster."
+        },
+        {
+          "id": "b",
+          "text": "Only honored for the Service referenced by that ``EndpointSlice`` when it uses the Maglev load-balancing algorithm, whether Maglev is configured globally or selected per service through ``service."
+        },
+        {
+          "id": "c",
+          "text": "Cilium will assign IPs to pods out of the PodCIDR assigned to the specific Kubernetes node. By using `Alias IP ranges <https://cloud.google.com/vpc/docs/alias-ip>`_, these IPs are natively routable on Google Cloud's network without additional encapsulation or route distribution."
+        },
+        {
+          "id": "d",
+          "text": "The graphical user interface (``hubble-ui``) utilizes relay-based visibility to provide a graphical service dependency and connectivity map."
+        }
+      ],
+      "answer": "d",
+      "explanation": "The graphical user interface (``hubble-ui``) utilizes relay-based visibility to provide a graphical service dependency and connectivity map.",
+      "optionRationale": {
+        "a": "This describes Relay, not Graphical UI.",
+        "c": "This describes Addressing, not Graphical UI.",
+        "b": "This describes Weights, not Graphical UI."
+      },
+      "citations": [
+        {
+          "file": "overview/component-overview.rst",
+          "anchor": "hubble",
+          "title": "Hubble",
+          "quote": "The graphical user interface (``hubble-ui``) utilizes relay-based visibility to provide a graphical service dependency and connectivity map.",
+          "url": "https://docs.cilium.io/en/stable/overview/component-overview/#hubble"
+        }
+      ],
+      "domain": "architecture",
+      "competency": "component-roles",
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "overview/component-overview.rst#hubble",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "schemaVersion": 1
+    },
+    {
+      "id": "9b9262adf6663930",
+      "ordinal": 0,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes Weights in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Due to not depending on any underlying networking limitations, the available addressing space is potentially much larger and allows to run any number of pods per node if the PodCIDR size is configured accordingly."
+        },
+        {
+          "id": "b",
+          "text": "The Hubble CLI (``hubble``) is a command-line tool able to connect to either the gRPC API of ``hubble-relay`` or the local server to retrieve flow events."
+        },
+        {
+          "id": "c",
+          "text": "All traffic not staying with the ``ipv4-native-routing-cidr`` will be masqueraded to the node's IP address to become publicly routable."
+        },
+        {
+          "id": "d",
+          "text": "Only honored for the Service referenced by that ``EndpointSlice`` when it uses the Maglev load-balancing algorithm, whether Maglev is configured globally or selected per service through ``service."
+        }
+      ],
+      "answer": "d",
+      "explanation": "Weights are only honored for the Service referenced by that ``EndpointSlice`` when it uses the Maglev load-balancing algorithm, whether Maglev is configured globally or selected per service through ``service.cilium.io/lb-algorithm``.",
+      "optionRationale": {
+        "a": "This describes Addressing space, not Weights.",
+        "c": "This describes Masquerading, not Weights.",
+        "b": "This describes Client, not Weights."
+      },
+      "citations": [
+        {
+          "file": "network/kubernetes/kubeproxy-free.rst",
+          "anchor": "annotation-based-load-balancing-weight",
+          "title": "Annotation-based Load Balancing Weight",
+          "quote": "Weights are only honored for the Service referenced by that ``EndpointSlice`` when it uses the Maglev load-balancing algorithm, whether Maglev is configured globally or selected per service through ``service.cilium.io/lb-algorithm``.",
+          "url": "https://docs.cilium.io/en/stable/network/kubernetes/kubeproxy-free/#annotation-based-load-balancing-weight"
+        }
+      ],
+      "domain": "architecture",
+      "competency": null,
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/kubernetes/kubeproxy-free.rst#annotation-based-load-balancing-weight",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "schemaVersion": 1
+    },
+    {
+      "id": "a20d03b654e568a3",
+      "ordinal": 0,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes Subscription in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Only honored for the Service referenced by that ``EndpointSlice`` when it uses the Maglev load-balancing algorithm, whether Maglev is configured globally or selected per service through ``service."
+        },
+        {
+          "id": "b",
+          "text": "When running together with an orchestration system such as Kubernetes, the list of all nodes in the cluster including their associated allocation prefix node is made available to each agent automatically. New nodes joining the cluster will automatically be incorporated into the mesh."
+        },
+        {
+          "id": "c",
+          "text": "All requirements for state storage and propagation can be met with Kubernetes CRDs as configured in the default configuration of Cilium. A key-value store can optionally be used as an optimization to improve the scalability of a cluster as change notifications and storage requirements are more efficient with direct key-value store usage."
+        },
+        {
+          "id": "d",
+          "text": "Only required if you want VNet discovery to work across multiple resource groups from a single role assignment. ``List`` calls filter by RBAC, so subscription-wide Reader is not mandatory, scoping the same actions to each relevant resource group is sufficient."
+        }
+      ],
+      "answer": "d",
+      "explanation": "Only required if you want VNet discovery to work across multiple resource groups from a single role assignment. ``List`` calls filter by RBAC, so subscription-wide Reader is not mandatory, scoping the same actions to each relevant resource group is sufficient.",
+      "optionRationale": {
+        "a": "This describes Weights, not Subscription.",
+        "c": "This describes Key-Value Store, not Subscription.",
+        "b": "This describes Auto-configuration, not Subscription."
+      },
+      "citations": [
+        {
+          "file": "network/concepts/ipam/azure.rst",
+          "anchor": "required-privileges",
+          "title": "Required Privileges",
+          "quote": "Only required if you want VNet discovery to work across multiple resource groups from a single role assignment. ``List`` calls filter by RBAC, so subscription-wide Reader is not mandatory, scoping the same actions to each relevant resource group is sufficient.",
+          "url": "https://docs.cilium.io/en/stable/network/concepts/ipam/azure/#required-privileges"
+        }
+      ],
+      "domain": "architecture",
+      "competency": "ipam",
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/concepts/ipam/azure.rst#required-privileges",
+        "createdAt": "2026-11-08T00:52:53.392Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer is migrating a cluster from the 10.10.0.0/16 CIDR to 10.20.0.0/16. After updating the CiliumPodIPPool resource and restarting the Cilium operator, the engineer cordons Node Group 1 and drains it. What is the immediate consequence for the pods that were running on Node Group 1?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The pods are rescheduled to Node Group 2 and receive IP addresses from the new 10.20.0.0/16 CIDR."
+        },
+        {
+          "id": "b",
+          "text": "The pods remain on Node Group 1 but are assigned new IP addresses from the 10.20.0.0/16 CIDR."
+        },
+        {
+          "id": "c",
+          "text": "The pods are deleted and must be manually recreated to obtain IP addresses from the new pool."
+        },
+        {
+          "id": "d",
+          "text": "The pods are rescheduled to Node Group 2 but retain their original IP addresses from the 10.10.0.0/16 CIDR."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt states that after draining Node Group 1, the nginx pod running on kind-worker (Node Group 1) is rescheduled on kind-control-plane (Node Group 2) with an IP address from the updated pool (10.20.11.182, which is within 10.20.0.0/16).",
+      "optionRationale": {
+        "b": "Incorrect because the nodes in Node Group 1 are cordoned and drained, so pods cannot remain on them.",
+        "c": "Incorrect because the pods are rescheduled, not deleted and manually recreated.",
+        "d": "Incorrect because the new pods receive IP addresses from the updated pool, not the old one."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/concepts/ipam/multi-pool.rst",
+          "anchor": "updating-existing-ciliumpodippools",
+          "title": "Updating existing CiliumPodIPPools",
+          "quote": "The nginx pod running on kind-worker is rescheduled on kind-control-plane with an IP address from the updated pool",
+          "url": "https://docs.cilium.io/en/stable/network/concepts/ipam/multi-pool/#updating-existing-ciliumpodippools"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/concepts/ipam/multi-pool.rst#updating-existing-ciliumpodippools",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "be54bab782346128",
+      "domain": "architecture",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "id": "c043a320c68f9311",
+      "ordinal": 0,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes CiliumEndpointSlice in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The Hubble CLI (``hubble``) is a command-line tool able to connect to either the gRPC API of ``hubble-relay`` or the local server to retrieve flow events."
+        },
+        {
+          "id": "b",
+          "text": "All traffic not staying with the ``ipv4-native-routing-cidr`` will be masqueraded to the node's IP address to become publicly routable."
+        },
+        {
+          "id": "c",
+          "text": "The graphical user interface (``hubble-ui``) utilizes relay-based visibility to provide a graphical service dependency and connectivity map."
+        },
+        {
+          "id": "d",
+          "text": "Concept that is specific to Cilium and is not related to `Kubernetes' EndpointSlice`_."
+        }
+      ],
+      "answer": "d",
+      "explanation": "CiliumEndpointSlice is a concept that is specific to Cilium and is not related to `Kubernetes' EndpointSlice`_. Although the names are similar, and even though the concept of slices in each feature brings similar improvements for scalability, they address different problems.",
+      "optionRationale": {
+        "c": "This describes Graphical UI, not CiliumEndpointSlice.",
+        "a": "This describes Client, not CiliumEndpointSlice.",
+        "b": "This describes Masquerading, not CiliumEndpointSlice."
+      },
+      "citations": [
+        {
+          "file": "network/kubernetes/ciliumendpointslice.rst",
+          "anchor": "ciliumendpointslice",
+          "title": "CiliumEndpointSlice",
+          "quote": "CiliumEndpointSlice is a concept that is specific to Cilium and is not related to `Kubernetes' EndpointSlice`_. Although the names are similar, and even though the concept of slices in each feature brings similar improvements for scalability, they address different problems.",
+          "url": "https://docs.cilium.io/en/stable/network/kubernetes/ciliumendpointslice/#ciliumendpointslice"
+        }
+      ],
+      "domain": "architecture",
+      "competency": null,
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/kubernetes/ciliumendpointslice.rst#ciliumendpointslice",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "schemaVersion": 1
+    },
+    {
+      "stem": "A cluster administrator is troubleshooting latency issues in a Cilium cluster where the bandwidth manager is enabled. They observe that traffic is being routed through the upper stack, resulting in undesired high latency. According to the documentation, what configuration is strongly recommended to avoid this issue?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Using the bandwidth CNI plugin"
+        },
+        {
+          "id": "b",
+          "text": "Using Bandwidth Manager in combination with BPF Host Routing"
+        },
+        {
+          "id": "c",
+          "text": "Disabling the bandwidth manager"
+        },
+        {
+          "id": "d",
+          "text": "Using TBF (Token Bucket Filter) for rate limiting"
+        }
+      ],
+      "answer": "b",
+      "explanation": "The excerpt states: \"It is strongly recommended to use Bandwidth Manager in combination with BPF Host Routing as otherwise legacy routing through the upper stack could potentially result in undesired high latency\".",
+      "optionRationale": {
+        "a": "The excerpt states that the bandwidth manager does not rely on CNI chaining and does not make use of the bandwidth CNI plugin.",
+        "c": "Disabling the bandwidth manager would not address the routing issue described, which is related to the interaction between the bandwidth manager and routing modes.",
+        "d": "The excerpt states that TBF is not recommended due to scalability concerns, and the issue described is related to routing, not the specific rate-limiting algorithm."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/kubernetes/bandwidth-manager.rst",
+          "anchor": "bandwidth-manager",
+          "title": "Bandwidth Manager",
+          "quote": "It is strongly recommended to use Bandwidth Manager in combination with BPF Host Routing as otherwise legacy routing through the upper stack could potentially result in undesired high latency",
+          "url": "https://docs.cilium.io/en/stable/network/kubernetes/bandwidth-manager/#bandwidth-manager"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/kubernetes/bandwidth-manager.rst#bandwidth-manager",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "f37b3b7757719126",
+      "domain": "architecture",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "id": "fdae965890409a35",
+      "ordinal": 0,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes Status in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "All traffic not staying with the ``ipv4-native-routing-cidr`` will be masqueraded to the node's IP address to become publicly routable."
+        },
+        {
+          "id": "b",
+          "text": "The graphical user interface (``hubble-ui``) utilizes relay-based visibility to provide a graphical service dependency and connectivity map."
+        },
+        {
+          "id": "c",
+          "text": "Only honored for the Service referenced by that ``EndpointSlice`` when it uses the Maglev load-balancing algorithm, whether Maglev is configured globally or selected per service through ``service."
+        },
+        {
+          "id": "d",
+          "text": "Provides visibility into whether the policy has been successfully applied."
+        }
+      ],
+      "answer": "d",
+      "explanation": "Provides visibility into whether the policy has been successfully applied.",
+      "optionRationale": {
+        "a": "This describes Masquerading, not Status.",
+        "c": "This describes Weights, not Status.",
+        "b": "This describes Graphical UI, not Status."
+      },
+      "citations": [
+        {
+          "file": "network/kubernetes/policy.rst",
+          "anchor": "ciliumnetworkpolicy",
+          "title": "CiliumNetworkPolicy",
+          "quote": "Provides visibility into whether the policy has been successfully applied.",
+          "url": "https://docs.cilium.io/en/stable/network/kubernetes/policy/#ciliumnetworkpolicy"
+        }
+      ],
+      "domain": "architecture",
+      "competency": null,
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/kubernetes/policy.rst#ciliumnetworkpolicy",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "schemaVersion": 1
+    },
+    {
+      "id": "cfa0685b991591c6",
+      "ordinal": 0,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes MCS-API in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A Kubernetes service of type NodePort is used to expose the control plane."
+        },
+        {
+          "id": "b",
+          "text": "A Kubernetes service of type ClusterIP is used to expose the control plane."
+        },
+        {
+          "id": "c",
+          "text": "A Kubernetes service of type LoadBalancer is used to expose the control plane."
+        },
+        {
+          "id": "d",
+          "text": "Kubernetes SIG Multicluster standard based on the ServiceExport and ServiceImport resources."
+        }
+      ],
+      "answer": "d",
+      "explanation": "MCS-API is a Kubernetes SIG Multicluster standard based on the ServiceExport and ServiceImport resources. It provides higher-level features such as consistent global service properties, status condition reporting, and a dedicated ``clusterset.local`` DNS domain, which requires CoreDNS configuration that Cilium can manage automatically when CoreDNS auto-configuration is enabled.",
+      "optionRationale": {
+        "a": "This describes NodePort, not MCS-API.",
+        "b": "This describes ClusterIP, not MCS-API.",
+        "c": "This describes LoadBalancer, not MCS-API."
+      },
+      "citations": [
+        {
+          "file": "network/clustermesh/load-balancing.rst",
+          "anchor": "load-balancing-service-discovery",
+          "title": "Load-balancing & Service Discovery",
+          "quote": "MCS-API is a Kubernetes SIG Multicluster standard based on the ServiceExport and ServiceImport resources. It provides higher-level features such as consistent global service properties, status condition reporting, and a dedicated ``clusterset.local`` DNS domain, which requires CoreDNS configuration ",
+          "url": "https://docs.cilium.io/en/stable/network/clustermesh/load-balancing/#load-balancing-service-discovery"
+        }
+      ],
+      "domain": "cluster-mesh",
+      "competency": null,
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/clustermesh/load-balancing.rst#load-balancing-service-discovery",
+        "createdAt": "2026-11-08T00:52:53.392Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "schemaVersion": 1
+    },
+    {
+      "id": "1c0ec6d6bedc6ab3",
+      "ordinal": 0,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes KVStore in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Service which allows to query multiple Hubble instances simultaneously and aggregate the results."
+        },
+        {
+          "id": "b",
+          "text": "The number of connections per second that can be established in sequence with a single request/response payload message transmitted for each new connection. A single process and 32 parallel processes are tested."
+        },
+        {
+          "id": "c",
+          "text": "The number of request/response messages per second that can be transmitted over a single TCP connection and over 32 parallel TCP connections."
+        },
+        {
+          "id": "d",
+          "text": "Ok etcd: 1/1 connected, lease-ID=29c6732d5d580cb5, lock lease-ID=29c6732d5d580cb7, has-quorum=true: https://192."
+        }
+      ],
+      "answer": "d",
+      "explanation": "KVStore: Ok etcd: 1/1 connected, lease-ID=29c6732d5d580cb5, lock lease-ID=29c6732d5d580cb7, has-quorum=true: https://192.168.60.11:2379 - 3.4.9 (Leader)",
+      "optionRationale": {
+        "c": "This describes Request/Response Rate, not KVStore.",
+        "a": "This describes Hubble Relay, not KVStore.",
+        "b": "This describes Connections Rate, not KVStore."
+      },
+      "citations": [
+        {
+          "file": "operations/troubleshooting.rst",
+          "anchor": "understanding-etcd-status",
+          "title": "Understanding etcd status",
+          "quote": "KVStore: Ok etcd: 1/1 connected, lease-ID=29c6732d5d580cb5, lock lease-ID=29c6732d5d580cb7, has-quorum=true: https://192.168.60.11:2379 - 3.4.9 (Leader)",
+          "url": "https://docs.cilium.io/en/stable/operations/troubleshooting/#understanding-etcd-status"
+        }
+      ],
+      "domain": "installation",
+      "competency": "status-monitoring",
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "operations/troubleshooting.rst#understanding-etcd-status",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "schemaVersion": 1
+    },
+    {
+      "id": "254aa3d5fafeae6b",
+      "ordinal": 0,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes Request/Response Rate in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Designed to have minimal impact on your running deployment."
+        },
+        {
+          "id": "b",
+          "text": "The number of connections per second that can be established in sequence with a single request/response payload message transmitted for each new connection. A single process and 32 parallel processes are tested."
+        },
+        {
+          "id": "c",
+          "text": "Service which allows to query multiple Hubble instances simultaneously and aggregate the results."
+        },
+        {
+          "id": "d",
+          "text": "The number of request/response messages per second that can be transmitted over a single TCP connection and over 32 parallel TCP connections."
+        }
+      ],
+      "answer": "d",
+      "explanation": "The number of request/response messages per second that can be transmitted over a single TCP connection and over 32 parallel TCP connections.",
+      "optionRationale": {
+        "c": "This describes Hubble Relay, not Request/Response Rate.",
+        "a": "This describes Upgrades, not Request/Response Rate.",
+        "b": "This describes Connections Rate, not Request/Response Rate."
+      },
+      "citations": [
+        {
+          "file": "operations/performance/benchmark.rst",
+          "anchor": "introduction",
+          "title": "Introduction",
+          "quote": "The number of request/response messages per second that can be transmitted over a single TCP connection and over 32 parallel TCP connections.",
+          "url": "https://docs.cilium.io/en/stable/operations/performance/benchmark/#introduction"
+        }
+      ],
+      "domain": "installation",
+      "competency": null,
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "operations/performance/benchmark.rst#introduction",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "schemaVersion": 1
+    },
+    {
+      "id": "38cdb07d7904eced",
+      "ordinal": 0,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes Identities in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The number of connections per second that can be established in sequence with a single request/response payload message transmitted for each new connection. A single process and 32 parallel processes are tested."
+        },
+        {
+          "id": "b",
+          "text": "Service which allows to query multiple Hubble instances simultaneously and aggregate the results."
+        },
+        {
+          "id": "c",
+          "text": "The number of request/response messages per second that can be transmitted over a single TCP connection and over 32 parallel TCP connections."
+        },
+        {
+          "id": "d",
+          "text": "Valid in the entire cluster which means that if several pods or containers are started on several cluster nodes, all of them will resolve and share a single identity if they share the identity relevant labels."
+        }
+      ],
+      "answer": "d",
+      "explanation": "Identities are valid in the entire cluster which means that if several pods or containers are started on several cluster nodes, all of them will resolve and share a single identity if they share the identity relevant labels. This requires coordination between cluster nodes.",
+      "optionRationale": {
+        "a": "This describes Connections Rate, not Identities.",
+        "c": "This describes Request/Response Rate, not Identities.",
+        "b": "This describes Hubble Relay, not Identities."
+      },
+      "citations": [
+        {
+          "file": "gettingstarted/terminology.rst",
+          "anchor": "identity-management-in-the-cluster",
+          "title": "Identity Management in the Cluster",
+          "quote": "Identities are valid in the entire cluster which means that if several pods or containers are started on several cluster nodes, all of them will resolve and share a single identity if they share the identity relevant labels. This requires coordination between cluster nodes.",
+          "url": "https://docs.cilium.io/en/stable/gettingstarted/terminology/#identity-management-in-the-cluster"
+        }
+      ],
+      "domain": "installation",
+      "competency": null,
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "gettingstarted/terminology.rst#identity-management-in-the-cluster",
+        "createdAt": "2026-11-08T00:52:53.392Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "schemaVersion": 1
+    },
+    {
+      "id": "4e55f6ae8ade72e3",
+      "ordinal": 1,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes Connections Rate in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Service which allows to query multiple Hubble instances simultaneously and aggregate the results."
+        },
+        {
+          "id": "b",
+          "text": "The number of request/response messages per second that can be transmitted over a single TCP connection and over 32 parallel TCP connections."
+        },
+        {
+          "id": "c",
+          "text": "Valid in the entire cluster which means that if several pods or containers are started on several cluster nodes, all of them will resolve and share a single identity if they share the identity relevant labels."
+        },
+        {
+          "id": "d",
+          "text": "The number of connections per second that can be established in sequence with a single request/response payload message transmitted for each new connection. A single process and 32 parallel processes are tested."
+        }
+      ],
+      "answer": "d",
+      "explanation": "The number of connections per second that can be established in sequence with a single request/response payload message transmitted for each new connection. A single process and 32 parallel processes are tested.",
+      "optionRationale": {
+        "a": "This describes Hubble Relay, not Connections Rate.",
+        "c": "This describes Identities, not Connections Rate.",
+        "b": "This describes Request/Response Rate, not Connections Rate."
+      },
+      "citations": [
+        {
+          "file": "operations/performance/benchmark.rst",
+          "anchor": "introduction",
+          "title": "Introduction",
+          "quote": "The number of connections per second that can be established in sequence with a single request/response payload message transmitted for each new connection. A single process and 32 parallel processes are tested.",
+          "url": "https://docs.cilium.io/en/stable/operations/performance/benchmark/#introduction"
+        }
+      ],
+      "domain": "installation",
+      "competency": null,
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "operations/performance/benchmark.rst#introduction",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "schemaVersion": 1
+    },
+    {
+      "id": "d735e63113f452b6",
+      "ordinal": 0,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes Below in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Service which allows to query multiple Hubble instances simultaneously and aggregate the results."
+        },
+        {
+          "id": "b",
+          "text": "The number of request/response messages per second that can be transmitted over a single TCP connection and over 32 parallel TCP connections."
+        },
+        {
+          "id": "c",
+          "text": "Designed to have minimal impact on your running deployment."
+        },
+        {
+          "id": "d",
+          "text": "Approximate list of the kind of information in the archive."
+        }
+      ],
+      "answer": "d",
+      "explanation": "Below is an approximate list of the kind of information in the archive.",
+      "optionRationale": {
+        "a": "This describes Hubble Relay, not Below.",
+        "c": "This describes Upgrades, not Below.",
+        "b": "This describes Request/Response Rate, not Below."
+      },
+      "citations": [
+        {
+          "file": "operations/troubleshooting.rst",
+          "anchor": "single-node-bugtool",
+          "title": "Single Node Bugtool",
+          "quote": "Below is an approximate list of the kind of information in the archive.",
+          "url": "https://docs.cilium.io/en/stable/operations/troubleshooting/#single-node-bugtool"
+        }
+      ],
+      "domain": "installation",
+      "competency": null,
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "operations/troubleshooting.rst#single-node-bugtool",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "schemaVersion": 1
+    },
+    {
+      "id": "e75bc028edf8d586",
+      "ordinal": 0,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes Hubble Relay in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The number of connections per second that can be established in sequence with a single request/response payload message transmitted for each new connection. A single process and 32 parallel processes are tested."
+        },
+        {
+          "id": "b",
+          "text": "The number of request/response messages per second that can be transmitted over a single TCP connection and over 32 parallel TCP connections."
+        },
+        {
+          "id": "c",
+          "text": "Designed to have minimal impact on your running deployment."
+        },
+        {
+          "id": "d",
+          "text": "Service which allows to query multiple Hubble instances simultaneously and aggregate the results."
+        }
+      ],
+      "answer": "d",
+      "explanation": "Hubble Relay is a service which allows to query multiple Hubble instances simultaneously and aggregate the results. See hubble_setup to enable Hubble Relay if it is not yet enabled and install the Hubble CLI on your local machine.",
+      "optionRationale": {
+        "a": "This describes Connections Rate, not Hubble Relay.",
+        "c": "This describes Upgrades, not Hubble Relay.",
+        "b": "This describes Request/Response Rate, not Hubble Relay."
+      },
+      "citations": [
+        {
+          "file": "operations/troubleshooting.rst",
+          "anchor": "observing-flows-with-hubble-relay",
+          "title": "Observing flows with Hubble Relay",
+          "quote": "Hubble Relay is a service which allows to query multiple Hubble instances simultaneously and aggregate the results. See hubble_setup to enable Hubble Relay if it is not yet enabled and install the Hubble CLI on your local machine.",
+          "url": "https://docs.cilium.io/en/stable/operations/troubleshooting/#observing-flows-with-hubble-relay"
+        }
+      ],
+      "domain": "installation",
+      "competency": null,
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "operations/troubleshooting.rst#observing-flows-with-hubble-relay",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "schemaVersion": 1
+    },
+    {
+      "id": "02e8c62e745e7dd5",
+      "ordinal": 1,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes Host in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "List of rules which must apply at egress of the endpoint, i.e. to all network packets which are leaving the endpoint."
+        },
+        {
+          "id": "b",
+          "text": "Description is a string which is not interpreted by Cilium. It can be used to describe the intent and scope of the rule in a human readable form."
+        },
+        {
+          "id": "c",
+          "text": "Selects the endpoints or nodes which the policy rules apply to. The policy rules will be applied to all endpoints which match the labels specified in the selector. For additional details, see the EndpointSelector and NodeSelector sections."
+        },
+        {
+          "id": "d",
+          "text": "Host is an extended POSIX regex matched against the host header of a request, e.g. ``foo.com``. If omitted or empty, the value of the host header is ignored."
+        }
+      ],
+      "answer": "d",
+      "explanation": "Host is an extended POSIX regex matched against the host header of a request, e.g. ``foo.com``. If omitted or empty, the value of the host header is ignored.",
+      "optionRationale": {
+        "a": "This describes egress, not Host.",
+        "c": "This describes endpointSelector / nodeSelector, not Host.",
+        "b": "This describes description, not Host."
+      },
+      "citations": [
+        {
+          "file": "security/policy/layer7.rst",
+          "anchor": "http",
+          "title": "HTTP",
+          "quote": "Host is an extended POSIX regex matched against the host header of a request, e.g. ``foo.com``. If omitted or empty, the value of the host header is ignored.",
+          "url": "https://docs.cilium.io/en/stable/security/policy/layer7/#http"
+        }
+      ],
+      "domain": "network-policy",
+      "competency": "policy-rule-structure",
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "security/policy/layer7.rst#http",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "schemaVersion": 1
+    },
+    {
+      "id": "10fe40605ba8ab82",
+      "ordinal": 2,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes Headers in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Description is a string which is not interpreted by Cilium. It can be used to describe the intent and scope of the rule in a human readable form."
+        },
+        {
+          "id": "b",
+          "text": "Selects the endpoints or nodes which the policy rules apply to. The policy rules will be applied to all endpoints which match the labels specified in the selector. For additional details, see the EndpointSelector and NodeSelector sections."
+        },
+        {
+          "id": "c",
+          "text": "List of rules which must apply at egress of the endpoint, i.e. to all network packets which are leaving the endpoint."
+        },
+        {
+          "id": "d",
+          "text": "Headers is a list of HTTP headers which must be present in the request. If omitted or empty, requests are allowed regardless of headers present."
+        }
+      ],
+      "answer": "d",
+      "explanation": "Headers is a list of HTTP headers which must be present in the request. If omitted or empty, requests are allowed regardless of headers present.",
+      "optionRationale": {
+        "a": "This describes description, not Headers.",
+        "b": "This describes endpointSelector / nodeSelector, not Headers.",
+        "c": "This describes egress, not Headers."
+      },
+      "citations": [
+        {
+          "file": "security/policy/layer7.rst",
+          "anchor": "http",
+          "title": "HTTP",
+          "quote": "Headers is a list of HTTP headers which must be present in the request. If omitted or empty, requests are allowed regardless of headers present.",
+          "url": "https://docs.cilium.io/en/stable/security/policy/layer7/#http"
+        }
+      ],
+      "domain": "network-policy",
+      "competency": "policy-rule-structure",
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "security/policy/layer7.rst#http",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "schemaVersion": 1
+    },
+    {
+      "id": "11c4e64a679246dd",
+      "ordinal": 3,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes labels in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Path is an extended POSIX regex matched against the path of a request. Currently it can contain characters disallowed from the conventional \"path\" part of a URL as defined by RFC 3986. Paths must begin with a ``/``. If omitted or empty, all paths are all allowed."
+        },
+        {
+          "id": "b",
+          "text": "With never mode, policy enforcement is disabled on all endpoints, even if rules do select specific endpoints. In other words, all traffic is allowed from any source (on ingress) or destination (on egress)."
+        },
+        {
+          "id": "c",
+          "text": "Selects the endpoints or nodes which the policy rules apply to. The policy rules will be applied to all endpoints which match the labels specified in the selector. For additional details, see the EndpointSelector and NodeSelector sections."
+        },
+        {
+          "id": "d",
+          "text": "Labels are used to identify the rule. Rules can be listed and deleted by labels. Policy rules which are imported via kubernetes automatically get the label ``io.cilium.k8s.policy.name=NAME`` assigned where ``NAME`` corresponds to the name specified in the `NetworkPolicy` or `CiliumNetworkPolicy` resource."
+        }
+      ],
+      "answer": "d",
+      "explanation": "Labels are used to identify the rule. Rules can be listed and deleted by labels. Policy rules which are imported via kubernetes automatically get the label ``io.cilium.k8s.policy.name=NAME`` assigned where ``NAME`` corresponds to the name specified in the `NetworkPolicy` or `CiliumNetworkPolicy` resource.",
+      "optionRationale": {
+        "c": "This describes endpointSelector / nodeSelector, not labels.",
+        "a": "This describes Path, not labels.",
+        "b": "This describes never, not labels."
+      },
+      "citations": [
+        {
+          "file": "security/policy/intro.rst",
+          "anchor": "rule-basics",
+          "title": "Rule Basics",
+          "quote": "Labels are used to identify the rule. Rules can be listed and deleted by labels. Policy rules which are imported via kubernetes automatically get the label ``io.cilium.k8s.policy.name=NAME`` assigned where ``NAME`` corresponds to the name specified in the `NetworkPolicy` or `CiliumNetworkPolicy` res",
+          "url": "https://docs.cilium.io/en/stable/security/policy/intro/#rule-basics"
+        }
+      ],
+      "domain": "network-policy",
+      "competency": null,
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "security/policy/intro.rst#rule-basics",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "schemaVersion": 1
+    },
+    {
+      "id": "302f4e6633b513d3",
+      "ordinal": 2,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes egress in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "List of rules which must apply at ingress of the endpoint, i.e. to all network packets which are entering the endpoint."
+        },
+        {
+          "id": "b",
+          "text": "Host is an extended POSIX regex matched against the host header of a request, e.g. ``foo.com``. If omitted or empty, the value of the host header is ignored."
+        },
+        {
+          "id": "c",
+          "text": "Selects the endpoints or nodes which the policy rules apply to. The policy rules will be applied to all endpoints which match the labels specified in the selector. For additional details, see the EndpointSelector and NodeSelector sections."
+        },
+        {
+          "id": "d",
+          "text": "List of rules which must apply at egress of the endpoint, i.e. to all network packets which are leaving the endpoint."
+        }
+      ],
+      "answer": "d",
+      "explanation": "List of rules which must apply at egress of the endpoint, i.e. to all network packets which are leaving the endpoint.",
+      "optionRationale": {
+        "a": "This describes ingress, not egress.",
+        "c": "This describes endpointSelector / nodeSelector, not egress.",
+        "b": "This describes Host, not egress."
+      },
+      "citations": [
+        {
+          "file": "security/policy/intro.rst",
+          "anchor": "rule-basics",
+          "title": "Rule Basics",
+          "quote": "List of rules which must apply at egress of the endpoint, i.e. to all network packets which are leaving the endpoint.",
+          "url": "https://docs.cilium.io/en/stable/security/policy/intro/#rule-basics"
+        }
+      ],
+      "domain": "network-policy",
+      "competency": null,
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "security/policy/intro.rst#rule-basics",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "schemaVersion": 1
+    },
+    {
+      "id": "476080ae2c8545c9",
+      "ordinal": 1,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes ingress in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Host is an extended POSIX regex matched against the host header of a request, e.g. ``foo.com``. If omitted or empty, the value of the host header is ignored."
+        },
+        {
+          "id": "b",
+          "text": "Description is a string which is not interpreted by Cilium. It can be used to describe the intent and scope of the rule in a human readable form."
+        },
+        {
+          "id": "c",
+          "text": "With never mode, policy enforcement is disabled on all endpoints, even if rules do select specific endpoints. In other words, all traffic is allowed from any source (on ingress) or destination (on egress)."
+        },
+        {
+          "id": "d",
+          "text": "List of rules which must apply at ingress of the endpoint, i.e. to all network packets which are entering the endpoint."
+        }
+      ],
+      "answer": "d",
+      "explanation": "List of rules which must apply at ingress of the endpoint, i.e. to all network packets which are entering the endpoint.",
+      "optionRationale": {
+        "a": "This describes Host, not ingress.",
+        "c": "This describes never, not ingress.",
+        "b": "This describes description, not ingress."
+      },
+      "citations": [
+        {
+          "file": "security/policy/intro.rst",
+          "anchor": "rule-basics",
+          "title": "Rule Basics",
+          "quote": "List of rules which must apply at ingress of the endpoint, i.e. to all network packets which are entering the endpoint.",
+          "url": "https://docs.cilium.io/en/stable/security/policy/intro/#rule-basics"
+        }
+      ],
+      "domain": "network-policy",
+      "competency": null,
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "security/policy/intro.rst#rule-basics",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "schemaVersion": 1
+    },
+    {
+      "id": "6cbb37b38744525a",
+      "ordinal": 0,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes endpointSelector / nodeSelector in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Labels are used to identify the rule. Rules can be listed and deleted by labels. Policy rules which are imported via kubernetes automatically get the label ``io.cilium.k8s.policy.name=NAME`` assigned where ``NAME`` corresponds to the name specified in the `NetworkPolicy` or `CiliumNetworkPolicy` resource."
+        },
+        {
+          "id": "b",
+          "text": "With never mode, policy enforcement is disabled on all endpoints, even if rules do select specific endpoints. In other words, all traffic is allowed from any source (on ingress) or destination (on egress)."
+        },
+        {
+          "id": "c",
+          "text": "Description is a string which is not interpreted by Cilium. It can be used to describe the intent and scope of the rule in a human readable form."
+        },
+        {
+          "id": "d",
+          "text": "Selects the endpoints or nodes which the policy rules apply to. The policy rules will be applied to all endpoints which match the labels specified in the selector. For additional details, see the EndpointSelector and NodeSelector sections."
+        }
+      ],
+      "answer": "d",
+      "explanation": "Selects the endpoints or nodes which the policy rules apply to. The policy rules will be applied to all endpoints which match the labels specified in the selector. For additional details, see the EndpointSelector and NodeSelector sections.",
+      "optionRationale": {
+        "c": "This describes description, not endpointSelector / nodeSelector.",
+        "a": "This describes labels, not endpointSelector / nodeSelector.",
+        "b": "This describes never, not endpointSelector / nodeSelector."
+      },
+      "citations": [
+        {
+          "file": "security/policy/intro.rst",
+          "anchor": "rule-basics",
+          "title": "Rule Basics",
+          "quote": "Selects the endpoints or nodes which the policy rules apply to. The policy rules will be applied to all endpoints which match the labels specified in the selector. For additional details, see the EndpointSelector and NodeSelector sections.",
+          "url": "https://docs.cilium.io/en/stable/security/policy/intro/#rule-basics"
+        }
+      ],
+      "domain": "network-policy",
+      "competency": null,
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "security/policy/intro.rst#rule-basics",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "schemaVersion": 1
+    },
+    {
+      "id": "8442054483370b1c",
+      "ordinal": 0,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes Packets in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Host is an extended POSIX regex matched against the host header of a request, e.g. ``foo.com``. If omitted or empty, the value of the host header is ignored."
+        },
+        {
+          "id": "b",
+          "text": "Headers is a list of HTTP headers which must be present in the request. If omitted or empty, requests are allowed regardless of headers present."
+        },
+        {
+          "id": "c",
+          "text": "List of rules which must apply at egress of the endpoint, i.e. to all network packets which are leaving the endpoint."
+        },
+        {
+          "id": "d",
+          "text": "Not encrypted when they are destined to the same node from which they were sent."
+        }
+      ],
+      "answer": "d",
+      "explanation": "Packets are not encrypted when they are destined to the same node from which they were sent. This behavior is intended. Encryption would provide no benefits in that case, given that the raw traffic can be observed on the node anyway.",
+      "optionRationale": {
+        "a": "This describes Host, not Packets.",
+        "b": "This describes Headers, not Packets.",
+        "c": "This describes egress, not Packets."
+      },
+      "citations": [
+        {
+          "file": "security/network/encryption-wireguard.rst",
+          "anchor": "wireguard-transparent-encryption",
+          "title": "WireGuard Transparent Encryption",
+          "quote": "Packets are not encrypted when they are destined to the same node from which they were sent. This behavior is intended. Encryption would provide no benefits in that case, given that the raw traffic can be observed on the node anyway.",
+          "url": "https://docs.cilium.io/en/stable/security/network/encryption-wireguard/#wireguard-transparent-encryption"
+        }
+      ],
+      "domain": "network-policy",
+      "competency": null,
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "security/network/encryption-wireguard.rst#wireguard-transparent-encryption",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "schemaVersion": 1
+    },
+    {
+      "id": "8515061745b44ef2",
+      "ordinal": 0,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes always in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "List of rules which must apply at ingress of the endpoint, i.e. to all network packets which are entering the endpoint."
+        },
+        {
+          "id": "b",
+          "text": "Selects the endpoints or nodes which the policy rules apply to. The policy rules will be applied to all endpoints which match the labels specified in the selector. For additional details, see the EndpointSelector and NodeSelector sections."
+        },
+        {
+          "id": "c",
+          "text": "Host is an extended POSIX regex matched against the host header of a request, e.g. ``foo.com``. If omitted or empty, the value of the host header is ignored."
+        },
+        {
+          "id": "d",
+          "text": "With always mode, policy enforcement is enabled on all endpoints even if no rules select specific endpoints."
+        }
+      ],
+      "answer": "d",
+      "explanation": "With always mode, policy enforcement is enabled on all endpoints even if no rules select specific endpoints.",
+      "optionRationale": {
+        "c": "This describes Host, not always.",
+        "a": "This describes ingress, not always.",
+        "b": "This describes endpointSelector / nodeSelector, not always."
+      },
+      "citations": [
+        {
+          "file": "security/policy/intro.rst",
+          "anchor": "policy-enforcement-modes",
+          "title": "Policy Enforcement Modes",
+          "quote": "With always mode, policy enforcement is enabled on all endpoints even if no rules select specific endpoints.",
+          "url": "https://docs.cilium.io/en/stable/security/policy/intro/#policy-enforcement-modes"
+        }
+      ],
+      "domain": "network-policy",
+      "competency": "policy-enforcement-modes",
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "security/policy/intro.rst#policy-enforcement-modes",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "schemaVersion": 1
+    },
+    {
+      "id": "947045d0b1b99d98",
+      "ordinal": 1,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes never in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Selects the endpoints or nodes which the policy rules apply to. The policy rules will be applied to all endpoints which match the labels specified in the selector. For additional details, see the EndpointSelector and NodeSelector sections."
+        },
+        {
+          "id": "b",
+          "text": "With always mode, policy enforcement is enabled on all endpoints even if no rules select specific endpoints."
+        },
+        {
+          "id": "c",
+          "text": "List of rules which must apply at ingress of the endpoint, i.e. to all network packets which are entering the endpoint."
+        },
+        {
+          "id": "d",
+          "text": "With never mode, policy enforcement is disabled on all endpoints, even if rules do select specific endpoints. In other words, all traffic is allowed from any source (on ingress) or destination (on egress)."
+        }
+      ],
+      "answer": "d",
+      "explanation": "With never mode, policy enforcement is disabled on all endpoints, even if rules do select specific endpoints. In other words, all traffic is allowed from any source (on ingress) or destination (on egress).",
+      "optionRationale": {
+        "a": "This describes endpointSelector / nodeSelector, not never.",
+        "c": "This describes ingress, not never.",
+        "b": "This describes always, not never."
+      },
+      "citations": [
+        {
+          "file": "security/policy/intro.rst",
+          "anchor": "policy-enforcement-modes",
+          "title": "Policy Enforcement Modes",
+          "quote": "With never mode, policy enforcement is disabled on all endpoints, even if rules do select specific endpoints. In other words, all traffic is allowed from any source (on ingress) or destination (on egress).",
+          "url": "https://docs.cilium.io/en/stable/security/policy/intro/#policy-enforcement-modes"
+        }
+      ],
+      "domain": "network-policy",
+      "competency": "policy-enforcement-modes",
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "security/policy/intro.rst#policy-enforcement-modes",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "schemaVersion": 1
+    },
+    {
+      "id": "e9fa1722c8225547",
+      "ordinal": 0,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes Path in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Labels are used to identify the rule. Rules can be listed and deleted by labels. Policy rules which are imported via kubernetes automatically get the label ``io.cilium.k8s.policy.name=NAME`` assigned where ``NAME`` corresponds to the name specified in the `NetworkPolicy` or `CiliumNetworkPolicy` resource."
+        },
+        {
+          "id": "b",
+          "text": "Description is a string which is not interpreted by Cilium. It can be used to describe the intent and scope of the rule in a human readable form."
+        },
+        {
+          "id": "c",
+          "text": "Selects the endpoints or nodes which the policy rules apply to. The policy rules will be applied to all endpoints which match the labels specified in the selector. For additional details, see the EndpointSelector and NodeSelector sections."
+        },
+        {
+          "id": "d",
+          "text": "Path is an extended POSIX regex matched against the path of a request. Currently it can contain characters disallowed from the conventional \"path\" part of a URL as defined by RFC 3986. Paths must begin with a ``/``. If omitted or empty, all paths are all allowed."
+        }
+      ],
+      "answer": "d",
+      "explanation": "Path is an extended POSIX regex matched against the path of a request. Currently it can contain characters disallowed from the conventional \"path\" part of a URL as defined by RFC 3986. Paths must begin with a ``/``. If omitted or empty, all paths are all allowed.",
+      "optionRationale": {
+        "c": "This describes endpointSelector / nodeSelector, not Path.",
+        "a": "This describes labels, not Path.",
+        "b": "This describes description, not Path."
+      },
+      "citations": [
+        {
+          "file": "security/policy/layer7.rst",
+          "anchor": "http",
+          "title": "HTTP",
+          "quote": "Path is an extended POSIX regex matched against the path of a request. Currently it can contain characters disallowed from the conventional \"path\" part of a URL as defined by RFC 3986. Paths must begin with a ``/``. If omitted or empty, all paths are all allowed.",
+          "url": "https://docs.cilium.io/en/stable/security/policy/layer7/#http"
+        }
+      ],
+      "domain": "network-policy",
+      "competency": "policy-rule-structure",
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "security/policy/layer7.rst#http",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "schemaVersion": 1
+    },
+    {
+      "id": "f46c6e3be3792535",
+      "ordinal": 0,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes XfrmInStateProtoError There in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "With always mode, policy enforcement is enabled on all endpoints even if no rules select specific endpoints."
+        },
+        {
+          "id": "b",
+          "text": "List of rules which must apply at ingress of the endpoint, i.e. to all network packets which are entering the endpoint."
+        },
+        {
+          "id": "c",
+          "text": "Headers is a list of HTTP headers which must be present in the request. If omitted or empty, requests are allowed regardless of headers present."
+        },
+        {
+          "id": "d",
+          "text": "Key or anti-replay seq mismatch between nodes."
+        }
+      ],
+      "answer": "d",
+      "explanation": "XfrmInStateProtoError There is a key or anti-replay seq mismatch between nodes.",
+      "optionRationale": {
+        "a": "This describes always, not XfrmInStateProtoError There.",
+        "b": "This describes ingress, not XfrmInStateProtoError There.",
+        "c": "This describes Headers, not XfrmInStateProtoError There."
+      },
+      "citations": [
+        {
+          "file": "security/network/encryption-ipsec.rst",
+          "anchor": "troubleshooting",
+          "title": "Troubleshooting",
+          "quote": "XfrmInStateProtoError There is a key or anti-replay seq mismatch between nodes.",
+          "url": "https://docs.cilium.io/en/stable/security/network/encryption-ipsec/#troubleshooting"
+        }
+      ],
+      "domain": "network-policy",
+      "competency": null,
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "security/network/encryption-ipsec.rst#troubleshooting",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer needs to configure weight-based routing for the `helloworld` Service. The excerpt indicates that a specific prerequisite step must be taken before the `CiliumEnvoyConfig` can effectively load balance traffic to the backend Deployments. What is this step?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Restarting the client Pod"
+        },
+        {
+          "id": "b",
+          "text": "Creating individual Services for each backend Deployment"
+        },
+        {
+          "id": "c",
+          "text": "Deleting the existing helloworld Service"
+        },
+        {
+          "id": "d",
+          "text": "Changing the port of the helloworld Service to 8080"
+        }
+      ],
+      "answer": "b",
+      "explanation": "The excerpt states: 'To load balance traffic to the helloworld Service, first create individual Services for each backend Deployment.' This is presented as the necessary step before applying the `CiliumEnvoyConfig`.",
+      "optionRationale": {
+        "a": "The excerpt uses the client Pod to test traffic but does not state that restarting it is a prerequisite for the configuration.",
+        "c": "The excerpt shows the `helloworld` Service still exists and is used for testing after the configuration is applied.",
+        "d": "The excerpt consistently uses port 5000 for the `helloworld` Service and does not mention changing it."
+      },
+      "yieldSource": "contrast",
+      "citations": [
+        {
+          "file": "network/servicemesh/envoy-traffic-shifting.rst",
+          "anchor": "apply-weight-based-routing",
+          "title": "Apply weight-based routing",
+          "quote": "To load balance traffic to the helloworld Service, first create individual Services for each backend Deployment.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/envoy-traffic-shifting/#apply-weight-based-routing"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/envoy-traffic-shifting.rst#apply-weight-based-routing",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "1f96639073d6c183",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer is troubleshooting an HTTPRoute and runs `kubectl describe httproute <name>`. They observe a condition with `Type: ResolvedRefs` and `Status: False`. According to the documentation, what does this indicate?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The HTTPRoute configuration was incorrect and rejected."
+        },
+        {
+          "id": "b",
+          "text": "The referenced services were not found or are invalid references."
+        },
+        {
+          "id": "c",
+          "text": "The Gateway configuration was not programmed into Envoy."
+        },
+        {
+          "id": "d",
+          "text": "The Gateway API CRDs are missing from the cluster."
+        }
+      ],
+      "answer": "b",
+      "explanation": "The excerpt states regarding HTTPRoute conditions: '`ResolvedRefs`: The referenced services were found and are valid references.' Therefore, if the status is false, it implies the opposite: they were not found or are invalid.",
+      "optionRationale": {
+        "a": "This corresponds to the `Accepted` condition type.",
+        "c": "This corresponds to the `Programmed` condition type, which is typically associated with the Gateway resource status, though the excerpt notes similar checking methods. However, `ResolvedRefs` specifically refers to service references for the route.",
+        "d": "This is a cluster-level issue that would likely prevent the resource from being found or described in this manner, or would be logged in the operator logs as a missing CRD error."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/servicemesh/gateway-api/troubleshooting.rst",
+          "anchor": "checking-resources",
+          "title": "Checking resources",
+          "quote": "``ResolvedRefs``: The referenced services were found and are valid references.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/gateway-api/troubleshooting/#checking-resources"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/gateway-api/troubleshooting.rst#checking-resources",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "23072c6eb514a372",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer applies the `envoy-helloworld-v1-90-v2-10.yaml` file to a cluster running Cilium. This file defines a `CiliumEnvoyConfig` resource. What is the primary function of this resource as described in the excerpt?",
+      "options": [
+        {
+          "id": "a",
+          "text": "To load balance traffic destined to one Service to a group of backend Services"
+        },
+        {
+          "id": "b",
+          "text": "To create individual Services for each backend Deployment automatically"
+        },
+        {
+          "id": "c",
+          "text": "To modify the labels of the Pods running the helloworld application"
+        },
+        {
+          "id": "d",
+          "text": "To change the ClusterIP address of the helloworld Service"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt explicitly states that `CiliumEnvoyConfig` can be used to load balance traffic destined to one Service to a group of backend Services. The other options describe actions that are either prerequisites (creating Services) or unrelated to the specific function of the `CiliumEnvoyConfig` resource described.",
+      "optionRationale": {
+        "b": "The excerpt states that to load balance traffic, one must *first* create individual Services for each backend Deployment, implying this is a separate step, not the function of the `CiliumEnvoyConfig` itself.",
+        "c": "The excerpt shows Pod labels in the output of `kubectl get pods`, but does not state that `CiliumEnvoyConfig` modifies them.",
+        "d": "The excerpt shows the ClusterIP addresses in the output of `kubectl get svc`, but does not state that `CiliumEnvoyConfig` changes them."
+      },
+      "yieldSource": "definition",
+      "citations": [
+        {
+          "file": "network/servicemesh/envoy-traffic-shifting.rst",
+          "anchor": "apply-weight-based-routing",
+          "title": "Apply weight-based routing",
+          "quote": "CiliumEnvoyConfig can be used to load balance traffic destined to one Service to a group of backend Services.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/envoy-traffic-shifting/#apply-weight-based-routing"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/envoy-traffic-shifting.rst#apply-weight-based-routing",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "35f76615ec4fae24",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "A team is implementing a canary release strategy using Cilium. They apply a `CiliumEnvoyConfig` defined in `envoy-helloworld-v1-90-v2-10.yaml`. Based on the test results provided in the excerpt, what is the expected traffic distribution for requests sent to the `helloworld` Service?",
+      "options": [
+        {
+          "id": "a",
+          "text": "50% of traffic to helloworld-v1 and 50% to helloworld-v2"
+        },
+        {
+          "id": "b",
+          "text": "90% of traffic to helloworld-v1 and 10% to helloworld-v2"
+        },
+        {
+          "id": "c",
+          "text": "10% of traffic to helloworld-v1 and 90% to helloworld-v2"
+        },
+        {
+          "id": "d",
+          "text": "100% of traffic to helloworld-v1"
+        }
+      ],
+      "answer": "b",
+      "explanation": "The excerpt states that the `envoy-helloworld-v1-90-v2-10.yaml` file defines a `CiliumEnvoyConfig` to send 90% of traffic to the helloworld-v1 Service backend and 10% of traffic to the helloworld-v2 Service backend. The subsequent test results confirm this distribution.",
+      "optionRationale": {
+        "a": "This was the distribution observed *before* the `CiliumEnvoyConfig` was applied, when the default load balancing was in effect.",
+        "c": "This reverses the weights specified in the filename and the text description.",
+        "d": "This ignores the 10% weight allocated to helloworld-v2."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/servicemesh/envoy-traffic-shifting.rst",
+          "anchor": "apply-weight-based-routing",
+          "title": "Apply weight-based routing",
+          "quote": "Apply the envoy-helloworld-v1-90-v2-10.yaml file, which defines a CiliumEnvoyConfig to send 90% of traffic to the helloworld-v1 Service backend and 10% of traffic to the helloworld-v2 Service backend",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/envoy-traffic-shifting/#apply-weight-based-routing"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/envoy-traffic-shifting.rst#apply-weight-based-routing",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "4bc441285fb96251",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "A cluster administrator requires the use of HTTPRoute Retry, a feature currently marked as experimental. Which release channel of the Gateway API CRDs must be installed to support this functionality?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The standard release channel, as it includes all stable features."
+        },
+        {
+          "id": "b",
+          "text": "The experimental release channel, which includes standard features plus experimental resources."
+        },
+        {
+          "id": "c",
+          "text": "The optional release channel, which contains only non-standard CRDs."
+        },
+        {
+          "id": "d",
+          "text": "No specific channel is required, as HTTPRoute Retry is part of the core Gateway API."
+        }
+      ],
+      "answer": "b",
+      "explanation": "The excerpt notes that the experimental release channel includes everything in the standard channel plus experimental resources. It specifically cites HTTPRoute Retry as an example of an experimental feature that requires installing the corresponding CRDs from this channel.",
+      "optionRationale": {
+        "a": "The standard channel does not include experimental features like HTTPRoute Retry.",
+        "c": "There is no 'optional release channel' mentioned; optional CRDs are a separate set of resources (TCPRoute, UDPRoute, ListenerSet) that can be installed regardless of the channel.",
+        "d": "HTTPRoute Retry is explicitly marked as experimental, so it is not part of the core/standard set."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/servicemesh/gateway-api/installation.rst",
+          "anchor": "installation",
+          "title": "Installation",
+          "quote": "Note that the **experimental** release channel includes everything in the **standard** release channel plus some experimental resources and fields. If you need a feature that is currently marked as *experimental* (for example, HTTPRoute Retry in the ``HTTPRoute`` resource), you must install the corresponding CRDs.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/gateway-api/installation/#installation"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/gateway-api/installation.rst#installation",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "4d4937c9f47784cf",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "Which command is used in the excerpt to retrieve the name of the Fortio pod and store it in the environment variable `FORTIO_POD`?",
+      "options": [
+        {
+          "id": "a",
+          "text": "export FORTIO_POD=$(kubectl get pods -l app=fortio -o 'jsonpath={.items[0].metadata.name}')"
+        },
+        {
+          "id": "b",
+          "text": "export FORTIO_POD=$(kubectl get pods -l app=fortio -o 'jsonpath={.items[0].spec.containers[0].name}')"
+        },
+        {
+          "id": "c",
+          "text": "export FORTIO_POD=$(kubectl get pods -l app=fortio -o 'jsonpath={.items[0].metadata.labels}')"
+        },
+        {
+          "id": "d",
+          "text": "export FORTIO_POD=$(kubectl get pods -l app=fortio -o 'jsonpath={.items[0].status.podIP}')"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt provides the exact command: `$ export FORTIO_POD=$(kubectl get pods -l app=fortio -o 'jsonpath={.items[0].metadata.name}')`. This command uses the jsonpath output format to extract the metadata name of the first pod matching the label `app=fortio`.",
+      "optionRationale": {
+        "b": "Incorrect. The jsonpath used is `{.items[0].metadata.name}`, not the container name.",
+        "c": "Incorrect. The jsonpath used is `{.items[0].metadata.name}`, not the labels.",
+        "d": "Incorrect. The jsonpath used is `{.items[0].metadata.name}`, not the pod IP."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/servicemesh/envoy-circuit-breaker.rst",
+          "anchor": "tripping-envoy-circuit-breaker",
+          "title": "Tripping Envoy Circuit Breaker",
+          "quote": "$ export FORTIO_POD=$(kubectl get pods -l app=fortio -o 'jsonpath={.items[0].metadata.name}')",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/envoy-circuit-breaker/#tripping-envoy-circuit-breaker"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/envoy-circuit-breaker.rst#tripping-envoy-circuit-breaker",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "5a6cccfe561559f4",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "In a Cilium cluster with host network mode enabled, how are the node addresses in the `GatewayStatusAddress` field handled to ensure consistency?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Cilium automatically sorts the node addresses to ensure that the same addresses are selected, within a maximum of 16 addresses."
+        },
+        {
+          "id": "b",
+          "text": "The addresses are selected randomly from the available nodes to distribute load evenly across the cluster."
+        },
+        {
+          "id": "c",
+          "text": "Only the address of the node where the Gateway resource is defined is included in the status field."
+        },
+        {
+          "id": "d",
+          "text": "The addresses are sorted alphabetically by node name to allow for easy manual verification by administrators."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The source states that Cilium with host network mode enabled will automatically sort the node addresses to allow for consistency, ensuring that the same addresses are selected, and notes that the field has a maximum of 16 addresses.",
+      "optionRationale": {
+        "b": "Incorrect because the addresses are sorted for consistency, not selected randomly.",
+        "c": "Incorrect because the status field contains node addresses (up to 16), not just the defining node.",
+        "d": "Incorrect because the source specifies sorting for consistency of selection, not alphabetical sorting by name."
+      },
+      "yieldSource": "definition",
+      "citations": [
+        {
+          "file": "network/servicemesh/gateway-api/host-network-mode.rst",
+          "anchor": "host-network-mode",
+          "title": "Host network mode",
+          "quote": "The ``GatewayStatusAddress`` field for a gateway has a maximum of 16 addresses. Cilium with host network mode enabled will automatically sort the node addresses to allow for consistency, ensuring that the same addresses are selected.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/gateway-api/host-network-mode/#host-network-mode"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/gateway-api/host-network-mode.rst#host-network-mode",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "7ee5ffa97632d853",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer is deploying Cilium 1.16 in a development environment where a LoadBalancer Service is unavailable. They enable the Cilium Gateway API host network mode via Helm. What is the immediate effect on the LoadBalancer type Service mode?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The LoadBalancer type Service mode is automatically disabled because the two modes are mutually exclusive."
+        },
+        {
+          "id": "b",
+          "text": "The LoadBalancer type Service mode remains active, allowing traffic to be routed through both the host network and the LoadBalancer simultaneously."
+        },
+        {
+          "id": "c",
+          "text": "The LoadBalancer type Service mode is converted into a NodePort Service to maintain compatibility with the host network configuration."
+        },
+        {
+          "id": "d",
+          "text": "The LoadBalancer type Service mode is paused until the host network mode is explicitly disabled by the administrator."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The source states that enabling the Cilium Gateway API host network mode automatically disables the LoadBalancer type Service mode, as they are mutually exclusive.",
+      "optionRationale": {
+        "b": "Incorrect because the modes are mutually exclusive; they cannot be active simultaneously.",
+        "c": "Incorrect because the LoadBalancer mode is disabled, not converted. The conversion to NodePort applies to the Service generated for TCPRoute and UDPRoute, not the primary LoadBalancer mode.",
+        "d": "Incorrect because the mode is disabled automatically, not paused."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/servicemesh/gateway-api/host-network-mode.rst",
+          "anchor": "host-network-mode",
+          "title": "Host network mode",
+          "quote": "Enabling the Cilium Gateway API host network mode automatically disables the LoadBalancer type Service mode. They are mutually exclusive.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/gateway-api/host-network-mode/#host-network-mode"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/gateway-api/host-network-mode.rst#host-network-mode",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "8650dbf30f49504f",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "Before applying the `CiliumEnvoyConfig` for weight-based routing, an engineer runs a loop of 10 curl requests to the `helloworld` Service. The results show a mix of v1 and v2 responses. According to the excerpt, what was the observed traffic distribution in this initial test?",
+      "options": [
+        {
+          "id": "a",
+          "text": "90% to helloworld-v1 and 10% to helloworld-v2"
+        },
+        {
+          "id": "b",
+          "text": "50% to helloworld-v1 and 50% to helloworld-v2"
+        },
+        {
+          "id": "c",
+          "text": "100% to helloworld-v1"
+        },
+        {
+          "id": "d",
+          "text": "100% to helloworld-v2"
+        }
+      ],
+      "answer": "b",
+      "explanation": "The excerpt describes the initial test results (before the `CiliumEnvoyConfig` was applied) and states: 'Of the requests sent to the helloworld service, 50% of them were sent to the backend helloworld-v1 and 50% of them were sent to the backend helloworld-v2.'",
+      "optionRationale": {
+        "a": "This is the distribution observed *after* the `CiliumEnvoyConfig` was applied.",
+        "c": "The initial test results clearly show responses from both v1 and v2 instances.",
+        "d": "The initial test results clearly show responses from both v1 and v2 instances."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/servicemesh/envoy-traffic-shifting.rst",
+          "anchor": "apply-weight-based-routing",
+          "title": "Apply weight-based routing",
+          "quote": "Of the requests sent to the helloworld service, 50% of them were sent to the backend helloworld-v1 and 50% of them were sent to the backend helloworld-v2.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/envoy-traffic-shifting/#apply-weight-based-routing"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/envoy-traffic-shifting.rst#apply-weight-based-routing",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "8b7802f1ca889309",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "The documentation suggests a specific approach for allowing ingress traffic to the `/details` endpoint. Why is it considered more reliable to allow all traffic from the `reserved:ingress` identity to all `cluster` identities rather than allowing egress to specific identities?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Because Cilium Ingress is part of the networking infrastructure."
+        },
+        {
+          "id": "b",
+          "text": "Because it reduces the number of policy rules required."
+        },
+        {
+          "id": "c",
+          "text": "Because it prevents external traffic from reaching the cluster."
+        },
+        {
+          "id": "d",
+          "text": "Because it ensures that all HTTP requests are encrypted."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The text states: \"But in general, it's probably more reliable to allow all traffic from the `reserved:ingress` identity to all `cluster` identities, given that Cilium Ingress is part of the networking infrastructure.\"",
+      "optionRationale": {
+        "b": "The text does not mention rule count as the reason for reliability.",
+        "c": "Allowing traffic from reserved:ingress to cluster does not prevent external traffic; it manages how the ingress gateway communicates with the cluster.",
+        "d": "Encryption is not mentioned in the context of this policy decision."
+      },
+      "yieldSource": "definition",
+      "citations": [
+        {
+          "file": "network/servicemesh/default-deny-ingress-policy.rst",
+          "anchor": "default-deny-ingress-policy",
+          "title": "Default Deny Ingress Policy",
+          "quote": "But in general, it's probably more reliable to allow all traffic from the ``reserved:ingress`` identity to all ``cluster`` identities, given that Cilium Ingress is part of the networking infrastructure.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/default-deny-ingress-policy/#default-deny-ingress-policy"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/default-deny-ingress-policy.rst#default-deny-ingress-policy",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "9875a4abd32f47cf",
+      "domain": "service-mesh",
+      "competency": "ingress",
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer is preparing to upgrade their Cilium installation to version 1.20. According to the installation guidelines, what specific action must they take regarding the Gateway API before updating the CRDs?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Review the Gateway API v1.6.1 and TLSRoute notes in the upgrade guide."
+        },
+        {
+          "id": "b",
+          "text": "Uninstall all existing Gateway API CRDs and reinstall them from scratch."
+        },
+        {
+          "id": "c",
+          "text": "Switch the release channel from standard to experimental to ensure compatibility."
+        },
+        {
+          "id": "d",
+          "text": "Verify that the TCPRoute and UDPRoute CRDs are installed to prevent data loss."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The source explicitly states that for Cilium 1.20 upgrades, one must review the Gateway API v1.6.1 and TLSRoute notes in the upgrade guide before updating Gateway API CRDs. This is part of the general advice to check the admin_upgrade for breaking changes.",
+      "optionRationale": {
+        "b": "The source does not recommend uninstalling and reinstalling CRDs; it advises reviewing the upgrade guide for breaking changes.",
+        "c": "The release channel choice depends on feature needs (e.g., experimental features), not specifically on the upgrade process for version 1.20.",
+        "d": "TCPRoute and UDPRoute are optional CRDs. Their absence disables specific features but is not a prerequisite for the upgrade process described."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/servicemesh/gateway-api/installation.rst",
+          "anchor": "installation",
+          "title": "Installation",
+          "quote": "For Cilium 1.20 upgrades, review the Gateway API v1.6.1 and ``TLSRoute`` notes in the upgrade guide before updating Gateway API CRDs.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/gateway-api/installation/#installation"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/gateway-api/installation.rst#installation",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "9b05a5d516134467",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer configures a `CiliumClusterwideNetworkPolicy` to deny all traffic by default. After applying this policy, what happens to a request to the `/details` endpoint from both external and in-cluster sources?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The request is denied for external and in-cluster traffic."
+        },
+        {
+          "id": "b",
+          "text": "The request is allowed for external traffic but denied for in-cluster traffic."
+        },
+        {
+          "id": "c",
+          "text": "The request is allowed for in-cluster traffic but denied for external traffic."
+        },
+        {
+          "id": "d",
+          "text": "The request is allowed for both external and in-cluster traffic."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt states: \"With this policy applied, the request to the `/details` endpoint will be denied for external and in-cluster traffic.\"",
+      "optionRationale": {
+        "b": "The text explicitly states both are denied.",
+        "c": "The text explicitly states both are denied.",
+        "d": "The text explicitly states both are denied."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/servicemesh/default-deny-ingress-policy.rst",
+          "anchor": "default-deny-ingress-policy",
+          "title": "Default Deny Ingress Policy",
+          "quote": "With this policy applied, the request to the ``/details`` endpoint will be denied for external and in-cluster traffic.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/default-deny-ingress-policy/#default-deny-ingress-policy"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/default-deny-ingress-policy.rst#default-deny-ingress-policy",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "a11a9f4d46c32b0c",
+      "domain": "service-mesh",
+      "competency": "ingress",
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "A user runs `kubectl describe gateway <name>` and sees a condition with `Type: Programmed`, `Status: True`, and `Reason: Programmed`. What does this specific condition indicate about the Gateway?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The Gateway configuration was accepted by the controller."
+        },
+        {
+          "id": "b",
+          "text": "All referenced secrets were found and have permission for use."
+        },
+        {
+          "id": "c",
+          "text": "The Gateway configuration was programmed into Envoy."
+        },
+        {
+          "id": "d",
+          "text": "The Gateway has been successfully scheduled."
+        }
+      ],
+      "answer": "c",
+      "explanation": "The excerpt explicitly defines the condition types: '`Programmed`: the Gateway configuration was programmed into Envoy.'",
+      "optionRationale": {
+        "a": "This corresponds to the `Accepted` condition type, not `Programmed`.",
+        "b": "This corresponds to the `ResolvedRefs` condition type, not `Programmed`.",
+        "d": "While 'successfully scheduled' appears in the message for the `Accepted` condition in the example output, the definition of the `Programmed` condition is specifically about programming into Envoy."
+      },
+      "yieldSource": "definition",
+      "citations": [
+        {
+          "file": "network/servicemesh/gateway-api/troubleshooting.rst",
+          "anchor": "checking-resources",
+          "title": "Checking resources",
+          "quote": "``Programmed``: the Gateway configuration was programmed into Envoy.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/gateway-api/troubleshooting/#checking-resources"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/gateway-api/troubleshooting.rst#checking-resources",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "a283fb080e2f6e34",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "A cluster administrator configures a Gateway with a TCPRoute in an environment where Cilium host network mode is enabled. How does the traffic for this TCPRoute behave compared to standard Gateway listener traffic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The traffic bypasses Envoy and reaches the Gateway's generated Service directly, which is converted to a NodePort Service with a randomly assigned port."
+        },
+        {
+          "id": "b",
+          "text": "The traffic is processed by Envoy and exposed on the host network using the port configured in the Gateway listener specification."
+        },
+        {
+          "id": "c",
+          "text": "The traffic is blocked entirely because host network mode is incompatible with all route types, including TCPRoute."
+        },
+        {
+          "id": "d",
+          "text": "The traffic bypasses Envoy but is exposed on the host network using the exact port configured on the Gateway listener."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The source explains that host network mode is not compatible with TCPRoute and UDPRoute. Their traffic bypasses Envoy and reaches the Gateway's generated Service directly. Enabling host network mode turns this Service into a NodePort Service, which gets a randomly assigned port from the node port range rather than the port configured on the Gateway listener.",
+      "optionRationale": {
+        "b": "Incorrect because TCPRoute traffic bypasses Envoy in this mode and does not use the configured listener port on the host network.",
+        "c": "Incorrect because the traffic is not blocked; it is routed via a NodePort Service, albeit with a different port.",
+        "d": "Incorrect because the port is randomly assigned from the node port range, not the configured listener port."
+      },
+      "yieldSource": "contrast",
+      "citations": [
+        {
+          "file": "network/servicemesh/gateway-api/host-network-mode.rst",
+          "anchor": "host-network-mode",
+          "title": "Host network mode",
+          "quote": "Host network mode is not compatible with ``TCPRoute`` and ``UDPRoute``. Their traffic bypasses Envoy and reaches the Gateway's generated Service directly, which normally exposes the configured ``Gateway`` listener port as a ``LoadBalancer`` Service. Enabling host network mode turns this Service into a ``NodePort`` Service instead, which gets a randomly assigned port from the node port range rather than the port configured on the ``Gateway`` listener.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/gateway-api/host-network-mode/#host-network-mode"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/gateway-api/host-network-mode.rst#host-network-mode",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "a4a2f7ba25d319b7",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer installs the required Gateway API CRDs but does not install the TCPRoute, UDPRoute, or ListenerSet CRDs. What is the consequence for the Cilium Gateway API controller regarding these specific features?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Cilium will disable support for these features."
+        },
+        {
+          "id": "b",
+          "text": "Cilium will automatically install the missing CRDs upon startup."
+        },
+        {
+          "id": "c",
+          "text": "The installation will fail because these CRDs are mandatory for the controller to start."
+        },
+        {
+          "id": "d",
+          "text": "Cilium will use the standard release channel CRDs to emulate these features."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The source states that TCPRoute, UDPRoute, and ListenerSet CRDs are optional. If they are not installed, Cilium will disable support for these features.",
+      "optionRationale": {
+        "b": "The source does not state that Cilium automatically installs missing optional CRDs.",
+        "c": "These CRDs are optional, so their absence does not cause the installation to fail.",
+        "d": "The source does not mention emulation of features via the standard channel; it states support is disabled."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/servicemesh/gateway-api/installation.rst",
+          "anchor": "installation",
+          "title": "Installation",
+          "quote": "The `TCPRoute <https://gateway-api.sigs.k8s.io/reference/api-types/tcproute/>`__,\n`UDPRoute <https://gateway-api.sigs.k8s.io/reference/api-types/udproute/>`__,\nor `ListenerSet <https://gateway-api.sigs.k8s.io/reference/api-types/listenerset/>`__\nCRDs are optional and to use this functionality, you must install the corresponding CRD resources.\nIf they are not installed, Cilium will disable support for these features.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/gateway-api/installation/#installation"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/gateway-api/installation.rst#installation",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "a59d58c7c26160c2",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "Which of the following lists contains only CRDs that are explicitly stated as required for installation from the Gateway API?",
+      "options": [
+        {
+          "id": "a",
+          "text": "GatewayClass, Gateway, HTTPRoute, GRPCRoute, BackendTLSPolicy, ReferenceGrant, and TLSRoute."
+        },
+        {
+          "id": "b",
+          "text": "TCPRoute, UDPRoute, ListenerSet, GatewayClass, and Gateway."
+        },
+        {
+          "id": "c",
+          "text": "HTTPRoute, GRPCRoute, TCPRoute, UDPRoute, and ListenerSet."
+        },
+        {
+          "id": "d",
+          "text": "Gateway, HTTPRoute, TLSRoute, TCPRoute, and UDPRoute."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The source lists GatewayClass, Gateway, HTTPRoute, GRPCRoute, BackendTLSPolicy, ReferenceGrant, and TLSRoute as the CRDs that 'must' be installed. TCPRoute, UDPRoute, and ListenerSet are listed separately as optional.",
+      "optionRationale": {
+        "b": "TCPRoute, UDPRoute, and ListenerSet are optional, not required.",
+        "c": "TCPRoute, UDPRoute, and ListenerSet are optional, not required.",
+        "d": "TCPRoute and UDPRoute are optional, not required."
+      },
+      "yieldSource": "definition",
+      "citations": [
+        {
+          "file": "network/servicemesh/gateway-api/installation.rst",
+          "anchor": "installation",
+          "title": "Installation",
+          "quote": "The below CRDs from Gateway API GATEWAY_API_VERSION ``must`` be installed.\n\n- `GatewayClass <https://gateway-api.sigs.k8s.io/reference/api-types/gatewayclass/>`_\n- `Gateway <https://gateway-api.sigs.k8s.io/reference/api-types/gateway/>`_\n- `HTTPRoute <https://gateway-api.sigs.k8s.io/reference/api-types/httproute/>`_\n- `GRPCRoute <https://gateway-api.sigs.k8s.io/reference/api-types/grpcroute/>`_\n- `BackendTLSPolicy <https://gateway-api.sigs.k8s.io/reference/api-types/policy/backendtlspolicy/>`__\n- `ReferenceGrant <https://gateway-api.sigs.k8s.io/reference/api-types/referencegrant/>`_\n- `TLSRoute <https://gateway-api.sigs.k8s.io/reference/api-types/tlsroute/>`_",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/gateway-api/installation/#installation"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/gateway-api/installation.rst#installation",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "aa2e6c195755ca90",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "In the context of Cilium's Envoy configuration, what is the effect of increasing the number of trusted hops from the default value?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Envoy will use the nth value from the X-Forwarded-For list, counting from the right."
+        },
+        {
+          "id": "b",
+          "text": "Envoy will use the nth value from the X-Forwarded-For list, counting from the left."
+        },
+        {
+          "id": "c",
+          "text": "Envoy will ignore the X-Forwarded-For header and always use the TCP source address."
+        },
+        {
+          "id": "d",
+          "text": "Envoy will append the new hop count to the X-Forwarded-For header before forwarding the request."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt states that increasing the count will have Envoy use the nth value from the list, counting from the right.",
+      "optionRationale": {
+        "b": "The excerpt explicitly states the counting is from the right, not the left.",
+        "c": "Increasing the count specifically directs Envoy to look at the list, rather than ignoring it.",
+        "d": "The excerpt describes how the trusted address is determined, not how the header is modified for forwarding (though appending is mentioned as a general action, the specific effect of the hop count is on selection)."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/servicemesh/ingress-reference.rst",
+          "anchor": "source-ip-visibility",
+          "title": "Source IP Visibility",
+          "quote": "Increasing this count will have Envoy use the ``n`` th value from the list, counting from the right.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/ingress-reference/#source-ip-visibility"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/ingress-reference.rst#source-ip-visibility",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "bf4c17c6c401480d",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "When configuring a Gateway for Cilium host network mode, what constraint applies to the port specified in `spec.listeners.port`?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The port must be unique per Gateway resource and should be higher than 1023."
+        },
+        {
+          "id": "b",
+          "text": "The port must be unique across all namespaces and must be lower than 1024 to ensure privileged access."
+        },
+        {
+          "id": "c",
+          "text": "The port can be any value between 1 and 65535, provided it is not already used by a LoadBalancer Service."
+        },
+        {
+          "id": "d",
+          "text": "The port must be identical to the port used by the associated NodePort Service for TCPRoute traffic."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The source states that the port must be unique per Gateway resource and that you should choose a port number higher than 1023.",
+      "optionRationale": {
+        "b": "Incorrect because the port should be higher than 1023, not lower, and uniqueness is per Gateway resource, not necessarily across all namespaces in the context of the specific constraint mentioned.",
+        "c": "Incorrect because the source specifically advises choosing a port higher than 1023 to avoid privileged port issues.",
+        "d": "Incorrect because the NodePort for TCPRoute is randomly assigned, so it will not match the configured listener port."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/servicemesh/gateway-api/host-network-mode.rst",
+          "anchor": "host-network-mode",
+          "title": "Host network mode",
+          "quote": "The port must be unique per ``Gateway`` resource and you should choose a port number higher than ``1023`` (see `Bind to privileged port`_).",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/gateway-api/host-network-mode/#host-network-mode"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/gateway-api/host-network-mode.rst#host-network-mode",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "cbd557bd103b0885",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "A developer notices that their backend service is receiving the IP address of the intermediate proxy instead of the original client IP. They are using a cloud load balancer that correctly injects the client IP into the X-Forwarded-For header. Which configuration change in the values file will force Envoy to treat the traffic as coming from the client IP encoded in that header?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Set useRemoteAddress to true in the gatewayAPI section."
+        },
+        {
+          "id": "b",
+          "text": "Set useRemoteAddress to false in the gatewayAPI or ingressController sections."
+        },
+        {
+          "id": "c",
+          "text": "Increase the number of trusted hops to 1 in the Envoy configuration."
+        },
+        {
+          "id": "d",
+          "text": "Remove the X-Forwarded-For header from the incoming request before it reaches Envoy."
+        }
+      ],
+      "answer": "b",
+      "explanation": "The excerpt explicitly states that if you trust the source to inject an X-Forwarded-For header, you can force Envoy to treat the traffic as coming from the client IP encoded in the header by setting useRemoteAddress to false in gatewayAPI or ingressController sections of values files.",
+      "optionRationale": {
+        "a": "Setting useRemoteAddress to true would likely maintain the default behaviour of using the remote address, whereas the excerpt specifies setting it to false to use the header value.",
+        "c": "While increasing trusted hops affects which value in the list is used, the specific mechanism described for trusting the injected header in the context of gatewayAPI/ingressController values is setting useRemoteAddress to false.",
+        "d": "Removing the header would prevent Envoy from seeing the client IP, which is the opposite of the desired outcome."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/servicemesh/ingress-reference.rst",
+          "anchor": "source-ip-visibility",
+          "title": "Source IP Visibility",
+          "quote": "If you trust the source of the traffic to inject an ``X-Forwarded-For`` header (such as when using a cloud load balancer), you can force Envoy to treat the traffic as coming from the client IP encoded in the ``X-Forwarded-For`` header by setting ``useRemoteAddress`` to ``false`` in ``gatewayAPI`` or ``ingressController`` sections of values files.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/ingress-reference/#source-ip-visibility"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/ingress-reference.rst#source-ip-visibility",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "e8f60d3d891cad03",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer is configuring a Cilium gateway to handle traffic from a cloud load balancer that injects the client IP into the X-Forwarded-For header. By default, how does Cilium's Envoy instance determine the trusted client address for policy enforcement?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It uses the address the connection is opened from, as the default number of trusted hops is set to 0."
+        },
+        {
+          "id": "b",
+          "text": "It uses the first value in the X-Forwarded-For list, counting from the left."
+        },
+        {
+          "id": "c",
+          "text": "It uses the last value in the X-Forwarded-For list, counting from the right."
+        },
+        {
+          "id": "d",
+          "text": "It ignores the X-Forwarded-For header entirely and relies solely on the TCP source IP without any header processing."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt states that by default, Cilium sets the number of trusted hops to 0, indicating that Envoy should use the address the connection is opened from, rather than a value inside the X-Forwarded-For list.",
+      "optionRationale": {
+        "b": "The excerpt specifies that increasing the count uses the nth value counting from the right, not the first from the left, and the default is 0 hops (connection address).",
+        "c": "While the logic for non-zero hops counts from the right, the default is 0 hops, which means it uses the connection address, not a value from the list.",
+        "d": "Envoy does process the header to set X-Envoy-External-Address, but for determining the trusted client address with 0 trusted hops, it uses the connection address, not ignoring the header mechanism entirely in the context of the configuration logic described."
+      },
+      "yieldSource": "definition",
+      "citations": [
+        {
+          "file": "network/servicemesh/ingress-reference.rst",
+          "anchor": "source-ip-visibility",
+          "title": "Source IP Visibility",
+          "quote": "That is, by default Cilium sets the number of trusted hops to ``0``, indicating that Envoy should use the address the connection is opened from, rather than a value inside the ``X-Forwarded-For`` list.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/ingress-reference/#source-ip-visibility"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/ingress-reference.rst#source-ip-visibility",
+        "createdAt": "2026-11-08T00:52:53.393Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "f1435d5b03c50274",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    }
+  ]
+}

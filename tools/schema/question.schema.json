@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/yasn77/cilium-cca-prep/tools/schema/question.schema.json",
+  "title": "CCA prep question",
+  "type": "object",
+  "required": [
+    "id",
+    "schemaVersion",
+    "domain",
+    "type",
+    "stem",
+    "options",
+    "answer",
+    "explanation",
+    "citations",
+    "yieldSource",
+    "provenance"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{16}$",
+      "description": "Stable hash of file|anchor|ordinal. Never derived from the stem, so text edits preserve learner progress."
+    },
+    "schemaVersion": { "type": "integer", "const": 1 },
+    "domain": {
+      "type": "string",
+      "enum": [
+        "architecture",
+        "network-policy",
+        "service-mesh",
+        "observability",
+        "installation",
+        "cluster-mesh",
+        "ebpf",
+        "bgp"
+      ]
+    },
+    "competency": { "type": ["string", "null"] },
+    "type": { "type": "string", "const": "single" },
+    "stem": { "type": "string", "minLength": 20 },
+    "options": {
+      "type": "array",
+      "minItems": 4,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "required": ["id", "text"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-e]$" },
+          "text": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "answer": { "type": "string", "pattern": "^[a-e]$" },
+    "explanation": { "type": "string", "minLength": 40 },
+    "optionRationale": {
+      "type": "object",
+      "additionalProperties": { "type": "string" },
+      "description": "Why each wrong option is wrong. Required for every non-answer option at verification time."
+    },
+    "citations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["file", "anchor", "quote"],
+        "additionalProperties": false,
+        "properties": {
+          "file": { "type": "string", "pattern": "\\.rst$" },
+          "anchor": { "type": "string", "minLength": 1 },
+          "quote": { "type": "string", "minLength": 20 },
+          "title": { "type": "string" },
+          "url": { "type": "string", "format": "uri" }
+        }
+      }
+    },
+    "yieldSource": {
+      "type": "string",
+      "enum": ["definition", "attribute", "contrast", "scenario"]
+    },
+    "provenance": {
+      "type": "object",
+      "required": ["docsRef", "docsSha", "createdAt"],
+      "additionalProperties": true,
+      "properties": {
+        "generator": {
+          "type": "object",
+          "required": ["kind"],
+          "properties": {
+            "kind": { "type": "string", "enum": ["template", "llm"] },
+            "templateId": { "type": "string" },
+            "provider": { "type": "string" },
+            "model": { "type": "string" },
+            "temperature": { "type": "number" },
+            "version": { "type": "string" }
+          }
+        },
+        "docsRef": { "type": "string" },
+        "docsSha": { "type": "string" },
+        "sectionId": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "checks": {
+          "type": "object",
+          "properties": {
+            "anchorResolved": { "type": "boolean" },
+            "quoteVerbatim": { "type": "boolean" },
+            "answerEntailed": { "type": "boolean" },
+            "judgeVerdict": { "type": ["string", "null"] }
+          }
+        }
+      }
+    }
+  }
+}

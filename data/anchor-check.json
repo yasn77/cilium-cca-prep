@@ -1,0 +1,196 @@
+{
+  "checkedAt": "2026-11-07T23:53:44.900Z",
+  "total": 589,
+  "ok": 566,
+  "failed": 23,
+  "byReason": {
+    "page-not-published": 8,
+    "anchor-missing": 15
+  },
+  "failures": [
+    {
+      "id": "network/concepts/ipam/index.rst#ip-address-management-ipam",
+      "file": "network/concepts/ipam/index.rst",
+      "anchor": "ip-address-management-ipam",
+      "status": 404,
+      "ok": false,
+      "reason": "page-not-published"
+    },
+    {
+      "id": "network/servicemesh/envoy-traffic-management.rst#add-layer-policy",
+      "file": "network/servicemesh/envoy-traffic-management.rst",
+      "anchor": "add-layer-policy",
+      "status": 200,
+      "ok": false,
+      "reason": "anchor-missing"
+    },
+    {
+      "id": "network/servicemesh/index.rst#what-is-service-mesh",
+      "file": "network/servicemesh/index.rst",
+      "anchor": "what-is-service-mesh",
+      "status": 404,
+      "ok": false,
+      "reason": "page-not-published"
+    },
+    {
+      "id": "network/servicemesh/ingress-reference.rst#ciliums-ingress-config-and-ciliumnetworkpolicy",
+      "file": "network/servicemesh/ingress-reference.rst",
+      "anchor": "ciliums-ingress-config-and-ciliumnetworkpolicy",
+      "status": 200,
+      "ok": false,
+      "reason": "anchor-missing"
+    },
+    {
+      "id": "observability/hubble/hubble-cli.rst#inspecting-the-clusters-network-traffic-with-hubble-relay",
+      "file": "observability/hubble/hubble-cli.rst",
+      "anchor": "inspecting-the-clusters-network-traffic-with-hubble-relay",
+      "status": 200,
+      "ok": false,
+      "reason": "anchor-missing"
+    },
+    {
+      "id": "observability/hubble/index.rst#network-observability-with-hubble",
+      "file": "observability/hubble/index.rst",
+      "anchor": "network-observability-with-hubble",
+      "status": 404,
+      "ok": false,
+      "reason": "page-not-published"
+    },
+    {
+      "id": "operations/performance/benchmark.rst#connection-rate-tcp_crr",
+      "file": "operations/performance/benchmark.rst",
+      "anchor": "connection-rate-tcp_crr",
+      "status": 200,
+      "ok": false,
+      "reason": "anchor-missing"
+    },
+    {
+      "id": "observability/metrics.rst#dynamic_exporter_reconfigurations_total",
+      "file": "observability/metrics.rst",
+      "anchor": "dynamic_exporter_reconfigurations_total",
+      "status": 200,
+      "ok": false,
+      "reason": "anchor-missing"
+    },
+    {
+      "id": "observability/visibility.rst#layer-protocol-visibility",
+      "file": "observability/visibility.rst",
+      "anchor": "layer-protocol-visibility",
+      "status": 200,
+      "ok": false,
+      "reason": "anchor-missing"
+    },
+    {
+      "id": "operations/performance/scalability/report.rst#deploy-namespaces-with-deployments-on-each-namespace",
+      "file": "operations/performance/scalability/report.rst",
+      "anchor": "deploy-namespaces-with-deployments-on-each-namespace",
+      "status": 200,
+      "ok": false,
+      "reason": "anchor-missing"
+    },
+    {
+      "id": "operations/performance/scalability/report.rst#provision-additional-nodes-total-nodes",
+      "file": "operations/performance/scalability/report.rst",
+      "anchor": "provision-additional-nodes-total-nodes",
+      "status": 200,
+      "ok": false,
+      "reason": "anchor-missing"
+    },
+    {
+      "id": "operations/performance/scalability/report.rst#scale-each-deployment-to-replicas-pods-in-total",
+      "file": "operations/performance/scalability/report.rst",
+      "anchor": "scale-each-deployment-to-replicas-pods-in-total",
+      "status": 200,
+      "ok": false,
+      "reason": "anchor-missing"
+    },
+    {
+      "id": "operations/performance/scalability/report.rst#deploy-policies-for-namespace",
+      "file": "operations/performance/scalability/report.rst",
+      "anchor": "deploy-policies-for-namespace",
+      "status": 200,
+      "ok": false,
+      "reason": "anchor-missing"
+    },
+    {
+      "id": "operations/performance/scalability/report.rst#deploy-policies-for-ciliumclusterwidenetworkpolicies-ccnp",
+      "file": "operations/performance/scalability/report.rst",
+      "anchor": "deploy-policies-for-ciliumclusterwidenetworkpolicies-ccnp",
+      "status": 200,
+      "ok": false,
+      "reason": "anchor-missing"
+    },
+    {
+      "id": "operations/performance/scalability/report.rst#accidentally-delete-pods",
+      "file": "operations/performance/scalability/report.rst",
+      "anchor": "accidentally-delete-pods",
+      "status": 200,
+      "ok": false,
+      "reason": "anchor-missing"
+    },
+    {
+      "id": "operations/troubleshooting_clustermesh.rst#automatic-verification",
+      "file": "operations/troubleshooting_clustermesh.rst",
+      "anchor": "automatic-verification",
+      "status": 404,
+      "ok": false,
+      "reason": "page-not-published"
+    },
+    {
+      "id": "operations/troubleshooting_clustermesh.rst#manual-verification",
+      "file": "operations/troubleshooting_clustermesh.rst",
+      "anchor": "manual-verification",
+      "status": 404,
+      "ok": false,
+      "reason": "page-not-published"
+    },
+    {
+      "id": "operations/troubleshooting_clustermesh.rst#state-propagation",
+      "file": "operations/troubleshooting_clustermesh.rst",
+      "anchor": "state-propagation",
+      "status": 404,
+      "ok": false,
+      "reason": "page-not-published"
+    },
+    {
+      "id": "operations/troubleshooting_clustermesh.rst#tls-certificate-troubleshooting",
+      "file": "operations/troubleshooting_clustermesh.rst",
+      "anchor": "tls-certificate-troubleshooting",
+      "status": 404,
+      "ok": false,
+      "reason": "page-not-published"
+    },
+    {
+      "id": "operations/upgrade.rst#step-use-helm-to-upgrade-your-cilium-deployment",
+      "file": "operations/upgrade.rst",
+      "anchor": "step-use-helm-to-upgrade-your-cilium-deployment",
+      "status": 200,
+      "ok": false,
+      "reason": "anchor-missing"
+    },
+    {
+      "id": "security/policy/index.rst#overview-of-network-policy",
+      "file": "security/policy/index.rst",
+      "anchor": "overview-of-network-policy",
+      "status": 404,
+      "ok": false,
+      "reason": "page-not-published"
+    },
+    {
+      "id": "security/policy/layer3.rst#layer-policies",
+      "file": "security/policy/layer3.rst",
+      "anchor": "layer-policies",
+      "status": 200,
+      "ok": false,
+      "reason": "anchor-missing"
+    },
+    {
+      "id": "security/policy/layer7.rst#layer-policies",
+      "file": "security/policy/layer7.rst",
+      "anchor": "layer-policies",
+      "status": 200,
+      "ok": false,
+      "reason": "anchor-missing"
+    }
+  ]
+}

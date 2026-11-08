@@ -1,0 +1,2879 @@
+{
+  "generatedAt": "2026-11-08T00:31:26.793Z",
+  "note": "Held out from the practising corpus. Used only for blind self-assessment.",
+  "licence": "See NOTICE: third-party content from the public CNCF practice-exam repository.",
+  "sources": [
+    {
+      "file": "9. Practice Exam.md",
+      "url": "https://gitlab.com/cncf-exams/certified-cillium-associate-cca/-/raw/main/9.%20Practice%20Exam.md",
+      "questions": 52
+    },
+    {
+      "file": "10. Practice Exam 2.md",
+      "url": "https://gitlab.com/cncf-exams/certified-cillium-associate-cca/-/raw/main/10.%20Practice%20Exam%202.md",
+      "questions": 50
+    }
+  ],
+  "questions": [
+    {
+      "id": "blind-9.-1",
+      "domain": "architecture",
+      "type": "single",
+      "stem": "Which component of Cilium is responsible for monitoring and enforcing network policies on each Kubernetes node?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Cilium Operator"
+        },
+        {
+          "id": "b",
+          "text": "Cilium Hubble"
+        },
+        {
+          "id": "c",
+          "text": "Cilium Agent"
+        },
+        {
+          "id": "d",
+          "text": "Cilium CLI"
+        }
+      ],
+      "answer": "c",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-2",
+      "domain": "architecture",
+      "type": "single",
+      "stem": "In Cilium, what does the term \"identity\" refer to?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The unique IP address assigned to a pod"
+        },
+        {
+          "id": "b",
+          "text": "The security context of a container"
+        },
+        {
+          "id": "c",
+          "text": "A numeric identifier derived from pod labels that represents workload security identity"
+        },
+        {
+          "id": "d",
+          "text": "The digital certificate used for encryption"
+        }
+      ],
+      "answer": "c",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-3",
+      "domain": "architecture",
+      "type": "single",
+      "stem": "Which Cilium datapath mode does NOT use overlay encapsulation for pod-to-pod traffic across nodes?",
+      "options": [
+        {
+          "id": "a",
+          "text": "VXLAN"
+        },
+        {
+          "id": "b",
+          "text": "Geneve"
+        },
+        {
+          "id": "c",
+          "text": "Native routing"
+        },
+        {
+          "id": "d",
+          "text": "IPsec"
+        }
+      ],
+      "answer": "c",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-4",
+      "domain": "architecture",
+      "type": "single",
+      "stem": "Which of the following is NOT a supported IPAM mode in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Cluster Pool"
+        },
+        {
+          "id": "b",
+          "text": "Kubernetes Host Scope"
+        },
+        {
+          "id": "c",
+          "text": "CRD-based"
+        },
+        {
+          "id": "d",
+          "text": "Kubernetes PodCIDR"
+        },
+        {
+          "id": "e",
+          "text": "Host-Local"
+        }
+      ],
+      "answer": "e",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-5",
+      "domain": "architecture",
+      "type": "single",
+      "stem": "What does Hubble provide in a Cilium deployment?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Encryption for pod-to-pod traffic"
+        },
+        {
+          "id": "b",
+          "text": "Service load balancing"
+        },
+        {
+          "id": "c",
+          "text": "Network observability and monitoring"
+        },
+        {
+          "id": "d",
+          "text": "Identity-based authentication"
+        }
+      ],
+      "answer": "c",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-6",
+      "domain": "architecture",
+      "type": "single",
+      "stem": "Which Cilium component is responsible for cluster-wide coordination tasks such as IPAM and CRD management?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Cilium Agent"
+        },
+        {
+          "id": "b",
+          "text": "Cilium CLI"
+        },
+        {
+          "id": "c",
+          "text": "Cilium Hubble"
+        },
+        {
+          "id": "d",
+          "text": "Cilium Operator"
+        }
+      ],
+      "answer": "d",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-7",
+      "domain": "architecture",
+      "type": "single",
+      "stem": "When using the Cilium eBPF native datapath, at which point in the kernel are packets processed?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Only after they reach user space"
+        },
+        {
+          "id": "b",
+          "text": "Only before they enter the network stack"
+        },
+        {
+          "id": "c",
+          "text": "Directly in the kernel at various hook points"
+        },
+        {
+          "id": "d",
+          "text": "In a separate network namespace"
+        }
+      ],
+      "answer": "c",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-8",
+      "domain": "architecture",
+      "type": "single",
+      "stem": "Which statement about Cilium's identity-based security is true?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It assigns identities based only on the pod's IP address"
+        },
+        {
+          "id": "b",
+          "text": "It requires manual identity assignment for each pod"
+        },
+        {
+          "id": "c",
+          "text": "It allows policies to remain valid even when pod IP addresses change"
+        },
+        {
+          "id": "d",
+          "text": "It can only identify pods within the same namespace"
+        }
+      ],
+      "answer": "c",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-9",
+      "domain": "network-policy",
+      "type": "single",
+      "stem": "Which of the following is true about CiliumNetworkPolicy compared to Kubernetes NetworkPolicy?",
+      "options": [
+        {
+          "id": "a",
+          "text": "CiliumNetworkPolicy only supports Layer 3/4 filtering"
+        },
+        {
+          "id": "b",
+          "text": "CiliumNetworkPolicy can enforce restrictions based on DNS/FQDN"
+        },
+        {
+          "id": "c",
+          "text": "CiliumNetworkPolicy requires a sidecar proxy for enforcement"
+        },
+        {
+          "id": "d",
+          "text": "CiliumNetworkPolicy cannot be used alongside Kubernetes NetworkPolicy"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-10",
+      "domain": "network-policy",
+      "type": "single",
+      "stem": "In a default-deny policy enforcement mode, what happens to traffic when no Cilium Network Policy selects a pod?",
+      "options": [
+        {
+          "id": "a",
+          "text": "All traffic to and from the pod is allowed"
+        },
+        {
+          "id": "b",
+          "text": "All traffic to and from the pod is denied"
+        },
+        {
+          "id": "c",
+          "text": "Only traffic within the same namespace is allowed"
+        },
+        {
+          "id": "d",
+          "text": "Only traffic from system pods is allowed"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-11",
+      "domain": "network-policy",
+      "type": "single",
+      "stem": "Which policy enforcement mode in Cilium enforces policies only on endpoints that match at least one network policy?",
+      "options": [
+        {
+          "id": "a",
+          "text": "default"
+        },
+        {
+          "id": "b",
+          "text": "always"
+        },
+        {
+          "id": "c",
+          "text": "never"
+        },
+        {
+          "id": "d",
+          "text": "selective"
+        }
+      ],
+      "answer": "c",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-12",
+      "domain": "network-policy",
+      "type": "single",
+      "stem": "Which of the following is a valid Layer 7 protocol rule that can be enforced by Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Restricting access based on HTTP methods and paths"
+        },
+        {
+          "id": "b",
+          "text": "Filtering traffic based on the pod's startup time"
+        },
+        {
+          "id": "c",
+          "text": "Allowing traffic only when the node CPU usage is below a threshold"
+        },
+        {
+          "id": "d",
+          "text": "Limiting bandwidth for specific pods"
+        }
+      ],
+      "answer": "a",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-13",
+      "domain": "architecture",
+      "type": "single",
+      "stem": "Which component of the following CiliumNetworkPolicy defines which pods the policy applies to?",
+      "options": [
+        {
+          "id": "a",
+          "text": "metadata"
+        },
+        {
+          "id": "b",
+          "text": "ingress"
+        },
+        {
+          "id": "c",
+          "text": "endpointSelector"
+        },
+        {
+          "id": "d",
+          "text": "fromEndpoints"
+        }
+      ],
+      "answer": "c",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-14",
+      "domain": "network-policy",
+      "type": "single",
+      "stem": "Which annotation can be used to disable policy enforcement on a specific namespace?",
+      "options": [
+        {
+          "id": "a",
+          "text": "io.cilium.k8s.policy.enforce=false"
+        },
+        {
+          "id": "b",
+          "text": "policies.cilium.io/disabled=true"
+        },
+        {
+          "id": "c",
+          "text": "io.cilium.k8s.policy.enforcement=false"
+        },
+        {
+          "id": "d",
+          "text": "cilium.io/disable-policy=true"
+        }
+      ],
+      "answer": "c",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-15",
+      "domain": "network-policy",
+      "type": "single",
+      "stem": "Which Cilium policy feature allows restricting egress traffic to specific domain names rather than IP addresses?",
+      "options": [
+        {
+          "id": "a",
+          "text": "toCIDR"
+        },
+        {
+          "id": "b",
+          "text": "toFQDNs"
+        },
+        {
+          "id": "c",
+          "text": "toEndpoints"
+        },
+        {
+          "id": "d",
+          "text": "toDNS"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-16",
+      "domain": "service-mesh",
+      "type": "single",
+      "stem": "Which of the following would allow traffic only from pods labeled as \"app=frontend\" to access the \"/api/v1/public\" HTTP path?",
+      "options": [
+        {
+          "id": "a",
+          "text": "```yaml ingress: - fromEndpoints: - matchLabels: app: frontend toPorts: - ports: - port: \"80\" protocol: TCP rules: http: - method: \"GET\" path: \"/api/v1/public\" ```"
+        },
+        {
+          "id": "b",
+          "text": "```yaml ingress: - fromEndpoints: - matchLabels: app: frontend http: - method: \"GET\" path: \"/api/v1/public\" ```"
+        },
+        {
+          "id": "c",
+          "text": "```yaml ingress: - fromCIDR: - 10.0.0.0/16 toPorts: - ports: - port: \"80\" protocol: TCP http: - method: \"GET\" path: \"/api/v1/public\" ```"
+        },
+        {
+          "id": "d",
+          "text": "```yaml ingress: - fromEndpoints: - matchLabels: app: frontend toPorts: - ports: - port: \"80\" protocol: TCP http: - method: \"GET\" path: \"/api/v1/public\" ```"
+        }
+      ],
+      "answer": "a",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-17",
+      "domain": "service-mesh",
+      "type": "single",
+      "stem": "Which feature does Cilium Service Mesh offer that traditional sidecar-based service meshes do not?",
+      "options": [
+        {
+          "id": "a",
+          "text": "mTLS encryption between services"
+        },
+        {
+          "id": "b",
+          "text": "Traffic routing based on HTTP headers"
+        },
+        {
+          "id": "c",
+          "text": "Sidecarless architecture using eBPF"
+        },
+        {
+          "id": "d",
+          "text": "Circuit breaking for backend services"
+        }
+      ],
+      "answer": "c",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-18",
+      "domain": "service-mesh",
+      "type": "single",
+      "stem": "When using Cilium as an Ingress Controller, which annotation makes a service accessible globally across clusters?",
+      "options": [
+        {
+          "id": "a",
+          "text": "kubernetes.io/ingress.class: cilium"
+        },
+        {
+          "id": "b",
+          "text": "io.cilium/global-service: \"true\""
+        },
+        {
+          "id": "c",
+          "text": "cilium.io/ingress-global: \"true\""
+        },
+        {
+          "id": "d",
+          "text": "service.cilium.io/global: \"true\""
+        }
+      ],
+      "answer": "d",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-19",
+      "domain": "architecture",
+      "type": "single",
+      "stem": "What is the primary advantage of Cilium's sidecarless service mesh architecture compared to traditional service meshes?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It offers more protocol-awareness for L7 filtering"
+        },
+        {
+          "id": "b",
+          "text": "It provides better integration with cloud provider load balancers"
+        },
+        {
+          "id": "c",
+          "text": "It significantly reduces resource overhead and performance impact"
+        },
+        {
+          "id": "d",
+          "text": "It simplifies certificate management for mTLS"
+        }
+      ],
+      "answer": "c",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-20",
+      "domain": "service-mesh",
+      "type": "single",
+      "stem": "Which API does Cilium implement to provide advanced traffic routing capabilities beyond Kubernetes Ingress?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Istio Virtual Service API"
+        },
+        {
+          "id": "b",
+          "text": "Gateway API"
+        },
+        {
+          "id": "c",
+          "text": "NGINX Controller API"
+        },
+        {
+          "id": "d",
+          "text": "Traefik IngressRoute API"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-21",
+      "domain": "service-mesh",
+      "type": "single",
+      "stem": "Which of the following is NOT a traffic management feature provided by Cilium Service Mesh?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Canary deployments with percentage-based traffic splitting"
+        },
+        {
+          "id": "b",
+          "text": "Traffic routing based on HTTP headers"
+        },
+        {
+          "id": "c",
+          "text": "Automatic sidecar proxy injection"
+        },
+        {
+          "id": "d",
+          "text": "Circuit breaking and outlier detection"
+        }
+      ],
+      "answer": "c",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-22",
+      "domain": "service-mesh",
+      "type": "single",
+      "stem": "How does Cilium implement mutual TLS (mTLS) between services?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Using IPsec encryption in the kernel"
+        },
+        {
+          "id": "b",
+          "text": "Through sidecar proxies that handle TLS termination"
+        },
+        {
+          "id": "c",
+          "text": "Using WireGuard for transparent encryption"
+        },
+        {
+          "id": "d",
+          "text": "Through eBPF programs that redirect traffic to TLS libraries"
+        }
+      ],
+      "answer": "a",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-23",
+      "domain": "service-mesh",
+      "type": "single",
+      "stem": "Which of the following Gateway API resources would you use to define HTTP routing rules for a Gateway?",
+      "options": [
+        {
+          "id": "a",
+          "text": "HTTPRoute"
+        },
+        {
+          "id": "b",
+          "text": "RouteRule"
+        },
+        {
+          "id": "c",
+          "text": "HTTPProxy"
+        },
+        {
+          "id": "d",
+          "text": "GatewayHTTPRoute"
+        }
+      ],
+      "answer": "a",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-24",
+      "domain": "service-mesh",
+      "type": "single",
+      "stem": "In Cilium, what encryption method provides the highest performance for pod-to-pod traffic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "mTLS"
+        },
+        {
+          "id": "b",
+          "text": "WireGuard"
+        },
+        {
+          "id": "c",
+          "text": "IPsec"
+        },
+        {
+          "id": "d",
+          "text": "TLS tunnels"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-25",
+      "domain": "observability",
+      "type": "single",
+      "stem": "What command would you use to view real-time network flows between pods with Hubble?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`kubectl exec -n kube-system cilium-xxxx -- cilium monitor`"
+        },
+        {
+          "id": "b",
+          "text": "`cilium hubble ui`"
+        },
+        {
+          "id": "c",
+          "text": "`hubble observe --follow`"
+        },
+        {
+          "id": "d",
+          "text": "`kubectl logs -n kube-system hubble-xxx`"
+        }
+      ],
+      "answer": "c",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-26",
+      "domain": "architecture",
+      "type": "single",
+      "stem": "Which Hubble component is responsible for aggregating flow data from all nodes in a cluster?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Hubble UI"
+        },
+        {
+          "id": "b",
+          "text": "Hubble Relay"
+        },
+        {
+          "id": "c",
+          "text": "Hubble Server"
+        },
+        {
+          "id": "d",
+          "text": "Hubble Collector"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-27",
+      "domain": "observability",
+      "type": "single",
+      "stem": "Which of the following CLI commands would show HTTP flows with status code 404?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`hubble observe --http-status 404`"
+        },
+        {
+          "id": "b",
+          "text": "`hubble observe --type http --http-status 404`"
+        },
+        {
+          "id": "c",
+          "text": "`hubble observe --protocol http --status-code 404`"
+        },
+        {
+          "id": "d",
+          "text": "`hubble observe --filter \"http.status == 404\"`"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-28",
+      "domain": "observability",
+      "type": "single",
+      "stem": "To enable Hubble with metrics collection, which Cilium ConfigMap settings are required?",
+      "options": [
+        {
+          "id": "a",
+          "text": "```yaml enable-hubble: \"true\" hubble-metrics-server: \":9091\" hubble-metrics: \"drop,tcp,flow,icmp,http\" ```"
+        },
+        {
+          "id": "b",
+          "text": "```yaml hubble-enabled: \"true\" metrics-server: \":9091\" metrics-types: \"drop,tcp,flow,icmp,http\" ```"
+        },
+        {
+          "id": "c",
+          "text": "```yaml enable-hubble: \"true\" enable-metrics: \"true\" metrics-types: \"drop,tcp,flow,icmp,http\" ```"
+        },
+        {
+          "id": "d",
+          "text": "```yaml hubble.enable: \"true\" hubble.metrics: \"drop,tcp,flow,icmp,http\" hubble.metrics-port: \"9091\" ```"
+        }
+      ],
+      "answer": "a",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-29",
+      "domain": "observability",
+      "type": "single",
+      "stem": "What type of information is NOT available in Hubble flow logs?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Pod labels and namespace information"
+        },
+        {
+          "id": "b",
+          "text": "HTTP request methods and paths"
+        },
+        {
+          "id": "c",
+          "text": "TCP connection state and flags"
+        },
+        {
+          "id": "d",
+          "text": "Container resource utilization (CPU/memory)"
+        }
+      ],
+      "answer": "d",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-30",
+      "domain": "observability",
+      "type": "single",
+      "stem": "Which Hubble CLI command would filter flows to show only traffic that was dropped due to network policies?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`hubble observe --verdict DENIED`"
+        },
+        {
+          "id": "b",
+          "text": "`hubble observe --verdict DROPPED --type policy`"
+        },
+        {
+          "id": "c",
+          "text": "`hubble observe --policy-dropped`"
+        },
+        {
+          "id": "d",
+          "text": "`hubble observe --verdict DROPPED`"
+        }
+      ],
+      "answer": "d",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-31",
+      "domain": "installation",
+      "type": "single",
+      "stem": "What command would you use to install Cilium with the CLI?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`kubectl apply -f cilium.yaml`"
+        },
+        {
+          "id": "b",
+          "text": "`kubectl create -f https://get.cilium.io/install`"
+        },
+        {
+          "id": "c",
+          "text": "`cilium install`"
+        },
+        {
+          "id": "d",
+          "text": "`helm install cilium cilium/cilium`"
+        }
+      ],
+      "answer": "c",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-32",
+      "domain": "architecture",
+      "type": "single",
+      "stem": "How would you check if all Cilium components are running correctly?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`kubectl get pods -n kube-system | grep cilium`"
+        },
+        {
+          "id": "b",
+          "text": "`cilium status`"
+        },
+        {
+          "id": "c",
+          "text": "`helm status cilium -n kube-system`"
+        },
+        {
+          "id": "d",
+          "text": "`kubectl describe daemonset cilium -n kube-system`"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-33",
+      "domain": "installation",
+      "type": "single",
+      "stem": "Which Cilium CLI command would run connectivity tests to verify the cluster's networking?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`cilium connectivity test`"
+        },
+        {
+          "id": "b",
+          "text": "`cilium test connectivity`"
+        },
+        {
+          "id": "c",
+          "text": "`cilium verify networking`"
+        },
+        {
+          "id": "d",
+          "text": "`cilium network test`"
+        }
+      ],
+      "answer": "a",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-34",
+      "domain": "installation",
+      "type": "single",
+      "stem": "Which setting would you use in Cilium's configuration to replace kube-proxy functionality completely?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`--set kubeProxyReplacement=true`"
+        },
+        {
+          "id": "b",
+          "text": "`--set enableKubeProxyReplacement=strict`"
+        },
+        {
+          "id": "c",
+          "text": "`--set kubeProxy.enabled=false`"
+        },
+        {
+          "id": "d",
+          "text": "`--set kubeProxyReplacement=strict`"
+        }
+      ],
+      "answer": "d",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-35",
+      "domain": "installation",
+      "type": "single",
+      "stem": "Which command shows the current Cilium configuration values?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`cilium config show`"
+        },
+        {
+          "id": "b",
+          "text": "`cilium config`"
+        },
+        {
+          "id": "c",
+          "text": "`cilium settings`"
+        },
+        {
+          "id": "d",
+          "text": "`cilium get config`"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-36",
+      "domain": "installation",
+      "type": "single",
+      "stem": "Which CLI command would you use to upgrade Cilium to a specific version?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`cilium upgrade --version 1.13.0`"
+        },
+        {
+          "id": "b",
+          "text": "`helm upgrade cilium cilium/cilium --version 1.13.0`"
+        },
+        {
+          "id": "c",
+          "text": "`kubectl patch cilium -n kube-system --type merge -p '{\"version\":\"1.13.0\"}'`"
+        },
+        {
+          "id": "d",
+          "text": "`cilium update 1.13.0`"
+        }
+      ],
+      "answer": "a",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-37",
+      "domain": "installation",
+      "type": "single",
+      "stem": "How can you modify a Cilium agent parameter at runtime?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`cilium config set debug=true`"
+        },
+        {
+          "id": "b",
+          "text": "`kubectl patch daemonset cilium -n kube-system -p '{\"spec\":{\"template\":{\"spec\":{\"containers\":[{\"name\":\"cilium-agent\",\"args\":[\"--debug=true\"]}]}}}}'`"
+        },
+        {
+          "id": "c",
+          "text": "`cilium set-config debug=true`"
+        },
+        {
+          "id": "d",
+          "text": "`kubectl exec -n kube-system cilium-xxxx -- cilium set debug=true`"
+        }
+      ],
+      "answer": "a",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-38",
+      "domain": "installation",
+      "type": "single",
+      "stem": "Which Cilium installation method provides the most flexibility for custom configurations?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Cilium CLI"
+        },
+        {
+          "id": "b",
+          "text": "Helm"
+        },
+        {
+          "id": "c",
+          "text": "Operator"
+        },
+        {
+          "id": "d",
+          "text": "Kubernetes manifest"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-39",
+      "domain": "cluster-mesh",
+      "type": "single",
+      "stem": "What is a requirement for establishing Cilium Cluster Mesh between two clusters?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Both clusters must use the same Kubernetes version"
+        },
+        {
+          "id": "b",
+          "text": "Each cluster must have a unique name and ID"
+        },
+        {
+          "id": "c",
+          "text": "Both clusters must use the same pod CIDR range"
+        },
+        {
+          "id": "d",
+          "text": "The clusters must be in the same cloud provider region"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-40",
+      "domain": "cluster-mesh",
+      "type": "single",
+      "stem": "Which command enables Cluster Mesh on a cluster?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`kubectl apply -f clustermesh.yaml`"
+        },
+        {
+          "id": "b",
+          "text": "`cilium cluster mesh enable`"
+        },
+        {
+          "id": "c",
+          "text": "`cilium clustermesh enable`"
+        },
+        {
+          "id": "d",
+          "text": "`kubectl patch configmap -n kube-system cilium-config -p '{\"data\":{\"cluster-mesh-enabled\":\"true\"}}'`"
+        }
+      ],
+      "answer": "c",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-41",
+      "domain": "cluster-mesh",
+      "type": "single",
+      "stem": "How would you connect two clusters in a Cilium Cluster Mesh?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`cilium clustermesh connect --context=cluster1 --destination-context=cluster2`"
+        },
+        {
+          "id": "b",
+          "text": "`cilium mesh connect cluster1 cluster2`"
+        },
+        {
+          "id": "c",
+          "text": "`kubectl apply -f clustermesh-connection.yaml`"
+        },
+        {
+          "id": "d",
+          "text": "`cilium connect-mesh --source=cluster1 --target=cluster2`"
+        }
+      ],
+      "answer": "a",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-42",
+      "domain": "cluster-mesh",
+      "type": "single",
+      "stem": "Which annotation makes a Kubernetes Service globally available across a Cluster Mesh?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`cilium.io/global: \"true\"`"
+        },
+        {
+          "id": "b",
+          "text": "`clustermesh.cilium.io/global-service: \"true\"`"
+        },
+        {
+          "id": "c",
+          "text": "`io.cilium/global-service: \"true\"`"
+        },
+        {
+          "id": "d",
+          "text": "`io.cilium/shared-service: \"true\"`"
+        }
+      ],
+      "answer": "c",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-43",
+      "domain": "network-policy",
+      "type": "single",
+      "stem": "When matching pods across clusters in a CiliumNetworkPolicy, which label is used to identify the cluster?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`io.cilium.k8s.policy.cluster`"
+        },
+        {
+          "id": "b",
+          "text": "`cilium.io/cluster`"
+        },
+        {
+          "id": "c",
+          "text": "`kubernetes.io/cluster`"
+        },
+        {
+          "id": "d",
+          "text": "`io.kubernetes.cluster`"
+        }
+      ],
+      "answer": "a",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-44",
+      "domain": "cluster-mesh",
+      "type": "single",
+      "stem": "What command would you use to check if Cluster Mesh is properly connected between clusters?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`cilium mesh status`"
+        },
+        {
+          "id": "b",
+          "text": "`cilium cluster status`"
+        },
+        {
+          "id": "c",
+          "text": "`cilium status --clustermesh`"
+        },
+        {
+          "id": "d",
+          "text": "`cilium clustermesh status`"
+        }
+      ],
+      "answer": "d",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-45",
+      "domain": "ebpf",
+      "type": "single",
+      "stem": "Which eBPF hook point provides the earliest possible packet interception in the network stack?",
+      "options": [
+        {
+          "id": "a",
+          "text": "TC (Traffic Control)"
+        },
+        {
+          "id": "b",
+          "text": "XDP (eXpress Data Path)"
+        },
+        {
+          "id": "c",
+          "text": "Socket"
+        },
+        {
+          "id": "d",
+          "text": "cgroup"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-46",
+      "domain": "ebpf",
+      "type": "single",
+      "stem": "Which advantage does Cilium's eBPF implementation provide over traditional iptables-based solutions?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Wider compatibility with older Linux kernels"
+        },
+        {
+          "id": "b",
+          "text": "Simpler configuration using familiar syntax"
+        },
+        {
+          "id": "c",
+          "text": "Consistent performance regardless of the number of network policies"
+        },
+        {
+          "id": "d",
+          "text": "Better integration with cloud provider networking"
+        }
+      ],
+      "answer": "c",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-47",
+      "domain": "ebpf",
+      "type": "single",
+      "stem": "Which feature is NOT enabled by Cilium's use of eBPF?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Socket-based load balancing"
+        },
+        {
+          "id": "b",
+          "text": "Application protocol visibility"
+        },
+        {
+          "id": "c",
+          "text": "Container image vulnerability scanning"
+        },
+        {
+          "id": "d",
+          "text": "Transparent encryption"
+        }
+      ],
+      "answer": "c",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-48",
+      "domain": "ebpf",
+      "type": "single",
+      "stem": "How does Cilium use eBPF maps in its implementation?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Only for storing network policy rules"
+        },
+        {
+          "id": "b",
+          "text": "Only for tracking active connections"
+        },
+        {
+          "id": "c",
+          "text": "For efficiently storing and retrieving data needed by eBPF programs"
+        },
+        {
+          "id": "d",
+          "text": "Only for maintaining identity information"
+        }
+      ],
+      "answer": "c",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-49",
+      "domain": "bgp",
+      "type": "single",
+      "stem": "Which Cilium resource is used to configure BGP peering?",
+      "options": [
+        {
+          "id": "a",
+          "text": "CiliumBGPConfig"
+        },
+        {
+          "id": "b",
+          "text": "CiliumBGPPeeringPolicy"
+        },
+        {
+          "id": "c",
+          "text": "CiliumBGPRouter"
+        },
+        {
+          "id": "d",
+          "text": "CiliumBGPAdvertisement"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-50",
+      "domain": "bgp",
+      "type": "single",
+      "stem": "What does Cilium's BGP implementation enable?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Replacing internal Kubernetes CNI functionality"
+        },
+        {
+          "id": "b",
+          "text": "Exposing Kubernetes services to external networks without cloud load balancers"
+        },
+        {
+          "id": "c",
+          "text": "Direct connection between pods across multiple clusters"
+        },
+        {
+          "id": "d",
+          "text": "Automatic service mesh capability"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-51",
+      "domain": "bgp",
+      "type": "single",
+      "stem": "Which command would you use to check the status of BGP peers in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`cilium bgp peers`"
+        },
+        {
+          "id": "b",
+          "text": "`cilium status bgp`"
+        },
+        {
+          "id": "c",
+          "text": "`kubectl get ciliumbgppeers`"
+        },
+        {
+          "id": "d",
+          "text": "`kubectl describe bgp`"
+        }
+      ],
+      "answer": "a",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-9.-52",
+      "domain": "installation",
+      "type": "single",
+      "stem": "In a Cilium BGP configuration, what does the \"exportPodCIDR\" setting control?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Whether pod IPs are directly accessible from outside the cluster"
+        },
+        {
+          "id": "b",
+          "text": "Whether the pod CIDR block is advertised via BGP to peers"
+        },
+        {
+          "id": "c",
+          "text": "Whether pods can initiate connections to external networks"
+        },
+        {
+          "id": "d",
+          "text": "Whether the pod CIDR information is exposed in API endpoints"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 9. Practice Exam.md"
+    },
+    {
+      "id": "blind-10-1",
+      "domain": "architecture",
+      "type": "single",
+      "stem": "Which network protocol does Cilium support for pod-to-pod encryption?",
+      "options": [
+        {
+          "id": "a",
+          "text": "OpenVPN"
+        },
+        {
+          "id": "b",
+          "text": "IPsec"
+        },
+        {
+          "id": "c",
+          "text": "SSL"
+        },
+        {
+          "id": "d",
+          "text": "SSH tunneling"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-2",
+      "domain": "architecture",
+      "type": "single",
+      "stem": "In which Linux kernel version did eBPF functionality first become sufficiently mature for Cilium's needs?",
+      "options": [
+        {
+          "id": "a",
+          "text": "3.10"
+        },
+        {
+          "id": "b",
+          "text": "4.8"
+        },
+        {
+          "id": "c",
+          "text": "5.0"
+        },
+        {
+          "id": "d",
+          "text": "2.6"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-3",
+      "domain": "architecture",
+      "type": "single",
+      "stem": "What is the purpose of the Cilium CNI plugin binary?",
+      "options": [
+        {
+          "id": "a",
+          "text": "To interface with the Kubernetes Container Runtime Interface"
+        },
+        {
+          "id": "b",
+          "text": "To provide a user interface for Cilium configuration"
+        },
+        {
+          "id": "c",
+          "text": "To handle all BGP peering with external routers"
+        },
+        {
+          "id": "d",
+          "text": "To implement the Container Network Interface specification for pod networking"
+        }
+      ],
+      "answer": "d",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-4",
+      "domain": "architecture",
+      "type": "single",
+      "stem": "When using the `cilium status` command, which status indicator suggests that Cilium might not be functioning correctly?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`PodCIDR: 10.0.0.0/24`"
+        },
+        {
+          "id": "b",
+          "text": "`KubeProxyReplacement: Strict`"
+        },
+        {
+          "id": "c",
+          "text": "`Controller: 32/35 healthy`"
+        },
+        {
+          "id": "d",
+          "text": "`Kubernetes: Ok 1.24 (v1.24.8)`"
+        }
+      ],
+      "answer": "c",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-5",
+      "domain": "architecture",
+      "type": "single",
+      "stem": "What happens when you run `cilium connectivity test` command?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It modifies your network policies to ensure everything is connected"
+        },
+        {
+          "id": "b",
+          "text": "It creates test pods in a dedicated namespace to validate network connectivity"
+        },
+        {
+          "id": "c",
+          "text": "It simulates traffic between existing pods to check firewall rules"
+        },
+        {
+          "id": "d",
+          "text": "It connects to external services to verify egress connectivity"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-6",
+      "domain": "architecture",
+      "type": "single",
+      "stem": "Which component of Cilium performs load balancing of Kubernetes services?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Hubble"
+        },
+        {
+          "id": "b",
+          "text": "Cilium Operator"
+        },
+        {
+          "id": "c",
+          "text": "eBPF programs deployed by the Cilium agent"
+        },
+        {
+          "id": "d",
+          "text": "kube-proxy"
+        }
+      ],
+      "answer": "c",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-7",
+      "domain": "network-policy",
+      "type": "single",
+      "stem": "Which command upgrades Cilium while overriding specific configuration values?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`cilium config upgrade --set monitoring.enabled=true`"
+        },
+        {
+          "id": "b",
+          "text": "`cilium install --version 1.14.0 --set monitoring.enabled=true`"
+        },
+        {
+          "id": "c",
+          "text": "`cilium upgrade --version 1.14.0 --helm-set monitoring.enabled=true`"
+        },
+        {
+          "id": "d",
+          "text": "`cilium upgrade --config monitoring.enabled=true --version 1.14.0`"
+        }
+      ],
+      "answer": "c",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-8",
+      "domain": "network-policy",
+      "type": "single",
+      "stem": "The following standard Kubernetes NetworkPolicy allows traffic from the \"frontend\" namespace to a pod labeled \"app: backend\". Which CiliumNetworkPolicy provides equivalent functionality?",
+      "options": [
+        {
+          "id": "a",
+          "text": "```yaml apiVersion: cilium.io/v2 kind: CiliumNetworkPolicy metadata: name: allow-frontend namespace: backend spec: endpointSelector: matchLabels: app: backend ingress: - fromNamespaces: - matchLabels: name: frontend ```"
+        },
+        {
+          "id": "b",
+          "text": "```yaml apiVersion: cilium.io/v2 kind: CiliumNetworkPolicy metadata: name: allow-frontend namespace: backend spec: endpointSelector: matchLabels: app: backend ingress: - fromEndpoints: - matchLabels: io.kubernetes.pod.namespace: frontend ```"
+        },
+        {
+          "id": "c",
+          "text": "```yaml apiVersion: cilium.io/v2 kind: CiliumNetworkPolicy metadata: name: allow-frontend namespace: backend spec: endpointSelector: matchLabels: app: backend ingress: - fromCIDR: - 10.0.0.0/16 ```"
+        },
+        {
+          "id": "d",
+          "text": "```yaml apiVersion: cilium.io/v2 kind: CiliumNetworkPolicy metadata: name: allow-frontend namespace: backend spec: endpointSelector: matchLabels: app: backend ingress: - fromEntities: - \"frontend\" ```"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-9",
+      "domain": "network-policy",
+      "type": "single",
+      "stem": "Which field in a CiliumNetworkPolicy allows restricting traffic based on specific DNS names?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`toDNS`"
+        },
+        {
+          "id": "b",
+          "text": "`toFQDN`"
+        },
+        {
+          "id": "c",
+          "text": "`toDomains`"
+        },
+        {
+          "id": "d",
+          "text": "`toHostnames`"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-10",
+      "domain": "network-policy",
+      "type": "single",
+      "stem": "Which of the following policies would correctly restrict access to only allow GET requests to `/api/public`?",
+      "options": [
+        {
+          "id": "a",
+          "text": "```yaml ingress: - toPorts: - ports: - port: \"80\" protocol: TCP rules: http: - method: \"GET\" path: \"/api/public\" ```"
+        },
+        {
+          "id": "b",
+          "text": "```yaml ingress: - toPorts: - ports: - port: \"80\" protocol: TCP http: - method: \"GET\" path: \"/api/public\" ```"
+        },
+        {
+          "id": "c",
+          "text": "```yaml ingress: - fromEndpoints: - matchLabels: {} toPorts: - ports: - port: \"80\" http: method: \"GET\" path: \"/api/public\" ```"
+        },
+        {
+          "id": "d",
+          "text": "```yaml ingress: - http: - method: \"GET\" path: \"/api/public\" toPorts: - ports: - port: \"80\" protocol: TCP ```"
+        }
+      ],
+      "answer": "a",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-11",
+      "domain": "network-policy",
+      "type": "single",
+      "stem": "Convert the following Kubernetes NetworkPolicy that denies all egress traffic except DNS to an equivalent CiliumNetworkPolicy:",
+      "options": [
+        {
+          "id": "a",
+          "text": "```yaml apiVersion: cilium.io/v2 kind: CiliumNetworkPolicy metadata: name: deny-all-except-dns spec: endpointSelector: {} egress: - toEndpoints: - matchLabels: k8s-app: kube-dns io.kubernetes.pod.namespace: kube-system toPorts: - ports: - port: \"53\" protocol: UDP ```"
+        },
+        {
+          "id": "b",
+          "text": "```yaml apiVersion: cilium.io/v2 kind: CiliumNetworkPolicy metadata: name: deny-all-except-dns spec: endpointSelector: {} egress: - toServices: - k8sService: serviceName: kube-dns namespace: kube-system ```"
+        },
+        {
+          "id": "c",
+          "text": "```yaml apiVersion: cilium.io/v2 kind: CiliumNetworkPolicy metadata: name: deny-all-except-dns spec: endpointSelector: {} egress: - toEntities: - \"dns\" ```"
+        },
+        {
+          "id": "d",
+          "text": "```yaml apiVersion: cilium.io/v2 kind: CiliumNetworkPolicy metadata: name: deny-all-except-dns spec: endpointSelector: {} egressDeny: - toEndpoints: - matchLabels: k8s-app: kube-dns io.kubernetes.pod.namespace: kube-system toPorts: - ports: - port: \"53\" protocol: UDP ```"
+        }
+      ],
+      "answer": "a",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-12",
+      "domain": "network-policy",
+      "type": "single",
+      "stem": "Which Cilium Network Policy feature allows restricting access to external API endpoints based on specific HTTP paths?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Layer 7 protocol visibility"
+        },
+        {
+          "id": "b",
+          "text": "Identity-based security"
+        },
+        {
+          "id": "c",
+          "text": "DNS-based filtering with HTTP path awareness"
+        },
+        {
+          "id": "d",
+          "text": "External entity matching"
+        }
+      ],
+      "answer": "a",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-13",
+      "domain": "network-policy",
+      "type": "single",
+      "stem": "In a CiliumNetworkPolicy, how do you refer to pods from another cluster in a ClusterMesh setup?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Use the `fromCluster` field"
+        },
+        {
+          "id": "b",
+          "text": "Use the `io.kubernetes.pod.namespace` label"
+        },
+        {
+          "id": "c",
+          "text": "Use the `io.cilium.k8s.policy.cluster` label"
+        },
+        {
+          "id": "d",
+          "text": "Use the `toClusterEndpoints` field"
+        }
+      ],
+      "answer": "c",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-14",
+      "domain": "network-policy",
+      "type": "single",
+      "stem": "What happens if you have a CiliumNetworkPolicy with both ingress and egress rules, but do not specify policyTypes?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The policy applies only ingress rules by default"
+        },
+        {
+          "id": "b",
+          "text": "The policy applies both ingress and egress rules"
+        },
+        {
+          "id": "c",
+          "text": "The policy will be rejected as invalid"
+        },
+        {
+          "id": "d",
+          "text": "The policy applies only egress rules by default"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-15",
+      "domain": "service-mesh",
+      "type": "single",
+      "stem": "Which command can be used to verify the status of Cilium's Ingress Controller implementation?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`cilium status --ingress`"
+        },
+        {
+          "id": "b",
+          "text": "`kubectl get ingresscontrollers -n kube-system`"
+        },
+        {
+          "id": "c",
+          "text": "`cilium ingress list`"
+        },
+        {
+          "id": "d",
+          "text": "`kubectl get pods -n kube-system -l k8s-app=cilium -o jsonpath='{.items[0].status.conditions}'`"
+        }
+      ],
+      "answer": "d",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-16",
+      "domain": "service-mesh",
+      "type": "single",
+      "stem": "Which Gateway API resource defines HTTP-specific routing rules?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`HTTPRoute`"
+        },
+        {
+          "id": "b",
+          "text": "`GatewayRoute`"
+        },
+        {
+          "id": "c",
+          "text": "`HTTPPolicy`"
+        },
+        {
+          "id": "d",
+          "text": "`GatewayHTTPConfig`"
+        }
+      ],
+      "answer": "a",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-17",
+      "domain": "service-mesh",
+      "type": "single",
+      "stem": "Which of the following Gateway API configurations correctly creates a Gateway listening on port 80 for HTTP traffic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "```yaml apiVersion: gateway.networking.k8s.io/v1beta1 kind: Gateway metadata: name: example-gateway spec: gatewayClassName: cilium listeners: - name: http protocol: HTTP port: 80 allowedRoutes: namespaces: from: Same ```"
+        },
+        {
+          "id": "b",
+          "text": "```yaml apiVersion: gateway.networking.k8s.io/v1beta1 kind: Gateway metadata: name: example-gateway spec: className: cilium listeners: - name: http protocol: HTTP port: 80 routes: namespaces: from: Same ```"
+        },
+        {
+          "id": "c",
+          "text": "```yaml apiVersion: gateway.networking.k8s.io/v1beta1 kind: Gateway metadata: name: example-gateway spec: gatewayClassName: cilium ports: - name: http protocol: HTTP number: 80 routes: namespaceSelector: matchLabels: kubernetes.io/metadata.name: default ```"
+        },
+        {
+          "id": "d",
+          "text": "```yaml apiVersion: gateway.networking.k8s.io/v1beta1 kind: GatewayClass metadata: name: example-gateway spec: controllerName: io.cilium/gateway-controller listeners: - name: http protocol: HTTP port: 80 ```"
+        }
+      ],
+      "answer": "a",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-18",
+      "domain": "service-mesh",
+      "type": "single",
+      "stem": "Which of the following correctly associates an HTTPRoute with a previously created Gateway named \"main-gateway\"?",
+      "options": [
+        {
+          "id": "a",
+          "text": "```yaml apiVersion: gateway.networking.k8s.io/v1beta1 kind: HTTPRoute metadata: name: example-route spec: gateway: main-gateway rules: - matches: - path: /app service: backend-service ```"
+        },
+        {
+          "id": "b",
+          "text": "```yaml apiVersion: gateway.networking.k8s.io/v1beta1 kind: HTTPRoute metadata: name: example-route spec: gatewayRef: name: main-gateway rules: - matches: - path: value: /app backendRefs: - name: backend-service port: 8080 ```"
+        },
+        {
+          "id": "c",
+          "text": "```yaml apiVersion: gateway.networking.k8s.io/v1beta1 kind: HTTPRoute metadata: name: example-route spec: parentRefs: - name: main-gateway rules: - matches: - path: type: PathPrefix value: /app backendRefs: - name: backend-service port: 8080 ```"
+        },
+        {
+          "id": "d",
+          "text": "```yaml apiVersion: gateway.networking.k8s.io/v1beta1 kind: HTTPRoute metadata: name: example-route spec: selector: gateway: main-gateway rules: - path: /app backend: service: name: backend-service port: 8080 ```"
+        }
+      ],
+      "answer": "c",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-19",
+      "domain": "service-mesh",
+      "type": "single",
+      "stem": "Which Gateway API feature allows for traffic splitting between different backend services?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Configuring backendRefs with different weights"
+        },
+        {
+          "id": "b",
+          "text": "Using the trafficSplit field"
+        },
+        {
+          "id": "c",
+          "text": "Implementing a GatewayCanary resource"
+        },
+        {
+          "id": "d",
+          "text": "Setting the loadBalancer.weightedTargets field"
+        }
+      ],
+      "answer": "a",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-20",
+      "domain": "service-mesh",
+      "type": "single",
+      "stem": "How does Cilium implement the Gateway API compared to traditional Ingress resources?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It uses the same underlying implementation with different resource types"
+        },
+        {
+          "id": "b",
+          "text": "It leverages eBPF for more efficient routing and improved performance"
+        },
+        {
+          "id": "c",
+          "text": "It requires sidecar proxies for Gateway API but not for Ingress"
+        },
+        {
+          "id": "d",
+          "text": "It implements Gateway API as a wrapper around Ingress resources"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-21",
+      "domain": "service-mesh",
+      "type": "single",
+      "stem": "Which encryption method in Cilium preserves the original IP addresses of pods when communicating between nodes?",
+      "options": [
+        {
+          "id": "a",
+          "text": "VXLAN with IPsec"
+        },
+        {
+          "id": "b",
+          "text": "WireGuard"
+        },
+        {
+          "id": "c",
+          "text": "TLS Passthrough"
+        },
+        {
+          "id": "d",
+          "text": "mTLS with Envoy"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-22",
+      "domain": "service-mesh",
+      "type": "single",
+      "stem": "Which statement about Cilium's service mesh capabilities is correct?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Cilium requires sidecar proxies for full service mesh functionality"
+        },
+        {
+          "id": "b",
+          "text": "Cilium implements service mesh features directly in the kernel using eBPF"
+        },
+        {
+          "id": "c",
+          "text": "Cilium can only implement service mesh features when integrated with Istio"
+        },
+        {
+          "id": "d",
+          "text": "Cilium's service mesh only works with services using HTTP protocol"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-23",
+      "domain": "observability",
+      "type": "single",
+      "stem": "Which command would show all HTTP traffic with response codes in the 5xx range?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`hubble observe --http-status 5xx`"
+        },
+        {
+          "id": "b",
+          "text": "`hubble observe --protocol http --status \"5**\"`"
+        },
+        {
+          "id": "c",
+          "text": "`hubble observe --type http --http-status 5`"
+        },
+        {
+          "id": "d",
+          "text": "`cilium hubble --filter \"http.status >= 500 && http.status < 600\"`"
+        }
+      ],
+      "answer": "a",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-24",
+      "domain": "observability",
+      "type": "single",
+      "stem": "What is the minimum set of labels that Hubble can always identify for a pod?",
+      "options": [
+        {
+          "id": "a",
+          "text": "app, version, component"
+        },
+        {
+          "id": "b",
+          "text": "namespace, name, service account"
+        },
+        {
+          "id": "c",
+          "text": "app.kubernetes.io/name, app.kubernetes.io/instance"
+        },
+        {
+          "id": "d",
+          "text": "security.context, custom.labels, deployment"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-25",
+      "domain": "observability",
+      "type": "single",
+      "stem": "How can you search for dropped packets in a specific namespace using Hubble?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`hubble observe --namespace myapp --show-drops`"
+        },
+        {
+          "id": "b",
+          "text": "`hubble observe --namespace myapp --verdict DROPPED`"
+        },
+        {
+          "id": "c",
+          "text": "`hubble observe --drops-only --namespace myapp`"
+        },
+        {
+          "id": "d",
+          "text": "`hubble observe --filter \"drop && namespace=myapp\"`"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-26",
+      "domain": "architecture",
+      "type": "single",
+      "stem": "Which component is responsible for aggregating Hubble flow data from all nodes for cluster-wide visibility?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Hubble Collector"
+        },
+        {
+          "id": "b",
+          "text": "Hubble Metrics Exporter"
+        },
+        {
+          "id": "c",
+          "text": "Hubble Aggregator"
+        },
+        {
+          "id": "d",
+          "text": "Hubble Relay"
+        }
+      ],
+      "answer": "d",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-27",
+      "domain": "observability",
+      "type": "single",
+      "stem": "When using the Hubble UI, what information is NOT shown about pod-to-pod traffic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The specific policies that allowed the traffic"
+        },
+        {
+          "id": "b",
+          "text": "Namespace and label information"
+        },
+        {
+          "id": "c",
+          "text": "HTTP methods and status codes"
+        },
+        {
+          "id": "d",
+          "text": "IP addresses and ports"
+        }
+      ],
+      "answer": "a",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-28",
+      "domain": "observability",
+      "type": "single",
+      "stem": "Which Hubble feature allows integration with Prometheus for metrics collection?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Hubble Metrics Server"
+        },
+        {
+          "id": "b",
+          "text": "Hubble Observe Exporter"
+        },
+        {
+          "id": "c",
+          "text": "Hubble Prometheus Endpoint"
+        },
+        {
+          "id": "d",
+          "text": "Hubble Service Monitor"
+        }
+      ],
+      "answer": "a",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-29",
+      "domain": "observability",
+      "type": "single",
+      "stem": "How long are flow records typically stored in Hubble's memory buffer by default?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Until the buffer is full, then oldest records are removed"
+        },
+        {
+          "id": "b",
+          "text": "24 hours"
+        },
+        {
+          "id": "c",
+          "text": "7 days"
+        },
+        {
+          "id": "d",
+          "text": "Until the next Cilium agent restart"
+        }
+      ],
+      "answer": "a",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-30",
+      "domain": "installation",
+      "type": "single",
+      "stem": "Which CNI chaining mode would you use to run Cilium with AWS VPC CNI?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`generic-veth`"
+        },
+        {
+          "id": "b",
+          "text": "`aws-cni`"
+        },
+        {
+          "id": "c",
+          "text": "`amazon-vpc`"
+        },
+        {
+          "id": "d",
+          "text": "`flannel`"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-31",
+      "domain": "installation",
+      "type": "single",
+      "stem": "What happens if you set `enable-endpoint-routes: true` in Cilium configuration?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Packets are encapsulated in VXLAN for pod-to-pod communication"
+        },
+        {
+          "id": "b",
+          "text": "Direct routes to each endpoint are installed in the host routing table"
+        },
+        {
+          "id": "c",
+          "text": "All traffic is forced through the Cilium proxy for L7 policy enforcement"
+        },
+        {
+          "id": "d",
+          "text": "Network policies are enforced at the endpoint level instead of the node level"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-32",
+      "domain": "installation",
+      "type": "single",
+      "stem": "Which configuration option enables IPv6 support in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`--set ipv6.enabled=true`"
+        },
+        {
+          "id": "b",
+          "text": "`--set enableIPv6=true`"
+        },
+        {
+          "id": "c",
+          "text": "`--set ipam.operator.enableIPv6=true`"
+        },
+        {
+          "id": "d",
+          "text": "`--set ipv6Stack=enabled`"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-33",
+      "domain": "installation",
+      "type": "single",
+      "stem": "What command verifies the health of the etcd cluster used by Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`cilium status --kvstore-connectivity`"
+        },
+        {
+          "id": "b",
+          "text": "`cilium etcd status`"
+        },
+        {
+          "id": "c",
+          "text": "`kubectl exec -n kube-system cilium-xxxxx -- cilium status --kvstore`"
+        },
+        {
+          "id": "d",
+          "text": "`cilium health etcd`"
+        }
+      ],
+      "answer": "c",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-34",
+      "domain": "installation",
+      "type": "single",
+      "stem": "Which kube-proxy replacement mode requires the fewest prerequisites to work correctly?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`partial`"
+        },
+        {
+          "id": "b",
+          "text": "`strict`"
+        },
+        {
+          "id": "c",
+          "text": "`probe`"
+        },
+        {
+          "id": "d",
+          "text": "`disabled`"
+        }
+      ],
+      "answer": "a",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-35",
+      "domain": "installation",
+      "type": "single",
+      "stem": "What should you check first if a Cilium pod is stuck in `Init:CrashLoopBackOff` state?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Whether the required kernel modules are loaded"
+        },
+        {
+          "id": "b",
+          "text": "The Cilium agent logs"
+        },
+        {
+          "id": "c",
+          "text": "Network connectivity to the API server"
+        },
+        {
+          "id": "d",
+          "text": "The init container logs"
+        }
+      ],
+      "answer": "d",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-36",
+      "domain": "installation",
+      "type": "single",
+      "stem": "Which tool can be used to validate Cilium and eBPF requirements on a node before installation?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`cilium-preflight-check`"
+        },
+        {
+          "id": "b",
+          "text": "`cilium-system-validator`"
+        },
+        {
+          "id": "c",
+          "text": "`cilium-kernel-check`"
+        },
+        {
+          "id": "d",
+          "text": "`cilium-sysdump`"
+        }
+      ],
+      "answer": "a",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-37",
+      "domain": "cluster-mesh",
+      "type": "single",
+      "stem": "What is required for Cilium Cluster Mesh to work properly between two clusters?",
+      "options": [
+        {
+          "id": "a",
+          "text": "All nodes must be in the same subnet"
+        },
+        {
+          "id": "b",
+          "text": "Pod CIDR ranges must not overlap between clusters"
+        },
+        {
+          "id": "c",
+          "text": "Both clusters must run the exact same Cilium version"
+        },
+        {
+          "id": "d",
+          "text": "A shared etcd cluster between the environments"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-38",
+      "domain": "cluster-mesh",
+      "type": "single",
+      "stem": "How does Cilium Cluster Mesh synchronize service information between clusters?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Using Kubernetes federation APIs"
+        },
+        {
+          "id": "b",
+          "text": "Through a shared etcd key-value store"
+        },
+        {
+          "id": "c",
+          "text": "Via an HTTPS API implemented by Cilium agents"
+        },
+        {
+          "id": "d",
+          "text": "Through the Kubernetes API server in each cluster"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-39",
+      "domain": "cluster-mesh",
+      "type": "single",
+      "stem": "Which statement about global services in Cilium Cluster Mesh is true?",
+      "options": [
+        {
+          "id": "a",
+          "text": "All services in a cluster are automatically global"
+        },
+        {
+          "id": "b",
+          "text": "Services must be annotated to be accessible globally"
+        },
+        {
+          "id": "c",
+          "text": "Only services of type LoadBalancer can be global"
+        },
+        {
+          "id": "d",
+          "text": "Global services require special DNS configuration"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-40",
+      "domain": "architecture",
+      "type": "single",
+      "stem": "What's the purpose of the Cluster Mesh API Server component?",
+      "options": [
+        {
+          "id": "a",
+          "text": "To authenticate requests between clusters"
+        },
+        {
+          "id": "b",
+          "text": "To aggregate metrics from multiple clusters"
+        },
+        {
+          "id": "c",
+          "text": "To share service, endpoint, and identity information between clusters"
+        },
+        {
+          "id": "d",
+          "text": "To synchronize network policy enforcement"
+        }
+      ],
+      "answer": "c",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-41",
+      "domain": "cluster-mesh",
+      "type": "single",
+      "stem": "In a Cluster Mesh setup, what's the maximum recommended number of clusters that can be connected?",
+      "options": [
+        {
+          "id": "a",
+          "text": "There is no practical limit"
+        },
+        {
+          "id": "b",
+          "text": "255 clusters"
+        },
+        {
+          "id": "c",
+          "text": "100 clusters"
+        },
+        {
+          "id": "d",
+          "text": "5 clusters"
+        }
+      ],
+      "answer": "a",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-42",
+      "domain": "architecture",
+      "type": "single",
+      "stem": "How does Cilium handle pod identity across clusters in a Cluster Mesh?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Each cluster maintains its own identity namespace"
+        },
+        {
+          "id": "b",
+          "text": "Identities with the same labels are synchronized across clusters"
+        },
+        {
+          "id": "c",
+          "text": "All pods get new global identities when Cluster Mesh is enabled"
+        },
+        {
+          "id": "d",
+          "text": "Identity is based on cluster name and namespace, not labels"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-43",
+      "domain": "ebpf",
+      "type": "single",
+      "stem": "Which Linux capability is required for the Cilium agent to load eBPF programs?",
+      "options": [
+        {
+          "id": "a",
+          "text": "CAP_SYS_ADMIN"
+        },
+        {
+          "id": "b",
+          "text": "CAP_NET_ADMIN"
+        },
+        {
+          "id": "c",
+          "text": "CAP_BPF"
+        },
+        {
+          "id": "d",
+          "text": "CAP_SYS_MODULE"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-44",
+      "domain": "network-policy",
+      "type": "single",
+      "stem": "How does eBPF provide better performance compared to iptables for network policy enforcement?",
+      "options": [
+        {
+          "id": "a",
+          "text": "By optimizing rule ordering automatically"
+        },
+        {
+          "id": "b",
+          "text": "By using efficient map lookups instead of sequential rule evaluation"
+        },
+        {
+          "id": "c",
+          "text": "By offloading processing to specialized hardware"
+        },
+        {
+          "id": "d",
+          "text": "By caching policy decisions in user space"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-45",
+      "domain": "service-mesh",
+      "type": "single",
+      "stem": "Which eBPF hook point does Cilium use for implementing transparent encryption?",
+      "options": [
+        {
+          "id": "a",
+          "text": "tc egress"
+        },
+        {
+          "id": "b",
+          "text": "XDP"
+        },
+        {
+          "id": "c",
+          "text": "Socket"
+        },
+        {
+          "id": "d",
+          "text": "cgroup"
+        }
+      ],
+      "answer": "a",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-46",
+      "domain": "ebpf",
+      "type": "single",
+      "stem": "What feature does Cilium's eBPF implementation allow that traditional CNI solutions cannot provide?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Basic IP address management"
+        },
+        {
+          "id": "b",
+          "text": "Pod-to-pod connectivity"
+        },
+        {
+          "id": "c",
+          "text": "Protocol-aware security policies"
+        },
+        {
+          "id": "d",
+          "text": "NodePort service implementation"
+        }
+      ],
+      "answer": "c",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-47",
+      "domain": "bgp",
+      "type": "single",
+      "stem": "Which of the following correctly configures a BGP peering in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "```yaml apiVersion: cilium.io/v1 kind: BGPPeering metadata: name: router-peering spec: localASN: 65001 remoteASN: 65000 remoteAddress: 192.168.1.1 ```"
+        },
+        {
+          "id": "b",
+          "text": "```yaml apiVersion: cilium.io/v2alpha1 kind: CiliumBGPPeeringPolicy metadata: name: router-peering spec: virtualRouters: - localASN: 65001 neighbors: - peerAddress: 192.168.1.1 peerASN: 65000 ```"
+        },
+        {
+          "id": "c",
+          "text": "```yaml apiVersion: cilium.io/v2 kind: CiliumBGPConfig metadata: name: router-peering spec: localASN: 65001 peers: - peerAddress: 192.168.1.1 peerASN: 65000 ```"
+        },
+        {
+          "id": "d",
+          "text": "```yaml apiVersion: projectcalico.org/v3 kind: BGPPeer metadata: name: router-peering spec: asNumber: 65000 peerIP: 192.168.1.1 localASN: 65001 ```"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-48",
+      "domain": "bgp",
+      "type": "single",
+      "stem": "How can you advertise a Kubernetes Service via BGP using Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Add an annotation to the Service and enable BGP service advertisement in the CiliumBGPPeeringPolicy"
+        },
+        {
+          "id": "b",
+          "text": "Create a CiliumBGPServiceAdvertisement resource pointing to the Service"
+        },
+        {
+          "id": "c",
+          "text": "Configure the Service with type: LoadBalancer and set the loadBalancerClass to cilium/bgp"
+        },
+        {
+          "id": "d",
+          "text": "Services of type ClusterIP cannot be advertised via BGP"
+        }
+      ],
+      "answer": "a",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-49",
+      "domain": "bgp",
+      "type": "single",
+      "stem": "What's the difference between using direct routing and BGP for pod networking in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Direct routing only works within a single subnet, while BGP works across subnets"
+        },
+        {
+          "id": "b",
+          "text": "Direct routing requires manual route configuration, while BGP automates route distribution"
+        },
+        {
+          "id": "c",
+          "text": "Direct routing supports only IPv4, while BGP supports both IPv4 and IPv6"
+        },
+        {
+          "id": "d",
+          "text": "Direct routing provides higher performance, while BGP offers more flexibility"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    },
+    {
+      "id": "blind-10-50",
+      "domain": "bgp",
+      "type": "single",
+      "stem": "Which command can be used to verify that Cilium is advertising routes via BGP?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`cilium status bgp`"
+        },
+        {
+          "id": "b",
+          "text": "`cilium bgp routes`"
+        },
+        {
+          "id": "c",
+          "text": "`kubectl get bgpadvertisements`"
+        },
+        {
+          "id": "d",
+          "text": "`cilium bgp advertisements list`"
+        }
+      ],
+      "answer": "b",
+      "explanation": null,
+      "citations": [],
+      "source": "CNCF practice exam: 10. Practice Exam 2.md"
+    }
+  ]
+}

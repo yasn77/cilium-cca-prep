@@ -1,0 +1,965 @@
+{
+  "generatedAt": "2026-11-08T00:52:53.447Z",
+  "counts": {
+    "total": 16,
+    "byGate": {
+      "quote": 3,
+      "duplicate": 5,
+      "entail": 8
+    }
+  },
+  "questions": [
+    {
+      "id": "2761c967feb2f5aa",
+      "ordinal": 0,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes Addressing space in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Concept that is specific to Cilium and is not related to `Kubernetes' EndpointSlice`_."
+        },
+        {
+          "id": "b",
+          "text": "Cilium will assign IPs to pods out of the PodCIDR assigned to the specific Kubernetes node. By using `Alias IP ranges <https://cloud.google.com/vpc/docs/alias-ip>`_, these IPs are natively routable on Google Cloud's network without additional encapsulation or route distribution."
+        },
+        {
+          "id": "c",
+          "text": "When running together with an orchestration system such as Kubernetes, the list of all nodes in the cluster including their associated allocation prefix node is made available to each agent automatically. New nodes joining the cluster will automatically be incorporated into the mesh."
+        },
+        {
+          "id": "d",
+          "text": "Due to not depending on any underlying networking limitations, the available addressing space is potentially much larger and allows to run any number of pods per node if the PodCIDR size is configured accordingly."
+        }
+      ],
+      "answer": "d",
+      "explanation": "Due to not depending on any underlying networking limitations, the available addressing space is potentially much larger and allows to run any number of pods per node if the PodCIDR size is configured accordingly.",
+      "optionRationale": {
+        "c": "This describes Auto-configuration, not Addressing space.",
+        "a": "This describes CiliumEndpointSlice, not Addressing space.",
+        "b": "This describes Addressing, not Addressing space."
+      },
+      "citations": [
+        {
+          "file": "network/concepts/routing.rst",
+          "anchor": "advantages-of-the-model",
+          "title": "Advantages of the model",
+          "quote": "Due to not depending on any underlying networking limitations, the available addressing space is potentially much larger and allows to run any number of pods per node if the PodCIDR size is configured accordingly.",
+          "url": "https://docs.cilium.io/en/stable/network/concepts/routing/#advantages-of-the-model"
+        }
+      ],
+      "domain": "architecture",
+      "competency": "datapath-models",
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/concepts/routing.rst#advantages-of-the-model",
+        "createdAt": "2026-11-08T00:52:53.392Z"
+      },
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "quote",
+        "reason": "quote-not-verbatim"
+      }
+    },
+    {
+      "id": "cc6819b6b1bb5050",
+      "ordinal": 1,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes Auto-configuration in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "All requirements for state storage and propagation can be met with Kubernetes CRDs as configured in the default configuration of Cilium. A key-value store can optionally be used as an optimization to improve the scalability of a cluster as change notifications and storage requirements are more efficient with direct key-value store usage."
+        },
+        {
+          "id": "b",
+          "text": "The Cilium debug CLI client (``cilium-dbg``) is a command-line tool that is installed along with the Cilium agent. It interacts with the REST API of the Cilium agent running on the same node. The debug CLI allows inspecting the state and status of the local agent. It also provides tooling to directly access the eBPF maps to validate their state."
+        },
+        {
+          "id": "c",
+          "text": "The CNI plugin (``cilium-cni``) is invoked by Kubernetes when a pod is scheduled or terminated on a node. It interacts with the Cilium API of the node to trigger the necessary datapath configuration to provide networking, load-balancing and network policies for the pod."
+        },
+        {
+          "id": "d",
+          "text": "When running together with an orchestration system such as Kubernetes, the list of all nodes in the cluster including their associated allocation prefix node is made available to each agent automatically. New nodes joining the cluster will automatically be incorporated into the mesh."
+        }
+      ],
+      "answer": "d",
+      "explanation": "When running together with an orchestration system such as Kubernetes, the list of all nodes in the cluster including their associated allocation prefix node is made available to each agent automatically. New nodes joining the cluster will automatically be incorporated into the mesh.",
+      "optionRationale": {
+        "c": "This describes CNI Plugin, not Auto-configuration.",
+        "a": "This describes Key-Value Store, not Auto-configuration.",
+        "b": "This describes Debug Client, not Auto-configuration."
+      },
+      "citations": [
+        {
+          "file": "network/concepts/routing.rst",
+          "anchor": "advantages-of-the-model",
+          "title": "Advantages of the model",
+          "quote": "When running together with an orchestration system such as Kubernetes, the list of all nodes in the cluster including their associated allocation prefix node is made available to each agent automatically. New nodes joining the cluster will automatically be incorporated into the mesh.",
+          "url": "https://docs.cilium.io/en/stable/network/concepts/routing/#advantages-of-the-model"
+        }
+      ],
+      "domain": "architecture",
+      "competency": "datapath-models",
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/concepts/routing.rst#advantages-of-the-model",
+        "createdAt": "2026-11-08T00:52:53.392Z"
+      },
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "quote",
+        "reason": "quote-not-verbatim"
+      }
+    },
+    {
+      "id": "fa4ccf5173bf640c",
+      "ordinal": 2,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes Identity context in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Only honored for the Service referenced by that ``EndpointSlice`` when it uses the Maglev load-balancing algorithm, whether Maglev is configured globally or selected per service through ``service."
+        },
+        {
+          "id": "b",
+          "text": "The CNI plugin (``cilium-cni``) is invoked by Kubernetes when a pod is scheduled or terminated on a node. It interacts with the Cilium API of the node to trigger the necessary datapath configuration to provide networking, load-balancing and network policies for the pod."
+        },
+        {
+          "id": "c",
+          "text": "Due to not depending on any underlying networking limitations, the available addressing space is potentially much larger and allows to run any number of pods per node if the PodCIDR size is configured accordingly."
+        },
+        {
+          "id": "d",
+          "text": "Encapsulation protocols allow for the carrying of metadata along with the network packet. Cilium makes use of this ability to transfer metadata such as the source security identity. The identity transfer is an optimization designed to avoid one identity lookup on the remote node."
+        }
+      ],
+      "answer": "d",
+      "explanation": "Encapsulation protocols allow for the carrying of metadata along with the network packet. Cilium makes use of this ability to transfer metadata such as the source security identity. The identity transfer is an optimization designed to avoid one identity lookup on the remote node.",
+      "optionRationale": {
+        "a": "This describes Weights, not Identity context.",
+        "b": "This describes CNI Plugin, not Identity context.",
+        "c": "This describes Addressing space, not Identity context."
+      },
+      "citations": [
+        {
+          "file": "network/concepts/routing.rst",
+          "anchor": "advantages-of-the-model",
+          "title": "Advantages of the model",
+          "quote": "Encapsulation protocols allow for the carrying of metadata along with the network packet. Cilium makes use of this ability to transfer metadata such as the source security identity. The identity transfer is an optimization designed to avoid one identity lookup on the remote node.",
+          "url": "https://docs.cilium.io/en/stable/network/concepts/routing/#advantages-of-the-model"
+        }
+      ],
+      "domain": "architecture",
+      "competency": "datapath-models",
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/concepts/routing.rst#advantages-of-the-model",
+        "createdAt": "2026-11-08T00:52:53.393Z"
+      },
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "quote",
+        "reason": "quote-not-verbatim"
+      }
+    },
+    {
+      "id": "17ff519c2cbeec60",
+      "ordinal": 0,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes KVStore in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The number of request/response messages per second that can be transmitted over a single TCP connection and over 32 parallel TCP connections."
+        },
+        {
+          "id": "b",
+          "text": "Service which allows to query multiple Hubble instances simultaneously and aggregate the results."
+        },
+        {
+          "id": "c",
+          "text": "The number of connections per second that can be established in sequence with a single request/response payload message transmitted for each new connection. A single process and 32 parallel processes are tested."
+        },
+        {
+          "id": "d",
+          "text": "Ok etcd: 1/1 connected, lease-ID=29c6732d5d580cb5, lock lease-ID=29c6732d5d580cb7, has-quorum=2m2."
+        }
+      ],
+      "answer": "d",
+      "explanation": "KVStore: Ok etcd: 1/1 connected, lease-ID=29c6732d5d580cb5, lock lease-ID=29c6732d5d580cb7, has-quorum=2m2.778966915s since last heartbeat update has been received, consecutive-errors=1: https://192.168.60.11:2379 - 3.4.9 (Leader)",
+      "optionRationale": {
+        "a": "This describes Request/Response Rate, not KVStore.",
+        "b": "This describes Hubble Relay, not KVStore.",
+        "c": "This describes Connections Rate, not KVStore."
+      },
+      "citations": [
+        {
+          "file": "operations/troubleshooting.rst",
+          "anchor": "recovery-behavior",
+          "title": "Recovery behavior",
+          "quote": "KVStore: Ok etcd: 1/1 connected, lease-ID=29c6732d5d580cb5, lock lease-ID=29c6732d5d580cb7, has-quorum=2m2.778966915s since last heartbeat update has been received, consecutive-errors=1: https://192.168.60.11:2379 - 3.4.9 (Leader)",
+          "url": "https://docs.cilium.io/en/stable/operations/troubleshooting/#recovery-behavior"
+        }
+      ],
+      "domain": "installation",
+      "competency": null,
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "operations/troubleshooting.rst#recovery-behavior",
+        "createdAt": "2026-11-08T00:52:53.393Z"
+      },
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "duplicate",
+        "reason": "near-duplicate-stem"
+      }
+    },
+    {
+      "id": "e30a6b4c3910c148",
+      "ordinal": 0,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes Relay in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "When running together with an orchestration system such as Kubernetes, the list of all nodes in the cluster including their associated allocation prefix node is made available to each agent automatically. New nodes joining the cluster will automatically be incorporated into the mesh."
+        },
+        {
+          "id": "b",
+          "text": "Encapsulation protocols allow for the carrying of metadata along with the network packet. Cilium makes use of this ability to transfer metadata such as the source security identity. The identity transfer is an optimization designed to avoid one identity lookup on the remote node."
+        },
+        {
+          "id": "c",
+          "text": "The graphical user interface (``hubble-ui``) utilizes relay-based visibility to provide a graphical service dependency and connectivity map."
+        },
+        {
+          "id": "d",
+          "text": "Relay (``hubble-relay``) is a standalone component which is aware of all running Hubble servers and offers cluster-wide visibility by connecting to their respective gRPC APIs and providing an API that represents all servers in the cluster."
+        }
+      ],
+      "answer": "d",
+      "explanation": "Relay (``hubble-relay``) is a standalone component which is aware of all running Hubble servers and offers cluster-wide visibility by connecting to their respective gRPC APIs and providing an API that represents all servers in the cluster.",
+      "optionRationale": {
+        "c": "This describes Graphical UI, not Relay.",
+        "a": "This describes Auto-configuration, not Relay.",
+        "b": "This describes Identity context, not Relay."
+      },
+      "citations": [
+        {
+          "file": "overview/component-overview.rst",
+          "anchor": "hubble",
+          "title": "Hubble",
+          "quote": "Relay (``hubble-relay``) is a standalone component which is aware of all running Hubble servers and offers cluster-wide visibility by connecting to their respective gRPC APIs and providing an API that represents all servers in the cluster.",
+          "url": "https://docs.cilium.io/en/stable/overview/component-overview/#hubble"
+        }
+      ],
+      "domain": "architecture",
+      "competency": "component-roles",
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "overview/component-overview.rst#hubble",
+        "createdAt": "2026-11-08T00:52:53.393Z"
+      },
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "duplicate",
+        "reason": "near-duplicate-stem"
+      }
+    },
+    {
+      "id": "e440d852c638b8cc",
+      "ordinal": 1,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes Client in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Due to not depending on any underlying networking limitations, the available addressing space is potentially much larger and allows to run any number of pods per node if the PodCIDR size is configured accordingly."
+        },
+        {
+          "id": "b",
+          "text": "Cilium will assign IPs to pods out of the PodCIDR assigned to the specific Kubernetes node. By using `Alias IP ranges <https://cloud.google.com/vpc/docs/alias-ip>`_, these IPs are natively routable on Google Cloud's network without additional encapsulation or route distribution."
+        },
+        {
+          "id": "c",
+          "text": "The CNI plugin (``cilium-cni``) is invoked by Kubernetes when a pod is scheduled or terminated on a node. It interacts with the Cilium API of the node to trigger the necessary datapath configuration to provide networking, load-balancing and network policies for the pod."
+        },
+        {
+          "id": "d",
+          "text": "The Hubble CLI (``hubble``) is a command-line tool able to connect to either the gRPC API of ``hubble-relay`` or the local server to retrieve flow events."
+        }
+      ],
+      "answer": "d",
+      "explanation": "The Hubble CLI (``hubble``) is a command-line tool able to connect to either the gRPC API of ``hubble-relay`` or the local server to retrieve flow events.",
+      "optionRationale": {
+        "a": "This describes Addressing space, not Client.",
+        "c": "This describes CNI Plugin, not Client.",
+        "b": "This describes Addressing, not Client."
+      },
+      "citations": [
+        {
+          "file": "overview/component-overview.rst",
+          "anchor": "hubble",
+          "title": "Hubble",
+          "quote": "The Hubble CLI (``hubble``) is a command-line tool able to connect to either the gRPC API of ``hubble-relay`` or the local server to retrieve flow events.",
+          "url": "https://docs.cilium.io/en/stable/overview/component-overview/#hubble"
+        }
+      ],
+      "domain": "architecture",
+      "competency": "component-roles",
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "overview/component-overview.rst#hubble",
+        "createdAt": "2026-11-08T00:52:53.393Z"
+      },
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "duplicate",
+        "reason": "near-duplicate-stem"
+      }
+    },
+    {
+      "id": "c19ddb46f26c423f",
+      "ordinal": 0,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes Below in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Headers is a list of HTTP headers which must be present in the request. If omitted or empty, requests are allowed regardless of headers present."
+        },
+        {
+          "id": "b",
+          "text": "Description is a string which is not interpreted by Cilium. It can be used to describe the intent and scope of the rule in a human readable form."
+        },
+        {
+          "id": "c",
+          "text": "Host is an extended POSIX regex matched against the host header of a request, e.g. ``foo.com``. If omitted or empty, the value of the host header is ignored."
+        },
+        {
+          "id": "d",
+          "text": "Same SSL error while trying to connect to ``cilium."
+        }
+      ],
+      "answer": "d",
+      "explanation": "Below is the same SSL error while trying to connect to ``cilium.io`` from curl.",
+      "optionRationale": {
+        "c": "This describes Host, not Below.",
+        "a": "This describes Headers, not Below.",
+        "b": "This describes description, not Below."
+      },
+      "citations": [
+        {
+          "file": "security/policy/layer4.rst",
+          "anchor": "example-tls-sni",
+          "title": "Example (TLS SNI)",
+          "quote": "Below is the same SSL error while trying to connect to ``cilium.io`` from curl.",
+          "url": "https://docs.cilium.io/en/stable/security/policy/layer4/#example-tls-sni"
+        }
+      ],
+      "domain": "network-policy",
+      "competency": null,
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "security/policy/layer4.rst#example-tls-sni",
+        "createdAt": "2026-11-08T00:52:53.393Z"
+      },
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "duplicate",
+        "reason": "near-duplicate-stem"
+      }
+    },
+    {
+      "id": "0b30edb4c3491baa",
+      "ordinal": 3,
+      "family": "definition",
+      "yieldSource": "definition",
+      "stem": "Which statement best describes Path Path in Cilium?",
+      "options": [
+        {
+          "id": "a",
+          "text": "List of rules which must apply at ingress of the endpoint, i.e. to all network packets which are entering the endpoint."
+        },
+        {
+          "id": "b",
+          "text": "Headers is a list of HTTP headers which must be present in the request. If omitted or empty, requests are allowed regardless of headers present."
+        },
+        {
+          "id": "c",
+          "text": "With always mode, policy enforcement is enabled on all endpoints even if no rules select specific endpoints."
+        },
+        {
+          "id": "d",
+          "text": "Extended POSIX regex matched against the path of a request."
+        }
+      ],
+      "answer": "d",
+      "explanation": "Path Path is an extended POSIX regex matched against the path of a request.",
+      "optionRationale": {
+        "a": "This describes ingress, not Path Path.",
+        "b": "This describes Headers, not Path Path.",
+        "c": "This describes always, not Path Path."
+      },
+      "citations": [
+        {
+          "file": "security/policy/layer7.rst",
+          "anchor": "http",
+          "title": "HTTP",
+          "quote": "Path Path is an extended POSIX regex matched against the path of a request.",
+          "url": "https://docs.cilium.io/en/stable/security/policy/layer7/#http"
+        }
+      ],
+      "domain": "network-policy",
+      "competency": "policy-rule-structure",
+      "type": "single",
+      "provenance": {
+        "generator": {
+          "kind": "template",
+          "templateId": "definition",
+          "version": "1.0.0"
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "security/policy/layer7.rst#http",
+        "createdAt": "2026-11-08T00:52:53.393Z"
+      },
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "duplicate",
+        "reason": "near-duplicate-stem"
+      }
+    },
+    {
+      "stem": "An engineer executes the command `kubectl exec \"$FORTIO_POD\" -c fortio -- /usr/bin/fortio load -c 2 -qps 0 -n 20 http://echo-service:8080`. Based on the provided output, what is the distribution of HTTP response codes received?",
+      "options": [
+        {
+          "id": "a",
+          "text": "19 requests returned code 200 and 1 request returned code 503."
+        },
+        {
+          "id": "b",
+          "text": "20 requests returned code 200 and 0 requests returned code 503."
+        },
+        {
+          "id": "c",
+          "text": "10 requests returned code 200 and 10 requests returned code 503."
+        },
+        {
+          "id": "d",
+          "text": "18 requests returned code 200 and 2 requests returned code 503."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The output for the command with `-c 2` explicitly states `Code 200 : 19 (95.0 %)` and `Code 503 : 1 (5.0 %)`. This indicates that out of the 20 total calls, 19 were successful and 1 triggered the circuit breaker with a 503 error.",
+      "optionRationale": {
+        "b": "Incorrect. The output clearly shows one instance of `Code 503 : 1 (5.0 %)`, so not all requests were successful.",
+        "c": "Incorrect. The output shows 19 successful requests, not 10. The 50% split is not supported by the data.",
+        "d": "Incorrect. The output shows only one 503 error, not two. The count for code 200 is 19, not 18."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/servicemesh/envoy-circuit-breaker.rst",
+          "anchor": "tripping-envoy-circuit-breaker",
+          "title": "Tripping Envoy Circuit Breaker",
+          "quote": "Code 200 : 19 (95.0 %)\n    Code 503 : 1 (5.0 %)",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/envoy-circuit-breaker/#tripping-envoy-circuit-breaker"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/envoy-circuit-breaker.rst#tripping-envoy-circuit-breaker",
+        "createdAt": "2026-11-08T00:52:53.393Z"
+      },
+      "id": "94c78533833e7612",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation:0.56"
+      }
+    },
+    {
+      "stem": "In the scenario where the engineer increases the concurrent connections to 4 using the flag `-c 4`, the output shows multiple `Non ok http code` warnings. What specific HTTP status code is associated with these warnings in the log entries?",
+      "options": [
+        {
+          "id": "a",
+          "text": "503"
+        },
+        {
+          "id": "b",
+          "text": "500"
+        },
+        {
+          "id": "c",
+          "text": "429"
+        },
+        {
+          "id": "d",
+          "text": "502"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The log entries for the run with `-c 4` contain multiple lines such as `{\"ts\":1692767495.822424,\"level\":\"warn\",\"file\":\"http_client.go\",\"line\":1104,\"msg\":\"Non ok http code\",\"code\":\"503\",\"status\":\"HTTP/1.1 503\",\"thread\":\"3\",\"run\":\"0\"}`. The `code` field is consistently \"503\".",
+      "optionRationale": {
+        "b": "Incorrect. The logs specify `\"code\":\"503\"`, not 500.",
+        "c": "Incorrect. The logs specify `\"code\":\"503\"`, not 429.",
+        "d": "Incorrect. The logs specify `\"code\":\"503\"`, not 502."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/servicemesh/envoy-circuit-breaker.rst",
+          "anchor": "tripping-envoy-circuit-breaker",
+          "title": "Tripping Envoy Circuit Breaker",
+          "quote": "{\"ts\":1692767495.822424,\"level\":\"warn\",\"file\":\"http_client.go\",\"line\":1104,\"msg\":\"Non ok http code\",\"code\":\"503\",\"status\":\"HTTP/1.1 503\",\"thread\":\"3\",\"run\":\"0\"}",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/envoy-circuit-breaker/#tripping-envoy-circuit-breaker"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/envoy-circuit-breaker.rst#tripping-envoy-circuit-breaker",
+        "createdAt": "2026-11-08T00:52:53.393Z"
+      },
+      "id": "a48c7f3c9e265686",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-too-short-to-check"
+      }
+    },
+    {
+      "stem": "An engineer is testing the L7 circuit breaker and observes that with 2 concurrent connections, only 1 out of 20 requests fails with a 503 error. When the engineer increases the concurrency to 4 connections, the output shows multiple 503 errors. According to the excerpt, what does the presence of the 503 response code indicate?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It indicates that the circuit breaker has been triggered."
+        },
+        {
+          "id": "b",
+          "text": "It indicates that the Fortio client has crashed."
+        },
+        {
+          "id": "c",
+          "text": "It indicates that the echo-service is completely down."
+        },
+        {
+          "id": "d",
+          "text": "It indicates that the Kubernetes pod is restarting."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt explicitly states: \"From the above output, you can see that the response code of some requests is 503, which triggers a circuit breaker.\" Therefore, the 503 code is the indicator that the circuit breaker mechanism has activated.",
+      "optionRationale": {
+        "b": "Incorrect. The Fortio client continues to run and report statistics; it does not crash.",
+        "c": "Incorrect. The service is not completely down, as some requests (or in the first test, most) still return 200, and the 503 is specifically linked to the circuit breaker, not total unavailability.",
+        "d": "Incorrect. There is no mention of pod restarts in the output or explanation."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/servicemesh/envoy-circuit-breaker.rst",
+          "anchor": "tripping-envoy-circuit-breaker",
+          "title": "Tripping Envoy Circuit Breaker",
+          "quote": "From the above output, you can see that the response code of some requests is 503, \nwhich triggers a circuit breaker.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/envoy-circuit-breaker/#tripping-envoy-circuit-breaker"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/envoy-circuit-breaker.rst#tripping-envoy-circuit-breaker",
+        "createdAt": "2026-11-08T00:52:53.393Z"
+      },
+      "id": "f5aef8e4f5ce0e18",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation:0.38"
+      }
+    },
+    {
+      "stem": "An engineer applies a `CiliumClusterwideNetworkPolicy` to deny all traffic by default. When an external client sends a request to the `/details` endpoint, the response is a 403 Forbidden. According to the Hubble flow logs provided, what is the status of the HTTP request flow?",
+      "options": [
+        {
+          "id": "a",
+          "text": "DROPPED"
+        },
+        {
+          "id": "b",
+          "text": "FORWARDED"
+        },
+        {
+          "id": "c",
+          "text": "ALLOWED"
+        },
+        {
+          "id": "d",
+          "text": "DENIED"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The Hubble output explicitly shows the line `http-request DROPPED (HTTP/1.1 GET http://172.19.255.194/details/1)`. Although the client receives a 403 response, the flow status for the request itself is recorded as DROPPED.",
+      "optionRationale": {
+        "b": "FORWARDED is the status of the http-response, not the http-request.",
+        "c": "ALLOWED is not the specific status shown in the log for the dropped request.",
+        "d": "DENIED is a general concept but the specific log status is DROPPED."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/servicemesh/default-deny-ingress-policy.rst",
+          "anchor": "default-deny-ingress-policy",
+          "title": "Default Deny Ingress Policy",
+          "quote": "Mar 17 13:56:00.709: 172.19.0.1:34104 (ingress) -> default/cilium-ingress-basic-ingress:80 (world) http-request DROPPED (HTTP/1.1 GET http://172.19.255.194/details/1)",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/default-deny-ingress-policy/#default-deny-ingress-policy"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/default-deny-ingress-policy.rst#default-deny-ingress-policy",
+        "createdAt": "2026-11-08T00:52:53.393Z"
+      },
+      "id": "8cbdf3736112ea28",
+      "domain": "service-mesh",
+      "competency": "ingress",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-too-short-to-check"
+      }
+    },
+    {
+      "stem": "After applying a default deny policy, an engineer observes that the HTTP response to a denied request is forwarded with a 403 status. Which identity is associated with the source of the denied request in the Hubble logs?",
+      "options": [
+        {
+          "id": "a",
+          "text": "world"
+        },
+        {
+          "id": "b",
+          "text": "cluster"
+        },
+        {
+          "id": "c",
+          "text": "reserved:ingress"
+        },
+        {
+          "id": "d",
+          "text": "default"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The Hubble log entry for the dropped request shows the source identity as `(world)`: `172.19.0.1:34104 (ingress) -> default/cilium-ingress-basic-ingress:80 (world)`. This indicates the traffic originated from outside the cluster.",
+      "optionRationale": {
+        "b": "cluster is mentioned later as a target identity for allowed traffic, not the source of the denied external traffic.",
+        "c": "reserved:ingress is the identity of the ingress gateway itself, not the external client.",
+        "d": "default is the namespace, not the identity of the external source."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/servicemesh/default-deny-ingress-policy.rst",
+          "anchor": "default-deny-ingress-policy",
+          "title": "Default Deny Ingress Policy",
+          "quote": "Mar 17 13:56:00.709: 172.19.0.1:34104 (ingress) -> default/cilium-ingress-basic-ingress:80 (world) http-request DROPPED (HTTP/1.1 GET http://172.19.255.194/details/1)",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/default-deny-ingress-policy/#default-deny-ingress-policy"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/default-deny-ingress-policy.rst#default-deny-ingress-policy",
+        "createdAt": "2026-11-08T00:52:53.393Z"
+      },
+      "id": "3609a0ba0fa39d0e",
+      "domain": "service-mesh",
+      "competency": "ingress",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-too-short-to-check"
+      }
+    },
+    {
+      "stem": "An engineer runs `kubectl get gateway -A` and observes that the `PROGRAMMED` column is empty for a Gateway named `http-gateway`. The `CLASS` is `cilium` and an `ADDRESS` is present. According to the provided documentation, what is the most likely cause and the recommended action?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The Gateway API CRDs are not installed; the engineer should install the CRDs."
+        },
+        {
+          "id": "b",
+          "text": "Gateway API is not enabled in the Cilium configuration; the engineer should ensure it is enabled."
+        },
+        {
+          "id": "c",
+          "text": "The LoadBalancer implementation is missing; the engineer should install a LoadBalancer service."
+        },
+        {
+          "id": "d",
+          "text": "The Gateway class is incorrect; the engineer should change the class to `envoy`."
+        }
+      ],
+      "answer": "b",
+      "explanation": "The excerpt states: 'If the `Programmed true` indicator is missing, make sure that Gateway API is enabled in the Cilium configuration.' Since the address is present, the LoadBalancer is likely fine, and the class is correct, the missing programmed status points to the configuration setting.",
+      "optionRationale": {
+        "a": "The excerpt states that if the resource type is not found, CRDs should be checked, but a missing 'Programmed' indicator specifically points to the Cilium configuration.",
+        "c": "The excerpt states that if no IP appears (address missing), a LoadBalancer implementation might be missing. Here, an address is present.",
+        "d": "The excerpt states Cilium only programs Gateways with the class `cilium`. The class is already `cilium`, so this is not the issue."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/servicemesh/gateway-api/troubleshooting.rst",
+          "anchor": "checking-resources",
+          "title": "Checking resources",
+          "quote": "If the ``Programmed true`` indicator is missing, make sure that Gateway API is enabled in the Cilium configuration.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/gateway-api/troubleshooting/#checking-resources"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/gateway-api/troubleshooting.rst#checking-resources",
+        "createdAt": "2026-11-08T00:52:53.393Z"
+      },
+      "id": "b7886d4a75fd3c0c",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation:0.67"
+      }
+    },
+    {
+      "stem": "An engineer checks the Cilium Operator logs using `kubectl logs -n kube-system deployments/cilium-operator | grep gateway` and sees an error message stating 'Required GatewayAPI resources are not found'. Which of the following resources is explicitly listed in the error message as missing?",
+      "options": [
+        {
+          "id": "a",
+          "text": "gatewayclasses.gateway.networking.k8s.io"
+        },
+        {
+          "id": "b",
+          "text": "gateways.gateway.networking.k8s.io"
+        },
+        {
+          "id": "c",
+          "text": "httproutes.gateway.networking.k8s.io"
+        },
+        {
+          "id": "d",
+          "text": "All of the above"
+        }
+      ],
+      "answer": "d",
+      "explanation": "The excerpt shows the log output listing multiple missing CRDs: 'customresourcedefinitions.apiextensions.k8s.io \"gatewayclasses.gateway.networking.k8s.io\" not found', 'customresourcedefinitions.apiextensions.k8s.io \"gateways.gateway.networking.k8s.io\" not found', and 'customresourcedefinitions.apiextensions.k8s.io \"httproutes.gateway.networking.k8s.io\" not found', among others.",
+      "optionRationale": {
+        "a": "This is one of the missing resources, but not the only one listed.",
+        "b": "This is one of the missing resources, but not the only one listed.",
+        "c": "This is one of the missing resources, but not the only one listed."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/servicemesh/gateway-api/troubleshooting.rst",
+          "anchor": "checking-resources",
+          "title": "Checking resources",
+          "quote": "error=\"customresourcedefinitions.apiextensions.k8s.io \\\"gatewayclasses.gateway.networking.k8s.io\\\" not found\n customresourcedefinitions.apiextensions.k8s.io \\\"gateways.gateway.networking.k8s.io\\\" not found\n customresourcedefinitions.apiextensions.k8s.io \\\"httproutes.gateway.networking.k8s.io\\\" not found",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/gateway-api/troubleshooting/#checking-resources"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/gateway-api/troubleshooting.rst#checking-resources",
+        "createdAt": "2026-11-08T00:52:53.393Z"
+      },
+      "id": "f825da87d45bb12c",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation:0.67"
+      }
+    },
+    {
+      "stem": "Which header does Envoy set to the trusted client address, based on the X-Forwarded-For header, regardless of what that address turns out to be?",
+      "options": [
+        {
+          "id": "a",
+          "text": "X-Forwarded-For"
+        },
+        {
+          "id": "b",
+          "text": "X-Envoy-External-Address"
+        },
+        {
+          "id": "c",
+          "text": "X-Real-IP"
+        },
+        {
+          "id": "d",
+          "text": "X-Client-IP"
+        }
+      ],
+      "answer": "b",
+      "explanation": "The excerpt states that Envoy will also set the X-Envoy-External-Address header to the trusted client address, whatever that turns out to be, based on X-Forwarded-For.",
+      "optionRationale": {
+        "a": "X-Forwarded-For is the header that is appended to or read from, not the one set to the trusted client address by Envoy in this specific context.",
+        "c": "X-Real-IP is not mentioned in the excerpt.",
+        "d": "X-Client-IP is not mentioned in the excerpt."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/servicemesh/ingress-reference.rst",
+          "anchor": "source-ip-visibility",
+          "title": "Source IP Visibility",
+          "quote": "Envoy will also set the ``X-Envoy-External-Address`` header to the trusted client address, whatever that turns out to be, based on ``X-Forwarded-For``.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/ingress-reference/#source-ip-visibility"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/ingress-reference.rst#source-ip-visibility",
+        "createdAt": "2026-11-08T00:52:53.393Z"
+      },
+      "id": "d06840ce9a870576",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-too-short-to-check"
+      }
+    }
+  ]
+}

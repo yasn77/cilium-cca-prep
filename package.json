@@ -1,0 +1,26 @@
+{
+  "name": "cilium-cca-prep",
+  "version": "1.0.0",
+  "description": "Offline practice app and corpus pipeline for the Cilium Certified Associate exam, built from the Cilium documentation.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "docs": "node tools/fetch-docs.mjs",
+    "chunk": "node tools/chunk-rst.mjs",
+    "anchors": "node tools/resolve-anchors.mjs",
+    "gen:templates": "node tools/gen-templates.mjs",
+    "gen:ai": "node tools/gen-ai.mjs",
+    "judge": "node tools/judge.mjs",
+    "verify": "node tools/verify.mjs",
+    "blind": "node tools/blind-set.mjs",
+    "report": "node tools/report.mjs",
+    "validate": "node tools/validate.mjs",
+    "test": "node --test \"test/*.test.mjs\"",
+    "pipeline": "npm run docs && npm run chunk && npm run anchors && npm run gen:templates && npm run gen:ai && npm run judge && npm run verify && npm run report && npm run validate",
+    "serve": "node tools/serve.mjs"
+  }
+}

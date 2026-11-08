@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b1220">
+<title>CCA Prep</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<header class="topbar">
+  <button class="brand" id="homeBtn" aria-label="Home">
+    <span class="logo" aria-hidden="true">◈</span>
+    <span>CCA Prep</span>
+  </button>
+  <div class="topbar-right">
+    <span class="corpus-badge" id="corpusBadge" title="Questions loaded"></span>
+    <button class="icon-btn" id="offlineDot" title="Offline ready" aria-label="Offline ready">●</button>
+  </div>
+</header>
+
+<main id="app" aria-live="polite"></main>
+
+<nav class="tabbar" id="tabbar" aria-label="Sections"></nav>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+# Third-party content and attribution
+
+This repository contains two kinds of material under two different licences.
+
+## Code
+
+All code in `app/`, `tools/`, `test/` and the GitHub Actions workflows is
+licensed under the MIT License. See `LICENSE`.
+
+## Documentation-derived question content
+
+The question corpus in `data/` is derived from the Cilium project's
+documentation, which is licensed **Creative Commons Attribution 4.0
+International (CC BY 4.0)**. The code of the Cilium project is Apache-2.0; the
+documentation is CC BY 4.0 under section 11 of the CNCF charter and the
+dual-licence notice published on <https://cilium.io>.
+
+- **Source repository:** <https://github.com/cilium/cilium>
+- **Pinned reference:** `v1.20.4` (released 2026-10-23)
+- **Source path:** `Documentation/`
+- **Copyright:** The Cilium Authors
+- **Licence:** CC BY 4.0 — <https://creativecommons.org/licenses/by/4.0/>
+
+Every generated question carries an exact citation of the form
+`file.rst#heading-anchor`, which resolves to a URL under
+<https://docs.cilium.io/en/stable/>. The `data/sources.json` file records the
+commit that was used, the retrieval date, and the byte counts.
+
+### What this repository does NOT contain
+
+- No question content from commercial exam-dump sites.
+- No content from the Isovalent CCA Study Guide, which is CC BY-NC 4.0
+  (non-commercial) and is therefore incompatible with unrestricted
+  redistribution.
+- No questions from the Linux Foundation CCA exam itself. Exam items are
+  confidential under the Linux Foundation Global Certification and
+  Confidentiality Agreement.
+
+### Held-out evaluation set
+
+`data/blind-set.json` contains questions from the public CNCF practice-exam
+repository at <https://gitlab.com/cncf-exams/certified-cillium-associate-cca>.
+It is used only for blind self-assessment and is excluded from the practising
+corpus. Check that project's terms before redistributing it.

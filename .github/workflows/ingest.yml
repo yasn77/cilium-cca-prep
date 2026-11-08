@@ -1,0 +1,132 @@
+name: Ingest corpus
+
+# Rebuilds the question corpus from the pinned Cilium documentation and opens a
+# pull request with the result. It never pushes to main directly: the corpus is
+# what the learner studies from, so a human reads the diff before it ships.
+
+on:
+  schedule:
+    # Weekly. The docs are pinned to a tag, so nothing changes until a human
+    # bumps docs.ref in tools/config.mjs; this run exists to re-verify anchors
+    # against the live site and to catch a quote that has drifted.
+    - cron: '17 4 * * 1'
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'Maximum sections to send to the generator (0 = no limit)'
+        required: false
+        default: '0'
+      skip_ai:
+        description: 'Skip LLM generation (templates only)'
+        type: boolean
+        default: false
+      bump_ref:
+        description: 'Documentation ref to pin (leave empty to keep the current one)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: ingest
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+
+      - name: Optional ref bump
+        if: inputs.bump_ref != ''
+        run: |
+          sed -i "s/ref: '[^']*'/ref: '${{ inputs.bump_ref }}'/" tools/config.mjs
+          grep -n "ref:" tools/config.mjs | head -1
+
+      - name: Fetch pinned documentation
+        run: node tools/fetch-docs.mjs
+
+      - name: Chunk into sections
+        run: node tools/chunk-rst.mjs
+
+      - name: Resolve anchors against the live site
+        run: node tools/resolve-anchors.mjs
+
+      - name: Generate from templates
+        run: node tools/gen-templates.mjs
+
+      - name: Generate with a language model
+        if: ${{ !inputs.skip_ai }}
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+        # A missing credential is not a failure: the script logs that it skipped
+        # generation, and the site still deploys with whatever corpus exists.
+        run: node tools/gen-ai.mjs --per-section=4 --limit=${{ inputs.limit || '0' }}
+
+      - name: Generate without a model
+        if: ${{ inputs.skip_ai }}
+        run: node tools/gen-ai.mjs --per-section=4 --limit=0
+
+      - name: Judge candidate quality
+        env:
+          TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
+          TYPESAFE_BASE_URL: ${{ vars.TYPESAFE_BASE_URL }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+        # Same rule: the judge is a gate, and an absent key leaves the corpus
+        # visibly un-judged rather than blocking the deploy.
+        run: node tools/judge.mjs
+
+      - name: Verify and build the corpus
+        run: node tools/verify.mjs --enforce-floor --strict
+
+      - name: Build the evaluation set
+        run: node tools/blind-set.mjs
+
+      - name: Write the report
+        run: node tools/report.mjs
+
+      - name: Run tests
+        run: node --test "test/*.test.mjs"
+
+      - name: Summarise
+        run: |
+          echo "## Corpus" >> "$GITHUB_STEP_SUMMARY"
+          node -e '
+            const c = require("./data/corpus.json");
+            const q = require("./data/quarantine.json");
+            console.log("| Domain | Questions |");
+            console.log("|---|---|");
+            for (const [d, n] of Object.entries(c.counts.byDomain)) console.log(`| ${d} | ${n} |`);
+            console.log(`\n**Total:** ${c.questions.length} shipped, ${q.questions.length} quarantined\n`);
+          ' >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Open a pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: corpus/refresh
+          delete-branch: true
+          title: 'chore(corpus): refresh generated question corpus'
+          commit-message: 'chore(corpus): refresh generated question corpus'
+          body: |
+            Automated corpus refresh.
+
+            Built from `${{ vars.CILIUM_DOCS_REF || 'the pinned ref in tools/config.mjs' }}`.
+
+            Read `data/report.md` before merging. It lists what each gate rejected
+            and, under **Known weak points**, the questions the mechanical checks
+            cannot fully adjudicate.
+
+            Diff `data/corpus.json` for added and removed questions. Removed
+            questions are usually a failed gate rather than a deliberate change.
+          labels: corpus, automated

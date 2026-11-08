@@ -1,0 +1,123 @@
+/**
+ * Rendering primitives. Everything returns DOM nodes built by hand — no
+ * innerHTML with interpolated content, because question text comes from a
+ * generator and must never be parsed as markup.
+ */
+
+export function el(tag, attrs = {}, children = []) {
+  const node = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (v === null || v === undefined || v === false) continue;
+    if (k === 'class') node.className = v;
+    else if (k === 'text') node.textContent = v;
+    else if (k === 'html') node.innerHTML = v; // only for trusted static markup
+    else if (k.startsWith('on') && typeof v === 'function') node.addEventListener(k.slice(2).toLowerCase(), v);
+    else if (k === 'dataset') Object.assign(node.dataset, v);
+    else node.setAttribute(k, v);
+  }
+  flatten(children, node);
+  return node;
+}
+
+/**
+ * Append children, dropping nullish entries.
+ *
+ * Call sites pass `cond ? node : null` freely, and `node.append(null)` would
+ * otherwise insert the literal text "null" into the page.
+ */
+export function flatten(children, node) {
+  for (const child of [].concat(children)) {
+    if (child === null || child === undefined || child === false || child === '') continue;
+    if (Array.isArray(child)) {
+      flatten(child, node);
+      continue;
+    }
+    node.append(child.nodeType ? child : document.createTextNode(String(child)));
+  }
+  return node;
+}
+
+/** Replace a container's children, dropping nullish entries the same way. */
+export function fill(node, children) {
+  node.replaceChildren();
+  return flatten(children, node);
+}
+
+/** Render a stem, turning `code`, **bold** and fenced blocks into elements. */
+export function richText(text) {
+  const frag = document.createDocumentFragment();
+  // Some generators emit doubled backticks (``devices``) and some single, and
+  // some emit a mix. Normalising first means the inline parser sees one form.
+  const normalised = String(text).replace(/``([^`]+)``/g, '`$1`');
+  const parts = normalised.split(/```/);
+  parts.forEach((part, i) => {
+    if (i % 2 === 1) {
+      frag.append(el('pre', { class: 'mono', style: 'background:var(--bg-sunken);padding:10px;border-radius:8px;overflow-x:auto;font-size:.82rem;margin:8px 0' }, [part.trim()]));
+      return;
+    }
+    // Inline: split on backticks first, then emphasis.
+    const chunks = part.split(/(`[^`]+`)/);
+    for (const chunk of chunks) {
+      if (!chunk) continue;
+      if (chunk.startsWith('`') && chunk.endsWith('`') && chunk.length > 2) {
+        frag.append(el('code', { text: chunk.slice(1, -1) }));
+        continue;
+      }
+      const boldParts = chunk.split(/(\*\*[^*]+\*\*)/);
+      for (const b of boldParts) {
+        if (!b) continue;
+        if (b.startsWith('**') && b.endsWith('**') && b.length > 4) {
+          frag.append(el('strong', { text: b.slice(2, -2) }));
+        } else {
+          frag.append(document.createTextNode(b));
+        }
+      }
+    }
+  });
+  return frag;
+}
+
+export function toast(message) {
+  const node = document.getElementById('toast');
+  node.textContent = message;
+  node.classList.add('show');
+  clearTimeout(toast._t);
+  toast._t = setTimeout(() => node.classList.remove('show'), 2200);
+}
+
+export function citationBlock(citation) {
+  const url = citation.url || '#';
+  return el('a', { class: 'citation', href: url, target: '_blank', rel: 'noreferrer noopener' }, [
+    el('div', { class: 'citation-label', text: 'Source in the Cilium docs' }),
+    el('div', { class: 'citation-quote', text: `“${citation.quote}”` }),
+    el('div', { class: 'citation-path', text: `${citation.file}#${citation.anchor}` }),
+  ]);
+}
+
+export function optionButton(option, { disabled, state, onClick }) {
+  const cls = ['option'];
+  if (state === 'correct') cls.push('correct');
+  if (state === 'incorrect') cls.push('incorrect');
+  if (state === 'chosen') cls.push('chosen-neutral');
+  return el(
+    'button',
+    {
+      class: cls.join(' '),
+      type: 'button',
+      disabled: disabled || undefined,
+      onclick: onClick,
+    },
+    [
+      el('span', { class: 'option-letter', text: option.id }),
+      el('span', { class: 'option-text' }, [richText(option.text)]),
+    ],
+  );
+}
+
+export function domainLabel(domain, labels) {
+  return labels[domain]?.label ?? domain;
+}
+
+export function pct(n) {
+  return `${Math.round(n)}%`;
+}

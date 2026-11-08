@@ -1,0 +1,27 @@
+---
+name: Bad question
+about: A question in the app is wrong, ambiguous, or cites the wrong passage
+title: 'bad question: '
+labels: ['bad question']
+---
+
+**Question id** (shown at the bottom of the question in Review, or in the citation block)
+
+```
+```
+
+**What is wrong**
+
+- [ ] The marked answer is wrong
+- [ ] The question has more than one defensible answer
+- [ ] The explanation is wrong
+- [ ] The citation does not support the answer
+- [ ] The wording is broken or refers to missing context
+
+**What it should be**
+
+<!-- The correction, and the documentation that supports it. -->
+
+**Source**
+
+<!-- docs.cilium.io URL, or file#anchor from the citation block -->

@@ -1,0 +1,59 @@
+{
+  "generatedAt": "2026-11-08T00:26:49.173Z",
+  "templates": 61,
+  "ai": 7,
+  "consideredSections": 3,
+  "rejections": {
+    "quote-not-in-source": 2
+  },
+  "coverage": {
+    "architecture": {
+      "count": 7,
+      "floor": 100,
+      "weight": 20,
+      "met": false
+    },
+    "network-policy": {
+      "count": 0,
+      "floor": 90,
+      "weight": 18,
+      "met": false
+    },
+    "service-mesh": {
+      "count": 0,
+      "floor": 80,
+      "weight": 16,
+      "met": false
+    },
+    "observability": {
+      "count": 0,
+      "floor": 50,
+      "weight": 10,
+      "met": false
+    },
+    "installation": {
+      "count": 0,
+      "floor": 50,
+      "weight": 10,
+      "met": false
+    },
+    "cluster-mesh": {
+      "count": 0,
+      "floor": 50,
+      "weight": 10,
+      "met": false
+    },
+    "ebpf": {
+      "count": 0,
+      "floor": 50,
+      "weight": 10,
+      "met": false
+    },
+    "bgp": {
+      "count": 0,
+      "floor": 30,
+      "weight": 6,
+      "met": false
+    }
+  }
+}

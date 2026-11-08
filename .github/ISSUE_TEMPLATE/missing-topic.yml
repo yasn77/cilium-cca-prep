@@ -1,0 +1,21 @@
+---
+name: Missing topic
+about: A curriculum topic with no questions, or too few to practise
+title: 'missing topic: '
+labels: ['missing topic']
+---
+
+**Domain and competency**
+
+<!-- From the eight-domain blueprint. Architecture, Network Policy, Service Mesh,
+     Network Observability, Installation and Configuration, Cluster Mesh, eBPF,
+     BGP and External Networking -->
+
+**What is not covered**
+
+<!-- The specific thing you would be asked about and could not answer. -->
+
+**Where it is documented**
+
+<!-- A docs.cilium.io page. The pipeline generates per section, so naming the
+     section is usually enough to get coverage added. -->

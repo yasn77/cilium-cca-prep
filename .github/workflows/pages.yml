@@ -1,0 +1,77 @@
+name: Deploy to GitHub Pages
+
+# Validates the committed corpus and publishes the app. Deliberately has no
+# network dependency on the documentation sources: a code-only change must not
+# wait on GitLab or the Cilium tarball being reachable.
+#
+# The one exception is link checking, which is advisory unless run manually.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+
+      - name: Validate the corpus shape
+        run: node tools/validate.mjs
+
+      - name: Run tests
+        run: node --test "test/*.test.mjs"
+
+      - name: Check the corpus is not empty
+        run: |
+          node -e '
+            const c = require("./data/corpus.json");
+            if (!c.questions || c.questions.length === 0) {
+              console.error("data/corpus.json has no questions; refusing to deploy an empty app");
+              process.exit(1);
+            }
+            console.log(`${c.questions.length} questions, schema ${c.schemaVersion}, docs ${c.docsRef}`);
+          '
+
+      - name: Assemble the site
+        run: |
+          mkdir -p _site
+          cp -r app/. _site/
+          mkdir -p _site/data
+          cp data/corpus.json _site/data/
+          cp data/quarantine.json _site/data/
+          cp data/blind-set.json _site/data/
+          # The blind set is deployed because it ships inside the SPA and is not
+          # secret: a learner can read it in devtools. It is excluded from practice
+          # and exam mode by construction, not by obscurity. Keeping it out would
+          # break blind evaluation offline, which is the only place it is used.
+          echo "{\"docsRef\":\"$(node -p 'require("./data/corpus.json").docsRef')\",\"generatedAt\":\"$(node -p 'require("./data/corpus.json").generatedAt')\"}" > _site/data/version.json
+          ls -la _site/data
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

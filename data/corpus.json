@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "docsRef": "v1.20.4",
   "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
-  "generatedAt": "2026-11-08T02:09:22.466Z",
+  "generatedAt": "2026-11-08T02:10:53.422Z",
   "counts": {
     "total": 109,
     "byDomain": {
@@ -78,7 +78,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "overview/component-overview.rst#data-store",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -135,7 +135,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/concepts/ipam/cluster-pool-to-multi-pool.rst#practical-example",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -201,7 +201,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/concepts/routing.rst#google-cloud",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -258,7 +258,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/concepts/ipam/multi-pool.rst#updating-existing-ciliumpodippools",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -324,7 +324,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "overview/component-overview.rst#data-store",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -381,7 +381,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/concepts/ipam/multi-pool.rst#updating-existing-ciliumpodippools",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -447,7 +447,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/concepts/routing.rst#google-cloud",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -509,7 +509,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/concepts/routing.rst#google-cloud",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -571,7 +571,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/concepts/ipam/eni.rst#ip-allocation",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -628,7 +628,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/kubernetes/bandwidth-manager.rst#bandwidth-manager",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -694,7 +694,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "overview/component-overview.rst#cilium",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -756,7 +756,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "overview/component-overview.rst#cilium",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -813,7 +813,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/concepts/ipam/cluster-pool-to-multi-pool.rst#practical-example",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -874,7 +874,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/kubernetes/bandwidth-manager.rst#bandwidth-manager",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -940,7 +940,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "overview/component-overview.rst#hubble",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1002,7 +1002,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/kubernetes/kubeproxy-free.rst#annotation-based-load-balancing-weight",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1064,7 +1064,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/concepts/ipam/azure.rst#required-privileges",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1121,7 +1121,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/kubernetes/bandwidth-manager.rst#bandwidth-manager",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1182,7 +1182,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/concepts/ipam/cluster-pool-to-multi-pool.rst#practical-example",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1243,7 +1243,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/concepts/ipam/multi-pool.rst#updating-existing-ciliumpodippools",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1309,7 +1309,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/kubernetes/ciliumendpointslice.rst#ciliumendpointslice",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1366,7 +1366,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/concepts/ipam/cluster-pool-to-multi-pool.rst#practical-example",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1427,7 +1427,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/kubernetes/bandwidth-manager.rst#bandwidth-manager",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1488,7 +1488,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/concepts/ipam/cluster-pool-to-multi-pool.rst#practical-example",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1554,7 +1554,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/kubernetes/policy.rst#ciliumnetworkpolicy",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1611,7 +1611,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/egress-gateway/egress-gateway-troubleshooting.rst#example-scenario",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1672,7 +1672,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/egress-gateway/egress-gateway-troubleshooting.rst#example-scenario",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1733,7 +1733,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/egress-gateway/egress-gateway-troubleshooting.rst#example-scenario",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1794,7 +1794,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/clustermesh/eks-clustermesh-prep.rst#install-cluster-one",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1855,7 +1855,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/clustermesh/eks-clustermesh-prep.rst#install-cluster-one",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1921,7 +1921,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/clustermesh/load-balancing.rst#load-balancing-service-discovery",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1978,7 +1978,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/ebpf/intro.rst#introduction",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2039,7 +2039,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/ebpf/intro.rst#introduction",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2100,7 +2100,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/ebpf/intro.rst#introduction",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2166,7 +2166,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "operations/troubleshooting.rst#understanding-etcd-status",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2228,7 +2228,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "operations/performance/benchmark.rst#introduction",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2290,7 +2290,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "gettingstarted/terminology.rst#identity-management-in-the-cluster",
-        "createdAt": "2026-11-08T02:09:22.355Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2352,7 +2352,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "operations/performance/benchmark.rst#introduction",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2409,7 +2409,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "operations/troubleshooting_servicemesh.rst#connectivity-troubleshooting",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2470,7 +2470,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "operations/troubleshooting_servicemesh.rst#connectivity-troubleshooting",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2531,7 +2531,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "operations/troubleshooting_servicemesh.rst#connectivity-troubleshooting",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2597,7 +2597,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "operations/troubleshooting.rst#single-node-bugtool",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2659,7 +2659,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "operations/troubleshooting.rst#observing-flows-with-hubble-relay",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2716,7 +2716,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/aws.rst#deploy-a-demo-application",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2782,7 +2782,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/policy/layer7.rst#http",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2844,7 +2844,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/policy/layer7.rst#http",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2906,7 +2906,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/policy/intro.rst#rule-basics",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2968,7 +2968,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/policy/intro.rst#rule-basics",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -3025,7 +3025,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/aws.rst#deploy-a-demo-application",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -3091,7 +3091,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/policy/intro.rst#rule-basics",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -3148,7 +3148,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/network/encryption-ipsec.rst#troubleshooting",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -3209,7 +3209,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/network/encryption.rst#egress-traffic-to-not-yet-discovered-remote-endpoints-may-be-unencrypted",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -3270,7 +3270,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/network/encryption.rst#egress-traffic-to-not-yet-discovered-remote-endpoints-may-be-unencrypted",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -3331,7 +3331,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/network/encryption.rst#egress-traffic-to-not-yet-discovered-remote-endpoints-may-be-unencrypted",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -3397,7 +3397,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/policy/intro.rst#rule-basics",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -3454,7 +3454,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/aws.rst#deploy-a-demo-application",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -3520,7 +3520,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/network/encryption-wireguard.rst#wireguard-transparent-encryption",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -3582,7 +3582,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/policy/intro.rst#policy-enforcement-modes",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -3644,7 +3644,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/policy/intro.rst#policy-enforcement-modes",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -3701,7 +3701,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/network/encryption.rst#egress-traffic-to-not-yet-discovered-remote-endpoints-may-be-unencrypted",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -3762,7 +3762,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/aws.rst#deploy-a-demo-application",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -3823,7 +3823,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/network/encryption.rst#egress-traffic-to-not-yet-discovered-remote-endpoints-may-be-unencrypted",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -3889,7 +3889,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/policy/layer7.rst#http",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -3951,7 +3951,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/network/encryption-ipsec.rst#troubleshooting",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -4008,7 +4008,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "observability/hubble/configuration/tls.rst#validating-the-installation",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -4069,7 +4069,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "observability/metrics.rst#context-options",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -4130,7 +4130,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "observability/hubble/configuration/tls.rst#validating-the-installation",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -4191,7 +4191,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/ingress-reference.rst#ciliums-ingress-config-and-ciliumnetworkpolicy",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -4252,7 +4252,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/ingress-reference.rst#externaltrafficpolicy-for-loadbalancer-or-nodeport-services",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -4313,7 +4313,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/ingress-reference.rst#ciliums-ingress-config-and-ciliumnetworkpolicy",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -4374,7 +4374,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/ingress-reference.rst#externaltrafficpolicy-for-loadbalancer-or-nodeport-services",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -4435,7 +4435,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/envoy-traffic-shifting.rst#apply-weight-based-routing",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -4496,7 +4496,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/gateway-api/troubleshooting.rst#checking-resources",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -4557,7 +4557,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/envoy-traffic-shifting.rst#apply-weight-based-routing",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -4618,7 +4618,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/ingress.rst#ingress-path-types-and-precedence",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -4679,7 +4679,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/mutual-authentication/mutual-authentication-example.rst#mutual-authentication-example",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -4740,7 +4740,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/envoy-traffic-shifting.rst#apply-weight-based-routing",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -4801,7 +4801,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/gateway-api/installation.rst#installation",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -4862,7 +4862,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/ingress-to-gateway/ingress-to-gateway.rst#benefits-of-the-gateway-api",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -4923,7 +4923,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/envoy-circuit-breaker.rst#tripping-envoy-circuit-breaker",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -4984,7 +4984,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/mutual-authentication/mutual-authentication-example.rst#mutual-authentication-example",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -5045,7 +5045,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/ingress-reference.rst#ciliums-ingress-config-and-ciliumnetworkpolicy",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -5106,7 +5106,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/ingress-reference.rst#externaltrafficpolicy-for-loadbalancer-or-nodeport-services",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -5167,7 +5167,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/mutual-authentication/mutual-authentication-example.rst#mutual-authentication-example",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -5228,7 +5228,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/gateway-api/host-network-mode.rst#host-network-mode",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -5289,7 +5289,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/gateway-api/host-network-mode.rst#host-network-mode",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -5350,7 +5350,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/ingress-to-gateway/ingress-to-gateway.rst#benefits-of-the-gateway-api",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -5411,7 +5411,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/envoy-traffic-shifting.rst#apply-weight-based-routing",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -5472,7 +5472,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/default-deny-ingress-policy.rst#default-deny-ingress-policy",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -5533,7 +5533,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/default-deny-ingress-policy.rst#default-deny-ingress-policy",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -5594,7 +5594,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/gateway-api/installation.rst#installation",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -5655,7 +5655,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/default-deny-ingress-policy.rst#default-deny-ingress-policy",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -5716,7 +5716,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/gateway-api/troubleshooting.rst#checking-resources",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -5777,7 +5777,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/envoy-circuit-breaker.rst#tripping-envoy-circuit-breaker",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -5838,7 +5838,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/gateway-api/host-network-mode.rst#host-network-mode",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -5899,7 +5899,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/ingress.rst#ingress-path-types-and-precedence",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -5960,7 +5960,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/gateway-api/installation.rst#installation",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -6021,7 +6021,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/gateway-api/installation.rst#installation",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -6082,7 +6082,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/mutual-authentication/mutual-authentication-example.rst#mutual-authentication-example",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -6143,7 +6143,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/gateway-api/troubleshooting.rst#checking-resources",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -6204,7 +6204,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/ingress-reference.rst#externaltrafficpolicy-for-loadbalancer-or-nodeport-services",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -6265,7 +6265,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/ingress.rst#ingress-path-types-and-precedence",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -6326,7 +6326,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/ingress-reference.rst#source-ip-visibility",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -6387,7 +6387,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/ingress-to-gateway/ingress-to-gateway.rst#benefits-of-the-gateway-api",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -6448,7 +6448,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/gateway-api/host-network-mode.rst#host-network-mode",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -6509,7 +6509,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/ingress-reference.rst#source-ip-visibility",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -6570,7 +6570,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/ingress-reference.rst#source-ip-visibility",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -6631,7 +6631,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/ingress-reference.rst#ciliums-ingress-config-and-ciliumnetworkpolicy",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -6692,7 +6692,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/ingress-reference.rst#source-ip-visibility",
-        "createdAt": "2026-11-08T02:09:22.356Z",
+        "createdAt": "2026-11-08T02:10:53.316Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,

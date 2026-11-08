@@ -120,3 +120,85 @@ test('parseExam pairs questions with the answer key', () => {
 test('parseExam refuses a document with no answer key', () => {
   assert.throws(() => parseExam('1. **A question?**\n - [ ] **A)** x'), /answer key/);
 });
+
+
+// --- entailment -------------------------------------------------------------
+
+const { checkEntailment } = await import(path.join(ROOT, 'tools', 'entailment.mjs'));
+
+const SOURCE = {
+  text: 'The socket operations hook attaches to socket system calls and can enforce policy for connected sockets. It is the earliest point at which a connection can be allowed or denied in the datapath for that specific use.',
+};
+
+function q(options, answer) {
+  return { options: options.map((text, i) => ({ id: 'abcde'[i], text })), answer };
+}
+
+test('a one-word answer present in the citation is accepted', () => {
+  // Rejecting these as "answer-too-short" emptied the eBPF domain, where most
+  // correct answers are single terms.
+  const result = checkEntailment(
+    q(['socket', 'a userspace proxy in the host namespace', 'the cloud load balancer health probe', 'an ingress qdisc filter'], 'a'),
+    SOURCE,
+  );
+  assert.equal(result.ok, true, JSON.stringify(result));
+});
+
+test('a one-word answer absent from the citation is rejected', () => {
+  const result = checkEntailment(
+    q(['geneve', 'a userspace proxy in the host namespace', 'the cloud load balancer health probe', 'an ingress qdisc filter'], 'a'),
+    SOURCE,
+  );
+  assert.equal(result.reason, 'answer-not-in-citation');
+});
+
+test('a short answer only matched as a substring is rejected', () => {
+  const source = { text: 'The mapping table is populated by the agent and reflects every endpoint identity that exists.' };
+  const result = checkEntailment(
+    q(['map', 'a userspace proxy in the host namespace', 'the cloud load balancer health probe', 'an ingress qdisc filter'], 'a'),
+    source,
+  );
+  assert.equal(result.reason, 'answer-not-in-citation', '"map" must not be satisfied by "mapping"');
+});
+
+test('a short answer contained in a distractor is rejected', () => {
+  const result = checkEntailment(
+    q(['socket', 'a socket operations hook in the host', 'the cloud load balancer health probe', 'an ingress qdisc filter'], 'a'),
+    SOURCE,
+  );
+  assert.equal(result.reason, 'answer-appears-in-distractor');
+});
+
+test('a long answer sharing most of its words with the citation is accepted', () => {
+  const result = checkEntailment(
+    q([ 'The socket operations hook attaches to socket system calls and enforces policy', 'a userspace proxy in the host namespace', 'the cloud load balancer health probe', 'an ingress qdisc filter'], 'a'),
+    SOURCE,
+  );
+  assert.equal(result.ok, true, JSON.stringify(result));
+});
+
+test('a long answer sharing little with the citation is rejected', () => {
+  const result = checkEntailment(
+    q(['Packets are duplicated across every node in the cluster by the operator', 'a userspace proxy in the host namespace', 'the cloud load balancer health probe', 'an ingress qdisc filter'], 'a'),
+    SOURCE,
+  );
+  assert.match(result.reason, /^answer-not-in-citation/);
+});
+
+test('every option present in the citation is rejected as unanswerable', () => {
+  // A passage that states all four options is not a question: whichever one is
+  // marked correct, the reader cannot tell it apart from the others.
+  const source = {
+    text: 'The agent can be put into the always mode, the never mode, the default mode or the disabled mode of policy enforcement for endpoints.',
+  };
+  const result = checkEntailment(
+    q([
+      'the always mode',
+      'the never mode',
+      'the default mode',
+      'the disabled mode',
+    ], 'a'),
+    source,
+  );
+  assert.equal(result.reason, 'all-options-in-citation');
+});

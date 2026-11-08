@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T02:09:22.469Z",
+  "generatedAt": "2026-11-08T02:10:53.425Z",
   "counts": {
     "total": 30,
     "byGate": {
@@ -61,7 +61,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/concepts/routing.rst#advantages-of-the-model",
-        "createdAt": "2026-11-08T02:09:22.356Z"
+        "createdAt": "2026-11-08T02:10:53.316Z"
       },
       "schemaVersion": 1,
       "rejection": {
@@ -121,7 +121,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/concepts/routing.rst#advantages-of-the-model",
-        "createdAt": "2026-11-08T02:09:22.356Z"
+        "createdAt": "2026-11-08T02:10:53.316Z"
       },
       "schemaVersion": 1,
       "rejection": {
@@ -181,7 +181,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/concepts/routing.rst#advantages-of-the-model",
-        "createdAt": "2026-11-08T02:09:22.356Z"
+        "createdAt": "2026-11-08T02:10:53.316Z"
       },
       "schemaVersion": 1,
       "rejection": {
@@ -241,7 +241,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "operations/troubleshooting.rst#recovery-behavior",
-        "createdAt": "2026-11-08T02:09:22.356Z"
+        "createdAt": "2026-11-08T02:10:53.316Z"
       },
       "schemaVersion": 1,
       "rejection": {
@@ -301,7 +301,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "overview/component-overview.rst#hubble",
-        "createdAt": "2026-11-08T02:09:22.356Z"
+        "createdAt": "2026-11-08T02:10:53.316Z"
       },
       "schemaVersion": 1,
       "rejection": {
@@ -361,7 +361,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "overview/component-overview.rst#hubble",
-        "createdAt": "2026-11-08T02:09:22.356Z"
+        "createdAt": "2026-11-08T02:10:53.316Z"
       },
       "schemaVersion": 1,
       "rejection": {
@@ -421,7 +421,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/policy/layer4.rst#example-tls-sni",
-        "createdAt": "2026-11-08T02:09:22.356Z"
+        "createdAt": "2026-11-08T02:10:53.316Z"
       },
       "schemaVersion": 1,
       "rejection": {
@@ -481,7 +481,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/policy/layer7.rst#http",
-        "createdAt": "2026-11-08T02:09:22.356Z"
+        "createdAt": "2026-11-08T02:10:53.316Z"
       },
       "schemaVersion": 1,
       "rejection": {
@@ -536,7 +536,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/envoy-circuit-breaker.rst#tripping-envoy-circuit-breaker",
-        "createdAt": "2026-11-08T02:09:22.356Z"
+        "createdAt": "2026-11-08T02:10:53.316Z"
       },
       "id": "94c78533833e7612",
       "domain": "service-mesh",
@@ -595,7 +595,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/envoy-circuit-breaker.rst#tripping-envoy-circuit-breaker",
-        "createdAt": "2026-11-08T02:09:22.356Z"
+        "createdAt": "2026-11-08T02:10:53.316Z"
       },
       "id": "f5aef8e4f5ce0e18",
       "domain": "service-mesh",
@@ -654,7 +654,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/default-deny-ingress-policy.rst#default-deny-ingress-policy",
-        "createdAt": "2026-11-08T02:09:22.356Z"
+        "createdAt": "2026-11-08T02:10:53.316Z"
       },
       "id": "3609a0ba0fa39d0e",
       "domain": "service-mesh",
@@ -713,7 +713,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/gateway-api/troubleshooting.rst#checking-resources",
-        "createdAt": "2026-11-08T02:09:22.356Z"
+        "createdAt": "2026-11-08T02:10:53.316Z"
       },
       "id": "b7886d4a75fd3c0c",
       "domain": "service-mesh",
@@ -772,7 +772,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/gateway-api/troubleshooting.rst#checking-resources",
-        "createdAt": "2026-11-08T02:09:22.356Z"
+        "createdAt": "2026-11-08T02:10:53.316Z"
       },
       "id": "f825da87d45bb12c",
       "domain": "service-mesh",
@@ -831,7 +831,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/ingress-to-gateway/ingress-to-gateway.rst#benefits-of-the-gateway-api",
-        "createdAt": "2026-11-08T02:09:22.356Z"
+        "createdAt": "2026-11-08T02:10:53.316Z"
       },
       "id": "c3e17c171cb70ede",
       "domain": "service-mesh",
@@ -890,7 +890,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/ingress.rst#ingress-path-types-and-precedence",
-        "createdAt": "2026-11-08T02:09:22.356Z"
+        "createdAt": "2026-11-08T02:10:53.316Z"
       },
       "id": "e1b3928fd82ddde1",
       "domain": "service-mesh",
@@ -949,7 +949,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/aws.rst#deploy-a-demo-application",
-        "createdAt": "2026-11-08T02:09:22.356Z"
+        "createdAt": "2026-11-08T02:10:53.316Z"
       },
       "id": "ef723ee8992971a8",
       "domain": "network-policy",
@@ -1008,7 +1008,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/network/encryption-ipsec.rst#troubleshooting",
-        "createdAt": "2026-11-08T02:09:22.356Z"
+        "createdAt": "2026-11-08T02:10:53.316Z"
       },
       "id": "5e50bf95f2878582",
       "domain": "network-policy",
@@ -1067,7 +1067,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/ebpf/intro.rst#introduction",
-        "createdAt": "2026-11-08T02:09:22.356Z"
+        "createdAt": "2026-11-08T02:10:53.316Z"
       },
       "id": "3fe78a0b6c28c9df",
       "domain": "ebpf",
@@ -1126,7 +1126,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/ebpf/intro.rst#introduction",
-        "createdAt": "2026-11-08T02:09:22.356Z"
+        "createdAt": "2026-11-08T02:10:53.316Z"
       },
       "id": "498f2bdac51d0abb",
       "domain": "ebpf",
@@ -1185,7 +1185,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/kubernetes/bandwidth-manager.rst#bandwidth-manager",
-        "createdAt": "2026-11-08T02:09:22.356Z"
+        "createdAt": "2026-11-08T02:10:53.316Z"
       },
       "id": "e7186126edf14379",
       "domain": "architecture",
@@ -1244,7 +1244,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/envoy-circuit-breaker.rst#tripping-envoy-circuit-breaker",
-        "createdAt": "2026-11-08T02:09:22.356Z"
+        "createdAt": "2026-11-08T02:10:53.316Z"
       },
       "id": "c3914c0dd31bb4cb",
       "domain": "service-mesh",
@@ -1303,7 +1303,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "operations/troubleshooting_servicemesh.rst#connectivity-troubleshooting",
-        "createdAt": "2026-11-08T02:09:22.356Z"
+        "createdAt": "2026-11-08T02:10:53.316Z"
       },
       "id": "3ab1b7b41ce1c1ae",
       "domain": "installation",
@@ -1362,7 +1362,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "operations/troubleshooting_servicemesh.rst#connectivity-troubleshooting",
-        "createdAt": "2026-11-08T02:09:22.356Z"
+        "createdAt": "2026-11-08T02:10:53.316Z"
       },
       "id": "659e9378095ccbe1",
       "domain": "installation",
@@ -1421,7 +1421,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/ebpf/maps.rst#ebpf-maps",
-        "createdAt": "2026-11-08T02:09:22.356Z"
+        "createdAt": "2026-11-08T02:10:53.316Z"
       },
       "id": "b82db977d1b5c9b6",
       "domain": "ebpf",
@@ -1480,7 +1480,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/ebpf/maps.rst#ebpf-maps",
-        "createdAt": "2026-11-08T02:09:22.356Z"
+        "createdAt": "2026-11-08T02:10:53.316Z"
       },
       "id": "b2c26a9643f43f83",
       "domain": "ebpf",
@@ -1539,7 +1539,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/ebpf/maps.rst#ebpf-maps",
-        "createdAt": "2026-11-08T02:09:22.356Z"
+        "createdAt": "2026-11-08T02:10:53.316Z"
       },
       "id": "1926eda389a76d11",
       "domain": "ebpf",
@@ -1598,7 +1598,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/ebpf/maps.rst#ebpf-maps",
-        "createdAt": "2026-11-08T02:09:22.356Z"
+        "createdAt": "2026-11-08T02:10:53.316Z"
       },
       "id": "5a67aee14817c259",
       "domain": "ebpf",
@@ -1657,7 +1657,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/clustermesh/eks-clustermesh-prep.rst#install-cluster-one",
-        "createdAt": "2026-11-08T02:09:22.356Z"
+        "createdAt": "2026-11-08T02:10:53.316Z"
       },
       "id": "66826213a43f00e4",
       "domain": "cluster-mesh",
@@ -1716,7 +1716,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/clustermesh/eks-clustermesh-prep.rst#install-cluster-one",
-        "createdAt": "2026-11-08T02:09:22.356Z"
+        "createdAt": "2026-11-08T02:10:53.316Z"
       },
       "id": "5cd1bf60f83841eb",
       "domain": "cluster-mesh",
@@ -1775,7 +1775,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "observability/metrics.rst#context-options",
-        "createdAt": "2026-11-08T02:09:22.356Z"
+        "createdAt": "2026-11-08T02:10:53.316Z"
       },
       "id": "0406c752e9069e48",
       "domain": "observability",

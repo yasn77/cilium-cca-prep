@@ -23,6 +23,16 @@ import { docs, includePaths, excludePaths } from '../tools/config.mjs';
 const execFileAsync = promisify(execFile);
 const ROOT = path.resolve(import.meta.dirname, '..');
 const DOCS_DIR = path.join(ROOT, 'corpus', 'docs');
+/**
+ * Example manifests.
+ *
+ * The docs pull policy and demo YAML in with `.. literalinclude::`, pointing at
+ * the repository's own examples/ directory rather than inlining it. Without
+ * those files, a section about an L7 policy contains the prose and not the
+ * policy — which is why a generated question referred to "the L7 policy" that
+ * neither the reader nor the generator ever saw.
+ */
+const EXAMPLES_DIR = path.join(ROOT, 'corpus', 'examples');
 const SOURCES = path.join(ROOT, 'data', 'sources.json');
 const TMP = path.join(ROOT, 'tmp');
 
@@ -81,17 +91,14 @@ async function fetchViaTarball() {
   const extractDir = path.join(TMP, 'cilium-docs');
   await rm(extractDir, { recursive: true, force: true });
   await mkdir(extractDir, { recursive: true });
-  log('extracting Documentation/**/*.rst');
-  await execFileAsync('tar', [
-    '-xzf',
-    archive,
-    '-C',
-    extractDir,
-    '--wildcards',
-    '*/Documentation/*.rst',
-  ]);
+  // Extract two whole directories rather than wildcard patterns: GNU tar exits
+  // non-zero when a wildcard matches nothing, which silently pushed the whole
+  // run onto the fallback route and lost the example manifests.
+  const listing = await execFileAsync('tar', ['-tzf', archive], { maxBuffer: 64 * 1024 * 1024 });
+  const top = listing.stdout.split('\n')[0].split('/')[0];
+  log(`extracting ${top}/Documentation and ${top}/examples`);
+  await execFileAsync('tar', ['-xzf', archive, '-C', extractDir, `${top}/Documentation`, `${top}/examples`]);
 
-  const [top] = await readdir(extractDir);
   const docRoot = path.join(extractDir, top, 'Documentation');
   await rm(DOCS_DIR, { recursive: true, force: true });
   await mkdir(DOCS_DIR, { recursive: true });
@@ -111,7 +118,44 @@ async function fetchViaTarball() {
     }
   }
   await walk(docRoot, '');
-  return { written, route: 'tarball' };
+
+  // Example manifests, keyed by their path under the repository root so a
+  // literalinclude can be resolved without guessing.
+  await rm(EXAMPLES_DIR, { recursive: true, force: true });
+  await mkdir(EXAMPLES_DIR, { recursive: true });
+  const examplesRoot = path.join(extractDir, top, 'examples');
+  let exampleCount = 0;
+  async function walkExamples(dir, prefix) {
+    let entries;
+    try {
+      entries = await readdir(dir, { withFileTypes: true });
+    } catch {
+      return;
+    }
+    for (const entry of entries) {
+      const rel = prefix ? `${prefix}/${entry.name}` : entry.name;
+      if (entry.isDirectory()) {
+        await walkExamples(path.join(dir, entry.name), rel);
+      } else if (/\.(yaml|yml|json)$/.test(entry.name)) {
+        // The tarball contains a few symlinks whose targets are not included, so
+        // a failed read is expected rather than fatal.
+        let body;
+        try {
+          body = await readFile(path.join(dir, entry.name));
+        } catch {
+          continue;
+        }
+        const dest = path.join(EXAMPLES_DIR, rel);
+        await mkdir(path.dirname(dest), { recursive: true });
+        await writeFile(dest, body);
+        exampleCount += 1;
+      }
+    }
+  }
+  await walkExamples(examplesRoot, '');
+  log(`wrote ${exampleCount} example manifests`);
+
+  return { written, route: 'tarball', exampleCount };
 }
 
 async function fetchViaSources(rstList) {
@@ -198,6 +242,7 @@ async function main() {
       fetched_at: new Date().toISOString(),
       file_count: files,
       byte_count: bytes,
+      example_count: result.exampleCount ?? 0,
       files: result.written.sort(),
     },
   };

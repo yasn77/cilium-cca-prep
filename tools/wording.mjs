@@ -108,28 +108,43 @@ function showsReferent(stem) {
 
 /**
  * Returns a reason string when the stem cannot stand alone, otherwise null.
+ *
+ * `hasAttachment` changes the rule for definite references, not for meta
+ * references. A real exam item does show the policy and then ask about "the
+ * policy" — that is normal, and the CCA UI has the room for it. What it never
+ * does is say "the excerpt" or "as shown above", because the candidate is not
+ * being examined on their memory of this app.
+ *
+ * So a reference is unbound only when there is nothing in the item to bind it:
+ * not in the stem, and not in an attachment.
  */
-export function checkWording(stem) {
+export function checkWording(stem, { hasAttachment = false } = {}) {
   if (typeof stem !== 'string' || !stem.trim()) return 'stem-empty';
 
-  // Meta references are wrong whatever else the stem contains: an exam item
+  // Meta references are wrong whatever else the item contains: an exam item
   // should not talk about its own source.
   for (const re of META_PATTERNS) {
     if (re.test(stem)) return 'meta-reference-to-source';
   }
 
   const ref = findUnboundReference(stem);
-  if (ref && !showsReferent(stem)) return `unbound-reference:${ref.toLowerCase()}`;
+  if (ref && !hasAttachment && !showsReferent(stem)) return `unbound-reference:${ref.toLowerCase()}`;
 
   return null;
 }
 
-/** Same check across every option, because a distractor can carry the reference. */
-export function checkOptionWording(options) {
+/**
+ * Same check across every option, because a distractor can carry the reference.
+ *
+ * Options do not get the attachment exemption: an option that says "the policy"
+ * is a claim about a policy that must already be visible, and if it is not the
+ * distractor is unreadable whatever the stem shows.
+ */
+export function checkOptionWording(options, { hasAttachment = false } = {}) {
   for (const o of options ?? []) {
     const text = String(o.text ?? '');
     const ref = findUnboundReference(text);
-    if (ref && !showsReferent(text)) return `option-unbound-reference:${o.id}:${ref.toLowerCase()}`;
+    if (ref && !hasAttachment && !showsReferent(text)) return `option-unbound-reference:${o.id}:${ref.toLowerCase()}`;
   }
   return null;
 }

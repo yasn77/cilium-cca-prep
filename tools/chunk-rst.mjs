@@ -26,7 +26,79 @@ import {
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const DOCS_DIR = path.join(ROOT, 'corpus', 'docs');
+const EXAMPLES_DIR = path.join(ROOT, 'corpus', 'examples');
 const OUT = path.join(ROOT, 'corpus', 'sections.json');
+
+/**
+ * Inline `.. literalinclude::` targets.
+ *
+ * The docs keep their policy and demo manifests in the repository's examples/
+ * directory and pull them in at build time. Sphinx renders the content, but the
+ * rst on disk has only the directive — so a section about an L7 policy contained
+ * the prose and not the policy. A generated question then referred to "the L7
+ * policy" that neither the reader nor the generator could see.
+ *
+ * Resolving it here means the manifest is inside the section text, where the
+ * citation, the attachment and the grounding check can all reach it.
+ */
+async function inlineLiteralincludes(relFile, text) {
+  const dir = path.dirname(relFile);
+  const lines = text.split('\n');
+  const out = [];
+
+  for (let i = 0; i < lines.length; i += 1) {
+    const m = lines[i].match(/^(\s*)\.\.\s+literalinclude::\s+(\S+)\s*$/);
+    if (!m) {
+      out.push(lines[i]);
+      continue;
+    }
+    const indent = m[1];
+    const target = m[2];
+
+    // Options belong to the directive and are consumed, not printed.
+    let j = i + 1;
+    let language = '';
+    while (j < lines.length && /^\s+:[a-z-]+:/.test(lines[j])) {
+      const opt = lines[j].match(/^\s+:([a-z-]+):\s*(.*)$/);
+      if (opt && opt[1] === 'language') language = opt[2].trim();
+      j += 1;
+    }
+
+    // Resolve relative to the rst, then take the path from the repository root.
+    // `gettingstarted/demo.rst` + `../../examples/minikube/x.yaml` is
+    // `examples/minikube/x.yaml`.
+    // EXAMPLES_DIR already ends in examples/, so the repository-root prefix is
+    // stripped here rather than joined twice.
+    const resolved = path
+      .normalize(path.join(dir, target))
+      .replace(/^(\.\.\/)+/, '')
+      .replace(/^examples\//, '');
+    let body = null;
+    try {
+      body = await readFile(path.join(EXAMPLES_DIR, resolved), 'utf8');
+    } catch {
+      body = null;
+    }
+
+    if (body === null) {
+      out.push(`${indent}.. note::`);
+      out.push('');
+      out.push(`${indent}   Manifest not available: ${resolved}`);
+      i = j - 1;
+      continue;
+    }
+
+    out.push(`${indent}.. code-block:: ${language || 'text'}`);
+    out.push('');
+    for (const line of body.replace(/\s+$/, '').split('\n')) {
+      out.push(line.trim() === '' ? '' : `   ${line}`);
+    }
+    out.push('');
+    i = j - 1;
+  }
+
+  return out.join('\n');
+}
 
 const ULINE = /^([=\-~^"'`#*+:])\1{2,}\s*$/;
 
@@ -378,8 +450,11 @@ async function main() {
   // Sphinx builds one anchor namespace per document, so dedupe is per file.
   const seenAnchors = new Map();
 
+  let inlinedIncludes = 0;
   for (const rel of files) {
-    const raw = await readFile(path.join(DOCS_DIR, rel), 'utf8');
+    const source = await readFile(path.join(DOCS_DIR, rel), 'utf8');
+    const raw = await inlineLiteralincludes(rel, source);
+    if (raw !== source) inlinedIncludes += 1;
     const parsed = parseFile(rel, raw);
 
     for (const s of parsed) {
@@ -441,6 +516,7 @@ async function main() {
     generatedAt: new Date().toISOString(),
     counts: {
       files: files.length,
+      filesWithIncludes: inlinedIncludes,
       sections: kept.length,
       words: kept.reduce((a, s) => a + s.wordCount, 0),
       byDomain,

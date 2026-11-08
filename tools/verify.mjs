@@ -36,6 +36,7 @@ import {
 import { checkEntailment as checkEntailmentImpl } from './entailment.mjs';
 import { mergeVerdicts, judgeSource as judgeSourceOf } from './verdicts.mjs';
 import { checkWording } from './wording.mjs';
+import { checkAttachments } from './attachments.mjs';
 
 const SECTIONS = path.join(ROOT, 'corpus', 'sections.json');
 const TEMPLATES = path.join(ROOT, 'candidates', 'templates.jsonl');
@@ -74,7 +75,9 @@ function checkShape(q) {
   if (!q.stem || q.stem.length < 20) return 'stem-too-short';
   // A question that refers to material the reader cannot see is unanswerable,
   // however well it is judged. Both quality judges passed one that did.
-  const wording = checkWording(q.stem);
+  // An attachment counts as showing it, which is how a real exam item works.
+  const hasAttachment = Array.isArray(q.attachments) && q.attachments.length > 0;
+  const wording = checkWording(q.stem, { hasAttachment });
   if (wording) return wording;
   if (!Array.isArray(q.options) || q.options.length < 4) return 'too-few-options';
   if (new Set(q.options.map((o) => o.id)).size !== q.options.length) return 'duplicate-option-ids';
@@ -140,7 +143,7 @@ async function main() {
   const corpus = [];
   const quarantine = [];
   const seenStems = [];
-  const stats = { anchor: 0, quote: 0, entail: 0, judge: 0, unjudged: 0, shape: 0, duplicate: 0, accepted: 0 };
+  const stats = { anchor: 0, quote: 0, attachment: 0, entail: 0, judge: 0, unjudged: 0, shape: 0, duplicate: 0, accepted: 0 };
 
   for (const q of all) {
     let reason = checkShape(q);
@@ -164,7 +167,15 @@ async function main() {
       continue;
     }
 
-    const entail = checkEntailmentImpl(q, sections.get(`${q.citations[0].file}#${q.citations[0].anchor}`));
+    const citedSection = sections.get(`${q.citations[0].file}#${q.citations[0].anchor}`);
+    const attachmentProblem = checkAttachments(q, citedSection ?? null);
+    if (attachmentProblem) {
+      quarantine.push({ ...q, rejection: { gate: 'attachment', reason: attachmentProblem } });
+      stats.attachment += 1;
+      continue;
+    }
+
+    const entail = checkEntailmentImpl(q, citedSection);
     if (!entail.ok) {
       quarantine.push({ ...q, rejection: { gate: 'entail', reason: entail.reason } });
       stats.entail += 1;

@@ -264,6 +264,7 @@ function renderQuestion() {
     ]),
     meta,
     el('div', { class: 'q-stem' }, [richText(q.stem)]),
+    ...attachmentBlocks(q.attachments),
     optionsWrap,
     feedbackWrap,
     el('div', { style: 'margin-top:16px' }, [nextBtn]),

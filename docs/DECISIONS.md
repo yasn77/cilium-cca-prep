@@ -93,6 +93,40 @@ imply precision the model does not have.
 
 ## Identity and state
 
+### A question may carry the material it asks about
+
+**Decision.** The data model has an optional `attachments` array holding a
+manifest, command output, passage or diagram. An attachment body must appear in
+the cited section.
+
+**Why.** A question that says "after this policy is applied, why is the request
+dropped?" is a real exam item — the CCA interface shows the policy. Rejecting
+those as unanswerable threw away a whole legitimate question type. What is *not*
+legitimate is a definite reference with nothing shown, so the rule is
+"show it or do not refer to it", not "never refer to it".
+
+**Ruled out.** Rejecting all definite references. That cost 251 questions and
+removed exactly the kind of item the exam sets.
+
+### `literalinclude` is resolved at ingest
+
+**Decision.** The chunker pulls `.. literalinclude::` targets from the
+repository's `examples/` directory into the section text.
+
+**Why.** The docs keep policy YAML in separate files and pull it in at build
+time. A section about an L7 policy therefore contained the prose and not the
+policy, which is where the unanswerable question came from in the first place.
+37 files use includes; 167 example manifests are now fetched.
+
+### One answer per question
+
+**Decision.** Single select only. No multi-select items.
+
+**Why.** The Linux Foundation's multiple choice interface is documented at
+`ExamUI: Multiple Choice Exams`, whose screenshot shows circular radio buttons —
+one selection. There is no checkbox affordance for multiple answers. Multi-select
+was ruled out on Q5 for validation reasons; this is the stronger reason.
+
 ### Question ids are not derived from question text
 
 **Decision.** `sha256(file | anchor | ordinal)`, truncated to 16 hex characters.

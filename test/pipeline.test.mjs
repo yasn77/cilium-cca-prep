@@ -311,3 +311,77 @@ test('a distractor carrying an unbound reference is caught too', () => {
   ];
   assert.match(checkOptionWording(options), /option-unbound-reference:b/);
 });
+
+// --- attachments -----------------------------------------------------------
+
+const { checkAttachments } = await import(path.join(ROOT, 'tools', 'attachments.mjs'));
+
+const POLICY_SECTION = {
+  text: [
+    'Here is an example policy file that extends our original policy.',
+    '```yaml',
+    'apiVersion: "cilium.io/v2"',
+    'kind: CiliumNetworkPolicy',
+    'metadata:',
+    '  name: "rule1"',
+    'spec:',
+    '  endpointSelector:',
+    '    matchLabels:',
+    '      org: empire',
+    '```',
+  ].join('\n'),
+};
+
+test('a manifest that appears in the citation is accepted', () => {
+  const q = {
+    attachments: [
+      {
+        kind: 'manifest',
+        title: 'The policy under test',
+        language: 'yaml',
+        body: 'apiVersion: "cilium.io/v2"\nkind: CiliumNetworkPolicy\nmetadata:\n  name: "rule1"',
+      },
+    ],
+  };
+  assert.equal(checkAttachments(q, POLICY_SECTION), null);
+});
+
+test('an invented manifest is rejected', () => {
+  const q = {
+    attachments: [
+      {
+        kind: 'manifest',
+        title: 'The policy under test',
+        language: 'yaml',
+        body: 'apiVersion: "cilium.io/v2"\nkind: CiliumNetworkPolicy\nmetadata:\n  name: "rule2"',
+      },
+    ],
+  };
+  assert.match(checkAttachments(q, POLICY_SECTION), /not in cited section/);
+});
+
+test('a question with no attachments is fine', () => {
+  assert.equal(checkAttachments({}, POLICY_SECTION), null);
+});
+
+test('a diagram is accepted on its declaration alone', () => {
+  const q = { attachments: [{ kind: 'diagram', title: 'The datapath' }] };
+  assert.equal(checkAttachments(q, POLICY_SECTION), null);
+});
+
+test('a malformed attachment is rejected', () => {
+  assert.match(checkAttachments({ attachments: [{ kind: 'nonsense', title: 'x' }] }, POLICY_SECTION), /bad kind/);
+  assert.match(
+    checkAttachments({ attachments: [{ kind: 'manifest', title: 'The policy', body: '' }] }, POLICY_SECTION),
+    /body too short/,
+  );
+  assert.match(checkAttachments({ attachments: 'nope' }, POLICY_SECTION), /not-array/);
+});
+
+test('an attachment lets the stem refer to the policy it shows', () => {
+  // This is the reported question's shape, done correctly: the policy is shown,
+  // so "this policy" is bound by the attachment rather than the stem.
+  const stem = 'After this policy is applied, a pod labelled app=xwing sends POST /v1/request-landing and gets no response. Why?';
+  assert.match(checkWording(stem), /^unbound-reference:/, 'without an attachment it is rejected');
+  assert.equal(checkWording(stem, { hasAttachment: true }), null, 'with an attachment it is fine');
+});

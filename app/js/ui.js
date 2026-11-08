@@ -85,6 +85,65 @@ export function toast(message) {
   toast._t = setTimeout(() => node.classList.remove('show'), 2200);
 }
 
+/**
+ * Material the question depends on: a manifest, command output, a passage or a
+ * diagram. Rendered between the stem and the options, because the reader has to
+ * see it before answering — that is how the real exam UI presents an item that
+ * shows a policy.
+ */
+export function attachmentBlock(attachment) {
+  const wrap = el('figure', {
+    class: 'attachment',
+    style:
+      'margin:0 0 16px;border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden;background:var(--bg-sunken)',
+  });
+
+  wrap.append(
+    el('figcaption', {
+      style:
+        'padding:8px 12px;font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);border-bottom:1px solid var(--line-soft)',
+      text: attachment.title,
+    }),
+  );
+
+  if (attachment.kind === 'diagram') {
+    if (attachment.src) {
+      wrap.append(
+        el('img', {
+          src: attachment.src,
+          alt: attachment.alt || attachment.title,
+          style: 'display:block;max-width:100%;height:auto',
+        }),
+      );
+    } else {
+      wrap.append(
+        el('div', { style: 'padding:12px;color:var(--fg-dim);font-size:.85rem', text: 'Diagram not available offline.' }),
+      );
+    }
+    return wrap;
+  }
+
+  if (attachment.kind === 'text') {
+    wrap.append(el('div', { style: 'padding:12px;font-size:.9rem;line-height:1.5' }, [richText(attachment.body)]));
+    return wrap;
+  }
+
+  // manifest and output: verbatim, monospaced, never reflowed.
+  wrap.append(
+    el('pre', {
+      class: 'mono',
+      style:
+        'margin:0;padding:12px;overflow-x:auto;font-size:.78rem;line-height:1.45;white-space:pre;tab-size:2',
+      text: attachment.body,
+    }),
+  );
+  return wrap;
+}
+
+export function attachmentBlocks(attachments) {
+  return (attachments ?? []).map((a) => attachmentBlock(a));
+}
+
 export function citationBlock(citation) {
   const url = citation.url || '#';
   return el('a', { class: 'citation', href: url, target: '_blank', rel: 'noreferrer noopener' }, [

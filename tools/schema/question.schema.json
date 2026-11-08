@@ -23,7 +23,10 @@
       "pattern": "^[0-9a-f]{16}$",
       "description": "Stable hash of file|anchor|ordinal. Never derived from the stem, so text edits preserve learner progress."
     },
-    "schemaVersion": { "type": "integer", "const": 1 },
+    "schemaVersion": {
+      "type": "integer",
+      "const": 1
+    },
     "domain": {
       "type": "string",
       "enum": [
@@ -37,28 +40,56 @@
         "bgp"
       ]
     },
-    "competency": { "type": ["string", "null"] },
-    "type": { "type": "string", "const": "single" },
-    "stem": { "type": "string", "minLength": 20 },
+    "competency": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "const": "single"
+    },
+    "stem": {
+      "type": "string",
+      "minLength": 20
+    },
     "options": {
       "type": "array",
       "minItems": 4,
       "maxItems": 5,
       "items": {
         "type": "object",
-        "required": ["id", "text"],
+        "required": [
+          "id",
+          "text"
+        ],
         "additionalProperties": false,
         "properties": {
-          "id": { "type": "string", "pattern": "^[a-e]$" },
-          "text": { "type": "string", "minLength": 1 }
+          "id": {
+            "type": "string",
+            "pattern": "^[a-e]$"
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          }
         }
       }
     },
-    "answer": { "type": "string", "pattern": "^[a-e]$" },
-    "explanation": { "type": "string", "minLength": 40 },
+    "answer": {
+      "type": "string",
+      "pattern": "^[a-e]$"
+    },
+    "explanation": {
+      "type": "string",
+      "minLength": 40
+    },
     "optionRationale": {
       "type": "object",
-      "additionalProperties": { "type": "string" },
+      "additionalProperties": {
+        "type": "string"
+      },
       "description": "Why each wrong option is wrong. Required for every non-answer option at verification time."
     },
     "citations": {
@@ -66,49 +97,154 @@
       "minItems": 1,
       "items": {
         "type": "object",
-        "required": ["file", "anchor", "quote"],
+        "required": [
+          "file",
+          "anchor",
+          "quote"
+        ],
         "additionalProperties": false,
         "properties": {
-          "file": { "type": "string", "pattern": "\\.rst$" },
-          "anchor": { "type": "string", "minLength": 1 },
-          "quote": { "type": "string", "minLength": 20 },
-          "title": { "type": "string" },
-          "url": { "type": "string", "format": "uri" }
+          "file": {
+            "type": "string",
+            "pattern": "\\.rst$"
+          },
+          "anchor": {
+            "type": "string",
+            "minLength": 1
+          },
+          "quote": {
+            "type": "string",
+            "minLength": 20
+          },
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          }
         }
       }
     },
     "yieldSource": {
       "type": "string",
-      "enum": ["definition", "attribute", "contrast", "scenario"]
+      "enum": [
+        "definition",
+        "attribute",
+        "contrast",
+        "scenario"
+      ]
     },
     "provenance": {
       "type": "object",
-      "required": ["docsRef", "docsSha", "createdAt"],
+      "required": [
+        "docsRef",
+        "docsSha",
+        "createdAt"
+      ],
       "additionalProperties": true,
       "properties": {
         "generator": {
           "type": "object",
-          "required": ["kind"],
+          "required": [
+            "kind"
+          ],
           "properties": {
-            "kind": { "type": "string", "enum": ["template", "llm"] },
-            "templateId": { "type": "string" },
-            "provider": { "type": "string" },
-            "model": { "type": "string" },
-            "temperature": { "type": "number" },
-            "version": { "type": "string" }
+            "kind": {
+              "type": "string",
+              "enum": [
+                "template",
+                "llm"
+              ]
+            },
+            "templateId": {
+              "type": "string"
+            },
+            "provider": {
+              "type": "string"
+            },
+            "model": {
+              "type": "string"
+            },
+            "temperature": {
+              "type": "number"
+            },
+            "version": {
+              "type": "string"
+            }
           }
         },
-        "docsRef": { "type": "string" },
-        "docsSha": { "type": "string" },
-        "sectionId": { "type": "string" },
-        "createdAt": { "type": "string", "format": "date-time" },
+        "docsRef": {
+          "type": "string"
+        },
+        "docsSha": {
+          "type": "string"
+        },
+        "sectionId": {
+          "type": "string"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
         "checks": {
           "type": "object",
           "properties": {
-            "anchorResolved": { "type": "boolean" },
-            "quoteVerbatim": { "type": "boolean" },
-            "answerEntailed": { "type": "boolean" },
-            "judgeVerdict": { "type": ["string", "null"] }
+            "anchorResolved": {
+              "type": "boolean"
+            },
+            "quoteVerbatim": {
+              "type": "boolean"
+            },
+            "answerEntailed": {
+              "type": "boolean"
+            },
+            "judgeVerdict": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "attachments": {
+      "type": "array",
+      "description": "Material the question depends on and the reader must be shown: a manifest, command output, a passage or a diagram. A question that refers to 'the policy' is legitimate when the policy is here.",
+      "items": {
+        "type": "object",
+        "required": [
+          "kind",
+          "title"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "manifest",
+              "output",
+              "text",
+              "diagram"
+            ]
+          },
+          "title": {
+            "type": "string",
+            "minLength": 3
+          },
+          "language": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string",
+            "minLength": 10
+          },
+          "src": {
+            "type": "string"
+          },
+          "alt": {
+            "type": "string"
           }
         }
       }

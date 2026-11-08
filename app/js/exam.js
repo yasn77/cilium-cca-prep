@@ -121,6 +121,7 @@ function renderExam() {
       el('span', { class: 'chip', text: `Question ${current + 1}` }),
     ]),
     el('div', { class: 'q-stem' }, [richText(q.stem)]),
+    ...attachmentBlocks(q.attachments),
     el(
       'div',
       { class: 'options' },

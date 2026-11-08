@@ -41,6 +41,18 @@ const args = new Set(process.argv.slice(2));
 const LIMIT = Number((process.argv.find((a) => a.startsWith('--limit=')) ?? '').split('=')[1]) || 0;
 const PER_SECTION = Number((process.argv.find((a) => a.startsWith('--per-section=')) ?? '').split('=')[1]) || 3;
 const RECHECK = args.has('--recheck');
+// Regenerate one section by id substring, ignoring its deficit. Used to test a
+// prompt change against a specific page rather than a whole domain.
+const SECTION_FILTER = (process.argv.find((a) => a.startsWith('--section=')) ?? '').split('=').slice(1).join('=') || '';
+/**
+ * Target sections that contain a manifest.
+ *
+ * A question that shows a policy and then asks what happens is the shape the
+ * real exam uses, and it is only possible where the documentation has a manifest
+ * to show. Restricting generation to those sections is how the corpus gets them,
+ * rather than hoping a free-running pass happens to pick them.
+ */
+const MANIFESTS_ONLY = args.has('--manifests-only');
 
 // Sections shorter than this are too thin to carry a question on their own.
 // The chunker's own floor is 120; keeping this equal to it means the whole
@@ -56,18 +68,19 @@ Hard rules, in order of importance:
 3. Cite by quoting. The "quote" field must be copied verbatim from the SOURCE EXCERPT — a contiguous run of text, at least 40 characters, that contains the fact the answer depends on.
 4. Write scenario questions where the excerpt allows it: describe a situation and ask what happens or which option to use, rather than asking for a dictionary definition.
 5. British English with Oxford spelling in the explanation, except inside quoted code, flags and resource names, which must reproduce the source exactly.
-6. No question may depend on a diagram, an image, a table you cannot see, or on command output that is not in the excerpt.
+6. If the question depends on a manifest, command output or passage, put that material in "attachments" copied verbatim from the SOURCE EXCERPT. A question that shows the policy and then asks about "the policy" is exactly what a real exam item looks like.
 
 7. The question must stand alone as an exam item. Never refer to the excerpt, the passage, the source, or "the documentation", and never write "according to the excerpt" or "as shown above". The reader sees only your question, not where it came from.
 
-8. Never use a definite reference to something you have not shown. "The rule", "this policy", "the command" and "the manifest" are only acceptable if the stem itself contains that rule, policy, command or manifest. If the excerpt describes a sequence of steps, do not ask about a step without restating what the step operated on.
+8. A definite reference — "the rule", "this policy", "the manifest", "the output" — is only acceptable if the item shows what it refers to, either in the stem or in an attachment. Do not use one otherwise.
 
-Bad: "After the L7 policy is in place, an engineer runs a curl and gets no response. Why?"
-Good: "A CiliumNetworkPolicy selects pods with app=deathstar and permits only POST /v1/request-landing to port 80. A pod labelled app=xwing sends a POST to /v1/request-landing. Why is the request dropped?"
-The good version restates the policy because the reader has not seen it.
+Good, with an attachment: the attachments carry the CiliumNetworkPolicy named rule1 with endpointSelector org=empire, class=deathstar and an HTTP rule allowing only POST /v1/request-landing. The stem may then say "After this policy is applied, a pod labelled app=xwing sends POST /v1/request-landing and gets no response. Why?" — the reader has been shown the policy.
+Bad: the same question with no attachment. The reader has to guess what the policy allows.
 
 Return JSON only, with this exact shape and nothing outside it:
-{"questions":[{"stem":"...","options":[{"id":"a","text":"..."},{"id":"b","text":"..."},{"id":"c","text":"..."},{"id":"d","text":"..."}],"answer":"a","explanation":"...","optionRationale":{"b":"...","c":"...","d":"..."},"quote":"verbatim excerpt text","yieldSource":"scenario"}]}
+{"questions":[{"stem":"...","options":[{"id":"a","text":"..."},{"id":"b","text":"..."},{"id":"c","text":"..."},{"id":"d","text":"..."}],"answer":"a","explanation":"...","optionRationale":{"b":"...","c":"...","d":"..."},"quote":"verbatim excerpt text","yieldSource":"scenario","attachments":[{"kind":"manifest","title":"The policy under test","language":"yaml","body":"apiVersion: cilium.io/v2\\nkind: CiliumNetworkPolicy\\n..."}]}]}
+
+"attachments" is optional. Include it whenever the question depends on material the reader must see. Each "body" must be copied verbatim from the SOURCE EXCERPT, including indentation, because it is checked against the documentation. kind is one of "manifest" (YAML or JSON), "output" (command output), "text" (a prose passage) or "diagram" (leave body empty and give a title only; diagrams are not generated).
 
 yieldSource must be exactly one of these four strings, spelled exactly:
   "scenario"   a situation is described and the reader must reason about it
@@ -142,6 +155,48 @@ async function generateForSection(section, need, cfg) {
   return { rows, model };
 }
 
+/**
+ * Normalise and ground attachments.
+ *
+ * A manifest or output block is only useful if it is real: the same standard as
+ * the citation quote applies, so the body is checked as a substring of the cited
+ * section, ignoring whitespace. A diagram is accepted on its title alone because
+ * nothing generates one yet.
+ */
+function normalizeAttachments(raw, section, reasons) {
+  if (!Array.isArray(raw) || !raw.length) return [];
+  const out = [];
+  for (const a of raw.slice(0, 2)) {
+    if (!a || typeof a !== 'object') continue;
+    const kind = ['manifest', 'output', 'text', 'diagram'].includes(a.kind) ? a.kind : null;
+    const title = String(a.title ?? '').trim();
+    if (!kind || title.length < 3) {
+      reasons.push('attachment-invalid');
+      continue;
+    }
+    if (kind === 'diagram') {
+      out.push({ kind, title });
+      continue;
+    }
+    const body = String(a.body ?? '');
+    if (body.trim().length < 10) {
+      reasons.push('attachment-empty');
+      continue;
+    }
+    if (!quotePresent(body, section.text)) {
+      reasons.push('attachment-not-in-source');
+      continue;
+    }
+    out.push({
+      kind,
+      title,
+      ...(a.language ? { language: String(a.language).trim() } : {}),
+      body: body.replace(/\s+$/, ''),
+    });
+  }
+  return out;
+}
+
 function validate(row, section, model, cfg) {
   const reasons = [];
   // Normalise doubled backticks (``devices``) to a single pair at the boundary,
@@ -175,12 +230,18 @@ function validate(row, section, model, cfg) {
 
   if (!['definition', 'attribute', 'contrast', 'scenario'].includes(row.yieldSource)) reasons.push('bad-yield-source');
 
-  // An exam item has to stand alone. Both judges passed a question that referred
-  // to "the L7 policy" without showing it, so this is checked mechanically
-  // rather than trusted to a model's judgement.
-  const wording = checkWording(row.stem);
+  // Attachments, grounded the same way a quote is: the body must appear in the
+  // cited section. Without that check a model can invent a "policy" it never saw
+  // and the question becomes unanswerable in a way no reader can detect.
+  const attachments = normalizeAttachments(row.attachments, section, reasons);
+  row.attachments = attachments;
+
+  // An exam item has to stand alone — or show what it needs. Both judges passed
+  // a question that referred to "the L7 policy" without showing it, so this is
+  // checked mechanically rather than trusted to a model's judgement.
+  const wording = checkWording(row.stem, { hasAttachment: attachments.length > 0 });
   if (wording) reasons.push(wording);
-  const optionWording = checkOptionWording(row.options);
+  const optionWording = checkOptionWording(row.options, { hasAttachment: attachments.length > 0 });
   if (optionWording) reasons.push(optionWording);
 
   // A question whose stem and answer are the same text is degenerate.
@@ -199,6 +260,7 @@ function validate(row, section, model, cfg) {
         wrongIds.map((id) => [id, String(rationale[id]).trim()]),
       ),
       yieldSource: row.yieldSource,
+      ...(row.attachments?.length ? { attachments: row.attachments } : {}),
       citations: [
         {
           file: section.file,
@@ -340,13 +402,29 @@ async function main() {
   const CONCURRENCY = Number(process.env.GEN_CONCURRENCY ?? providers.generator.defaultConcurrency);
 
   const work = [];
-  for (const section of order) {
-    const have = existingBySection.get(section.id)?.length ?? 0;
-    const domainDeficit = deficits[section.domain] ?? 0;
-    if (domainDeficit <= 0) continue;
-    const need = Math.min(PER_SECTION - have, domainDeficit);
-    if (need <= 0) continue;
-    work.push({ section, need });
+  if (MANIFESTS_ONLY) {
+    for (const section of order) {
+      if (!/```(?:yaml|json)/.test(section.text)) continue;
+      const have = existingBySection.get(section.id)?.length ?? 0;
+      work.push({ section, need: Math.max(1, PER_SECTION - have) });
+    }
+    log('gen-ai', `manifests-only: ${work.length} sections with a YAML or JSON block`);
+  } else if (SECTION_FILTER) {
+    for (const section of order) {
+      if (!section.id.includes(SECTION_FILTER)) continue;
+      const have = existingBySection.get(section.id)?.length ?? 0;
+      work.push({ section, need: Math.max(1, PER_SECTION - have) });
+    }
+    log('gen-ai', `targeted mode: ${work.length} sections matching "${SECTION_FILTER}"`);
+  } else {
+    for (const section of order) {
+      const have = existingBySection.get(section.id)?.length ?? 0;
+      const domainDeficit = deficits[section.domain] ?? 0;
+      if (domainDeficit <= 0) continue;
+      const need = Math.min(PER_SECTION - have, domainDeficit);
+      if (need <= 0) continue;
+      work.push({ section, need });
+    }
   }
 
   let cursor = 0;
@@ -358,7 +436,7 @@ async function main() {
       const item = work[cursor];
       cursor += 1;
       const { section, need } = item;
-      if ((deficits[section.domain] ?? 0) <= 0) continue;
+      if (!SECTION_FILTER && !MANIFESTS_ONLY && (deficits[section.domain] ?? 0) <= 0) continue;
       budgetLeft -= 1;
       considered += 1;
 
@@ -396,7 +474,7 @@ async function main() {
         rows.push(v.row);
         acceptedForSection += 1;
         generated += 1;
-        deficits[section.domain] -= 1;
+        if (!SECTION_FILTER && !MANIFESTS_ONLY) deficits[section.domain] -= 1;
       }
       if (acceptedForSection) {
         log('gen-ai', `${section.id}: +${acceptedForSection} (total ${rows.length})`);

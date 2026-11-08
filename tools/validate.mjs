@@ -21,6 +21,12 @@ const DESCRIPTIONS = {
   citations: (v) => Array.isArray(v) && v.length > 0 && v.every((c) => c.file && c.anchor && c.quote),
   yieldSource: (v) => ['definition', 'attribute', 'contrast', 'scenario'].includes(v),
   provenance: (v) => v && typeof v === 'object' && v.docsRef,
+  // Optional, so an undefined value is fine; a present one must be well formed.
+  attachments: (v) =>
+    v === undefined ||
+    (Array.isArray(v) &&
+      v.length <= 2 &&
+      v.every((a) => a && ['manifest', 'output', 'text', 'diagram'].includes(a.kind) && a.title && (a.kind === 'diagram' || (typeof a.body === 'string' && a.body.length >= 10)))),
 };
 
 function validateQuestion(q, index) {

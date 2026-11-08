@@ -105,6 +105,7 @@ function renderQuestion(kind) {
       el('span', { class: 'chip', text: 'blind' }),
     ]),
     el('div', { class: 'q-stem' }, [richText(q.stem)]),
+    ...attachmentBlocks(q.attachments),
     el(
       'div',
       { class: 'options' },

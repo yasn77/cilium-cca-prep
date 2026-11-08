@@ -143,9 +143,43 @@ gh variable set TYPESAFE_BASE_URL
 Pages requires a public repository on the free plan. Once the repo is public the
 workflow publishes to `https://<owner>.github.io/cilium-cca-prep/`.
 
+## What a question carries
+
+A question has a stem, four or five options, one answer, an explanation, a
+per-option rationale, and at least one citation. It may also carry
+**attachments**: material the reader must see before answering.
+
+That matters because the real exam shows the policy and then asks about it.
+[`ExamUI: Multiple Choice Exams`](https://docs.linuxfoundation.org/tc-docs/certification/lf-handbook2/exam-user-interface/examui-multiple-choice-exams.md)
+is the reference for the exam interface, and its screenshots show a conventional
+item with room above the options.
+
+```json
+"attachments": [{
+  "kind": "manifest",
+  "title": "The policy under test",
+  "language": "yaml",
+  "body": "apiVersion: \"cilium.io/v2\"\nkind: CiliumNetworkPolicy\n..."
+}]
+```
+
+| `kind` | Shows | Body required |
+|---|---|---|
+| `manifest` | YAML or JSON | yes |
+| `output` | command output | yes |
+| `text` | a prose passage | yes |
+| `diagram` | an image | no, `src` instead |
+
+An attachment body is grounded the same way a citation quote is: it must appear
+in the cited section, so a model cannot invent a policy the docs never contain.
+
+**Without an attachment, a stem may not refer to something it has not shown.**
+"After the L7 policy is in place…" is unanswerable on its own; with the policy in
+an attachment it is exactly right.
+
 ## How a question is verified
 
-Four gates, all of which must pass:
+Five gates, all of which must pass:
 
 1. **Anchor** — the cited section has an anchor verified against the live render.
    Guessing Sphinx's id algorithm is unreliable; `resolve-anchors.mjs` reads the
@@ -156,9 +190,11 @@ Four gates, all of which must pass:
    does not try to prove the distractors wrong: a page listing three enforcement
    modes contains the vocabulary of all three, and judging distractors by word
    overlap threw away good questions about exactly those pages.
-4. **Judge** — SystemOne classifies it as `good_exam_item`, and a second model
+4. **Attachments** — any manifest or output shown must appear verbatim in the
+   cited section.
+5. **Judge** — SystemOne classifies it as `good_exam_item`, and a second model
    re-answers it blind and agrees. This gate is about fairness and answerability,
-   not truth, and never overrides 1–3.
+   not truth, and never overrides 1–4.
 
 Whatever fails lands in `data/quarantine.json` with a machine-readable reason and
 appears in the app's Review tab.

@@ -24,6 +24,14 @@ on:
         description: 'Documentation ref to pin (leave empty to keep the current one)'
         required: false
         default: ''
+      per_section:
+        description: 'Questions to request per documentation section'
+        required: false
+        default: '8'
+      manifests_only:
+        description: 'Generate only from sections that contain a manifest (ignores coverage deficits)'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -47,7 +55,10 @@ jobs:
           node-version: '24'
 
       - name: Optional ref bump
-        if: inputs.bump_ref != ''
+        # Guarded on the event as well as the value: on a schedule run `inputs`
+        # is an empty object, so a bare `inputs.bump_ref != ''` test is exactly
+        # the kind of thing that behaves differently from how it reads.
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.bump_ref != '' }}
         run: |
           sed -i "s/ref: '[^']*'/ref: '${{ inputs.bump_ref }}'/" tools/config.mjs
           grep -n "ref:" tools/config.mjs | head -1
@@ -72,11 +83,15 @@ jobs:
           LLM_MODEL: ${{ vars.LLM_MODEL }}
         # A missing credential is not a failure: the script logs that it skipped
         # generation, and the site still deploys with whatever corpus exists.
-        run: node tools/gen-ai.mjs --per-section=8 --limit=${{ inputs.limit || '0' }}
+        run: |
+          ARGS="--per-section=${{ inputs.per_section || '8' }} --limit=${{ inputs.limit || '0' }}"
+          if [ "${{ inputs.manifests_only }}" = "true" ]; then ARGS="$ARGS --manifests-only"; fi
+          echo "gen-ai $ARGS"
+          node tools/gen-ai.mjs $ARGS
 
       - name: Generate without a model
         if: ${{ inputs.skip_ai }}
-        run: node tools/gen-ai.mjs --per-section=8 --limit=0
+        run: node tools/gen-ai.mjs --per-section=${{ inputs.per_section || '8' }} --limit=0
 
       - name: Judge candidate quality with SystemOne
         env:
@@ -94,6 +109,7 @@ jobs:
           JUDGE_API_KEY: ${{ secrets.JUDGE_API_KEY }}
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           JUDGE_MODEL: ${{ vars.JUDGE_MODEL }}
+          JUDGE_CONCURRENCY: '16'
         # A second model answers each question blind from its own citation. A
         # different family from the generator, so the two do not share blind
         # spots. Catches the failures SystemOne cannot see: an answer the passage

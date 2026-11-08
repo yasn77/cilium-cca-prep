@@ -16,6 +16,7 @@ const SHELL = [
   './manifest.webmanifest',
   './css/app.css',
   './js/main.js',
+  './js/guide.js',
   './js/data.js',
   './js/ui.js',
   './js/progress.js',
@@ -27,7 +28,7 @@ const SHELL = [
   './icons/icon-512.png',
 ];
 
-const DATA = ['./data/corpus.json', './data/quarantine.json', './data/blind-set.json'];
+const DATA = ['./data/corpus.json', './data/quarantine.json', './data/blind-set.json', './data/guide.json'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(

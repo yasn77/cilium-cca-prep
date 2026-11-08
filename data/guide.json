@@ -1,0 +1,410 @@
+{
+  "schemaVersion": 1,
+  "title": "One-week study plan",
+  "intro": "Seven days, about two hours a day. The free videos give you coverage, the browser labs give you hands-on, and the app gives you recall and timing. Nothing here needs a cluster of your own.",
+  "verifiedOn": "2026-11-08",
+  "note": "Every link was checked for status, title and duration on the date above. Where something looks free but is not, that is stated.",
+  "days": [
+    {
+      "day": 1,
+      "title": "Architecture and Installation",
+      "focus": ["architecture", "installation"],
+      "weight": 30,
+      "summary": "Everything else assumes the component model. Learn which binary runs where before touching policy.",
+      "items": [
+        {
+          "kind": "watch",
+          "title": "Cilium Week, Session 1: Architecture and Installation",
+          "meta": "71 min · Solo.io and Isovalent",
+          "url": "https://www.youtube.com/watch?v=9Gj_9zpsnL0",
+          "why": "Walks the whole architecture and installation domain in one sitting."
+        },
+        {
+          "kind": "lab",
+          "title": "Getting Started with Cilium",
+          "meta": "Browser lab · free",
+          "url": "https://isovalent.com/labs/cilium-getting-started/",
+          "why": "Installs Cilium and runs the connectivity test. The exam asks what cilium status and cilium connectivity test actually do."
+        },
+        {
+          "kind": "practise",
+          "title": "Practice: Architecture",
+          "meta": "In this app · filter by domain",
+          "why": "Architecture is the largest domain at 20%."
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "title": "Measure yourself, then Network Policy",
+      "focus": ["network-policy"],
+      "weight": 18,
+      "summary": "Take the baseline first. It is the only score that measures you rather than the generator, and doing it now means the final delta is honest.",
+      "items": [
+        {
+          "kind": "practise",
+          "title": "Blind evaluation: baseline",
+          "meta": "In this app · 102 questions, no feedback",
+          "why": "Questions the app never teaches from. Do not retake this until day 7."
+        },
+        {
+          "kind": "watch",
+          "title": "Cilium Week, Session 2: Network policy and observability",
+          "meta": "78 min · Solo.io and Isovalent",
+          "url": "https://www.youtube.com/watch?v=lGHTSpBLWVc",
+          "why": "Covers the identity model, enforcement modes and L7 policy."
+        },
+        {
+          "kind": "practise",
+          "title": "Practice: Network Policy",
+          "meta": "In this app · filter by domain",
+          "why": "18% of the exam and the domain people most often fail."
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "title": "Write policy, then observe it",
+      "focus": ["network-policy", "observability"],
+      "weight": 28,
+      "summary": "Reading policy syntax is not the same as writing it. Then use Hubble to see the drops you created.",
+      "items": [
+        {
+          "kind": "lab",
+          "title": "Cilium Network Policies",
+          "meta": "Browser lab · free",
+          "url": "https://isovalent.com/labs/cilium-network-policies/",
+          "why": "Default deny, then L3/L4, then L7 and DNS. The exact progression the exam tests."
+        },
+        {
+          "kind": "lab",
+          "title": "IPv6 Networking and Observability",
+          "meta": "Browser lab · free",
+          "url": "https://isovalent.com/labs/cilium-ipv6/",
+          "why": "Hubble flows, filters and verdicts, including the drop reasons."
+        },
+        {
+          "kind": "read",
+          "title": "Policy Enforcement Modes",
+          "meta": "docs.cilium.io",
+          "url": "https://docs.cilium.io/en/stable/security/policy/intro/",
+          "why": "Default, always and never, and the per-direction rule. Questions on this appear constantly."
+        },
+        {
+          "kind": "practise",
+          "title": "Practice: Network Observability",
+          "meta": "In this app · filter by domain",
+          "why": "10% and mostly recall of Hubble flags."
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "title": "Service Mesh and Gateway API",
+      "focus": ["service-mesh"],
+      "weight": 16,
+      "summary": "The largest domain you are least likely to have touched. Sidecarless is the point, not a detail.",
+      "items": [
+        {
+          "kind": "watch",
+          "title": "Isovalent CCA playlist: the Gateway API demos",
+          "meta": "Traffic splitting, header modifier, cross-namespace routing, TLS passthrough",
+          "url": "https://www.youtube.com/playlist?list=PLngi_1qThAPB4yfZ-yaJO9WF7PUBcrfga",
+          "why": "Short demos, each one a question type. Pick the Gateway API entries."
+        },
+        {
+          "kind": "lab",
+          "title": "Cilium Gateway API",
+          "meta": "Browser lab · free",
+          "url": "https://isovalent.com/labs/cilium-gateway-api/",
+          "why": "GatewayClass, Gateway and HTTPRoute by doing rather than reading."
+        },
+        {
+          "kind": "lab",
+          "title": "Transparent Encryption with IPsec and WireGuard",
+          "meta": "Browser lab · free",
+          "url": "https://isovalent.com/labs/cilium-transparent-encryption-with-ipsec-and-wireguard/",
+          "why": "Encryption in transit is a named competency, and IPsec versus WireGuard is a favourite distinction."
+        },
+        {
+          "kind": "practise",
+          "title": "Practice: Service Mesh",
+          "meta": "In this app · filter by domain",
+          "why": "16% of the exam."
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "title": "Cluster Mesh and BGP",
+      "focus": ["cluster-mesh", "bgp"],
+      "weight": 16,
+      "summary": "Two small domains that are easy to neglect and easy to score on, because the facts are discrete.",
+      "items": [
+        {
+          "kind": "watch",
+          "title": "Cilium Week, Session 3: BGP, Service mesh and Cluster mesh",
+          "meta": "97 min · Solo.io and Isovalent",
+          "url": "https://www.youtube.com/watch?v=eNx2wqSB7rY",
+          "why": "The only free video that covers BGP and Cluster Mesh together."
+        },
+        {
+          "kind": "lab",
+          "title": "Cilium Cluster Mesh",
+          "meta": "Browser lab · free",
+          "url": "https://isovalent.com/labs/cilium-cluster-mesh/",
+          "why": "Global services, affinity and cross-cluster failover."
+        },
+        {
+          "kind": "lab",
+          "title": "BGP on Cilium",
+          "meta": "Browser lab · free",
+          "url": "https://isovalent.com/labs/cilium-bgp/",
+          "why": "Peering, advertisement and the current four CRDs."
+        },
+        {
+          "kind": "practise",
+          "title": "Practice: Cluster Mesh and BGP",
+          "meta": "In this app · filter by domain",
+          "why": "16% between them, and the cheapest marks on the paper."
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "title": "eBPF and everything you got wrong",
+      "focus": ["ebpf"],
+      "weight": 10,
+      "summary": "eBPF is only 10% but it underpins half the other answers. Then clear your wrong-answer backlog.",
+      "items": [
+        {
+          "kind": "lab",
+          "title": "Getting Started with eBPF",
+          "meta": "Browser lab · free",
+          "url": "https://isovalent.com/labs/ebpf-getting-started/",
+          "why": "Programs, maps and hook points, which is what the exam asks about."
+        },
+        {
+          "kind": "read",
+          "title": "eBPF Datapath: Introduction",
+          "meta": "docs.cilium.io",
+          "url": "https://docs.cilium.io/en/stable/network/ebpf/intro/",
+          "why": "XDP, tc and socket hooks, and why this beats iptables at scale."
+        },
+        {
+          "kind": "practise",
+          "title": "Practice: Previously wrong",
+          "meta": "In this app · scope filter",
+          "why": "Clear the backlog before the simulation, not after."
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "title": "Simulate, review, measure",
+      "focus": ["all"],
+      "weight": 100,
+      "summary": "No new material today. Sit the paper under time, review every wrong answer against its citation, then retake the blind set.",
+      "items": [
+        {
+          "kind": "practise",
+          "title": "Exam simulation",
+          "meta": "In this app · 60 questions, 90 minutes, 75% to pass",
+          "why": "Timing is the thing reading cannot teach you. 90 seconds a question."
+        },
+        {
+          "kind": "read",
+          "title": "Review every wrong answer and its citation",
+          "meta": "In this app · results screen links to the docs",
+          "why": "Each wrong answer carries the passage that settles it. Read the passage, not just the explanation."
+        },
+        {
+          "kind": "practise",
+          "title": "Blind evaluation: final",
+          "meta": "In this app · same 102 questions as day 2",
+          "why": "The delta between this and your baseline is the only honest measure of the week."
+        }
+      ]
+    }
+  ],
+  "references": [
+    {
+      "group": "Courses and video",
+      "items": [
+        {
+          "title": "Cilium Week, Session 1: Architecture and Installation",
+          "meta": "71 min",
+          "url": "https://www.youtube.com/watch?v=9Gj_9zpsnL0",
+          "note": "Best free coverage of architecture and installation."
+        },
+        {
+          "title": "Cilium Week, Session 2: Network policy and observability",
+          "meta": "78 min",
+          "url": "https://www.youtube.com/watch?v=lGHTSpBLWVc",
+          "note": "Identity model, enforcement modes, Hubble."
+        },
+        {
+          "title": "Cilium Week, Session 3: BGP, Service mesh and Cluster mesh",
+          "meta": "97 min",
+          "url": "https://www.youtube.com/watch?v=eNx2wqSB7rY",
+          "note": "The 38 weight points the first two sessions do not cover."
+        },
+        {
+          "title": "Isovalent CCA playlist (35 videos)",
+          "meta": "Cilium Certifications",
+          "url": "https://www.youtube.com/playlist?list=PLngi_1qThAPB4yfZ-yaJO9WF7PUBcrfga",
+          "note": "Curated by the company Cilium's creators founded, explicitly for this exam."
+        },
+        {
+          "title": "eCHO playlist library",
+          "meta": "16 themed playlists",
+          "url": "https://cilium.io/blog/2025/16/01/themed-echo-playlists/",
+          "note": "Deep dives on network policy, life of a packet, mesh and eBPF. Optional depth."
+        },
+        {
+          "title": "Introducing the Cilium Certified Associate Certification",
+          "meta": "2 min · Isovalent",
+          "url": "https://www.youtube.com/watch?v=_eHt_LipuN8",
+          "note": "Short framing of what the exam covers, from the vendor that built it."
+        }
+      ]
+    },
+    {
+      "group": "Hands-on labs, free and in a browser",
+      "items": [
+        {
+          "title": "All Isovalent labs",
+          "meta": "Library",
+          "url": "https://isovalent.com/labs/",
+          "note": "The exam's creator names these as his top recommendation, above any course."
+        },
+        {
+          "title": "Getting Started with Cilium",
+          "meta": "Architecture, installation",
+          "url": "https://isovalent.com/labs/cilium-getting-started/"
+        },
+        {
+          "title": "Cilium Network Policies",
+          "meta": "Network Policy",
+          "url": "https://isovalent.com/labs/cilium-network-policies/"
+        },
+        {
+          "title": "Cilium Ingress Controller",
+          "meta": "Service Mesh",
+          "url": "https://isovalent.com/labs/cilium-ingress-controller/"
+        },
+        {
+          "title": "Cilium Gateway API",
+          "meta": "Service Mesh",
+          "url": "https://isovalent.com/labs/cilium-gateway-api/"
+        },
+        {
+          "title": "Advanced Gateway API",
+          "meta": "Service Mesh",
+          "url": "https://isovalent.com/labs/cilium-gateway-api-advanced/"
+        },
+        {
+          "title": "Transparent Encryption with IPsec and WireGuard",
+          "meta": "Service Mesh",
+          "url": "https://isovalent.com/labs/cilium-transparent-encryption-with-ipsec-and-wireguard/"
+        },
+        {
+          "title": "IPv6 Networking and Observability",
+          "meta": "Observability",
+          "url": "https://isovalent.com/labs/cilium-ipv6/"
+        },
+        {
+          "title": "Cilium Cluster Mesh",
+          "meta": "Cluster Mesh",
+          "url": "https://isovalent.com/labs/cilium-cluster-mesh/"
+        },
+        {
+          "title": "Getting Started with eBPF",
+          "meta": "eBPF",
+          "url": "https://isovalent.com/labs/ebpf-getting-started/"
+        },
+        {
+          "title": "BGP on Cilium",
+          "meta": "BGP",
+          "url": "https://isovalent.com/labs/cilium-bgp/"
+        },
+        {
+          "title": "LB IPAM and BGP Service Advertisement",
+          "meta": "BGP",
+          "url": "https://isovalent.com/labs/cilium-lb-ipam-bgp/"
+        },
+        {
+          "title": "Advanced BGP Features",
+          "meta": "BGP",
+          "url": "https://isovalent.com/labs/cilium-bgp-advanced/"
+        },
+        {
+          "title": "Egress Gateway",
+          "meta": "BGP, egress",
+          "url": "https://isovalent.com/labs/cilium-egress-gateway/"
+        },
+        {
+          "title": "LB IPAM and L2 Announcements",
+          "meta": "BGP, L2",
+          "url": "https://isovalent.com/labs/cilium-lb-ipam-l2-announcements/"
+        }
+      ]
+    },
+    {
+      "group": "Reading",
+      "items": [
+        {
+          "title": "Cilium documentation",
+          "meta": "docs.cilium.io",
+          "url": "https://docs.cilium.io/en/stable/",
+          "note": "The primary reference for the exam, and the source this app's questions are generated from."
+        },
+        {
+          "title": "CNCF CCA curriculum",
+          "meta": "Official syllabus, PDF",
+          "url": "https://github.com/cncf/curriculum/blob/main/cca/CCA_Curriculum.pdf",
+          "note": "The eight domains and their weights, straight from the publisher."
+        },
+        {
+          "title": "Isovalent CCA Study Guide",
+          "meta": "GitHub, CC BY-NC 4.0",
+          "url": "https://github.com/isovalent/CCA-Study-Guide",
+          "note": "A per-domain resource list. The exam's creator calls it a good start. Not ingested here because its licence forbids commercial redistribution."
+        },
+        {
+          "title": "KubeDojo CCA path",
+          "meta": "Free",
+          "url": "https://kube-dojo.github.io/k8s/cca/",
+          "note": "Maps domains to modules. Its stated 66% pass mark is wrong: the published mark is 75%."
+        },
+        {
+          "title": "Interview with the CCA's creator",
+          "meta": "CNCF blog",
+          "url": "https://www.cncf.io/blog/2024/10/15/interview-with-cilium-certified-associate-certification-cca-creator/",
+          "note": "How the exam was built and how he recommends preparing."
+        }
+      ]
+    },
+    {
+      "group": "Looks free, is not",
+      "items": [
+        {
+          "title": "KodeKloud CCA prep course",
+          "meta": "Pro only",
+          "url": "https://kodekloud.com/courses/cilium-certified-associate-cca",
+          "note": "\"Enrol for Free\" is an account signup. The course itself needs a Pro subscription. A free trial exists."
+        },
+        {
+          "title": "LinuxFoundationX: Introduction to Cilium (edX)",
+          "meta": "Link is dead",
+          "note": "Listed in the official study guide, but the edX URL now redirects to a generic Kubernetes catalogue. Treat as unavailable."
+        },
+        {
+          "title": "Udemy CCA courses",
+          "meta": "Paid, discounted often",
+          "note": "Several exist and Udemy discounts them to near-zero regularly, but they are not free at list price and the question banks are unverified."
+        }
+      ]
+    }
+  ]
+}

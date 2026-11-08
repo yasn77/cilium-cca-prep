@@ -55,6 +55,7 @@ jobs:
           cp data/corpus.json _site/data/
           cp data/quarantine.json _site/data/
           cp data/blind-set.json _site/data/
+          cp data/guide.json _site/data/
           # The blind set is deployed because it ships inside the SPA and is not
           # secret: a learner can read it in devtools. It is excluded from practice
           # and exam mode by construction, not by obscurity. Keeping it out would

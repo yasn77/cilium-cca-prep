@@ -20,12 +20,14 @@ import * as practice from './practice.js';
 import * as exam from './exam.js';
 import * as blind from './blind.js';
 import * as review from './review.js';
+import * as guide from './guide.js';
 
 const app = document.getElementById('app');
 const tabbar = document.getElementById('tabbar');
 
 const ROUTES = {
   home: { label: 'Home', icon: '⌂', render: renderHome },
+  learn: { label: 'Learn', icon: '▶', render: guide.start },
   practice: { label: 'Practice', icon: '✎', render: practice.start },
   exam: { label: 'Exam', icon: '◱', render: exam.start },
   blind: { label: 'Blind', icon: '◎', render: blind.start },
@@ -118,6 +120,7 @@ function renderHome(root) {
       : null,
 
     el('div', { class: 'mode-list' }, [
+      modeButton('▶', 'One-week plan', 'Free videos, browser labs and practice, day by day', '#/learn'),
       modeButton('✎', 'Practice', `${meta.total} questions, filter by domain or by what you got wrong`, '#/practice'),
       modeButton('◱', 'Exam simulation', `60 questions · 90 minutes · ${PASS_MARK}% to pass`, '#/exam'),
       modeButton('◎', 'Blind evaluation', 'A held-out set you have never practised against', '#/blind'),

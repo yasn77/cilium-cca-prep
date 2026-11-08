@@ -5,6 +5,7 @@ const state = {
   corpus: null,
   quarantine: null,
   blind: null,
+  guide: null,
   loadedAt: null,
 };
 
@@ -30,14 +31,16 @@ async function getJson(name) {
 }
 
 export async function load() {
-  const [corpus, quarantine, blind] = await Promise.all([
+  const [corpus, quarantine, blind, guide] = await Promise.all([
     getJson('corpus.json'),
     getJson('quarantine.json'),
     getJson('blind-set.json'),
+    getJson('guide.json'),
   ]);
   state.corpus = corpus;
   state.quarantine = quarantine;
   state.blind = blind;
+  state.guide = guide;
   state.loadedAt = new Date();
   return state;
 }

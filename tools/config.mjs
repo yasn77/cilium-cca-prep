@@ -22,26 +22,40 @@ export const docs = {
 export const providers = {
   generator: {
     baseUrlEnv: 'LLM_BASE_URL',
-    defaultBaseUrl: 'https://api.openai.com/v1',
+    // nano-gpt carries both the chat models and SystemOne, so one credential
+    // and one base URL serve the generator and the judge.
+    defaultBaseUrl: 'https://nano-gpt.com/api/v1',
     modelEnv: 'LLM_MODEL',
-    // Pinned deliberately. A floating "latest" makes every corpus regeneration a
-    // silent behaviour change, and provenance stops meaning anything.
-    defaultModel: 'gpt-4.1-mini',
+    // Pinned deliberately: a floating "latest" makes every regeneration a
+    // silent behaviour change and provenance stops meaning anything.
+    //
+    // Chosen by measurement, not price. tools/bench-models.mjs runs the real
+    // prompt over a fixed section sample and counts what survives the real
+    // validators:
+    //
+    //   deepseek/deepseek-v4.1-flash-1017            24/24  100%  ~7.0s/section
+    //   deepseek/deepseek-v4.1-flash-1017-uncensored 23/24   96%  ~6.0s/section
+    //   deepseek/deepseek-v4-flash-0423               6/12   50%  ~6.1s/section
+    //   z-ai/glm-5.3-flash                            0/12    0%  (10k output, never parsed)
+    //
+    // The cheap models were cheap per token and expensive per usable question.
+    defaultModel: 'deepseek/deepseek-v4.1-flash-1017',
     keyEnv: 'LLM_API_KEY',
     temperature: 0,
-    // Measured on 100 accepted candidates: median 399 tokens of JSON per
-    // question, ~2,000 for a batch of five. The cap leaves room for a batch of
-    // five plus a model that thinks before answering.
-    maxTokens: 2500,
-    // Requests in flight. Cloud endpoints tolerate far more than a single local
-    // GPU; the local default of 4 exists because that is what one box sustains.
+    // Measured on accepted candidates: median 399 tokens of JSON per question.
+    // A batch of five plus a model that thinks first fits well inside this.
+    maxTokens: 3000,
+    // Requests in flight. A cloud gateway tolerates far more than a single
+    // local GPU; GEN_CONCURRENCY=4 or lower is right for one box.
     defaultConcurrency: 8,
   },
   judge: {
     baseUrlEnv: 'TYPESAFE_BASE_URL',
-    defaultBaseUrl: 'https://api.typesafe.ai',
-    model: 'jev-latest',
-    // Falls back to the generator key so a single gateway can serve both.
+    defaultBaseUrl: 'https://nano-gpt.com/api/v1',
+    // nano-gpt namespaces the model; a bare "jev-latest" is rejected there.
+    model: '~typesafe/jev-latest',
+    modelEnv: 'TYPESAFE_MODEL',
+    // Falls back to the generator key so one gateway can serve both.
     keyEnv: 'TYPESAFE_API_KEY',
     fallbackKeyEnv: 'LLM_API_KEY',
     // Measured flat with batch size in the reference client; 100 is cheap in time.

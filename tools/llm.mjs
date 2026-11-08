@@ -10,15 +10,31 @@ import { providers } from './config.mjs';
 export function generatorConfig() {
   const p = providers.generator;
   const apiKey = process.env[p.keyEnv];
+  const baseUrl = process.env[p.baseUrlEnv] || p.defaultBaseUrl;
+  const defaultModel = MODEL_FOR.map[baseUrl] ?? p.defaultModel;
   return {
-    baseUrl: process.env[p.baseUrlEnv] || p.defaultBaseUrl,
-    model: process.env[p.modelEnv] || p.defaultModel,
+    baseUrl,
+    model: process.env[p.modelEnv] || defaultModel,
     apiKey,
     temperature: p.temperature,
     maxTokens: p.maxTokens,
     configured: Boolean(apiKey),
   };
 }
+
+/**
+ * Per-gateway model defaults.
+ *
+ * The two gateways name their models differently, and a bare id that works on
+ * one is rejected on the other. Keeping the mapping here means LLM_BASE_URL is
+ * the only thing a caller has to set.
+ */
+const MODEL_FOR = {
+  map: {
+    'https://api.llmgateway.io/v1': 'deepseek-v4.1-flash-1017',
+    'https://nano-gpt.com/api/v1': 'deepseek/deepseek-v4.1-flash-1017',
+  },
+};
 
 function sleep(ms) {
   return new Promise((r) => setTimeout(r, ms));
@@ -40,6 +56,22 @@ function recordUsage(usage) {
   usageTotals.calls += 1;
   usageTotals.promptTokens += usage.prompt_tokens ?? 0;
   usageTotals.completionTokens += usage.completion_tokens ?? 0;
+}
+
+let override = null;
+
+/**
+ * Point the client at a specific provider for the rest of this process.
+ *
+ * Used by the benchmark to sweep models, and by anything that needs to call a
+ * gateway other than the one the environment configures.
+ */
+export function configure(cfg) {
+  override = cfg;
+}
+
+export function activeConfig() {
+  return override ?? generatorConfig();
 }
 
 /**
@@ -106,7 +138,7 @@ export function extractJson(text) {
  * dies on a transient upstream error is a scheduled job that never finishes.
  */
 export async function chat(messages, { cfg, maxAttempts = 3, timeoutMs = 420000 } = {}) {
-  const conf = cfg ?? generatorConfig();
+  const conf = cfg ?? activeConfig();
   if (!conf.configured) throw new Error('generator provider has no API key');
 
   let lastErr;

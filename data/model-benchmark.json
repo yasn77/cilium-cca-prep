@@ -1,0 +1,28 @@
+{
+  "generatedAt": "2026-11-08T02:28:16.649Z",
+  "baseUrl": "https://api.llmgateway.io/v1",
+  "sections": [
+    "operations/performance/scalability/report.rst#final-remarks",
+    "observability/hubble/hubble-ui.rst#open-the-hubble-ui",
+    "network/concepts/routing.rst#egress",
+    "network/bgp-control-plane/bgp-control-plane-configuration.rst#service-virtual-ips",
+    "network/clustermesh/gke-clustermesh-prep.rst#deploy-clusters",
+    "network/ebpf/maps.rst#service-lb-map-sizing"
+  ],
+  "results": [
+    {
+      "model": "deepseek-v4.1-flash-1017",
+      "accepted": 9,
+      "produced": 9,
+      "scenarios": 5,
+      "acceptanceRate": 1,
+      "scenarioRate": 0.5555555555555556,
+      "msPerSection": 13364,
+      "promptTokens": 4677,
+      "completionTokens": 13439,
+      "rejections": {
+        "unparseable": 3
+      }
+    }
+  ]
+}

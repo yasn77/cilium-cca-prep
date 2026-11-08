@@ -1,0 +1,7 @@
+{
+  "generatedAt": "2026-11-08T02:26:33.327Z",
+  "model": "~typesafe/jev-latest",
+  "configured": true,
+  "error": "systemone HTTP 429: {\"error\":{\"message\":\"Weekly included input token limit exceeded. Enable \\\"Use balance after limits\\\" in your subscription settings at nano-gpt.com/subscription to continue from your balance (this API key must also allow balance spending), or wait for the weekly reset.\",\"type\":\"rate_limit_error\",\"cod",
+  "verdicts": {}
+}

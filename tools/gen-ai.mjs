@@ -60,7 +60,11 @@ Hard rules, in order of importance:
 Return JSON only, with this exact shape and nothing outside it:
 {"questions":[{"stem":"...","options":[{"id":"a","text":"..."},{"id":"b","text":"..."},{"id":"c","text":"..."},{"id":"d","text":"..."}],"answer":"a","explanation":"...","optionRationale":{"b":"...","c":"...","d":"..."},"quote":"verbatim excerpt text","yieldSource":"scenario"}]}
 
-yieldSource must be "scenario" (a situation is described and the reader must reason), "contrast" (two approaches are distinguished), "attribute" (a resource, flag or annotation is identified) or "definition".`;
+yieldSource must be exactly one of these four strings, spelled exactly:
+  "scenario"   a situation is described and the reader must reason about it
+  "contrast"   two approaches or modes are distinguished
+  "attribute"  a resource, field, flag or annotation is identified
+  "definition" a concept is defined`;
 
 function safeHost(baseUrl) {
   try {

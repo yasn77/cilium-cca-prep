@@ -20,12 +20,19 @@
  */
 import { providers } from './config.mjs';
 
+/** nano-gpt namespaces the SystemOne model; the direct API does not. */
+const JUDGE_MODEL_FOR = {
+  'https://nano-gpt.com/api/v1': '~typesafe/jev-latest',
+  'https://api.typesafe.ai': 'jev-latest',
+};
+
 export function judgeConfig() {
   const p = providers.judge;
   const apiKey = process.env[p.keyEnv] || process.env[p.fallbackKeyEnv];
+  const baseUrl = process.env[p.baseUrlEnv] || p.defaultBaseUrl;
   return {
-    baseUrl: process.env[p.baseUrlEnv] || p.defaultBaseUrl,
-    model: p.model,
+    baseUrl,
+    model: (p.modelEnv && process.env[p.modelEnv]) || JUDGE_MODEL_FOR[baseUrl] || p.model,
     apiKey,
     batchSize: p.batchSize,
     configured: Boolean(apiKey),

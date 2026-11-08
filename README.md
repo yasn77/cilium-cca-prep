@@ -46,6 +46,10 @@ needs a real origin.
 The committed corpus is enough to use the app immediately. Rebuilding it needs
 Node 24 and network access.
 
+## Live
+
+<https://yasn77.github.io/cilium-cca-prep/>
+
 ## Installing on Android
 
 Open the Pages URL in Chrome, then **⋮ → Add to Home screen**. It installs as a
@@ -59,8 +63,8 @@ npm run docs        # fetch the pinned Documentation/ at v1.20.4
 npm run chunk       # split into heading-anchored sections
 npm run anchors     # verify every anchor against the live site
 npm run gen:templates
-npm run gen:ai      # needs LLM_API_KEY
-npm run judge       # needs TYPESAFE_API_KEY (falls back to LLM_API_KEY)
+npm run gen:ai      # needs an API key
+npm run judge       # needs a SystemOne-capable key
 npm run verify
 npm run report
 npm run validate
@@ -68,18 +72,36 @@ npm run validate
 
 Or the whole chain: `npm run pipeline`.
 
+To compare candidate models on the real task rather than by price:
+
+```bash
+node tools/bench-models.mjs --sections 8
+```
+
+See `docs/MODEL-SELECTION.md` for the measurements and why the pinned model was
+chosen.
+
 ### Environment
 
-| Variable | Used by | Required |
+| Variable | Used by | Default |
 |---|---|---|
-| `LLM_API_KEY` | `gen-ai`, `judge` | No — generation is skipped without it |
-| `LLM_BASE_URL` | `gen-ai` | No — defaults to OpenAI |
-| `LLM_MODEL` | `gen-ai` | No — defaults to a pinned model in `tools/config.mjs` |
-| `TYPESAFE_API_KEY` | `judge` | No — falls back to `LLM_API_KEY` |
-| `TYPESAFE_BASE_URL` | `judge` | No — defaults to `api.typesafe.ai` |
-| `GEN_CONCURRENCY` | `gen-ai` | No — defaults to 4 |
+| `LLM_API_KEY` | `gen-ai`, `judge` | — generation skipped without it |
+| `LLM_BASE_URL` | `gen-ai` | `https://nano-gpt.com/api/v1` |
+| `LLM_MODEL` | `gen-ai` | resolved per gateway, see below |
+| `TYPESAFE_API_KEY` | `judge` | falls back to `LLM_API_KEY` |
+| `TYPESAFE_BASE_URL` | `judge` | `https://nano-gpt.com/api/v1` |
+| `TYPESAFE_MODEL` | `judge` | `~typesafe/jev-latest` |
+| `GEN_CONCURRENCY` | `gen-ai` | `8` |
 
-Every one is optional. A missing credential makes the corresponding stage a
+**Two gateways are supported and they name models differently.** Setting
+`LLM_BASE_URL` selects the matching default:
+
+| Gateway | Generator model | Judge available |
+|---|---|---|
+| `https://nano-gpt.com/api/v1` | `deepseek/deepseek-v4.1-flash-1017` | yes, `~typesafe/jev-latest` |
+| `https://api.llmgateway.io/v1` | `deepseek-v4.1-flash-1017` | **no**, typed decisions are refused on coding plans |
+
+Every variable is optional. A missing credential makes the corresponding stage a
 no-op; the site still deploys with whatever corpus is committed, and the report
 records that judging did not run.
 
@@ -94,12 +116,17 @@ Then add the secrets and variables yourself — the script deliberately does not
 touch them:
 
 ```bash
+# nano-gpt serves both the generator and SystemOne, so one key is enough.
 gh secret set LLM_API_KEY
+gh variable set LLM_BASE_URL    # https://nano-gpt.com/api/v1
+
+# Optional: a different credential for judging.
 gh secret set TYPESAFE_API_KEY
-gh variable set LLM_BASE_URL
-gh variable set LLM_MODEL
 gh variable set TYPESAFE_BASE_URL
 ```
+
+Pages requires a public repository on the free plan. Once the repo is public the
+workflow publishes to `https://<owner>.github.io/cilium-cca-prep/`.
 
 ## How a question is verified
 

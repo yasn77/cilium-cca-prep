@@ -1,6 +1,6 @@
 # Corpus report
 
-Generated 2026-11-08T17:30:36.923Z
+Generated 2026-11-08T18:47:19.277Z
 
 ## Source
 
@@ -27,24 +27,24 @@ Dropped:
 
 ## Corpus
 
-**680 questions** in the shipped corpus, **904** quarantined.
+**682 questions** in the shipped corpus, **905** quarantined.
 
 | Domain | Weight | Questions | Floor | Status |
 |---|---|---|---|---|
-| Architecture | 20% | 155 | 100 | met |
+| Architecture | 20% | 156 | 100 | met |
 | Network Policy | 18% | 105 | 90 | met |
 | Service Mesh | 16% | 113 | 80 | met |
 | Network Observability | 10% | 59 | 50 | met |
 | Installation and Configuration | 10% | 78 | 50 | met |
 | Cluster Mesh | 10% | 64 | 50 | met |
 | eBPF | 10% | 26 | 25 | met |
-| BGP and External Networking | 6% | 80 | 30 | met |
+| BGP and External Networking | 6% | 81 | 30 | met |
 
 <details><summary>Coverage by competency</summary>
 
 **Architecture**
 
-- `unmapped` — 146
+- `unmapped` — 147
 - `component-roles` — 8 _(thin)_
 - `datapath-models` — 1 _(thin)_
 
@@ -52,7 +52,7 @@ Dropped:
 
 - `bgp-peering` — 28
 - `bgp-advertisement` — 22 _(thin)_
-- `egress-gateway` — 18 _(thin)_
+- `egress-gateway` — 19 _(thin)_
 - `bgp-control-plane` — 12 _(thin)_
 
 **Cluster Mesh**
@@ -105,11 +105,11 @@ Dropped:
 | Yield source | Count |
 |---|---|
 | scenario | 286 |
-| attribute | 187 |
+| attribute | 188 |
 | definition | 115 |
-| contrast | 92 |
+| contrast | 93 |
 
-Scenario share: **42.1%** (floor 25%).
+Scenario share: **41.9%** (floor 25%).
 
 ## Verification
 
@@ -125,7 +125,7 @@ Quarantine by gate:
 | Gate | Rejected |
 |---|---|
 | shape | 409 |
-| judge | 252 |
+| judge | 253 |
 | entail | 211 |
 | duplicate | 21 |
 | quote | 11 |
@@ -134,16 +134,16 @@ Judge histogram:
 
 | Category | Count |
 |---|---|
-| distractors_too_obvious | 49 |
-| good_exam_item | 1172 |
+| good_exam_item | 1174 |
+| wording_broken | 76 |
 | trivia_not_in_blueprint | 174 |
-| wording_broken | 75 |
-| ambiguity_two_correct | 3 |
 | answer_not_determinable | 111 |
+| distractors_too_obvious | 49 |
+| ambiguity_two_correct | 3 |
 
 ## Known weak points
 
-100 of 680 questions (14.7%) are flagged here as weaker than the rest: either they survived without a judge verdict, or the correct answer is a term short enough that the entailment check is close to a string match rather than a claim about meaning.
+100 of 682 questions (14.7%) are flagged here as weaker than the rest: either they survived without a judge verdict, or the correct answer is a term short enough that the entailment check is close to a string match rather than a claim about meaning.
 
 <details><summary>List</summary>
 

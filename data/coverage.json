@@ -1,17 +1,15 @@
 {
-  "generatedAt": "2026-11-08T03:19:30.546Z",
+  "generatedAt": "2026-11-08T03:30:15.563Z",
   "templates": 39,
-  "ai": 519,
-  "consideredSections": 175,
+  "ai": 644,
+  "consideredSections": 19,
   "usage": {
-    "calls": 175,
-    "promptTokens": 219770,
-    "completionTokens": 419479
+    "calls": 19,
+    "promptTokens": 31485,
+    "completionTokens": 23925
   },
   "rejections": {
-    "empty-option": 2,
-    "quote-not-in-source": 14,
-    "quote-too-short": 6
+    "empty-option": 2
   },
   "coverage": {
     "architecture": {
@@ -27,13 +25,13 @@
       "met": true
     },
     "service-mesh": {
-      "count": 83,
+      "count": 123,
       "floor": 80,
       "weight": 16,
       "met": true
     },
     "observability": {
-      "count": 60,
+      "count": 84,
       "floor": 50,
       "weight": 10,
       "met": true
@@ -45,16 +43,16 @@
       "met": true
     },
     "cluster-mesh": {
-      "count": 64,
+      "count": 68,
       "floor": 50,
       "weight": 10,
       "met": true
     },
     "ebpf": {
-      "count": 12,
-      "floor": 50,
+      "count": 69,
+      "floor": 25,
       "weight": 10,
-      "met": false
+      "met": true
     },
     "bgp": {
       "count": 38,

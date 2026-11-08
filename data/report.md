@@ -1,6 +1,6 @@
 # Corpus report
 
-Generated 2026-11-08T03:20:38.533Z
+Generated 2026-11-08T03:40:03.984Z
 
 ## Source
 
@@ -27,17 +27,17 @@ Dropped:
 
 ## Corpus
 
-**465 questions** in the shipped corpus, **93** quarantined.
+**567 questions** in the shipped corpus, **116** quarantined.
 
 | Domain | Weight | Questions | Floor | Status |
 |---|---|---|---|---|
 | Architecture | 20% | 103 | 100 | met |
 | Network Policy | 18% | 92 | 90 | met |
-| Service Mesh | 16% | 75 | 80 | **short** |
-| Network Observability | 10% | 46 | 50 | **short** |
+| Service Mesh | 16% | 109 | 80 | met |
+| Network Observability | 10% | 65 | 50 | met |
 | Installation and Configuration | 10% | 56 | 50 | met |
-| Cluster Mesh | 10% | 49 | 50 | **short** |
-| eBPF | 10% | 9 | 25 | **short** |
+| Cluster Mesh | 10% | 51 | 50 | met |
+| eBPF | 10% | 56 | 25 | met |
 | BGP and External Networking | 6% | 35 | 30 | met |
 
 <details><summary>Coverage by competency</summary>
@@ -58,15 +58,17 @@ Dropped:
 
 **Cluster Mesh**
 
+- `global-services` — 15 _(thin)_
 - `unmapped` — 14
-- `global-services` — 14 _(thin)_
 - `mesh-setup` — 11 _(thin)_
-- `mesh-benefits` — 10 _(thin)_
+- `mesh-benefits` — 11 _(thin)_
 
 **eBPF**
 
-- `unmapped` — 6
-- `bpf-maps` — 3 _(thin)_
+- `ebpf-role` — 26
+- `bpf-maps` — 16 _(thin)_
+- `unmapped` — 8
+- `ebpf-program-model` — 6 _(thin)_
 
 **Installation and Configuration**
 
@@ -84,28 +86,30 @@ Dropped:
 
 **Network Observability**
 
-- `hubble-capabilities` — 33
-- `hubble-cli` — 6 _(thin)_
+- `hubble-capabilities` — 45
+- `hubble-cli` — 10 _(thin)_
 - `unmapped` — 5
+- `l7-visibility` — 3 _(thin)_
 - `metrics` — 2 _(thin)_
 
 **Service Mesh**
 
-- `unmapped` — 41
-- `ingress` — 17 _(thin)_
+- `unmapped` — 64
+- `ingress` — 19 _(thin)_
+- `encryption` — 13 _(thin)_
 - `gateway-api` — 9 _(thin)_
-- `encryption` — 8 _(thin)_
+- `sidecar-versus-sidecarless` — 4 _(thin)_
 
 </details>
 
 | Yield source | Count |
 |---|---|
-| scenario | 185 |
-| attribute | 119 |
-| definition | 97 |
-| contrast | 64 |
+| scenario | 224 |
+| attribute | 144 |
+| definition | 110 |
+| contrast | 89 |
 
-Scenario share: **39.8%** (floor 25%).
+Scenario share: **39.5%** (floor 25%).
 
 ## Verification
 
@@ -120,13 +124,13 @@ Quarantine by gate:
 
 | Gate | Rejected |
 |---|---|
-| entail | 77 |
+| entail | 99 |
 | quote | 11 |
-| duplicate | 5 |
+| duplicate | 6 |
 
 ## Known weak points
 
-465 of 465 questions (100.0%) are flagged here as weaker than the rest: either they survived without a judge verdict, or the correct answer is a term short enough that the entailment check is close to a string match rather than a claim about meaning.
+567 of 567 questions (100.0%) are flagged here as weaker than the rest: either they survived without a judge verdict, or the correct answer is a term short enough that the entailment check is close to a string match rather than a claim about meaning.
 
 <details><summary>List</summary>
 
@@ -230,7 +234,7 @@ Quarantine by gate:
 - `f37b3b7757719126` — architecture — A cluster administrator is troubleshooting latency issues in a Cilium cluster where the ba
 - `f66478ec599bab8b` — architecture — During a rolling migration, some Cilium agents are running in multi-pool mode while others
 - `fd5053427f877dbd` — architecture — An administrator sets nodePort.directRoutingDevice=eth+ on a cluster where several devices
-- …and 365 more
+- …and 467 more
 
 </details>
 

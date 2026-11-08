@@ -198,9 +198,22 @@ async function main() {
   }
 
   // Coverage so far, so we only generate where there is a deficit.
+  //
+  // This counts candidates that are already in the file, not candidates that
+  // passed verification. The two diverge: a section asked for eight questions
+  // may yield five that survive the gates, so treating the file count as
+  // coverage makes the generator believe a domain is full while the corpus is
+  // still short. The verifier's shipped count is the honest input when it is
+  // available.
+  const shipped = await readJson(path.join(ROOT, 'data', 'corpus.json'), { questions: [] });
+  const useShipped = Array.isArray(shipped.questions) && shipped.questions.length > 0;
   const perDomain = {};
   for (const d of Object.keys(domains)) perDomain[d] = 0;
-  for (const r of [...templates, ...existing]) perDomain[r.domain] = (perDomain[r.domain] ?? 0) + 1;
+  if (useShipped) {
+    for (const q of shipped.questions) perDomain[q.domain] = (perDomain[q.domain] ?? 0) + 1;
+  } else {
+    for (const r of [...templates, ...existing]) perDomain[r.domain] = (perDomain[r.domain] ?? 0) + 1;
+  }
 
   const deficits = Object.fromEntries(
     Object.entries(domains).map(([d, meta]) => [d, Math.max(0, meta.floor - perDomain[d])]),

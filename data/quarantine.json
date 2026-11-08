@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-08T03:20:26.832Z",
+  "generatedAt": "2026-11-08T03:39:59.664Z",
   "counts": {
-    "total": 93,
+    "total": 116,
     "byGate": {
       "quote": 11,
-      "duplicate": 5,
-      "entail": 77
+      "duplicate": 6,
+      "entail": 99
     }
   },
   "questions": [
@@ -5502,6 +5502,1363 @@
       "rejection": {
         "gate": "entail",
         "reason": "answer-not-in-citation:0.55"
+      }
+    },
+    {
+      "stem": "An operator wants the capacity of the BPF map holding authenticated relations to be raised above its default, without editing and rebuilding the Cilium source. Which approach does the excerpt support?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Pass `--bpf-auth-map-max` to `cilium-agent` with the desired capacity."
+        },
+        {
+          "id": "b",
+          "text": "Pass `--bpf-map-dynamic-size-ratio` to `cilium-agent`, which resizes the Auth map along with the connection tracking maps."
+        },
+        {
+          "id": "c",
+          "text": "Set the `--bpf-lb-map-max` option, since it governs all node-scoped map capacities."
+        },
+        {
+          "id": "d",
+          "text": "No option exists; the excerpt states that configuration options will only be added on request, so the source code must be edited."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt lists `--bpf-auth-map-max` among the command line options that can override the upper capacity limit of some BPF maps, so the Auth map's limit can be raised without touching the source. The dynamic size ratio flag is described as affecting only a specific set of large maps, and `--bpf-lb-map-max` is a separate option for the load-balancing maps.",
+      "optionRationale": {
+        "b": "The excerpt says the ratio flag affects only ``cilium_ct_{4,6}_global``, ``cilium_ct_{4,6}_any``, ``cilium_nodeport_neigh{4,6}``, ``cilium_snat_v{4,6}_external`` and ``cilium_lb{4,6}_reverse_sk`` — the Auth map is not among them.",
+        "c": "``--bpf-lb-map-max`` is listed as its own option; nothing in the excerpt says it governs all node-scoped maps.",
+        "d": "The excerpt does list per-map command line options, so editing the source is not the only route."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/ebpf/maps.rst",
+          "anchor": "ebpf-maps",
+          "title": "eBPF Maps",
+          "quote": "A given capacity can be set using\n``--bpf-auth-map-max``, ``--bpf-ct-global-tcp-max``, ``--bpf-ct-global-any-max``,",
+          "url": "https://docs.cilium.io/en/stable/network/ebpf/maps/#ebpf-maps"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "deepinfra/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/ebpf/maps.rst#ebpf-maps",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "c81920221d9f74ad",
+      "domain": "ebpf",
+      "competency": "bpf-maps",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation:0.57"
+      }
+    },
+    {
+      "stem": "According to the excerpt, what does Cilium attach BPF cgroup programs to enable?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Socket-based load-balancing, also known as host-reachable services"
+        },
+        {
+          "id": "b",
+          "text": "Network policy enforcement at the device level"
+        },
+        {
+          "id": "c",
+          "text": "Transparent encryption of pod traffic"
+        },
+        {
+          "id": "d",
+          "text": "DNS-based service discovery"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt opens by saying Cilium attaches BPF cgroup programs to enable socket-based load-balancing (aka host-reachable services).",
+      "optionRationale": {
+        "b": "The excerpt mentions the device attach type in the tree but does not say cgroup programs are attached to enable device-level policy.",
+        "c": "Encryption is not mentioned in the excerpt.",
+        "d": "DNS-based service discovery is not mentioned in the excerpt."
+      },
+      "yieldSource": "definition",
+      "citations": [
+        {
+          "file": "network/kubernetes/kubeproxy-free.rst",
+          "anchor": "validate-bpf-cgroup-programs-attachment",
+          "title": "Validate BPF cgroup programs attachment",
+          "quote": "Cilium attaches BPF ``cgroup`` programs to enable socket-based load-balancing (aka\n``host-reachable`` services).",
+          "url": "https://docs.cilium.io/en/stable/network/kubernetes/kubeproxy-free/#validate-bpf-cgroup-programs-attachment"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "deepinfra/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/kubernetes/kubeproxy-free.rst#validate-bpf-cgroup-programs-attachment",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "485b1b883448a1a7",
+      "domain": "ebpf",
+      "competency": "ebpf-program-model",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation:0.67"
+      }
+    },
+    {
+      "stem": "How does the excerpt characterise mounting the eBPF filesystem manually before Cilium is deployed?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It is optional, because Cilium will mount the filesystem automatically if it is not already mounted."
+        },
+        {
+          "id": "b",
+          "text": "It is mandatory, because Cilium cannot mount the filesystem itself."
+        },
+        {
+          "id": "c",
+          "text": "It is forbidden, because only the cilium-agent may mount the filesystem."
+        },
+        {
+          "id": "d",
+          "text": "It is required only on nodes where systemd manages the kubelet."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt presents the manual mount as optional, since Cilium mounts the filesystem automatically when it is not mounted in the host filesystem.",
+      "optionRationale": {
+        "b": "The excerpt states Cilium will automatically mount the filesystem, so the manual step is not mandatory.",
+        "c": "Nothing in the excerpt forbids a manual mount; it is described as an option.",
+        "d": "systemd is mentioned only as a pointer to a further section, not as a condition for the manual mount."
+      },
+      "yieldSource": "contrast",
+      "citations": [
+        {
+          "file": "operations/system_requirements.rst",
+          "anchor": "mounted-ebpf-filesystem",
+          "title": "Mounted eBPF filesystem",
+          "quote": "Optionally it is also possible to mount the eBPF filesystem before Cilium is\ndeployed in the cluster",
+          "url": "https://docs.cilium.io/en/stable/operations/system_requirements/#mounted-ebpf-filesystem"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "deepinfra/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "operations/system_requirements.rst#mounted-ebpf-filesystem",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "5cad3e21666030ec",
+      "domain": "ebpf",
+      "competency": "ebpf-role",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation:0.64"
+      }
+    },
+    {
+      "stem": "An engineer wants fine-grained control over which destinations are excluded from masquerading and enables the eBPF implementation of ip-masq-agent. Which helm option does the excerpt give for this?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`ipMasqAgent.enabled=true`"
+        },
+        {
+          "id": "b",
+          "text": "`bpf.masquerade=true`"
+        },
+        {
+          "id": "c",
+          "text": "`ipMasqAgent.config.masqLinkLocal=true`"
+        },
+        {
+          "id": "d",
+          "text": "`devices=eth0`"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt states that Cilium implements ip-masq-agent in eBPF, which can be enabled with the `ipMasqAgent.enabled=true` helm option.",
+      "optionRationale": {
+        "b": "`bpf.masquerade=true` enables the eBPF-based masquerading implementation itself, not the ip-masq-agent.",
+        "c": "`masqLinkLocal` is a configuration option of the agent, not the helm option that enables it.",
+        "d": "`devices` is the helm option for manually changing which devices the program attaches to."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/concepts/masquerading.rst",
+          "anchor": "ebpf-based",
+          "title": "eBPF-based",
+          "quote": "which can be\nenabled with the ``ipMasqAgent.enabled=true`` helm option.",
+          "url": "https://docs.cilium.io/en/stable/network/concepts/masquerading/#ebpf-based"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "deepinfra/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/concepts/masquerading.rst#ebpf-based",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "f156dd09c529c9f7",
+      "domain": "ebpf",
+      "competency": "ebpf-role",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation"
+      }
+    },
+    {
+      "stem": "A cluster runs the eBPF-based ip-masq-agent with an empty configuration file. Which of the following does the excerpt say the agent will provision as a non-masquerade CIDR in that case?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`10.0.0.0/8`"
+        },
+        {
+          "id": "b",
+          "text": "`10.0.0.0/16`"
+        },
+        {
+          "id": "c",
+          "text": "`0.0.0.0/0`"
+        },
+        {
+          "id": "d",
+          "text": "`169.254.0.0/16` only if `masqLinkLocal` is set to true"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt lists the non-masquerade CIDRs provisioned when the configuration file is empty, and `10.0.0.0/8` is the first entry.",
+      "optionRationale": {
+        "b": "`10.0.0.0/16` is not in the excerpt's default list; the listed entry is `10.0.0.0/8`.",
+        "c": "`0.0.0.0/0` is not among the default non-masquerade CIDRs listed in the excerpt.",
+        "d": "The excerpt says `169.254.0.0/16` is appended if `masqLinkLocal` is not set or set to false, not when set to true."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/concepts/masquerading.rst",
+          "anchor": "ebpf-based",
+          "title": "eBPF-based",
+          "quote": "If the configuration\nfile is empty, the agent will provision the following non-masquerade CIDRs:",
+          "url": "https://docs.cilium.io/en/stable/network/concepts/masquerading/#ebpf-based"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "deepinfra/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/concepts/masquerading.rst#ebpf-based",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "7323fd37fe27fa71",
+      "domain": "ebpf",
+      "competency": "ebpf-role",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-empty"
+      }
+    },
+    {
+      "stem": "A platform team is planning a Cilium deployment and wants to know which flag controls the size of the Service load balancer maps. Which flag should they set?",
+      "options": [
+        {
+          "id": "a",
+          "text": "--bpf-lb-map-max"
+        },
+        {
+          "id": "b",
+          "text": "--bpf-map-size"
+        },
+        {
+          "id": "c",
+          "text": "--lb-services-map-entries"
+        },
+        {
+          "id": "d",
+          "text": "--bpf-ct-map-max"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt states that the LB services maps are configured via the `--bpf-lb-map-max` flag. No other flag name appears in the source, so the other options are invented.",
+      "optionRationale": {
+        "b": "The excerpt never mentions a flag called ``--bpf-map-size``; the sizing flag is ``--bpf-lb-map-max``.",
+        "c": "This flag name does not appear in the excerpt; the Service LB map size is set with ``--bpf-lb-map-max``.",
+        "d": "``--bpf-ct-map-max`` is not mentioned in the excerpt, which names ``--bpf-lb-map-max`` as the sizing flag."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/ebpf/maps.rst",
+          "anchor": "service-lb-map-sizing",
+          "title": "Service LB Map Sizing",
+          "quote": "These maps are configured via the ``--bpf-lb-map-max`` flag and are set to 64k by default.",
+          "url": "https://docs.cilium.io/en/stable/network/ebpf/maps/#service-lb-map-sizing"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "deepinfra/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/ebpf/maps.rst#service-lb-map-sizing",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "7b090a2bf3bdd548",
+      "domain": "ebpf",
+      "competency": "bpf-maps",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation"
+      }
+    },
+    {
+      "stem": "A cluster has 200 LB services, with an average of 10 endpoints per service and an average of 2 port/protocol entries per service. Using the excerpt's heuristic, roughly how many LB map entries are required?",
+      "options": [
+        {
+          "id": "a",
+          "text": "About 4,000"
+        },
+        {
+          "id": "b",
+          "text": "About 2,000"
+        },
+        {
+          "id": "c",
+          "text": "About 400"
+        },
+        {
+          "id": "d",
+          "text": "About 40,000"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt's heuristic multiplies the number of LB services by the average number of endpoints per service and the average number of port/protocols per service: 200 × 10 × 2 = 4,000.",
+      "optionRationale": {
+        "b": "This omits the average port/protocol factor of 2, giving only 200 × 10.",
+        "c": "This omits both the endpoint factor and the port/protocol factor, giving only the service count times 2.",
+        "d": "This multiplies by an extra factor of ten that the heuristic does not include."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/ebpf/maps.rst",
+          "anchor": "service-lb-map-sizing",
+          "title": "Service LB Map Sizing",
+          "quote": "\\text{LB map entries} \\approx (\\text{number of LB services}) * (\\text{avg number of endpoints per service}) * (\\text{avg number of port/protocols per service})",
+          "url": "https://docs.cilium.io/en/stable/network/ebpf/maps/#service-lb-map-sizing"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "deepinfra/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/ebpf/maps.rst#service-lb-map-sizing",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "3bfe5ea28e252522",
+      "domain": "ebpf",
+      "competency": "bpf-maps",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation"
+      }
+    },
+    {
+      "stem": "A team's workload includes one service that selects a very large set of Pod backends, far above the norm. What does the excerpt advise about the rough sizing heuristic in this case?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Because the heuristic assumes roughly normal distributions, such large outliers may make a more detailed estimate necessary."
+        },
+        {
+          "id": "b",
+          "text": "The heuristic remains exact regardless of outliers, so no further estimate is needed."
+        },
+        {
+          "id": "c",
+          "text": "Outliers reduce the required map size, so the heuristic overestimates and can be ignored."
+        },
+        {
+          "id": "d",
+          "text": "The heuristic only applies to services with a single port/protocol entry."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt notes that the heuristic assumes the number of selected Pods and ports/protocol entries per service are roughly normally distributed, and that large outliers may require a more detailed estimate.",
+      "optionRationale": {
+        "b": "The excerpt explicitly warns that outliers may require a more detailed estimate, so the heuristic is not exact in that case.",
+        "c": "The excerpt does not say outliers reduce requirements; it says they may call for a more detailed estimate.",
+        "d": "The excerpt places no single-port restriction on the heuristic; it refers to average port/protocol counts."
+      },
+      "yieldSource": "contrast",
+      "citations": [
+        {
+          "file": "network/ebpf/maps.rst",
+          "anchor": "service-lb-map-sizing",
+          "title": "Service LB Map Sizing",
+          "quote": "This heuristic assumes that number of selected Pods and ports/protocol entries per service are roughly normally distributed. If your use case\n   has large outliers (ex. such as a service that selects a very large set of Pod backends) it may be necessary to do a more detailed estimate.",
+          "url": "https://docs.cilium.io/en/stable/network/ebpf/maps/#service-lb-map-sizing"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "deepinfra/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/ebpf/maps.rst#service-lb-map-sizing",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "7208e59b2ca2a26c",
+      "domain": "ebpf",
+      "competency": "bpf-maps",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation:0.63"
+      }
+    },
+    {
+      "stem": "Which setting does the excerpt recommend increasing alongside `bpf.distributedLRU.enabled` in order to offset the higher memory usage of per-CPU pools?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`bpf.mapDynamicSizeRatio`"
+        },
+        {
+          "id": "b",
+          "text": "`bpf.mapStaticSizeRatio`"
+        },
+        {
+          "id": "c",
+          "text": "`bpf.lruMemoryPoolSize`"
+        },
+        {
+          "id": "d",
+          "text": "`bpf.perCpuPoolCount`"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt recommends not only enabling `bpf.distributedLRU.enabled` but also increasing the map sizing, which can be done via `bpf.mapDynamicSizeRatio`.",
+      "optionRationale": {
+        "b": "This flag name does not appear in the excerpt; the excerpt contrasts dynamic sizing with statically sized map configuration but names no such flag.",
+        "c": "No such flag is mentioned in the excerpt.",
+        "d": "No such flag is mentioned in the excerpt."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "operations/performance/tuning.rst",
+          "anchor": "ebpf-map-backend-memory",
+          "title": "eBPF Map Backend Memory",
+          "quote": "enable ``bpf.distributedLRU.enabled`` but to also increase the map\nsizing which can be done via ``bpf.mapDynamicSizeRatio``",
+          "url": "https://docs.cilium.io/en/stable/operations/performance/tuning/#ebpf-map-backend-memory"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "deepinfra/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "operations/performance/tuning.rst#ebpf-map-backend-memory",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "ad9e727ed10a5159",
+      "domain": "ebpf",
+      "competency": "bpf-maps",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation"
+      }
+    },
+    {
+      "stem": "An engineer is told that eBPF host-routing was introduced to fully bypass iptables and the upper host stack. In which Cilium release did this feature appear?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Cilium 1.9"
+        },
+        {
+          "id": "b",
+          "text": "Cilium 1.10"
+        },
+        {
+          "id": "c",
+          "text": "Cilium 1.19"
+        },
+        {
+          "id": "d",
+          "text": "Cilium 1.8"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt states that eBPF-based host-routing was introduced in Cilium 1.9 to fully bypass iptables and the upper host stack.",
+      "optionRationale": {
+        "b": "1.10 is a plausible later release but is not the version named in the excerpt.",
+        "c": "1.19 is a trap: the blog URL contains \"cilium-19\", which refers to the 1.9 announcement, not a 1.19 release.",
+        "d": "1.8 is an earlier release than the one named in the excerpt."
+      },
+      "yieldSource": "definition",
+      "citations": [
+        {
+          "file": "operations/performance/tuning.rst",
+          "anchor": "ebpf-host-routing",
+          "title": "eBPF Host-Routing",
+          "quote": "We introduced `eBPF-based host-routing <https://cilium.io/blog/2020/11/10/cilium-19#veth>`_\nin Cilium 1.9 to fully bypass iptables and the upper host stack",
+          "url": "https://docs.cilium.io/en/stable/operations/performance/tuning/#ebpf-host-routing"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "deepinfra/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "operations/performance/tuning.rst#ebpf-host-routing",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "28af7fece2dab8d8",
+      "domain": "ebpf",
+      "competency": "ebpf-role",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-appears-in-distractor"
+      }
+    },
+    {
+      "stem": "You are preparing the second EKS cluster for a Cluster Mesh and are about to create its VPC with the AWS CLI. A colleague warns you that one particular CIDR range must be avoided because certain AWS services use it. Which CIDR block does the guidance tell you to avoid for the VPC?",
+      "options": [
+        {
+          "id": "a",
+          "text": "172.17.0.0/16"
+        },
+        {
+          "id": "b",
+          "text": "10.1.0.0/16"
+        },
+        {
+          "id": "c",
+          "text": "10.1.1.0/24"
+        },
+        {
+          "id": "d",
+          "text": "0.0.0.0/0"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt instructs you to avoid using the 172.17.0.0/16 CIDR range for your VPC, because certain AWS services utilise this range and it could cause potential issues. The other addresses in the options appear in the excerpt as the VPC and subnet CIDRs actually created, or as the destination CIDR block of a route, not as a range to avoid.",
+      "optionRationale": {
+        "b": "10.1.0.0/16 is the CIDR block passed to create-vpc for Cluster_2_VPC in the excerpt, not a range to avoid.",
+        "c": "10.1.1.0/24 is the CIDR block of Cluster_2_Public_Subnet_1 in the excerpt, not a range to avoid.",
+        "d": "0.0.0.0/0 appears in the excerpt as the destination CIDR block of a route, not as a range to avoid for the VPC."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/clustermesh/eks-clustermesh-prep.rst",
+          "anchor": "install-cluster-two",
+          "title": "Install cluster two",
+          "quote": "Avoid using the ``172.17.0.0/16`` CIDR range for your VPC to prevent potential issues since certain `AWS services",
+          "url": "https://docs.cilium.io/en/stable/network/clustermesh/eks-clustermesh-prep/#install-cluster-two"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "deepinfra/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/clustermesh/eks-clustermesh-prep.rst#install-cluster-two",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "12f6f7de3bca1a5d",
+      "domain": "cluster-mesh",
+      "competency": "mesh-benefits",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation"
+      }
+    },
+    {
+      "stem": "You are preparing the first EKS cluster for a Cilium Cluster Mesh deployment and are about to create the VPC that will host it. A colleague suggests using 172.17.0.0/16 as the CIDR block. What does the preparation guide advise, and why?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Avoid 172.17.0.0/16, because certain AWS services utilise this range and using it could cause potential issues."
+        },
+        {
+          "id": "b",
+          "text": "Use 172.17.0.0/16, because it is the range reserved for the Cilium Cluster Mesh control plane traffic between clusters."
+        },
+        {
+          "id": "c",
+          "text": "Avoid 172.17.0.0/16, because it is the default CIDR block that the create-vpc command assigns when no block is given."
+        },
+        {
+          "id": "d",
+          "text": "Use 172.17.0.0/16, because the guide's example VPC is created with that block and the subnets are carved from it."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The guide explicitly warns against the 172.17.0.0/16 range when creating the VPC, stating that certain AWS services utilise this range, so using it could lead to potential issues. The example instead creates the VPC with 10.0.0.0/16.",
+      "optionRationale": {
+        "b": "The excerpt says nothing about a reserved Cluster Mesh control plane range; the warning is about AWS services using the range.",
+        "c": "The excerpt does not describe any default CIDR block for create-vpc; the example passes 10.0.0.0/16 explicitly.",
+        "d": "The example VPC is created with 10.0.0.0/16, not 172.17.0.0/16, and the guide advises avoiding the latter."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/clustermesh/eks-clustermesh-prep.rst",
+          "anchor": "install-cluster-one",
+          "title": "Install cluster one",
+          "quote": "Avoid using the ``172.17.0.0/16`` CIDR range for your VPC to prevent potential issues since certain `AWS services <https://docs.aws.amazon.com/vpc/latest/userguide/vpc-cidr-blocks.html>`__ utilize this range.",
+          "url": "https://docs.cilium.io/en/stable/network/clustermesh/eks-clustermesh-prep/#install-cluster-one"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "deepinfra/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/clustermesh/eks-clustermesh-prep.rst#install-cluster-one",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "dca6642cf497e620",
+      "domain": "cluster-mesh",
+      "competency": "mesh-benefits",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation:0.67"
+      }
+    },
+    {
+      "stem": "An engineer wants the metric to carry the Kubernetes pod name and namespace in the form `namespace/pod` as the source context value. Which value should be given to `sourceContext`?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`pod`"
+        },
+        {
+          "id": "b",
+          "text": "`pod-name`"
+        },
+        {
+          "id": "c",
+          "text": "`namespace`"
+        },
+        {
+          "id": "d",
+          "text": "`workload`"
+        }
+      ],
+      "answer": "a",
+      "explanation": "In the table of possible context values, `pod` is described as the Kubernetes pod name and namespace name in the form of `namespace/pod`.",
+      "optionRationale": {
+        "b": "`pod-name` gives only the Kubernetes pod name, without the namespace.",
+        "c": "`namespace` gives only the Kubernetes namespace name.",
+        "d": "`workload` gives the workload name and namespace, not the pod name and namespace."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "observability/metrics.rst",
+          "anchor": "context-options",
+          "title": "Context Options",
+          "quote": "``pod``               Kubernetes pod name and namespace name in the form of ``namespace/pod``.",
+          "url": "https://docs.cilium.io/en/stable/observability/metrics/#context-options"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "deepinfra/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "observability/metrics.rst#context-options",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "5ae08adfc5066db6",
+      "domain": "observability",
+      "competency": "hubble-capabilities",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-appears-in-distractor"
+      }
+    },
+    {
+      "stem": "You run `hubble watch peers` from the Hubble CLI pod and examine the output. Which observation confirms that TLS is enabled for the Hubble server?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Each peer line includes a `TLS.ServerName` value, such as `kind-worker.default.hubble-grpc.cilium.io`."
+        },
+        {
+          "id": "b",
+          "text": "Each peer line shows only an IP address and a node name, with no server name."
+        },
+        {
+          "id": "c",
+          "text": "The command fails with `remote error: tls: certificate required`."
+        },
+        {
+          "id": "d",
+          "text": "The command fails with `error reading server preface: EOF`."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The sample output of `hubble watch peers` shows peer lines carrying a `TLS.ServerName`, and the excerpt warns that if the `TLS.ServerName` is missing from your output then TLS is not enabled for the Hubble server.",
+      "optionRationale": {
+        "b": "The excerpt says the opposite: a missing `TLS.ServerName` means TLS is not enabled and the following steps will not work.",
+        "c": "That error appears when querying the server without a client certificate, not in the `hubble watch peers` output.",
+        "d": "That error appears when connecting without TLS at all, not in the `hubble watch peers` output."
+      },
+      "yieldSource": "contrast",
+      "citations": [
+        {
+          "file": "observability/hubble/configuration/tls.rst",
+          "anchor": "validating-the-installation",
+          "title": "Validating the Installation",
+          "quote": "If the ``TLS.ServerName`` is missing from your output then TLS is not enabled for the Hubble server and the following steps will not work.",
+          "url": "https://docs.cilium.io/en/stable/observability/hubble/configuration/tls/#validating-the-installation"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "deepinfra/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "observability/hubble/configuration/tls.rst#validating-the-installation",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "b6489b638280fe9e",
+      "domain": "observability",
+      "competency": "hubble-capabilities",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation:0.38"
+      }
+    },
+    {
+      "stem": "In the sample `cilium status` output, the Hubble Relay line reads `1 errors, 2 warnings`. What does the excerpt say `cilium status` should display for Hubble Relay when it is enabled and healthy?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`disabled`"
+        },
+        {
+          "id": "b",
+          "text": "`OK`"
+        },
+        {
+          "id": "c",
+          "text": "`Running: 1`"
+        },
+        {
+          "id": "d",
+          "text": "`Ready: 1/1`"
+        }
+      ],
+      "answer": "b",
+      "explanation": "The excerpt opens by stating that if Hubble Relay is enabled, `cilium status` should display `OK`; otherwise errors or warnings are expected to be reported.",
+      "optionRationale": {
+        "a": "`disabled` is what the sample output shows for ClusterMesh, not the healthy Hubble Relay indication.",
+        "c": "`Running: 1` appears in the Containers section of the output, not as the Hubble Relay status line.",
+        "d": "`Ready: 1/1` appears for DaemonSets and Deployments in the output, not as the Hubble Relay status line."
+      },
+      "yieldSource": "contrast",
+      "citations": [
+        {
+          "file": "observability/hubble/setup.rst",
+          "anchor": "hubble-relay",
+          "title": "Hubble Relay",
+          "quote": "If Hubble Relay is enabled, ``cilium status`` should display: ``OK``.",
+          "url": "https://docs.cilium.io/en/stable/observability/hubble/setup/#hubble-relay"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "deepinfra/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "observability/hubble/setup.rst#hubble-relay",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "4d41e1b308c954fc",
+      "domain": "observability",
+      "competency": "hubble-capabilities",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-empty"
+      }
+    },
+    {
+      "stem": "You apply a Cilium-enforced L4 NetworkPolicy that restricts communication in the `blue` namespace to clients located only in `blue` and `red` namespaces, then re-run the connectivity checks. Which outcome matches the excerpt?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The green client to server 'blue' returns 000 with exit code 28, while the other five checks return 200."
+        },
+        {
+          "id": "b",
+          "text": "All checks against server 'blue' return 000, including those from red and blue clients."
+        },
+        {
+          "id": "c",
+          "text": "The green client to server 'red' returns 000, while green to blue still returns 200."
+        },
+        {
+          "id": "d",
+          "text": "All six checks return 200 because L4 policy does not affect cross-namespace traffic."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The policy restricts the `blue` namespace to clients in `blue` and `red`, so only the green client's request to server 'blue' fails, returning 000 with exit code 28; the remaining five checks return 200.",
+      "optionRationale": {
+        "b": "Red and blue clients are explicitly permitted to reach the ``blue`` namespace, so their checks return 200.",
+        "c": "The policy restricts the ``blue`` namespace, not the ``red`` namespace, so green to red still returns 200.",
+        "d": "The excerpt shows the green-to-blue check failing after the L4 policy is applied."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/servicemesh/istio.rst",
+          "anchor": "prerequisites",
+          "title": "Prerequisites",
+          "quote": "The following command applies an L4 network policy that restricts communication\nin the ``blue`` namespace to clients located only in ``blue`` and ``red`` namespaces.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/istio/#prerequisites"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "deepinfra/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/istio.rst#prerequisites",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "292b1514aedee5a0",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation:0.65"
+      }
+    },
+    {
+      "stem": "You have applied the `envoy-helloworld-v1-90-v2-10.yaml` file, which defines a `CiliumEnvoyConfig` for the helloworld Service. You then run ten requests against `helloworld:5000/hello` from the client Pod. What distribution of responses should you expect?",
+      "options": [
+        {
+          "id": "a",
+          "text": "About nine responses from helloworld-v1 and one from helloworld-v2."
+        },
+        {
+          "id": "b",
+          "text": "Five responses from helloworld-v1 and five from helloworld-v2."
+        },
+        {
+          "id": "c",
+          "text": "All ten responses from helloworld-v1, because the v2 Service is no longer selected."
+        },
+        {
+          "id": "d",
+          "text": "One response from helloworld-v1 and nine from helloworld-v2."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt states that the file defines a `CiliumEnvoyConfig` to send 90% of traffic to the helloworld-v1 Service backend and 10% to the helloworld-v2 Service backend, and the observed results matched that split.",
+      "optionRationale": {
+        "b": "That is the even split seen before the ``CiliumEnvoyConfig`` was applied, not the weighted split it introduces.",
+        "c": "The excerpt describes a 90/10 split, not the removal of the v2 backend from selection.",
+        "d": "The weights are the other way round: v1 receives the larger share."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/servicemesh/envoy-traffic-shifting.rst",
+          "anchor": "apply-weight-based-routing",
+          "title": "Apply weight-based routing",
+          "quote": "to send 90% of traffic to the helloworld-v1 Service backend and 10% of traffic to the helloworld-v2 Service backend",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/envoy-traffic-shifting/#apply-weight-based-routing"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "deepinfra/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/envoy-traffic-shifting.rst#apply-weight-based-routing",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "97681fb7aabb0c7c",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation:0.44"
+      }
+    },
+    {
+      "stem": "After deploying web servers and client applications across the red, blue and green namespaces, you run the connectivity checks without applying any network policy. What result does the excerpt say you should see?",
+      "options": [
+        {
+          "id": "a",
+          "text": "All commands should complete successfully, with every check returning 200."
+        },
+        {
+          "id": "b",
+          "text": "Only same-namespace checks return 200; cross-namespace checks fail."
+        },
+        {
+          "id": "c",
+          "text": "Checks to the blue namespace return 503 because of Istio's mTLS."
+        },
+        {
+          "id": "d",
+          "text": "Checks from the green namespace fail with exit code 28."
+        }
+      ],
+      "answer": "a",
+      "explanation": "Because Istio works in `PERMISSIVE` mode by default, both Istio-managed Pods and Pods without sidecars can exchange traffic, so all six checks return 200.",
+      "optionRationale": {
+        "b": "The excerpt shows cross-namespace checks such as client 'red' to server 'blue' returning 200, so cross-namespace traffic succeeds.",
+        "c": "The 503 responses appear only later, after the Cilium L7 network policy is applied, not in the initial baseline.",
+        "d": "The green client only fails with exit code 28 after the L4 policy restricting the blue namespace is applied, not in the baseline run."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/servicemesh/istio.rst",
+          "anchor": "id1",
+          "title": "Prerequisites",
+          "quote": "By default, Istio works in ``PERMISSIVE`` mode, allowing both Istio-managed and Pods without sidecars\nto send and receive traffic between each other.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/istio/#id1"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "deepinfra/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/istio.rst#id1",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "82b76837f2103626",
+      "domain": "service-mesh",
+      "competency": "sidecar-versus-sidecarless",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "duplicate",
+        "reason": "near-duplicate-stem"
+      }
+    },
+    {
+      "stem": "You run `hubble observe --pod deathstar --protocol http` after generating traffic from the `tiefighter` and `xwing` pods. Which flows appear in the output?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Only the HTTP request and response that were forwarded, plus the HTTP request that was dropped; the `xwing` connection attempts do not appear."
+        },
+        {
+          "id": "b",
+          "text": "All flows to the `deathstar` pod, including the `xwing` TCP SYN attempts, because `--protocol http` is ignored when a pod filter is present."
+        },
+        {
+          "id": "c",
+          "text": "Only the dropped flows, because `--protocol http` implicitly sets the verdict to DROPPED."
+        },
+        {
+          "id": "d",
+          "text": "Only the `xwing` flows, because the `tiefighter` requests were allowed and therefore not observed."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt shows that filtering on the application layer (L7, HTTP) to the `deathstar` pod returns the forwarded POST request, its forwarded 200 response, and the dropped PUT request. The `xwing` attempts appear only in the separate `--verdict DROPPED` output, where they are recorded as `Policy denied DROPPED (TCP Flags: SYN)` rather than as HTTP flows.",
+      "optionRationale": {
+        "b": "The excerpt presents `--protocol http` as a filter on the application layer (L7, HTTP), and the resulting output contains no `xwing` entries, so the filter is not ignored.",
+        "c": "The `--protocol http` output includes two FORWARDED entries, so the filter does not imply a DROPPED verdict.",
+        "d": "The `--protocol http` output contains the `tiefighter` request and response, so allowed traffic is observed."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "observability/hubble/hubble-cli.rst",
+          "anchor": "inspecting-the-cluster-s-network-traffic-with-hubble-relay",
+          "title": "Inspecting the cluster's network traffic with Hubble Relay",
+          "quote": "The command below filters all\ntraffic on the application layer (L7, HTTP) to the ``deathstar`` pod:",
+          "url": "https://docs.cilium.io/en/stable/observability/hubble/hubble-cli/#inspecting-the-cluster-s-network-traffic-with-hubble-relay"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "deepinfra/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "observability/hubble/hubble-cli.rst#inspecting-the-clusters-network-traffic-with-hubble-relay",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "7a97b9086c389b8e",
+      "domain": "observability",
+      "competency": "hubble-capabilities",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation:0.59"
+      }
+    },
+    {
+      "stem": "In the excerpt's example `CiliumNetworkPolicy`, the L7 matching conditions on the rules have been omitted or wildcarded. What is the consequence for requests that match the L4 section of each rule?",
+      "options": [
+        {
+          "id": "a",
+          "text": "All such requests are permitted."
+        },
+        {
+          "id": "b",
+          "text": "All such requests are denied until an explicit `matchPattern` is supplied."
+        },
+        {
+          "id": "c",
+          "text": "Such requests bypass the proxy and are never shown in `hubble observe`."
+        },
+        {
+          "id": "d",
+          "text": "Such requests are permitted only on port 53, since DNS is the first rule listed."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt explains that omitting or wildcarding the L7 matching conditions will permit all requests that match the L4 section of each rule.",
+      "optionRationale": {
+        "b": "The excerpt says the opposite: wildcarded conditions permit all requests matching the L4 section.",
+        "c": "The excerpt states that traffic matching an L7 rule is redirected to the proxy and its L7 flow details are shown.",
+        "d": "The wildcarding applies to each rule, and the example covers both the DNS rule on port 53 and the HTTP rule on ports 80 and 8080."
+      },
+      "yieldSource": "definition",
+      "citations": [
+        {
+          "file": "observability/visibility.rst",
+          "anchor": "layer-7-protocol-visibility",
+          "title": "Layer 7 Protocol Visibility",
+          "quote": "L7 matching\nconditions on the rules have been omitted or wildcarded, which will\npermit all requests that match the L4 section of each rule:",
+          "url": "https://docs.cilium.io/en/stable/observability/visibility/#layer-7-protocol-visibility"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "deepinfra/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "observability/visibility.rst#layer-7-protocol-visibility",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "ee576738bc891099",
+      "domain": "observability",
+      "competency": "l7-visibility",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation:0.60"
+      }
+    },
+    {
+      "stem": "A platform team runs Cilium 1.16 in a development cluster where no LoadBalancer Service implementation is available, and they want the Cilium ingress controller's Envoy listener reachable directly on the host network. After enabling host network mode via Helm, what happens to the LoadBalancer/NodePort Service mode?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It is automatically disabled, because the two modes are mutually exclusive."
+        },
+        {
+          "id": "b",
+          "text": "It remains active and both modes serve traffic simultaneously on different ports."
+        },
+        {
+          "id": "c",
+          "text": "It is converted into a shared Ingress listener on port 8080."
+        },
+        {
+          "id": "d",
+          "text": "It is left untouched but must be disabled manually before host network mode takes effect."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt states that enabling host network mode automatically disables the LoadBalancer/NodePort type Service mode, and that the two are mutually exclusive. No manual step is required, and the modes cannot run together.",
+      "optionRationale": {
+        "b": "The excerpt says the modes are mutually exclusive, so they cannot both serve traffic at once.",
+        "c": "Nothing in the excerpt describes converting the Service mode into a shared listener; the Service mode is simply disabled.",
+        "d": "The disabling is automatic, not a manual prerequisite."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/servicemesh/ingress.rst",
+          "anchor": "host-network-mode",
+          "title": "Host network mode",
+          "quote": "Enabling the Cilium ingress controller host network mode automatically disables the LoadBalancer/NodePort type Service mode. They are mutually exclusive.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/ingress/#host-network-mode"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "deepinfra/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/ingress.rst#host-network-mode",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "cc4b4205af9d9029",
+      "domain": "service-mesh",
+      "competency": "ingress",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation:0.56"
+      }
+    },
+    {
+      "stem": "A cluster runs the Cilium ingress controller in dedicated mode, and several Ingress resources are deployed. An engineer creates a new Ingress resource for host network exposure but omits the per-Ingress host listener port annotation. What is the consequence according to the excerpt?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The annotation is mandatory in this situation, so the Ingress resource must set ingress.cilium.io/host-listener-port."
+        },
+        {
+          "id": "b",
+          "text": "The Ingress resource silently falls back to the shared listener on port 8080."
+        },
+        {
+          "id": "c",
+          "text": "The Ingress resource inherits the port from ingressController.hostNetwork.sharedListenerPort."
+        },
+        {
+          "id": "d",
+          "text": "The Ingress resource is rejected only if the global mode is shared rather than dedicated."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt says the ingress.cilium.io/host-listener-port annotation is mandatory if the global mode is configured to dedicated, or if the Ingress resource sets the loadbalancer-mode annotation to dedicated and multiple Ingress resources are deployed.",
+      "optionRationale": {
+        "b": "The excerpt describes the annotation as mandatory in this case, not as having a silent fallback.",
+        "c": "The sharedListenerPort Helm flag belongs to the shared Ingress method, not to the dedicated per-Ingress annotation.",
+        "d": "The mandatory condition applies when the global mode is dedicated, which is the opposite of what this option claims."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/servicemesh/ingress.rst",
+          "anchor": "host-network-mode",
+          "title": "Host network mode",
+          "quote": "This annotation is mandatory if the global Cilium ingress controller mode is configured to ``dedicated`` (``ingressController.loadbalancerMode``) or the ingress resource sets the ``ingress.cilium.io/loadbalancer-mode`` annotation to ``dedicated`` and multiple ``Ingress`` resources are deployed.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/ingress/#host-network-mode"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "deepinfra/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/ingress.rst#host-network-mode",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "a4be89d5759a39a4",
+      "domain": "service-mesh",
+      "competency": "ingress",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation:0.67"
+      }
+    },
+    {
+      "stem": "In a setup where Istio ambient mode with mTLS and Istio L7 HTTP policy controls are in use, which component should enforce policy for traffic between Istio-managed, mTLS-secured workloads at L4 or above?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Istio."
+        },
+        {
+          "id": "b",
+          "text": "Cilium, using its L7 HTTP policy controls."
+        },
+        {
+          "id": "c",
+          "text": "Cilium, using Kubernetes NetworkPolicy at L7."
+        },
+        {
+          "id": "d",
+          "text": "Both Cilium and Istio L7 HTTP policy controls simultaneously."
+        }
+      ],
+      "answer": "a",
+      "explanation": "Because Cilium cannot see the source, destination or L7 details of the tunneled and encrypted traffic, the excerpt concludes that Istio should be used to enforce policy for traffic between Istio-managed, mTLS-secured workloads at L4 or above.",
+      "optionRationale": {
+        "b": "Cilium has no visibility into any L7 information for that tunneled and encrypted traffic.",
+        "c": "Cilium-enforced Kubernetes NetworkPolicy is described as applying to traffic ingressing from non-Istio-managed workloads, not to the mTLS-secured inter-workload traffic.",
+        "d": "The excerpt does not recommend using both Cilium and Istio L7 HTTP policy controls at the same time, to avoid split-brain problems."
+      },
+      "yieldSource": "definition",
+      "citations": [
+        {
+          "file": "network/servicemesh/istio.rst",
+          "anchor": "istio-configuration",
+          "title": "Istio configuration",
+          "quote": "This means that Istio should be used to enforce policy for traffic between Istio-managed, mTLS-secured workloads at L4 or above.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/istio/#istio-configuration"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "deepinfra/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/istio.rst#istio-configuration",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "4bfacdcf3c85d58d",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-appears-in-distractor"
       }
     }
   ]

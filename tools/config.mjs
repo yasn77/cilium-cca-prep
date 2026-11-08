@@ -51,13 +51,16 @@ export const providers = {
   },
   judge: {
     baseUrlEnv: 'TYPESAFE_BASE_URL',
-    defaultBaseUrl: 'https://nano-gpt.com/api/v1',
-    // nano-gpt namespaces the model; a bare "jev-latest" is rejected there.
-    model: '~typesafe/jev-latest',
+    // OpenRouter serves SystemOne at /api/v1/systemone and maps a bare
+    // `jev-latest` onto the typesafe/ namespace. It is the default because
+    // nano-gpt's weekly quota blocks judging while generation carries on, and
+    // llmgateway refuses typed decisions entirely.
+    defaultBaseUrl: 'https://openrouter.ai/api/v1',
+    model: 'jev-latest',
     modelEnv: 'TYPESAFE_MODEL',
-    // Falls back to the generator key so one gateway can serve both.
+    // Each gateway names the credential differently; the first one found wins.
     keyEnv: 'TYPESAFE_API_KEY',
-    fallbackKeyEnv: 'LLM_API_KEY',
+    fallbackKeyEnvs: ['JUDGE_API_KEY', 'OPENROUTER_API_KEY', 'LLM_API_KEY'],
     // Measured flat with batch size in the reference client; 100 is cheap in time.
     batchSize: 100,
   },

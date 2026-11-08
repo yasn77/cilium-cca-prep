@@ -209,3 +209,47 @@ test('the answer still has to be supported by the citation', () => {
   );
   assert.match(result.reason, /^answer-not-in-citation/);
 });
+
+// --- judge verdict merging ----------------------------------------------
+
+const { mergeVerdicts, judgeSource } = await import(path.join(ROOT, 'tools', 'verdicts.mjs'));
+
+test('an error verdict never displaces a real defect', () => {
+  // This regression let 134 questions ship that SystemOne had rejected: the
+  // adversarial judge's infrastructure error overwrote its verdict.
+  const merged = mergeVerdicts(
+    { q1: { choice: 'trivia_not_in_blueprint', confidence: 0.9 } },
+    { q1: { choice: 'error', detail: 'no verdict returned for this key' } },
+  );
+  assert.equal(merged.q1.choice, 'trivia_not_in_blueprint');
+});
+
+test('an error verdict never counts as approval', () => {
+  const merged = mergeVerdicts({}, { q1: { choice: 'error' } });
+  assert.equal(merged.q1.choice, 'error');
+});
+
+test('a real verdict from either judge stands alone', () => {
+  const merged = mergeVerdicts(
+    { q1: { choice: 'good_exam_item' } },
+    { q1: { choice: 'error' }, q2: { choice: 'good_exam_item' } },
+  );
+  assert.equal(merged.q1.choice, 'good_exam_item');
+  assert.equal(merged.q2.choice, 'good_exam_item');
+});
+
+test('when both judges give a real verdict the stricter one wins', () => {
+  const merged = mergeVerdicts(
+    { q1: { choice: 'good_exam_item' } },
+    { q1: { choice: 'ambiguity_two_correct' } },
+  );
+  assert.equal(merged.q1.choice, 'ambiguity_two_correct');
+  assert.deepEqual(merged.q1.also, ['good_exam_item']);
+});
+
+test('judgeSource reports which judges contributed', () => {
+  assert.equal(judgeSource({ q1: {} }, {}), 'systemone');
+  assert.equal(judgeSource({}, { q1: {} }), 'adversarial');
+  assert.equal(judgeSource({ q1: {} }, { q1: {} }), 'systemone+adversarial');
+  assert.equal(judgeSource({}, {}), null);
+});

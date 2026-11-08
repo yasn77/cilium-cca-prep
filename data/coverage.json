@@ -1,31 +1,31 @@
 {
-  "generatedAt": "2026-11-08T03:30:15.563Z",
+  "generatedAt": "2026-11-08T13:07:32.970Z",
   "templates": 39,
-  "ai": 644,
-  "consideredSections": 19,
+  "ai": 853,
+  "consideredSections": 15,
   "usage": {
-    "calls": 19,
-    "promptTokens": 31485,
-    "completionTokens": 23925
+    "calls": 15,
+    "promptTokens": 23801,
+    "completionTokens": 16965
   },
   "rejections": {
-    "empty-option": 2
+    "too-few-options": 1
   },
   "coverage": {
     "architecture": {
-      "count": 106,
+      "count": 159,
       "floor": 100,
       "weight": 20,
       "met": true
     },
     "network-policy": {
-      "count": 103,
+      "count": 151,
       "floor": 90,
       "weight": 18,
       "met": true
     },
     "service-mesh": {
-      "count": 123,
+      "count": 149,
       "floor": 80,
       "weight": 16,
       "met": true
@@ -37,13 +37,13 @@
       "met": true
     },
     "installation": {
-      "count": 53,
+      "count": 86,
       "floor": 50,
       "weight": 10,
       "met": true
     },
     "cluster-mesh": {
-      "count": 68,
+      "count": 115,
       "floor": 50,
       "weight": 10,
       "met": true
@@ -55,7 +55,7 @@
       "met": true
     },
     "bgp": {
-      "count": 38,
+      "count": 40,
       "floor": 30,
       "weight": 6,
       "met": true

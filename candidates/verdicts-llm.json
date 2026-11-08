@@ -1,0 +1,4474 @@
+{
+  "generatedAt": "2026-11-08T13:16:29.384Z",
+  "model": "openai/gpt-5-nano",
+  "baseUrl": "https://openrouter.ai/api/v1",
+  "configured": true,
+  "method": "adversarial re-answer",
+  "histogram": {
+    "good_exam_item": 798,
+    "error": 88,
+    "answer_not_determinable": 6
+  },
+  "verdicts": {
+    "1c0ec6d6bedc6ab3": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "fdae965890409a35": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "e75bc028edf8d586": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c043a320c68f9311": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "a20d03b654e568a3": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "d735e63113f452b6": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "254aa3d5fafeae6b": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "4e55f6ae8ade72e3": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "e30a6b4c3910c148": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "e440d852c638b8cc": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "9b05f33ad6749f3e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "cfa0685b991591c6": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "338e90134850e0dc": {
+      "choice": "good_exam_item",
+      "confidence": 0.85,
+      "detail": null
+    },
+    "a541da938da448cb": {
+      "choice": "good_exam_item",
+      "confidence": 0.85,
+      "detail": null
+    },
+    "c6d644584b60bed9": {
+      "choice": "good_exam_item",
+      "confidence": 0.85,
+      "detail": null
+    },
+    "f46c6e3be3792535": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "5e6fab343b239c46": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "5e50bf95f2878582": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "72e8457dc508c64d": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "653ac7121a014a09": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "8515061745b44ef2": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "947045d0b1b99d98": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "38cdb07d7904eced": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "0f138c18557ce81d": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "27bc2b63fecf59ee": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "8442054483370b1c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "fc1942dd03aff71e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c32c1c922e2209e5": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "aa3bcbb23a132136": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "e9fa1722c8225547": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "02e8c62e745e7dd5": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "10fe40605ba8ab82": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "0b30edb4c3491baa": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "6cbb37b38744525a": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "476080ae2c8545c9": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "302f4e6633b513d3": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "11c4e64a679246dd": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "027f304fa9ec7fa8": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "f8f7a3f68bb0ed2e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "17ff519c2cbeec60": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "8b5b0fa1df07c661": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "2e314c0715fa8545": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "f47d241a04521823": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "2761c967feb2f5aa": {
+      "choice": "answer_not_determinable",
+      "confidence": 0,
+      "detail": "The passage provided does not define addressing space for Cilium."
+    },
+    "cc6819b6b1bb5050": {
+      "choice": "answer_not_determinable",
+      "confidence": 0,
+      "detail": "The passage does not mention auto-configuration."
+    },
+    "fa4ccf5173bf640c": {
+      "choice": "answer_not_determinable",
+      "confidence": 0,
+      "detail": "The passage does not describe Identity context."
+    },
+    "b3212bc7a2bae9cb": {
+      "choice": "answer_not_determinable",
+      "confidence": 0,
+      "detail": "The passage does not discuss the encapsulation model or PodCIDR sizing relevant to the underlying network."
+    },
+    "39abdb1146c062c7": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "efa47379922d5ee5": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c36165f45e297653": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "99fd142baf441a5c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "786dd43b09ad1ea5": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "f37b3b7757719126": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "96aba39cf8cc3a75": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "a8b82f6a61f7809a": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "94c78533833e7612": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "a48c7f3c9e265686": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "f5aef8e4f5ce0e18": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "5a6cccfe561559f4": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "be54bab782346128": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "394736af8657ab6e": {
+      "choice": "good_exam_item",
+      "confidence": 0.85,
+      "detail": null
+    },
+    "1edf065165b76bf0": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "7c4f09238e32497b": {
+      "choice": "good_exam_item",
+      "confidence": 0.85,
+      "detail": null
+    },
+    "9b9262adf6663930": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "75762c1a02ba2155": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "6ae7c25816a73bdd": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "df8379b7fce1935c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c19ddb46f26c423f": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "3bb2c674e502ebe3": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "577abc361d6b43e9": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "18947b8895c26f8b": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "5acbaf0d91e01a03": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "2cc679370a7fe0d2": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b9f0329fae95fa11": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c4733e0105c60ced": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "ea69312e2e6cc9c8": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c3914c0dd31bb4cb": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "64619f19d1fef723": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "ba7741bd071736ba": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "0b4d64caefafba3a": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "35f76615ec4fae24": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "4bc441285fb96251": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "8b7802f1ca889309": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "1f96639073d6c183": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "bee3a4a7d0d173ab": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "5c3dae2c87b49dd8": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "f49496c5eeba57c7": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c981cde098be0df8": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "83bee3681df01869": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "8b579c5bef5c7cb7": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "fe823cdd45ab5bea": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "03fb30cbef4d3130": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "68b863883df9180c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "f4683b3d4866d483": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "5bf3bb6744743023": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "218e26dfa1d7b5f0": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "63ce510341eb1a3a": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "9bab7d9fe9d68ffa": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "ccbee405d7fafef1": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "abeba0da94bfd60d": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "8cbdf3736112ea28": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "3609a0ba0fa39d0e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "9875a4abd32f47cf": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "a11a9f4d46c32b0c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "147e680e5a65b8fc": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "921688d575427a71": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b52ffd6ff289068d": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "df900dc79cff2036": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "95c6142a755dd29b": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "bcfc05530a57f00c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "553e1367a8fb6fcb": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "71ec9785c10200f5": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "9b05a5d516134467": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "4d4937c9f47784cf": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "aa2e6c195755ca90": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "a59d58c7c26160c2": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "e7186126edf14379": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "00d8fef3ead89cfe": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "dc20289e2105dd9b": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "24b62ee4adf36581": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "ca737e04b40732ab": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b48ab0604dba7b44": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "f67f4ae185570d9f": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "4329db34a25199d9": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "f1435d5b03c50274": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "e8f60d3d891cad03": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "bf4c17c6c401480d": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "d06840ce9a870576": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "f66478ec599bab8b": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "d61f69dc967f13fb": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "ae60e6ead3ea7af4": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "88bc0ed7c8283f4f": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b3e42311a70efbe8": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "cdb028dbf4b59e02": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "44bb05b9863ee25e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "754f3a92f6e3b326": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "89ab4066a87c867e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "4e6a9145714dab90": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c3e17c171cb70ede": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c722c5cb72e91af7": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "42e93b5966ff5b1c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "a652b3d796c5802c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "8650dbf30f49504f": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "a4a2f7ba25d319b7": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "cbd557bd103b0885": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "7ee5ffa97632d853": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "24f8f46dff67774d": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "8cb5d39a392008c0": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "97681fb7aabb0c7c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "efb7967a5d6e82fb": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "3fe450fc25347163": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c3981d1a3086ff94": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "ece97476469e5796": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b7886d4a75fd3c0c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "a283fb080e2f6e34": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "23072c6eb514a372": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "f825da87d45bb12c": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "6ada5d037986672e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "7525e5e3ce4650a7": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "4815171b3300b866": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "add05a782989569b": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "1568707915dbc8f4": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "69bf26dfb675f5e5": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "ee379f424ec5e3b4": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "0d618480a2f4fc4c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "84dafe2b47816228": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "84ad5dfbd92acb38": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "814c22041b072eeb": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "2cca70cf4fa2d8e2": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "fadaac6a955def45": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c7950bf71e5bb588": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "222b03385efc6cd5": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c70985f7649e243e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "a6b4dd709cc503f2": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "8e526de0c4bcd39a": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "d0c8f382d626b4c9": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "cf7f009b682307cd": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "cc0751c2e1b6c2fd": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "ef723ee8992971a8": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "7f8248f2864cfb1b": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "3eb78e96d04b34ea": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "0299bde8945b3542": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "0ddcd72f9bb7501b": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "31d5d113692527be": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "8c80a150bd3d0c8b": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "f06ab507cff909df": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "aecf196dd665ef6d": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "62d58f14b3dfd578": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "7d84baf5caa64b64": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "4925de7dfd69771e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "a88b9a3468e458e2": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "ffd5853cbb4d1239": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "7530944cff6f131a": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "3eb5d682db639b4b": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "9fba67cd7b84ca06": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "e32e55570e19d4a4": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "733f6a5a87ea82a8": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "d0c551ec0b50a4ea": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "bd7998b432962286": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "315f47f510ee4a73": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "5d095df4477d5934": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "ccb03a25d3298956": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "fcd4701b8eb8340f": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "d4934fe7fe8e009a": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "c4c546c48822e7ab": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "0dd2e09af6a07426": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "f4b5f1eb64a2880e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "807a5de94bd865fc": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "bc5f05663c18ddb3": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "482efabce922471a": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "e1b3928fd82ddde1": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "a51bdbe420a0c6ae": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "595caa112db1e36e": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "9b24a41e4095b73a": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "6e9616712308961b": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "2730f76ff7e83b1c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b6489b638280fe9e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "3fe78a0b6c28c9df": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "498f2bdac51d0abb": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "911430a3c97b9bb0": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "b1a4efbc89b5284e": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "1e71d2049e63a860": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "76998e2ed722dbd5": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "14ec0fdee917df24": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "bb503aa89bf6f9db": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "de59edcfe760cb58": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "0406c752e9069e48": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "12f6a27224132299": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "66d1cf755298f163": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "87fe8361ca23b7e5": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "e73a7fd742bcdde2": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b922f336f28cbd7c": {
+      "choice": "good_exam_item",
+      "confidence": 0.85,
+      "detail": null
+    },
+    "9509ebb009334efb": {
+      "choice": "good_exam_item",
+      "confidence": 0.85,
+      "detail": null
+    },
+    "7fe67309a43724f1": {
+      "choice": "good_exam_item",
+      "confidence": 0.85,
+      "detail": null
+    },
+    "79e10ff71ede72be": {
+      "choice": "good_exam_item",
+      "confidence": 0.85,
+      "detail": null
+    },
+    "d07e35ee6b589dfc": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c11e776b27cd8e3a": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "3ab1b7b41ce1c1ae": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "a6854cc7d6bcaa03": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "f2d8b8a7f3986df1": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "a329f626c197ff46": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "ce142e7ce920fba3": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "1dd3510c1ec6e35f": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "aae4a919de571079": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "f9b72371c7056e4e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "996f6fa507c7d43f": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "427eb2306f2e8037": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "5f0a43ec6db8ca5e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "ff0d3dee797f31de": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b82db977d1b5c9b6": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b2c26a9643f43f83": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "1926eda389a76d11": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "5a67aee14817c259": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "e7c11bfef09be49b": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "1371730b0bdd58bd": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "07c0796b72f9031b": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "6ef5434fef81e13d": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "60521a40497cb192": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "de438a410bbaa07a": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "68a8ee997188b331": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "5e9a3730b3b63da9": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "55eb2f139895587a": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "66826213a43f00e4": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c196f9b9810f1f61": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "5cd1bf60f83841eb": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "8b0bea1216628c26": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "842c543460fa0c44": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "16b9d670c3a60895": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "3303e9c255757c94": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "ec1dab6b1a17c6c3": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "f16b88f943e0c876": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "bad80f0b23926d95": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "327bb74903f53eb0": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "afb0c3b2bf8ab307": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "5f64d7ec226e01a4": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b35390c79bdf56d5": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "e8fa080406eab422": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "5ae08adfc5066db6": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "caf034fb35b03277": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "9097b4146205c6f0": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "9c7cc8a39a86b774": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "fe2d1495c24ca10e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "223bd981d9eceb23": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "9b06f970ccbf1479": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "a3ada197dddbb346": {
+      "choice": "answer_not_determinable",
+      "confidence": 0,
+      "detail": "The excerpt states it is not necessary to configure externalTrafficPolicy: Local to keep the source IP visible; there is no 'only way' claim."
+    },
+    "eec2d273372daa13": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b2af0d90da9e12e4": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b81c28adf0b2eee2": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "f51f4c6621c9ddb0": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "ef4534f33cc998ff": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "dca6642cf497e620": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "6a3cc523bd09ea13": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "175f794aeca5e742": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "25180c661c29815d": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "48fc0180839e8cd1": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "19eb60725177d091": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "a06cc546293e2986": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c4efbbbdc8bc1810": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "19572f369ba26a8e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "d4bd2008cd31d9cb": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "2bc8d99f9377e917": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "12cb14ac2a5969df": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "73f102cb584dd05a": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "a5494b7f19710097": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "643519fac2f01474": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "a8d4778257abd3b6": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "42bf408125ff319f": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "1c9076c94d258214": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "dc39d9f72bebfc23": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "8774d507a0d71f86": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b9f6f0825f69474b": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "f269ff44e30adce6": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "a89b7fbb6c0ebe7f": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "c2943830a6eca177": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "ae9ba028108f4c3f": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "9c3ab4eb57ee1538": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "19fcd392f7f94cd8": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "76f479824dd2e801": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c81920221d9f74ad": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "9ace8a51d8f64876": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "cfe730b4ca6fc4ce": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "005fa54e17539209": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "332f3ddf35a8a783": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "659e9378095ccbe1": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "cadfa99373610700": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "009afa674716af98": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "193aac76faa3e829": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "543453a23c7217cc": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "5f428cb1c1940240": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "a1dd88d8141ef40c": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "d2705946f3c0e13a": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "d93ea479bfa325eb": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "423e7575b68d63d6": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "f1dcd3a8e0be11c9": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "61cd9ac937840899": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c01c30607329be9c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "60fb83f8e37db81c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "d66a49ea972eb4aa": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "107c503d280c97dc": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "80a7e53e54eaba69": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "50ba02f0718c8b4f": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "da68852cecf8975e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "4811f6085dd9c0bb": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "6c7882353ed127a9": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "0ebcbaa2c1ee2cf4": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "00fbe4027aa6f671": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "4bde5a75bf72e034": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "a6ea2fe404760362": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "745c7755531bd955": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "a2a4a53c2223ee6f": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "8c7c6cc01f790b9a": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "efb257a644781a4f": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "26637b8c06d32de2": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "994c8f4a3afa88fb": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "069deb25ba642e33": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "2ccca00fe61012a5": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "a6302a875ff7846c": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "1d9f5e50a8af8f2d": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "10fbd2c7ad5c25cc": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "8651c3d468030793": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "873bfd3ae1996ac7": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "18fbad1d91dd3266": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c96327aaf878d4a5": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "3c2688647bb478bc": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "1ea708f1de421f66": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "64debc90e73ba032": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "4e29c23120732cf5": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "0fe88b5d74553360": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "a1b4eaa4bfd2da08": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "1140ba436a7c833f": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "26a75d08a4c023b7": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "3e10bd168e26a73f": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "af88db133981f4ae": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "8074617772c76b99": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "405c7a6e69870645": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "400b1a53d4ad48d0": {
+      "choice": "good_exam_item",
+      "confidence": 0.85,
+      "detail": null
+    },
+    "63823e7063020339": {
+      "choice": "good_exam_item",
+      "confidence": 0.85,
+      "detail": null
+    },
+    "7e2d208c4c5846e5": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "ad096430066a8d50": {
+      "choice": "good_exam_item",
+      "confidence": 0.85,
+      "detail": null
+    },
+    "3f906eba0a5f4187": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "05d585f73e68c549": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "dfdd0e8180d6864e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "9b686daf42b08e28": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "79752cc4ba840fed": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "e417b8cf0c562538": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "274b004b8dff2e2c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "8158205fda5154c4": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "58391a227677c78b": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "63ae3ee80e96423c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "91752ce7f56e0808": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "db88c13425749d68": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "5f71c3a516336c11": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "9fe78e5a39a530f8": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "89eb622207698eaa": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "2ceea7285d2d40ce": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "7649fd433f96e3cd": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "6008c2514524aa3d": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "f12c8917dc9980e1": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "48f0fffbc9f1e76b": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "219ae7f7301dfc32": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "66b5399073c0ca33": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "9b1e0876c0e0c334": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "ca3cbf428157beaa": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "7a9ab670a745bbbf": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "65193ba15b3e5465": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "884c1f8bc9c633fa": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "6b97d3770bf307ea": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b9483d65d48fdb09": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "36930e8942d696da": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "98a391cb5362b15b": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "4a2cee36201caac8": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c0c72dda526fcc91": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "26bdc65e160af7bd": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "88dedaf32614e7b3": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "cd2501ab8ed553d3": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "4ca35c628ffff28f": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "9758fe3e7b3adaad": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "ff29b95066ed4113": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "a99f913da42a183d": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "1713da1c52b258bf": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "469be065a870b08d": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "a5d3bc3ed07b349c": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "292fe5ab0587e37a": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "534ebaa06a195d28": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "a239d8170696269c": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "4729763384d795e1": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "6efad5d478a341b5": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b8d0e8cf6b83f56e": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "111af0cbc3a4c706": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "0e45850b7aad078c": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "7d5cf05d60bf896e": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "c87787f86cfa3b3b": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "3c99f5675449a516": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "ebf347bf0b1a5230": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "699ff7b67caa885b": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "91c81f4319eb9e4a": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "e6424bc836b356b5": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "2cf904bb525da1f0": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "2d2e4564d06dc3bf": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "40c6dc8122313565": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "491bacc9b4e71698": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "02c14556b8068d9c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "0472aa005a56c31c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "ae4ef1ee846680f4": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "89501edc631b002b": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "4044032654264a10": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "a16077c5bd35845d": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "4ed2cd68c6daa8fa": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "805dd4c8a55aa8fc": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "fd5053427f877dbd": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "25e5fa5a37577f6c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "db0471629ed6b8fe": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "38e5dfb0594b80de": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "1d01bdee48920b17": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "d0d2dcce46992b69": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "718576fa41eae0e4": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "d096760dd2e84f2c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "7c0a82a1b311f003": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "a1e50889c7cc7072": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "9aa7172c1379e3d5": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "d074ab928093036e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "3c8abe3b04db0c42": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b1ae7e70070f5ea3": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "20caa7d0ed69748f": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "00009d132a364598": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "83296fd71eae1331": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "20a6e7267f8aa86a": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "5a8c15b5594dc81c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "e38b0f2fa36bbfce": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "f3329aadef522a25": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c18c3107f00a7ec6": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "9d9cb495bf7c45c2": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "1b8be72db0f92a3d": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "143a8352c09534a7": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "95b36750187a4291": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "6bb862945bd5c5e2": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "d6cd27d3d50e356a": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "3c187cf838c38b9c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "26e8ef82911f4f6b": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "df2215d996ac82b6": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "3d18597df84343e2": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "fb5579ff990c7626": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "d1405ec88a11544c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "f2a8f7b720a67e5a": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "5550a4946c720905": {
+      "choice": "answer_not_determinable",
+      "confidence": 0.8,
+      "detail": "judge said c, marked d"
+    },
+    "1d239bd372c5ec04": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "ba14121bb60c9806": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "2b278021d1464ed0": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c7fefd10c8e1fd8a": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b2eb8c4b40454912": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "de92b655f1bfb4fb": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "4d130e761263d8c4": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "7d73aedc58406f02": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "1b4c8f036c1c13d2": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "0da6f1d4c7221513": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "1cbe2eefb46885d5": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b5317aa73cc22e13": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "ec416623705f278e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "ab46a2ab79e1e46b": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "6d4cdaee66d4544e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "a029778d4b9044ff": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "ec9453613a5475ac": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "fdd95ee33a0df0d5": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "d475a5ddd7e37179": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "ff14c824e923f964": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "f0f3dbd841b8a361": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "9874e5e42eb3b468": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "03426fa3cd206abc": {
+      "choice": "good_exam_item",
+      "confidence": 0.92,
+      "detail": null
+    },
+    "2003df99f271b1a7": {
+      "choice": "good_exam_item",
+      "confidence": 0.92,
+      "detail": null
+    },
+    "5fc366ebf9e8a442": {
+      "choice": "good_exam_item",
+      "confidence": 0.92,
+      "detail": null
+    },
+    "e049125cc208db5c": {
+      "choice": "good_exam_item",
+      "confidence": 0.92,
+      "detail": null
+    },
+    "9813b78de90b58e7": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "5cfbcd63f8b5c185": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "be5f745ca8ffe2dd": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "0354f88a65a377ae": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "bea9af801fbc2647": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "045f0b2f323b0c36": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "cc94fd8b0a756b92": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "6da383d4560cdb12": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "6c5beefb7f276445": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "19b3b5b54f80a848": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "01d36a8487750592": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "64577020ef45c4eb": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "5b07e7560f42654c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "e7b039f18b158c97": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "a9b3bf13407470e5": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "5020ae9d037269db": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "e932edd05150f58f": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "25258311c07b0480": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "afc072f965b3fb71": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b3fd439387d02624": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "1341abd1960e91d0": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "4a75c52f99089d9c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "fc9a3b95432caede": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "9e94d7e4c833fe26": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "2caeb93f56f0a65b": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "605ac9acbfd78169": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "1b39610ca0a16afc": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "e92f7d1d627a6718": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b2a6e8bff0880891": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "5bacf65cef4c970b": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "77a43824d9bb1533": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "66e5b31d403787a2": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "459f5631b12ab900": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c8b6fdbaee6ce2d1": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "fddea97dd4ba2db2": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "2f221c98f6c18c16": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "d43ec4b679dd573c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "960f0635ca08b360": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "94f0b22a93b31570": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "f49fa3715b6e7184": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "8ddde6cf117a501f": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "9907ff797a7d6002": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "16075f3d3aaa5af2": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "6252df420edcb816": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c0d79f4a4c043366": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "da9efd09dcce2572": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "2a6313953b622e27": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "7e965d46f48bdd2c": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "1a2921a6084d42da": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "953e9960f121dacc": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "2850a327b58824aa": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "9659e4e1e25314c0": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "706cfe4d72bf5714": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "99d0b1d7dbe59aca": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "67948b271bf82e5e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "368db59327de74da": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "fdfebe0da4a46ca7": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "cfc285b9aa31bdec": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "e0c3d0891343214a": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "5e280140bac3427a": {
+      "choice": "good_exam_item",
+      "confidence": 0.85,
+      "detail": null
+    },
+    "92147d85d161d6c6": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "25f4682ec08e7e33": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "3c65c8d45a0725e5": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "045d6f02b9de6a3a": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "5d6a11f6cf873d26": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "8f882f4714470567": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "55fc8de3a8ae8d50": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "479e60a11d52b77c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "851a8ef5bb937f60": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "9ff7fea2c305636a": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "96f39d62566b82a7": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "7e95f130090f41c4": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "e2ae630eb4849fac": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "863b600c170f5a98": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "1e93069625a3eb22": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "d5471899839ce49f": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "a6de2d347c16b21c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "5166882449894b9e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "3806a76723c70828": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "e853d944a43b238e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "20cc49a0321fd6b1": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "c8891e661bc8db93": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "0049288931bc30f6": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "d1073d77f01e1cf4": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "2b65004a18bffa79": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "7aee47a626b0e1d1": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c937fa7014d637e9": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "94fd8d97eb2bd6f5": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "61105c9f3572619c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "2f83cb9e6323c63e": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "0bf3029b09882e7b": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "57cd4ca7d6f64e27": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "6dcc1bdde975c677": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "86141ba54d076bac": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "99929685c7381709": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "caac2ad72d24f86c": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "c67a8a12ae45a953": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "d87e4732420363ae": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b413e0a4a493f271": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "198abce3e0a266b7": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b1973d2bd6ce3798": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "a2d95220d70bf430": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "312361f2cad53ffb": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "a6a0006dbecaf4d7": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "1a966dc4183d5616": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "1f0a946da7239e4e": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "989034af5768395d": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "db49c63beded2d68": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "6d0b8fb3b5b33296": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "4eb8fea1d760c487": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "3dcadc701d40dbd0": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "4b8d920f1ced7eab": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "65961a0fb18b9093": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "016ba4f68ec584ba": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "e117f978ce313b10": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "600109b4a825a2dd": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "3de9bb4db18dbd30": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "7760f7d788ff4f1c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "cf74811d8e59e4d2": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "9440de05e1ca69bf": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "1d1f0f243adb33d8": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "12431a624869bfe2": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "90c99a74f69c3f66": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "abc1913ff1224a5c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "e85c45b7bdb3ae38": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "69bcbede817a9fa8": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "98e7ecfeedc668ff": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c7f52aeb081f891f": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "68584bff318b8e89": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "8712a8bbed09459a": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "5af4a59cc9721521": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "bdda4825442d506e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "9850bf4af3666b80": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "e1532aa529e46ce3": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "1aebb77a40732ae8": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "7b974570fde7741a": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "2e883be1dde0f2c6": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "249ff602e37252bd": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c57772e2cdd587c2": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "d5dac88f51a7072e": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "6c26c34ba31242ce": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "668115517a69aca7": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "236397e94a1ae7f1": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "dada3deb648f6653": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "8ddcf4430bc9ab0f": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "32756f06ec7b8157": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "d20337163c81835e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b6aa6d5128cca4f4": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "60da4d83d5cd0ac8": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "4d3fa5cce1e8f1c8": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "ca1bdfe392f82eef": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "8309f3e53f91a25f": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c41650db52f403d2": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "4488008d4db8ee29": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "45ba83e91cf4e077": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "80f3c1ce7b399248": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b50f7e906c4b64f2": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "2d7a0babb735750d": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "67b0fd8df6413ede": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "02a1e57c376f7b31": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "fe94546c0857cd2b": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "14c78482740c13d3": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "7468eaf657322692": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "5ba57a29183db475": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "d9192bc7067a3248": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "62c951df9c55fdfc": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "d4107cc93b876bbd": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "9e2f12add1ca95d3": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "417a1f8257204e5c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "2aa395391c45d4e9": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "ced1077f5829a715": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "98165ad5c899b7f8": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "6cdadb2132e03962": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "ed012c7b0e2d7569": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "bf21240af76735e2": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "26e2a083f26b9dc8": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "dd180d8442a08ef4": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "cd5b0c25ebfad654": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "dfebc99a96fb92fb": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "00777ac876a5437a": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "3fe1dc7f9d60f88d": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "39518ba5e1b21865": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "0161f9ebf742e570": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "da28414834a677fb": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "9a116c3a90b15ed7": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "2c71687b4b8f4eea": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "05650378bb6e834c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "1d6cb40b7f2955da": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "7e6c318497b9d591": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "126f9bf4eae26b54": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "70918bcfcf0b998f": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "a13d99c23b831278": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "53e53db98e83d6ab": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "2fa2d9cbf327571b": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "7378ce1c9900d8ab": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b4c8498ad5c867ba": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "27927f20b87a7cac": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "14c604231fe25d7e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b6866694b7fd68af": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "7b090a2bf3bdd548": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "4b2b133c23879094": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "8a9d013d9a91a7a2": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b8be11a76fcd1b07": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "0431b1855f7b3451": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "382aa1d4598d2f42": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "643a1e39dc8e4b94": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "98d058f3c7846288": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "ad9e727ed10a5159": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "fe1da9b513193407": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "7610028c14c8d139": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "7e070f815ec65ffd": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "70c0143704d70b7b": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c1f5ed9ee20782ef": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "eb635bf16f46be11": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b6f21b1a8a3b5668": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "efc2be63620fd201": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "28af7fece2dab8d8": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c86f7bee09766baa": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "0d7fc41e791eb6c7": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b07f60ebcf523f07": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "52ee1cb283c38c77": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "11197941a4bb401e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c6f280c134f1d74e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "dc0c8aac891a463c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "e205c09cc80b7860": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "8e47aefd95c13d7d": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "4cff60044d125bf6": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "cbf0dc73f17696b4": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "d60d15585d29bcb9": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "92e46684d6f343ab": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "a08b0e04b2bc08a3": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "34dac3b4982d8106": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "6decbd7002fc25e4": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "d2406bc4c5ff1767": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "9f89c556f510c59a": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "94d90f40ec1e1ac2": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "776cdbc794600953": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "3bfe5ea28e252522": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "7208e59b2ca2a26c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "603a44141b73c99b": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "78f3a8a7eb254371": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "5b271e3ae5d981fb": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "d9c75355b61a3dde": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "99174cfbb3c42b74": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "38673010487645e0": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "3ec09cd09fdbc6ac": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "d8db78dd2f56b9e0": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "66002df821f0af56": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "0caac578333942bd": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "02012195b63a2c2d": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "1dec2cd57797436e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "821f38af999775ae": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "8c9c2c95eef0ae4e": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "292b1514aedee5a0": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "69c323fc606296ca": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "4b74c8e46414a543": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "e75a6fc9e7d67925": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c5e723bd8397cc5c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "f5fdd29cfca22937": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "5cad3e21666030ec": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c23dcf1f3ae57803": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "fd91e0f7cc84b0a8": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "fcf9ce7ff2f37bf7": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "528d7149d7b6dbf5": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "348b679dd0fedbe0": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "263507e30915c931": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "50ca0e402a34929c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b7dc707a5a788e12": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "4d41e1b308c954fc": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "f0980e998eff41bb": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "f632291f5c0806af": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "12f6f7de3bca1a5d": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "8a58f060c13545ff": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "aa12b014ecd004c1": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "62f4fd28b4dc8fc6": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "d596c88775b43ff6": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "485b1b883448a1a7": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "6846e3a9c981ebb3": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "19469f0552b69312": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "bbe38d037230cd4c": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "fb036a306b88f198": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "57734b856a173189": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "5a5b9a164be54d12": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "5dac369d7c670b32": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "addb5ca2508474ca": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "f86977c82432b807": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "1c9a1c6dad9e6831": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "934df9b5e690d8ec": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "6065f3e8dbf9b5db": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "38bc3e392853bd15": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "fa01d449bf5a821d": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "8e5497ab8912216d": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "94d33d32a4acb260": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "45bde914d0a80d66": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c54c19f90ff4c867": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "27a9d33cedfe7d36": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "13c2dd8c1d5f3ade": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "323d63ae9cad3ed1": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "f156dd09c529c9f7": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "7323fd37fe27fa71": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "2b31f3b2f111ac65": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "a2b5e6bf2fe3e849": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "fd946e00521ac9fb": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "05def437731c7a9e": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "be7d79fa66cb0baf": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "9d1870d1cccd2967": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "b02fa32454aa146c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "6e91a5e176dcd2e3": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "4b739a8fb99328dd": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "48422515cd71a1a3": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "4ebaa3c575a393a9": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "acf6bb8887a630fe": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "2b537069a38c384b": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "ccb9ebefe7057d51": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "384eee301ef43bbf": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "8ae3a389f9ecff94": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "ee576738bc891099": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "d8dd8e4e786eaa78": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "6f368c8c6f3cdee5": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "db0a00bde8ca9c29": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "4148912a54e2ed53": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "3e88352535c68544": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "842a6ea5de9c8421": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "ebbea6d4256a80cf": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c65c43d26362c21f": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b3e32ed414383591": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "708cee20d04dbe2f": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "2c356f0806ddf7b0": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "e1b8bc3c95c6da8e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "1aa3b75778afe482": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c28a41993412d6d6": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "0c6bc08730adbfd9": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "7e3e7d5c8d560787": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "f33b9eb8b7f42224": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "ace5ee02d23ee35f": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "82b76837f2103626": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "68b2c14c2077bf20": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "04b3ce3aba8a57d0": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "65bf072a103a839a": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "fbeaed867b8562d0": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "eee50b13de1041c2": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "8433e01dcf2bab9b": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "db745f460805e75b": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "877f12f3f1b7b916": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "3f3c3937d8729ff4": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "7a97b9086c389b8e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "7bf6a3a43d933d0b": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "e873482c23e24c42": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "65e3f6c1dbf1bd2e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "0e83284325804947": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "120a682472e1f14f": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c540bbb79284ac8a": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "bc0ef9f9f2db8d29": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "cc4b4205af9d9029": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "a4be89d5759a39a4": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "f570a41af8e9078c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "5fd1781f61fbea9a": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "66adbd2dbfc73677": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "eb7842579ba27879": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "87b76f106d786caf": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "09f7b44f89559c60": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "5aaca32ab41e70bd": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "04f04b1b85cc3640": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "c1d777d7d05efeba": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "cfe6f1a495f579db": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "bdbf5b5b4d94e8b3": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "2bb9d17544e09f7b": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "bb88d5b278ef89b2": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "32cda915a072b840": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "fc780d8ff8458aae": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "4bfacdcf3c85d58d": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "6b48492c46f59700": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "d0673949de24e679": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "c167c073c57b709d": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "4f6ddeeca7ba54b6": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "db639c4599056e33": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "2156cc1ca35543ea": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "53da9a4db36e68e0": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "301bf2c2fb075d01": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "110ca50d485d0601": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "7d367fdff21f07ba": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    }
+  }
+}

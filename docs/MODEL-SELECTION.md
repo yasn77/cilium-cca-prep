@@ -65,13 +65,73 @@ Raw data: `data/model-benchmark.json`.
 
 ## The judge
 
-SystemOne is available through nano-gpt as `~typesafe/jev-latest`. The direct
-API at `api.typesafe.ai` uses `jev-latest`; the namespace differs, which the
-client resolves from the configured base URL.
+Two judges exist and they check different things.
 
-llmgateway refuses it: `permission_denied: Typed decisions are not available for
-coding plans`. So a nano-gpt credential is required for the quality gate even if
-generation runs elsewhere.
+**SystemOne (`jev-latest`)** is a decision model: it returns a labelled choice
+over defect categories with a probability distribution, and no reasoning. It is
+good at "is this a fair exam item?" and cannot be asked "is this fact true?".
+
+It is served by three gateways, which name it differently:
+
+| Gateway | `TYPESAFE_BASE_URL` | Model id |
+|---|---|---|
+| OpenRouter | `https://openrouter.ai/api/v1` | `jev-latest` (mapped to `typesafe/jev-1.14-…`) |
+| nano-gpt | `https://nano-gpt.com/api/v1` | `~typesafe/jev-latest` |
+| TypeSafe direct | `https://api.typesafe.ai` | `jev-latest` |
+
+OpenRouter is the default. It also needs the path handled carefully: its base URL
+already ends in `/v1`, so `/v1/systemone` must not be appended twice.
+
+llmgateway **cannot** judge: `permission_denied: Typed decisions are not
+available for coding plans`.
+
+**Adversarial re-answer (`tools/judge-llm.mjs`)** is the second judge. A model
+from a different family is given only the citation and the options, and answers
+blind. Disagreement means the passage does not settle the question; two
+defensible options means the distractor set is broken. This is the check that
+catches what a fairness rating cannot.
+
+### Merging the two
+
+An `error` verdict is not an opinion, so it never displaces a real verdict and
+never counts as approval. When both judges give a real verdict, the stricter one
+wins.
+
+That rule is not theoretical. The first implementation let the adversarial
+judge's infrastructure error overwrite SystemOne's defect verdicts, and 134
+questions that SystemOne had explicitly rejected shipped to the site. The symptom
+was a low judge-rejection count next to a high defect histogram, which is only
+visible if you cross-check the two.
+
+### Results on this corpus
+
+892 candidates, judged by both:
+
+| Verdict | SystemOne | Adversarial |
+|---|---|---|
+| `good_exam_item` | 679 | 798 |
+| `error` (not an opinion) | 0 | 88 |
+| `trivia_not_in_blueprint` | 86 | — |
+| `answer_not_determinable` | 57 | 6 |
+| `wording_broken` | 40 | — |
+| `distractors_too_obvious` | 28 | — |
+| `ambiguity_two_correct` | 2 | — |
+
+SystemOne is the harsher judge: it rejects 213 of 892, mostly for trivia and
+broken wording, which the adversarial check cannot see because it only tests
+whether the answer is derivable.
+
+### Reasoning control is per model
+
+The generator must not think before answering: through OpenRouter it spent the
+entire 3,000-token budget and returned nothing parseable on every call. Disabling
+reasoning took that to 8 tokens and valid JSON.
+
+The judging model is the opposite — `openai/gpt-5-nano` answers `400 Reasoning is
+mandatory for this endpoint and cannot be disabled`. So the field is per-provider,
+and the client drops it automatically and retries when an endpoint refuses it.
+
+Cost per SystemOne call: about $0.0000146.
 
 ## Prompt sensitivity
 

@@ -94,7 +94,11 @@ async function generateForSection(section, need, cfg) {
   ];
   const { text, model } = await chat(messages, { cfg });
   const parsed = extractJson(text);
-  if (!parsed || !Array.isArray(parsed.questions)) return { rows: [], rejected: 'unparseable-response' };
+  if (!parsed || !Array.isArray(parsed.questions)) {
+    // Record why, rather than silently contributing nothing: a run that spends
+    // hundreds of calls and returns no candidates needs a reason in the log.
+    return { rows: [], rejected: parsed ? 'response-shape' : 'unparseable-response' };
+  }
   return { rows: parsed.questions, model };
 }
 
@@ -293,7 +297,12 @@ async function main() {
       try {
         result = await generateForSection(section, need, cfg);
       } catch (err) {
+        rejections['request-failed'] = (rejections['request-failed'] ?? 0) + 1;
         log('gen-ai', `section ${section.id} failed: ${err.message}`);
+        continue;
+      }
+      if (result.rejected) {
+        rejections[result.rejected] = (rejections[result.rejected] ?? 0) + 1;
         continue;
       }
 

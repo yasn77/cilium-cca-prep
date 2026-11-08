@@ -88,18 +88,33 @@ chosen.
 | `LLM_API_KEY` | `gen-ai`, `judge` | — generation skipped without it |
 | `LLM_BASE_URL` | `gen-ai` | `https://nano-gpt.com/api/v1` |
 | `LLM_MODEL` | `gen-ai` | resolved per gateway, see below |
-| `TYPESAFE_API_KEY` | `judge` | falls back to `LLM_API_KEY` |
-| `TYPESAFE_BASE_URL` | `judge` | `https://nano-gpt.com/api/v1` |
-| `TYPESAFE_MODEL` | `judge` | `~typesafe/jev-latest` |
+| `TYPESAFE_BASE_URL` | `judge` | `https://openrouter.ai/api/v1` |
+| `TYPESAFE_MODEL` | `judge` | `jev-latest` |
+| `JUDGE_API_KEY` | `judge`, `judge-llm` | falls back to `OPENROUTER_API_KEY`, then `LLM_API_KEY` |
+| `JUDGE_MODEL` | `judge-llm` | `openai/gpt-5-nano` |
 | `GEN_CONCURRENCY` | `gen-ai` | `8` |
 
-**Two gateways are supported and they name models differently.** Setting
-`LLM_BASE_URL` selects the matching default:
+### Gateways
 
-| Gateway | Generator model | Judge available |
+Three gateways work and they name things differently. Setting `LLM_BASE_URL` or
+`TYPESAFE_BASE_URL` selects the matching defaults:
+
+| Gateway | Generator model | SystemOne judge |
 |---|---|---|
-| `https://nano-gpt.com/api/v1` | `deepseek/deepseek-v4.1-flash-1017` | yes, `~typesafe/jev-latest` |
-| `https://api.llmgateway.io/v1` | `deepseek-v4.1-flash-1017` | **no**, typed decisions are refused on coding plans |
+| `https://openrouter.ai/api/v1` | `deepseek/deepseek-v4.1-flash-1017` | yes — `jev-latest` |
+| `https://nano-gpt.com/api/v1` | `deepseek/deepseek-v4.1-flash-1017` | yes — `~typesafe/jev-latest` |
+| `https://api.llmgateway.io/v1` | `deepseek-v4.1-flash-1017` | **no** — typed decisions refused on coding plans |
+
+OpenRouter is the default for judging because it is not quota-bound like
+nano-gpt's weekly allowance.
+
+### Two judges
+
+`judge` asks SystemOne whether each question is a fair exam item.
+`judge-llm` asks a second model to answer each question blind from its own
+citation; disagreement means the passage does not settle it. Both write verdicts
+and `verify` merges them, taking the stricter and never letting an infrastructure
+error count as approval.
 
 Every variable is optional. A missing credential makes the corresponding stage a
 no-op; the site still deploys with whatever corpus is committed, and the report
@@ -136,10 +151,14 @@ Four gates, all of which must pass:
    Guessing Sphinx's id algorithm is unreliable; `resolve-anchors.mjs` reads the
    rendered page instead.
 2. **Quote** — the quoted text appears verbatim in that section.
-3. **Entailment** — the correct option's distinctive words appear in the cited
-   section, and the distractors do not all appear there too.
-4. **Judge** — SystemOne classifies it as `good_exam_item`. This gate is about
-   fairness, not truth, and never overrides 1–3.
+3. **Entailment** — the correct option's words appear in the cited section, and
+   for a one-word answer at least one appears as a whole word. It deliberately
+   does not try to prove the distractors wrong: a page listing three enforcement
+   modes contains the vocabulary of all three, and judging distractors by word
+   overlap threw away good questions about exactly those pages.
+4. **Judge** — SystemOne classifies it as `good_exam_item`, and a second model
+   re-answers it blind and agrees. This gate is about fairness and answerability,
+   not truth, and never overrides 1–3.
 
 Whatever fails lands in `data/quarantine.json` with a machine-readable reason and
 appears in the app's Review tab.

@@ -20,23 +20,25 @@
  */
 import { providers } from './config.mjs';
 
-/** nano-gpt namespaces the SystemOne model; the direct API does not. */
+/** nano-gpt namespaces the SystemOne model; OpenRouter and TypeSafe take it bare. */
 const JUDGE_MODEL_FOR = {
   'https://nano-gpt.com/api/v1': '~typesafe/jev-latest',
+  'https://openrouter.ai/api/v1': 'jev-latest',
   'https://api.typesafe.ai': 'jev-latest',
 };
 
 export function judgeConfig() {
   const p = providers.judge;
-  const apiKey = process.env[p.keyEnv] || process.env[p.fallbackKeyEnv];
   const baseUrl = process.env[p.baseUrlEnv] || p.defaultBaseUrl;
+  const keyCandidates = [p.keyEnv, ...(p.fallbackKeyEnvs ?? []), p.fallbackKeyEnv].filter(Boolean);
+  const keySource = keyCandidates.find((name) => process.env[name]);
   return {
     baseUrl,
     model: (p.modelEnv && process.env[p.modelEnv]) || JUDGE_MODEL_FOR[baseUrl] || p.model,
-    apiKey,
+    apiKey: keySource ? process.env[keySource] : undefined,
     batchSize: p.batchSize,
-    configured: Boolean(apiKey),
-    keySource: process.env[p.keyEnv] ? p.keyEnv : process.env[p.fallbackKeyEnv] ? p.fallbackKeyEnv : null,
+    configured: Boolean(keySource),
+    keySource: keySource ?? null,
   };
 }
 
@@ -68,13 +70,25 @@ function buildPayload(items, model, state) {
   return { state, model, questions };
 }
 
+/**
+ * The SystemOne path, joined against a base that may or may not include /v1.
+ *
+ * Gateways differ: TypeSafe is `https://api.typesafe.ai` and needs `/v1/systemone`,
+ * while OpenRouter is `https://openrouter.ai/api/v1` and would become
+ * `/api/v1/v1/systemone` if the version were appended blindly.
+ */
+function systemoneUrl(baseUrl) {
+  const base = baseUrl.replace(/\/+$/, '');
+  return base.endsWith('/v1') ? `${base}/systemone` : `${base}/v1/systemone`;
+}
+
 async function post(cfg, payload, attempts = 3) {
   let lastErr;
   for (let attempt = 1; attempt <= attempts; attempt += 1) {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), 60000);
     try {
-      const res = await fetch(`${cfg.baseUrl.replace(/\/$/, '')}/v1/systemone`, {
+      const res = await fetch(systemoneUrl(cfg.baseUrl), {
         method: 'POST',
         headers: {
           'content-type': 'application/json',

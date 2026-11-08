@@ -34,11 +34,13 @@ import {
   similarity,
 } from './lib.mjs';
 import { checkEntailment as checkEntailmentImpl } from './entailment.mjs';
+import { mergeVerdicts, judgeSource as judgeSourceOf } from './verdicts.mjs';
 
 const SECTIONS = path.join(ROOT, 'corpus', 'sections.json');
 const TEMPLATES = path.join(ROOT, 'candidates', 'templates.jsonl');
 const AI = path.join(ROOT, 'candidates', 'ai.jsonl');
 const VERDICTS = path.join(ROOT, 'candidates', 'verdicts.json');
+const VERDICTS_LLM = path.join(ROOT, 'candidates', 'verdicts-llm.json');
 const OVERRIDES_DIR = path.join(ROOT, 'overrides');
 const CORPUS = path.join(ROOT, 'data', 'corpus.json');
 const QUARANTINE = path.join(ROOT, 'data', 'quarantine.json');
@@ -115,8 +117,10 @@ async function main() {
   const templates = await readJsonl(TEMPLATES);
   const ai = await readJsonl(AI);
   const verdictsRaw = await readJson(VERDICTS, {});
-  const verdicts = verdictsRaw?.verdicts ?? {};
-  const judgeRan = Boolean(verdictsRaw?.verdicts && Object.keys(verdictsRaw.verdicts).length);
+  const verdictsLlmRaw = await readJson(VERDICTS_LLM, {});
+  const verdicts = mergeVerdicts(verdictsRaw?.verdicts, verdictsLlmRaw?.verdicts);
+  const judgeRan = Object.keys(verdicts).length > 0;
+  const judgeSource = judgeSourceOf(verdictsRaw?.verdicts, verdictsLlmRaw?.verdicts);
 
   const all = [...templates, ...ai].map((q) => ({
     ...q,
@@ -131,7 +135,7 @@ async function main() {
   const corpus = [];
   const quarantine = [];
   const seenStems = [];
-  const stats = { anchor: 0, quote: 0, entail: 0, judge: 0, shape: 0, duplicate: 0, accepted: 0 };
+  const stats = { anchor: 0, quote: 0, entail: 0, judge: 0, unjudged: 0, shape: 0, duplicate: 0, accepted: 0 };
 
   for (const q of all) {
     let reason = checkShape(q);
@@ -171,15 +175,20 @@ async function main() {
 
     const verdict = verdicts[q.id];
     if (JUDGE_REQUIRED && judgeRan) {
-      if (!verdict) {
-        quarantine.push({ ...q, rejection: { gate: 'judge', reason: 'not-judged' } });
-        stats.judge += 1;
-        continue;
-      }
-      if (verdict.choice !== 'good_exam_item') {
+      // A judge that failed to return a verdict has not judged the question.
+      // Recording that as a quality rejection quarantines good questions
+      // whenever an API hiccups, so it is shipped, marked, and counted.
+      if (!verdict || verdict.choice === 'error') {
+        stats.unjudged += 1;
+      } else if (verdict.choice !== 'good_exam_item') {
         quarantine.push({
           ...q,
-          rejection: { gate: 'judge', reason: `judge:${verdict.choice}`, confidence: verdict.confidence },
+          rejection: {
+            gate: 'judge',
+            reason: `judge:${verdict.choice}`,
+            confidence: verdict.confidence,
+            detail: verdict.detail,
+          },
         });
         stats.judge += 1;
         continue;
@@ -280,6 +289,7 @@ async function main() {
       }, {}),
       scenarioShare: Number(scenarioShare.toFixed(3)),
       judgeRan,
+      judgeSource: judgeRan ? judgeSource : null,
       retired: retiredAway,
     },
     questions: shipped,
@@ -318,7 +328,9 @@ async function main() {
   }
   if (JUDGE_REQUIRED && judgeRan) {
     const unjudged = shipped.filter((q) => q.provenance.checks.judgeVerdict !== 'good_exam_item').length;
-    if (unjudged) problems.push(`${unjudged} shipped questions were not judged good`);
+    if (unjudged) {
+      log('verify', `${unjudged}/${shipped.length} shipped questions are unjudged (judge source: ${judgeSource})`);
+    }
   }
   const shortDomains = Object.entries(coverage).filter(([, c]) => !c.met);
   if (shortDomains.length && process.argv.includes('--enforce-floor')) {

@@ -18,6 +18,9 @@ export function generatorConfig() {
     apiKey,
     temperature: p.temperature,
     maxTokens: p.maxTokens,
+    // The generator must not think before answering: it spends the output
+    // budget and returns nothing parseable.
+    disableReasoning: p.disableReasoning ?? true,
     configured: Boolean(apiKey),
   };
 }
@@ -33,6 +36,7 @@ const MODEL_FOR = {
   map: {
     'https://api.llmgateway.io/v1': 'deepseek-v4.1-flash-1017',
     'https://nano-gpt.com/api/v1': 'deepseek/deepseek-v4.1-flash-1017',
+    'https://openrouter.ai/api/v1': 'deepseek/deepseek-v4.1-flash-1017',
   },
 };
 
@@ -57,6 +61,12 @@ function recordUsage(usage) {
   usageTotals.promptTokens += usage.prompt_tokens ?? 0;
   usageTotals.completionTokens += usage.completion_tokens ?? 0;
 }
+
+/**
+ * Models that answered 400 to a request with reasoning disabled, because they
+ * require it. Cached so a batch run does not pay for the same rejection twice.
+ */
+const disableReasoningRejected = new Set();
 
 let override = null;
 
@@ -146,31 +156,45 @@ export async function chat(messages, { cfg, maxAttempts = 3, timeoutMs = 420000 
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), timeoutMs);
     try {
+      const body = {
+        model: conf.model,
+        temperature: conf.temperature,
+        max_tokens: conf.maxTokens,
+        messages,
+        // Supported by OpenAI and several compatible gateways; harmless where
+        // it is ignored, and it makes reruns reproducible where it is not.
+        seed: 20261107,
+      };
+
+      // Reasoning control is per-model, not universal. Models that think before
+      // answering burn the whole output budget and return no JSON (measured:
+      // 3,000 tokens and an unparseable reply per call). Models that require
+      // reasoning answer 400 to any attempt to disable it. So the field is sent
+      // only when the caller asks, and dropped automatically when rejected.
+      if (conf.disableReasoning && !disableReasoningRejected.has(conf.model)) {
+        body.reasoning = { enabled: false };
+        body.chat_template_kwargs = { enable_thinking: false };
+      }
+
       const res = await fetch(`${conf.baseUrl.replace(/\/$/, '')}/chat/completions`, {
         method: 'POST',
         headers: {
           'content-type': 'application/json',
           authorization: `Bearer ${conf.apiKey}`,
         },
-        body: JSON.stringify({
-          model: conf.model,
-          temperature: conf.temperature,
-          max_tokens: conf.maxTokens,
-          messages,
-          // Supported by OpenAI and several compatible gateways; harmless where
-          // it is ignored, and it makes reruns reproducible where it is not.
-          seed: 20261107,
-          // Reasoning models on OpenAI-compatible servers otherwise emit their
-          // chain of thought as `reasoning_content` and can hit the token cap
-          // before producing any JSON. Harmless on servers that ignore it.
-          chat_template_kwargs: { enable_thinking: false },
-        }),
+        body: JSON.stringify(body),
         signal: controller.signal,
       });
       clearTimeout(timer);
 
       const bodyText = await res.text();
       if (!res.ok) {
+        // The endpoint refused the reasoning control. Record that per model so
+        // later calls skip it, then retry immediately.
+        if (res.status === 400 && /reasoning/i.test(bodyText) && body.reasoning) {
+          disableReasoningRejected.add(conf.model);
+          continue;
+        }
         const retryable = res.status === 429 || res.status >= 500;
         lastErr = new Error(`HTTP ${res.status}: ${bodyText.slice(0, 300)}`);
         if (retryable && attempt < maxAttempts) {

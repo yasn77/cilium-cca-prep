@@ -72,20 +72,33 @@ jobs:
           LLM_MODEL: ${{ vars.LLM_MODEL }}
         # A missing credential is not a failure: the script logs that it skipped
         # generation, and the site still deploys with whatever corpus exists.
-        run: node tools/gen-ai.mjs --per-section=4 --limit=${{ inputs.limit || '0' }}
+        run: node tools/gen-ai.mjs --per-section=8 --limit=${{ inputs.limit || '0' }}
 
       - name: Generate without a model
         if: ${{ inputs.skip_ai }}
-        run: node tools/gen-ai.mjs --per-section=4 --limit=0
+        run: node tools/gen-ai.mjs --per-section=8 --limit=0
 
-      - name: Judge candidate quality
+      - name: Judge candidate quality with SystemOne
         env:
           TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
+          JUDGE_API_KEY: ${{ secrets.JUDGE_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           TYPESAFE_BASE_URL: ${{ vars.TYPESAFE_BASE_URL }}
-          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
-        # Same rule: the judge is a gate, and an absent key leaves the corpus
-        # visibly un-judged rather than blocking the deploy.
+        # SystemOne returns a labelled choice over defect categories: a quality
+        # gate, not a truth gate. An absent key leaves the corpus visibly
+        # unjudged rather than blocking the deploy.
         run: node tools/judge.mjs
+
+      - name: Judge candidate quality by adversarial re-answer
+        env:
+          JUDGE_API_KEY: ${{ secrets.JUDGE_API_KEY }}
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          JUDGE_MODEL: ${{ vars.JUDGE_MODEL }}
+        # A second model answers each question blind from its own citation. A
+        # different family from the generator, so the two do not share blind
+        # spots. Catches the failures SystemOne cannot see: an answer the passage
+        # does not settle, or two options a careful reader could defend.
+        run: node tools/judge-llm.mjs
 
       - name: Verify and build the corpus
         run: node tools/verify.mjs --enforce-floor --strict

@@ -1,21 +1,17 @@
 {
-  "generatedAt": "2026-11-08T18:47:01.022Z",
+  "generatedAt": "2026-11-08T18:52:17.297Z",
   "templates": 39,
-  "ai": 1548,
+  "ai": 1552,
   "consideredSections": 4,
   "usage": {
     "calls": 4,
     "promptTokens": 9337,
-    "completionTokens": 3695
+    "completionTokens": 2222
   },
-  "rejections": {
-    "quote-not-in-source": 1,
-    "unbound-reference": 2,
-    "option-unbound-reference": 3
-  },
+  "rejections": {},
   "coverage": {
     "architecture": {
-      "count": 294,
+      "count": 296,
       "floor": 100,
       "weight": 20,
       "met": true
@@ -39,7 +35,7 @@
       "met": true
     },
     "installation": {
-      "count": 165,
+      "count": 166,
       "floor": 50,
       "weight": 10,
       "met": true
@@ -57,7 +53,7 @@
       "met": true
     },
     "bgp": {
-      "count": 153,
+      "count": 154,
       "floor": 30,
       "weight": 6,
       "met": true

@@ -1,6 +1,6 @@
 # Corpus report
 
-Generated 2026-11-08T18:51:28.832Z
+Generated 2026-11-08T18:52:35.976Z
 
 ## Source
 
@@ -27,7 +27,7 @@ Dropped:
 
 ## Corpus
 
-**682 questions** in the shipped corpus, **905** quarantined.
+**683 questions** in the shipped corpus, **908** quarantined.
 
 | Domain | Weight | Questions | Floor | Status |
 |---|---|---|---|---|
@@ -38,7 +38,7 @@ Dropped:
 | Installation and Configuration | 10% | 78 | 50 | met |
 | Cluster Mesh | 10% | 64 | 50 | met |
 | eBPF | 10% | 26 | 25 | met |
-| BGP and External Networking | 6% | 81 | 30 | met |
+| BGP and External Networking | 6% | 82 | 30 | met |
 
 <details><summary>Coverage by competency</summary>
 
@@ -52,7 +52,7 @@ Dropped:
 
 - `bgp-peering` — 28
 - `bgp-advertisement` — 22 _(thin)_
-- `egress-gateway` — 19 _(thin)_
+- `egress-gateway` — 20 _(thin)_
 - `bgp-control-plane` — 12 _(thin)_
 
 **Cluster Mesh**
@@ -104,12 +104,12 @@ Dropped:
 
 | Yield source | Count |
 |---|---|
-| scenario | 286 |
+| scenario | 287 |
 | attribute | 188 |
 | definition | 115 |
 | contrast | 93 |
 
-Scenario share: **41.9%** (floor 25%).
+Scenario share: **42.0%** (floor 25%).
 
 ## Verification
 
@@ -125,25 +125,25 @@ Quarantine by gate:
 | Gate | Rejected |
 |---|---|
 | shape | 409 |
-| judge | 253 |
+| judge | 255 |
 | entail | 211 |
-| duplicate | 21 |
+| duplicate | 22 |
 | quote | 11 |
 
 Judge histogram:
 
 | Category | Count |
 |---|---|
-| good_exam_item | 1174 |
-| wording_broken | 76 |
+| good_exam_item | 1175 |
+| wording_broken | 77 |
 | trivia_not_in_blueprint | 174 |
-| answer_not_determinable | 111 |
-| distractors_too_obvious | 49 |
+| answer_not_determinable | 112 |
+| distractors_too_obvious | 50 |
 | ambiguity_two_correct | 3 |
 
 ## Known weak points
 
-100 of 682 questions (14.7%) are flagged here as weaker than the rest: either they survived without a judge verdict, or the correct answer is a term short enough that the entailment check is close to a string match rather than a claim about meaning.
+100 of 683 questions (14.6%) are flagged here as weaker than the rest: either they survived without a judge verdict, or the correct answer is a term short enough that the entailment check is close to a string match rather than a claim about meaning.
 
 <details><summary>List</summary>
 

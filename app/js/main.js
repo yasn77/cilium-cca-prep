@@ -186,14 +186,21 @@ async function boot() {
 
   if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
     try {
-      await navigator.serviceWorker.register(new URL('sw.js', import.meta.url));
+      // The service worker sits at the app root, but this module lives in js/,
+      // so the URL is resolved against the parent, not import.meta.url. Scope
+      // must be the app root too, or the SW cannot answer navigation requests.
+      const swUrl = new URL('../sw.js', import.meta.url);
+      const reg = await navigator.serviceWorker.register(swUrl, { scope: new URL('../', import.meta.url).pathname });
       const dot = document.getElementById('offlineDot');
       if (dot) {
         dot.classList.add('online');
         dot.title = 'Offline ready';
+        dot.dataset.scope = reg.scope;
       }
-    } catch {
-      /* offline support is a bonus, not a requirement */
+    } catch (err) {
+      // Offline support is a bonus, but a silent failure means the user believes
+      // the app works on a plane when it does not. Say so once, in the console.
+      console.warn('[cca-prep] service worker registration failed:', err.message);
     }
   }
 }

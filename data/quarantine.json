@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-08T18:54:14.418Z",
+  "generatedAt": "2026-11-08T19:06:30.837Z",
   "counts": {
-    "total": 911,
+    "total": 912,
     "byGate": {
       "judge": 258,
       "quote": 11,
-      "duplicate": 22,
+      "duplicate": 23,
       "shape": 409,
       "entail": 211
     }
@@ -55452,6 +55452,74 @@
         "gate": "judge",
         "reason": "judge:wording_broken",
         "confidence": 0.66
+      }
+    },
+    {
+      "stem": "A platform team has enabled Cilium's bandwidth manager on a cluster and wants to confirm, from the command line, that the feature is active and see which devices are enforcing egress limits. Which command and output line should they look for?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Run `kubectl -n kube-system exec ds/cilium -- cilium-dbg status | grep BandwidthManager` and look for a line such as `BandwidthManager:       EDT with BPF [BBR] [eth0]`."
+        },
+        {
+          "id": "b",
+          "text": "Run `kubectl -n kube-system exec ds/cilium -- cilium-dbg status | grep BandwidthManager` and look for a line such as `BandwidthManager:       TBF [eth0]`."
+        },
+        {
+          "id": "c",
+          "text": "Run `kubectl -n kube-system get pods -l k8s-app=cilium` and confirm that every Cilium Pod reports `1/1 Running`."
+        },
+        {
+          "id": "d",
+          "text": "Run `kubectl -n kube-system exec ds/cilium -- cilium-dbg status | grep BandwidthManager` and look for a line such as `BandwidthManager:       EDT with BPF [CUBIC] [eth0]`."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The `cilium status` CLI command exposes the feature through the `BandwidthManager` info line, and it also dumps the list of devices on which egress bandwidth limitation is enforced. The documented output is `BandwidthManager:       EDT with BPF [BBR] [eth0]`, which shows EDT with BPF, the congestion control in brackets and the device in brackets.",
+      "optionRationale": {
+        "b": "TBF (Token Bucket Filter) is the basis of the bandwidth CNI plugin, which Cilium's bandwidth manager does not use; the status line reports EDT with BPF.",
+        "c": "Checking that the Cilium Pods are running only verifies that the DaemonSet came up; it does not report whether the bandwidth manager feature is enabled or which devices enforce egress limits.",
+        "d": "The bracketed value in the documented output is the congestion control in use, shown as BBR, not CUBIC."
+      },
+      "yieldSource": "attribute",
+      "attachments": [
+        {
+          "kind": "output",
+          "title": "Documented status output",
+          "language": "shell-session",
+          "body": " $ kubectl -n kube-system exec ds/cilium -- cilium-dbg status | grep BandwidthManager\n BandwidthManager:       EDT with BPF [BBR] [eth0]"
+        }
+      ],
+      "citations": [
+        {
+          "file": "network/kubernetes/bandwidth-manager.rst",
+          "anchor": "bandwidth-manager",
+          "title": "Bandwidth Manager",
+          "quote": "In order to verify whether the bandwidth manager feature has been enabled in Cilium,\nthe ``cilium status`` CLI command provides visibility through the ``BandwidthManager``\ninfo line. It also dumps a list of devices on which the egress bandwidth limitation\nis enforced:",
+          "url": "https://docs.cilium.io/en/stable/network/kubernetes/bandwidth-manager/#bandwidth-manager"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "openrouter.ai",
+          "model": "deepseek/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/kubernetes/bandwidth-manager.rst#bandwidth-manager",
+        "createdAt": null
+      },
+      "ordinal": 25,
+      "id": "293f320a902cee2e",
+      "domain": "architecture",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "duplicate",
+        "reason": "near-duplicate-stem"
       }
     }
   ]

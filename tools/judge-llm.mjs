@@ -28,6 +28,8 @@ import { chat, extractJson } from './llm.mjs';
 
 const args = new Set(process.argv.slice(2));
 const LIMIT = Number((process.argv.find((a) => a.startsWith('--limit=')) ?? '').split('=')[1]) || 0;
+/** Re-answer every candidate rather than only those without a verdict. */
+const REJUDGE = args.has('--rejudge');
 const CONCURRENCY = Number(process.env.JUDGE_CONCURRENCY ?? 8);
 
 const OUT = path.join(ROOT, 'candidates', 'verdicts-llm.json');
@@ -154,8 +156,8 @@ async function askBatch(cfg, batch, sectionText) {
 async function main() {
   const cfg = judgeConfig();
   if (!cfg.configured) {
-    log('judge-llm', 'no JUDGE_API_KEY or OPENROUTER_API_KEY: skipping');
-    await writeJson(OUT, { generatedAt: new Date().toISOString(), model: null, configured: false, verdicts: {} });
+    // Keep whatever was judged before rather than erasing it.
+    log('judge-llm', 'no JUDGE_API_KEY or OPENROUTER_API_KEY: skipping, verdicts left as they were');
     return;
   }
 
@@ -176,7 +178,18 @@ async function main() {
   }
   if (LIMIT) targets = targets.slice(0, LIMIT);
 
-  log('judge-llm', `${targets.length} questions via ${cfg.model} at ${cfg.baseUrl}`);
+  // Reuse verdicts for candidates already answered, so a refresh only pays for
+  // new questions and the committed verdict file stops churning.
+  const previous = (await readJson(OUT, {}))?.verdicts ?? {};
+  const targetIds = new Set(targets.map((q) => q.id));
+  const kept = Object.fromEntries(Object.entries(previous).filter(([id]) => targetIds.has(id)));
+  if (!REJUDGE) targets = targets.filter((q) => !kept[q.id]);
+
+  log('judge-llm', `${targets.length} questions to judge via ${cfg.model} at ${cfg.baseUrl} (${Object.keys(kept).length} already judged)`);
+  if (!targets.length) {
+    log('judge-llm', 'nothing new to judge; kept existing verdicts');
+    return;
+  }
 
   // Group by cited section so one passage serves several questions. This cuts
   // input tokens by roughly the number of questions per section.
@@ -189,7 +202,7 @@ async function main() {
     groups.get(key).push(q);
   }
 
-  const verdicts = {};
+  const verdicts = { ...kept };
   const histogram = {};
   let done = 0;
   const work = [...groups.entries()];
@@ -223,19 +236,23 @@ async function main() {
 
   await Promise.all(Array.from({ length: CONCURRENCY }, worker));
 
-  const good = histogram.good_exam_item ?? 0;
+  // Histogram over the whole kept set, not just this run's slice, so the number
+  // in the report describes the corpus rather than the increment.
+  const merged = {};
+  for (const v of Object.values(verdicts)) merged[v?.choice ?? 'unknown'] = (merged[v?.choice ?? 'unknown'] ?? 0) + 1;
+
   await writeJson(OUT, {
     generatedAt: new Date().toISOString(),
     model: cfg.model,
     baseUrl: cfg.baseUrl,
     configured: true,
     method: 'adversarial re-answer',
-    histogram,
-    verdicts,
+    histogram: merged,
+    verdicts: Object.fromEntries(Object.entries(verdicts).sort(([a], [b]) => a.localeCompare(b))),
   });
 
-  log('judge-llm', `histogram: ${JSON.stringify(histogram)}`);
-  log('judge-llm', `${good}/${targets.length} agreed at confidence`);
+  log('judge-llm', `histogram: ${JSON.stringify(merged)}`);
+  log('judge-llm', `${merged.good_exam_item ?? 0}/${Object.keys(verdicts).length} agreed at confidence`);
   void quotePresent;
 }
 

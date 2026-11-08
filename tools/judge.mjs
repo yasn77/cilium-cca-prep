@@ -11,7 +11,7 @@
  * carries on, and verify.mjs records `judge: not-configured` on every question
  * so the corpus is visibly un-judged rather than silently blessed.
  */
-import { readJsonl, writeJson, log } from './lib.mjs';
+import { readJson, readJsonl, writeJson, log } from './lib.mjs';
 import { judge, judgeConfig, DEFECT_CATEGORIES } from './systemone.mjs';
 import path from 'node:path';
 import { ROOT } from './lib.mjs';
@@ -22,6 +22,30 @@ const OUT = path.join(ROOT, 'candidates', 'verdicts.json');
 
 const args = new Set(process.argv.slice(2));
 const LIMIT = Number((process.argv.find((a) => a.startsWith('--limit=')) ?? '').split('=')[1]) || 0;
+/**
+ * Re-judge everything, rather than only candidates that have no verdict.
+ *
+ * Judging is the slowest and least stable part of the run: a fresh pass moves a
+ * few questions between shipped and quarantined for no reason, and rewrites
+ * every verdict in the diff. Reusing an existing verdict keeps the corpus stable
+ * and makes the pull request readable. Use this when the judge model changes.
+ */
+const REJUDGE = args.has('--rejudge');
+
+/** Count verdicts by category, over a stable key order. */
+function histogramOf(verdicts) {
+  const histogram = {};
+  for (const v of Object.values(verdicts)) {
+    const k = v?.choice ?? 'unknown';
+    histogram[k] = (histogram[k] ?? 0) + 1;
+  }
+  return histogram;
+}
+
+/** Sort keys so an unchanged set serialises identically and the diff stays small. */
+function sortKeys(obj) {
+  return Object.fromEntries(Object.entries(obj).sort(([a], [b]) => a.localeCompare(b)));
+}
 
 async function main() {
   const cfg = judgeConfig();
@@ -36,20 +60,43 @@ async function main() {
   }
 
   if (!cfg.configured) {
-    log('judge', 'no credential for TYPESAFE_API_KEY or LLM_API_KEY: judging skipped');
-    await writeJson(OUT, {
-      generatedAt: new Date().toISOString(),
-      model: null,
-      configured: false,
-      reason: 'no credential',
-      verdicts: {},
-    });
+    // Leave the existing verdicts untouched. Writing an empty file here would
+    // discard every previous judgement and make the whole corpus look unjudged,
+    // which is worse than skipping a run.
+    log('judge', 'no credential for TYPESAFE_API_KEY or LLM_API_KEY: judging skipped, verdicts left as they were');
     return;
   }
 
-  log('judge', `${all.length} candidates via ${cfg.model} at ${cfg.baseUrl} (key from ${cfg.keySource})`);
+  // Reuse verdicts for candidates that have not changed. A candidate's identity
+  // is its id, which is derived from its section and ordinal, so an existing
+  // verdict still applies.
+  const previousFile = await readJson(OUT, {});
+  const previous = previousFile?.verdicts ?? {};
+  const targetIds = new Set(all.map((q) => q.id));
+  const kept = Object.fromEntries(
+    Object.entries(previous).filter(([id]) => targetIds.has(id)),
+  );
+  const todo = REJUDGE ? all : all.filter((q) => !kept[q.id]);
 
-  const items = all.map((q) => ({
+  log('judge', `${all.length} candidates, ${Object.keys(kept).length} already judged, ${todo.length} to judge`);
+  if (!todo.length) {
+    // Preserve the original timestamp: rewriting it makes the file differ on
+    // every run, which turns a no-op refresh into a 14,000-line pull request.
+    await writeJson(OUT, {
+      generatedAt: previousFile?.generatedAt ?? new Date().toISOString(),
+      model: cfg.model,
+      configured: cfg.configured,
+      categories: Object.keys(DEFECT_CATEGORIES),
+      histogram: histogramOf(kept),
+      verdicts: sortKeys(kept),
+    });
+    log('judge', 'nothing new to judge; kept existing verdicts');
+    return;
+  }
+
+  log('judge', `judging ${todo.length} via ${cfg.model} at ${cfg.baseUrl} (key from ${cfg.keySource})`);
+
+  const items = todo.map((q) => ({
     key: q.id,
     stem: q.stem,
     options: q.options,
@@ -74,12 +121,9 @@ async function main() {
     return;
   }
 
-  const verdicts = {};
-  const histogram = {};
-  for (const [key, v] of results) {
-    verdicts[key] = v;
-    histogram[v.choice] = (histogram[v.choice] ?? 0) + 1;
-  }
+  const verdicts = { ...kept };
+  for (const [key, v] of results) verdicts[key] = v;
+  const histogram = histogramOf(verdicts);
 
   await writeJson(OUT, {
     generatedAt: new Date().toISOString(),
@@ -87,12 +131,12 @@ async function main() {
     configured: true,
     categories: Object.keys(DEFECT_CATEGORIES),
     histogram,
-    verdicts,
+    verdicts: sortKeys(verdicts),
   });
 
   log('judge', `histogram: ${JSON.stringify(histogram)}`);
   const good = histogram.good_exam_item ?? 0;
-  log('judge', `${good}/${all.length} rated good exam items`);
+  log('judge', `${good}/${Object.keys(verdicts).length} rated good exam items`);
 }
 
 await main();

@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "docsRef": "v1.20.4",
   "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
-  "generatedAt": "2026-11-08T18:51:20.030Z",
+  "generatedAt": "2026-11-08T18:52:35.245Z",
   "counts": {
-    "total": 682,
+    "total": 683,
     "byDomain": {
       "architecture": 156,
       "network-policy": 105,
@@ -13,15 +13,15 @@
       "installation": 78,
       "cluster-mesh": 64,
       "ebpf": 26,
-      "bgp": 81
+      "bgp": 82
     },
     "byYieldSource": {
       "definition": 115,
-      "scenario": 286,
+      "scenario": 287,
       "attribute": 188,
       "contrast": 93
     },
-    "scenarioShare": 0.419,
+    "scenarioShare": 0.42,
     "judgeRan": true,
     "judgeSource": "systemone+adversarial",
     "retired": 0
@@ -10799,6 +10799,76 @@
       "type": "single",
       "schemaVersion": 1,
       "ordinal": 5
+    },
+    {
+      "stem": "A CiliumNetworkPolicy contains the egressGateway block below. The cluster has three nodes carrying the label testLabel: testVal, named node-c, node-a and node-b. Which node acts as the gateway node for this policy?",
+      "options": [
+        {
+          "id": "a",
+          "text": "node-a, because among matching nodes the first in lexical ordering by node name is selected."
+        },
+        {
+          "id": "b",
+          "text": "node-c, because the most recently created matching node is preferred."
+        },
+        {
+          "id": "c",
+          "text": "All three nodes act as gateway nodes and share the SNAT load."
+        },
+        {
+          "id": "d",
+          "text": "No node is selected, because more than one node matches the selector and the choice is ambiguous."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The gateway node is matched by node labels through nodeSelector, and when several nodes match, the first node in lexical ordering based on its name is chosen. Of node-a, node-b and node-c, node-a comes first lexically, so it becomes the gateway node.",
+      "optionRationale": {
+        "b": "The excerpt gives no preference based on creation time; the tie-break is lexical ordering of node names.",
+        "c": "A single gateway node is selected per policy; the excerpt describes selecting one node, not spreading traffic across all matches.",
+        "d": "Multiple matches are not an error: the excerpt states that the first node in lexical ordering based on name will be selected."
+      },
+      "yieldSource": "scenario",
+      "attachments": [
+        {
+          "kind": "manifest",
+          "title": "The egressGateway block under test",
+          "language": "yaml",
+          "body": "  egressGateway:\n    nodeSelector:\n      matchLabels:\n        testLabel: testVal"
+        }
+      ],
+      "citations": [
+        {
+          "file": "network/egress-gateway/egress-gateway.rst",
+          "anchor": "selecting-and-configuring-the-gateway-node",
+          "title": "Selecting and configuring the gateway node",
+          "quote": "In case multiple nodes are a match for the given set of labels, the\n    first node in lexical ordering based on their name will be selected.",
+          "url": "https://docs.cilium.io/en/stable/network/egress-gateway/egress-gateway/#selecting-and-configuring-the-gateway-node"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "openrouter.ai",
+          "model": "deepseek/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/egress-gateway/egress-gateway.rst#selecting-and-configuring-the-gateway-node",
+        "createdAt": null,
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "good_exam_item"
+        }
+      },
+      "ordinal": 7,
+      "id": "3e89d2c0350e9c64",
+      "domain": "bgp",
+      "competency": "egress-gateway",
+      "type": "single",
+      "schemaVersion": 1
     },
     {
       "stem": "Two CiliumBGPAdvertisement objects both match the same LoadBalancer Service, and each sets a different local preference value. How does Cilium resolve the local preference for the resulting advertisement?",

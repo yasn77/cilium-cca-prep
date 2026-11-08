@@ -25,7 +25,7 @@ import { ROOT, stableId, citationUrl, readJson, writeJsonl, log, normaliseSpace 
 
 const SECTIONS = path.join(ROOT, 'corpus', 'sections.json');
 const OUT = path.join(ROOT, 'candidates', 'templates.jsonl');
-const MIN_WORDS = chunking.minWords;
+const MIN_WORDS = 120;
 
 /** Capitalise the first letter and end with exactly one full stop. */
 function sentenceCase(text) {

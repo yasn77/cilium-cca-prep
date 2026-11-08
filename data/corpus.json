@@ -2,26 +2,26 @@
   "schemaVersion": 1,
   "docsRef": "v1.20.4",
   "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
-  "generatedAt": "2026-11-08T00:52:53.445Z",
+  "generatedAt": "2026-11-08T02:09:22.466Z",
   "counts": {
-    "total": 58,
+    "total": 109,
     "byDomain": {
-      "architecture": 20,
-      "network-policy": 11,
-      "service-mesh": 20,
-      "observability": 0,
-      "installation": 6,
-      "cluster-mesh": 1,
-      "ebpf": 0,
-      "bgp": 0
+      "architecture": 25,
+      "network-policy": 21,
+      "service-mesh": 42,
+      "observability": 3,
+      "installation": 9,
+      "cluster-mesh": 3,
+      "ebpf": 3,
+      "bgp": 3
     },
     "byYieldSource": {
-      "definition": 39,
-      "attribute": 9,
-      "scenario": 8,
-      "contrast": 2
+      "definition": 49,
+      "attribute": 23,
+      "scenario": 31,
+      "contrast": 6
     },
-    "scenarioShare": 0.138,
+    "scenarioShare": 0.284,
     "judgeRan": false,
     "retired": 0
   },
@@ -78,7 +78,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "overview/component-overview.rst#data-store",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -135,7 +135,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/concepts/ipam/cluster-pool-to-multi-pool.rst#practical-example",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -201,7 +201,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/concepts/routing.rst#google-cloud",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -258,7 +258,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/concepts/ipam/multi-pool.rst#updating-existing-ciliumpodippools",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -324,7 +324,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "overview/component-overview.rst#data-store",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -381,7 +381,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/concepts/ipam/multi-pool.rst#updating-existing-ciliumpodippools",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -447,7 +447,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/concepts/routing.rst#google-cloud",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -509,7 +509,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/concepts/routing.rst#google-cloud",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -571,7 +571,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/concepts/ipam/eni.rst#ip-allocation",
-        "createdAt": "2026-11-08T00:52:53.392Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -628,7 +628,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/kubernetes/bandwidth-manager.rst#bandwidth-manager",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -694,7 +694,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "overview/component-overview.rst#cilium",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -756,7 +756,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "overview/component-overview.rst#cilium",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -764,6 +764,67 @@
           "judgeVerdict": "not-configured"
         }
       },
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer is migrating a kind cluster from cluster-pool to multi-pool IPAM mode. They execute a Helm upgrade command that includes the flag `--set-string extraConfig.enable-cluster-pool-to-multi-pool-migration=true` and `--set operator.rollOutPods=true`. What is the immediate operational effect of this specific combination of flags on the Cilium components?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It updates the Cilium ConfigMap and restarts only the Cilium operator, allowing it to create the default CiliumPodIPPool."
+        },
+        {
+          "id": "b",
+          "text": "It restarts all Cilium agents immediately, forcing them to switch to multi-pool mode before the operator creates the pool."
+        },
+        {
+          "id": "c",
+          "text": "It deletes all existing CiliumNode resources and recreates them with the new multi-pool IPAM configuration."
+        },
+        {
+          "id": "d",
+          "text": "It pauses the Cilium operator and prevents any new Pod IP allocations until the migration is manually verified."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The source states that the command 'updates the Cilium ConfigMap and restarts only the Cilium operator'. It explicitly sets `rollOutCiliumPods=false` in the example, meaning agents are not restarted by this initial command. The operator is responsible for creating the default pool.",
+      "optionRationale": {
+        "b": "Incorrect because the example sets `rollOutCiliumPods=false`, so agents are not restarted by the initial Helm upgrade. Agents are restarted manually later in the process.",
+        "c": "Incorrect because the migration preserves existing per-node CIDRs and does not delete CiliumNode resources; it updates their `spec.ipam` fields.",
+        "d": "Incorrect because the source does not mention pausing the operator or preventing allocations; it describes a rolling migration where connectivity is maintained."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/concepts/ipam/cluster-pool-to-multi-pool.rst",
+          "anchor": "practical-example",
+          "title": "Practical Example",
+          "quote": "The command updates the Cilium ConfigMap and restarts only the Cilium operator",
+          "url": "https://docs.cilium.io/en/stable/network/concepts/ipam/cluster-pool-to-multi-pool/#practical-example"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/concepts/ipam/cluster-pool-to-multi-pool.rst#practical-example",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "921688d575427a71",
+      "domain": "architecture",
+      "competency": null,
+      "type": "single",
       "schemaVersion": 1
     },
     {
@@ -813,7 +874,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/kubernetes/bandwidth-manager.rst#bandwidth-manager",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -879,7 +940,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "overview/component-overview.rst#hubble",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -941,7 +1002,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/kubernetes/kubeproxy-free.rst#annotation-based-load-balancing-weight",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1003,7 +1064,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/concepts/ipam/azure.rst#required-privileges",
-        "createdAt": "2026-11-08T00:52:53.392Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1011,6 +1072,128 @@
           "judgeVerdict": "not-configured"
         }
       },
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer is configuring a new Cilium cluster and wants to enable the bandwidth manager to optimize TCP workloads. They are concerned about scalability issues on multi-queue network interfaces. Which implementation detail distinguishes Cilium's native bandwidth manager from the standard Kubernetes bandwidth CNI plugin?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Cilium's bandwidth manager uses EDT (Earliest Departure Time) and eBPF, whereas the bandwidth CNI plugin is based on TBF (Token Bucket Filter)."
+        },
+        {
+          "id": "b",
+          "text": "Cilium's bandwidth manager relies on CNI chaining, while the bandwidth CNI plugin is natively integrated into the kernel."
+        },
+        {
+          "id": "c",
+          "text": "Cilium's bandwidth manager only supports ingress traffic, while the bandwidth CNI plugin supports both ingress and egress."
+        },
+        {
+          "id": "d",
+          "text": "Cilium's bandwidth manager requires the use of the `bandwidth` CNI plugin to function, whereas the native implementation does not."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt states that due to scalability concerns for multi-queue network interfaces, it is not recommended to use the bandwidth CNI plugin which is based on TBF (Token Bucket Filter) instead of EDT. It explicitly notes that Cilium's bandwidth manager is natively integrated and does not rely on CNI chaining, using EDT and eBPF to optimize workloads.",
+      "optionRationale": {
+        "b": "The excerpt states that the bandwidth manager 'does not rely on CNI chaining and is natively integrated into Cilium instead', making the claim that it relies on CNI chaining incorrect.",
+        "c": "The excerpt states that Cilium's bandwidth manager supports both `kubernetes.io/egress-bandwidth` and `kubernetes.io/ingress-bandwidth` Pod annotations, so it supports both directions.",
+        "d": "The excerpt explicitly states that the bandwidth manager 'does not make use of the bandwidth CNI plugin'."
+      },
+      "yieldSource": "contrast",
+      "citations": [
+        {
+          "file": "network/kubernetes/bandwidth-manager.rst",
+          "anchor": "bandwidth-manager",
+          "title": "Bandwidth Manager",
+          "quote": "Due to scalability concerns in particular for multi-queue network interfaces, it is not recommended to use the bandwidth CNI plugin which is based on TBF (Token Bucket Filter) instead of EDT.",
+          "url": "https://docs.cilium.io/en/stable/network/kubernetes/bandwidth-manager/#bandwidth-manager"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/kubernetes/bandwidth-manager.rst#bandwidth-manager",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "a8b82f6a61f7809a",
+      "domain": "architecture",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "During the migration process, an engineer checks the status of a CiliumNode that has already been restarted to multi-pool mode. The output of `kubectl get ciliumnode kind-worker -o yaml | yq .spec.ipam` shows a `pools` section with `allocated` and `requested` fields. What does the presence of the `requested` field with `needed: ipv4-addrs: 16` indicate about the agent's state?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The agent is requesting 16 new IP addresses from the default pool to accommodate new Pods or restored endpoints."
+        },
+        {
+          "id": "b",
+          "text": "The agent has failed to allocate IPs and is reporting an error state to the operator."
+        },
+        {
+          "id": "c",
+          "text": "The agent is still running in cluster-pool mode and is requesting migration instructions."
+        },
+        {
+          "id": "d",
+          "text": "The agent is reserving 16 IPs for the control-plane node to ensure high availability."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The source shows that after the agent restarts, it 'requests IPs from the default pool'. The `requested` field in the `spec.ipam` output indicates the agent's demand for additional IP addresses from the specified pool, which is part of the normal multi-pool IPAM operation.",
+      "optionRationale": {
+        "b": "Incorrect because the source describes this as a normal state after restart, not an error. The agent successfully allocates IPs as shown in the subsequent `cilium-dbg status` output.",
+        "c": "Incorrect because the agent has already restarted and is running in multi-pool mode, as indicated by the `pools` structure in the output.",
+        "d": "Incorrect because the request is for the specific node (`kind-worker`) and is related to its local Pod allocations, not a global control-plane reservation."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/concepts/ipam/cluster-pool-to-multi-pool.rst",
+          "anchor": "practical-example",
+          "title": "Practical Example",
+          "quote": "After the agent restarts, it runs in multi-pool IPAM mode and requests IPs from the default pool while preserving the IPs of restored endpoints",
+          "url": "https://docs.cilium.io/en/stable/network/concepts/ipam/cluster-pool-to-multi-pool/#practical-example"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/concepts/ipam/cluster-pool-to-multi-pool.rst#practical-example",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "b52ffd6ff289068d",
+      "domain": "architecture",
+      "competency": null,
+      "type": "single",
       "schemaVersion": 1
     },
     {
@@ -1060,7 +1243,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/concepts/ipam/multi-pool.rst#updating-existing-ciliumpodippools",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1126,7 +1309,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/kubernetes/ciliumendpointslice.rst#ciliumendpointslice",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1134,6 +1317,67 @@
           "judgeVerdict": "not-configured"
         }
       },
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer wants to use a pool name other than `default` for the migration. According to the source, how should this be configured?",
+      "options": [
+        {
+          "id": "a",
+          "text": "By setting `--set-string extraConfig.ipam-default-ip-pool=<pool-name>` in the same Helm upgrade that restarts the operator."
+        },
+        {
+          "id": "b",
+          "text": "By editing the `CiliumPodIPPool` resource directly after the operator has created the `default` pool."
+        },
+        {
+          "id": "c",
+          "text": "By changing the `ipam.mode` flag to `custom-pool` and specifying the name in the `CiliumConfig`."
+        },
+        {
+          "id": "d",
+          "text": "By renaming the `default` pool using `kubectl rename` after the migration is complete."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The source explicitly states: 'If you want to use a different default pool name for the migration, configure it globally in the same Helm upgrade that restarts the operator, with `--set-string extraConfig.ipam-default-ip-pool=<pool-name>`.'",
+      "optionRationale": {
+        "b": "Incorrect because the source specifies configuring it during the Helm upgrade that restarts the operator, not by editing the resource afterwards.",
+        "c": "Incorrect because the source does not mention a `custom-pool` mode or using `CiliumConfig` for this specific purpose.",
+        "d": "Incorrect because the source does not mention renaming resources; it specifies a configuration flag for the initial setup."
+      },
+      "yieldSource": "definition",
+      "citations": [
+        {
+          "file": "network/concepts/ipam/cluster-pool-to-multi-pool.rst",
+          "anchor": "practical-example",
+          "title": "Practical Example",
+          "quote": "If you want to use a different default pool name for the migration, configure it globally in the same Helm upgrade that restarts the operator, with ``--set-string extraConfig.ipam-default-ip-pool=<pool-name>``.",
+          "url": "https://docs.cilium.io/en/stable/network/concepts/ipam/cluster-pool-to-multi-pool/#practical-example"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/concepts/ipam/cluster-pool-to-multi-pool.rst#practical-example",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "df900dc79cff2036",
+      "domain": "architecture",
+      "competency": null,
+      "type": "single",
       "schemaVersion": 1
     },
     {
@@ -1183,7 +1427,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/kubernetes/bandwidth-manager.rst#bandwidth-manager",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1192,6 +1436,67 @@
         }
       },
       "id": "f37b3b7757719126",
+      "domain": "architecture",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "During a rolling migration, some Cilium agents are running in multi-pool mode while others are still in cluster-pool mode. An engineer scales the nginx deployment from 4 to 8 replicas. What is the expected behaviour for the new Pods scheduled on nodes with agents in different modes?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Multi-pool agents allocate new IPs from the migrated default pool, while cluster-pool agents continue to use their existing cluster-pool allocations."
+        },
+        {
+          "id": "b",
+          "text": "All new Pods will fail to schedule until all agents have been restarted to multi-pool mode."
+        },
+        {
+          "id": "c",
+          "text": "Cluster-pool agents will automatically switch to multi-pool mode upon receiving a new Pod scheduling request."
+        },
+        {
+          "id": "d",
+          "text": "New Pods will only be scheduled on nodes with multi-pool agents to ensure IP consistency."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The source states: 'Multi-pool agents allocate new IPs from the migrated default pool, while cluster-pool agents continue to use their existing cluster-pool allocations until they are restarted'. The example shows new Pods getting IPs from both types of nodes (e.g., 10.0.3.209 on kind-worker and 10.0.0.101 on kind-worker2).",
+      "optionRationale": {
+        "b": "Incorrect because the source explicitly states that 'New pods can also be scheduled during the rolling migration' and connectivity is maintained.",
+        "c": "Incorrect because the source states that cluster-pool agents 'continue to use their existing cluster-pool allocations until they are restarted', implying they do not switch automatically.",
+        "d": "Incorrect because the example shows new Pods being scheduled on both `kind-worker` (multi-pool) and `kind-worker2` (which was still cluster-pool at that stage, as it was restarted later)."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/concepts/ipam/cluster-pool-to-multi-pool.rst",
+          "anchor": "practical-example",
+          "title": "Practical Example",
+          "quote": "Multi-pool agents allocate new IPs from the migrated default pool, while cluster-pool agents continue to use their existing cluster-pool allocations until they are restarted",
+          "url": "https://docs.cilium.io/en/stable/network/concepts/ipam/cluster-pool-to-multi-pool/#practical-example"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/concepts/ipam/cluster-pool-to-multi-pool.rst#practical-example",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "f66478ec599bab8b",
       "domain": "architecture",
       "competency": null,
       "type": "single",
@@ -1249,7 +1554,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/kubernetes/policy.rst#ciliumnetworkpolicy",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1257,6 +1562,311 @@
           "judgeVerdict": "not-configured"
         }
       },
+      "schemaVersion": 1
+    },
+    {
+      "stem": "When monitoring SNAT source port utilization for alerting and observability, which metric should an engineer track to see the top saturation of a Cilium Agent?",
+      "options": [
+        {
+          "id": "a",
+          "text": "nat-stats"
+        },
+        {
+          "id": "b",
+          "text": "NAT endpoint max connection"
+        },
+        {
+          "id": "c",
+          "text": "egress-gateway-connections"
+        },
+        {
+          "id": "d",
+          "text": "snat-port-utilization"
+        }
+      ],
+      "answer": "b",
+      "explanation": "The excerpt explicitly states: 'For alerting and observability on SNAT source port utilization please see the NAT endpoint max connection metric which tracks the top saturation (as a percentage of total the max available) of a Cilium Agent.'",
+      "optionRationale": {
+        "a": "nat-stats is the command used to view the top 30 connection tuples, not the metric name for alerting on saturation.",
+        "c": "This metric name is not mentioned in the excerpt.",
+        "d": "This metric name is not mentioned in the excerpt."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/egress-gateway/egress-gateway-troubleshooting.rst",
+          "anchor": "example-scenario",
+          "title": "Example Scenario",
+          "quote": "For alerting and observability on SNAT source port utilization please see the NAT endpoint max connection metric which tracks the top saturation (as a percentage of total the max available) of a Cilium Agent.",
+          "url": "https://docs.cilium.io/en/stable/network/egress-gateway/egress-gateway-troubleshooting/#example-scenario"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/egress-gateway/egress-gateway-troubleshooting.rst#example-scenario",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "0dd2e09af6a07426",
+      "domain": "bgp",
+      "competency": "egress-gateway",
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer is troubleshooting connectivity issues on a Cilium egress-gateway node. They observe that the SNAT map has reached capacity, resulting in old connections not being tracked. According to the provided scenario, what is the primary cause of this specific failure mode?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The firewall is rejecting packets because the source IP does not match 10.1.0.0."
+        },
+        {
+          "id": "b",
+          "text": "Too many connections are being made through the egress-gateway node, exhausting the available unique source ports for the specific tuple."
+        },
+        {
+          "id": "c",
+          "text": "The --node-port-range flag is set to a value lower than the default 32767."
+        },
+        {
+          "id": "d",
+          "text": "The cilium-dbg utility is failing to update the NAT stats every 30 seconds."
+        }
+      ],
+      "answer": "b",
+      "explanation": "The excerpt states that if too many connections are made through the egress-gateway node, Cilium's SNAT map can reach capacity, which results in old connections not being tracked. This happens because each connection to the same destination tuple is mapped using a unique source port, and the pool of available ports is finite.",
+      "optionRationale": {
+        "a": "The firewall rejection is a precondition for the traffic flow, but the specific failure of 'old connections not being tracked' is caused by the SNAT map reaching capacity, not the firewall.",
+        "c": "The default upper bound is 32767. Changing this flag would change the limit, but the scenario describes the default behaviour where the limit is reached due to high connection volume.",
+        "d": "The delay in stats updates is a note about observability, not the cause of the connectivity issues or the SNAT map capacity limit."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/egress-gateway/egress-gateway-troubleshooting.rst",
+          "anchor": "example-scenario",
+          "title": "Example Scenario",
+          "quote": "If too many connections are made through the egress-gateway node, Cilium's SNAT map can reach capacity, which will result in old connections not being tracked, causing connectivity issues.",
+          "url": "https://docs.cilium.io/en/stable/network/egress-gateway/egress-gateway-troubleshooting/#example-scenario"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/egress-gateway/egress-gateway-troubleshooting.rst#example-scenario",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "c4c546c48822e7ab",
+      "domain": "bgp",
+      "competency": "egress-gateway",
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer is reviewing the output of cilium-dbg shell -- db/show nat-stats. They notice that the stats do not immediately reflect new connections that were just established. What is the reason for this delay?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The stats are re-calculated every 30 seconds by default."
+        },
+        {
+          "id": "b",
+          "text": "The stats are only updated when the SNAT map reaches capacity."
+        },
+        {
+          "id": "c",
+          "text": "The stats are only updated when the firewall allows a new connection."
+        },
+        {
+          "id": "d",
+          "text": "The stats are re-calculated every 30 minutes by default."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt includes a note stating: 'These stats are re-calculated every 30 seconds by default. So there is a delay between new connections occurring and when the stats are updated.'",
+      "optionRationale": {
+        "b": "The stats are updated on a timer, not triggered by capacity limits.",
+        "c": "The stats are internal to the Cilium agent and are not dependent on firewall events for their update cycle.",
+        "d": "The default interval is 30 seconds, not 30 minutes."
+      },
+      "yieldSource": "definition",
+      "citations": [
+        {
+          "file": "network/egress-gateway/egress-gateway-troubleshooting.rst",
+          "anchor": "example-scenario",
+          "title": "Example Scenario",
+          "quote": "These stats are re-calculated every 30 seconds by default. So there is a delay between new connections occurring and when the stats are updated.",
+          "url": "https://docs.cilium.io/en/stable/network/egress-gateway/egress-gateway-troubleshooting/#example-scenario"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/egress-gateway/egress-gateway-troubleshooting.rst#example-scenario",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "f4b5f1eb64a2880e",
+      "domain": "bgp",
+      "competency": "egress-gateway",
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer is preparing an EKS cluster for a Cilium Cluster Mesh deployment. They are about to create the VPC using the `aws ec2 create-vpc` command. Which CIDR block should they explicitly avoid selecting for the VPC, and why?",
+      "options": [
+        {
+          "id": "a",
+          "text": "10.0.0.0/16, because it is the default range for AWS VPCs."
+        },
+        {
+          "id": "b",
+          "text": "172.17.0.0/16, because certain AWS services utilize this range."
+        },
+        {
+          "id": "c",
+          "text": "192.168.0.0/16, because it conflicts with the private subnet ranges."
+        },
+        {
+          "id": "d",
+          "text": "10.0.1.0/24, because it is reserved for public subnets."
+        }
+      ],
+      "answer": "b",
+      "explanation": "The source excerpt explicitly states to avoid using the 172.17.0.0/16 CIDR range for the VPC to prevent potential issues, as certain AWS services utilize this range.",
+      "optionRationale": {
+        "a": "10.0.0.0/16 is the CIDR block actually used in the example command, not one to be avoided.",
+        "c": "192.168.0.0/16 is not mentioned in the excerpt as a range to avoid.",
+        "d": "10.0.1.0/24 is a specific subnet CIDR used in the example, not a VPC-level range to avoid."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/clustermesh/eks-clustermesh-prep.rst",
+          "anchor": "install-cluster-one",
+          "title": "Install cluster one",
+          "quote": "Avoid using the ``172.17.0.0/16`` CIDR range for your VPC to prevent potential issues since certain `AWS services <https://docs.aws.amazon.com/vpc/latest/userguide/vpc-cidr-blocks.html>`__ utilize this range.",
+          "url": "https://docs.cilium.io/en/stable/network/clustermesh/eks-clustermesh-prep/#install-cluster-one"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/clustermesh/eks-clustermesh-prep.rst#install-cluster-one",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "55eb2f139895587a",
+      "domain": "cluster-mesh",
+      "competency": "mesh-benefits",
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer is configuring the network infrastructure for an EKS cluster. They need to ensure that private subnets can access the internet for software updates but do not expose internal resources directly. Based on the script provided, which component is created in the public subnets to facilitate this outbound connectivity for the private subnets?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Internet Gateway"
+        },
+        {
+          "id": "b",
+          "text": "NAT Gateway"
+        },
+        {
+          "id": "c",
+          "text": "Elastic IP Address"
+        },
+        {
+          "id": "d",
+          "text": "Route Table"
+        }
+      ],
+      "answer": "b",
+      "explanation": "The script creates NAT gateways (`Cluster_1_NGW_1` and `Cluster_1_NGW_2`) in the public subnets. Later, routes are added to the private route tables pointing to these NAT gateways, allowing private subnets to initiate outbound connections.",
+      "optionRationale": {
+        "a": "The Internet Gateway is attached to the VPC and used by the public route table, but the NAT Gateway is the specific component placed in public subnets to serve private subnets.",
+        "c": "Elastic IP Addresses are allocated and associated with the NAT Gateways, but the NAT Gateway itself is the network component providing the service.",
+        "d": "Route tables are logical collections of rules, not the network appliance providing the translation service."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/clustermesh/eks-clustermesh-prep.rst",
+          "anchor": "install-cluster-one",
+          "title": "Install cluster one",
+          "quote": "Cluster_1_NGW_1=$(aws ec2 create-nat-gateway \\\n         --subnet-id $Cluster_1_Public_Subnet_1 \\\n         --allocation-id ${Cluster_1_EIP_1} \\\n         --tag-specifications \"ResourceType=natgateway, Tags=[{Key=Name,Value=Cluster_1_NGW_1}]\" \\\n         --query 'NatGateway.{NatGatewayId:NatGatewayId}' \\\n         --output text\n     )",
+          "url": "https://docs.cilium.io/en/stable/network/clustermesh/eks-clustermesh-prep/#install-cluster-one"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/clustermesh/eks-clustermesh-prep.rst#install-cluster-one",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "c196f9b9810f1f61",
+      "domain": "cluster-mesh",
+      "competency": "mesh-benefits",
+      "type": "single",
       "schemaVersion": 1
     },
     {
@@ -1311,7 +1921,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/clustermesh/load-balancing.rst#load-balancing-service-discovery",
-        "createdAt": "2026-11-08T00:52:53.392Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1319,6 +1929,189 @@
           "judgeVerdict": "not-configured"
         }
       },
+      "schemaVersion": 1
+    },
+    {
+      "stem": "In the Cilium datapath, the Socket operations hook is attached to the root cgroup. What specific TCP state transition does this hook monitor to determine when to attach a socket send/recv program?",
+      "options": [
+        {
+          "id": "a",
+          "text": "SYN_SENT"
+        },
+        {
+          "id": "b",
+          "text": "CLOSED"
+        },
+        {
+          "id": "c",
+          "text": "ESTABLISHED"
+        },
+        {
+          "id": "d",
+          "text": "TIME_WAIT"
+        }
+      ],
+      "answer": "c",
+      "explanation": "The excerpt states that Cilium uses the socket operations hook to 'monitor for TCP state transitions, specifically for ESTABLISHED state transitions.' It further explains that when a socket transitions into ESTABLISHED state, a socket send/recv program is attached if the peer is node local.",
+      "optionRationale": {
+        "a": "The excerpt does not mention SYN_SENT as the trigger for attaching the socket send/recv program.",
+        "b": "The excerpt does not mention CLOSED as the trigger for attaching the socket send/recv program.",
+        "d": "The excerpt does not mention TIME_WAIT as the trigger for attaching the socket send/recv program."
+      },
+      "yieldSource": "definition",
+      "citations": [
+        {
+          "file": "network/ebpf/intro.rst",
+          "anchor": "introduction",
+          "title": "Introduction",
+          "quote": "Cilium attaches a BPF socket operations program to the root cgroup and uses this to monitor for TCP state transitions, specifically for ESTABLISHED state transitions. When a socket transitions into ESTABLISHED state if the TCP socket has a node local peer (possibly a local proxy) a socket send/recv program is attached.",
+          "url": "https://docs.cilium.io/en/stable/network/ebpf/intro/#introduction"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/ebpf/intro.rst#introduction",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "911430a3c97b9bb0",
+      "domain": "ebpf",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "A security team is reviewing the L3 Encryption object in Cilium. They note that on ingress, the object does not perform a map lookup to find the decryption key. According to the excerpt, where is the key required for decryption located?",
+      "options": [
+        {
+          "id": "a",
+          "text": "In a local map lookup on the destination node"
+        },
+        {
+          "id": "b",
+          "text": "Encoded in the IPsec header"
+        },
+        {
+          "id": "c",
+          "text": "In the Linux xfrm layer configuration"
+        },
+        {
+          "id": "d",
+          "text": "In the Envoy userspace proxy"
+        }
+      ],
+      "answer": "b",
+      "explanation": "The excerpt states: 'The key required for decryption is encoded in the IPsec header so on ingress we do not need to do a map lookup to find the decryption key.'",
+      "optionRationale": {
+        "a": "The excerpt explicitly states that a map lookup is not needed on ingress because the key is in the header.",
+        "c": "The Linux xfrm layer is used for the decryption process, but the key itself is not described as being stored in its configuration for lookup purposes in this context.",
+        "d": "The Envoy proxy is mentioned as a userspace proxy for L7, but the L3 encryption key location is specified as the IPsec header."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/ebpf/intro.rst",
+          "anchor": "introduction",
+          "title": "Introduction",
+          "quote": "The key required for decryption is encoded in the IPsec header so on ingress we do not need to do a map lookup to find the decryption key.",
+          "url": "https://docs.cilium.io/en/stable/network/ebpf/intro/#introduction"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/ebpf/intro.rst#introduction",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "b1a4efbc89b5284e",
+      "domain": "ebpf",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer is configuring the Prefilter object in Cilium to improve performance. The Prefilter runs an XDP program and uses a set of CIDR maps supplied by the Cilium agent. What is the primary action taken by the Prefilter if the destination of a packet is not a valid endpoint?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The packet is forwarded to the L7 Policy object"
+        },
+        {
+          "id": "b",
+          "text": "The packet is dropped"
+        },
+        {
+          "id": "c",
+          "text": "The packet is encrypted using the most recent key"
+        },
+        {
+          "id": "d",
+          "text": "The packet is redirected to the Service object"
+        }
+      ],
+      "answer": "b",
+      "explanation": "The excerpt describes the Prefilter object: 'a set of CIDR maps supplied by the Cilium agent are used to do a lookup and the packet is either dropped, for example when the destination is not a valid endpoint, or allowed to be processed by the stack.'",
+      "optionRationale": {
+        "a": "Forwarding to the L7 Policy object is a function of the Endpoint Policy object, not the Prefilter.",
+        "c": "Encryption is a function of the L3 Encryption object, not the Prefilter.",
+        "d": "Redirecting to the Service object is a function of the Endpoint Policy object, not the Prefilter."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/ebpf/intro.rst",
+          "anchor": "introduction",
+          "title": "Introduction",
+          "quote": "Specifically, a set of CIDR maps supplied by the Cilium agent are used to do a lookup and the packet is either dropped, for example when the destination is not a valid endpoint, or allowed to be processed by the stack.",
+          "url": "https://docs.cilium.io/en/stable/network/ebpf/intro/#introduction"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/ebpf/intro.rst#introduction",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "e7c11bfef09be49b",
+      "domain": "ebpf",
+      "competency": null,
+      "type": "single",
       "schemaVersion": 1
     },
     {
@@ -1373,7 +2166,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "operations/troubleshooting.rst#understanding-etcd-status",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1435,7 +2228,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "operations/performance/benchmark.rst#introduction",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1497,7 +2290,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "gettingstarted/terminology.rst#identity-management-in-the-cluster",
-        "createdAt": "2026-11-08T00:52:53.392Z",
+        "createdAt": "2026-11-08T02:09:22.355Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1559,7 +2352,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "operations/performance/benchmark.rst#introduction",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1567,6 +2360,189 @@
           "judgeVerdict": "not-configured"
         }
       },
+      "schemaVersion": 1
+    },
+    {
+      "stem": "During troubleshooting, an engineer runs `kubectl get cec cilium-ingress-default-basic-ingress -o json` and inspects the EDS resources. What naming convention is used for the Envoy Discovery Service (EDS) name?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`<namespace>/<service-name>:<port>`"
+        },
+        {
+          "id": "b",
+          "text": "`<service-name>-<namespace>-<port>`"
+        },
+        {
+          "id": "c",
+          "text": "`<ingress-name>-<proxy-port>`"
+        },
+        {
+          "id": "d",
+          "text": "`<cluster-ip>:<node-port>`"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt states: 'The Envoy Discovery Service (EDS) has a name that follows the convention `<namespace>/<service-name>:<port>`.' The example JSON shows names like `default/details:9080` and `default/productpage:9080`, which fit this pattern.",
+      "optionRationale": {
+        "b": "This format is not mentioned in the excerpt. The example `default/details:9080` clearly uses a slash and a colon.",
+        "c": "This resembles the proxy port rule name (`cilium-ingress-default-basic-ingress:19672`) but is not the EDS naming convention.",
+        "d": "This resembles the service IP and port format but is not the EDS naming convention described."
+      },
+      "yieldSource": "definition",
+      "citations": [
+        {
+          "file": "operations/troubleshooting_servicemesh.rst",
+          "anchor": "connectivity-troubleshooting",
+          "title": "Connectivity Troubleshooting",
+          "quote": "The Envoy Discovery Service (EDS) has a name that follows the convention ``<namespace>/<service-name>:<port>``.",
+          "url": "https://docs.cilium.io/en/stable/operations/troubleshooting_servicemesh/#connectivity-troubleshooting"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "operations/troubleshooting_servicemesh.rst#connectivity-troubleshooting",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "a6854cc7d6bcaa03",
+      "domain": "installation",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "A user is configuring a `CiliumEnvoyConfig` resource manually. How is the proxy port for this resource determined, compared to an Ingress resource?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It is randomly assigned by the Cilium Ingress controller."
+        },
+        {
+          "id": "b",
+          "text": "It is retrieved directly from the spec of the `CiliumEnvoyConfig` resource."
+        },
+        {
+          "id": "c",
+          "text": "It is automatically selected from the range 10000-20000 by the kernel."
+        },
+        {
+          "id": "d",
+          "text": "It is defined in the `cilium-config` ConfigMap under the `debug-verbose` key."
+        }
+      ],
+      "answer": "b",
+      "explanation": "The excerpt explicitly contrasts the two methods: for Ingress, the proxy port is randomly assigned by the Cilium Ingress controller, whereas for manually configured `CiliumEnvoyConfig` resources, the proxy port is retrieved directly from the spec.",
+      "optionRationale": {
+        "a": "This is the method used for Ingress resources, not manually configured `CiliumEnvoyConfig` resources.",
+        "c": "While the `cilium-dbg status` output shows redirects active on ports 10000-20000, the excerpt does not state that the kernel selects the port for CEC resources; it states the port comes from the spec.",
+        "d": "The `cilium-config` ConfigMap is used for flags like `debug` and `debug-verbose`, not for defining specific proxy ports for individual CEC resources."
+      },
+      "yieldSource": "contrast",
+      "citations": [
+        {
+          "file": "operations/troubleshooting_servicemesh.rst",
+          "anchor": "connectivity-troubleshooting",
+          "title": "Connectivity Troubleshooting",
+          "quote": "For Ingress, the proxy port is randomly assigned by the Cilium Ingress controller. For manually configured ``CiliumEnvoyConfig`` resources, the proxy port is retrieved directly from the spec.",
+          "url": "https://docs.cilium.io/en/stable/operations/troubleshooting_servicemesh/#connectivity-troubleshooting"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "operations/troubleshooting_servicemesh.rst#connectivity-troubleshooting",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "c11e776b27cd8e3a",
+      "domain": "installation",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer is troubleshooting a 503 error from an Ingress resource. They SSH into a node and run `curl -v http://localhost:31911/`. The response includes the header `server: envoy`. What does this specific response indicate about the request path?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The request successfully reached the Cilium Envoy proxy, but the backend service is unavailable."
+        },
+        {
+          "id": "b",
+          "text": "The request failed to reach the node because the cloud Load Balancer is misconfigured."
+        },
+        {
+          "id": "c",
+          "text": "The Cilium agent is not running on the node, causing the connection to be refused."
+        },
+        {
+          "id": "d",
+          "text": "The request bypassed the Envoy proxy and was handled directly by the Kubernetes API server."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt states that if you see a response with the special header `server: envoy`, it means the request is being redirected to the proxy successfully. The 503 status indicates the proxy is running but cannot reach a healthy upstream, which aligns with the description of the request traversing to the Cilium Envoy proxy.",
+      "optionRationale": {
+        "b": "The excerpt notes that the step between the cloud Load Balancer and the node port is out of Cilium scope, but the presence of the `server: envoy` header confirms the request has already passed the node port and reached the proxy.",
+        "c": "If the Cilium agent were not running, the proxy would not be active to return an Envoy-specific header. The excerpt identifies 'Cilium Envoy proxy is not running' as a root cause for issues, but the successful proxy response contradicts this.",
+        "d": "The excerpt describes the flow as LoadBalancer -> Node Port -> Cilium Envoy Proxy -> Backend. It does not suggest the request bypasses the proxy to go to the API server."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "operations/troubleshooting_servicemesh.rst",
+          "anchor": "connectivity-troubleshooting",
+          "title": "Connectivity Troubleshooting",
+          "quote": "If you see a response similar to the above, it means that the request is being redirected to proxy successfully. The http response will have one special header ``server: envoy`` accordingly.",
+          "url": "https://docs.cilium.io/en/stable/operations/troubleshooting_servicemesh/#connectivity-troubleshooting"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "operations/troubleshooting_servicemesh.rst#connectivity-troubleshooting",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "d07e35ee6b589dfc",
+      "domain": "installation",
+      "competency": null,
+      "type": "single",
       "schemaVersion": 1
     },
     {
@@ -1621,7 +2597,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "operations/troubleshooting.rst#single-node-bugtool",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1683,7 +2659,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "operations/troubleshooting.rst#observing-flows-with-hubble-relay",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1691,6 +2667,67 @@
           "judgeVerdict": "not-configured"
         }
       },
+      "schemaVersion": 1
+    },
+    {
+      "stem": "A network engineer is verifying the services created by the demo application manifests. Based on the `kubectl get pods,svc` output provided, which service is associated with the `deathstar` microservice and what is its type?",
+      "options": [
+        {
+          "id": "a",
+          "text": "svc/deathstar, ClusterIP"
+        },
+        {
+          "id": "b",
+          "text": "svc/deathstar, LoadBalancer"
+        },
+        {
+          "id": "c",
+          "text": "svc/kubernetes, ClusterIP"
+        },
+        {
+          "id": "d",
+          "text": "svc/xwing, NodePort"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The output lists `svc/deathstar` with the type `ClusterIP`. There is no service listed for xwing in the provided output snippet, and the kubernetes service is separate.",
+      "optionRationale": {
+        "b": "The output explicitly lists the type as ClusterIP, not LoadBalancer.",
+        "c": "While svc/kubernetes is a ClusterIP, it is not associated with the deathstar microservice.",
+        "d": "The provided output does not list a service for xwing, and the deathstar service is a ClusterIP, not a NodePort."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "security/aws.rst",
+          "anchor": "deploy-a-demo-application",
+          "title": "Deploy a demo application:",
+          "quote": "svc/deathstar    ClusterIP   10.109.254.198   <none>        80/TCP    3h",
+          "url": "https://docs.cilium.io/en/stable/security/aws/#deploy-a-demo-application"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "security/aws.rst#deploy-a-demo-application",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "0299bde8945b3542",
+      "domain": "network-policy",
+      "competency": "policy-intent",
+      "type": "single",
       "schemaVersion": 1
     },
     {
@@ -1745,7 +2782,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/policy/layer7.rst#http",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1807,7 +2844,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/policy/layer7.rst#http",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1869,7 +2906,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/policy/intro.rst#rule-basics",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1931,7 +2968,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/policy/intro.rst#rule-basics",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -1939,6 +2976,67 @@
           "judgeVerdict": "not-configured"
         }
       },
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer is reviewing the deployment progress of the demo application. The guide states that each pod will go through several states until it reaches a specific status at which point the pod is ready. What is this final status?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Initialized"
+        },
+        {
+          "id": "b",
+          "text": "Running"
+        },
+        {
+          "id": "c",
+          "text": "Succeeded"
+        },
+        {
+          "id": "d",
+          "text": "ContainerCreating"
+        }
+      ],
+      "answer": "b",
+      "explanation": "The text explains that each pod will go through several states until it reaches `Running` at which point the pod is ready.",
+      "optionRationale": {
+        "a": "Initialized is an intermediate state, not the final state indicating readiness as described in the text.",
+        "c": "Succeeded is a state for completed pods, but the text specifically identifies Running as the state where the pod is ready.",
+        "d": "ContainerCreating is an intermediate state, not the final state indicating readiness as described in the text."
+      },
+      "yieldSource": "definition",
+      "citations": [
+        {
+          "file": "security/aws.rst",
+          "anchor": "deploy-a-demo-application",
+          "title": "Deploy a demo application:",
+          "quote": "Each pod will go through several states until it reaches ``Running`` at which point the pod is ready.",
+          "url": "https://docs.cilium.io/en/stable/security/aws/#deploy-a-demo-application"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "security/aws.rst#deploy-a-demo-application",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "3eb78e96d04b34ea",
+      "domain": "network-policy",
+      "competency": "policy-intent",
+      "type": "single",
       "schemaVersion": 1
     },
     {
@@ -1993,7 +3091,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/policy/intro.rst#rule-basics",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2001,6 +3099,250 @@
           "judgeVerdict": "not-configured"
         }
       },
+      "schemaVersion": 1
+    },
+    {
+      "stem": "A cluster administrator notices that `XfrmInNoStates` errors are increasing after a key rotation. The administrator suspects the old key is being cleaned up before the new key configuration is installed on all nodes. Which agent flag can be used to increase the delay before the old key is removed?",
+      "options": [
+        {
+          "id": "a",
+          "text": "ipsec-key-rotation-duration"
+        },
+        {
+          "id": "b",
+          "text": "ipsec-key-cleanup-delay"
+        },
+        {
+          "id": "c",
+          "text": "ipsec-state-retention-time"
+        },
+        {
+          "id": "d",
+          "text": "ipsec-key-expiration-interval"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt states: 'If you expect the key rotation to take longer for some reason... you can increase the delay before cleanup with agent flag `ipsec-key-rotation-duration`.' This flag specifically addresses the timing of the cleanup relative to the rotation process.",
+      "optionRationale": {
+        "b": "This flag name is plausible but not mentioned in the excerpt.",
+        "c": "This flag name is plausible but not mentioned in the excerpt.",
+        "d": "This flag name is plausible but not mentioned in the excerpt."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "security/network/encryption-ipsec.rst",
+          "anchor": "troubleshooting",
+          "title": "Troubleshooting",
+          "quote": "If you expect the key rotation to take longer for some reason (for example, in the case of Cluster Mesh where several clusters need to be updated), you can increase the delay before cleanup with agent flag ``ipsec-key-rotation-duration``.",
+          "url": "https://docs.cilium.io/en/stable/security/network/encryption-ipsec/#troubleshooting"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "security/network/encryption-ipsec.rst#troubleshooting",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "5e6fab343b239c46",
+      "domain": "network-policy",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "A security audit reveals that an attacker could inject unencrypted pod traffic through a network interface on a node that Cilium does not manage. Which aspect of encryption strict mode ingress does this scenario highlight?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Enforcement relies on Cilium's BPF programs being attached to all pod-routable network interfaces."
+        },
+        {
+          "id": "b",
+          "text": "Node-to-node encryption for WireGuard is not protected by strict mode ingress."
+        },
+        {
+          "id": "c",
+          "text": "Strict mode ingress is not supported when chaining Cilium on top of other CNI plugins."
+        },
+        {
+          "id": "d",
+          "text": "The WireGuard tunnel must be established before any ingress traffic is processed."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt states that enforcement relies on Cilium's BPF programs being attached to all pod-routable network interfaces, and that if a node has additional interfaces that Cilium does not manage, an attacker could inject unencrypted pod traffic through those interfaces.",
+      "optionRationale": {
+        "b": "While true that node-to-node encryption is not protected, the specific scenario of injecting traffic through an unmanaged interface is explained by the reliance on BPF program attachment to all relevant interfaces.",
+        "c": "This is a separate limitation regarding CNI chaining, not the specific mechanism of interface-based enforcement described in the scenario.",
+        "d": "The excerpt does not state that the tunnel must be established before processing; it states that traffic not arriving through the tunnel is dropped."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "security/network/encryption.rst",
+          "anchor": "egress-traffic-to-not-yet-discovered-remote-endpoints-may-be-unencrypted",
+          "title": "Egress traffic to not yet discovered remote endpoints may be unencrypted",
+          "quote": "Enforcement relies on Cilium's BPF programs being attached to all pod-routable network interfaces. If the node has additional interfaces that Cilium does not manage (and therefore has no BPF program attached to), an attacker could inject unencrypted pod traffic through those interfaces, bypassing strict mode ingress.",
+          "url": "https://docs.cilium.io/en/stable/security/network/encryption/#egress-traffic-to-not-yet-discovered-remote-endpoints-may-be-unencrypted"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "security/network/encryption.rst#egress-traffic-to-not-yet-discovered-remote-endpoints-may-be-unencrypted",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "5e9a3730b3b63da9",
+      "domain": "network-policy",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer observes that initial packets sent from a pod to a newly created remote pod are transmitted unencrypted. According to the source, what is the primary reason for this behaviour?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Cilium assumes the destination IP address is outside of the cluster until information about the newly created endpoint propagates."
+        },
+        {
+          "id": "b",
+          "text": "The encryption key for the remote node has not yet been generated by the control plane."
+        },
+        {
+          "id": "c",
+          "text": "The pod's egress policy explicitly permits traffic to the reserved:world identity without encryption."
+        },
+        {
+          "id": "d",
+          "text": "The WireGuard tunnel between the nodes is in a disconnected state during the initial handshake."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt states that there is a time window during which Cilium sends out initial packets unencrypted because it has to assume the destination IP address is outside of the cluster until it learns that the IP belongs to a remote Cilium-managed endpoint.",
+      "optionRationale": {
+        "b": "The excerpt does not mention key generation delays as the cause; it attributes the issue to the lack of knowledge about the endpoint's location.",
+        "c": "While allowing traffic to reserved:world is a risk factor, the specific reason for the *initial* unencrypted packets to a *new* remote endpoint is the propagation delay of endpoint information, not the policy itself.",
+        "d": "The excerpt does not state that the tunnel is disconnected; it states that Cilium assumes the destination is external until it knows otherwise."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "security/network/encryption.rst",
+          "anchor": "egress-traffic-to-not-yet-discovered-remote-endpoints-may-be-unencrypted",
+          "title": "Egress traffic to not yet discovered remote endpoints may be unencrypted",
+          "quote": "In such a case there is a time window during which Cilium will send out the initial packets unencrypted, as it has to assume the destination IP address is outside of the cluster.",
+          "url": "https://docs.cilium.io/en/stable/security/network/encryption/#egress-traffic-to-not-yet-discovered-remote-endpoints-may-be-unencrypted"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "security/network/encryption.rst#egress-traffic-to-not-yet-discovered-remote-endpoints-may-be-unencrypted",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "60521a40497cb192",
+      "domain": "network-policy",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer is configuring encryption strict mode egress for a cluster that uses IPv6 for pod communication. What limitation must they be aware of regarding the protection of this traffic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "IPv6 traffic is not protected by the strict mode and can be leaked."
+        },
+        {
+          "id": "b",
+          "text": "IPv6 traffic requires the use of direct routing mode to be protected by strict mode egress."
+        },
+        {
+          "id": "c",
+          "text": "IPv6 traffic is protected only if the node CIDR and pod CIDR do not overlap."
+        },
+        {
+          "id": "d",
+          "text": "IPv6 traffic is automatically encrypted using the node identity key regardless of the strict mode configuration."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt explicitly lists as a limitation that the pod CIDR and therefore the encryption strict mode egress CIDR must be IPv4, and that IPv6 traffic is not protected by the strict mode and can be leaked.",
+      "optionRationale": {
+        "b": "The excerpt states that direct routing mode is required to disable dynamic lookups, but it does not state that it enables IPv6 protection; in fact, it states IPv6 is not protected.",
+        "c": "The non-overlapping CIDR requirement is related to disabling dynamic lookups and node identities, not specifically to enabling IPv6 protection.",
+        "d": "The excerpt states that IPv6 traffic can be leaked, implying it is not automatically protected."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "security/network/encryption.rst",
+          "anchor": "egress-traffic-to-not-yet-discovered-remote-endpoints-may-be-unencrypted",
+          "title": "Egress traffic to not yet discovered remote endpoints may be unencrypted",
+          "quote": "The pod CIDR and therefore the encryption strict mode egress CIDR must be IPv4. IPv6 traffic is not protected by the strict mode and can be leaked.",
+          "url": "https://docs.cilium.io/en/stable/security/network/encryption/#egress-traffic-to-not-yet-discovered-remote-endpoints-may-be-unencrypted"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "security/network/encryption.rst#egress-traffic-to-not-yet-discovered-remote-endpoints-may-be-unencrypted",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "68a8ee997188b331",
+      "domain": "network-policy",
+      "competency": null,
+      "type": "single",
       "schemaVersion": 1
     },
     {
@@ -2055,7 +3397,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/policy/intro.rst#rule-basics",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2063,6 +3405,67 @@
           "judgeVerdict": "not-configured"
         }
       },
+      "schemaVersion": 1
+    },
+    {
+      "stem": "After deploying the demo application manifests, an engineer runs `kubectl get pods,svc` to monitor the deployment. According to the provided output, what is the status of the `tiefighter` pod?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Pending"
+        },
+        {
+          "id": "b",
+          "text": "Running"
+        },
+        {
+          "id": "c",
+          "text": "CrashLoopBackOff"
+        },
+        {
+          "id": "d",
+          "text": "Terminated"
+        }
+      ],
+      "answer": "b",
+      "explanation": "The command output in the excerpt shows the line `po/tiefighter 1/1 Running 0 1m`, indicating the pod is in the Running state.",
+      "optionRationale": {
+        "a": "The output shows the pod is Running, not Pending.",
+        "c": "The output shows the pod is Running, not in a CrashLoopBackOff state.",
+        "d": "The output shows the pod is Running, not Terminated."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "security/aws.rst",
+          "anchor": "deploy-a-demo-application",
+          "title": "Deploy a demo application:",
+          "quote": "po/tiefighter                    1/1       Running   0          1m",
+          "url": "https://docs.cilium.io/en/stable/security/aws/#deploy-a-demo-application"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "security/aws.rst#deploy-a-demo-application",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "7f8248f2864cfb1b",
+      "domain": "network-policy",
+      "competency": "policy-intent",
+      "type": "single",
       "schemaVersion": 1
     },
     {
@@ -2117,7 +3520,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/network/encryption-wireguard.rst#wireguard-transparent-encryption",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2179,7 +3582,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/policy/intro.rst#policy-enforcement-modes",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2241,7 +3644,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/policy/intro.rst#policy-enforcement-modes",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2249,6 +3652,189 @@
           "judgeVerdict": "not-configured"
         }
       },
+      "schemaVersion": 1
+    },
+    {
+      "stem": "Which of the following statements accurately describes the support status of encryption strict mode ingress with different encryption technologies?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It is supported with both tunnel and native routing modes, and requires WireGuard encryption."
+        },
+        {
+          "id": "b",
+          "text": "It is supported with IPsec encryption but not with WireGuard."
+        },
+        {
+          "id": "c",
+          "text": "It is only supported in tunnel mode and requires IPsec encryption."
+        },
+        {
+          "id": "d",
+          "text": "It is supported with both WireGuard and IPsec, provided direct routing mode is used."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt states that strict mode ingress is supported with both tunnel and native routing modes, and requires WireGuard encryption (it is not supported with IPsec).",
+      "optionRationale": {
+        "b": "The excerpt explicitly states it is not supported with IPsec.",
+        "c": "The excerpt states it is supported with native routing modes as well, and requires WireGuard, not IPsec.",
+        "d": "The excerpt states it is not supported with IPsec."
+      },
+      "yieldSource": "definition",
+      "citations": [
+        {
+          "file": "security/network/encryption.rst",
+          "anchor": "egress-traffic-to-not-yet-discovered-remote-endpoints-may-be-unencrypted",
+          "title": "Egress traffic to not yet discovered remote endpoints may be unencrypted",
+          "quote": "Strict mode ingress is supported with both tunnel and native routing modes, and requires WireGuard encryption (it is not supported with IPsec).",
+          "url": "https://docs.cilium.io/en/stable/security/network/encryption/#egress-traffic-to-not-yet-discovered-remote-endpoints-may-be-unencrypted"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "security/network/encryption.rst#egress-traffic-to-not-yet-discovered-remote-endpoints-may-be-unencrypted",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "afb0c3b2bf8ab307",
+      "domain": "network-policy",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer is preparing to deploy the demo application for the first time. The guide notes that Kubernetes will deploy the pods and service in the background. Which command is recommended to inform the engineer about the progress of this operation?",
+      "options": [
+        {
+          "id": "a",
+          "text": "kubectl describe pods"
+        },
+        {
+          "id": "b",
+          "text": "kubectl get pods,svc"
+        },
+        {
+          "id": "c",
+          "text": "kubectl logs -f"
+        },
+        {
+          "id": "d",
+          "text": "kubectl apply -f"
+        }
+      ],
+      "answer": "b",
+      "explanation": "The text states that running `kubectl get pods,svc` will inform you about the progress of the operation.",
+      "optionRationale": {
+        "a": "While useful for debugging, the text specifically recommends `kubectl get pods,svc` for monitoring progress.",
+        "c": "This command is for viewing logs, not for checking the status of pods and services as recommended in the text.",
+        "d": "This command is used to apply manifests, not to check the progress of an ongoing deployment."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "security/aws.rst",
+          "anchor": "deploy-a-demo-application",
+          "title": "Deploy a demo application:",
+          "quote": "Running ``kubectl get pods,svc`` will inform you about the progress of the operation.",
+          "url": "https://docs.cilium.io/en/stable/security/aws/#deploy-a-demo-application"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "security/aws.rst#deploy-a-demo-application",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "d4934fe7fe8e009a",
+      "domain": "network-policy",
+      "competency": "policy-intent",
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "A cluster administrator wants to mitigate the risk of unencrypted egress traffic to not-yet-discovered remote endpoints by ensuring that traffic exiting a node to a specific set of IP addresses is always encrypted. Which configuration should they apply?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Set encryption.strictMode.egress.enabled to true and define the expected pod CIDR as encryption.strictMode.egress.cidr."
+        },
+        {
+          "id": "b",
+          "text": "Enable encryption.strictMode.ingress.enabled to drop any cluster-internal ingress traffic that did not arrive via the WireGuard tunnel."
+        },
+        {
+          "id": "c",
+          "text": "Configure a network policy that allows egress traffic to reserved:world identities to ensure all external traffic is routed through the tunnel."
+        },
+        {
+          "id": "d",
+          "text": "Set encryption.strictMode.egress.allowRemoteNodeIdentities to false to block all traffic associated with node identities."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt identifies setting encryption.strictMode.egress.enabled to true and the expected pod CIDR as encryption.strictMode.egress.cidr as a way to mitigate the issue by enforcing that traffic exiting a node to the set CIDR is always encrypted.",
+      "optionRationale": {
+        "b": "Strict mode ingress protects local endpoints from unencrypted ingress traffic, not egress traffic from the node to remote endpoints.",
+        "c": "Allowing traffic to reserved:world is identified as a condition that makes the unencrypted leak possible, not a mitigation. The mitigation is to restrict this or use strict mode.",
+        "d": "Setting allowRemoteNodeIdentities to false is not the primary mitigation described for the general pod CIDR; it is a specific setting related to node identities when not using direct routing mode."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "security/network/encryption.rst",
+          "anchor": "egress-traffic-to-not-yet-discovered-remote-endpoints-may-be-unencrypted",
+          "title": "Egress traffic to not yet discovered remote endpoints may be unencrypted",
+          "quote": "Another way to mitigate this issue is to set ``encryption.strictMode.egress.enabled`` to ``true`` and the expected pod CIDR as ``encryption.strictMode.egress.cidr``. This encryption strict mode egress enforces that traffic exiting a node to the set CIDR is always encrypted.",
+          "url": "https://docs.cilium.io/en/stable/security/network/encryption/#egress-traffic-to-not-yet-discovered-remote-endpoints-may-be-unencrypted"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "security/network/encryption.rst#egress-traffic-to-not-yet-discovered-remote-endpoints-may-be-unencrypted",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "de438a410bbaa07a",
+      "domain": "network-policy",
+      "competency": null,
+      "type": "single",
       "schemaVersion": 1
     },
     {
@@ -2303,7 +3889,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/policy/layer7.rst#http",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2365,7 +3951,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/network/encryption-ipsec.rst#troubleshooting",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2373,6 +3959,433 @@
           "judgeVerdict": "not-configured"
         }
       },
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer runs `kubectl get configmap -n kube-system cilium-config -oyaml | grep hubble-disable-tls` and observes the output `hubble-disable-tls: \"false\"`. What does this configuration value indicate about the Hubble TLS status?",
+      "options": [
+        {
+          "id": "a",
+          "text": "TLS is disabled for Hubble."
+        },
+        {
+          "id": "b",
+          "text": "TLS is enabled for Hubble."
+        },
+        {
+          "id": "c",
+          "text": "The Hubble Relay is not configured."
+        },
+        {
+          "id": "d",
+          "text": "The Hubble Server is using plain HTTP."
+        }
+      ],
+      "answer": "b",
+      "explanation": "The excerpt states that to verify TLS has been configured correctly, one should run the command and see that the `hubble-disable-tls` configuration option is set to `false`. Therefore, a value of `false` indicates that TLS is enabled.",
+      "optionRationale": {
+        "a": "Incorrect. The excerpt explicitly states that seeing `hubble-disable-tls: \"false\"` is the verification that TLS has been configured correctly.",
+        "c": "Incorrect. The configuration option specifically relates to TLS status, not the general configuration of the Hubble Relay.",
+        "d": "Incorrect. The excerpt indicates that `false` means TLS is enabled, not that plain HTTP is being used."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "observability/hubble/configuration/tls.rst",
+          "anchor": "validating-the-installation",
+          "title": "Validating the Installation",
+          "quote": "You should see that the ``hubble-disable-tls`` configuration option is set to ``false``.",
+          "url": "https://docs.cilium.io/en/stable/observability/hubble/configuration/tls/#validating-the-installation"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "observability/hubble/configuration/tls.rst#validating-the-installation",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "9fba67cd7b84ca06",
+      "domain": "observability",
+      "competency": "hubble-capabilities",
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer configures a Hubble metric with `flow:destinationContext=dns|ip`. During a specific flow, the DNS name for the destination is not known. What value will be used for the `destination` label in the metric?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The IP address of the destination"
+        },
+        {
+          "id": "b",
+          "text": "An empty string"
+        },
+        {
+          "id": "c",
+          "text": "The Kubernetes namespace of the destination"
+        },
+        {
+          "id": "d",
+          "text": "The reserved identity label"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt states that when multiple contexts are specified, the first non-empty value is added to the metric as a label. It explicitly gives the example that if no DNS name is known, it will fall back and use the IP address of the target instead.",
+      "optionRationale": {
+        "b": "The excerpt states that the first non-empty value is used, implying a fallback occurs rather than an empty label being forced if a subsequent option is available.",
+        "c": "The namespace is not part of the specified `dns|ip` chain, so it is not considered for the fallback.",
+        "d": "The reserved identity is not part of the specified `dns|ip` chain, so it is not considered for the fallback."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "observability/metrics.rst",
+          "anchor": "context-options",
+          "title": "Context Options",
+          "quote": "For example, a metric configuration of ``flow:destinationContext=dns|ip`` will first try to use the DNS name of the target for the label. If no DNS name is known for the target, it will fall back and use the IP address of the target instead.",
+          "url": "https://docs.cilium.io/en/stable/observability/metrics/#context-options"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "observability/metrics.rst#context-options",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "de59edcfe760cb58",
+      "domain": "observability",
+      "competency": "hubble-capabilities",
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer uses `openssl s_client` to inspect the TLS handshake with the Hubble server. The output displays `Acceptable client certificate CA names` followed by `C = US, ST = San Francisco, L = CA, O = Cilium, OU = Cilium, CN = Cilium CA`. What does this section of the output signify?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It lists the intermediate certificates in the server's certificate chain."
+        },
+        {
+          "id": "b",
+          "text": "It identifies the Certificate Authority that the Hubble server trusts for validating client certificates."
+        },
+        {
+          "id": "c",
+          "text": "It shows the subject of the server's own certificate."
+        },
+        {
+          "id": "d",
+          "text": "It indicates the signature algorithms supported by the client."
+        }
+      ],
+      "answer": "b",
+      "explanation": "In the OpenSSL output provided in the excerpt, the section `Acceptable client certificate CA names` lists the CA (`Cilium CA`) that the server will accept for client authentication. This is part of the mTLS validation process where the server checks the client's certificate against this CA.",
+      "optionRationale": {
+        "a": "Incorrect. The intermediate certificates are listed under `Certificate chain`.",
+        "c": "Incorrect. The subject of the server's certificate is listed under `Server certificate` as `subject=CN = *.default.hubble-grpc.cilium.io`.",
+        "d": "Incorrect. The signature algorithms are listed under `Requested Signature Algorithms` and `Shared Requested Signature Algorithms`."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "observability/hubble/configuration/tls.rst",
+          "anchor": "validating-the-installation",
+          "title": "Validating the Installation",
+          "quote": "Acceptable client certificate CA names\n C = US, ST = San Francisco, L = CA, O = Cilium, OU = Cilium, CN = Cilium CA",
+          "url": "https://docs.cilium.io/en/stable/observability/hubble/configuration/tls/#validating-the-installation"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "observability/hubble/configuration/tls.rst#validating-the-installation",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "e32e55570e19d4a4",
+      "domain": "observability",
+      "competency": "hubble-capabilities",
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "In the context of Cilium Ingress, how many logical Policy enforcement points are identified in the excerpt, and what are the transitions between them?",
+      "options": [
+        {
+          "id": "a",
+          "text": "One enforcement point, where traffic is checked only after it exits the per-node Envoy."
+        },
+        {
+          "id": "b",
+          "text": "Two enforcement points: one before traffic arrives at the `ingress` identity, and one after, when it is about to exit the per-node Envoy."
+        },
+        {
+          "id": "c",
+          "text": "Three enforcement points: at the external boundary, at the Envoy proxy, and at the backend service."
+        },
+        {
+          "id": "d",
+          "text": "Two enforcement points: one for Ingress traffic and one for Gateway API traffic, which are handled separately."
+        }
+      ],
+      "answer": "b",
+      "explanation": "The excerpt explicitly states: \"This means that there are actually *two* logical Policy enforcement points in Cilium Ingress - before traffic arrives at the `ingress` identity, and after, when it is about to exit the per-node Envoy.\"",
+      "optionRationale": {
+        "a": "The excerpt specifies there are two enforcement points, not one.",
+        "c": "The excerpt identifies exactly two logical enforcement points, not three.",
+        "d": "The excerpt states the same principles apply to Gateway API, but the two enforcement points are defined by the traffic's position relative to the ``ingress`` identity and the Envoy exit, not by the API type."
+      },
+      "yieldSource": "contrast",
+      "citations": [
+        {
+          "file": "network/servicemesh/ingress-reference.rst",
+          "anchor": "cilium-s-ingress-config-and-ciliumnetworkpolicy",
+          "title": "Cilium's ingress config and CiliumNetworkPolicy",
+          "quote": "This means that there are actually *two* logical Policy enforcement points in Cilium Ingress - before traffic arrives at the ``ingress`` identity, and after, when it is about to exit the per-node Envoy.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/ingress-reference/#cilium-s-ingress-config-and-ciliumnetworkpolicy"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/ingress-reference.rst#ciliums-ingress-config-and-ciliumnetworkpolicy",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "0d618480a2f4fc4c",
+      "domain": "service-mesh",
+      "competency": "ingress",
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "A cluster administrator notices that an external load balancer is failing to forward traffic correctly to a Service exposing Cilium's Envoy with `externalTrafficPolicy: Local` set. According to the excerpt, how does Cilium handle the `healthCheckNodePort` check in this scenario?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Cilium ensures that every node in the cluster will pass the `healthCheckNodePort` check."
+        },
+        {
+          "id": "b",
+          "text": "Cilium disables the `healthCheckNodePort` check entirely for Envoy services."
+        },
+        {
+          "id": "c",
+          "text": "Only nodes with local Envoy pods running will pass the check, causing the load balancer to drop traffic to other nodes."
+        },
+        {
+          "id": "d",
+          "text": "The check returns a non-200 status on all nodes to force the load balancer to use a different policy."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt states that for any Services that expose Cilium's Envoy, Cilium will ensure that when `externalTrafficPolicy: Local` is set, every node in the cluster will pass the `healthCheckNodePort` check, so that external load balancers will forward correctly.",
+      "optionRationale": {
+        "b": "Cilium does not disable the check; it ensures it passes on all nodes.",
+        "c": "This is the default Kubernetes behaviour for `Local` policy, but Cilium modifies this behaviour for Envoy services to ensure all nodes pass.",
+        "d": "The goal is to ensure correct forwarding, which requires passing checks, not failing them."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/servicemesh/ingress-reference.rst",
+          "anchor": "externaltrafficpolicy-for-loadbalancer-or-nodeport-services",
+          "title": "``externalTrafficPolicy`` for Loadbalancer or NodePort Services",
+          "quote": "Also, for any Services that exposes Cilium's Envoy, Cilium will ensure that when ``externalTrafficPolicy: Local`` is set, every node in the cluster will pass the ``healthCheckNodePort`` check, so that external load balancers will forward correctly.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/ingress-reference/#externaltrafficpolicy-for-loadbalancer-or-nodeport-services"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/ingress-reference.rst#externaltrafficpolicy-for-loadbalancer-or-nodeport-services",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "14ec0fdee917df24",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer is troubleshooting why traffic from an external client is being dropped by Cilium Network Policies despite the backend service being reachable. The traffic is bound to a backend service via Cilium Ingress. According to the excerpt, what specific identity is assigned to this traffic when it arrives at the per-node Envoy proxy?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The traffic is assigned the `world` identity."
+        },
+        {
+          "id": "b",
+          "text": "The traffic is assigned the `ingress` identity."
+        },
+        {
+          "id": "c",
+          "text": "The traffic is assigned the `productpage` identity."
+        },
+        {
+          "id": "d",
+          "text": "The traffic retains its original external IP identity without a special Cilium label."
+        }
+      ],
+      "answer": "b",
+      "explanation": "The excerpt states that \"Traffic that arrives at Envoy *for Ingress or Gateway API* is assigned the special `ingress` identity in Cilium's Policy engine.\" While external traffic is usually assigned the `world` identity, the specific action of arriving at Envoy for Ingress triggers the assignment of the `ingress` identity.",
+      "optionRationale": {
+        "a": "The ``world`` identity is assigned to traffic coming from outside the cluster, but the excerpt specifies that traffic arriving at Envoy for Ingress is assigned the ``ingress`` identity.",
+        "c": "The ``productpage`` identity is mentioned as an example of an identity in the cluster that traffic exits to, not the identity assigned to the ingress traffic itself at the Envoy proxy.",
+        "d": "The excerpt explicitly states that a special ``ingress`` identity is assigned, contradicting the idea that it retains only its original external IP identity."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/servicemesh/ingress-reference.rst",
+          "anchor": "cilium-s-ingress-config-and-ciliumnetworkpolicy",
+          "title": "Cilium's ingress config and CiliumNetworkPolicy",
+          "quote": "Traffic that arrives at Envoy *for Ingress or Gateway API* is assigned the special ``ingress`` identity in Cilium's Policy engine.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/ingress-reference/#cilium-s-ingress-config-and-ciliumnetworkpolicy"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/ingress-reference.rst#ciliums-ingress-config-and-ciliumnetworkpolicy",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "1568707915dbc8f4",
+      "domain": "service-mesh",
+      "competency": "ingress",
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer is configuring a LoadBalancer Service to expose the Envoy Daemonset for Cilium Ingress. They are concerned that the backend pods will not see the original client IP address. According to the excerpt, what is the requirement for `externalTrafficPolicy` to ensure source IP visibility in this specific Cilium ingress configuration?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It is not necessary to configure `externalTrafficPolicy: Local` to keep the source IP visible."
+        },
+        {
+          "id": "b",
+          "text": "It is mandatory to set `externalTrafficPolicy: Local` to prevent masquerading of the source IP."
+        },
+        {
+          "id": "c",
+          "text": "It is mandatory to set `externalTrafficPolicy: Cluster` to ensure traffic is routed evenly to all nodes."
+        },
+        {
+          "id": "d",
+          "text": "The `externalTrafficPolicy` field must be removed from the Service object entirely."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt explicitly states that for Cilium's ingress config (both Ingress and Gateway API), it is not necessary to configure `externalTrafficPolicy: Local` to keep the source IP visible to the backend pod. This is because Cilium uses TPROXY to forward packets to the local Envoy, preserving the source IP regardless of the policy setting in this context.",
+      "optionRationale": {
+        "b": "While `Local` is the only way to ensure source IP visibility in clusters using `kube-proxy` for general services, the excerpt clarifies that for Cilium ingress config specifically, it is not necessary due to the use of TPROXY.",
+        "c": "`Cluster` policy may result in the backend pod not seeing the source IP because the node may masquerade it, but it is not the required setting for Cilium ingress to maintain visibility.",
+        "d": "The field is relevant and has settings, but removing it is not the specified solution; the key point is that `Local` is not strictly required for Cilium ingress."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/servicemesh/ingress-reference.rst",
+          "anchor": "externaltrafficpolicy-for-loadbalancer-or-nodeport-services",
+          "title": "``externalTrafficPolicy`` for Loadbalancer or NodePort Services",
+          "quote": "However, for Cilium's ingress config, both Ingress and Gateway API, **it is not necessary** to configure ``externalTrafficPolicy: Local`` to keep the source IP visible to the backend pod",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/ingress-reference/#externaltrafficpolicy-for-loadbalancer-or-nodeport-services"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/ingress-reference.rst#externaltrafficpolicy-for-loadbalancer-or-nodeport-services",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "1e71d2049e63a860",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
       "schemaVersion": 1
     },
     {
@@ -2422,7 +4435,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/envoy-traffic-shifting.rst#apply-weight-based-routing",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2483,7 +4496,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/gateway-api/troubleshooting.rst#checking-resources",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2544,7 +4557,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/envoy-traffic-shifting.rst#apply-weight-based-routing",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2555,6 +4568,128 @@
       "id": "35f76615ec4fae24",
       "domain": "service-mesh",
       "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "In Cilium, how is the `ImplementationSpecific` path type interpreted?",
+      "options": [
+        {
+          "id": "a",
+          "text": "As a Prefix match"
+        },
+        {
+          "id": "b",
+          "text": "As an Exact match"
+        },
+        {
+          "id": "c",
+          "text": "As a regular expression"
+        },
+        {
+          "id": "d",
+          "text": "As a wildcard match"
+        }
+      ],
+      "answer": "c",
+      "explanation": "The source explicitly states that in Cilium's case, `ImplementationSpecific` is defined to be \"Regex\", meaning Cilium will interpret any given path as a regular expression and program Envoy accordingly.",
+      "optionRationale": {
+        "a": "Incorrect. The source notes that some other implementations have `ImplementationSpecific` mean \"Prefix\", but in Cilium's case, it is defined as \"Regex\".",
+        "b": "Incorrect. While a regex path without regex characters functions as an Exact match in Envoy, the interpretation of the path type itself is as a regular expression.",
+        "d": "Incorrect. The source does not define `ImplementationSpecific` as a wildcard match; it defines it as a regular expression."
+      },
+      "yieldSource": "definition",
+      "citations": [
+        {
+          "file": "network/servicemesh/ingress.rst",
+          "anchor": "ingress-path-types-and-precedence",
+          "title": "Ingress Path Types and Precedence",
+          "quote": "In Cilium's case, we define ImplementationSpecific to be \"Regex\", so Cilium will interpret any given path as a regular expression and program Envoy accordingly.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/ingress/#ingress-path-types-and-precedence"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/ingress.rst#ingress-path-types-and-precedence",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "482efabce922471a",
+      "domain": "service-mesh",
+      "competency": "ingress",
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "Before enabling mutual authentication between `pod-worker` and `echo`, what prerequisite regarding the SPIRE server must be verified?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The SPIRE server must be healthy and serving Cilium"
+        },
+        {
+          "id": "b",
+          "text": "The SPIRE server must be restarted"
+        },
+        {
+          "id": "c",
+          "text": "The SPIRE server must be installed on the `pod-worker` Pod"
+        },
+        {
+          "id": "d",
+          "text": "The SPIRE server must be configured with `authentication.mode: \"required\"`"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt advises verifying that the SPIRE server is healthy, assuming it is serving Cilium, before adding the mutual authentication configuration.",
+      "optionRationale": {
+        "b": "The excerpt does not mention restarting the server.",
+        "c": "The excerpt does not state the server must be installed on the Pod; it implies a cluster-level or external service.",
+        "d": "The `authentication.mode` is added to the network policy, not the SPIRE server configuration."
+      },
+      "yieldSource": "definition",
+      "citations": [
+        {
+          "file": "network/servicemesh/mutual-authentication/mutual-authentication-example.rst",
+          "anchor": "mutual-authentication-example",
+          "title": "Mutual Authentication Example",
+          "quote": "Before we enable mutual authentication between ``pod-worker`` and ``echo``, let's verify that the SPIRE server is healthy. Assuming you have followed the installation instructions and have a SPIRE server serving Cilium",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/mutual-authentication/mutual-authentication-example/#mutual-authentication-example"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/mutual-authentication/mutual-authentication-example.rst#mutual-authentication-example",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "4925de7dfd69771e",
+      "domain": "service-mesh",
+      "competency": "encryption",
       "type": "single",
       "schemaVersion": 1
     },
@@ -2605,7 +4740,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/envoy-traffic-shifting.rst#apply-weight-based-routing",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2666,7 +4801,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/gateway-api/installation.rst#installation",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2677,6 +4812,67 @@
       "id": "4d4937c9f47784cf",
       "domain": "service-mesh",
       "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An application developer in a specific team needs to define application configuration and service composition. According to the role-based personas described in the excerpt, which specific permission can be assigned to this developer without granting them broader administrative rights?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Permission to administrate the managed services of a cloud provider."
+        },
+        {
+          "id": "b",
+          "text": "Permission to create Route objects in a specified namespace without modifying Gateway configuration."
+        },
+        {
+          "id": "c",
+          "text": "Permission to edit Route objects in namespaces other than their own."
+        },
+        {
+          "id": "d",
+          "text": "Permission to design and maintain the Gateway API itself."
+        }
+      ],
+      "answer": "b",
+      "explanation": "The excerpt provides an example where application developers in a specific team could be assigned permissions to create Route objects in a specified namespace without also gaining permissions to modify the Gateway configuration or edit Route objects in namespaces other than theirs.",
+      "optionRationale": {
+        "a": "Administering managed services is the responsibility of Infrastructure Providers, not Application Developers.",
+        "c": "The excerpt explicitly states that developers do not gain permissions to edit Route objects in namespaces other than theirs.",
+        "d": "Designing and maintaining the Gateway API is the responsibility of the Kubernetes SIG-Network team, not individual application developers."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/servicemesh/ingress-to-gateway/ingress-to-gateway.rst",
+          "anchor": "benefits-of-the-gateway-api",
+          "title": "Benefits of the Gateway API",
+          "quote": "For example, application developers in a specific team could be assigned permissions to create Route objects in a specified namespace without also gaining permissions to modify the Gateway configuration or edit Route objects in namespaces other than theirs.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/ingress-to-gateway/ingress-to-gateway/#benefits-of-the-gateway-api"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/ingress-to-gateway/ingress-to-gateway.rst#benefits-of-the-gateway-api",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "4e6a9145714dab90",
+      "domain": "service-mesh",
+      "competency": "gateway-api",
       "type": "single",
       "schemaVersion": 1
     },
@@ -2727,7 +4923,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/envoy-circuit-breaker.rst#tripping-envoy-circuit-breaker",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2738,6 +4934,250 @@
       "id": "5a6cccfe561559f4",
       "domain": "service-mesh",
       "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "A network engineer is verifying the behaviour of a network policy that restricts traffic to a specific HTTP path. They execute `curl -s -o /dev/null -w \"%{http_code}\" http://echo:3000/headers` from the `pod-worker` Pod. What is the expected outcome of this command?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The command returns an HTTP status code of 200"
+        },
+        {
+          "id": "b",
+          "text": "The command returns an HTTP status code of 403"
+        },
+        {
+          "id": "c",
+          "text": "The command returns the text 'Access denied'"
+        },
+        {
+          "id": "d",
+          "text": "The command fails with a connection timeout"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt shows that the first request to the `/headers` path is successful and the HTTP status code is 200.",
+      "optionRationale": {
+        "b": "The excerpt indicates a successful connection with status 200, not a 403 error.",
+        "c": "The text 'Access denied' is the result of the second request to a different path (`/headers-1`), not the first request to `/headers`.",
+        "d": "The excerpt shows a successful response, not a timeout."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/servicemesh/mutual-authentication/mutual-authentication-example.rst",
+          "anchor": "mutual-authentication-example",
+          "title": "Mutual Authentication Example",
+          "quote": "The first request should be successful (the *pod-worker* Pod is able to connect to the *echo* Service over a specific HTTP path and the HTTP status code is ``200``).",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/mutual-authentication/mutual-authentication-example/#mutual-authentication-example"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/mutual-authentication/mutual-authentication-example.rst#mutual-authentication-example",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "62d58f14b3dfd578",
+      "domain": "service-mesh",
+      "competency": "encryption",
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "A cluster administrator is configuring CiliumNetworkPolicy for a service exposed via Ingress. They have allowed traffic from `world` to the backend service but are still seeing drops. Based on the excerpt, what additional policy rule must be ensured to allow the traffic to flow correctly through the two logical Policy enforcement points?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Traffic must be allowed from `world` to `ingress`."
+        },
+        {
+          "id": "b",
+          "text": "Traffic must be allowed from `ingress` to `world`."
+        },
+        {
+          "id": "c",
+          "text": "Traffic must be allowed from `productpage` to `ingress`."
+        },
+        {
+          "id": "d",
+          "text": "Traffic must be allowed from `ingress` to `ingress`."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt explains that there are two logical Policy enforcement points: before traffic arrives at the `ingress` identity and after. It explicitly states that \"it's important to ensure that both steps are allowed, and that traffic is allowed from `world` to `ingress`, and from `ingress` to identities in the cluster\". Therefore, allowing traffic from `world` to `ingress` is a required step.",
+      "optionRationale": {
+        "b": "The traffic flows from outside (world) into the cluster (ingress), not from ingress back to world.",
+        "c": "The ``productpage`` identity is an example of a cluster identity that traffic exits to, not the source of the ingress traffic.",
+        "d": "The policy requires traffic to move from ``ingress`` to identities in the cluster, not to itself."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/servicemesh/ingress-reference.rst",
+          "anchor": "cilium-s-ingress-config-and-ciliumnetworkpolicy",
+          "title": "Cilium's ingress config and CiliumNetworkPolicy",
+          "quote": "This means that, when applying Network Policy to a cluster, it's important to ensure that both steps are allowed, and that traffic is allowed from ``world`` to ``ingress``, and from ``ingress`` to identities in the cluster",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/ingress-reference/#cilium-s-ingress-config-and-ciliumnetworkpolicy"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/ingress-reference.rst#ciliums-ingress-config-and-ciliumnetworkpolicy",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "69bf26dfb675f5e5",
+      "domain": "service-mesh",
+      "competency": "ingress",
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "In a cluster using `kube-proxy`, an engineer configures a standard LoadBalancer Service with `externalTrafficPolicy: Local`. What is the primary reason this setting is used to ensure source IP visibility?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Nodes will only route traffic to Pods running on the local node without masquerading the source IP."
+        },
+        {
+          "id": "b",
+          "text": "Nodes will route traffic to all endpoints across the cluster evenly, preserving the source IP."
+        },
+        {
+          "id": "c",
+          "text": "The `healthCheckNodePort` automatically disables masquerading for all traffic types."
+        },
+        {
+          "id": "d",
+          "text": "Cilium's TPROXY function overrides the `kube-proxy` behaviour to prevent IP masquerading."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt states that with `Local`, nodes route traffic to local pods *without masquerading the source IP*. It further notes that in clusters using `kube-proxy`, this is the only way to ensure source IP visibility.",
+      "optionRationale": {
+        "b": "This describes the `Cluster` policy, which routes to all endpoints and may masquerade the source IP.",
+        "c": "The `healthCheckNodePort` is used for health checks to determine if local pods are running, not to disable masquerading globally.",
+        "d": "TPROXY is specific to Cilium's ingress configuration and is not the mechanism described for general `kube-proxy` clusters using `Local` policy."
+      },
+      "yieldSource": "definition",
+      "citations": [
+        {
+          "file": "network/servicemesh/ingress-reference.rst",
+          "anchor": "externaltrafficpolicy-for-loadbalancer-or-nodeport-services",
+          "title": "``externalTrafficPolicy`` for Loadbalancer or NodePort Services",
+          "quote": "``Local``: Nodes will only route traffic to Pods running on the local node, *without masquerading the source IP*. Because of this, in clusters that use ``kube-proxy``, this is the only way to ensure source IP visibility.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/ingress-reference/#externaltrafficpolicy-for-loadbalancer-or-nodeport-services"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/ingress-reference.rst#externaltrafficpolicy-for-loadbalancer-or-nodeport-services",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "76998e2ed722dbd5",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "In the mutual authentication example, an engineer runs `curl http://echo:3000/headers-1` from the `pod-worker` Pod. What is the expected result of this command, and why?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It returns 'Access denied' because the Pod is unable to connect over a path other than '/headers'"
+        },
+        {
+          "id": "b",
+          "text": "It returns an HTTP 200 status because the service is reachable"
+        },
+        {
+          "id": "c",
+          "text": "It returns 'Access denied' because the SPIRE server is unhealthy"
+        },
+        {
+          "id": "d",
+          "text": "It returns an HTTP 404 status because the path does not exist"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt states that the second request should be denied because the `pod-worker` Pod is unable to connect to the `echo` Service over a specific HTTP path other than '/headers', resulting in 'Access denied'.",
+      "optionRationale": {
+        "b": "The excerpt explicitly states the second request is denied, not successful.",
+        "c": "The denial is due to the network policy filtering traffic to specific paths, not the health of the SPIRE server.",
+        "d": "The output is 'Access denied', not an HTTP 404 status code."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/servicemesh/mutual-authentication/mutual-authentication-example.rst",
+          "anchor": "mutual-authentication-example",
+          "title": "Mutual Authentication Example",
+          "quote": "The second one should be denied (the *pod-worker* Pod is unable to connect to the *echo* Service over a specific HTTP path other than '/headers').",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/mutual-authentication/mutual-authentication-example/#mutual-authentication-example"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/mutual-authentication/mutual-authentication-example.rst#mutual-authentication-example",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "7d84baf5caa64b64",
+      "domain": "service-mesh",
+      "competency": "encryption",
       "type": "single",
       "schemaVersion": 1
     },
@@ -2788,7 +5228,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/gateway-api/host-network-mode.rst#host-network-mode",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2849,7 +5289,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/gateway-api/host-network-mode.rst#host-network-mode",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2860,6 +5300,67 @@
       "id": "8650dbf30f49504f",
       "domain": "service-mesh",
       "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "A platform team is migrating from Ingress to the Gateway API. They note that previously, they had to use specific annotations to configure traffic splitting and header modification for external traffic. According to the excerpt, what is a primary benefit of using the Gateway API for these policies?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Annotations are no longer required to support ingress traffic patterns, making resources more portable between implementations."
+        },
+        {
+          "id": "b",
+          "text": "The Gateway API automatically removes all existing Ingress resources from the cluster upon installation."
+        },
+        {
+          "id": "c",
+          "text": "Traffic splitting and header modification are only supported if the cluster is running on a specific cloud provider."
+        },
+        {
+          "id": "d",
+          "text": "The Gateway API requires developers to manually edit the Gateway configuration to change header modification rules."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt states that native support of policies for external traffic means that annotations are no longer required to support ingress traffic patterns. This native support implies that Gateway API resources are more portable from one Gateway API implementation to another.",
+      "optionRationale": {
+        "b": "The excerpt does not mention the automatic removal of Ingress resources; it focuses on the design and benefits of the Gateway API.",
+        "c": "The excerpt does not restrict traffic splitting or header modification to specific cloud providers; it lists them as features provided by the Gateway API.",
+        "d": "The excerpt states that personas gain specific access and privileges, and developers can create Route objects without modifying Gateway configuration, implying that manual editing of Gateway configuration is not the standard method for developers."
+      },
+      "yieldSource": "contrast",
+      "citations": [
+        {
+          "file": "network/servicemesh/ingress-to-gateway/ingress-to-gateway.rst",
+          "anchor": "benefits-of-the-gateway-api",
+          "title": "Benefits of the Gateway API",
+          "quote": "Native support of policies for external traffic means that annotations are no longer required to support ingress traffic patterns. This means that Gateway API resources are more portable from one Gateway API implementation to another.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/ingress-to-gateway/ingress-to-gateway/#benefits-of-the-gateway-api"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/ingress-to-gateway/ingress-to-gateway.rst#benefits-of-the-gateway-api",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "89ab4066a87c867e",
+      "domain": "service-mesh",
+      "competency": "gateway-api",
       "type": "single",
       "schemaVersion": 1
     },
@@ -2910,7 +5411,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/envoy-traffic-shifting.rst#apply-weight-based-routing",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -2921,6 +5422,67 @@
       "id": "8b7802f1ca889309",
       "domain": "service-mesh",
       "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer applies a `CiliumClusterwideNetworkPolicy` to deny all traffic by default. When an external client sends a request to the `/details` endpoint, the response is a 403 Forbidden. According to the Hubble flow logs provided, what is the status of the HTTP request flow?",
+      "options": [
+        {
+          "id": "a",
+          "text": "DROPPED"
+        },
+        {
+          "id": "b",
+          "text": "FORWARDED"
+        },
+        {
+          "id": "c",
+          "text": "ALLOWED"
+        },
+        {
+          "id": "d",
+          "text": "DENIED"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The Hubble output explicitly shows the line `http-request DROPPED (HTTP/1.1 GET http://172.19.255.194/details/1)`. Although the client receives a 403 response, the flow status for the request itself is recorded as DROPPED.",
+      "optionRationale": {
+        "b": "FORWARDED is the status of the http-response, not the http-request.",
+        "c": "ALLOWED is not the specific status shown in the log for the dropped request.",
+        "d": "DENIED is a general concept but the specific log status is DROPPED."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/servicemesh/default-deny-ingress-policy.rst",
+          "anchor": "default-deny-ingress-policy",
+          "title": "Default Deny Ingress Policy",
+          "quote": "Mar 17 13:56:00.709: 172.19.0.1:34104 (ingress) -> default/cilium-ingress-basic-ingress:80 (world) http-request DROPPED (HTTP/1.1 GET http://172.19.255.194/details/1)",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/default-deny-ingress-policy/#default-deny-ingress-policy"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/default-deny-ingress-policy.rst#default-deny-ingress-policy",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "8cbdf3736112ea28",
+      "domain": "service-mesh",
+      "competency": "ingress",
       "type": "single",
       "schemaVersion": 1
     },
@@ -2971,7 +5533,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/default-deny-ingress-policy.rst#default-deny-ingress-policy",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -3032,7 +5594,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/gateway-api/installation.rst#installation",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -3093,7 +5655,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/default-deny-ingress-policy.rst#default-deny-ingress-policy",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -3154,7 +5716,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/gateway-api/troubleshooting.rst#checking-resources",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -3163,6 +5725,67 @@
         }
       },
       "id": "a283fb080e2f6e34",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "In the scenario where the engineer increases the concurrent connections to 4 using the flag `-c 4`, the output shows multiple `Non ok http code` warnings. What specific HTTP status code is associated with these warnings in the log entries?",
+      "options": [
+        {
+          "id": "a",
+          "text": "503"
+        },
+        {
+          "id": "b",
+          "text": "500"
+        },
+        {
+          "id": "c",
+          "text": "429"
+        },
+        {
+          "id": "d",
+          "text": "502"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The log entries for the run with `-c 4` contain multiple lines such as `{\"ts\":1692767495.822424,\"level\":\"warn\",\"file\":\"http_client.go\",\"line\":1104,\"msg\":\"Non ok http code\",\"code\":\"503\",\"status\":\"HTTP/1.1 503\",\"thread\":\"3\",\"run\":\"0\"}`. The `code` field is consistently \"503\".",
+      "optionRationale": {
+        "b": "Incorrect. The logs specify `\"code\":\"503\"`, not 500.",
+        "c": "Incorrect. The logs specify `\"code\":\"503\"`, not 429.",
+        "d": "Incorrect. The logs specify `\"code\":\"503\"`, not 502."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/servicemesh/envoy-circuit-breaker.rst",
+          "anchor": "tripping-envoy-circuit-breaker",
+          "title": "Tripping Envoy Circuit Breaker",
+          "quote": "{\"ts\":1692767495.822424,\"level\":\"warn\",\"file\":\"http_client.go\",\"line\":1104,\"msg\":\"Non ok http code\",\"code\":\"503\",\"status\":\"HTTP/1.1 503\",\"thread\":\"3\",\"run\":\"0\"}",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/envoy-circuit-breaker/#tripping-envoy-circuit-breaker"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/envoy-circuit-breaker.rst#tripping-envoy-circuit-breaker",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "a48c7f3c9e265686",
       "domain": "service-mesh",
       "competency": null,
       "type": "single",
@@ -3215,7 +5838,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/gateway-api/host-network-mode.rst#host-network-mode",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -3226,6 +5849,67 @@
       "id": "a4a2f7ba25d319b7",
       "domain": "service-mesh",
       "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer configures two `ImplementationSpecific` paths: `/impl` and `/impl.*`. What is the consequence of this configuration regarding request matching?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Requests to `/impl` will match the `/impl` path because it is shorter."
+        },
+        {
+          "id": "b",
+          "text": "Requests to `/impl` will match the `/impl.*` path first, so the `/impl` match will never be hit."
+        },
+        {
+          "id": "c",
+          "text": "Both paths will be sorted by string length, and `/impl.*` will be ignored."
+        },
+        {
+          "id": "d",
+          "text": "The configuration is invalid because `*` is not allowed in `ImplementationSpecific` paths."
+        }
+      ],
+      "answer": "b",
+      "explanation": "The source explains that `/impl.*` will be sorted ahead of `/impl` in the generated config. Because `*` is in use, any request to the `/impl` path will match the `/impl.*` path first, meaning the `/impl` match will never be hit.",
+      "optionRationale": {
+        "a": "Incorrect. Although `/impl` is shorter, the sorting places `/impl.*` ahead, and the regex nature means `/impl` matches the longer pattern first.",
+        "c": "Incorrect. The source states `/impl.*` is sorted ahead, not ignored.",
+        "d": "Incorrect. The source explicitly uses `*` in the example of `ImplementationSpecific` paths."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/servicemesh/ingress.rst",
+          "anchor": "ingress-path-types-and-precedence",
+          "title": "Ingress Path Types and Precedence",
+          "quote": "if you have two ImplementationSpecific paths, ``/impl``, and ``/impl.*``, the second will be sorted ahead of the first in the generated config. But because ``*`` is in use, the ``/impl`` match will never be hit, as any request to that path will match the ``/impl.*`` path first.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/ingress/#ingress-path-types-and-precedence"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/ingress.rst#ingress-path-types-and-precedence",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "a51bdbe420a0c6ae",
+      "domain": "service-mesh",
+      "competency": "ingress",
       "type": "single",
       "schemaVersion": 1
     },
@@ -3276,7 +5960,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/gateway-api/installation.rst#installation",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -3337,7 +6021,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/gateway-api/installation.rst#installation",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -3348,6 +6032,250 @@
       "id": "aa2e6c195755ca90",
       "domain": "service-mesh",
       "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer is configuring a network policy to enforce mutual authentication between a client Pod named `pod-worker` and a server Pod named `echo`. According to the provided example, what specific configuration change is required in the network policy to enable this feature?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Add `authentication.mode: \"required\"` in the ingress/egress block"
+        },
+        {
+          "id": "b",
+          "text": "Add `mTLS.enabled: true` in the service definition"
+        },
+        {
+          "id": "c",
+          "text": "Set the annotation `cilium.io/mtls: \"true\"` on the Pods"
+        },
+        {
+          "id": "d",
+          "text": "Configure a `spiffe` identity in the Pod spec"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The source excerpt explicitly states that adding mutual authentication simply requires adding `authentication.mode: \"required\"` in the ingress/egress block in your network policies.",
+      "optionRationale": {
+        "b": "The excerpt does not mention a `mTLS.enabled` flag or service definition changes for this purpose.",
+        "c": "The excerpt does not reference Pod annotations for enabling mutual authentication.",
+        "d": "While SPIRE is mentioned as a dependency, the specific configuration change required in the policy is the `authentication.mode` field, not a Pod spec identity."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/servicemesh/mutual-authentication/mutual-authentication-example.rst",
+          "anchor": "mutual-authentication-example",
+          "title": "Mutual Authentication Example",
+          "quote": "adding mutual authentication simply requires adding ``authentication.mode: \"required\"`` in the ingress/egress block in your network policies.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/mutual-authentication/mutual-authentication-example/#mutual-authentication-example"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/mutual-authentication/mutual-authentication-example.rst#mutual-authentication-example",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "aecf196dd665ef6d",
+      "domain": "service-mesh",
+      "competency": "encryption",
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer runs `kubectl get gateway -A` and observes that the `PROGRAMMED` column for a specific Gateway resource is empty, while the `ADDRESS` column displays a valid IP address. According to the provided documentation, what is the most likely cause of this status?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The Gateway API is not enabled in the Cilium configuration."
+        },
+        {
+          "id": "b",
+          "text": "The LoadBalancer implementation is missing from the cluster."
+        },
+        {
+          "id": "c",
+          "text": "The Gateway class is not set to `cilium`."
+        },
+        {
+          "id": "d",
+          "text": "The Gateway API CRDs are not installed in the cluster."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt states that if the `Programmed true` indicator is missing, the engineer should make sure that Gateway API is enabled in the Cilium configuration. The presence of an address indicates that a LoadBalancer service is assigned, ruling out option B. Option C is incorrect because if the class were not `cilium`, Cilium would not program it, but the specific troubleshooting step for a missing `Programmed` indicator is checking the configuration enablement. Option D is incorrect because missing CRDs would result in the resource type not being found at all, rather than appearing with a missing status field.",
+      "optionRationale": {
+        "b": "The excerpt states that if no IP appears in the address column, it might be missing a LoadBalancer implementation. Since the scenario specifies a valid IP address is present, this is not the cause.",
+        "c": "While Cilium only programs Gateways with the class `cilium`, the specific instruction for a missing `Programmed` indicator is to check if Gateway API is enabled in the configuration. The class check is a separate verification step listed in the overview.",
+        "d": "The excerpt states that if the Gateway API resource type is not found, one should ensure CRDs are installed. In this scenario, the resource is found (it appears in the list), so the CRDs are installed."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/servicemesh/gateway-api/troubleshooting.rst",
+          "anchor": "checking-resources",
+          "title": "Checking resources",
+          "quote": "If the ``Programmed true`` indicator is missing, make sure that Gateway API is enabled in the Cilium configuration.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/gateway-api/troubleshooting/#checking-resources"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/gateway-api/troubleshooting.rst#checking-resources",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "b922f336f28cbd7c",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "How does Cilium forward ingress traffic bound for a Service that exposes Envoy, and what is the implication for the `externalTrafficPolicy` setting?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Traffic is always forwarded to the local node using the Linux Kernel TPROXY function, which transparently forwards packets to the backend."
+        },
+        {
+          "id": "b",
+          "text": "Traffic is routed to all endpoints across the cluster evenly using standard IP forwarding."
+        },
+        {
+          "id": "c",
+          "text": "Traffic is masqueraded by the node before being sent to the Envoy Daemonset to hide the source IP."
+        },
+        {
+          "id": "d",
+          "text": "Traffic is forwarded via a user-space proxy that rewrites the source IP address."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt states that in Cilium's case, all ingress traffic bound for a Service that exposes Envoy is *always* going to the local node and is *always* forwarded to Envoy using the Linux Kernel TPROXY function, which transparently forwards packets to the backend.",
+      "optionRationale": {
+        "b": "This describes the `Cluster` policy behaviour for general services, not the specific Cilium ingress implementation.",
+        "c": "TPROXY transparently forwards packets, preserving the source IP, rather than masquerading it.",
+        "d": "The excerpt specifies the use of the Linux Kernel TPROXY function, not a user-space proxy."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/servicemesh/ingress-reference.rst",
+          "anchor": "externaltrafficpolicy-for-loadbalancer-or-nodeport-services",
+          "title": "``externalTrafficPolicy`` for Loadbalancer or NodePort Services",
+          "quote": "In Cilium's case, all ingress traffic bound for a Service that exposes Envoy is *always* going to the local node, and is *always* forwarded to Envoy using the Linux Kernel TPROXY function, which transparently forwards packets to the backend.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/ingress-reference/#externaltrafficpolicy-for-loadbalancer-or-nodeport-services"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/ingress-reference.rst#externaltrafficpolicy-for-loadbalancer-or-nodeport-services",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "bb503aa89bf6f9db",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "An engineer configures an Ingress object with a Prefix path of `/foo/bar`. Which of the following incoming request paths will match this configuration?",
+      "options": [
+        {
+          "id": "a",
+          "text": "/foo/barbaz"
+        },
+        {
+          "id": "b",
+          "text": "/foo/bar/baz"
+        },
+        {
+          "id": "c",
+          "text": "/foo/bar"
+        },
+        {
+          "id": "d",
+          "text": "/foobar"
+        }
+      ],
+      "answer": "b",
+      "explanation": "According to the source, a Prefix path matches the URL path prefix split by `/`. The last path segment must match the whole segment. Therefore, `/foo/bar/baz` matches because `/foo/bar` is a valid prefix split by `/`, whereas `/foo/barbaz` does not match because the segment `barbaz` does not match the whole segment `bar`.",
+      "optionRationale": {
+        "a": "Incorrect. The source states that if you configure a Prefix path of `/foo/bar`, `/foo/barbaz` will not match because the last path segment must match the whole segment.",
+        "c": "Incorrect. While `/foo/bar` is the exact path, the question asks about the Prefix type behaviour described in the excerpt which specifically highlights the distinction between `/foo/bar/baz` (match) and `/foo/barbaz` (no match). Option B is the specific example provided in the text to illustrate the prefix splitting rule.",
+        "d": "Incorrect. `/foobar` does not start with the prefix `/foo/bar` split by `/`."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/servicemesh/ingress.rst",
+          "anchor": "ingress-path-types-and-precedence",
+          "title": "Ingress Path Types and Precedence",
+          "quote": "The last path segment must match the whole segment - if you configure a Prefix path of ``/foo/bar``, ``/foo/bar/baz`` will match, but ``/foo/barbaz`` will not.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/ingress/#ingress-path-types-and-precedence"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/ingress.rst#ingress-path-types-and-precedence",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "bc5f05663c18ddb3",
+      "domain": "service-mesh",
+      "competency": "ingress",
       "type": "single",
       "schemaVersion": 1
     },
@@ -3398,7 +6326,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/ingress-reference.rst#source-ip-visibility",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -3409,6 +6337,67 @@
       "id": "bf4c17c6c401480d",
       "domain": "service-mesh",
       "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "In a complex deployment involving multiple personas, what is the primary reason for deconstructing the Ingress API into several Gateway API objects?",
+      "options": [
+        {
+          "id": "a",
+          "text": "To allow personas to gain the specific access and privileges that their responsibilities require."
+        },
+        {
+          "id": "b",
+          "text": "To eliminate the need for any form of traffic splitting or weighting."
+        },
+        {
+          "id": "c",
+          "text": "To force all developers to manage the Gateway configuration directly."
+        },
+        {
+          "id": "d",
+          "text": "To remove the ability to use TLS termination for external traffic."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt states that by deconstructing the Ingress API into several Gateway API objects, personas gain the specific access and privileges that their responsibilities require.",
+      "optionRationale": {
+        "b": "The excerpt lists traffic splitting/weighting as a feature provided by the Gateway API, not something eliminated by deconstruction.",
+        "c": "The excerpt indicates that developers can be restricted from modifying Gateway configuration, rather than forced to manage it.",
+        "d": "The excerpt lists TLS termination as a feature provided by the Gateway API, not something removed."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/servicemesh/ingress-to-gateway/ingress-to-gateway.rst",
+          "anchor": "benefits-of-the-gateway-api",
+          "title": "Benefits of the Gateway API",
+          "quote": "By deconstructing the Ingress API into several Gateway API objects, personas gain the specific access and privileges that their responsibilities require.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/ingress-to-gateway/ingress-to-gateway/#benefits-of-the-gateway-api"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/ingress-to-gateway/ingress-to-gateway.rst#benefits-of-the-gateway-api",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "c722c5cb72e91af7",
+      "domain": "service-mesh",
+      "competency": "gateway-api",
       "type": "single",
       "schemaVersion": 1
     },
@@ -3459,7 +6448,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/gateway-api/host-network-mode.rst#host-network-mode",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -3468,6 +6457,67 @@
         }
       },
       "id": "cbd557bd103b0885",
+      "domain": "service-mesh",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "Which header does Envoy set to the trusted client address, based on the X-Forwarded-For header, regardless of what that address turns out to be?",
+      "options": [
+        {
+          "id": "a",
+          "text": "X-Forwarded-For"
+        },
+        {
+          "id": "b",
+          "text": "X-Envoy-External-Address"
+        },
+        {
+          "id": "c",
+          "text": "X-Real-IP"
+        },
+        {
+          "id": "d",
+          "text": "X-Client-IP"
+        }
+      ],
+      "answer": "b",
+      "explanation": "The excerpt states that Envoy will also set the X-Envoy-External-Address header to the trusted client address, whatever that turns out to be, based on X-Forwarded-For.",
+      "optionRationale": {
+        "a": "X-Forwarded-For is the header that is appended to or read from, not the one set to the trusted client address by Envoy in this specific context.",
+        "c": "X-Real-IP is not mentioned in the excerpt.",
+        "d": "X-Client-IP is not mentioned in the excerpt."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/servicemesh/ingress-reference.rst",
+          "anchor": "source-ip-visibility",
+          "title": "Source IP Visibility",
+          "quote": "Envoy will also set the ``X-Envoy-External-Address`` header to the trusted client address, whatever that turns out to be, based on ``X-Forwarded-For``.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/ingress-reference/#source-ip-visibility"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/ingress-reference.rst#source-ip-visibility",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "d06840ce9a870576",
       "domain": "service-mesh",
       "competency": null,
       "type": "single",
@@ -3520,7 +6570,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/ingress-reference.rst#source-ip-visibility",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,
@@ -3531,6 +6581,67 @@
       "id": "e8f60d3d891cad03",
       "domain": "service-mesh",
       "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "According to the excerpt, what is the primary function of the special code in the per-node Envoy proxy?",
+      "options": [
+        {
+          "id": "a",
+          "text": "To terminate TLS connections for all inbound traffic."
+        },
+        {
+          "id": "b",
+          "text": "To interact with the eBPF policy engine and perform policy lookups on traffic."
+        },
+        {
+          "id": "c",
+          "text": "To load balance traffic between multiple backend services."
+        },
+        {
+          "id": "d",
+          "text": "To convert Gateway API resources into Ingress resources."
+        }
+      ],
+      "answer": "b",
+      "explanation": "The excerpt states: \"The per-node Envoy proxy has special code that allows it to interact with the eBPF policy engine, and do policy lookups on traffic.\" This allows Envoy to act as a Network Policy enforcement point.",
+      "optionRationale": {
+        "a": "The excerpt does not mention TLS termination as the function of the special code.",
+        "c": "While Envoy generally load balances, the excerpt specifically highlights the special code's role in interacting with the eBPF policy engine for policy lookups.",
+        "d": "The excerpt mentions Gateway API traffic but does not state that the special code converts resources."
+      },
+      "yieldSource": "definition",
+      "citations": [
+        {
+          "file": "network/servicemesh/ingress-reference.rst",
+          "anchor": "cilium-s-ingress-config-and-ciliumnetworkpolicy",
+          "title": "Cilium's ingress config and CiliumNetworkPolicy",
+          "quote": "The per-node Envoy proxy has special code that allows it to interact with the eBPF policy engine, and do policy lookups on traffic.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/ingress-reference/#cilium-s-ingress-config-and-ciliumnetworkpolicy"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/ingress-reference.rst#ciliums-ingress-config-and-ciliumnetworkpolicy",
+        "createdAt": "2026-11-08T02:09:22.356Z",
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "not-configured"
+        }
+      },
+      "id": "ee379f424ec5e3b4",
+      "domain": "service-mesh",
+      "competency": "ingress",
       "type": "single",
       "schemaVersion": 1
     },
@@ -3581,7 +6692,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/ingress-reference.rst#source-ip-visibility",
-        "createdAt": "2026-11-08T00:52:53.393Z",
+        "createdAt": "2026-11-08T02:09:22.356Z",
         "checks": {
           "anchorResolved": true,
           "quoteVerbatim": true,

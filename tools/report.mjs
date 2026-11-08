@@ -93,6 +93,32 @@ async function main() {
     lines.push(`| ${meta.label} | ${meta.weight}% | ${n} | ${meta.floor} | ${n >= meta.floor ? 'met' : '**short**'} |`);
   }
   lines.push('');
+
+  // Competency detail: a domain can meet its floor through one well-covered
+  // competency while others sit empty, and a learner revising a specific topic
+  // needs to see that rather than a domain-level total.
+  const competencyCounts = {};
+  for (const q of qs) {
+    const d = q.domain;
+    const c = q.competency ?? 'unmapped';
+    competencyCounts[d] ??= {};
+    competencyCounts[d][c] = (competencyCounts[d][c] ?? 0) + 1;
+  }
+  if (Object.keys(competencyCounts).length) {
+    lines.push('<details><summary>Coverage by competency</summary>');
+    lines.push('');
+    for (const [d, comps] of Object.entries(competencyCounts)) {
+      lines.push(`**${domains[d]?.label ?? d}**`);
+      lines.push('');
+      for (const [c, n] of Object.entries(comps).sort((a, b) => b[1] - a[1])) {
+        const thin = c !== 'unmapped' && n < quota.perCompetencyMin ? ' _(thin)_' : '';
+        lines.push(`- \`${c}\` — ${n}${thin}`);
+      }
+      lines.push('');
+    }
+    lines.push('</details>');
+    lines.push('');
+  }
   lines.push('| Yield source | Count |');
   lines.push('|---|---|');
   for (const [k, v] of Object.entries(byYield).sort((a, b) => b[1] - a[1])) lines.push(`| ${k} | ${v} |`);

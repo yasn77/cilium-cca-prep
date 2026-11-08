@@ -25,6 +25,24 @@ function sleep(ms) {
 }
 
 /**
+ * Running token totals for this process.
+ *
+ * Kept so a generation run can report what it consumed. A corpus build that
+ * silently costs money is a build people stop running.
+ */
+const usageTotals = { calls: 0, promptTokens: 0, completionTokens: 0 };
+
+export function getUsage() {
+  return { ...usageTotals };
+}
+
+function recordUsage(usage) {
+  usageTotals.calls += 1;
+  usageTotals.promptTokens += usage.prompt_tokens ?? 0;
+  usageTotals.completionTokens += usage.completion_tokens ?? 0;
+}
+
+/**
  * Pull a JSON object or array out of a model response.
  *
  * Models wrap JSON in fences, prepend "Here is the JSON:", or emit trailing
@@ -131,7 +149,9 @@ export async function chat(messages, { cfg, maxAttempts = 3, timeoutMs = 420000 
       }
       const data = JSON.parse(bodyText);
       const text = data.choices?.[0]?.message?.content ?? '';
-      return { text, usage: data.usage ?? null, model: data.model ?? conf.model };
+      const usage = data.usage ?? null;
+      if (usage) recordUsage(usage);
+      return { text, usage, model: data.model ?? conf.model };
     } catch (err) {
       clearTimeout(timer);
       lastErr = err;

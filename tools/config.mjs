@@ -29,7 +29,13 @@ export const providers = {
     defaultModel: 'gpt-4.1-mini',
     keyEnv: 'LLM_API_KEY',
     temperature: 0,
+    // Measured on 100 accepted candidates: median 399 tokens of JSON per
+    // question, ~2,000 for a batch of five. The cap leaves room for a batch of
+    // five plus a model that thinks before answering.
     maxTokens: 2500,
+    // Requests in flight. Cloud endpoints tolerate far more than a single local
+    // GPU; the local default of 4 exists because that is what one box sustains.
+    defaultConcurrency: 8,
   },
   judge: {
     baseUrlEnv: 'TYPESAFE_BASE_URL',

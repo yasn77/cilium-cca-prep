@@ -29,7 +29,7 @@ import {
   log,
   quotePresent,
 } from './lib.mjs';
-import { chat, generatorConfig, extractJson } from './llm.mjs';
+import { chat, generatorConfig, extractJson, getUsage } from './llm.mjs';
 
 const SECTIONS = path.join(ROOT, 'corpus', 'sections.json');
 const OUT = path.join(ROOT, 'candidates', 'ai.jsonl');
@@ -40,6 +40,12 @@ const args = new Set(process.argv.slice(2));
 const LIMIT = Number((process.argv.find((a) => a.startsWith('--limit=')) ?? '').split('=')[1]) || 0;
 const PER_SECTION = Number((process.argv.find((a) => a.startsWith('--per-section=')) ?? '').split('=')[1]) || 3;
 const RECHECK = args.has('--recheck');
+
+// Sections shorter than this are too thin to carry a question on their own.
+// The chunker's own floor is 120; keeping this equal to it means the whole
+// verified index is generation-eligible, which matters for the domains that
+// are documented in many short sections (eBPF, BGP, Cluster Mesh).
+const MIN_GEN_WORDS = 120;
 
 const SYSTEM_PROMPT = `You write multiple-choice exam questions for a study app used to prepare engineers for the Cilium Certified Associate (CCA) certification.
 
@@ -177,7 +183,10 @@ async function main() {
   const templates = await readJsonl(TEMPLATES);
   const existing = await readJsonl(OUT);
   const existingBySection = new Map();
-  for (const r of existing) {
+  // Templates count towards a section's yield as well. Without this the model
+  // asks the same section for questions the template tier already produced, and
+  // the verifier quarantines them as near-duplicates after paying for them.
+  for (const r of [...templates, ...existing]) {
     const sid = r.provenance?.sectionId;
     if (!sid) continue;
     if (!existingBySection.has(sid)) existingBySection.set(sid, []);
@@ -197,33 +206,48 @@ async function main() {
   log('gen-ai', `model ${cfg.model} @ ${cfg.baseUrl}`);
 
   const usable = data.sections.filter(
-    (s) => s.renderStatus === 'verified' && s.renderedAnchor && !s.tooShort && s.wordCount >= 200,
+    (s) => s.renderStatus === 'verified' && s.renderedAnchor && s.wordCount >= MIN_GEN_WORDS,
   );
 
-  // Prioritise sections in the domains with the largest deficit, and larger
-  // sections first within a domain: they carry more distinct facts.
+  // Round-robin across domains by remaining deficit.
   //
-  // Domains are visited in deficit order but sections are interleaved across
-  // domains so that a long run does not stall on one domain's slow imports.
-  // Within a domain a section is used once; neighbours are distinct topics, so
-  // consecutive sections of the same file do not repeat themselves.
-  const order = [...usable].sort((a, b) => {
-    const da = deficits[a.domain] ?? 0;
-    const db = deficits[b.domain] ?? 0;
-    if (da !== db) return db - da;
-    if (a.file === b.file) return a.wordCount - b.wordCount;
-    return a.file.localeCompare(b.file);
-  });
+  // Sorting by deficit alone saturates one domain before touching the next,
+  // which is visible in any partial run: an interrupted build has nothing at all
+  // in half the domains. Interleaving means any prefix of the run is a usable,
+  // balanced corpus.
+  const byDomainSections = new Map();
+  for (const s of usable) {
+    if (!byDomainSections.has(s.domain)) byDomainSections.set(s.domain, []);
+    byDomainSections.get(s.domain).push(s);
+  }
+  // Largest sections first within a domain: more distinct facts per request.
+  for (const list of byDomainSections.values()) list.sort((a, b) => b.wordCount - a.wordCount);
+
+  const seen = new Set();
+  const order = [];
+  const domainsByDeficit = () =>
+    [...byDomainSections.keys()].sort((a, b) => (deficits[b] ?? 0) - (deficits[a] ?? 0));
+  const queues = new Map([...byDomainSections].map(([d, list]) => [d, [...list]]));
+  while ([...queues.values()].some((q) => q.length)) {
+    for (const d of domainsByDeficit()) {
+      const q = queues.get(d);
+      if (!q || !q.length) continue;
+      const next = q.shift();
+      if (!next || seen.has(next.id)) continue;
+      seen.add(next.id);
+      order.push(next);
+    }
+  }
 
   const rows = [...existing];
   let generated = 0;
   let considered = 0;
   const rejections = {};
 
-  // Sections are independent, so run a few concurrently. Sequential generation
-  // against a 27B local model takes hours for a full corpus; six in flight
-  // saturates the endpoint without drowning it.
-  const CONCURRENCY = Number(process.env.GEN_CONCURRENCY ?? 4);
+  // Sections are independent, so they run concurrently. The default suits a
+  // cloud endpoint; a single local GPU needs GEN_CONCURRENCY=4 or lower, or the
+  // requests queue and start timing out.
+  const CONCURRENCY = Number(process.env.GEN_CONCURRENCY ?? providers.generator.defaultConcurrency);
 
   const work = [];
   for (const section of order) {
@@ -295,16 +319,19 @@ async function main() {
     const count = rows.filter((r) => r.domain === d).length;
     coverage[d] = { count, floor: meta.floor, weight: meta.weight, met: count >= meta.floor };
   }
+  const usage = getUsage();
   await writeJson(COVERAGE, {
     generatedAt: new Date().toISOString(),
     templates: templates.length,
     ai: rows.length,
     consideredSections: considered,
+    usage,
     rejections,
     coverage,
   });
 
   log('gen-ai', `${generated} new candidates, ${rows.length} total in file`);
+  log('gen-ai', `spent: ${usage.calls} calls, ${usage.promptTokens} prompt + ${usage.completionTokens} completion tokens`);
   log('gen-ai', `rejections: ${JSON.stringify(rejections)}`);
   for (const [d, c] of Object.entries(coverage)) {
     log('gen-ai', `  ${domains[d].label}: ${c.count}/${c.floor}${c.met ? '' : '  <-- short'}`);

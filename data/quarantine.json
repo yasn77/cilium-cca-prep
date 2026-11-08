@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-08T00:52:53.447Z",
+  "generatedAt": "2026-11-08T02:09:22.469Z",
   "counts": {
-    "total": 16,
+    "total": 30,
     "byGate": {
       "quote": 3,
       "duplicate": 5,
-      "entail": 8
+      "entail": 22
     }
   },
   "questions": [
@@ -61,7 +61,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/concepts/routing.rst#advantages-of-the-model",
-        "createdAt": "2026-11-08T00:52:53.392Z"
+        "createdAt": "2026-11-08T02:09:22.356Z"
       },
       "schemaVersion": 1,
       "rejection": {
@@ -121,7 +121,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/concepts/routing.rst#advantages-of-the-model",
-        "createdAt": "2026-11-08T00:52:53.392Z"
+        "createdAt": "2026-11-08T02:09:22.356Z"
       },
       "schemaVersion": 1,
       "rejection": {
@@ -181,7 +181,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/concepts/routing.rst#advantages-of-the-model",
-        "createdAt": "2026-11-08T00:52:53.393Z"
+        "createdAt": "2026-11-08T02:09:22.356Z"
       },
       "schemaVersion": 1,
       "rejection": {
@@ -241,7 +241,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "operations/troubleshooting.rst#recovery-behavior",
-        "createdAt": "2026-11-08T00:52:53.393Z"
+        "createdAt": "2026-11-08T02:09:22.356Z"
       },
       "schemaVersion": 1,
       "rejection": {
@@ -301,7 +301,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "overview/component-overview.rst#hubble",
-        "createdAt": "2026-11-08T00:52:53.393Z"
+        "createdAt": "2026-11-08T02:09:22.356Z"
       },
       "schemaVersion": 1,
       "rejection": {
@@ -361,7 +361,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "overview/component-overview.rst#hubble",
-        "createdAt": "2026-11-08T00:52:53.393Z"
+        "createdAt": "2026-11-08T02:09:22.356Z"
       },
       "schemaVersion": 1,
       "rejection": {
@@ -421,7 +421,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/policy/layer4.rst#example-tls-sni",
-        "createdAt": "2026-11-08T00:52:53.393Z"
+        "createdAt": "2026-11-08T02:09:22.356Z"
       },
       "schemaVersion": 1,
       "rejection": {
@@ -481,7 +481,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/policy/layer7.rst#http",
-        "createdAt": "2026-11-08T00:52:53.393Z"
+        "createdAt": "2026-11-08T02:09:22.356Z"
       },
       "schemaVersion": 1,
       "rejection": {
@@ -536,7 +536,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/envoy-circuit-breaker.rst#tripping-envoy-circuit-breaker",
-        "createdAt": "2026-11-08T00:52:53.393Z"
+        "createdAt": "2026-11-08T02:09:22.356Z"
       },
       "id": "94c78533833e7612",
       "domain": "service-mesh",
@@ -546,65 +546,6 @@
       "rejection": {
         "gate": "entail",
         "reason": "answer-not-in-citation:0.56"
-      }
-    },
-    {
-      "stem": "In the scenario where the engineer increases the concurrent connections to 4 using the flag `-c 4`, the output shows multiple `Non ok http code` warnings. What specific HTTP status code is associated with these warnings in the log entries?",
-      "options": [
-        {
-          "id": "a",
-          "text": "503"
-        },
-        {
-          "id": "b",
-          "text": "500"
-        },
-        {
-          "id": "c",
-          "text": "429"
-        },
-        {
-          "id": "d",
-          "text": "502"
-        }
-      ],
-      "answer": "a",
-      "explanation": "The log entries for the run with `-c 4` contain multiple lines such as `{\"ts\":1692767495.822424,\"level\":\"warn\",\"file\":\"http_client.go\",\"line\":1104,\"msg\":\"Non ok http code\",\"code\":\"503\",\"status\":\"HTTP/1.1 503\",\"thread\":\"3\",\"run\":\"0\"}`. The `code` field is consistently \"503\".",
-      "optionRationale": {
-        "b": "Incorrect. The logs specify `\"code\":\"503\"`, not 500.",
-        "c": "Incorrect. The logs specify `\"code\":\"503\"`, not 429.",
-        "d": "Incorrect. The logs specify `\"code\":\"503\"`, not 502."
-      },
-      "yieldSource": "attribute",
-      "citations": [
-        {
-          "file": "network/servicemesh/envoy-circuit-breaker.rst",
-          "anchor": "tripping-envoy-circuit-breaker",
-          "title": "Tripping Envoy Circuit Breaker",
-          "quote": "{\"ts\":1692767495.822424,\"level\":\"warn\",\"file\":\"http_client.go\",\"line\":1104,\"msg\":\"Non ok http code\",\"code\":\"503\",\"status\":\"HTTP/1.1 503\",\"thread\":\"3\",\"run\":\"0\"}",
-          "url": "https://docs.cilium.io/en/stable/network/servicemesh/envoy-circuit-breaker/#tripping-envoy-circuit-breaker"
-        }
-      ],
-      "provenance": {
-        "generator": {
-          "kind": "llm",
-          "provider": "llm.badger-yo.ts.net",
-          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
-          "temperature": 0
-        },
-        "docsRef": "v1.20.4",
-        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
-        "sectionId": "network/servicemesh/envoy-circuit-breaker.rst#tripping-envoy-circuit-breaker",
-        "createdAt": "2026-11-08T00:52:53.393Z"
-      },
-      "id": "a48c7f3c9e265686",
-      "domain": "service-mesh",
-      "competency": null,
-      "type": "single",
-      "schemaVersion": 1,
-      "rejection": {
-        "gate": "entail",
-        "reason": "answer-too-short-to-check"
       }
     },
     {
@@ -654,7 +595,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/envoy-circuit-breaker.rst#tripping-envoy-circuit-breaker",
-        "createdAt": "2026-11-08T00:52:53.393Z"
+        "createdAt": "2026-11-08T02:09:22.356Z"
       },
       "id": "f5aef8e4f5ce0e18",
       "domain": "service-mesh",
@@ -664,65 +605,6 @@
       "rejection": {
         "gate": "entail",
         "reason": "answer-not-in-citation:0.38"
-      }
-    },
-    {
-      "stem": "An engineer applies a `CiliumClusterwideNetworkPolicy` to deny all traffic by default. When an external client sends a request to the `/details` endpoint, the response is a 403 Forbidden. According to the Hubble flow logs provided, what is the status of the HTTP request flow?",
-      "options": [
-        {
-          "id": "a",
-          "text": "DROPPED"
-        },
-        {
-          "id": "b",
-          "text": "FORWARDED"
-        },
-        {
-          "id": "c",
-          "text": "ALLOWED"
-        },
-        {
-          "id": "d",
-          "text": "DENIED"
-        }
-      ],
-      "answer": "a",
-      "explanation": "The Hubble output explicitly shows the line `http-request DROPPED (HTTP/1.1 GET http://172.19.255.194/details/1)`. Although the client receives a 403 response, the flow status for the request itself is recorded as DROPPED.",
-      "optionRationale": {
-        "b": "FORWARDED is the status of the http-response, not the http-request.",
-        "c": "ALLOWED is not the specific status shown in the log for the dropped request.",
-        "d": "DENIED is a general concept but the specific log status is DROPPED."
-      },
-      "yieldSource": "scenario",
-      "citations": [
-        {
-          "file": "network/servicemesh/default-deny-ingress-policy.rst",
-          "anchor": "default-deny-ingress-policy",
-          "title": "Default Deny Ingress Policy",
-          "quote": "Mar 17 13:56:00.709: 172.19.0.1:34104 (ingress) -> default/cilium-ingress-basic-ingress:80 (world) http-request DROPPED (HTTP/1.1 GET http://172.19.255.194/details/1)",
-          "url": "https://docs.cilium.io/en/stable/network/servicemesh/default-deny-ingress-policy/#default-deny-ingress-policy"
-        }
-      ],
-      "provenance": {
-        "generator": {
-          "kind": "llm",
-          "provider": "llm.badger-yo.ts.net",
-          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
-          "temperature": 0
-        },
-        "docsRef": "v1.20.4",
-        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
-        "sectionId": "network/servicemesh/default-deny-ingress-policy.rst#default-deny-ingress-policy",
-        "createdAt": "2026-11-08T00:52:53.393Z"
-      },
-      "id": "8cbdf3736112ea28",
-      "domain": "service-mesh",
-      "competency": "ingress",
-      "type": "single",
-      "schemaVersion": 1,
-      "rejection": {
-        "gate": "entail",
-        "reason": "answer-too-short-to-check"
       }
     },
     {
@@ -772,7 +654,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/default-deny-ingress-policy.rst#default-deny-ingress-policy",
-        "createdAt": "2026-11-08T00:52:53.393Z"
+        "createdAt": "2026-11-08T02:09:22.356Z"
       },
       "id": "3609a0ba0fa39d0e",
       "domain": "service-mesh",
@@ -781,7 +663,7 @@
       "schemaVersion": 1,
       "rejection": {
         "gate": "entail",
-        "reason": "answer-too-short-to-check"
+        "reason": "all-options-in-citation"
       }
     },
     {
@@ -831,7 +713,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/gateway-api/troubleshooting.rst#checking-resources",
-        "createdAt": "2026-11-08T00:52:53.393Z"
+        "createdAt": "2026-11-08T02:09:22.356Z"
       },
       "id": "b7886d4a75fd3c0c",
       "domain": "service-mesh",
@@ -890,7 +772,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/gateway-api/troubleshooting.rst#checking-resources",
-        "createdAt": "2026-11-08T00:52:53.393Z"
+        "createdAt": "2026-11-08T02:09:22.356Z"
       },
       "id": "f825da87d45bb12c",
       "domain": "service-mesh",
@@ -903,40 +785,40 @@
       }
     },
     {
-      "stem": "Which header does Envoy set to the trusted client address, based on the X-Forwarded-For header, regardless of what that address turns out to be?",
+      "stem": "Which team is responsible for designing and maintaining the Gateway API, as stated in the excerpt?",
       "options": [
         {
           "id": "a",
-          "text": "X-Forwarded-For"
+          "text": "The Kubernetes SIG-Network team"
         },
         {
           "id": "b",
-          "text": "X-Envoy-External-Address"
+          "text": "The Cluster Operators"
         },
         {
           "id": "c",
-          "text": "X-Real-IP"
+          "text": "The Infrastructure Providers"
         },
         {
           "id": "d",
-          "text": "X-Client-IP"
+          "text": "The Application Developers"
         }
       ],
-      "answer": "b",
-      "explanation": "The excerpt states that Envoy will also set the X-Envoy-External-Address header to the trusted client address, whatever that turns out to be, based on X-Forwarded-For.",
+      "answer": "a",
+      "explanation": "The excerpt explicitly states that the Kubernetes SIG-Network team designs and maintains the Gateway API.",
       "optionRationale": {
-        "a": "X-Forwarded-For is the header that is appended to or read from, not the one set to the trusted client address by Envoy in this specific context.",
-        "c": "X-Real-IP is not mentioned in the excerpt.",
-        "d": "X-Client-IP is not mentioned in the excerpt."
+        "b": "Cluster Operators are responsible for the administration of a cluster, not the design and maintenance of the API itself.",
+        "c": "Infrastructure Providers administrate managed services or on-premises infrastructure, not the API design.",
+        "d": "Application Developers are responsible for defining application configuration and service composition."
       },
-      "yieldSource": "attribute",
+      "yieldSource": "definition",
       "citations": [
         {
-          "file": "network/servicemesh/ingress-reference.rst",
-          "anchor": "source-ip-visibility",
-          "title": "Source IP Visibility",
-          "quote": "Envoy will also set the ``X-Envoy-External-Address`` header to the trusted client address, whatever that turns out to be, based on ``X-Forwarded-For``.",
-          "url": "https://docs.cilium.io/en/stable/network/servicemesh/ingress-reference/#source-ip-visibility"
+          "file": "network/servicemesh/ingress-to-gateway/ingress-to-gateway.rst",
+          "anchor": "benefits-of-the-gateway-api",
+          "title": "Benefits of the Gateway API",
+          "quote": "The `Kubernetes SIG-Network <https://github.com/kubernetes/community/tree/master/sig-network>`_ team designs and maintains the Gateway API.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/ingress-to-gateway/ingress-to-gateway/#benefits-of-the-gateway-api"
         }
       ],
       "provenance": {
@@ -948,17 +830,961 @@
         },
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
-        "sectionId": "network/servicemesh/ingress-reference.rst#source-ip-visibility",
-        "createdAt": "2026-11-08T00:52:53.393Z"
+        "sectionId": "network/servicemesh/ingress-to-gateway/ingress-to-gateway.rst#benefits-of-the-gateway-api",
+        "createdAt": "2026-11-08T02:09:22.356Z"
       },
-      "id": "d06840ce9a870576",
+      "id": "c3e17c171cb70ede",
+      "domain": "service-mesh",
+      "competency": "gateway-api",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "all-options-in-citation"
+      }
+    },
+    {
+      "stem": "When multiple path types are configured on an Ingress object, in which order does Cilium configure Envoy with the matches?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Prefix, Exact, ImplementationSpecific, `/` Prefix"
+        },
+        {
+          "id": "b",
+          "text": "Exact, ImplementationSpecific, Prefix, `/` Prefix"
+        },
+        {
+          "id": "c",
+          "text": "ImplementationSpecific, Exact, Prefix, `/` Prefix"
+        },
+        {
+          "id": "d",
+          "text": "Exact, Prefix, ImplementationSpecific, `/` Prefix"
+        }
+      ],
+      "answer": "b",
+      "explanation": "The source lists the order as: 1. Exact, 2. ImplementationSpecific (that is, regular expression), 3. Prefix, 4. The `/` Prefix match has special handling and always goes last.",
+      "optionRationale": {
+        "a": "Incorrect. Prefix is listed third, not first.",
+        "c": "Incorrect. Exact is listed first, not ImplementationSpecific.",
+        "d": "Incorrect. ImplementationSpecific is listed second, before Prefix."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/servicemesh/ingress.rst",
+          "anchor": "ingress-path-types-and-precedence",
+          "title": "Ingress Path Types and Precedence",
+          "quote": "Cilium will configure Envoy with the matches in the following order: #. Exact #. ImplementationSpecific (that is, regular expression) #. Prefix #. The ``/`` Prefix match has special handling and always goes last.",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/ingress/#ingress-path-types-and-precedence"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/ingress.rst#ingress-path-types-and-precedence",
+        "createdAt": "2026-11-08T02:09:22.356Z"
+      },
+      "id": "e1b3928fd82ddde1",
+      "domain": "service-mesh",
+      "competency": "ingress",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "all-options-in-citation"
+      }
+    },
+    {
+      "stem": "An engineer is deploying the demo application described in the guide to secure communications to existing AWS instances. Which of the three microservices created by the manifests is specifically designated for this purpose?",
+      "options": [
+        {
+          "id": "a",
+          "text": "deathstar"
+        },
+        {
+          "id": "b",
+          "text": "tiefighter"
+        },
+        {
+          "id": "c",
+          "text": "xwing"
+        },
+        {
+          "id": "d",
+          "text": "kubernetes"
+        }
+      ],
+      "answer": "c",
+      "explanation": "The excerpt explicitly states that while three microservices are created, only the xwing microservice is used to secure communications to existing AWS instances.",
+      "optionRationale": {
+        "a": "deathstar is one of the three microservices created, but the text specifies that only xwing is used for the specific task of securing communications to AWS instances.",
+        "b": "tiefighter is one of the three microservices created, but the text specifies that only xwing is used for the specific task of securing communications to AWS instances.",
+        "d": "kubernetes is listed as a service in the output, but it is not one of the three microservices applications created by the manifests for this demo."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "security/aws.rst",
+          "anchor": "deploy-a-demo-application",
+          "title": "Deploy a demo application:",
+          "quote": "In this case, we are only going to use our *xwing* microservice to secure communications to existing AWS instances.",
+          "url": "https://docs.cilium.io/en/stable/security/aws/#deploy-a-demo-application"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "security/aws.rst#deploy-a-demo-application",
+        "createdAt": "2026-11-08T02:09:22.356Z"
+      },
+      "id": "ef723ee8992971a8",
+      "domain": "network-policy",
+      "competency": "policy-intent",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "all-options-in-citation"
+      }
+    },
+    {
+      "stem": "An engineer observes `XfrmOutPolBlock` errors in the Cilium logs. According to the provided documentation, what is the specific cause of these errors?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The kernel failed to allocate memory for the packet."
+        },
+        {
+          "id": "b",
+          "text": "Cilium dropped packets that would have otherwise left the node in plain-text."
+        },
+        {
+          "id": "c",
+          "text": "The sequence number of an encryption XFRM configuration reached its maximum value."
+        },
+        {
+          "id": "d",
+          "text": "A bug in the XFRM configuration for encryption."
+        }
+      ],
+      "answer": "b",
+      "explanation": "The table in the excerpt explicitly lists `XfrmOutPolBlock` with the known explanation: 'Cilium dropped packets that would have otherwise left the node in plain-text.'",
+      "optionRationale": {
+        "a": "This is the explanation for `XfrmInError` or `XfrmFwdHdrError` (memory allocation failure).",
+        "c": "This is the explanation for `XfrmOutStateSeqError`.",
+        "d": "This is the explanation for `XfrmOutNoStates`."
+      },
+      "yieldSource": "definition",
+      "citations": [
+        {
+          "file": "security/network/encryption-ipsec.rst",
+          "anchor": "troubleshooting",
+          "title": "Troubleshooting",
+          "quote": "XfrmOutPolBlock          Cilium dropped packets that would have otherwise\n                            left the node in plain-text.",
+          "url": "https://docs.cilium.io/en/stable/security/network/encryption-ipsec/#troubleshooting"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "security/network/encryption-ipsec.rst#troubleshooting",
+        "createdAt": "2026-11-08T02:09:22.356Z"
+      },
+      "id": "5e50bf95f2878582",
+      "domain": "network-policy",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "all-options-in-citation"
+      }
+    },
+    {
+      "stem": "A network engineer is configuring Cilium to protect a node against Distributed Denial of Service (DDoS) attacks. They require the BPF program to execute at the earliest possible point in the networking driver, directly on the packet data before any other processing occurs, to drop malicious traffic. Which BPF hook should they use?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Traffic Control Ingress"
+        },
+        {
+          "id": "b",
+          "text": "XDP"
+        },
+        {
+          "id": "c",
+          "text": "Socket operations"
+        },
+        {
+          "id": "d",
+          "text": "Socket send/recv"
+        }
+      ],
+      "answer": "b",
+      "explanation": "The excerpt states that the XDP BPF hook is at the earliest point possible in the networking driver and triggers a run of the BPF program upon packet reception. It explicitly mentions that this hook is ideal for running filtering programs that drop malicious or unexpected traffic and other common DDOS protection mechanisms.",
+      "optionRationale": {
+        "a": "The Traffic Control Ingress hook runs after the networking stack has done initial processing of the packet, which is later than the XDP hook.",
+        "c": "The socket operations hook is attached to a specific cgroup and runs on TCP events, not at the earliest point in the networking driver for general packet reception.",
+        "d": "The socket send/recv hook runs on every send operation performed by a TCP socket, which is specific to TCP and not the earliest point for general packet processing."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/ebpf/intro.rst",
+          "anchor": "introduction",
+          "title": "Introduction",
+          "quote": "The XDP BPF hook is at the earliest point possible in the networking driver and triggers a run of the BPF program upon packet reception. This achieves the best possible packet processing performance since the program runs directly on the packet data before any other processing can happen. This hook is ideal for running filtering programs that drop malicious or unexpected traffic, and other common DDOS protection mechanisms.",
+          "url": "https://docs.cilium.io/en/stable/network/ebpf/intro/#introduction"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/ebpf/intro.rst#introduction",
+        "createdAt": "2026-11-08T02:09:22.356Z"
+      },
+      "id": "3fe78a0b6c28c9df",
+      "domain": "ebpf",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "all-options-in-citation"
+      }
+    },
+    {
+      "stem": "An engineer is investigating how Cilium enforces policy on traffic exiting a container. The excerpt notes that containers typically use a virtual device called a veth pair. To monitor and enforce policy on all traffic exiting a container, where does Cilium attach the BPF program?",
+      "options": [
+        {
+          "id": "a",
+          "text": "To the TC ingress hook of the container side of the veth pair"
+        },
+        {
+          "id": "b",
+          "text": "To the TC ingress hook of the host side of the veth pair"
+        },
+        {
+          "id": "c",
+          "text": "To the XDP hook of the physical network interface"
+        },
+        {
+          "id": "d",
+          "text": "To the socket operations hook of the root cgroup"
+        }
+      ],
+      "answer": "b",
+      "explanation": "The source states: 'By attaching to the TC ingress hook of the host side of this veth pair Cilium can monitor and enforce policy on all traffic exiting a container.'",
+      "optionRationale": {
+        "a": "The excerpt specifies the host side of the veth pair for monitoring traffic exiting the container, not the container side.",
+        "c": "The XDP hook is used for prefiltering and DDoS protection at the driver level, not specifically for enforcing policy on traffic exiting a container via the veth pair.",
+        "d": "The socket operations hook is used for monitoring TCP state transitions, not for enforcing policy on all traffic exiting a container via the veth pair."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/ebpf/intro.rst",
+          "anchor": "introduction",
+          "title": "Introduction",
+          "quote": "By attaching to the TC ingress hook of the host side of this veth pair Cilium can monitor and enforce policy on all traffic exiting a container.",
+          "url": "https://docs.cilium.io/en/stable/network/ebpf/intro/#introduction"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/ebpf/intro.rst#introduction",
+        "createdAt": "2026-11-08T02:09:22.356Z"
+      },
+      "id": "498f2bdac51d0abb",
+      "domain": "ebpf",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "all-options-in-citation"
+      }
+    },
+    {
+      "stem": "A network engineer deploys two `netperf` Pods to verify bandwidth enforcement. The server Pod has the annotation `kubernetes.io/egress-bandwidth: \"10M\"`. The client Pod initiates a connection using `iperf3 -R -c <server_ip>`. Based on the provided test results, what is the observed behaviour of the traffic?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The egress traffic from the server Pod is limited to approximately 10 Mbit/s, as indicated by the receiver bitrate."
+        },
+        {
+          "id": "b",
+          "text": "The ingress traffic to the server Pod is limited to 10 Mbit/s, as the client is receiving data."
+        },
+        {
+          "id": "c",
+          "text": "The bandwidth limit is not enforced because the `netperf` Pods are on different nodes."
+        },
+        {
+          "id": "d",
+          "text": "The egress traffic is limited to 20 Mbit/s because the ingress annotation takes precedence in reverse mode."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The scenario describes testing egress bandwidth using `iperf3 -R` (reverse mode), where the remote host (server) sends data. The excerpt shows the output where the receiver bitrate is around 9.59 Mbits/sec, and explicitly states: 'As can be seen, egress traffic of the netperf-server Pod has been limited to 10Mbit per second.'",
+      "optionRationale": {
+        "b": "The test described uses `iperf3 -R`, which tests egress from the server (remote host sending). The excerpt confirms this is an egress test, not an ingress test.",
+        "c": "The excerpt states that bandwidth enforcement is supported for direct routing as well as tunneling mode, and the test was performed with Pods on different nodes (implied by the anti-affinity and the context of verifying enforcement), successfully showing the limit.",
+        "d": "The annotation set was `egress-bandwidth: \"10M\"` and `ingress-bandwidth: \"20M\"`. The test was for egress, so the 10M limit applies, not the 20M ingress limit."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/kubernetes/bandwidth-manager.rst",
+          "anchor": "bandwidth-manager",
+          "title": "Bandwidth Manager",
+          "quote": "As can be seen, egress traffic of the ``netperf-server`` Pod has been limited to 10Mbit per second.",
+          "url": "https://docs.cilium.io/en/stable/network/kubernetes/bandwidth-manager/#bandwidth-manager"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/kubernetes/bandwidth-manager.rst#bandwidth-manager",
+        "createdAt": "2026-11-08T02:09:22.356Z"
+      },
+      "id": "e7186126edf14379",
+      "domain": "architecture",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation:0.64"
+      }
+    },
+    {
+      "stem": "An engineer is testing the L7 circuit breaker configuration for the `echo-service` using Fortio. They execute the command `kubectl exec \"$FORTIO_POD\" -c fortio -- /usr/bin/fortio load -c 2 -qps 0 -n 20 http://echo-service:8080`. Based on the provided output, what is the distribution of HTTP response codes received by the client?",
+      "options": [
+        {
+          "id": "a",
+          "text": "19 requests received a 200 status code and 1 request received a 503 status code."
+        },
+        {
+          "id": "b",
+          "text": "20 requests received a 200 status code and 0 requests received a 503 status code."
+        },
+        {
+          "id": "c",
+          "text": "10 requests received a 200 status code and 10 requests received a 503 status code."
+        },
+        {
+          "id": "d",
+          "text": "18 requests received a 200 status code and 2 requests received a 503 status code."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The output of the Fortio command with `-c 2` explicitly lists the response code distribution at the end of the log: \"Code 200 : 19 (95.0 %)\" and \"Code 503 : 1 (5.0 %)\". This indicates that out of the 20 total calls, 19 were successful and 1 triggered the circuit breaker with a 503 error.",
+      "optionRationale": {
+        "b": "This option is incorrect because the output clearly shows one instance of a 503 error code, not zero.",
+        "c": "This option is incorrect because the distribution is not evenly split; the output shows 19 successes versus 1 failure.",
+        "d": "This option is incorrect because the output specifies exactly one 503 error, not two."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/servicemesh/envoy-circuit-breaker.rst",
+          "anchor": "tripping-envoy-circuit-breaker",
+          "title": "Tripping Envoy Circuit Breaker",
+          "quote": "Code 200 : 19 (95.0 %)\n    Code 503 : 1 (5.0 %)",
+          "url": "https://docs.cilium.io/en/stable/network/servicemesh/envoy-circuit-breaker/#tripping-envoy-circuit-breaker"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/servicemesh/envoy-circuit-breaker.rst#tripping-envoy-circuit-breaker",
+        "createdAt": "2026-11-08T02:09:22.356Z"
+      },
+      "id": "c3914c0dd31bb4cb",
       "domain": "service-mesh",
       "competency": null,
       "type": "single",
       "schemaVersion": 1,
       "rejection": {
         "gate": "entail",
-        "reason": "answer-too-short-to-check"
+        "reason": "answer-not-in-citation:0.64"
+      }
+    },
+    {
+      "stem": "An engineer needs to enable verbose debugging for flow analysis to troubleshoot connectivity issues. According to the excerpt, what is a critical operational requirement when changing these Cilium flags?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The Cilium agent and operator must be restarted."
+        },
+        {
+          "id": "b",
+          "text": "The Kubernetes nodes must be drained and rebooted."
+        },
+        {
+          "id": "c",
+          "text": "The `CiliumEnvoyConfig` resources must be deleted and recreated."
+        },
+        {
+          "id": "d",
+          "text": "The cloud Load Balancer configuration must be updated."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt states: 'Kindly note that any change of Cilium flags requires a restart of the Cilium agent and operator.' This is a direct requirement for applying changes to flags like `debug` and `debug-verbose`.",
+      "optionRationale": {
+        "b": "The excerpt does not mention draining or rebooting nodes; it specifically mentions restarting the Cilium agent and operator.",
+        "c": "While CEC resources are involved in the configuration, the excerpt links the flag change requirement to the agent/operator restart, not the recreation of CEC resources.",
+        "d": "The excerpt states that the step between the cloud Load Balancer and the node port is out of Cilium scope and should be checked with the cloud provider, but it does not link flag changes to LB updates."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "operations/troubleshooting_servicemesh.rst",
+          "anchor": "connectivity-troubleshooting",
+          "title": "Connectivity Troubleshooting",
+          "quote": "Kindly note that any change of Cilium flags requires a restart of the Cilium agent and operator.",
+          "url": "https://docs.cilium.io/en/stable/operations/troubleshooting_servicemesh/#connectivity-troubleshooting"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "operations/troubleshooting_servicemesh.rst#connectivity-troubleshooting",
+        "createdAt": "2026-11-08T02:09:22.356Z"
+      },
+      "id": "3ab1b7b41ce1c1ae",
+      "domain": "installation",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation:0.57"
+      }
+    },
+    {
+      "stem": "An engineer is debugging an Ingress issue and wants to verify if the request is reaching the Envoy proxy. They identify the proxy port from the Cilium logs as 19672. What command should they run on the node to test this specific port?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`curl -v http://localhost:19672`"
+        },
+        {
+          "id": "b",
+          "text": "`curl -v http://localhost:31911`"
+        },
+        {
+          "id": "c",
+          "text": "`kubectl exec -n kube-system ds/cilium -- hubble observe -f --identity 2`"
+        },
+        {
+          "id": "d",
+          "text": "`kubectl get service cilium-ingress-basic-ingress`"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt provides a scenario where the proxy port is identified as 19672 from the logs. It then shows the command `curl -v http://localhost:19672` to send a request directly to the Envoy proxy port on the node.",
+      "optionRationale": {
+        "b": "Port 31911 is the node port for the LoadBalancer service, not the direct Envoy proxy port identified in this specific scenario (19672).",
+        "c": "This command is used to observe flows, not to send a test request to a specific port to verify connectivity to the proxy.",
+        "d": "This command retrieves service information but does not test the connectivity to the specific proxy port."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "operations/troubleshooting_servicemesh.rst",
+          "anchor": "connectivity-troubleshooting",
+          "title": "Connectivity Troubleshooting",
+          "quote": "# After ssh to any of k8s node, send request to Envoy proxy port directly\n     $ curl -v  http://localhost:19672",
+          "url": "https://docs.cilium.io/en/stable/operations/troubleshooting_servicemesh/#connectivity-troubleshooting"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "operations/troubleshooting_servicemesh.rst#connectivity-troubleshooting",
+        "createdAt": "2026-11-08T02:09:22.356Z"
+      },
+      "id": "659e9378095ccbe1",
+      "domain": "installation",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "all-options-in-citation"
+      }
+    },
+    {
+      "stem": "An engineer is configuring a Cilium node with 60 GiB of total system memory. They set the flag `--bpf-map-dynamic-size-ratio` to `0.0025`. Based on the provided data, what is the calculated maximum number of entries for the Cilium connection tracking tables on this node?",
+      "options": [
+        {
+          "id": "a",
+          "text": "131072"
+        },
+        {
+          "id": "b",
+          "text": "284560"
+        },
+        {
+          "id": "c",
+          "text": "569120"
+        },
+        {
+          "id": "d",
+          "text": "524288"
+        }
+      ],
+      "answer": "c",
+      "explanation": "The excerpt states that Cilium calculates the number of entries based on total memory with a minimum of 131072. The table shows that for a node with 60 GiB of memory and a ratio of 0.0025, the Cilium CT entries are 569120. Option A is the minimum floor, Option B is the value for 30 GiB, and Option D is the kube-proxy value for 60 GiB.",
+      "optionRationale": {
+        "a": "This is the minimum number of entries regardless of memory, but the calculated value for 60 GiB is higher.",
+        "b": "This is the value for a node with 30 GiB of memory, not 60 GiB.",
+        "d": "This is the value for kube-proxy CT entries on a 60 GiB node, not Cilium."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/ebpf/maps.rst",
+          "anchor": "ebpf-maps",
+          "title": "eBPF Maps",
+          "quote": "The following table presents the value that ``kube-proxy`` and Cilium sets for their own connection tracking tables when Cilium is configured with ``--bpf-map-dynamic-size-ratio: 0.0025``.",
+          "url": "https://docs.cilium.io/en/stable/network/ebpf/maps/#ebpf-maps"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/ebpf/maps.rst#ebpf-maps",
+        "createdAt": "2026-11-08T02:09:22.356Z"
+      },
+      "id": "b82db977d1b5c9b6",
+      "domain": "ebpf",
+      "competency": "bpf-maps",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "all-options-in-citation"
+      }
+    },
+    {
+      "stem": "A cluster administrator needs to increase the capacity of the BPF map used for tracking TCP connections globally. Which command-line option for `cilium-agent` should they use to override the default limit?",
+      "options": [
+        {
+          "id": "a",
+          "text": "--bpf-ct-global-any-max"
+        },
+        {
+          "id": "b",
+          "text": "--bpf-ct-global-tcp-max"
+        },
+        {
+          "id": "c",
+          "text": "--bpf-nat-global-max"
+        },
+        {
+          "id": "d",
+          "text": "--bpf-map-dynamic-size-ratio"
+        }
+      ],
+      "answer": "b",
+      "explanation": "The excerpt lists `--bpf-ct-global-tcp-max` as the specific option to set the capacity for TCP connection tracking. `--bpf-ct-global-any-max` is for any protocol, `--bpf-nat-global-max` is for NAT, and `--bpf-map-dynamic-size-ratio` is a ratio-based calculation, not a direct limit override for a specific map type in the same way.",
+      "optionRationale": {
+        "a": "This flag is for 'any' protocol connection tracking, not specifically TCP.",
+        "c": "This flag is for the NAT map, not connection tracking.",
+        "d": "This flag determines limits based on a memory ratio, rather than setting a specific capacity limit directly for the TCP map."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/ebpf/maps.rst",
+          "anchor": "ebpf-maps",
+          "title": "eBPF Maps",
+          "quote": "A given capacity can be set using ``--bpf-auth-map-max``, ``--bpf-ct-global-tcp-max``, ``--bpf-ct-global-any-max``, ``--bpf-nat-global-max``, ``--bpf-neigh-global-max``, ``--bpf-policy-map-max``, ``--bpf-fragments-map-max`` and ``--bpf-lb-map-max``.",
+          "url": "https://docs.cilium.io/en/stable/network/ebpf/maps/#ebpf-maps"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/ebpf/maps.rst#ebpf-maps",
+        "createdAt": "2026-11-08T02:09:22.356Z"
+      },
+      "id": "b2c26a9643f43f83",
+      "domain": "ebpf",
+      "competency": "bpf-maps",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation"
+      }
+    },
+    {
+      "stem": "An engineer observes that a node is running out of capacity for its local endpoints. According to the default limits table, what is the maximum number of local endpoints plus host IPs allowed per node?",
+      "options": [
+        {
+          "id": "a",
+          "text": "512k"
+        },
+        {
+          "id": "b",
+          "text": "16k"
+        },
+        {
+          "id": "c",
+          "text": "64k"
+        },
+        {
+          "id": "d",
+          "text": "256k"
+        }
+      ],
+      "answer": "c",
+      "explanation": "The table lists the 'Endpoints' map with a default limit of 64k, with the scale implication being 'Max 64k local endpoints + host IPs per node'.",
+      "optionRationale": {
+        "a": "This is the default limit for Auth, Connection Tracking, NAT, Neighbor Table, and IP cache maps.",
+        "b": "This is the default limit for Policy, IPv4/IPv6 Masq, Egress Policy, and Node maps.",
+        "d": "This is the maximum for expected UDP answers in Connection Tracking, not local endpoints."
+      },
+      "yieldSource": "definition",
+      "citations": [
+        {
+          "file": "network/ebpf/maps.rst",
+          "anchor": "ebpf-maps",
+          "title": "eBPF Maps",
+          "quote": "Endpoints node 64k Max 64k local endpoints + host IPs per node",
+          "url": "https://docs.cilium.io/en/stable/network/ebpf/maps/#ebpf-maps"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/ebpf/maps.rst#ebpf-maps",
+        "createdAt": "2026-11-08T02:09:22.356Z"
+      },
+      "id": "1926eda389a76d11",
+      "domain": "ebpf",
+      "competency": "bpf-maps",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "all-options-in-citation"
+      }
+    },
+    {
+      "stem": "Which of the following BPF maps is NOT affected by the `--bpf-map-dynamic-size-ratio` flag according to the excerpt?",
+      "options": [
+        {
+          "id": "a",
+          "text": "cilium_ct_{4,6}_global"
+        },
+        {
+          "id": "b",
+          "text": "cilium_lb{4,6}_reverse_sk"
+        },
+        {
+          "id": "c",
+          "text": "cilium_policy"
+        },
+        {
+          "id": "d",
+          "text": "cilium_snat_v{4,6}_external"
+        }
+      ],
+      "answer": "c",
+      "explanation": "The excerpt lists the maps affected by the flag as: `cilium_ct_{4,6}_global`, `cilium_ct_{4,6}_any`, `cilium_nodeport_neigh{4,6}`, `cilium_snat_v{4,6}_external` and `cilium_lb{4,6}_reverse_sk`. The policy map is not in this list.",
+      "optionRationale": {
+        "a": "This map is explicitly listed as affected by the flag.",
+        "b": "This map is explicitly listed as affected by the flag.",
+        "d": "This map is explicitly listed as affected by the flag."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/ebpf/maps.rst",
+          "anchor": "ebpf-maps",
+          "title": "eBPF Maps",
+          "quote": "This flag affects the following BPF maps that consume most memory in the system: ``cilium_ct_{4,6}_global``, ``cilium_ct_{4,6}_any``, ``cilium_nodeport_neigh{4,6}``, ``cilium_snat_v{4,6}_external`` and ``cilium_lb{4,6}_reverse_sk``.",
+          "url": "https://docs.cilium.io/en/stable/network/ebpf/maps/#ebpf-maps"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/ebpf/maps.rst#ebpf-maps",
+        "createdAt": "2026-11-08T02:09:22.356Z"
+      },
+      "id": "5a67aee14817c259",
+      "domain": "ebpf",
+      "competency": "bpf-maps",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "all-options-in-citation"
+      }
+    },
+    {
+      "stem": "In the provided script for creating subnets, which tag key-value pair is applied to the public subnets to designate their role for load balancers?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Key=kubernetes.io/role/internal-elb, Value=1"
+        },
+        {
+          "id": "b",
+          "text": "Key=kubernetes.io/role/elb, Value=1"
+        },
+        {
+          "id": "c",
+          "text": "Key=kubernetes.io/role/public, Value=1"
+        },
+        {
+          "id": "d",
+          "text": "Key=kubernetes.io/role/nat, Value=1"
+        }
+      ],
+      "answer": "b",
+      "explanation": "The excerpt shows that public subnets are created with the tag specification `Key=kubernetes.io/role/elb,Value=1`, whereas private subnets use `Key=kubernetes.io/role/internal-elb,Value=1`.",
+      "optionRationale": {
+        "a": "This tag is used for private subnets, not public ones.",
+        "c": "This tag key is not present in the excerpt.",
+        "d": "This tag key is not present in the excerpt."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/clustermesh/eks-clustermesh-prep.rst",
+          "anchor": "install-cluster-one",
+          "title": "Install cluster one",
+          "quote": "--tag-specifications \"ResourceType=subnet, Tags=[{Key=Name,Value=Cluster_1_Public_Subnet_1},{Key=kubernetes.io/role/elb,Value=1}]\"",
+          "url": "https://docs.cilium.io/en/stable/network/clustermesh/eks-clustermesh-prep/#install-cluster-one"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/clustermesh/eks-clustermesh-prep.rst#install-cluster-one",
+        "createdAt": "2026-11-08T02:09:22.356Z"
+      },
+      "id": "66826213a43f00e4",
+      "domain": "cluster-mesh",
+      "competency": "mesh-benefits",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "all-options-in-citation"
+      }
+    },
+    {
+      "stem": "When creating the public route table in the provided script, which destination CIDR block is used for the route that directs traffic to the Internet Gateway?",
+      "options": [
+        {
+          "id": "a",
+          "text": "10.0.0.0/16"
+        },
+        {
+          "id": "b",
+          "text": "0.0.0.0/0"
+        },
+        {
+          "id": "c",
+          "text": "10.0.1.0/24"
+        },
+        {
+          "id": "d",
+          "text": "172.17.0.0/16"
+        }
+      ],
+      "answer": "b",
+      "explanation": "The command `aws ec2 create-route` for the public route table specifies `--destination-cidr-block 0.0.0.0/0` and `--gateway-id ${Cluster_1_IGW}`.",
+      "optionRationale": {
+        "a": "10.0.0.0/16 is the VPC CIDR, not the destination for the internet route.",
+        "c": "10.0.1.0/24 is a specific subnet CIDR, not the default route destination.",
+        "d": "172.17.0.0/16 is the range to avoid, not a route destination in this script."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/clustermesh/eks-clustermesh-prep.rst",
+          "anchor": "install-cluster-one",
+          "title": "Install cluster one",
+          "quote": "aws ec2 create-route \\\n         --route-table-id ${Cluster_1_Public_RT} \\\n         --destination-cidr-block 0.0.0.0/0 \\\n         --gateway-id ${Cluster_1_IGW}",
+          "url": "https://docs.cilium.io/en/stable/network/clustermesh/eks-clustermesh-prep/#install-cluster-one"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/clustermesh/eks-clustermesh-prep.rst#install-cluster-one",
+        "createdAt": "2026-11-08T02:09:22.356Z"
+      },
+      "id": "5cd1bf60f83841eb",
+      "domain": "cluster-mesh",
+      "competency": "mesh-benefits",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-empty"
+      }
+    },
+    {
+      "stem": "A network engineer wants to configure Hubble metrics to include the Kubernetes namespace name for the source of the traffic. Which context option value should be used in the `sourceContext` configuration?",
+      "options": [
+        {
+          "id": "a",
+          "text": "namespace"
+        },
+        {
+          "id": "b",
+          "text": "pod"
+        },
+        {
+          "id": "c",
+          "text": "identity"
+        },
+        {
+          "id": "d",
+          "text": "workload"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The table of option values lists `namespace` with the description 'Kubernetes namespace name'. The `pod` option includes both name and namespace, `identity` includes all security labels, and `workload` includes the workload name and namespace.",
+      "optionRationale": {
+        "b": "The `pod` option provides the pod name and namespace in the form of `namespace/pod`, which is more specific than just the namespace name.",
+        "c": "The `identity` option provides all Cilium security identity labels, not just the namespace.",
+        "d": "The `workload` option provides the workload name and namespace, not just the namespace."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "observability/metrics.rst",
+          "anchor": "context-options",
+          "title": "Context Options",
+          "quote": "``namespace``         Kubernetes namespace name",
+          "url": "https://docs.cilium.io/en/stable/observability/metrics/#context-options"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "llm.badger-yo.ts.net",
+          "model": "/models/Qwen3.8-27B-UD-Q4_K_XL.gguf",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "observability/metrics.rst#context-options",
+        "createdAt": "2026-11-08T02:09:22.356Z"
+      },
+      "id": "0406c752e9069e48",
+      "domain": "observability",
+      "competency": "hubble-capabilities",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "all-options-in-citation"
       }
     }
   ]

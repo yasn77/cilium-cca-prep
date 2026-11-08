@@ -146,8 +146,14 @@ function renderHome(root) {
 
     el('div', { class: 'card', style: 'margin-top:18px' }, [
       el('div', { class: 'filter-label', text: 'How this corpus was built' }),
-      el('p', { class: 'faint', style: 'margin:0 0 8px', text: `Every question passed four checks before it shipped: its citation anchor resolves on docs.cilium.io, its quoted text appears verbatim in the source section, its answer is supported by that section, and it is not a near-duplicate of another question.` }),
-      el('p', { class: 'faint', style: 'margin:0', text: `Questions that failed a check are still visible under Review, with the reason. ${state.quarantine?.questions?.length ?? 0} did not make it.` }),
+      el('p', { class: 'faint', style: 'margin:0 0 8px', text: 'Every question passed the mechanical checks before it shipped: its citation anchor resolves on docs.cilium.io, its quoted text appears verbatim in the source section, its answer is supported by that section, and it is not a near-duplicate of another question.' }),
+      meta.counts?.judgeRan
+        ? el('p', { class: 'faint', style: 'margin:0', text: 'Every question was also rated a good exam item by a quality judge.' })
+        : el('div', { class: 'notice', style: 'margin:10px 0 0' }, [
+            el('div', { class: 'notice-title', text: 'Quality judging has not run' }),
+            el('div', { text: 'These questions passed the mechanical checks, but no model has assessed whether they read as fair, unambiguous exam items. Expect a few awkward ones. Adding a judge key and re-running the pipeline closes that gap.' }),
+          ]),
+      el('p', { class: 'faint', style: 'margin:8px 0 0', text: `${state.quarantine?.questions?.length ?? 0} candidates did not make it and are listed under Review with the reason.` }),
     ]),
   ]);
 

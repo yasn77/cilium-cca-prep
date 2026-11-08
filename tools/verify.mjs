@@ -74,17 +74,28 @@ function checkQuote(q, sections) {
  * with the cited passage while the distractors do not. A question whose correct
  * answer shares nothing with its own citation is not grounded in that citation,
  * whatever the explanation claims.
+ *
+ * Short answers need different treatment. "socket", "default" and "always" are
+ * perfectly good options in a Cilium exam, and a token-overlap ratio over two
+ * words is meaningless. For those, presence of the answer's content words in
+ * the cited section is the whole test — and the distractor test still applies,
+ * because an answer whose alternatives also appear is not distinguishable.
  */
 function checkEntailment(q, sections) {
   const section = sections.get(`${q.citations[0].file}#${q.citations[0].anchor}`);
   if (!section) return { reason: 'section-missing' };
   const src = new Set(tokenise(section.text));
+  const srcLower = section.text.toLowerCase();
+
   const answer = q.options.find((o) => o.id === q.answer);
   if (!answer) return { reason: 'answer-not-an-option' };
 
-  const answerTokens = tokenise(answer.text);
-  if (answerTokens.length < 3) return { reason: 'answer-too-short-to-check' };
-  const answerHits = answerTokens.filter((t) => src.has(t)).length / answerTokens.length;
+  const answerText = String(answer.text).toLowerCase();
+  const answerTokens = tokenise(answerText);
+  const contentWords = answerText
+    .replace(/[^a-z0-9\s-]/g, ' ')
+    .split(/\s+/)
+    .filter((w) => w.length >= 3);
 
   const distractorHits = q.options
     .filter((o) => o.id !== q.answer)
@@ -94,7 +105,27 @@ function checkEntailment(q, sections) {
       return toks.filter((t) => src.has(t)).length / toks.length;
     });
 
-  if (answerHits < 0.7) return { reason: `answer-not-in-citation:${answerHits.toFixed(2)}` };
+  let answerHits;
+  if (answerTokens.length < 3) {
+    // Short answer: every content word must appear in the citation, and at
+    // least one must appear as a whole word rather than as a substring of a
+    // longer one ("map" inside "mapping" does not count).
+    if (!contentWords.length) return { reason: 'answer-empty' };
+    const allPresent = contentWords.every((w) => src.has(w));
+    const wholeWord = contentWords.some((w) => new RegExp(`\\b${w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`).test(srcLower));
+    if (!allPresent || !wholeWord) return { reason: 'answer-not-in-citation' };
+    answerHits = 1;
+    // A one-word answer that also appears in a distractor is ambiguous by
+    // construction, so the options would be indistinguishable from the source.
+    const otherContains = q.options
+      .filter((o) => o.id !== q.answer)
+      .some((o) => contentWords.every((w) => String(o.text).toLowerCase().includes(w)));
+    if (otherContains) return { reason: 'answer-appears-in-distractor' };
+  } else {
+    answerHits = answerTokens.filter((t) => src.has(t)).length / answerTokens.length;
+    if (answerHits < 0.7) return { reason: `answer-not-in-citation:${answerHits.toFixed(2)}` };
+  }
+
   // Every distractor being fully in the same passage means the question is
   // answerable only by copying, or the passage states both sides.
   if (distractorHits.every((d) => d > 0.85)) return { reason: 'all-options-in-citation' };
@@ -274,7 +305,25 @@ async function main() {
   const coverage = {};
   for (const [d, meta] of Object.entries(domains)) {
     const count = shipped.filter((q) => q.domain === d).length;
-    coverage[d] = { count, floor: meta.floor, weight: meta.weight, met: count >= meta.floor };
+    const competencies = {};
+    for (const q of shipped.filter((x) => x.domain === d)) {
+      const c = q.competency ?? 'unmapped';
+      competencies[c] = (competencies[c] ?? 0) + 1;
+    }
+    coverage[d] = {
+      count,
+      floor: meta.floor,
+      weight: meta.weight,
+      met: count >= meta.floor,
+      competencies,
+      // Competencies that exist in the corpus but are thinner than the plan's
+      // per-competency minimum. Reported, not enforced: a domain can meet its
+      // floor with one well-covered competency while leaving others bare, and
+      // that is worth seeing rather than failing on.
+      thinCompetencies: Object.entries(competencies)
+        .filter(([id, n]) => id !== 'unmapped' && n < quota.perCompetencyMin)
+        .map(([id, n]) => `${id}:${n}`),
+    };
   }
   const scenarioShare = shipped.length
     ? shipped.filter((q) => q.yieldSource === 'scenario').length / shipped.length
@@ -319,6 +368,11 @@ async function main() {
   log('verify', `gates: ${JSON.stringify(stats)}`);
   log('verify', `coverage: ${Object.entries(coverage).map(([d, c]) => `${d} ${c.count}/${c.floor}`).join(', ')}`);
   log('verify', `scenario share ${(scenarioShare * 100).toFixed(1)}%`);
+  for (const [d, c] of Object.entries(coverage)) {
+    if (c.thinCompetencies.length) {
+      log('verify', `  ${d}: thin competencies ${c.thinCompetencies.join(', ')}`);
+    }
+  }
 
   const problems = [];
   if (total !== shipped.length + quarantine.length + retiredAway) {

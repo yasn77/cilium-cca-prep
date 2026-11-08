@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-11-08T18:53:55.298Z",
+  "generatedAt": "2026-11-08T19:06:12.501Z",
   "templates": 39,
-  "ai": 1556,
-  "consideredSections": 4,
+  "ai": 1558,
+  "consideredSections": 2,
   "usage": {
-    "calls": 4,
-    "promptTokens": 9337,
-    "completionTokens": 2583
+    "calls": 2,
+    "promptTokens": 5125,
+    "completionTokens": 1471
   },
   "rejections": {},
   "coverage": {
     "architecture": {
-      "count": 298,
+      "count": 299,
       "floor": 100,
       "weight": 20,
       "met": true
@@ -35,7 +35,7 @@
       "met": true
     },
     "installation": {
-      "count": 167,
+      "count": 168,
       "floor": 50,
       "weight": 10,
       "met": true

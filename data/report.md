@@ -1,6 +1,6 @@
 # Corpus report
 
-Generated 2026-11-08T18:54:15.293Z
+Generated 2026-11-08T19:06:31.669Z
 
 ## Source
 
@@ -27,7 +27,7 @@ Dropped:
 
 ## Corpus
 
-**684 questions** in the shipped corpus, **911** quarantined.
+**685 questions** in the shipped corpus, **912** quarantined.
 
 | Domain | Weight | Questions | Floor | Status |
 |---|---|---|---|---|
@@ -35,7 +35,7 @@ Dropped:
 | Network Policy | 18% | 105 | 90 | met |
 | Service Mesh | 16% | 113 | 80 | met |
 | Network Observability | 10% | 59 | 50 | met |
-| Installation and Configuration | 10% | 78 | 50 | met |
+| Installation and Configuration | 10% | 79 | 50 | met |
 | Cluster Mesh | 10% | 64 | 50 | met |
 | eBPF | 10% | 26 | 25 | met |
 | BGP and External Networking | 6% | 83 | 30 | met |
@@ -71,7 +71,7 @@ Dropped:
 
 **Installation and Configuration**
 
-- `unmapped` — 56
+- `unmapped` — 57
 - `upgrade` — 9 _(thin)_
 - `cli-configuration` — 6 _(thin)_
 - `install` — 6 _(thin)_
@@ -104,12 +104,12 @@ Dropped:
 
 | Yield source | Count |
 |---|---|
-| scenario | 288 |
+| scenario | 289 |
 | attribute | 188 |
 | definition | 115 |
 | contrast | 93 |
 
-Scenario share: **42.1%** (floor 25%).
+Scenario share: **42.2%** (floor 25%).
 
 ## Verification
 
@@ -127,23 +127,23 @@ Quarantine by gate:
 | shape | 409 |
 | judge | 258 |
 | entail | 211 |
-| duplicate | 22 |
+| duplicate | 23 |
 | quote | 11 |
 
 Judge histogram:
 
 | Category | Count |
 |---|---|
-| good_exam_item | 1176 |
+| good_exam_item | 1177 |
 | wording_broken | 79 |
 | trivia_not_in_blueprint | 175 |
-| answer_not_determinable | 112 |
+| answer_not_determinable | 113 |
 | distractors_too_obvious | 50 |
 | ambiguity_two_correct | 3 |
 
 ## Known weak points
 
-100 of 684 questions (14.6%) are flagged here as weaker than the rest: either they survived without a judge verdict, or the correct answer is a term short enough that the entailment check is close to a string match rather than a claim about meaning.
+100 of 685 questions (14.6%) are flagged here as weaker than the rest: either they survived without a judge verdict, or the correct answer is a term short enough that the entailment check is close to a string match rather than a claim about meaning.
 
 <details><summary>List</summary>
 

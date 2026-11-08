@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-11-08T18:54:11.234Z",
+  "generatedAt": "2026-11-08T19:06:28.321Z",
   "model": "",
   "baseUrl": "https://openrouter.ai/api/v1",
   "configured": true,
   "method": "adversarial re-answer",
   "histogram": {
     "good_exam_item": 1416,
-    "error": 162,
+    "error": 164,
     "answer_not_determinable": 17
   },
   "verdicts": {
@@ -1269,6 +1269,11 @@
       "choice": "good_exam_item",
       "confidence": 0.9,
       "detail": null
+    },
+    "293f320a902cee2e": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "29c8b4d3345d5e4f": {
       "choice": "error",
@@ -6059,6 +6064,11 @@
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "c238fed3dcbe0de7": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "c23dcf1f3ae57803": {
       "choice": "error",

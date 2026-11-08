@@ -2,26 +2,26 @@
   "schemaVersion": 1,
   "docsRef": "v1.20.4",
   "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
-  "generatedAt": "2026-11-08T18:54:14.394Z",
+  "generatedAt": "2026-11-08T19:06:30.818Z",
   "counts": {
-    "total": 684,
+    "total": 685,
     "byDomain": {
       "architecture": 156,
       "network-policy": 105,
       "service-mesh": 113,
       "observability": 59,
-      "installation": 78,
+      "installation": 79,
       "cluster-mesh": 64,
       "ebpf": 26,
       "bgp": 83
     },
     "byYieldSource": {
       "definition": 115,
-      "scenario": 288,
+      "scenario": 289,
       "attribute": 188,
       "contrast": 93
     },
-    "scenarioShare": 0.421,
+    "scenarioShare": 0.422,
     "judgeRan": true,
     "judgeSource": "systemone+adversarial",
     "retired": 0
@@ -24213,6 +24213,76 @@
       },
       "ordinal": 15,
       "id": "c220cd99cfe13e25",
+      "domain": "installation",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1
+    },
+    {
+      "stem": "A CiliumNetworkPolicy named rule1 selects deathstar pods (org=empire, class=deathstar) and allows ingress on TCP port 80 from org=empire endpoints for the HTTP request POST /v1/request-landing only. After it is applied, an engineer runs `kubectl exec tiefighter -- curl -s -XPUT deathstar.default.svc.cluster.local/v1/exhaust-port` and receives `Access denied`, while `kubectl exec xwing -- curl -s -XPOST deathstar.default.svc.cluster.local/v1/request-landing` returns nothing and eventually times out. Which statement best explains the two different outcomes?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The PUT call from tiefighter is rejected at the HTTP layer because the policy permits only POST /v1/request-landing, whereas xwing lacks the org=empire label so its traffic is dropped and the connection times out."
+        },
+        {
+          "id": "b",
+          "text": "Both calls fail at the HTTP layer: tiefighter's PUT is denied because only POST is allowed, and xwing's POST is denied because the policy's fromEndpoints selector requires the class=deathstar label."
+        },
+        {
+          "id": "c",
+          "text": "The PUT call from tiefighter is denied because the policy only covers port 80, and xwing's POST times out because the policy does not list any toPorts entry for its namespace."
+        },
+        {
+          "id": "d",
+          "text": "The PUT call from tiefighter is denied because path matches only the exact URL /v1/request-landing, and xwing's POST times out because L7 rules are evaluated only for pods carrying the org=empire label."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The policy restricts tiefighter to a single HTTP call, so the PUT to /v1/exhaust-port is refused at L7 with `Access denied`. The xwing case is different in kind: because the rule builds on the identity-aware rule, traffic from pods without the label org=empire is dropped before any HTTP evaluation, so the connection simply times out rather than returning an HTTP denial.",
+      "optionRationale": {
+        "b": "xwing's request is not denied at the HTTP layer at all; it never reaches L7 because the identity check drops it, producing a timeout rather than an HTTP denial. The fromEndpoints selector matches org=empire, not class=deathstar.",
+        "c": "The port restriction is not the reason the PUT is denied — the denial comes from the HTTP rules allowing only POST /v1/request-landing. The timeout for xwing is caused by its missing org=empire label, not by a missing toPorts entry.",
+        "d": "The exact-path matching is correct in itself, but the explanation of xwing is wrong: L7 rules are not evaluated for xwing at all, since traffic from pods without org=empire is dropped and the connection times out."
+      },
+      "yieldSource": "scenario",
+      "attachments": [
+        {
+          "kind": "manifest",
+          "title": "The L7 policy applied to deathstar",
+          "language": "yaml",
+          "body": "apiVersion: \"cilium.io/v2\"\nkind: CiliumNetworkPolicy\nmetadata:\n  name: \"rule1\"\nspec:\n  description: \"L7 policy to restrict access to specific HTTP call\"\n  endpointSelector:\n    matchLabels:\n      org: empire\n      class: deathstar\n  ingress:\n  - fromEndpoints:\n    - matchLabels:\n        org: empire\n    toPorts:\n    - ports:\n      - port: \"80\"\n        protocol: TCP\n      rules:\n        http:\n        - method: \"POST\"\n          path: \"/v1/request-landing\""
+        }
+      ],
+      "citations": [
+        {
+          "file": "gettingstarted/demo.rst",
+          "anchor": "apply-and-test-http-aware-l7-policy",
+          "title": "Apply and Test HTTP-aware L7 Policy",
+          "quote": "As this rule builds on the identity-aware rule, traffic from pods without the label\n``org=empire`` will continue to be dropped causing the connection to time out:",
+          "url": "https://docs.cilium.io/en/stable/gettingstarted/demo/#apply-and-test-http-aware-l7-policy"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "openrouter.ai",
+          "model": "deepseek/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "gettingstarted/demo.rst#apply-and-test-http-aware-l7-policy",
+        "createdAt": null,
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "good_exam_item"
+        }
+      },
+      "ordinal": 17,
+      "id": "c238fed3dcbe0de7",
       "domain": "installation",
       "competency": null,
       "type": "single",

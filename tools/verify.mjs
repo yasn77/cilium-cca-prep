@@ -35,6 +35,7 @@ import {
 } from './lib.mjs';
 import { checkEntailment as checkEntailmentImpl } from './entailment.mjs';
 import { mergeVerdicts, judgeSource as judgeSourceOf } from './verdicts.mjs';
+import { checkWording } from './wording.mjs';
 
 const SECTIONS = path.join(ROOT, 'corpus', 'sections.json');
 const TEMPLATES = path.join(ROOT, 'candidates', 'templates.jsonl');
@@ -71,6 +72,10 @@ function checkQuote(q, sections) {
 
 function checkShape(q) {
   if (!q.stem || q.stem.length < 20) return 'stem-too-short';
+  // A question that refers to material the reader cannot see is unanswerable,
+  // however well it is judged. Both quality judges passed one that did.
+  const wording = checkWording(q.stem);
+  if (wording) return wording;
   if (!Array.isArray(q.options) || q.options.length < 4) return 'too-few-options';
   if (new Set(q.options.map((o) => o.id)).size !== q.options.length) return 'duplicate-option-ids';
   if (!q.options.some((o) => o.id === q.answer)) return 'answer-not-an-option';

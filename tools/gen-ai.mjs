@@ -30,6 +30,7 @@ import {
   quotePresent,
 } from './lib.mjs';
 import { chat, generatorConfig, extractJson, getUsage } from './llm.mjs';
+import { checkWording, checkOptionWording } from './wording.mjs';
 
 const SECTIONS = path.join(ROOT, 'corpus', 'sections.json');
 const OUT = path.join(ROOT, 'candidates', 'ai.jsonl');
@@ -56,6 +57,14 @@ Hard rules, in order of importance:
 4. Write scenario questions where the excerpt allows it: describe a situation and ask what happens or which option to use, rather than asking for a dictionary definition.
 5. British English with Oxford spelling in the explanation, except inside quoted code, flags and resource names, which must reproduce the source exactly.
 6. No question may depend on a diagram, an image, a table you cannot see, or on command output that is not in the excerpt.
+
+7. The question must stand alone as an exam item. Never refer to the excerpt, the passage, the source, or "the documentation", and never write "according to the excerpt" or "as shown above". The reader sees only your question, not where it came from.
+
+8. Never use a definite reference to something you have not shown. "The rule", "this policy", "the command" and "the manifest" are only acceptable if the stem itself contains that rule, policy, command or manifest. If the excerpt describes a sequence of steps, do not ask about a step without restating what the step operated on.
+
+Bad: "After the L7 policy is in place, an engineer runs a curl and gets no response. Why?"
+Good: "A CiliumNetworkPolicy selects pods with app=deathstar and permits only POST /v1/request-landing to port 80. A pod labelled app=xwing sends a POST to /v1/request-landing. Why is the request dropped?"
+The good version restates the policy because the reader has not seen it.
 
 Return JSON only, with this exact shape and nothing outside it:
 {"questions":[{"stem":"...","options":[{"id":"a","text":"..."},{"id":"b","text":"..."},{"id":"c","text":"..."},{"id":"d","text":"..."}],"answer":"a","explanation":"...","optionRationale":{"b":"...","c":"...","d":"..."},"quote":"verbatim excerpt text","yieldSource":"scenario"}]}
@@ -87,19 +96,50 @@ ${section.text.slice(0, 6000)}
 Write ${need} question${need === 1 ? '' : 's'} about this excerpt. At least ${Math.max(1, Math.ceil(need * quota.scenarioMinShare))} must be scenario-based. Return JSON only.`;
 }
 
+/**
+ * Questions per model call.
+ *
+ * Asking for many at once is the main source of wasted work: at 22 questions the
+ * model needs roughly 9,000 output tokens, overruns the 3,000-token cap, and
+ * returns truncated JSON. Measured on a full run, 376 of 387 calls came back
+ * unparseable. Six per call keeps every response inside the budget, and the
+ * caller loops for the remainder.
+ */
+const MAX_QUESTIONS_PER_CALL = 6;
+
 async function generateForSection(section, need, cfg) {
-  const messages = [
-    { role: 'system', content: SYSTEM_PROMPT },
-    { role: 'user', content: buildUserPrompt(section, need) },
-  ];
-  const { text, model } = await chat(messages, { cfg });
-  const parsed = extractJson(text);
-  if (!parsed || !Array.isArray(parsed.questions)) {
-    // Record why, rather than silently contributing nothing: a run that spends
-    // hundreds of calls and returns no candidates needs a reason in the log.
-    return { rows: [], rejected: parsed ? 'response-shape' : 'unparseable-response' };
+  const rows = [];
+  let model = null;
+  let rejected = null;
+
+  for (let remaining = need; remaining > 0; remaining -= MAX_QUESTIONS_PER_CALL) {
+    const ask = Math.min(remaining, MAX_QUESTIONS_PER_CALL);
+    const messages = [
+      { role: 'system', content: SYSTEM_PROMPT },
+      { role: 'user', content: buildUserPrompt(section, ask) },
+    ];
+    let text;
+    try {
+      const out = await chat(messages, { cfg });
+      text = out.text;
+      model = out.model;
+    } catch (err) {
+      rejected = `request-failed:${err.message.slice(0, 40)}`;
+      break;
+    }
+    const parsed = extractJson(text);
+    if (!parsed || !Array.isArray(parsed.questions)) {
+      rejected = parsed ? 'response-shape' : 'unparseable-response';
+      continue;
+    }
+    rows.push(...parsed.questions);
+    // Stop early when the model is producing fewer than asked for: the section is
+    // running out of distinct facts and another call will not help.
+    if (parsed.questions.length < ask) break;
   }
-  return { rows: parsed.questions, model };
+
+  if (!rows.length && rejected) return { rows: [], rejected };
+  return { rows, model };
 }
 
 function validate(row, section, model, cfg) {
@@ -134,6 +174,14 @@ function validate(row, section, model, cfg) {
   if (missing.length) reasons.push(`missing-rationale:${missing.join(',')}`);
 
   if (!['definition', 'attribute', 'contrast', 'scenario'].includes(row.yieldSource)) reasons.push('bad-yield-source');
+
+  // An exam item has to stand alone. Both judges passed a question that referred
+  // to "the L7 policy" without showing it, so this is checked mechanically
+  // rather than trusted to a model's judgement.
+  const wording = checkWording(row.stem);
+  if (wording) reasons.push(wording);
+  const optionWording = checkOptionWording(row.options);
+  if (optionWording) reasons.push(optionWording);
 
   // A question whose stem and answer are the same text is degenerate.
   const answerText = row.options.find((o) => o.id === row.answer)?.text ?? '';
@@ -191,14 +239,35 @@ async function main() {
   const templates = await readJsonl(TEMPLATES);
   const existing = await readJsonl(OUT);
   const existingBySection = new Map();
+  // Highest ordinal already used per section, taken from every candidate rather
+  // than only the self-contained ones. Deriving the ordinal from a count means
+  // two runs can hand out the same number: the count changes whenever the
+  // filtering in front of it changes, and the result is two questions sharing an
+  // id, which breaks learner progress and the schema check.
+  const maxOrdinalBySection = new Map();
   // Templates count towards a section's yield as well. Without this the model
   // asks the same section for questions the template tier already produced, and
   // the verifier quarantines them as near-duplicates after paying for them.
+  //
+  // Only self-contained candidates count. A section that produced sixteen
+  // questions all referring to "the excerpt" would otherwise be treated as
+  // exhausted and never retried, which is the same mistake as counting
+  // candidates rather than shipped questions for coverage.
   for (const r of [...templates, ...existing]) {
     const sid = r.provenance?.sectionId;
     if (!sid) continue;
+    const ordinal = Number.isInteger(r.ordinal) ? r.ordinal : null;
+    if (ordinal !== null) {
+      maxOrdinalBySection.set(sid, Math.max(maxOrdinalBySection.get(sid) ?? -1, ordinal));
+    }
+    if (checkWording(r.stem)) continue;
     if (!existingBySection.has(sid)) existingBySection.set(sid, []);
     existingBySection.get(sid).push(r);
+  }
+  // Where a section's ordinals are unknown (templates carry none), fall back to
+  // the count so earlier corpora keep working.
+  for (const [sid, list] of existingBySection) {
+    if (!maxOrdinalBySection.has(sid)) maxOrdinalBySection.set(sid, list.length - 1);
   }
 
   // Coverage so far, so we only generate where there is a deficit.
@@ -317,7 +386,9 @@ async function main() {
           continue;
         }
         v.row.provenance.docsSha = docsSha;
-        v.row.id = stableId(section.file, section.renderedAnchor, (existingBySection.get(section.id)?.length ?? 0) + acceptedForSection);
+        const nextOrdinal = (maxOrdinalBySection.get(section.id) ?? -1) + 1 + acceptedForSection;
+        v.row.ordinal = nextOrdinal;
+        v.row.id = stableId(section.file, section.renderedAnchor, nextOrdinal);
         v.row.domain = section.domain;
         v.row.competency = section.competency ?? null;
         v.row.type = 'single';

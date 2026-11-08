@@ -253,3 +253,61 @@ test('judgeSource reports which judges contributed', () => {
   assert.equal(judgeSource({ q1: {} }, { q1: {} }), 'systemone+adversarial');
   assert.equal(judgeSource({}, {}), null);
 });
+
+// --- self-contained wording -------------------------------------------------
+
+const { checkWording, checkOptionWording } = await import(path.join(ROOT, 'tools', 'wording.mjs'));
+
+test('a question that refers to the policy without showing it is rejected', () => {
+  // The exact question that exposed this: it passes both quality judges, and is
+  // still unanswerable, because the reader never sees the policy it names.
+  const stem =
+    'After the L7 policy is in place, an engineer runs `kubectl exec xwing -- curl -s -XPOST deathstar.default.svc.cluster.local/v1/request-landing` and receives no response. Why?';
+  assert.match(checkWording(stem), /^unbound-reference:/);
+});
+
+test('the same question is fine once the policy is restated', () => {
+  const stem =
+    'A CiliumNetworkPolicy selects pods labelled app=deathstar and permits only POST /v1/request-landing on port 80 from pods labelled org=empire. A pod labelled app=xwing sends a POST to /v1/request-landing. Why does the connection time out?';
+  assert.equal(checkWording(stem), null);
+});
+
+test('referring to the excerpt is rejected', () => {
+  assert.equal(checkWording('Which command does the excerpt present for verifying that BBR is enabled?'), 'meta-reference-to-source');
+  assert.equal(checkWording('According to the excerpt, what does the agent do?'), 'meta-reference-to-source');
+  assert.equal(checkWording('Which statement is supported by the passage?'), 'meta-reference-to-source');
+});
+
+test('referring to output the reader cannot see is rejected', () => {
+  assert.equal(checkWording('According to the verbose output, what is the NodePort range?'), 'meta-reference-to-source');
+});
+
+test('a definite reference is accepted when the stem shows the object', () => {
+  const withYaml = [
+    'Given this policy, what happens to egress traffic?',
+    '```yaml',
+    'apiVersion: cilium.io/v2',
+    'kind: CiliumNetworkPolicy',
+    '```',
+  ].join('\n');
+  assert.equal(checkWording(withYaml), null);
+});
+
+test('ordinary questions pass', () => {
+  const stems = [
+    'Which component of Cilium enforces network policy on each node?',
+    'A cluster administrator enables the bandwidth manager on a multi-node cluster. Which Helm option sets the devices?',
+    'What is the default policy enforcement mode for an endpoint no policy selects?',
+  ];
+  for (const s of stems) assert.equal(checkWording(s), null, s);
+});
+
+test('a distractor carrying an unbound reference is caught too', () => {
+  const options = [
+    { id: 'a', text: 'The agent restarts' },
+    { id: 'b', text: 'The above manifest is rejected' },
+    { id: 'c', text: 'Nothing changes' },
+    { id: 'd', text: 'Traffic is dropped' },
+  ];
+  assert.match(checkOptionWording(options), /option-unbound-reference:b/);
+});

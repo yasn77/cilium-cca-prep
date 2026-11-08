@@ -62,6 +62,16 @@ jobs:
           echo "{\"docsRef\":\"$(node -p 'require("./data/corpus.json").docsRef')\",\"generatedAt\":\"$(node -p 'require("./data/corpus.json").generatedAt')\"}" > _site/data/version.json
           ls -la _site/data
 
+      - name: Stamp the service worker cache with this commit
+        run: |
+          # The shell is cache-first, so a fixed cache name serves the previous
+          # deploy's JavaScript for ever. A stale ui.js beside a fresh practice.js
+          # is a module that throws on first render, which looks like a dead
+          # button rather than a deploy problem.
+          SHA="${GITHUB_SHA::12}"
+          sed -i "s/const CACHE = '[^']*';/const CACHE = 'cca-prep-${SHA}';/" _site/sw.js
+          grep -n "const CACHE" _site/sw.js
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

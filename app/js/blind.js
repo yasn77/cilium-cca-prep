@@ -8,7 +8,7 @@
  */
 import { displayBlindSet, DOMAINS } from './data.js';
 import { getProgress, recordBlindRun } from './progress.js';
-import { citationBlock, el, fill, richText } from './ui.js';
+import { attachmentBlocks, citationBlock, el, fill, richText } from './ui.js';
 
 let paper = [];
 let answers = {};

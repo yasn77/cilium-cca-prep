@@ -4,7 +4,7 @@
  */
 import { DOMAINS, DOMAIN_ORDER, questions, getState } from './data.js';
 import { recordAnswer, toggleFlag, isFlagged, statsFor, recordSession } from './progress.js';
-import { citationBlock, el, fill, optionButton, richText, toast } from './ui.js';
+import { attachmentBlocks, citationBlock, el, fill, optionButton, richText, toast } from './ui.js';
 
 const filters = {
   domains: new Set(DOMAIN_ORDER),

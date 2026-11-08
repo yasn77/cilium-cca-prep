@@ -12,7 +12,7 @@ import {
   PASS_MARK,
 } from './data.js';
 import { recordSession } from './progress.js';
-import { citationBlock, el, fill, richText } from './ui.js';
+import { attachmentBlocks, citationBlock, el, fill, richText } from './ui.js';
 
 const DURATION_SECONDS = 90 * 60;
 

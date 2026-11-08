@@ -28,10 +28,22 @@ look orphaned under Review.
 
 SystemOne unreachable means `judge.mjs` writes an empty verdict file and logs the
 error. `verify.mjs` then records `judgeVerdict: "not-configured"` on every
-question, and the corpus still builds.
+question, the corpus still builds, and the app's home screen says plainly that
+quality judging has not run.
 
-`--allow-unjudged` exists for exactly this: it stops verify treating "not judged"
-as a pass when you are running locally without a key. In CI the gate runs
+Two distinct causes are worth telling apart:
+
+| Message | Cause |
+|---|---|
+| `authentication_error` | the key is wrong, or the provider does not carry SystemOne |
+| `rate_limit_error: Weekly included input token limit exceeded` | nano-gpt's plan quota is spent; it does not allow overage by default |
+
+llmgateway answers `permission_denied: Typed decisions are not available for
+coding plans` — that plan cannot judge at all, whatever is left on it. Point
+`TYPESAFE_BASE_URL` at a gateway that serves `jev-latest` or accept an un-judged
+corpus.
+
+`--allow-unjudged` exists for local runs without a key; in CI the gate runs
 automatically whenever verdicts are present.
 
 ## A question is wrong
@@ -87,3 +99,15 @@ Run the pipeline locally, or dispatch the ingest workflow, and merge the PR.
 
 Chrome only offers **Add to Home screen** as an install on HTTPS or localhost.
 A Pages URL is HTTPS, so this works; opening the files over `file://` does not.
+
+If the offline dot in the top bar stays grey after a first visit, the service
+worker did not register. Open the console: registration failures are logged as
+`[cca-prep] service worker registration failed: …` rather than swallowed, because
+a silent failure leaves you believing the app works on a plane when it does not.
+
+## Pages will not enable
+
+GitHub Pages needs either a public repository or a paid plan for private ones.
+`gh api -X POST repos/OWNER/REPO/pages -f build_type=workflow` answers
+`422 Your current plan does not support GitHub Pages for this repository` while
+the repository is private. Make it public, then re-run that command.

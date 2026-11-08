@@ -53,7 +53,7 @@ jobs:
 
       - uses: actions/setup-node@v5
         with:
-          node-version: '24'
+          node-version: '26'
 
       - name: Optional ref bump
         # Guarded on the event as well as the value: on a schedule run `inputs`

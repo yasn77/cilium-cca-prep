@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-08T02:10:53.425Z",
+  "generatedAt": "2026-11-08T03:12:01.939Z",
   "counts": {
-    "total": 30,
+    "total": 42,
     "byGate": {
-      "quote": 3,
+      "quote": 5,
       "duplicate": 5,
-      "entail": 22
+      "entail": 32
     }
   },
   "questions": [
@@ -61,7 +61,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/concepts/routing.rst#advantages-of-the-model",
-        "createdAt": "2026-11-08T02:10:53.316Z"
+        "createdAt": "2026-11-08T02:26:33.327Z"
       },
       "schemaVersion": 1,
       "rejection": {
@@ -121,7 +121,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/concepts/routing.rst#advantages-of-the-model",
-        "createdAt": "2026-11-08T02:10:53.316Z"
+        "createdAt": "2026-11-08T02:26:33.327Z"
       },
       "schemaVersion": 1,
       "rejection": {
@@ -181,7 +181,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/concepts/routing.rst#advantages-of-the-model",
-        "createdAt": "2026-11-08T02:10:53.316Z"
+        "createdAt": "2026-11-08T02:26:33.327Z"
       },
       "schemaVersion": 1,
       "rejection": {
@@ -241,7 +241,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "operations/troubleshooting.rst#recovery-behavior",
-        "createdAt": "2026-11-08T02:10:53.316Z"
+        "createdAt": "2026-11-08T02:26:33.327Z"
       },
       "schemaVersion": 1,
       "rejection": {
@@ -301,7 +301,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "overview/component-overview.rst#hubble",
-        "createdAt": "2026-11-08T02:10:53.316Z"
+        "createdAt": "2026-11-08T02:26:33.327Z"
       },
       "schemaVersion": 1,
       "rejection": {
@@ -361,7 +361,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "overview/component-overview.rst#hubble",
-        "createdAt": "2026-11-08T02:10:53.316Z"
+        "createdAt": "2026-11-08T02:26:33.327Z"
       },
       "schemaVersion": 1,
       "rejection": {
@@ -421,7 +421,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/policy/layer4.rst#example-tls-sni",
-        "createdAt": "2026-11-08T02:10:53.316Z"
+        "createdAt": "2026-11-08T02:26:33.327Z"
       },
       "schemaVersion": 1,
       "rejection": {
@@ -481,7 +481,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/policy/layer7.rst#http",
-        "createdAt": "2026-11-08T02:10:53.316Z"
+        "createdAt": "2026-11-08T02:26:33.327Z"
       },
       "schemaVersion": 1,
       "rejection": {
@@ -536,7 +536,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/envoy-circuit-breaker.rst#tripping-envoy-circuit-breaker",
-        "createdAt": "2026-11-08T02:10:53.316Z"
+        "createdAt": "2026-11-08T02:26:33.327Z"
       },
       "id": "94c78533833e7612",
       "domain": "service-mesh",
@@ -595,7 +595,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/envoy-circuit-breaker.rst#tripping-envoy-circuit-breaker",
-        "createdAt": "2026-11-08T02:10:53.316Z"
+        "createdAt": "2026-11-08T02:26:33.327Z"
       },
       "id": "f5aef8e4f5ce0e18",
       "domain": "service-mesh",
@@ -654,7 +654,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/default-deny-ingress-policy.rst#default-deny-ingress-policy",
-        "createdAt": "2026-11-08T02:10:53.316Z"
+        "createdAt": "2026-11-08T02:26:33.327Z"
       },
       "id": "3609a0ba0fa39d0e",
       "domain": "service-mesh",
@@ -713,7 +713,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/gateway-api/troubleshooting.rst#checking-resources",
-        "createdAt": "2026-11-08T02:10:53.316Z"
+        "createdAt": "2026-11-08T02:26:33.327Z"
       },
       "id": "b7886d4a75fd3c0c",
       "domain": "service-mesh",
@@ -772,7 +772,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/gateway-api/troubleshooting.rst#checking-resources",
-        "createdAt": "2026-11-08T02:10:53.316Z"
+        "createdAt": "2026-11-08T02:26:33.327Z"
       },
       "id": "f825da87d45bb12c",
       "domain": "service-mesh",
@@ -831,7 +831,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/ingress-to-gateway/ingress-to-gateway.rst#benefits-of-the-gateway-api",
-        "createdAt": "2026-11-08T02:10:53.316Z"
+        "createdAt": "2026-11-08T02:26:33.327Z"
       },
       "id": "c3e17c171cb70ede",
       "domain": "service-mesh",
@@ -890,7 +890,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/ingress.rst#ingress-path-types-and-precedence",
-        "createdAt": "2026-11-08T02:10:53.316Z"
+        "createdAt": "2026-11-08T02:26:33.327Z"
       },
       "id": "e1b3928fd82ddde1",
       "domain": "service-mesh",
@@ -949,7 +949,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/aws.rst#deploy-a-demo-application",
-        "createdAt": "2026-11-08T02:10:53.316Z"
+        "createdAt": "2026-11-08T02:26:33.327Z"
       },
       "id": "ef723ee8992971a8",
       "domain": "network-policy",
@@ -1008,7 +1008,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "security/network/encryption-ipsec.rst#troubleshooting",
-        "createdAt": "2026-11-08T02:10:53.316Z"
+        "createdAt": "2026-11-08T02:26:33.327Z"
       },
       "id": "5e50bf95f2878582",
       "domain": "network-policy",
@@ -1067,7 +1067,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/ebpf/intro.rst#introduction",
-        "createdAt": "2026-11-08T02:10:53.316Z"
+        "createdAt": "2026-11-08T02:26:33.327Z"
       },
       "id": "3fe78a0b6c28c9df",
       "domain": "ebpf",
@@ -1126,7 +1126,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/ebpf/intro.rst#introduction",
-        "createdAt": "2026-11-08T02:10:53.316Z"
+        "createdAt": "2026-11-08T02:26:33.327Z"
       },
       "id": "498f2bdac51d0abb",
       "domain": "ebpf",
@@ -1185,7 +1185,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/kubernetes/bandwidth-manager.rst#bandwidth-manager",
-        "createdAt": "2026-11-08T02:10:53.316Z"
+        "createdAt": "2026-11-08T02:26:33.327Z"
       },
       "id": "e7186126edf14379",
       "domain": "architecture",
@@ -1244,7 +1244,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/servicemesh/envoy-circuit-breaker.rst#tripping-envoy-circuit-breaker",
-        "createdAt": "2026-11-08T02:10:53.316Z"
+        "createdAt": "2026-11-08T02:26:33.327Z"
       },
       "id": "c3914c0dd31bb4cb",
       "domain": "service-mesh",
@@ -1303,7 +1303,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "operations/troubleshooting_servicemesh.rst#connectivity-troubleshooting",
-        "createdAt": "2026-11-08T02:10:53.316Z"
+        "createdAt": "2026-11-08T02:26:33.327Z"
       },
       "id": "3ab1b7b41ce1c1ae",
       "domain": "installation",
@@ -1362,7 +1362,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "operations/troubleshooting_servicemesh.rst#connectivity-troubleshooting",
-        "createdAt": "2026-11-08T02:10:53.316Z"
+        "createdAt": "2026-11-08T02:26:33.327Z"
       },
       "id": "659e9378095ccbe1",
       "domain": "installation",
@@ -1421,7 +1421,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/ebpf/maps.rst#ebpf-maps",
-        "createdAt": "2026-11-08T02:10:53.316Z"
+        "createdAt": "2026-11-08T02:26:33.327Z"
       },
       "id": "b82db977d1b5c9b6",
       "domain": "ebpf",
@@ -1480,7 +1480,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/ebpf/maps.rst#ebpf-maps",
-        "createdAt": "2026-11-08T02:10:53.316Z"
+        "createdAt": "2026-11-08T02:26:33.327Z"
       },
       "id": "b2c26a9643f43f83",
       "domain": "ebpf",
@@ -1539,7 +1539,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/ebpf/maps.rst#ebpf-maps",
-        "createdAt": "2026-11-08T02:10:53.316Z"
+        "createdAt": "2026-11-08T02:26:33.327Z"
       },
       "id": "1926eda389a76d11",
       "domain": "ebpf",
@@ -1598,7 +1598,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/ebpf/maps.rst#ebpf-maps",
-        "createdAt": "2026-11-08T02:10:53.316Z"
+        "createdAt": "2026-11-08T02:26:33.327Z"
       },
       "id": "5a67aee14817c259",
       "domain": "ebpf",
@@ -1657,7 +1657,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/clustermesh/eks-clustermesh-prep.rst#install-cluster-one",
-        "createdAt": "2026-11-08T02:10:53.316Z"
+        "createdAt": "2026-11-08T02:26:33.327Z"
       },
       "id": "66826213a43f00e4",
       "domain": "cluster-mesh",
@@ -1716,7 +1716,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "network/clustermesh/eks-clustermesh-prep.rst#install-cluster-one",
-        "createdAt": "2026-11-08T02:10:53.316Z"
+        "createdAt": "2026-11-08T02:26:33.327Z"
       },
       "id": "5cd1bf60f83841eb",
       "domain": "cluster-mesh",
@@ -1775,7 +1775,7 @@
         "docsRef": "v1.20.4",
         "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
         "sectionId": "observability/metrics.rst#context-options",
-        "createdAt": "2026-11-08T02:10:53.316Z"
+        "createdAt": "2026-11-08T02:26:33.327Z"
       },
       "id": "0406c752e9069e48",
       "domain": "observability",
@@ -1785,6 +1785,714 @@
       "rejection": {
         "gate": "entail",
         "reason": "all-options-in-citation"
+      }
+    },
+    {
+      "stem": "You are preparing the first EKS cluster for a Cluster Mesh deployment and are about to create the VPC with a CIDR block. Which CIDR range should you avoid because certain AWS services use it?",
+      "options": [
+        {
+          "id": "a",
+          "text": "172.17.0.0/16"
+        },
+        {
+          "id": "b",
+          "text": "10.0.0.0/16"
+        },
+        {
+          "id": "c",
+          "text": "10.0.1.0/24"
+        },
+        {
+          "id": "d",
+          "text": "10.0.3.0/24"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt explicitly warns against using 172.17.0.0/16 for the VPC, because certain AWS services utilise this range and doing so could cause potential issues. The other ranges shown are the VPC and subnet CIDRs used in the preparation steps, not ranges the excerpt says to avoid.",
+      "optionRationale": {
+        "b": "10.0.0.0/16 is the CIDR block used for the VPC in the excerpt, not a range the excerpt warns against.",
+        "c": "10.0.1.0/24 is used for a public subnet in the excerpt, not identified as a range to avoid for the VPC.",
+        "d": "10.0.3.0/24 is used for a private subnet in the excerpt, not identified as a range to avoid for the VPC."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/clustermesh/eks-clustermesh-prep.rst",
+          "anchor": "install-cluster-one",
+          "title": "Install cluster one",
+          "quote": "Avoid using the ``172.17.0.0/16`` CIDR range for your VPC to prevent potential issues since certain `AWS services <https://docs.aws.amazon.com/vpc/latest/userguide/vpc-cidr-blocks.html>`__ utilize this range.",
+          "url": "https://docs.cilium.io/en/stable/network/clustermesh/eks-clustermesh-prep/#install-cluster-one"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "sciforium/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/clustermesh/eks-clustermesh-prep.rst#install-cluster-one",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "f51f4c6621c9ddb0",
+      "domain": "cluster-mesh",
+      "competency": "mesh-benefits",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation"
+      }
+    },
+    {
+      "stem": "An operator wants Cilium to determine the upper capacity limits of several large BPF maps at agent startup from a proportion of the node's total system memory, rather than setting each map's capacity individually. Which cilium-agent option should the operator use?",
+      "options": [
+        {
+          "id": "a",
+          "text": "--bpf-map-dynamic-size-ratio"
+        },
+        {
+          "id": "b",
+          "text": "--bpf-ct-global-tcp-max"
+        },
+        {
+          "id": "c",
+          "text": "--bpf-lb-map-max"
+        },
+        {
+          "id": "d",
+          "text": "--bpf-nat-global-max"
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt states that using the --bpf-map-dynamic-size-ratio flag, the upper capacity limits of several large BPF maps are determined at agent startup based on the given ratio of the total system memory. The other listed flags are command-line options for setting a given capacity, not for deriving several large map limits from a memory ratio.",
+      "optionRationale": {
+        "b": "--bpf-ct-global-tcp-max is listed as a command-line option for setting a given capacity, not for sizing several large BPF maps from a ratio of total system memory.",
+        "c": "--bpf-lb-map-max is listed as a command-line option for setting a given capacity, not for sizing several large BPF maps from a ratio of total system memory.",
+        "d": "--bpf-nat-global-max is listed as a command-line option for setting a given capacity, not for sizing several large BPF maps from a ratio of total system memory."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/ebpf/maps.rst",
+          "anchor": "ebpf-maps",
+          "title": "eBPF Maps",
+          "quote": "Using the ``--bpf-map-dynamic-size-ratio`` flag, the upper capacity limits of\nseveral large BPF maps are determined at agent startup based on the given ratio\nof the total system memory.",
+          "url": "https://docs.cilium.io/en/stable/network/ebpf/maps/#ebpf-maps"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "sciforium/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/ebpf/maps.rst#ebpf-maps",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "19fcd392f7f94cd8",
+      "domain": "ebpf",
+      "competency": "bpf-maps",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation"
+      }
+    },
+    {
+      "stem": "You run two clusters joined by Cluster Mesh. A global Service named rebel-base already exists, and in cluster 1 you run `kubectl annotate service rebel-base service.cilium.io/affinity=local --overwrite`. You then curl rebel-base from a pod in cluster 1 while healthy backends exist in both clusters. What do you observe?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The replies come from pods in cluster 1 only, because the local backends are preferred while they remain healthy."
+        },
+        {
+          "id": "b",
+          "text": "The replies come from pods in both clusters, because a global Service always balances across every cluster."
+        },
+        {
+          "id": "c",
+          "text": "The replies come from pods in cluster 2 only, because the annotation pushes traffic away from the local cluster."
+        },
+        {
+          "id": "d",
+          "text": "No replies arrive until the annotation is removed, because the local preference blocks remote endpoints permanently."
+        }
+      ],
+      "answer": "a",
+      "explanation": "Setting the affinity annotation to local makes the Global Service prefer healthy backends in the local cluster. Remote endpoints are used only as a fallback, so a client in cluster 1 keeps being served by cluster 1 pods for as long as those backends are available and healthy.",
+      "optionRationale": {
+        "b": "This is the behaviour without any affinity preference; the local value deliberately overrides it while local backends are healthy.",
+        "c": "That is the effect of the remote value, not the local value.",
+        "d": "Remote endpoints are not blocked permanently; they are used if and only if all local backends are unavailable or unhealthy."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/clustermesh/affinity.rst",
+          "anchor": "enabling-global-service-affinity",
+          "title": "Enabling Global Service Affinity",
+          "quote": "if the value of annotation ``service.cilium.io/affinity`` is local,\nthe Global Service will load-balance across healthy ``local`` backends, and only user\nremote endpoints if and only if all of local backends are not available or unhealthy.",
+          "url": "https://docs.cilium.io/en/stable/network/clustermesh/affinity/#enabling-global-service-affinity"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "sciforium/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/clustermesh/affinity.rst#enabling-global-service-affinity",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "996f6fa507c7d43f",
+      "domain": "cluster-mesh",
+      "competency": "global-services",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation:0.65"
+      }
+    },
+    {
+      "stem": "A global Service carries no `service.cilium.io/affinity` annotation at all. What preference does Cilium apply?",
+      "options": [
+        {
+          "id": "a",
+          "text": "None — there is no preference, which is the default behaviour when the annotation does not exist."
+        },
+        {
+          "id": "b",
+          "text": "Local — endpoints in the local cluster are preferred whenever they are available."
+        },
+        {
+          "id": "c",
+          "text": "Remote — endpoints in remote clusters are preferred whenever they are available."
+        },
+        {
+          "id": "d",
+          "text": "Global — the service is balanced strictly across all clusters with no local endpoints considered."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The annotation accepts none, local and remote. The value none is the default and means no preference, and it is also the behaviour applied when the annotation is absent altogether.",
+      "optionRationale": {
+        "b": "Local is an explicit value that must be set; it is not the default.",
+        "c": "Remote is an explicit value that must be set; it is not the default.",
+        "d": "Global is not one of the listed values for this annotation; the global behaviour comes from the separate service.cilium.io/global annotation."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/clustermesh/affinity.rst",
+          "anchor": "enabling-global-service-affinity",
+          "title": "Enabling Global Service Affinity",
+          "quote": "# - none (default)\n     #    no preference. Default behavior if this annotation does not exist",
+          "url": "https://docs.cilium.io/en/stable/network/clustermesh/affinity/#enabling-global-service-affinity"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "sciforium/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/clustermesh/affinity.rst#enabling-global-service-affinity",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "5f0a43ec6db8ca5e",
+      "domain": "cluster-mesh",
+      "competency": "global-services",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation:0.54"
+      }
+    },
+    {
+      "stem": "Your platform uses MCS-API for multi-cluster services, and you want a global Service to prefer endpoints in the local cluster. Where do you specify the affinity setting in this setup?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Through the `exportedAnnotations` field of the ServiceExport."
+        },
+        {
+          "id": "b",
+          "text": "Through an `importedAnnotations` field on the ServiceImport."
+        },
+        {
+          "id": "c",
+          "text": "Through a command-line flag on the Cilium agent DaemonSet."
+        },
+        {
+          "id": "d",
+          "text": "Through the `service.cilium.io/global` annotation on the Service itself."
+        }
+      ],
+      "answer": "a",
+      "explanation": "When MCS-API is in use, the affinity annotation is not placed directly on the Service; it is specified through the ServiceExport's exportedAnnotations field.",
+      "optionRationale": {
+        "b": "The excerpt names the ServiceExport and its exportedAnnotations field, not a field on the ServiceImport.",
+        "c": "The excerpt describes an annotation-based mechanism, not an agent command-line flag.",
+        "d": "service.cilium.io/global is the separate annotation that marks a Service as global; it does not carry the affinity preference."
+      },
+      "yieldSource": "contrast",
+      "citations": [
+        {
+          "file": "network/clustermesh/affinity.rst",
+          "anchor": "enabling-global-service-affinity",
+          "title": "Enabling Global Service Affinity",
+          "quote": "With :ref:`MCS-API\n<gs_clustermesh_mcsapi>`, specify this annotation through the ServiceExport\n``exportedAnnotations`` field.",
+          "url": "https://docs.cilium.io/en/stable/network/clustermesh/affinity/#enabling-global-service-affinity"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "sciforium/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/clustermesh/affinity.rst#enabling-global-service-affinity",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "ff0d3dee797f31de",
+      "domain": "cluster-mesh",
+      "competency": "global-services",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation:0.67"
+      }
+    },
+    {
+      "stem": "A global Service in cluster 1 has `service.cilium.io/affinity=remote` set. An operator runs `kubectl annotate service rebel-base service.cilium.io/affinity- --overwrite` in cluster 1, then curls the service from either cluster. What happens?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Replies come from pods in both clusters again, because the preference has been cleared."
+        },
+        {
+          "id": "b",
+          "text": "Replies still come from cluster 2 only, because the preference is cached by the agent."
+        },
+        {
+          "id": "c",
+          "text": "Replies come from cluster 1 only, because removing the annotation defaults to local."
+        },
+        {
+          "id": "d",
+          "text": "The Service stops being global and only local endpoints remain reachable."
+        }
+      ],
+      "answer": "a",
+      "explanation": "Removing the affinity annotation returns the Service to the no-preference default, so traffic is once again spread over the backends of both clusters.",
+      "optionRationale": {
+        "b": "The excerpt shows the behaviour changing immediately after the annotation is removed.",
+        "c": "The default when the annotation does not exist is no preference, not local.",
+        "d": "Only the affinity annotation is removed; the Service remains a global Service."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/clustermesh/affinity.rst",
+          "anchor": "enabling-global-service-affinity",
+          "title": "Enabling Global Service Affinity",
+          "quote": "You will see replies from pods in both clusters again.",
+          "url": "https://docs.cilium.io/en/stable/network/clustermesh/affinity/#enabling-global-service-affinity"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "sciforium/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/clustermesh/affinity.rst#enabling-global-service-affinity",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "175f794aeca5e742",
+      "domain": "cluster-mesh",
+      "competency": "global-services",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation:0.46"
+      }
+    },
+    {
+      "stem": "An engineer wants to know which namespaces in the cluster have had network flows during the past hour, so that they can narrow down where to start troubleshooting. Which Observer service RPC endpoint should they call?",
+      "options": [
+        {
+          "id": "a",
+          "text": "`GetNamespaces`"
+        },
+        {
+          "id": "b",
+          "text": "`GetNodes`"
+        },
+        {
+          "id": "c",
+          "text": "`ServerStatus`"
+        },
+        {
+          "id": "d",
+          "text": "`GetFlows`"
+        }
+      ],
+      "answer": "a",
+      "explanation": "`GetNamespaces` is the endpoint that reports namespaces which had network flows within the last one hour, which is exactly the time-bounded list the engineer needs. `GetNodes` reports per-Hubble-instance metrics and other information, `ServerStatus` summarises that same node information, and `GetFlows` streams flow events rather than listing namespaces.",
+      "optionRationale": {
+        "b": "``GetNodes`` returns a list of metrics and other information related to each Hubble instance, not a list of namespaces with recent flows.",
+        "c": "``ServerStatus`` returns a summary of the information in ``GetNodes``, so it describes Hubble instances rather than namespaces.",
+        "d": "``GetFlows`` returns a stream of flow related events; it does not produce a list of namespaces active in the last hour."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "internals/hubble.rst",
+          "anchor": "the-observer-service",
+          "title": "The Observer service",
+          "quote": "``GetNamespaces`` returns a list of namespaces that had network flows within the last one hour.",
+          "url": "https://docs.cilium.io/en/stable/internals/hubble/#the-observer-service"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "sciforium/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "internals/hubble.rst#the-observer-service",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "ce142e7ce920fba3",
+      "domain": "observability",
+      "competency": "hubble-cli",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "all-options-in-citation"
+      }
+    },
+    {
+      "stem": "From which Cilium release onwards does Hubble support configuring TLS on the Hubble metrics API, in addition to the Hubble observer API?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Cilium 1.13"
+        },
+        {
+          "id": "b",
+          "text": "Cilium 1.14"
+        },
+        {
+          "id": "c",
+          "text": "Cilium 1.15"
+        },
+        {
+          "id": "d",
+          "text": "Cilium 1.16"
+        }
+      ],
+      "answer": "d",
+      "explanation": "The excerpt opens by stating that, starting with Cilium 1.16, Hubble supports configuring TLS on the Hubble metrics API in addition to the Hubble observer API.",
+      "optionRationale": {
+        "a": "The excerpt names 1.16 as the starting release, not 1.13.",
+        "b": "The excerpt names 1.16 as the starting release, not 1.14.",
+        "c": "The excerpt names 1.16 as the starting release, not 1.15."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "observability/hubble/configuration/tls.rst",
+          "anchor": "hubble-metrics-tls-and-authentication",
+          "title": "Hubble Metrics TLS and Authentication",
+          "quote": "Starting with Cilium 1.16, Hubble supports configuring TLS on the Hubble metrics API in addition to the Hubble observer API.",
+          "url": "https://docs.cilium.io/en/stable/observability/hubble/configuration/tls/#hubble-metrics-tls-and-authentication"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "sciforium/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "observability/hubble/configuration/tls.rst#hubble-metrics-tls-and-authentication",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "3303e9c255757c94",
+      "domain": "observability",
+      "competency": "hubble-capabilities",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-appears-in-distractor"
+      }
+    },
+    {
+      "stem": "A Cilium cluster has WireGuard transparent encryption enabled. Two pods that are both scheduled on the same node exchange traffic with each other, and an engineer watching the node's traffic expects to see that traffic protected by the WireGuard tunnel. What does Cilium actually do with these packets?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It leaves them unencrypted, because traffic destined to the same node it was sent from is deliberately not encrypted."
+        },
+        {
+          "id": "b",
+          "text": "It encrypts them, because WireGuard is enabled cluster-wide for every Cilium-managed endpoint."
+        },
+        {
+          "id": "c",
+          "text": "It encrypts them only when the two pods belong to different namespaces."
+        },
+        {
+          "id": "d",
+          "text": "It drops them unless a CiliumNetworkPolicy explicitly allows pod-to-pod traffic on that node."
+        }
+      ],
+      "answer": "a",
+      "explanation": "WireGuard encryption in Cilium covers traffic between Cilium-managed endpoints on different nodes. When the source and the destination are the same node, the packets are not encrypted, and the excerpt states that this behaviour is intended: the raw traffic can be observed on the node anyway, so encryption would provide no benefit.",
+      "optionRationale": {
+        "b": "Enabling WireGuard does not encrypt every packet; the same-node case is explicitly excluded from encryption.",
+        "c": "Namespace membership plays no part in the decision — the criterion given is whether the traffic is destined to the node it was sent from.",
+        "d": "The excerpt says nothing about dropping same-node traffic; it says such packets are simply not encrypted."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "security/network/encryption-wireguard.rst",
+          "anchor": "wireguard-transparent-encryption",
+          "title": "WireGuard Transparent Encryption",
+          "quote": "Packets are not encrypted when they are destined to the same node from which\nthey were sent. This behavior is intended.",
+          "url": "https://docs.cilium.io/en/stable/security/network/encryption-wireguard/#wireguard-transparent-encryption"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "sciforium/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "security/network/encryption-wireguard.rst#wireguard-transparent-encryption",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "fc1942dd03aff71e",
+      "domain": "network-policy",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation:0.53"
+      }
+    },
+    {
+      "stem": "A platform team runs a Cilium cluster whose nodes are spread across several routing domains, and the routers in the underlying network have no knowledge of the cluster's PodCIDRs. According to the excerpt, what does the encapsulation model require of that underlying network?",
+      "options": [
+        {
+          "id": "a",
+          "text": "The underlying network must be configured with the PodCIDRs so that its routers can forward pod traffic."
+        },
+        {
+          "id": "b",
+          "text": "The topology of the underlying network is irrelevant, provided the cluster nodes can reach each other using IP/UDP."
+        },
+        {
+          "id": "c",
+          "text": "All cluster nodes must sit within a single link-layer domain for encapsulated traffic to flow."
+        },
+        {
+          "id": "d",
+          "text": "The PodCIDR size must be chosen to fit within the addressing limitations of the underlying network."
+        }
+      ],
+      "answer": "b",
+      "explanation": "The excerpt lists simplicity as an advantage of the model: the network connecting the cluster nodes does not need to be made aware of the PodCIDRs, and cluster nodes can spawn multiple routing or link-layer domains. The only requirement stated is reachability between nodes using IP/UDP, which makes the underlying topology irrelevant. Options a, c and d each contradict a specific statement in the excerpt.",
+      "optionRationale": {
+        "a": "The excerpt states the opposite: the network connecting the cluster nodes does not need to be made aware of the PodCIDRs.",
+        "c": "The excerpt says cluster nodes can spawn multiple routing or link-layer domains, so a single link-layer domain is not required.",
+        "d": "The excerpt says the addressing space does not depend on any underlying networking limitations, so the PodCIDR need not be fitted to them."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/concepts/routing.rst",
+          "anchor": "advantages-of-the-model",
+          "title": "Advantages of the model",
+          "quote": "The topology of the underlying network is irrelevant as long as\n  cluster nodes can reach each other using IP/UDP.",
+          "url": "https://docs.cilium.io/en/stable/network/concepts/routing/#advantages-of-the-model"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "sciforium/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/concepts/routing.rst#advantages-of-the-model",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "b3212bc7a2bae9cb",
+      "domain": "architecture",
+      "competency": "datapath-models",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "quote",
+        "reason": "quote-not-verbatim"
+      }
+    },
+    {
+      "stem": "In Cilium's encapsulation model, what purpose does the excerpt give for carrying the source security identity as metadata in the network packet?",
+      "options": [
+        {
+          "id": "a",
+          "text": "It encrypts the packet payload between the cluster nodes."
+        },
+        {
+          "id": "b",
+          "text": "It is an optimisation designed to avoid one identity lookup on the remote node."
+        },
+        {
+          "id": "c",
+          "text": "It lets the remote node learn the PodCIDR of the sending node."
+        },
+        {
+          "id": "d",
+          "text": "It removes the need for cluster nodes to reach each other using IP/UDP."
+        }
+      ],
+      "answer": "b",
+      "explanation": "The excerpt explains that encapsulation protocols allow metadata to be carried along with the network packet, and that Cilium uses this to transfer metadata such as the source security identity. It then states that this identity transfer is an optimisation designed to avoid one identity lookup on the remote node. The other options describe functions the excerpt does not attribute to the identity transfer.",
+      "optionRationale": {
+        "a": "The excerpt describes metadata transfer for the source security identity, not encryption of the payload.",
+        "c": "The excerpt does not link the identity transfer to PodCIDR discovery; it concerns the source security identity.",
+        "d": "Node reachability over IP/UDP is described separately as a property of the model, not as something the identity transfer removes."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "network/concepts/routing.rst",
+          "anchor": "advantages-of-the-model",
+          "title": "Advantages of the model",
+          "quote": "The identity transfer is an optimization\n  designed to avoid one identity lookup on the remote node.",
+          "url": "https://docs.cilium.io/en/stable/network/concepts/routing/#advantages-of-the-model"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "sciforium/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/concepts/routing.rst#advantages-of-the-model",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "5acbaf0d91e01a03",
+      "domain": "architecture",
+      "competency": "datapath-models",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "quote",
+        "reason": "quote-not-verbatim"
+      }
+    },
+    {
+      "stem": "An operator holds CAP_SYS_ADMIN in their own current user namespace and uses pod exec to enter a running Cilium agent container. Under what condition does this amount to privileged access?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Only if CAP_SYS_ADMIN is also held in the Cilium user namespace, which is the initial namespace."
+        },
+        {
+          "id": "b",
+          "text": "Only if the operator also holds CAP_NET_ADMIN inside the Cilium container."
+        },
+        {
+          "id": "c",
+          "text": "Always, because the Linux kernel permits joining other namespaces by default."
+        },
+        {
+          "id": "d",
+          "text": "Only if the Cilium agent's volumes were mounted with unsafe options."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The kernel restricts joining other namespaces by default, so entering the Cilium container requires CAP_SYS_ADMIN in both the current user namespace and the Cilium user namespace (the initial namespace). When both namespaces carry that capability, the access is already privileged. Holding CAP_NET_ADMIN, kernel defaults or volume mount options play no part in this test.",
+      "optionRationale": {
+        "b": "CAP_NET_ADMIN is not the capability named in the excerpt; the test is CAP_SYS_ADMIN in both namespaces.",
+        "c": "The excerpt states the opposite: the Linux kernel restricts joining other namespaces by default.",
+        "d": "The excerpt says Cilium performs no extra operations that could result in an unsafe volume mount, so mount options are not the deciding factor."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "security/restrict-pod-access.rst",
+          "anchor": "background",
+          "title": "Background",
+          "quote": "To enter the Cilium container, the ``CAP_SYS_ADMIN`` capability is required in both the current user namespace and in the Cilium user namespace (the initial namespace).",
+          "url": "https://docs.cilium.io/en/stable/security/restrict-pod-access/#background"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "api.llmgateway.io",
+          "model": "sciforium/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "security/restrict-pod-access.rst#background",
+        "createdAt": "2026-11-08T02:26:33.327Z"
+      },
+      "id": "3c2688647bb478bc",
+      "domain": "network-policy",
+      "competency": null,
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "entail",
+        "reason": "answer-not-in-citation:0.67"
       }
     }
   ]

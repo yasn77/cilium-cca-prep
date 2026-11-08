@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-11-08T18:52:33.402Z",
+  "generatedAt": "2026-11-08T18:54:11.234Z",
   "model": "",
   "baseUrl": "https://openrouter.ai/api/v1",
   "configured": true,
   "method": "adversarial re-answer",
   "histogram": {
     "good_exam_item": 1416,
-    "error": 158,
+    "error": 162,
     "answer_not_determinable": 17
   },
   "verdicts": {
@@ -3230,6 +3230,11 @@
       "confidence": 0.8,
       "detail": null
     },
+    "69955fc20c653224": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "699ff7b67caa885b": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -4219,6 +4224,11 @@
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "88c5bbe744680b30": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "88dedaf32614e7b3": {
       "choice": "good_exam_item",
@@ -5304,6 +5314,11 @@
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "abcf6c1db21b5964": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "abe18548e6e1e80d": {
       "choice": "good_exam_item",
@@ -6454,6 +6469,11 @@
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "cddacc607fdbbe5c": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "ce142e7ce920fba3": {
       "choice": "good_exam_item",

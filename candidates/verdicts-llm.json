@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-12T17:45:16.846Z",
-  "model": "openai/gpt-5-nano",
+  "generatedAt": "2026-11-12T18:01:58.577Z",
+  "model": "",
   "baseUrl": "https://openrouter.ai/api/v1",
   "configured": true,
   "method": "adversarial re-answer",
   "histogram": {
-    "good_exam_item": 964,
-    "error": 141,
-    "answer_not_determinable": 14
+    "good_exam_item": 862,
+    "error": 269,
+    "answer_not_determinable": 13
   },
   "verdicts": {
     "00009d132a364598": {
@@ -40,6 +40,11 @@
       "confidence": 0.9,
       "detail": null
     },
+    "00d8fef3ead89cfe": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "00f6f8bdc6c389d5": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -65,12 +70,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "01d36a8487750592": {
+    "01ed064839c72add": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "01ed064839c72add": {
+    "02012195b63a2c2d": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
@@ -84,6 +89,11 @@
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "028b157ea0c6452a": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "029fb87ebe48f17b": {
       "choice": "good_exam_item",
@@ -105,10 +115,10 @@
       "confidence": 0.8,
       "detail": null
     },
-    "030a26026c6f304d": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "02f7a9803f68eedf": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "030deec258d0a7fe": {
       "choice": "good_exam_item",
@@ -120,15 +130,15 @@
       "confidence": 0.8,
       "detail": null
     },
-    "0354f88a65a377ae": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "03a54fd143e7e1a7": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "03e96ae2fcc504a7": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "03ed158661e3fde4": {
       "choice": "good_exam_item",
@@ -175,6 +185,11 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
+    "05650378bb6e834c": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "05b267b60187c2d9": {
       "choice": "answer_not_determinable",
       "confidence": 0,
@@ -195,6 +210,11 @@
       "confidence": 0.8,
       "detail": null
     },
+    "06a348013e18d01e": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "06c6c235b70bce09": {
       "choice": "good_exam_item",
       "confidence": 0.9,
@@ -209,11 +229,6 @@
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
-    },
-    "07b99ffe43e25082": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
     },
     "07bd2b3e7d69f45d": {
       "choice": "good_exam_item",
@@ -295,6 +310,11 @@
       "confidence": 0.8,
       "detail": null
     },
+    "0b8a785ee04ccbe5": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "0bb154a6b67d93ec": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -315,15 +335,15 @@
       "confidence": 0.8,
       "detail": null
     },
-    "0c63e06640d26dc9": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "0c6bc08730adbfd9": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "0c9dadc311b8d933": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "0caac578333942bd": {
       "choice": "good_exam_item",
@@ -355,10 +375,10 @@
       "confidence": 0.8,
       "detail": null
     },
-    "0e39b9685e0698a3": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "0e02acd9dab31cae": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "0e45850b7aad078c": {
       "choice": "good_exam_item",
@@ -440,6 +460,11 @@
       "confidence": 0.8,
       "detail": null
     },
+    "120a682472e1f14f": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "12431a624869bfe2": {
       "choice": "error",
       "confidence": 0,
@@ -490,6 +515,11 @@
       "confidence": 0.8,
       "detail": null
     },
+    "147e680e5a65b8fc": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "14c604231fe25d7e": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -510,20 +540,15 @@
       "confidence": 0.9,
       "detail": null
     },
-    "164da9f7d3896181": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "16e281616b525014": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "1713da1c52b258bf": {
       "choice": "good_exam_item",
       "confidence": 0.9,
       "detail": null
+    },
+    "175ed44fb414d072": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "175ed6c3580a4b31": {
       "choice": "good_exam_item",
@@ -570,6 +595,11 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
+    "19572f369ba26a8e": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "19852ca4af9e42a5": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -605,11 +635,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "1adcf9dbb1e78b6e": {
-      "choice": "answer_not_determinable",
-      "confidence": 0.8,
-      "detail": "judge said d, marked a"
-    },
     "1b39610ca0a16afc": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -630,10 +655,10 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "1baeabcb857e927e": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "1bf9d6e83f995005": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "1c0ec6d6bedc6ab3": {
       "choice": "good_exam_item",
@@ -660,10 +685,20 @@
       "confidence": 0.8,
       "detail": null
     },
+    "1dec2cd57797436e": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "1e504f31f24d9098": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "1e5f88cebfe1d967": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "1e70a1325b4a921c": {
       "choice": "good_exam_item",
@@ -671,6 +706,11 @@
       "detail": null
     },
     "1e71d2049e63a860": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "1e93069625a3eb22": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
@@ -689,11 +729,6 @@
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
-    },
-    "1f1120ab509f5832": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
     },
     "2003df99f271b1a7": {
       "choice": "good_exam_item",
@@ -720,19 +755,9 @@
       "confidence": 0.8,
       "detail": null
     },
-    "219b8d674ebdf11b": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "222b03385efc6cd5": {
       "choice": "good_exam_item",
       "confidence": 0.8,
-      "detail": null
-    },
-    "223bd981d9eceb23": {
-      "choice": "good_exam_item",
-      "confidence": 0.9,
       "detail": null
     },
     "2252b1976fe51e07": {
@@ -785,22 +810,12 @@
       "confidence": 0.8,
       "detail": "judge said c, marked a"
     },
-    "25ba830e844d6201": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "25e5fa5a37577f6c": {
       "choice": "good_exam_item",
       "confidence": 0.9,
       "detail": null
     },
     "263507e30915c931": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "265a3cb9cbba9f7a": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -905,11 +920,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "2b65004a18bffa79": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "2b6b4d6e10c866aa": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -924,6 +934,11 @@
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "2c6fd02bd3620d03": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "2c71687b4b8f4eea": {
       "choice": "good_exam_item",
@@ -945,11 +960,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "2cf904bb525da1f0": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
     "2d1b279deb0460f0": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -969,6 +979,11 @@
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "2e719d7024965070": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "2e883be1dde0f2c6": {
       "choice": "good_exam_item",
@@ -1075,11 +1090,6 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "326c119727b36eba": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "32ff1d40172201a0": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -1110,10 +1120,25 @@
       "confidence": 0.8,
       "detail": null
     },
+    "3485b7c19bb7bca1": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "348b679dd0fedbe0": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "34dac3b4982d8106": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "3505dfc6f3f67ded": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "353c9c9759c2b13d": {
       "choice": "good_exam_item",
@@ -1145,20 +1170,15 @@
       "confidence": 0.8,
       "detail": null
     },
-    "368eb1219092bf47": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "36930e8942d696da": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "36a88fd94a5e437a": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "36b8621267325906": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "36ddc2bd23a9a3b1": {
       "choice": "good_exam_item",
@@ -1186,11 +1206,6 @@
       "detail": null
     },
     "3806a76723c70828": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "382aa1d4598d2f42": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -1310,11 +1325,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "3c79fbc500fc3128": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "3c8abe3b04db0c42": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -1326,11 +1336,6 @@
       "detail": null
     },
     "3ca143d908aec7ca": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "3cb1471f6bf84de7": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -1385,19 +1390,9 @@
       "confidence": 0.8,
       "detail": null
     },
-    "3e89d2c0350e9c64": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
     "3eafb1df04e537be": {
       "choice": "good_exam_item",
       "confidence": 0.8,
-      "detail": null
-    },
-    "3ec09cd09fdbc6ac": {
-      "choice": "good_exam_item",
-      "confidence": 0.9,
       "detail": null
     },
     "3f114e7bc1b972fb": {
@@ -1424,6 +1419,11 @@
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "4000bab5556c0885": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "4016973c94f97897": {
       "choice": "good_exam_item",
@@ -1475,6 +1475,11 @@
       "confidence": 0.8,
       "detail": null
     },
+    "41753d805d107ee9": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "417a1f8257204e5c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -1515,11 +1520,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "4488008d4db8ee29": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "44bb05b9863ee25e": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -1530,10 +1530,10 @@
       "confidence": 0.8,
       "detail": null
     },
-    "45ba83e91cf4e077": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "465a49dfebaa71ef": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "467892828e2f8f28": {
       "choice": "good_exam_item",
@@ -1551,11 +1551,6 @@
       "detail": null
     },
     "470308f2a176cd47": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "4711697c28b77d67": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -1595,6 +1590,11 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
+    "4815171b3300b866": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "482efabce922471a": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -1629,6 +1629,11 @@
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "49b711b96539e341": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "4a0555997bcc9d16": {
       "choice": "good_exam_item",
@@ -1665,20 +1670,15 @@
       "confidence": 0.8,
       "detail": null
     },
-    "4b40344f41030fd6": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "4b739a8fb99328dd": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "4bc1de953dd91347": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "4b8d920f1ced7eab": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "4c1a5f76e124505a": {
       "choice": "good_exam_item",
@@ -1700,17 +1700,17 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
+    "4cff60044d125bf6": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "4d130e761263d8c4": {
       "choice": "good_exam_item",
       "confidence": 0.9,
       "detail": null
     },
     "4d2c648906603886": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "4d3d2f7dcc88b427": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -1735,12 +1735,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "4e14b04cc931f284": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "4ddf34635483a44f": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
-    "4e5ab41f5dce0b32": {
+    "4e14b04cc931f284": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -1780,11 +1780,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "50bfae872d87cac8": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "50ca0e402a34929c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -1799,6 +1794,11 @@
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "519a2a4bccbc41b0": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "51da063e78d61e1b": {
       "choice": "good_exam_item",
@@ -1855,16 +1855,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "569af4dc889f5c6b": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "571466e35e0b8e93": {
-      "choice": "good_exam_item",
-      "confidence": 0.9,
-      "detail": null
-    },
     "57734b856a173189": {
       "choice": "error",
       "confidence": 0,
@@ -1876,6 +1866,11 @@
       "detail": null
     },
     "57cd4ca7d6f64e27": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "58391a227677c78b": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
@@ -2030,12 +2025,32 @@
       "confidence": 0.8,
       "detail": null
     },
+    "5e50bf95f2878582": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "5e6fab343b239c46": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "5e9a3730b3b63da9": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "5f0a43ec6db8ca5e": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
     "5f3d3c01a4a0ad96": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "5f64d7ec226e01a4": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
@@ -2065,6 +2080,11 @@
       "confidence": 0.8,
       "detail": null
     },
+    "601ea0a6d0d54e40": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "6036faba00c783ec": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -2090,11 +2110,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "60fb420448c428b3": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "60fb83f8e37db81c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -2106,11 +2121,6 @@
       "detail": null
     },
     "612e06c7f9836fc9": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "61647b6289588d19": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -2145,10 +2155,15 @@
       "confidence": 0.8,
       "detail": null
     },
-    "63823e7063020339": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "63ae3ee80e96423c": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "63ce510341eb1a3a": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "641f37166f96dda1": {
       "choice": "good_exam_item",
@@ -2164,11 +2179,6 @@
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
-    },
-    "64577020ef45c4eb": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
     },
     "649e3abc66890da6": {
       "choice": "good_exam_item",
@@ -2195,10 +2205,10 @@
       "confidence": 0.8,
       "detail": null
     },
-    "6588d4249ae38f88": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "65961a0fb18b9093": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "65a0ea8d11d7c3d5": {
       "choice": "good_exam_item",
@@ -2240,6 +2250,11 @@
       "confidence": 0.8,
       "detail": null
     },
+    "674c0160083b5815": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "67948b271bf82e5e": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -2260,11 +2275,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "680173543f3f5397": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "6846e3a9c981ebb3": {
       "choice": "error",
       "confidence": 0,
@@ -2280,15 +2290,20 @@
       "confidence": 0.8,
       "detail": null
     },
+    "68a8ee997188b331": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "68b863883df9180c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "690acab9b6c3234c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "68f97b1d0ce96e26": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "699ff7b67caa885b": {
       "choice": "good_exam_item",
@@ -2304,6 +2319,11 @@
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "69c59440cb0f31db": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "6ada5d037986672e": {
       "choice": "good_exam_item",
@@ -2350,6 +2370,11 @@
       "confidence": 0.8,
       "detail": null
     },
+    "6c09c0f08cbc9a24": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "6c26c34ba31242ce": {
       "choice": "error",
       "confidence": 0,
@@ -2391,11 +2416,6 @@
       "detail": null
     },
     "6d4cdaee66d4544e": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "6d9cd2c4983f7386": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -2515,6 +2535,11 @@
       "confidence": 0.8,
       "detail": null
     },
+    "72e8457dc508c64d": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "7323fd37fe27fa71": {
       "choice": "error",
       "confidence": 0,
@@ -2540,15 +2565,35 @@
       "confidence": 0.8,
       "detail": null
     },
+    "74a0699f636b2a89": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "751a790ac206e18d": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
+    "7525e5e3ce4650a7": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "754f3a92f6e3b326": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "75762c1a02ba2155": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "75e68b0712e0699e": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "7610028c14c8d139": {
       "choice": "good_exam_item",
@@ -2590,6 +2635,11 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
+    "7867eb52650887f7": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "786dd43b09ad1ea5": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -2606,11 +2656,6 @@
       "detail": null
     },
     "79a37ecd96fdb07d": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "79a6793d31b0e65f": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -2640,11 +2685,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "7acc1c6a0856d45f": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "7aee47a626b0e1d1": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -2654,6 +2694,16 @@
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "7b974570fde7741a": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "7b9eef3d75b948a5": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "7bf6a3a43d933d0b": {
       "choice": "good_exam_item",
@@ -2685,6 +2735,11 @@
       "confidence": 0.8,
       "detail": null
     },
+    "7d73aedc58406f02": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "7d84baf5caa64b64": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -2695,17 +2750,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "7e24814727cdf942": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "7e3e7d5c8d560787": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "7e5a6ec9bf27a624": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -2715,17 +2760,17 @@
       "confidence": 0.8,
       "detail": null
     },
+    "7eccd488c60b7e64": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "7ee5ffa97632d853": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
     "7f47589d33a98ca1": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "7f81b456ca76a5de": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -2769,6 +2814,16 @@
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "8229469584c1d381": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "82467a2b31c032d0": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "8261869f2fa99681": {
       "choice": "error",
@@ -2860,6 +2915,11 @@
       "confidence": 0.8,
       "detail": null
     },
+    "866c3714dbe7267b": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "870c0ebe9ce48760": {
       "choice": "error",
       "confidence": 0,
@@ -2884,6 +2944,11 @@
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "8774d507a0d71f86": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "87e2b856528c2d22": {
       "choice": "error",
@@ -2910,19 +2975,9 @@
       "confidence": 0.8,
       "detail": null
     },
-    "88ae1e47c6181acd": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "88bc0ed7c8283f4f": {
       "choice": "good_exam_item",
       "confidence": 0.9,
-      "detail": null
-    },
-    "88c2756e98988f28": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
       "detail": null
     },
     "8931a47e39929aeb": {
@@ -2944,6 +2999,11 @@
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "897b57b7d721c228": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "89ab4066a87c867e": {
       "choice": "good_exam_item",
@@ -2995,6 +3055,11 @@
       "confidence": 0.9,
       "detail": null
     },
+    "8b5b0fa1df07c661": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "8b7367fca6db848c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -3010,10 +3075,20 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
+    "8ca4820c674d8d88": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "8cbdf3736112ea28": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "8dbd6447b974b73c": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "8ddcf4430bc9ab0f": {
       "choice": "error",
@@ -3030,6 +3105,11 @@
       "confidence": 0.8,
       "detail": null
     },
+    "8e526de0c4bcd39a": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "8e5497ab8912216d": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -3040,10 +3120,15 @@
       "confidence": 0.8,
       "detail": null
     },
-    "8fed59b37905715c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "9097b4146205c6f0": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "90c8d21cd781d3d0": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "90c99a74f69c3f66": {
       "choice": "error",
@@ -3055,15 +3140,20 @@
       "confidence": 0.8,
       "detail": null
     },
+    "911430a3c97b9bb0": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "916c3b4b2b36a7d0": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "9184cd5c75d694c0": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "91752ce7f56e0808": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "919b4fdba40c9f90": {
       "choice": "good_exam_item",
@@ -3085,10 +3175,10 @@
       "confidence": 0.8,
       "detail": null
     },
-    "9357bd0819953759": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "932af182f25ce4b5": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "9440de05e1ca69bf": {
       "choice": "good_exam_item",
@@ -3145,11 +3235,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "962e605a01f09c5c": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
     "96540e239c3338c9": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -3161,11 +3246,6 @@
       "detail": null
     },
     "9659e4e1e25314c0": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "965c7ce1d264638f": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -3194,6 +3274,11 @@
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "97234bc8862a7a3c": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "9758fe3e7b3adaad": {
       "choice": "good_exam_item",
@@ -3260,6 +3345,11 @@
       "confidence": 0.8,
       "detail": null
     },
+    "9954435b6774207b": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "996f6fa507c7d43f": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -3275,7 +3365,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "99fd142baf441a5c": {
+    "9a116c3a90b15ed7": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
@@ -3289,6 +3379,11 @@
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "9ace8a51d8f64876": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "9aeb07ec03edb132": {
       "choice": "good_exam_item",
@@ -3365,11 +3460,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "9e62bd6344c6dbb3": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "9e8d76be34e7b68a": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -3395,15 +3485,20 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "9ff02583052ece73": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "a0140022fd501f7c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "a029778d4b9044ff": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "a06cc546293e2986": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "a08b0e04b2bc08a3": {
       "choice": "good_exam_item",
@@ -3430,6 +3525,16 @@
       "confidence": 0.8,
       "detail": null
     },
+    "a162d8dc0ad46d85": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "a17a93b5dafddf36": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "a190663dc6896a5b": {
       "choice": "error",
       "confidence": 0,
@@ -3444,6 +3549,11 @@
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "a1dd88d8141ef40c": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "a1e50889c7cc7072": {
       "choice": "good_exam_item",
@@ -3500,6 +3610,11 @@
       "confidence": 0.8,
       "detail": null
     },
+    "a4a2f7ba25d319b7": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "a4b0882db9582772": {
       "choice": "good_exam_item",
       "confidence": 0.9,
@@ -3550,6 +3665,11 @@
       "confidence": 0.8,
       "detail": null
     },
+    "a6302a875ff7846c": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "a652b3d796c5802c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -3561,6 +3681,11 @@
       "detail": null
     },
     "a6a0006dbecaf4d7": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "a6b4dd709cc503f2": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
@@ -3589,6 +3714,11 @@
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "a80f8834b68ac130": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "a831703c2baa35c6": {
       "choice": "good_exam_item",
@@ -3635,10 +3765,10 @@
       "confidence": 0.9,
       "detail": null
     },
-    "aabc49c79db2c32f": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "aa3e5857a15fc881": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "aad815bde81cd525": {
       "choice": "good_exam_item",
@@ -3655,22 +3785,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "ab48a0b205259b4d": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "abb77935b62d1c8e": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "abeba0da94bfd60d": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "ac3953d5154b1bd8": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "ad096430066a8d50": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -3686,16 +3806,6 @@
       "detail": null
     },
     "ad9e727ed10a5159": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "addb5ca2508474ca": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "ade78fc13dc4be9d": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -3745,6 +3855,16 @@
       "confidence": 0.8,
       "detail": null
     },
+    "afb0c3b2bf8ab307": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "afdd40bc30274f63": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "b013257b8897d292": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -3755,17 +3875,17 @@
       "confidence": 0.8,
       "detail": null
     },
+    "b02fa32454aa146c": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "b07f60ebcf523f07": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
     "b097069a0711d5b5": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "b0fc2e92550788c8": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -3800,10 +3920,20 @@
       "confidence": 0.8,
       "detail": null
     },
+    "b2af0d90da9e12e4": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "b2c26a9643f43f83": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "b2eb8c4b40454912": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "b3212bc7a2bae9cb": {
       "choice": "answer_not_determinable",
@@ -3825,6 +3955,11 @@
       "confidence": 0.8,
       "detail": null
     },
+    "b422e092a7a3d31e": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "b44e7c47c5a088dd": {
       "choice": "error",
       "confidence": 0,
@@ -3835,17 +3970,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "b49d989d402738a7": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "b4c8498ad5c867ba": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "b4d886a0d60e7406": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -3930,6 +4055,11 @@
       "confidence": 0.8,
       "detail": null
     },
+    "b922f336f28cbd7c": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "b9483d65d48fdb09": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -3938,11 +4068,6 @@
     "b97fe08564322cfe": {
       "choice": "good_exam_item",
       "confidence": 0.9,
-      "detail": null
-    },
-    "b9b4815cae46ebe4": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
       "detail": null
     },
     "b9c13aa961a3c531": {
@@ -3955,6 +4080,11 @@
       "confidence": 0.8,
       "detail": null
     },
+    "b9f6f0825f69474b": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "ba4ea1f8e49860c3": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -3965,25 +4095,10 @@
       "confidence": 0.8,
       "detail": null
     },
-    "bb4dd9b6ccc01460": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "bb503aa89bf6f9db": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
-    },
-    "bb99b79c07ff8247": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "bbc8fb63b7baf775": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
     },
     "bbd85215df776598": {
       "choice": "good_exam_item",
@@ -4004,6 +4119,11 @@
       "choice": "good_exam_item",
       "confidence": 0.9,
       "detail": null
+    },
+    "bc5ac6be8d7935af": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "bc5f05663c18ddb3": {
       "choice": "good_exam_item",
@@ -4039,6 +4159,11 @@
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "bdda4825442d506e": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "be54bab782346128": {
       "choice": "good_exam_item",
@@ -4175,11 +4300,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "c3981d1a3086ff94": {
-      "choice": "good_exam_item",
-      "confidence": 0.9,
-      "detail": null
-    },
     "c399a526be6cc7b1": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -4201,11 +4321,6 @@
       "detail": null
     },
     "c41650db52f403d2": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "c42a07cf51e69268": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -4240,11 +4355,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "c5acd7aa20314bb1": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "c6345583088bfb65": {
       "choice": "good_exam_item",
       "confidence": 0.9,
@@ -4275,6 +4385,11 @@
       "confidence": 0.8,
       "detail": null
     },
+    "c77e6dfb21a058fd": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "c7950bf71e5bb588": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -4289,6 +4404,11 @@
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "c7fefd10c8e1fd8a": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "c81920221d9f74ad": {
       "choice": "good_exam_item",
@@ -4340,11 +4460,6 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "ca0ca3e7855d63d9": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "ca1bdfe392f82eef": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -4370,10 +4485,10 @@
       "confidence": 0.8,
       "detail": null
     },
-    "cb807ecd0be4d26e": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "cb947e0dd0134b6d": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "cb9bd1e116a7aca8": {
       "choice": "good_exam_item",
@@ -4400,6 +4515,11 @@
       "confidence": 0.8,
       "detail": null
     },
+    "cc0751c2e1b6c2fd": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "cc4b4205af9d9029": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -4414,6 +4534,11 @@
       "choice": "answer_not_determinable",
       "confidence": 0,
       "detail": "The excerpt does not describe Auto-configuration in Cilium."
+    },
+    "cc943d3be92d30e7": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "cc943d7477358a7a": {
       "choice": "good_exam_item",
@@ -4455,16 +4580,6 @@
       "confidence": 0.9,
       "detail": null
     },
-    "cdc66f754b33608f": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "ce57f7a7e1fcbf5c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "ce69817643d13983": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -4474,6 +4589,11 @@
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "cf7f009b682307cd": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "cf98391de5e2f87d": {
       "choice": "good_exam_item",
@@ -4510,10 +4630,10 @@
       "confidence": 0.8,
       "detail": null
     },
-    "d1073d77f01e1cf4": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "d0c8f382d626b4c9": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "d1269a0fd8e53460": {
       "choice": "error",
@@ -4540,20 +4660,20 @@
       "confidence": 0.8,
       "detail": null
     },
+    "d2f5c98bef71c3d6": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "d381789466311b7d": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "d3917501e96e1fa0": {
-      "choice": "good_exam_item",
-      "confidence": 0.9,
-      "detail": null
-    },
-    "d3ed474ed88352df": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "d4107cc93b876bbd": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "d415b83782fe0156": {
       "choice": "good_exam_item",
@@ -4585,10 +4705,20 @@
       "confidence": 0.8,
       "detail": null
     },
-    "d588e093e6a7ff4f": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "d50a30c96276dcc0": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "d5471899839ce49f": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "d57a78876ae4d4a3": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "d596c88775b43ff6": {
       "choice": "error",
@@ -4610,10 +4740,15 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "d63b1dcec341efcc": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "d60d15585d29bcb9": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "d61f69dc967f13fb": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "d66a49ea972eb4aa": {
       "choice": "good_exam_item",
@@ -4650,11 +4785,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "d8db78dd2f56b9e0": {
-      "choice": "good_exam_item",
-      "confidence": 0.9,
-      "detail": null
-    },
     "d8dd8e4e786eaa78": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -4676,26 +4806,6 @@
       "detail": null
     },
     "d938cac82ed65996": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "d93ea479bfa325eb": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "d94fddb00c511b30": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "d9b11519809479a9": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "d9ba2275e57003e8": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -4745,11 +4855,6 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "db276b836fd7ca8c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "db49c63beded2d68": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -4759,6 +4864,11 @@
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "db88c13425749d68": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "db8ce07aa419f854": {
       "choice": "good_exam_item",
@@ -4780,6 +4890,11 @@
       "confidence": 0.8,
       "detail": null
     },
+    "dc6ec5e44730299f": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "dc87746c49bd4dfc": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -4790,10 +4905,20 @@
       "confidence": 0.8,
       "detail": null
     },
+    "dca7df415b593cae": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "dd180d8442a08ef4": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "dd74bcee7c1b4852": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "dd9476cd9f51d168": {
       "choice": "good_exam_item",
@@ -4840,6 +4965,11 @@
       "confidence": 0.8,
       "detail": null
     },
+    "df900dc79cff2036": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "dfc03021200aea4f": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -4880,15 +5010,20 @@
       "confidence": 0.8,
       "detail": null
     },
+    "e1330371905b34b5": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "e13a5918ae3b7362": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "e1532aa529e46ce3": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "e159810f5cd5f668": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "e1b3928fd82ddde1": {
       "choice": "good_exam_item",
@@ -4901,11 +5036,6 @@
       "detail": null
     },
     "e20f0beec30f3dc1": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "e253b00faaf0a316": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -4930,11 +5060,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "e3653c4b9e5709c3": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "e38b0f2fa36bbfce": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -4945,17 +5070,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "e4a7de15750109cd": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "e4c496a49a8a2934": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "e51e02a74b27be35": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "e58b27115d0f3ff8": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -4984,6 +5104,11 @@
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "e6ff212cb8ea68de": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "e7186126edf14379": {
       "choice": "good_exam_item",
@@ -5015,11 +5140,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "e7fe52027ee1fb20": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "e853d944a43b238e": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -5036,11 +5156,6 @@
       "detail": null
     },
     "e8788ad23f7880b4": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "e8b798e30b63edf2": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -5105,15 +5220,10 @@
       "confidence": 0.8,
       "detail": null
     },
-    "ec8b55c9fd0bdc38": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "ec9453613a5475ac": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "ed012c7b0e2d7569": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "edc8f441f77396da": {
       "choice": "good_exam_item",
@@ -5145,6 +5255,11 @@
       "confidence": 0.8,
       "detail": null
     },
+    "ee9d5ca5b6c914b5": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "eec2d273372daa13": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -5170,6 +5285,11 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
+    "ef5e2cb7624ef76c": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "efa47379922d5ee5": {
       "choice": "error",
       "confidence": 0,
@@ -5190,10 +5310,20 @@
       "confidence": 0.8,
       "detail": null
     },
+    "f04e37d24c7b3d81": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "f06ab507cff909df": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "f06f3b8247ff53ca": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "f0c12a62f1785906": {
       "choice": "good_exam_item",
@@ -5255,10 +5385,10 @@
       "confidence": 0.8,
       "detail": null
     },
-    "f2666955f3d080da": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "f269ff44e30adce6": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "f2a8f7b720a67e5a": {
       "choice": "good_exam_item",
@@ -5275,10 +5405,10 @@
       "confidence": 0.8,
       "detail": null
     },
-    "f3025dcb567a41bb": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "f2f9cf4d7d2d315c": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "f33135726a876daf": {
       "choice": "error",
@@ -5290,10 +5420,10 @@
       "confidence": 0.8,
       "detail": null
     },
-    "f3698b88fc6fa1e5": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "f33b9eb8b7f42224": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "f37b3b7757719126": {
       "choice": "good_exam_item",
@@ -5306,11 +5436,6 @@
       "detail": "no verdict returned for this key"
     },
     "f3cee8a7287025cc": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "f3fe40f7ffbb1939": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -5370,15 +5495,15 @@
       "confidence": 0.8,
       "detail": null
     },
-    "f506e000de492224": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "f570a41af8e9078c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "f575a95b2f44a7fd": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "f61e48646919761e": {
       "choice": "good_exam_item",
@@ -5395,22 +5520,12 @@
       "confidence": 0.8,
       "detail": null
     },
+    "f66478ec599bab8b": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "f67f4ae185570d9f": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "f6cb8e2a7aba547a": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "f6e98b24f15fc9d4": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "f762ff144d8cc78c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -5424,6 +5539,11 @@
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "f836bf2a44070bc0": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "f83b334dbd622cc0": {
       "choice": "error",
@@ -5439,6 +5559,16 @@
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "f9333f2a180cdf5f": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "fa01d449bf5a821d": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "fa4ccf5173bf640c": {
       "choice": "answer_not_determinable",
@@ -5480,11 +5610,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "fc0333af9f0c319d": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "fc1942dd03aff71e": {
       "choice": "good_exam_item",
       "confidence": 0.9,
@@ -5509,6 +5634,11 @@
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "fd91e0f7cc84b0a8": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "fd946e00521ac9fb": {
       "choice": "good_exam_item",
@@ -5560,6 +5690,11 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
+    "fe9b45f69ee2e98a": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "ff0baa8057c7eb9c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -5580,22 +5715,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "ff46c67cf6244e67": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "ff5b5f9d0af23ce7": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
     "ff6d81689f1b056d": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "ff95c273e3e86706": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null

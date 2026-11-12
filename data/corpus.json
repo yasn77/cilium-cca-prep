@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "docsRef": "v1.20.4",
   "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
-  "generatedAt": "2026-11-12T17:54:57.473Z",
+  "generatedAt": "2026-11-12T18:02:00.249Z",
   "counts": {
-    "total": 506,
+    "total": 508,
     "byDomain": {
       "architecture": 103,
       "network-policy": 98,
@@ -13,20 +13,20 @@
       "installation": 54,
       "cluster-mesh": 52,
       "ebpf": 26,
-      "bgp": 40
+      "bgp": 42
     },
     "byYieldSource": {
-      "definition": 98,
-      "scenario": 192,
-      "contrast": 55,
-      "attribute": 161
+      "definition": 99,
+      "scenario": 193,
+      "contrast": 56,
+      "attribute": 160
     },
-    "scenarioShare": 0.379,
+    "scenarioShare": 0.38,
     "difficulty": {
       "1.0-2.0": 33,
       "2.0-2.5": 60,
       "2.5-3.5": 166,
-      "3.5-4.5": 242,
+      "3.5-4.5": 244,
       "4.5-5.0": 5
     },
     "judgeRan": true,
@@ -8234,6 +8234,70 @@
       "difficulty": 3.78
     },
     {
+      "stem": "A CiliumBGPPeerConfig defines an IPv4 unicast family with an `advertisements` selector matching `advertise: \"bgp\"`, but no CiliumBGPAdvertisement or prefixes carry that label. What is advertised to the peer in that family?",
+      "options": [
+        {
+          "id": "a",
+          "text": "No prefix is advertised, because without matching advertisements no prefix will be advertised and the default is to advertise nothing."
+        },
+        {
+          "id": "b",
+          "text": "All IPv4 prefixes known to the cluster are advertised, since the family is configured."
+        },
+        {
+          "id": "c",
+          "text": "Only the pod CIDR is advertised, as a fallback when no selector matches."
+        },
+        {
+          "id": "d",
+          "text": "The session is torn down, because a family with no matching advertisements is invalid."
+        }
+      ],
+      "answer": "a",
+      "explanation": "Route publication within each address family is controlled by the advertisements label selector. Without matching advertisements, no prefix is advertised to the peer, and the default configuration is to not advertise any prefix.",
+      "optionRationale": {
+        "b": "Configuring the family does not by itself publish routes; the advertisements selector must match.",
+        "c": "The excerpt describes no fallback prefix such as the pod CIDR; the default is to advertise nothing.",
+        "d": "An unmatched selector results in no advertisements, not in a failed session."
+      },
+      "yieldSource": "scenario",
+      "citations": [
+        {
+          "file": "network/bgp-control-plane/bgp-control-plane-configuration.rst",
+          "anchor": "address-families",
+          "title": "Address Families",
+          "quote": "Without matching advertisements, no prefix will be advertised to the peer.\n    Default configuration is to not advertise any prefix.",
+          "url": "https://docs.cilium.io/en/stable/network/bgp-control-plane/bgp-control-plane-configuration/#address-families"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "openrouter.ai",
+          "model": "deepseek/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/bgp-control-plane/bgp-control-plane-configuration.rst#address-families",
+        "createdAt": null,
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "good_exam_item",
+          "difficultyScored": true
+        }
+      },
+      "ordinal": 1,
+      "id": "a162d8dc0ad46d85",
+      "domain": "bgp",
+      "competency": "bgp-peering",
+      "type": "single",
+      "schemaVersion": 1,
+      "difficulty": 3.65
+    },
+    {
       "stem": "Which field is used to configure multiple gateway nodes within a single egress gateway policy?",
       "options": [
         {
@@ -8560,6 +8624,70 @@
       "schemaVersion": 1,
       "ordinal": 4,
       "difficulty": 3.83
+    },
+    {
+      "stem": "A CiliumBGPPeerConfig is created with no `families` field at all. What does the BGP Control Plane send to the peer?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Both IPv4 Unicast and IPv6 Unicast Multiprotocol Extensions Capability (RFC 4760)."
+        },
+        {
+          "id": "b",
+          "text": "Only IPv4 Unicast, because IPv6 must be enabled explicitly."
+        },
+        {
+          "id": "c",
+          "text": "Nothing, because at least one address family must be listed for a session to come up."
+        },
+        {
+          "id": "d",
+          "text": "Both IPv4 and IPv6, but only if the peer also omits its own address family configuration."
+        }
+      ],
+      "answer": "a",
+      "explanation": "When no address families are specified, the BGP Control Plane sends both IPv4 Unicast and IPv6 Unicast Multiprotocol Extensions Capability (RFC 4760) to the peer. The families field is optional, and omitting it does not prevent the session from being established.",
+      "optionRationale": {
+        "b": "IPv6 Unicast is included by default alongside IPv4 Unicast; it does not need to be enabled explicitly.",
+        "c": "The default behaviour is to send both capabilities, not to send nothing; a session is not blocked by an empty families list.",
+        "d": "The default applies regardless of the peer's own configuration; the excerpt places no such condition on it."
+      },
+      "yieldSource": "definition",
+      "citations": [
+        {
+          "file": "network/bgp-control-plane/bgp-control-plane-configuration.rst",
+          "anchor": "address-families",
+          "title": "Address Families",
+          "quote": "By default, if no address families are specified, BGP Control Plane sends both IPv4 Unicast and IPv6 Unicast\nMultiprotocol Extensions Capability (`RFC-4760`_) to the peer.",
+          "url": "https://docs.cilium.io/en/stable/network/bgp-control-plane/bgp-control-plane-configuration/#address-families"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "openrouter.ai",
+          "model": "deepseek/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "network/bgp-control-plane/bgp-control-plane-configuration.rst#address-families",
+        "createdAt": null,
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "good_exam_item",
+          "difficultyScored": true
+        }
+      },
+      "ordinal": 0,
+      "id": "c77e6dfb21a058fd",
+      "domain": "bgp",
+      "competency": "bgp-peering",
+      "type": "single",
+      "schemaVersion": 1,
+      "difficulty": 3.88
     },
     {
       "stem": "Who is responsible for configuring the IP addresses on an arbitrary local interface that is not owned by Cilium, before those addresses can be advertised?",
@@ -18865,6 +18993,70 @@
       "difficulty": 1.23
     },
     {
+      "stem": "An endpoint is selected by a policy that contains an ingress section but no egress section. What is the endpoint's enforcement state?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Default-deny for both ingress and egress."
+        },
+        {
+          "id": "b",
+          "text": "Default-deny for ingress only; egress remains unrestricted."
+        },
+        {
+          "id": "c",
+          "text": "Default-deny for egress only; ingress remains unrestricted."
+        },
+        {
+          "id": "d",
+          "text": "No change, because a policy must contain both sections to take effect."
+        }
+      ],
+      "answer": "b",
+      "explanation": "The transition to default-deny is per-direction. A rule that selects an endpoint and has an ingress section puts the endpoint into default-deny mode for ingress, while egress is only affected if a selecting rule has an egress section.",
+      "optionRationale": {
+        "a": "Default-deny is applied per direction, so the absence of an egress section leaves egress unrestricted.",
+        "c": "This reverses the directions: it is the ingress section that triggers ingress default-deny.",
+        "d": "A single section is enough to switch the default mode for that direction."
+      },
+      "yieldSource": "contrast",
+      "citations": [
+        {
+          "file": "security/policy/intro.rst",
+          "anchor": "endpoint-default-policy",
+          "title": "Endpoint default policy",
+          "quote": "If any rule selects an endpoint and the rule has an ingress\n  section, the endpoint goes into default deny-mode for ingress.",
+          "url": "https://docs.cilium.io/en/stable/security/policy/intro/#endpoint-default-policy"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "openrouter.ai",
+          "model": "deepseek/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "security/policy/intro.rst#endpoint-default-policy",
+        "createdAt": null,
+        "checks": {
+          "anchorResolved": true,
+          "quoteVerbatim": true,
+          "answerEntailed": true,
+          "judgeVerdict": "good_exam_item",
+          "difficultyScored": true
+        }
+      },
+      "ordinal": 3,
+      "id": "36b8621267325906",
+      "domain": "network-policy",
+      "competency": "policy-enforcement-modes",
+      "type": "single",
+      "schemaVersion": 1,
+      "difficulty": 2.89
+    },
+    {
       "stem": "A cluster is configured to use tunnel routing mode and also has WireGuard encryption enabled. An engineer is analysing a pod-to-pod packet captured on the wire between two nodes and wants to know how many layers of encapsulation to expect and in which order they are applied. What should the engineer expect?",
       "options": [
         {
@@ -19255,77 +19447,6 @@
       "schemaVersion": 1,
       "ordinal": 11,
       "difficulty": 2.92
-    },
-    {
-      "stem": "In the policy shown, which HTTP method and path are permitted for traffic from the \"luke\" service account to the \"leia\" service account?",
-      "options": [
-        {
-          "id": "a",
-          "text": "GET on the path \"/public$\""
-        },
-        {
-          "id": "b",
-          "text": "POST on the path \"/public$\""
-        },
-        {
-          "id": "c",
-          "text": "GET on the path \"/private$\""
-        },
-        {
-          "id": "d",
-          "text": "Any method on any path"
-        }
-      ],
-      "answer": "a",
-      "explanation": "The HTTP rules section of the policy lists a single entry with method GET and path \"/public$\", so only that method and path are permitted.",
-      "optionRationale": {
-        "b": "The method in the policy is GET, not POST.",
-        "c": "The path in the policy is \"/public$\", not \"/private$\".",
-        "d": "The policy restricts the HTTP rule to a specific method and path rather than allowing all."
-      },
-      "yieldSource": "attribute",
-      "attachments": [
-        {
-          "kind": "manifest",
-          "title": "The policy under test",
-          "language": "yaml",
-          "body": "apiVersion: \"cilium.io/v2\"\nkind: CiliumNetworkPolicy\nmetadata:\n  name: \"k8s-svc-account\"\nspec:\n  endpointSelector:\n    matchLabels:\n      io.cilium.k8s.policy.serviceaccount: leia\n  ingress:\n  - fromEndpoints:\n    - matchLabels:\n        io.cilium.k8s.policy.serviceaccount: luke\n    toPorts:\n    - ports:\n      - port: '80'\n        protocol: TCP\n      rules:\n        http:\n        - method: GET\n          path: \"/public$\""
-        }
-      ],
-      "citations": [
-        {
-          "file": "security/policy/kubernetes.rst",
-          "anchor": "example",
-          "title": "Example",
-          "quote": "rules:\n        http:\n        - method: GET\n          path: \"/public$\"",
-          "url": "https://docs.cilium.io/en/stable/security/policy/kubernetes/#example"
-        }
-      ],
-      "provenance": {
-        "generator": {
-          "kind": "llm",
-          "provider": "openrouter.ai",
-          "model": "deepseek/deepseek-v4.1-flash-1017",
-          "temperature": 0
-        },
-        "docsRef": "v1.20.4",
-        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
-        "sectionId": "security/policy/kubernetes.rst#id5",
-        "createdAt": null,
-        "checks": {
-          "anchorResolved": true,
-          "quoteVerbatim": true,
-          "answerEntailed": true,
-          "judgeVerdict": null,
-          "difficultyScored": false
-        }
-      },
-      "ordinal": 12,
-      "id": "519a2a4bccbc41b0",
-      "domain": "network-policy",
-      "competency": "policy-intent",
-      "type": "single",
-      "schemaVersion": 1
     },
     {
       "id": "545dec9850604ba5",
@@ -23611,8 +23732,8 @@
           "anchorResolved": true,
           "quoteVerbatim": true,
           "answerEntailed": true,
-          "judgeVerdict": null,
-          "difficultyScored": false
+          "judgeVerdict": "good_exam_item",
+          "difficultyScored": true
         }
       },
       "ordinal": 5,
@@ -23620,7 +23741,8 @@
       "domain": "network-policy",
       "competency": null,
       "type": "single",
-      "schemaVersion": 1
+      "schemaVersion": 1,
+      "difficulty": 3.43
     },
     {
       "stem": "An engineer defines a Cilium Layer 7 HTTP policy rule that sets a Path regex but leaves the Method field empty. A client sends a POST request whose path matches the regex. What is the result?",

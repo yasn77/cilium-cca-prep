@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-12T17:41:14.571Z",
+  "generatedAt": "2026-11-12T17:48:15.543Z",
   "counts": {
-    "total": 646,
+    "total": 647,
     "byGate": {
-      "judge": 161,
+      "judge": 162,
       "quote": 17,
       "duplicate": 10,
       "entail": 215,
@@ -34291,6 +34291,68 @@
       "rejection": {
         "gate": "entail",
         "reason": "answer-not-in-citation"
+      }
+    },
+    {
+      "stem": "A platform team wants to know which of their services are performing worst, measured by the 95th and 99th percentile latency between HTTP requests and responses. Which capability of Cilium's observability layer answers this?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Hubble, which can report the 95th and 99th percentile latency between HTTP requests and responses in the cluster."
+        },
+        {
+          "id": "b",
+          "text": "The Cilium agent's CNI plugin, which reports latency percentiles as part of pod sandbox creation."
+        },
+        {
+          "id": "c",
+          "text": "The Cilium operator, which aggregates per-service latency percentiles across all clusters."
+        },
+        {
+          "id": "d",
+          "text": "The Cilium CNI configuration file, which records HTTP latency percentiles for each endpoint."
+        }
+      ],
+      "answer": "a",
+      "explanation": "The excerpt lists, among the questions Hubble can answer, the 95th and 99th percentile latency between HTTP requests and responses in the cluster, and which services are performing the worst. So the observability layer that reports these figures is Hubble. The other options name Cilium components whose roles are not described in the excerpt as producing latency percentiles.",
+      "optionRationale": {
+        "b": "The CNI plugin handles pod networking setup on each node; the excerpt does not attribute latency percentile reporting to it.",
+        "c": "The operator handles cluster-wide Cilium management tasks; the excerpt does not attribute latency percentile reporting to it.",
+        "d": "The CNI configuration file is a configuration artefact, not a component that reports latency percentiles."
+      },
+      "yieldSource": "attribute",
+      "citations": [
+        {
+          "file": "overview/intro.rst",
+          "anchor": "application-monitoring",
+          "title": "Application monitoring",
+          "quote": "What is the 95th and 99th percentile latency between HTTP requests and\n  responses in my cluster? Which services are performing the worst? What is the\n  latency between two services?",
+          "url": "https://docs.cilium.io/en/stable/overview/intro/#application-monitoring"
+        }
+      ],
+      "provenance": {
+        "generator": {
+          "kind": "llm",
+          "provider": "openrouter.ai",
+          "model": "deepseek/deepseek-v4.1-flash-1017",
+          "temperature": 0
+        },
+        "docsRef": "v1.20.4",
+        "docsSha": "beb276d2f38d4aadfda14710acf8d14a0f1ba723",
+        "sectionId": "overview/intro.rst#application-monitoring",
+        "createdAt": null
+      },
+      "ordinal": 0,
+      "id": "05b267b60187c2d9",
+      "domain": "architecture",
+      "competency": "component-roles",
+      "type": "single",
+      "schemaVersion": 1,
+      "rejection": {
+        "gate": "judge",
+        "reason": "judge:answer_not_determinable",
+        "confidence": 0,
+        "detail": "The passage mentions latency percentiles and determining worst performers but does not identify the capable component."
       }
     },
     {

@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-11-08T19:06:28.321Z",
-  "model": "",
+  "generatedAt": "2026-11-12T17:45:16.846Z",
+  "model": "openai/gpt-5-nano",
   "baseUrl": "https://openrouter.ai/api/v1",
   "configured": true,
   "method": "adversarial re-answer",
   "histogram": {
-    "good_exam_item": 1416,
-    "error": 164,
-    "answer_not_determinable": 17
+    "good_exam_item": 964,
+    "error": 141,
+    "answer_not_determinable": 14
   },
   "verdicts": {
     "00009d132a364598": {
@@ -15,17 +15,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "0049288931bc30f6": {
+    "000a835909a7853c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "004d2b4198e97f4b": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "005fa54e17539209": {
+    "001e5da01c7e218a": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -35,17 +30,22 @@
       "confidence": 0.8,
       "detail": null
     },
+    "008c8ec3dc6af92b": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
     "009a4fbe66a996da": {
       "choice": "good_exam_item",
       "confidence": 0.9,
       "detail": null
     },
-    "009afa674716af98": {
+    "00f6f8bdc6c389d5": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "00d8fef3ead89cfe": {
+    "00f7227062afa41d": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -55,17 +55,12 @@
       "confidence": 0.9,
       "detail": null
     },
-    "00fbe4027aa6f671": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "0161f9ebf742e570": {
+    "00f92cc3dd7eee1c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "016ba4f68ec584ba": {
+    "0148e665fb88c095": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -75,35 +70,10 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "01e1dc5b6b1f7163": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "01ed064839c72add": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
-    },
-    "01f9efafd1b9175d": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "02012195b63a2c2d": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "023e5476fc4f694f": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "027e8500ceab001a": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
     },
     "027f304fa9ec7fa8": {
       "choice": "good_exam_item",
@@ -111,16 +81,6 @@
       "detail": null
     },
     "028aa8d3d3c4d2e9": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "028b157ea0c6452a": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "0299bde8945b3542": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -135,11 +95,6 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "02a5871c8a3e7ed1": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "02c14556b8068d9c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -151,6 +106,11 @@
       "detail": null
     },
     "030a26026c6f304d": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "030deec258d0a7fe": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -170,14 +130,14 @@
       "confidence": 0.8,
       "detail": null
     },
+    "03ed158661e3fde4": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
     "03fb30cbef4d3130": {
       "choice": "good_exam_item",
       "confidence": 0.9,
-      "detail": null
-    },
-    "0406c752e9069e48": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
       "detail": null
     },
     "0431b1855f7b3451": {
@@ -190,17 +150,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "045f0b2f323b0c36": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "0472aa005a56c31c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "04b3ce3aba8a57d0": {
+    "0495fb45f4633068": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -210,30 +165,20 @@
       "confidence": 0.8,
       "detail": null
     },
-    "04e581ea79e042c9": {
+    "05503683b6191dbd": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "04f04b1b85cc3640": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "05612529957b9448": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
-    "05650378bb6e834c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "056d14a32b946f6b": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "05a4ecb43eca8d24": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "05b267b60187c2d9": {
+      "choice": "answer_not_determinable",
+      "confidence": 0,
+      "detail": "The passage mentions latency percentiles and determining worst performers but does not identify the capable component."
     },
     "05d585f73e68c549": {
       "choice": "error",
@@ -245,35 +190,25 @@
       "confidence": 0.8,
       "detail": null
     },
-    "065c691f84328a50": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
     "069deb25ba642e33": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "06edad5bd7d15b16": {
+    "06c6c235b70bce09": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "076afbd18cf167c4": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "079c19e3c6e5b69e": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
-    },
-    "07035367e9b7e8a5": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "0780485da230701c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "07aa7c31eead4d9d": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
     },
     "07b99ffe43e25082": {
       "choice": "good_exam_item",
@@ -290,7 +225,32 @@
       "confidence": 0.8,
       "detail": null
     },
-    "093a307e9ee7a076": {
+    "08012e1bc06efa77": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "0808168d47e9d0be": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "0882adc373617eef": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "0889dd562af3d8d7": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "089ed7d0c8ce2811": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "08cc7bf127fd90a7": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -300,12 +260,22 @@
       "confidence": 0.8,
       "detail": null
     },
-    "09e254285ac682bb": {
+    "0972104a77b1f70a": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "09f7b44f89559c60": {
+    "097867e2d032fff1": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "09932b6f7ba35f50": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "09c360c3a7d69b9a": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -315,22 +285,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "0a50c60b91d31497": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "0a84ec498b6fa8f5": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "0ad971291ba61f33": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "0aece1862af046d0": {
+    "0af6f59ad4e443a7": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -340,17 +295,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "0b4d64caefafba3a": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "0b8a785ee04ccbe5": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "0bb154a6b67d93ec": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "0bec3e41d068f158": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -360,17 +310,17 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
+    "0c4023eaa88f485d": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
     "0c63e06640d26dc9": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
     "0c6bc08730adbfd9": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "0c9dadc311b8d933": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -400,17 +350,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "0dd2e09af6a07426": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "0ddcd72f9bb7501b": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "0e02acd9dab31cae": {
+    "0dbb583bc20ce979": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -429,16 +369,6 @@
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
-    },
-    "0ebad14f47b795e8": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "0ebcbaa2c1ee2cf4": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
     },
     "0f138c18557ce81d": {
       "choice": "good_exam_item",
@@ -460,25 +390,10 @@
       "confidence": 0.8,
       "detail": null
     },
-    "0fd984960758e57d": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
     "0fe88b5d74553360": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
-    },
-    "0ff83da7ddafd130": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "10747841bfed1250": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
     },
     "107c503d280c97dc": {
       "choice": "good_exam_item",
@@ -490,22 +405,12 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "10da850578b74f12": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "10fbd2c7ad5c25cc": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
     "10fe40605ba8ab82": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "110ca50d485d0601": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -525,22 +430,12 @@
       "confidence": 0.8,
       "detail": null
     },
+    "117038b4be41101d": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
     "11c4e64a679246dd": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "11d360808ae08a99": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "11d652dfb1cb6997": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "120a682472e1f14f": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -550,52 +445,42 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "126f9bf4eae26b54": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "12cb6a8fd98fe0f1": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
-    "12cb14ac2a5969df": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "12f6a27224132299": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "12f6f7de3bca1a5d": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "12e165dec9e30d7d": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "1341abd1960e91d0": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "134d15139bb3d007": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "13665af5f05161fe": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "136f9e6685470593": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
     "1371730b0bdd58bd": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "13c2dd8c1d5f3ade": {
+    "1391c49b8c903cb4": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "13a0f6692ee273e3": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "140b6d9dd0d5a22f": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "1419d9b1dab90077": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -605,72 +490,32 @@
       "confidence": 0.8,
       "detail": null
     },
-    "143ef5db8b127045": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "147e680e5a65b8fc": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
     "14c604231fe25d7e": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
-    },
-    "14c78482740c13d3": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
     },
     "14ec0fdee917df24": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "150e79a096f2df35": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "1533e3ef151ede26": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "1568707915dbc8f4": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "16075f3d3aaa5af2": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
+    "1630957394b61364": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
     },
     "164da9f7d3896181": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "169da281e5e33ebc": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "16b9d670c3a60895": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "16e281616b525014": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "16f6cead399ded70": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -705,16 +550,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "1834599aeb26720f": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "1884c3782626391f": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "18947b8895c26f8b": {
       "choice": "good_exam_item",
       "confidence": 0.9,
@@ -725,17 +560,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "18fbad1d91dd3266": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "1926eda389a76d11": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "193aac76faa3e829": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -745,22 +570,17 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "19572f369ba26a8e": {
+    "19852ca4af9e42a5": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "197d7ff1d09f1acd": {
+    "19cfef6f2ab34bc1": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "198abce3e0a266b7": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "19b3b5b54f80a848": {
+    "19e8e9d25a11df9e": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -775,37 +595,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "1a289ccf0ce2cfe8": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "1a2921a6084d42da": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "1a415e6a55241c3a": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "1a8d288a2849cef4": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "1a8d37fd5a5c052e": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
     "1a966dc4183d5616": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "1aa3b75778afe482": {
+    "1acd66e8fdb20035": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -814,16 +609,6 @@
       "choice": "answer_not_determinable",
       "confidence": 0.8,
       "detail": "judge said d, marked a"
-    },
-    "1aebb77a40732ae8": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "1af0cf1c9d372284": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
     },
     "1b39610ca0a16afc": {
       "choice": "good_exam_item",
@@ -835,27 +620,17 @@
       "confidence": 0.8,
       "detail": null
     },
-    "1b5d3b218742ac2b": {
-      "choice": "answer_not_determinable",
-      "confidence": 0.8,
-      "detail": "judge said b, marked a"
-    },
     "1b8be72db0f92a3d": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "1baeabcb857e927e": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "1bc0e89c364c0293": {
+    "1b982bbd4f2e0bf8": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "1bf9d6e83f995005": {
+    "1baeabcb857e927e": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -865,22 +640,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "1c9076c94d258214": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "1c9a1c6dad9e6831": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "1cbe2eefb46885d5": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "1cd4c5133fa3b940": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -890,27 +650,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "1d01bdee48920b17": {
-      "choice": "good_exam_item",
-      "confidence": 0.9,
-      "detail": null
-    },
     "1d1f0f243adb33d8": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "1d239bd372c5ec04": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "1d30560e013fc8e4": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "1d6cb40b7f2955da": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -920,47 +660,22 @@
       "confidence": 0.8,
       "detail": null
     },
-    "1dd2dfb1c1d56179": {
+    "1e504f31f24d9098": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "1dd3510c1ec6e35f": {
+    "1e70a1325b4a921c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
-    },
-    "1dec2cd57797436e": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "1e2ae73706624ef3": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "1e5f88cebfe1d967": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
     },
     "1e71d2049e63a860": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "1e93069625a3eb22": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "1e9f5dc719172421": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "1ea708f1de421f66": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -980,27 +695,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "1f6d1afc86d51d2c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "1f96639073d6c183": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "1fd0cb3840b9ab15": {
-      "choice": "answer_not_determinable",
-      "confidence": 0,
-      "detail": "The passage does not discuss Envoy metrics or the rationale for using a separate headless service."
-    },
     "2003df99f271b1a7": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "2084254eab4b9d94": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -1020,27 +715,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "20cc49a0321fd6b1": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "2156cc1ca35543ea": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "21593ea3a16ceaf6": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "218e26dfa1d7b5f0": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "219ae7f7301dfc32": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -1065,24 +740,14 @@
       "confidence": 0.8,
       "detail": null
     },
-    "229a99417cde8ce0": {
+    "229a1026836e7b5c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
-      "detail": null
-    },
-    "22e038f02ae6d1a1": {
-      "choice": "good_exam_item",
-      "confidence": 0.9,
       "detail": null
     },
     "23072c6eb514a372": {
       "choice": "good_exam_item",
       "confidence": 0.8,
-      "detail": null
-    },
-    "231c9492f926b6d0": {
-      "choice": "good_exam_item",
-      "confidence": 0.9,
       "detail": null
     },
     "235657cc6a2c0ac0": {
@@ -1095,12 +760,7 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "237c216a1f45d8c1": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "2475f6121340f788": {
+    "23fae808de4dd13a": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -1115,35 +775,15 @@
       "confidence": 0.8,
       "detail": null
     },
-    "24d1666d1d1c06d9": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "24f8f46dff67774d": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "24c20b602e18bc87": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "25180c661c29815d": {
       "choice": "answer_not_determinable",
       "confidence": 0.8,
       "detail": "judge said c, marked a"
-    },
-    "25258311c07b0480": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "254aa3d5fafeae6b": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "2593ea2c95629dc2": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
     },
     "25ba830e844d6201": {
       "choice": "good_exam_item",
@@ -1154,21 +794,6 @@
       "choice": "good_exam_item",
       "confidence": 0.9,
       "detail": null
-    },
-    "25f4682ec08e7e33": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "26002a304ccbbf6c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "26242edcee00aac7": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
     },
     "263507e30915c931": {
       "choice": "good_exam_item",
@@ -1190,11 +815,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "26bdc65e160af7bd": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "26de10fc6cf5877b": {
       "choice": "error",
       "confidence": 0,
@@ -1205,20 +825,10 @@
       "confidence": 0.8,
       "detail": null
     },
-    "26e8ef82911f4f6b": {
-      "choice": "good_exam_item",
+    "273f2d865ac19f9a": {
+      "choice": "answer_not_determinable",
       "confidence": 0.8,
-      "detail": null
-    },
-    "2730f76ff7e83b1c": {
-      "choice": "good_exam_item",
-      "confidence": 0.85,
-      "detail": null
-    },
-    "274b004b8dff2e2c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+      "detail": "judge said a, marked b"
     },
     "2761c967feb2f5aa": {
       "choice": "answer_not_determinable",
@@ -1235,20 +845,15 @@
       "confidence": 0.8,
       "detail": null
     },
-    "27a9d33cedfe7d36": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "27bc2b63fecf59ee": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "27dd416d115e9eca": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "28001ba21c371762": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "2850a327b58824aa": {
       "choice": "good_exam_item",
@@ -1260,7 +865,12 @@
       "confidence": 0.9,
       "detail": null
     },
-    "292b1514aedee5a0": {
+    "28bdc72ef7d8d04e": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "28daf9e7ca683232": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -1270,42 +880,17 @@
       "confidence": 0.9,
       "detail": null
     },
-    "293f320a902cee2e": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
     "29c8b4d3345d5e4f": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "2a230acfb4079204": {
+    "29ebbbdb3db3e5e5": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "2a4ed8433d26f6d5": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "2a6313953b622e27": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "2a98952279a1c92a": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "2aa395391c45d4e9": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "2b278021d1464ed0": {
+    "2a61b71aa4d0008a": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -1315,7 +900,7 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "2b537069a38c384b": {
+    "2b5b213b6fc862d3": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -1326,31 +911,6 @@
       "detail": null
     },
     "2b6b4d6e10c866aa": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "2ba10100a28ba3ba": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "2bb9d17544e09f7b": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "2bc8d99f9377e917": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "2bcb46a21d975a4b": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "2c356f0806ddf7b0": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -1375,37 +935,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "2cb9118f8f0b3010": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "2cc679370a7fe0d2": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "2cca70cf4fa2d8e2": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "2ccad0b2a306bf0d": {
-      "choice": "good_exam_item",
-      "confidence": 0.9,
-      "detail": null
-    },
     "2ccca00fe61012a5": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "2ce7b40dff281619": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "2ceea7285d2d40ce": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -1414,6 +949,11 @@
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
+    },
+    "2d1b279deb0460f0": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
     },
     "2d2e4564d06dc3bf": {
       "choice": "good_exam_item",
@@ -1425,22 +965,7 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "2dacb12c941c1a6c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "2e241a7fc92fb0f8": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "2e314c0715fa8545": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "2e719d7024965070": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -1455,7 +980,17 @@
       "confidence": 0.8,
       "detail": null
     },
-    "2ef24c8edb3d043d": {
+    "2ea0bb6899e5fb50": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "2ec036564e597232": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "2ed52143fcf4e04a": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -1480,27 +1015,7 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "2f9b2086ec52a805": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "2fa2d9cbf327571b": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "2fbc9ef72deffaf5": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "2fd82b949ac05e5c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "2fe10c3d8cf31023": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -1510,7 +1025,7 @@
       "confidence": 0.9,
       "detail": null
     },
-    "301bf2c2fb075d01": {
+    "2ff296991a4b2d98": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -1520,27 +1035,17 @@
       "confidence": 0.8,
       "detail": null
     },
+    "304716ccbde077d8": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
     "30554d9d2fa1e746": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "309718a11f58d0e7": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "30a561377f227c96": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "3119b39fcb48f8b9": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "312361f2cad53ffb": {
+    "31456d99195c60f3": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -1550,7 +1055,17 @@
       "confidence": 0.8,
       "detail": null
     },
-    "31d5d113692527be": {
+    "3188b4479d08276c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "31b74d0760ca2d65": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "32296d4a8171e44f": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -1565,45 +1080,15 @@
       "confidence": 0.8,
       "detail": null
     },
-    "32756f06ec7b8157": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "327bb74903f53eb0": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "32af1304b2115989": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "32cda915a072b840": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "32f7146de5d40064": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "32ff1d40172201a0": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "3303e9c255757c94": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "332f3ddf35a8a783": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "331fb00c401362a6": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "338e90134850e0dc": {
       "choice": "good_exam_item",
@@ -1615,7 +1100,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "340a14d5b8ff880c": {
+    "3466eaa66722a2ec": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "3481512af7885cc3": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -1625,27 +1115,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "34dac3b4982d8106": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "3505dfc6f3f67ded": {
+    "353c9c9759c2b13d": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
     "3583c5ef10bd6797": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "35adf7c6c46ff2f3": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "35f76615ec4fae24": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -1659,6 +1134,11 @@
       "choice": "answer_not_determinable",
       "confidence": 0.8,
       "detail": "judge said c, marked a"
+    },
+    "36631b21730408b8": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
     },
     "368db59327de74da": {
       "choice": "good_exam_item",
@@ -1680,12 +1160,22 @@
       "confidence": 0.8,
       "detail": null
     },
-    "3700d8a92b69671e": {
+    "36ddc2bd23a9a3b1": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "370a1de3cde88bc8": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "3703292035fe7d91": {
+    "375d6fc93fd0f6c0": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "3792ec4a3e932093": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -1705,11 +1195,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "3833b311fd7d72ab": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
     "384eee301ef43bbf": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -1718,16 +1203,6 @@
     "3857700c06ded4dc": {
       "choice": "good_exam_item",
       "confidence": 0.8,
-      "detail": null
-    },
-    "38625f33ef00ae8f": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "38673010487645e0": {
-      "choice": "good_exam_item",
-      "confidence": 0.9,
       "detail": null
     },
     "38bc3e392853bd15": {
@@ -1740,22 +1215,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "38dc254155d13065": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "38e5dfb0594b80de": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "394736af8657ab6e": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "39518ba5e1b21865": {
+    "3999790d2ee22b8a": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -1770,37 +1235,42 @@
       "confidence": 0.8,
       "detail": null
     },
-    "39ba7c9fe0ccfa0c": {
+    "39f9dc60257e5b1f": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "3a63d521a557962f": {
+    "3a4a1f5ca0000e33": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "3a51fc84d46cf246": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "3a8eda96062c0ce2": {
+    "3a9c93dae4e5330a": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "3ab1b7b41ce1c1ae": {
+    "3ad48bb6a6378d61": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "3b2be0e1b6516537": {
+    "3b091a52da141fc1": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "3b5bd582578d933a": {
+    "3b52df1f06412e27": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "3b6527b2000ef05a": {
+    "3b7e6a3b7ed0ab21": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -1825,47 +1295,22 @@
       "confidence": 0.8,
       "detail": null
     },
-    "3c187cf838c38b9c": {
+    "3c02c24a8edd8659": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "3c2688647bb478bc": {
+    "3c2965744ee5f028": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
-    },
-    "3c291484982e735f": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "3c2bedf06b4ceb03": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
     },
     "3c65c8d45a0725e5": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "3c6d1e629a84114c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "3c79fbc500fc3128": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "3c7b8adc9b2ca0f3": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "3c88ac0f35e75289": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -1890,11 +1335,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "3cde625bd226f640": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "3d082bebff442b95": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -1905,17 +1345,17 @@
       "confidence": 0.8,
       "detail": null
     },
+    "3d62053d42b63d50": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
     "3d6c977d602ce5b5": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "3d99ba81dc4f21cb": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "3da347000390ba9d": {
+    "3d8b35a61a8b703a": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
@@ -1925,15 +1365,15 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "3de9bb4db18dbd30": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "3e10bd168e26a73f": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "3e7385a55553f6aa": {
+      "choice": "answer_not_determinable",
+      "confidence": 0,
+      "detail": "The passage does not include the two policies needed to determine the outcome."
     },
     "3e7c612a7f599235": {
       "choice": "error",
@@ -1950,12 +1390,7 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "3eb5d682db639b4b": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "3eb78e96d04b34ea": {
+    "3eafb1df04e537be": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -1970,22 +1405,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "3f3c3937d8729ff4": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "3f50a41d256fb083": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
     "3f906eba0a5f4187": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "3fe1dc7f9d60f88d": {
+    "3f9b633990fa293b": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -2000,12 +1425,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "400b1a53d4ad48d0": {
+    "4016973c94f97897": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "4016973c94f97897": {
+    "401f99f64860d647": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -2015,12 +1440,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "405c7a6e69870645": {
+    "4047b7a80185d428": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "406a502fbeba40d3": {
+    "405c7a6e69870645": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -2030,7 +1455,17 @@
       "confidence": 0.8,
       "detail": null
     },
+    "4081bb26c730699c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
     "40c6dc8122313565": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "40cd98734cd285ae": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -2045,37 +1480,17 @@
       "confidence": 0.8,
       "detail": null
     },
-    "41df09b95915dc64": {
+    "41b9bb58fdc3acbc": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "41f1549f1f2b6d97": {
-      "choice": "good_exam_item",
-      "confidence": 0.9,
-      "detail": null
-    },
-    "423e7575b68d63d6": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "425dd35beb21a68e": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "427eb2306f2e8037": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "42ba37161f82ac47": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "42bf408125ff319f": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "42e5119fa38133bf": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -2095,22 +1510,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "434f0d6d4f7221b6": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "43bb37c7e0b646d7": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "43e4209c3687e27a": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "4421eee6405909be": {
+    "43ce819b90322fb1": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -2130,42 +1530,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "44e2dfd94e2121f3": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "459f5631b12ab900": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "45b4c994cc25ffe0": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "45ba83e91cf4e077": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "45bde914d0a80d66": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "45d72eb3bfb5c5fb": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "463bac086df5e639": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "465a49dfebaa71ef": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -2210,27 +1575,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "479e60a11d52b77c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "47b19a7e7d52c813": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "47d02914eb6120a3": {
+    "4788af270b0eb838": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
     "47d1ca85a8c1636b": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "47d766faa99bc084": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -2244,21 +1594,6 @@
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
-    },
-    "4811f6085dd9c0bb": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "4815171b3300b866": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "482ab0e6b703581e": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
     },
     "482efabce922471a": {
       "choice": "good_exam_item",
@@ -2275,16 +1610,6 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "48f0fffbc9f1e76b": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "48fb3e9f23fe4c40": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "48fc0180839e8cd1": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -2300,37 +1625,27 @@
       "confidence": 0.8,
       "detail": null
     },
-    "4930dce0b0e9fc20": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "497ec1c9f18c1457": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "498f2bdac51d0abb": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "49b711b96539e341": {
+    "4a0555997bcc9d16": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "49bd66f919df96ef": {
+    "4a0b43a65a777831": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "49d1bc6e118440de": {
+    "4a2aaa2cccc15861": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "4a2cee36201caac8": {
+    "4a4c9fa0c9a8b3a9": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -2340,12 +1655,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "4aa79a09b44fbd6c": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "4acd57065f763aed": {
+    "4aac1579169e631a": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -2365,44 +1675,14 @@
       "confidence": 0.8,
       "detail": null
     },
-    "4b74c8e46414a543": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "4b8d920f1ced7eab": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
     "4bc1de953dd91347": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "4bc441285fb96251": {
+    "4c1a5f76e124505a": {
       "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "4bd0d9ecf2ef2abf": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "4bde5a75bf72e034": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "4bfacdcf3c85d58d": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "4c7138cac9e07873": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
+      "confidence": 0.9,
       "detail": null
     },
     "4ca35c628ffff28f": {
@@ -2410,14 +1690,24 @@
       "confidence": 0.8,
       "detail": null
     },
-    "4cff60044d125bf6": {
+    "4ce903710d9021b5": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
+    "4ce9ce556add7ef9": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "4d130e761263d8c4": {
       "choice": "good_exam_item",
       "confidence": 0.9,
+      "detail": null
+    },
+    "4d2c648906603886": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
       "detail": null
     },
     "4d3d2f7dcc88b427": {
@@ -2440,27 +1730,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "4da7d5a98867c7dd": {
+    "4d684657daa639fc": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "4dc3d199540691c0": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "4ddf34635483a44f": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "4e29c23120732cf5": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "4e55f6ae8ade72e3": {
+    "4e14b04cc931f284": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -2475,7 +1750,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "4eaddf28bba78080": {
+    "4e921771917ae0f1": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -2485,37 +1760,22 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "4ebaa3c575a393a9": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "4ed2cd68c6daa8fa": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "4f0936ffbe4e78fd": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "4f6ddeeca7ba54b6": {
+    "4f162c27662b297b": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "4f97376832c3250d": {
+    "4f2e9dfa3acda1d5": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "5020ae9d037269db": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "50ba02f0718c8b4f": {
+    "4fcb6e427f522dc3": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -2530,9 +1790,9 @@
       "confidence": 0.8,
       "detail": null
     },
-    "50e995a2592811ec": {
+    "510ca52374177945": {
       "choice": "good_exam_item",
-      "confidence": 0.9,
+      "confidence": 0.8,
       "detail": null
     },
     "5166882449894b9e": {
@@ -2545,12 +1805,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "51fcd25131a7c736": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "51f9a6ecc1683599": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
-    "524050cfd3c87184": {
+    "51fcd25131a7c736": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -2558,6 +1818,11 @@
     "528d7149d7b6dbf5": {
       "choice": "good_exam_item",
       "confidence": 0.8,
+      "detail": null
+    },
+    "52cb029ddd65011e": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
       "detail": null
     },
     "52ee1cb283c38c77": {
@@ -2570,37 +1835,17 @@
       "confidence": 0.8,
       "detail": null
     },
-    "53500467549af5ad": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "53da9a4db36e68e0": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "53e53db98e83d6ab": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "543453a23c7217cc": {
+    "545dec9850604ba5": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "5448aa26828fb348": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "548db6cbd0aad4ad": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "5510a4d431cd1664": {
+    "54a3828aaedfdbba": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -2610,29 +1855,14 @@
       "confidence": 0.8,
       "detail": null
     },
-    "5550a4946c720905": {
-      "choice": "answer_not_determinable",
-      "confidence": 0.8,
-      "detail": "judge said c, marked d"
-    },
-    "55eb2f139895587a": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "55fc8de3a8ae8d50": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "563ac7918492c46d": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "569af4dc889f5c6b": {
       "choice": "good_exam_item",
       "confidence": 0.8,
+      "detail": null
+    },
+    "571466e35e0b8e93": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
       "detail": null
     },
     "57734b856a173189": {
@@ -2650,12 +1880,17 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "58391a227677c78b": {
+    "5875d1420a5f6cf5": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "58682ab12720545e": {
+    "58c7ef6b32d3a0d0": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "58e3805fbbe3953f": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -2665,29 +1900,14 @@
       "confidence": 0.8,
       "detail": null
     },
-    "5902e2e084526337": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "5986554664276b7b": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
-    "592e16c4200da161": {
+    "5a185f1558acd7ed": {
       "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "595caa112db1e36e": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "59aa728b3c4311c9": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "5a330cad70aba710": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
+      "confidence": 0.9,
       "detail": null
     },
     "5a5b9a164be54d12": {
@@ -2700,22 +1920,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "5a6cccfe561559f4": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "5a8c15b5594dc81c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "5aaca32ab41e70bd": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "5ac123cd182c10f4": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -2735,34 +1940,14 @@
       "confidence": 0,
       "detail": "The passage does not discuss encapsulation or source-identity metadata."
     },
-    "5ae08adfc5066db6": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "5af4a59cc9721521": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "5b07e7560f42654c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "5b253c1d0854bfbb": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "5b271e3ae5d981fb": {
       "choice": "good_exam_item",
       "confidence": 0.9,
-      "detail": null
-    },
-    "5b66a47fcd01370a": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
       "detail": null
     },
     "5ba57a29183db475": {
@@ -2775,6 +1960,16 @@
       "confidence": 0.8,
       "detail": null
     },
+    "5bb0de73e892fa59": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "5bc348f8f5cc5a7c": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
     "5bf3bb6744743023": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -2785,9 +1980,19 @@
       "confidence": 0.8,
       "detail": null
     },
+    "5c172a17f258cf82": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "5c3dae2c87b49dd8": {
       "choice": "good_exam_item",
       "confidence": 0.9,
+      "detail": null
+    },
+    "5c56e8bbe8252b11": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
       "detail": null
     },
     "5c5b21836387ddad": {
@@ -2795,27 +2000,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "5ca265fe24bdacf6": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "5cad3e21666030ec": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
     "5caecf1552439516": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
     "5caf52a0160fd74d": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "5cd1bf60f83841eb": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -2835,37 +2025,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "5d7771323c12ebef": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "5dac369d7c670b32": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "5e280140bac3427a": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "5e50bf95f2878582": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "5e6fab343b239c46": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "5e9a3730b3b63da9": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "5ea26ce2b8a4f1af": {
+    "5e1744977370dcea": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -2875,20 +2035,25 @@
       "confidence": 0.8,
       "detail": null
     },
-    "5f428cb1c1940240": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "5f64d7ec226e01a4": {
-      "choice": "good_exam_item",
-      "confidence": 0.9,
-      "detail": null
+    "5f3d3c01a4a0ad96": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "5f71c3a516336c11": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
+    },
+    "5f800d943d048e63": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "5fbd157ba8705b6f": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
     },
     "5fc366ebf9e8a442": {
       "choice": "good_exam_item",
@@ -2900,22 +2065,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "600109b4a825a2dd": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "6008c2514524aa3d": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "601ea0a6d0d54e40": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "603a44141b73c99b": {
+    "6036faba00c783ec": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -2930,17 +2080,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "6065f3e8dbf9b5db": {
+    "60950f52ac506e21": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
     "60a8265533766198": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "60da4d83d5cd0ac8": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -2960,7 +2105,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "61cd9ac937840899": {
+    "612e06c7f9836fc9": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "61647b6289588d19": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -2970,30 +2120,10 @@
       "confidence": 0.8,
       "detail": null
     },
-    "623dd28d69c045be": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "6244129f521695f0": {
+    "623f97ca6121cc33": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
-    },
-    "6252df420edcb816": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "629f919e9b58d369": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "62c390902605a508": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
     },
     "62c951df9c55fdfc": {
       "choice": "good_exam_item",
@@ -3005,12 +2135,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "62f4fd28b4dc8fc6": {
+    "6306325413303485": {
       "choice": "good_exam_item",
-      "confidence": 0.8,
+      "confidence": 0.9,
       "detail": null
     },
-    "63276415d121fbab": {
+    "6354f406bc095d5d": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -3020,17 +2150,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "63ae3ee80e96423c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "63ce510341eb1a3a": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "643519fac2f01474": {
+    "641f37166f96dda1": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -3040,47 +2160,32 @@
       "confidence": 0.8,
       "detail": null
     },
+    "644ea8e0938cb602": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
     "64577020ef45c4eb": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "64619f19d1fef723": {
+    "649e3abc66890da6": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "64debc90e73ba032": {
+    "64c95ea1ad54333d": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "64fc60e363c65296": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "65193ba15b3e5465": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "652c3b6962af248a": {
+    "651ab992285faf8d": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
     "653ac7121a014a09": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "653f9a7e447e4c3c": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "655fc358d1b89da3": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -3095,12 +2200,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "65961a0fb18b9093": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "659e9378095ccbe1": {
+    "65a0ea8d11d7c3d5": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -3120,6 +2220,11 @@
       "confidence": 0.8,
       "detail": null
     },
+    "6640bf33fb2011d9": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
     "664f01a0bbcece7a": {
       "choice": "good_exam_item",
       "confidence": 0.9,
@@ -3130,37 +2235,7 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "66826213a43f00e4": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "66adbd2dbfc73677": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "66b5399073c0ca33": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "66d1cf755298f163": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "66dbd620ae387fb4": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "66e5b31d403787a2": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "674c0160083b5815": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -3170,7 +2245,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "679f8f46641e0081": {
+    "67b0e55d46a9d4f9": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -3190,11 +2265,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "6801f93e5b0c6808": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "6846e3a9c981ebb3": {
       "choice": "error",
       "confidence": 0,
@@ -3205,12 +2275,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "68a8ee997188b331": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "68b2c14c2077bf20": {
+    "686bfec40a88e9cd": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -3220,25 +2285,10 @@
       "confidence": 0.8,
       "detail": null
     },
-    "68f97b1d0ce96e26": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "690acab9b6c3234c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
-    },
-    "691ef9fdf1f33978": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "69955fc20c653224": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
     },
     "699ff7b67caa885b": {
       "choice": "good_exam_item",
@@ -3255,31 +2305,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "69c323fc606296ca": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "69c59440cb0f31db": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "69e71f174dd0f8dd": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "6a3cc523bd09ea13": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "6ab8fd9e1e018465": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "6ada5d037986672e": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -3290,27 +2315,22 @@
       "confidence": 0.8,
       "detail": null
     },
+    "6b18ec645c2ad242": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
     "6b48492c46f59700": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "6b754e439614926a": {
+    "6b8170975229cd4f": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
     "6b97d3770bf307ea": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "6bb0eb6a50865cfa": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "6bb2b86d0350cfa0": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -3325,22 +2345,32 @@
       "confidence": 0.9,
       "detail": null
     },
+    "6bff948e5d0a6c2c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
     "6c26c34ba31242ce": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
-    },
-    "6c5beefb7f276445": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
     },
     "6c611a5bee535347": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "6c7882353ed127a9": {
+    "6c6b6b807e522ac3": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "6c83ec25291247f2": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "6c9e23cc240865c9": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -3350,17 +2380,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "6cbd0dea02747496": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "6cdadb2132e03962": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "6cdf7c78cf88ede0": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -3380,17 +2400,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "6da383d4560cdb12": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "6da5392396cabfec": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "6db8e1971b971331": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -3405,17 +2415,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "6e0ef46a5aaf1a9a": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "6e17b4a815d4997b": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "6e9185a92ed2ccab": {
+    "6e07584f3958b54b": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -3425,10 +2425,10 @@
       "confidence": 0.8,
       "detail": null
     },
-    "6e9616712308961b": {
-      "choice": "good_exam_item",
-      "confidence": 0.82,
-      "detail": null
+    "6ea10bbf0e0674df": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "6ef5434fef81e13d": {
       "choice": "good_exam_item",
@@ -3445,7 +2445,22 @@
       "confidence": 0.8,
       "detail": null
     },
-    "7018568dd8a052ec": {
+    "6f90b2e0ee4fe7d3": {
+      "choice": "answer_not_determinable",
+      "confidence": 0.8,
+      "detail": "judge said a, marked b"
+    },
+    "6f9eef697c738765": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "7004d2c4c0b90b1e": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "70153c278bdb6f32": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -3460,17 +2475,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "7082834c02ad544b": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "708cee20d04dbe2f": {
-      "choice": "good_exam_item",
-      "confidence": 0.9,
-      "detail": null
-    },
-    "70918bcfcf0b998f": {
+    "708b23f64ec9a946": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -3480,20 +2485,10 @@
       "confidence": 0.8,
       "detail": null
     },
-    "7109a23eda83e8ec": {
+    "71d0285c9ce37b0b": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
-    },
-    "718576fa41eae0e4": {
-      "choice": "good_exam_item",
-      "confidence": 0.9,
-      "detail": null
-    },
-    "71c686327c88b4ff": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
     },
     "71ec9785c10200f5": {
       "choice": "good_exam_item",
@@ -3505,9 +2500,9 @@
       "confidence": 0.8,
       "detail": null
     },
-    "724f8d58ba941529": {
+    "721290a72f067a08": {
       "choice": "good_exam_item",
-      "confidence": 0.8,
+      "confidence": 0.9,
       "detail": null
     },
     "727da2947569c9c8": {
@@ -3515,12 +2510,7 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "72e8457dc508c64d": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "72f28fc684a93ee5": {
+    "72e570b8e1540950": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -3535,22 +2525,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "733f6a5a87ea82a8": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "7376d8b2c8744e67": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "7378ce1c9900d8ab": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "73f102cb584dd05a": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -3560,22 +2535,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "7465ed571ea82e2c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "7468eaf657322692": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
     "748484f3fbea2800": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "74a0699f636b2a89": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -3585,37 +2545,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "7525e5e3ce4650a7": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "7530944cff6f131a": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "754c62f91a4280fb": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "754f3a92f6e3b326": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "75762c1a02ba2155": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "75e68b0712e0699e": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "75e9ae2d61092b7c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -3625,10 +2555,10 @@
       "confidence": 0.8,
       "detail": null
     },
-    "7649fd433f96e3cd": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "761aab42870ab6b4": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "7662a4dcaad55993": {
       "choice": "good_exam_item",
@@ -3650,32 +2580,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "7744360364589462": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "7760f7d788ff4f1c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "776cdbc794600953": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "77a43824d9bb1533": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "782ad72afe8658cb": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "78574df7b709a170": {
+    "7853f9431b3f137c": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
@@ -3685,12 +2595,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "7878ac485e3ae525": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "78f3a8a7eb254371": {
+    "78bee704cb314a51": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -3700,12 +2605,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "7960ca365742f71f": {
+    "79a37ecd96fdb07d": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "79752cc4ba840fed": {
+    "79a6793d31b0e65f": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -3720,17 +2625,17 @@
       "confidence": 0.8,
       "detail": null
     },
+    "7a6ba0a265896312": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
     "7a97b9086c389b8e": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
     "7a9ab670a745bbbf": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "7abd4bad86403daa": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -3750,62 +2655,22 @@
       "confidence": 0.8,
       "detail": null
     },
-    "7b974570fde7741a": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "7b9eef3d75b948a5": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "7bd1fd62d92bb9fc": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "7bd6dba59ea8d632": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "7bf6a3a43d933d0b": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
-    },
-    "7bfdd8c50e107601": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "7c07588b4ab80878": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "7c07dd0ed0148767": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
     },
     "7c0a82a1b311f003": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "7c20758b3d38368b": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
     "7c4f09238e32497b": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "7d367fdff21f07ba": {
+    "7c7f23bc11ce51e9": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -3820,20 +2685,10 @@
       "confidence": 0.8,
       "detail": null
     },
-    "7d73aedc58406f02": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "7d84baf5caa64b64": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
-    },
-    "7dfd45228b9db3b0": {
-      "choice": "answer_not_determinable",
-      "confidence": 0.8,
-      "detail": "judge said b, marked a"
     },
     "7e070f815ec65ffd": {
       "choice": "good_exam_item",
@@ -3841,11 +2696,6 @@
       "detail": null
     },
     "7e24814727cdf942": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "7e2d208c4c5846e5": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -3860,17 +2710,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "7e6c318497b9d591": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "7e95f130090f41c4": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "7e965d46f48bdd2c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -3880,22 +2720,7 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "7f24386586639cfc": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "7f2ff78305486a4e": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "7f652fed3b17cf95": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "7f69eea12b56b8bd": {
+    "7f47589d33a98ca1": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -3905,22 +2730,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "7f8248f2864cfb1b": {
+    "7f832c819f00c6ad": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
     "7fe67309a43724f1": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "7fe69fafe9d8c24c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "80558031899d986c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -3935,72 +2750,22 @@
       "confidence": 0.8,
       "detail": null
     },
-    "807a5de94bd865fc": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "80a6628b6725b36a": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "80a7e53e54eaba69": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "80a9b621a3fdcb53": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "80ab674774cdb14e": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "80d793e949b62ed1": {
+    "80b5e113247e36d4": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "80f3c1ce7b399248": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "814c22041b072eeb": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "81552434c65fae24": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "8158205fda5154c4": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "820dc08a8ceed7d6": {
+    "80de9b324b0d6507": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "821f38af999775ae": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "8229469584c1d381": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "82467a2b31c032d0": {
+    "8208bc036d8967ed": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -4010,17 +2775,7 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "8294935743dbe5f6": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "829f50716cf004a9": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "82b76837f2103626": {
+    "8292302066ce6951": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -4040,22 +2795,12 @@
       "confidence": 0.9,
       "detail": null
     },
-    "8418da60b718d399": {
+    "8415e75fcfb3bb36": {
       "choice": "good_exam_item",
-      "confidence": 0.9,
+      "confidence": 0.8,
       "detail": null
     },
     "842a6ea5de9c8421": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "842c543460fa0c44": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "8433e01dcf2bab9b": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -4065,45 +2810,25 @@
       "confidence": 0.9,
       "detail": null
     },
-    "8486b4fae027427b": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "84662eb25681d110": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
-    "849abc20b04be4e6": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "84ad5dfbd92acb38": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "8473daf4bf3e25a0": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "84dafe2b47816228": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "850c53d880558584": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "8513d53366f83445": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "8515061745b44ef2": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
-    },
-    "851a8ef5bb937f60": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
     },
     "85305e9fd50443be": {
       "choice": "good_exam_item",
@@ -4115,12 +2840,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "86141ba54d076bac": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "86307a919bb1634c": {
+    "85578d06bbe93055": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -4140,15 +2860,10 @@
       "confidence": 0.8,
       "detail": null
     },
-    "86c23be24c43f674": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "86df6bb2afbd32c7": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "870c0ebe9ce48760": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "8712a8bbed09459a": {
       "choice": "error",
@@ -4160,47 +2875,27 @@
       "confidence": 0.8,
       "detail": null
     },
+    "872ac8aab516af9f": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
     "873bfd3ae1996ac7": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "8774d507a0d71f86": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "877f12f3f1b7b916": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "879b3d021ac87b8c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "87b76f106d786caf": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "87d192063db8b80c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "87e854bbecdc26de": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "87e2b856528c2d22": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "87fe8361ca23b7e5": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "8843b2c78b19a81d": {
+    "883b69a74333cd1a": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -4215,9 +2910,9 @@
       "confidence": 0.8,
       "detail": null
     },
-    "889a43c426427089": {
+    "88ae1e47c6181acd": {
       "choice": "good_exam_item",
-      "confidence": 0.9,
+      "confidence": 0.8,
       "detail": null
     },
     "88bc0ed7c8283f4f": {
@@ -4226,16 +2921,6 @@
       "detail": null
     },
     "88c2756e98988f28": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "88c5bbe744680b30": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "88dedaf32614e7b3": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -4255,17 +2940,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "8961951011200f92": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "89686573040820c3": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "896ac481644d0887": {
+    "897651f2604a16a8": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -4275,22 +2950,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "89c112310122f83b": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "89eb622207698eaa": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "8a0ca8bd067f29f1": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "8a58f060c13545ff": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -4325,17 +2985,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "8b0bea1216628c26": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "8b271fceab733d3a": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "8b306511c75560e8": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -4345,17 +2995,7 @@
       "confidence": 0.9,
       "detail": null
     },
-    "8b5b0fa1df07c661": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "8b7367fca6db848c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "8b7802f1ca889309": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -4365,57 +3005,17 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "8bb6344600a78b10": {
-      "choice": "good_exam_item",
-      "confidence": 0.9,
-      "detail": null
-    },
     "8c7c6cc01f790b9a": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
-    },
-    "8c80a150bd3d0c8b": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "8c9c2c95eef0ae4e": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "8cb5d39a392008c0": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
     },
     "8cbdf3736112ea28": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "8d18d653a79cb1b0": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "8dbd6447b974b73c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "8dd5943c6e6b430a": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "8ddcf4430bc9ab0f": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "8ddde6cf117a501f": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
@@ -4430,27 +3030,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "8e526de0c4bcd39a": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "8e5497ab8912216d": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "8e68521bfcb028b6": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "8e9bc6a83dd27c84": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "8e9bdfc6e013f7cd": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -4460,19 +3040,9 @@
       "confidence": 0.8,
       "detail": null
     },
-    "8f95a5b0aad3e059": {
+    "8fed59b37905715c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
-      "detail": null
-    },
-    "908fb21d24794721": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "9097b4146205c6f0": {
-      "choice": "good_exam_item",
-      "confidence": 0.9,
       "detail": null
     },
     "90c99a74f69c3f66": {
@@ -4480,17 +3050,12 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "90f88807827354ea": {
+    "90e73989971a2373": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "911430a3c97b9bb0": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "91752ce7f56e0808": {
+    "916c3b4b2b36a7d0": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -4510,11 +3075,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "92147d85d161d6c6": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
     "921688d575427a71": {
       "choice": "error",
       "confidence": 0,
@@ -4525,42 +3085,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "9300a11e72a39af4": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "933595cfa476c0ee": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "9348d9d9def000b6": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "934df9b5e690d8ec": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "9357bd0819953759": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "936748314407458f": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "93fa7c7b8af2ce8a": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "941600c920edaf08": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -4570,27 +3095,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "9466aec62358347e": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "947045d0b1b99d98": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "94c78533833e7612": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "94d33d32a4acb260": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "94d90f40ec1e1ac2": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -4610,12 +3120,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "953e9960f121dacc": {
+    "9598a7542437ea3d": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "9598a7542437ea3d": {
+    "95aa126bba005d04": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -4635,12 +3145,47 @@
       "confidence": 0.8,
       "detail": null
     },
+    "962e605a01f09c5c": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "96540e239c3338c9": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "965877cab88cb91a": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
     "9659e4e1e25314c0": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
+    "965c7ce1d264638f": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
     "96aba39cf8cc3a75": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "96b336ebf5d6e7dc": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "96ce5b6d77b8aea9": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "96e0ac3468585afa": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -4655,22 +3200,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "97681fb7aabb0c7c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "97884cf8e1a80a9c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "9813b78de90b58e7": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "98165ad5c899b7f8": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -4700,11 +3230,6 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "98a391cb5362b15b": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "98b53577a17ca721": {
       "choice": "error",
       "confidence": 0,
@@ -4725,32 +3250,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "9907ff797a7d6002": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
     "99174cfbb3c42b74": {
       "choice": "good_exam_item",
       "confidence": 0.9,
       "detail": null
     },
-    "9931e6e60e32fb5a": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "99330398a1873212": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "994c8f4a3afa88fb": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "9954435b6774207b": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -4760,17 +3265,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "99929685c7381709": {
-      "choice": "answer_not_determinable",
-      "confidence": 0,
-      "detail": "The passage does not discuss how ServiceMonitor interacts with annotation-based discovery."
-    },
-    "99d0b1d7dbe59aca": {
+    "99812aa5d727262c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "99f921e7c2a7f919": {
+    "99d0b1d7dbe59aca": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -4780,7 +3280,7 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "9a116c3a90b15ed7": {
+    "9a70144650c8fdba": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -4790,7 +3290,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "9ace8a51d8f64876": {
+    "9aeb07ec03edb132": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -4815,20 +3315,15 @@
       "confidence": 0.8,
       "detail": null
     },
-    "9b24a41e4095b73a": {
+    "9b28bb310ea6b4b5": {
       "choice": "good_exam_item",
-      "confidence": 0.85,
+      "confidence": 0.8,
       "detail": null
     },
     "9b686daf42b08e28": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
-    },
-    "9b8d588d8790cd6b": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
     },
     "9b9262adf6663930": {
       "choice": "good_exam_item",
@@ -4850,27 +3345,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "9c663ec30e24422d": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "9c7cc8a39a86b774": {
+    "9cbd1f7bccca5111": {
       "choice": "good_exam_item",
       "confidence": 0.9,
       "detail": null
     },
-    "9cd3cc1c6668cbed": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "9d1870d1cccd2967": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "9d69caaa6823ab67": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -4890,14 +3370,9 @@
       "confidence": 0.8,
       "detail": null
     },
-    "9e7d1e6f68aa2f93": {
+    "9e8d76be34e7b68a": {
       "choice": "good_exam_item",
       "confidence": 0.8,
-      "detail": null
-    },
-    "9e89b85c8d24b280": {
-      "choice": "good_exam_item",
-      "confidence": 0.9,
       "detail": null
     },
     "9e94d7e4c833fe26": {
@@ -4905,15 +3380,15 @@
       "confidence": 0.8,
       "detail": null
     },
-    "9f89c556f510c59a": {
+    "9f0633da4abd960c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "9fba67cd7b84ca06": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "9fdea9ad39aea62c": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "9fe78e5a39a530f8": {
       "choice": "error",
@@ -4925,22 +3400,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "9ff7fea2c305636a": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "a029778d4b9044ff": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "a04ccb68c4008a7b": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "a06cc546293e2986": {
+    "a0140022fd501f7c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -4950,12 +3410,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "a0b05b9ad7dda774": {
+    "a0b65a7152c2864a": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "a0b65a7152c2864a": {
+    "a1064b61037ba7d4": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -4970,22 +3430,17 @@
       "confidence": 0.8,
       "detail": null
     },
-    "a144c30c5969ecdb": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "a190663dc6896a5b": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
-    "a16077c5bd35845d": {
+    "a19cd299b655a4d4": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
     "a1b4eaa4bfd2da08": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "a1dd88d8141ef40c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -5005,16 +3460,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "a23c114798a53108": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "a26ad8633fa57d2a": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "a283fb080e2f6e34": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -5030,7 +3475,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "a2d95220d70bf430": {
+    "a2f28ce30d30d19a": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -5045,25 +3490,15 @@
       "confidence": 0.8,
       "detail": null
     },
-    "a3b456bd8b0e9c3f": {
+    "a3c70658c43dbd4d": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "a40d5930090e6b3d": {
+    "a3f332d89721aecf": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
-    },
-    "a48c7f3c9e265686": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "a4a2f7ba25d319b7": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
     },
     "a4b0882db9582772": {
       "choice": "good_exam_item",
@@ -5095,17 +3530,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "a5494b7f19710097": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "a59d58c7c26160c2": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "a5cfb32487a17dc2": {
+    "a5aedb5e936b794c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -5120,16 +3550,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "a6302a875ff7846c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "a64ba647e4d57364": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "a652b3d796c5802c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -5140,47 +3560,12 @@
       "confidence": 0.9,
       "detail": null
     },
-    "a6854cc7d6bcaa03": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "a6a0006dbecaf4d7": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "a6b4dd709cc503f2": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "a6c8b58fd5a5d2cf": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "a6de2d347c16b21c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "a6ea2fe404760362": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "a7061fb1d0a51903": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "a74d521b46e66044": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "a7525f5bfa97a379": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -5195,22 +3580,17 @@
       "confidence": 0.8,
       "detail": null
     },
+    "a7f1efb023a24467": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "a7f856c364a09aa3": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
     "a831703c2baa35c6": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "a8510612997b0b3b": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "a855b0527c352e30": {
-      "choice": "good_exam_item",
-      "confidence": 0.9,
-      "detail": null
-    },
-    "a88b9a3468e458e2": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -5225,27 +3605,22 @@
       "confidence": 0.8,
       "detail": null
     },
-    "a8d4778257abd3b6": {
+    "a8c8ddea0f869d2c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "a98761e7264c872d": {
+    "a8f9fdaf1c27a561": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "a99f913da42a183d": {
+    "a8fbc3f2cdcf52e2": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "a9b3bf13407470e5": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "aa12b014ecd004c1": {
+    "aa15627065281c77": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -5260,32 +3635,17 @@
       "confidence": 0.9,
       "detail": null
     },
-    "aa3e5857a15fc881": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "aa5ec130fd881d27": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "aabc49c79db2c32f": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "aae4a919de571079": {
+    "aad815bde81cd525": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "aafefd8f23fbb7df": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "ab3d11bee52f1740": {
+    "ab36a1f619b480ee": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -5300,47 +3660,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "ab5ea3924b7bf442": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "aba5434e2eec3ea4": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "abb77935b62d1c8e": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "abc1913ff1224a5c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "abcf6c1db21b5964": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "abe18548e6e1e80d": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "abeba0da94bfd60d": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "ac1cc389a0206443": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "ac2d5fec618ed014": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -5350,27 +3670,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "ac90e1b338ce11b4": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "ace5ee02d23ee35f": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "acf6bb8887a630fe": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "ad096430066a8d50": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "ad225af1e3371610": {
+    "ad48582217bec219": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -5385,16 +3690,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "adc381e25b5a36f0": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "add05a782989569b": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "addb5ca2508474ca": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -5404,6 +3699,11 @@
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "ae127d0d56d90f5f": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "ae4ef1ee846680f4": {
       "choice": "good_exam_item",
@@ -5425,27 +3725,22 @@
       "confidence": 0.8,
       "detail": null
     },
-    "aef0131ab64590ef": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "af520450e2224025": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "af88db133981f4ae": {
+    "af710807cde94ff7": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "afb0c3b2bf8ab307": {
+    "af83f26f9db120cd": {
       "choice": "good_exam_item",
-      "confidence": 0.9,
+      "confidence": 0.8,
       "detail": null
     },
-    "afc072f965b3fb71": {
+    "af88db133981f4ae": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -5455,12 +3750,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "b02fa32454aa146c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "b06737c3b9fad09d": {
+    "b01646bc9a317d06": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -5475,27 +3765,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "b0b039ab5b0b964a": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "b0fc2e92550788c8": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "b1366a5a71bacd1c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "b16cdb8c9ff1d9fc": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "b1973d2bd6ce3798": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -5510,12 +3780,17 @@
       "confidence": 0.8,
       "detail": null
     },
-    "b23c00ce530f9efe": {
+    "b1ba1165decd2df7": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "b285c0049be314d2": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "b285c0049be314d2": {
+    "b296ac43f1cad550": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -5525,24 +3800,9 @@
       "confidence": 0.8,
       "detail": null
     },
-    "b2af0d90da9e12e4": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "b2c26a9643f43f83": {
       "choice": "good_exam_item",
       "confidence": 0.8,
-      "detail": null
-    },
-    "b2cc14e626b36f76": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "b2eb8c4b40454912": {
-      "choice": "good_exam_item",
-      "confidence": 0.9,
       "detail": null
     },
     "b3212bc7a2bae9cb": {
@@ -5550,47 +3810,17 @@
       "confidence": 0,
       "detail": "The excerpt does not describe encapsulation model requirements for the underlying network."
     },
-    "b35390c79bdf56d5": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "b366acfd43159a94": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "b3e32ed414383591": {
-      "choice": "good_exam_item",
-      "confidence": 0.9,
-      "detail": null
+    "b35ae940f7503511": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "b3e42311a70efbe8": {
       "choice": "good_exam_item",
       "confidence": 0.9,
       "detail": null
     },
-    "b3f6e7de37fcf251": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "b3fd439387d02624": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "b4041c5842dd5183": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "b413e0a4a493f271": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "b422e092a7a3d31e": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -5599,11 +3829,6 @@
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
-    },
-    "b4711c2acdf3fcf3": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
     },
     "b48ab0604dba7b44": {
       "choice": "good_exam_item",
@@ -5620,7 +3845,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "b50f7e906c4b64f2": {
+    "b4d886a0d60e7406": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "b4e1ff3065d0dee7": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -5635,14 +3865,9 @@
       "confidence": 0.8,
       "detail": null
     },
-    "b5464603e6995d61": {
+    "b62362037ace5da5": {
       "choice": "good_exam_item",
       "confidence": 0.8,
-      "detail": null
-    },
-    "b6489b638280fe9e": {
-      "choice": "good_exam_item",
-      "confidence": 0.85,
       "detail": null
     },
     "b6827c1c847f3937": {
@@ -5655,27 +3880,17 @@
       "confidence": 0.8,
       "detail": null
     },
-    "b6aa6d5128cca4f4": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "b6d23a0b86842c66": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
     "b6f21b1a8a3b5668": {
       "choice": "good_exam_item",
       "confidence": 0.9,
       "detail": null
     },
-    "b7886d4a75fd3c0c": {
+    "b6f335df9c52220b": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "b78b58b80060dbd5": {
+    "b7886d4a75fd3c0c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -5685,37 +3900,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "b7f36c6cf0738903": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "b81c28adf0b2eee2": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
     "b82db977d1b5c9b6": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "b852921692f0ecb7": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "b862ed3fc2a98f19": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "b87652541a8342c9": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "b896812ca29bf06b": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -5745,26 +3930,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "b8f3cab7a6be28a6": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "b9193602e834e7bb": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "b922f336f28cbd7c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "b931608fabe8f1d7": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "b9483d65d48fdb09": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -5780,27 +3945,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "b9c5d5a445a8a2b0": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "b9c13aa961a3c531": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "b9f0329fae95fa11": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "b9f6f0825f69474b": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "ba14121bb60c9806": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "ba19c987aa3da781": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -5810,17 +3960,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "ba60c2bdcaa4a28a": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "ba7741bd071736ba": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "bad80f0b23926d95": {
+    "ba80b3cc6fd7a071": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -5835,11 +3975,6 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "bb88d5b278ef89b2": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "bb99b79c07ff8247": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -5850,22 +3985,17 @@
       "confidence": 0.8,
       "detail": null
     },
+    "bbd85215df776598": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
     "bbe38d037230cd4c": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "bc0ef9f9f2db8d29": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "bc2d6bd1f8167126": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "bc4bba6cb4418fd3": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -5890,22 +4020,22 @@
       "confidence": 0.8,
       "detail": null
     },
+    "bd1f2fb2a373b4a4": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "bd250a8bc411e2c3": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
     "bd7998b432962286": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "bdbf5b5b4d94e8b3": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "bdda4825442d506e": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "be035267c1b7fd5e": {
+    "bd8be39b5d186867": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -5935,24 +4065,9 @@
       "confidence": 0.8,
       "detail": null
     },
-    "bea9af801fbc2647": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "bec2f71b2feca67c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "bee3a4a7d0d173ab": {
       "choice": "good_exam_item",
       "confidence": 0.9,
-      "detail": null
-    },
-    "beedccc9d4b39784": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
       "detail": null
     },
     "bf21240af76735e2": {
@@ -5970,7 +4085,7 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "c01c30607329be9c": {
+    "c01bb7888dd9d513": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -5980,22 +4095,7 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "c0c72dda526fcc91": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "c0d79f4a4c043366": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "c0d9b33f885d08ab": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "c11e776b27cd8e3a": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -6020,27 +4120,17 @@
       "confidence": 0.8,
       "detail": null
     },
-    "c196f9b9810f1f61": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "c198fbff7c8ac590": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "c19ddb46f26c423f": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "c1a0aa2504938948": {
+    "c1a8a58d4f588779": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "c1d777d7d05efeba": {
+    "c1b5abb0411ea83c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -6050,32 +4140,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "c2044ad8a50cecb9": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "c220cd99cfe13e25": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "c224b79bec871029": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "c238fed3dcbe0de7": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "c23dcf1f3ae57803": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "c243943373619711": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -6100,27 +4165,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "c2e5e7f21782f383": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "c32c1c922e2209e5": {
       "choice": "good_exam_item",
       "confidence": 0.9,
       "detail": null
     },
-    "c3361b7fd271dd85": {
-      "choice": "good_exam_item",
-      "confidence": 0.9,
-      "detail": null
-    },
-    "c36165f45e297653": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "c3914c0dd31bb4cb": {
+    "c345245868da7487": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -6130,10 +4180,20 @@
       "confidence": 0.9,
       "detail": null
     },
+    "c399a526be6cc7b1": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
     "c3ad3b766b9bb1e1": {
       "choice": "answer_not_determinable",
       "confidence": 0.8,
       "detail": "judge said a, marked b"
+    },
+    "c3c95bb4065c1413": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
     },
     "c3e17c171cb70ede": {
       "choice": "good_exam_item",
@@ -6160,16 +4220,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "c491ea98ba43591d": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "c4c546c48822e7ab": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "c4efbbbdc8bc1810": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -6180,27 +4230,7 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "c51f57ed6fa26558": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "c5395f6f69b8bdb5": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "c540bbb79284ac8a": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "c545001035638a28": {
-      "choice": "good_exam_item",
-      "confidence": 0.9,
-      "detail": null
-    },
-    "c54c19f90ff4c867": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -6215,35 +4245,15 @@
       "confidence": 0.8,
       "detail": null
     },
-    "c5e723bd8397cc5c": {
+    "c6345583088bfb65": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "c6777b3a274ae2dd": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
-    },
-    "c6209094da133e53": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "c625329797f77e2f": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "c64797105246036d": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "c65c43d26362c21f": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "c67a8a12ae45a953": {
-      "choice": "answer_not_determinable",
-      "confidence": 0,
-      "detail": "The passage does not discuss cilium-agent or Envoy metrics."
     },
     "c6d644584b60bed9": {
       "choice": "good_exam_item",
@@ -6280,11 +4290,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "c7fefd10c8e1fd8a": {
-      "choice": "good_exam_item",
-      "confidence": 0.9,
-      "detail": null
-    },
     "c81920221d9f74ad": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -6295,17 +4300,17 @@
       "confidence": 0.8,
       "detail": null
     },
-    "c87787f86cfa3b3b": {
+    "c892416afa22baf2": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "c8891e661bc8db93": {
+    "c8ac3ec715a1ff1b": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "c8b6fdbaee6ce2d1": {
+    "c8d6ae2e70d668f6": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -6320,7 +4325,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "c96327aaf878d4a5": {
+    "c9812c6f1ac5155a": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -6329,6 +4334,11 @@
       "choice": "good_exam_item",
       "confidence": 0.9,
       "detail": null
+    },
+    "c9fc95c49c0b1851": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "ca0ca3e7855d63d9": {
       "choice": "good_exam_item",
@@ -6355,32 +4365,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "ca8403e7d2c07403": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "ca8b4576c218b3a5": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "caac2ad72d24f86c": {
-      "choice": "answer_not_determinable",
-      "confidence": 0,
-      "detail": "The excerpt only mentions hubble.metrics.port and does not identify ports for the agent, Envoy, or operator."
-    },
-    "caadee6363c83ea4": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "cadfa99373610700": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "caf034fb35b03277": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -6395,7 +4380,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "cbb5c3844aed8204": {
+    "cbb557411e154759": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -6410,7 +4395,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "cc0751c2e1b6c2fd": {
+    "cbfa28532b7a1cb6": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -6420,12 +4405,17 @@
       "confidence": 0.8,
       "detail": null
     },
+    "cc6533868be9cd70": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
     "cc6819b6b1bb5050": {
       "choice": "answer_not_determinable",
       "confidence": 0,
       "detail": "The excerpt does not describe Auto-configuration in Cilium."
     },
-    "cc94fd8b0a756b92": {
+    "cc943d7477358a7a": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -6435,27 +4425,17 @@
       "confidence": 0.8,
       "detail": null
     },
-    "ccb9ebefe7057d51": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "ccbee405d7fafef1": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "ccf64059d1dc148d": {
+    "ccc6bc51e7a0481a": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
     "cd2501ab8ed553d3": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "cd26eb87b8bab42c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -6480,42 +4460,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "cddacc607fdbbe5c": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "ce142e7ce920fba3": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "ce17d6c2636cb81e": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "ce3fda7d6b4c4a8a": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "ce57f7a7e1fcbf5c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "ceaab1372a1f4879": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "ced1077f5829a715": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "cee18651400cd193": {
+    "ce69817643d13983": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -6525,7 +4475,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "cf7f009b682307cd": {
+    "cf98391de5e2f87d": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -6535,32 +4485,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "cfafe8c9117c93b0": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "cfc285b9aa31bdec": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "cfe6f1a495f579db": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "cfe730b4ca6fc4ce": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "d031e8bfe1dd77c5": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "d0654a04d702e066": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -6580,34 +4505,9 @@
       "confidence": 0.8,
       "detail": null
     },
-    "d07e35ee6b589dfc": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "d096760dd2e84f2c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
-      "detail": null
-    },
-    "d0ad90748086729e": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "d0c551ec0b50a4ea": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "d0c8f382d626b4c9": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "d0d2dcce46992b69": {
-      "choice": "good_exam_item",
-      "confidence": 0.9,
       "detail": null
     },
     "d1073d77f01e1cf4": {
@@ -6615,32 +4515,17 @@
       "confidence": 0.8,
       "detail": null
     },
+    "d1269a0fd8e53460": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "d1405ec88a11544c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "d18b74604c89b681": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "d18ce98efd265cdb": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "d1da4193e835f261": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "d20337163c81835e": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "d2406bc4c5ff1767": {
+    "d1fb071f02a116a8": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -6650,14 +4535,19 @@
       "confidence": 0.8,
       "detail": null
     },
-    "d2e8eaf5b379a7e5": {
+    "d2dec3d3884e2fdc": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "d342fa2d114bf622": {
+    "d381789466311b7d": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "d3917501e96e1fa0": {
       "choice": "good_exam_item",
-      "confidence": 0.8,
+      "confidence": 0.9,
       "detail": null
     },
     "d3ed474ed88352df": {
@@ -6665,17 +4555,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "d4107cc93b876bbd": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "d415b83782fe0156": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "d4395a5f69df5554": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -6695,17 +4575,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "d4934fe7fe8e009a": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "d499643795e218ba": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "d4bd2008cd31d9cb": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "d5471899839ce49f": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -6720,10 +4595,10 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "d5a2694c4dd350c4": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "d5c1ceb4cb799fc7": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "d5cac0c2a1278640": {
       "choice": "good_exam_item",
@@ -6735,21 +4610,6 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "d60d15585d29bcb9": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "d61f69dc967f13fb": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "d62d627cdaf90aad": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "d63b1dcec341efcc": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -6760,12 +4620,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "d6cd27d3d50e356a": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "d6da07fbf00cf725": {
+    "d6e85301c5524d46": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -6775,12 +4630,22 @@
       "confidence": 0.9,
       "detail": null
     },
+    "d74cddde0bffba30": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "d79132c5ff538973": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
     "d7b7f8cdbe45e2ed": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "d87e4732420363ae": {
+    "d7f5bf4b50b92e3f": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -6795,12 +4660,22 @@
       "confidence": 0.8,
       "detail": null
     },
-    "d8f456cfd467ad1c": {
+    "d8f38ed0d1027665": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
     "d9192bc7067a3248": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "d9214d0c73a89390": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "d938cac82ed65996": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -6811,11 +4686,6 @@
       "detail": null
     },
     "d94fddb00c511b30": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "d99b85adec2457e6": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -6845,21 +4715,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "da441e0c7de6129c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "da68852cecf8975e": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "da9efd09dcce2572": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "dab337554ad817a9": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -6885,6 +4740,11 @@
       "confidence": 0.8,
       "detail": null
     },
+    "db0bb6676d6a89ab": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
     "db276b836fd7ca8c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -6895,17 +4755,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "db639c4599056e33": {
+    "db4bf0bcc17874fa": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "db745f460805e75b": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "db88c13425749d68": {
+    "db8ce07aa419f854": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -6925,47 +4780,17 @@
       "confidence": 0.8,
       "detail": null
     },
-    "dc6ec5e44730299f": {
+    "dc87746c49bd4dfc": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "dc9df52f47925d15": {
+    "dc94fe90d4c4b40f": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
-    },
-    "dca6642cf497e620": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "dca7df415b593cae": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "dcad78cec26f4d5d": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "dcc7c46ea05a242c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "dd0f99cf9a1736be": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
     },
     "dd180d8442a08ef4": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "dd74bcee7c1b4852": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -6975,10 +4800,15 @@
       "confidence": 0.8,
       "detail": null
     },
-    "ddea1ad7a4e5b3b7": {
+    "ddbc3e3d6c050ae4": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
+    },
+    "ddd64c6b5da43a5c": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "de240b9a11add12b": {
       "choice": "good_exam_item",
@@ -6986,11 +4816,6 @@
       "detail": null
     },
     "de438a410bbaa07a": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "de59edcfe760cb58": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7005,7 +4830,7 @@
       "confidence": 0.9,
       "detail": null
     },
-    "df2215d996ac82b6": {
+    "deae08560cbd3382": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7015,12 +4840,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "df900dc79cff2036": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "dfd3915839da2f4f": {
+    "dfc03021200aea4f": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7035,6 +4855,11 @@
       "confidence": 0.8,
       "detail": null
     },
+    "e011c5e86229a4c7": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
     "e012c66859935941": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -7045,52 +4870,22 @@
       "confidence": 0.8,
       "detail": null
     },
-    "e0a4c4d26770256e": {
+    "e0eb8cb3330727b1": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "e0a57b1010f1d20d": {
+    "e12a8aa4959b6d31": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "e0c3d0891343214a": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "e100b6da8220dc41": {
+    "e13a5918ae3b7362": {
       "choice": "good_exam_item",
       "confidence": 0.8,
-      "detail": null
-    },
-    "e117f978ce313b10": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "e1330371905b34b5": {
-      "choice": "good_exam_item",
-      "confidence": 0.9,
       "detail": null
     },
     "e1532aa529e46ce3": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "e159810f5cd5f668": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "e183f182a249d906": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "e187d35df47162be": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7100,17 +4895,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "e1b8bc3c95c6da8e": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "e1d0c6173eff651a": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "e205c09cc80b7860": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "e20f0beec30f3dc1": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7130,12 +4920,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "e32948a7b455801d": {
+    "e327a506cc528fe9": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "e32e55570e19d4a4": {
+    "e32948a7b455801d": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7150,16 +4940,6 @@
       "confidence": 0.8,
       "detail": null
     },
-    "e3ebdc346e95b5c5": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "e417b8cf0c562538": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "e440d852c638b8cc": {
       "choice": "good_exam_item",
       "confidence": 0.8,
@@ -7170,32 +4950,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "e4c496a49a8a2934": {
+    "e51e02a74b27be35": {
       "choice": "good_exam_item",
       "confidence": 0.8,
-      "detail": null
-    },
-    "e4c4edde4d38029b": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
-    "e518a6fb977c472b": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "e53da347f24dc9df": {
-      "choice": "good_exam_item",
-      "confidence": 0.9,
       "detail": null
     },
     "e58b27115d0f3ff8": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "e59cf769f91cc926": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7220,7 +4980,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "e69ef90f3217637e": {
+    "e6c9c7f7c70e10b7": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7230,17 +4990,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "e729a902bcfae7be": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
     "e73a7fd742bcdde2": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "e75a6fc9e7d67925": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7250,12 +5000,7 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "e76fa68e7890e92c": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "e7b039f18b158c97": {
+    "e7753b9d0a284fdb": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7280,12 +5025,22 @@
       "confidence": 0.8,
       "detail": null
     },
-    "e85c45b7bdb3ae38": {
+    "e867cc7e765a8748": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "e873482c23e24c42": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "e873482c23e24c42": {
+    "e8788ad23f7880b4": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "e8b798e30b63edf2": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7300,27 +5055,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "e8fa080406eab422": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "e92f7d1d627a6718": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "e932edd05150f58f": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "e9b526cd8d935bc4": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "e9e4e7ca1c71860d": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7330,22 +5065,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "ea5e410bd32f787b": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "ea69312e2e6cc9c8": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "ea9f90ba07e6601b": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "eb2070f102054962": {
+    "eb3a47a647a246b9": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7355,22 +5080,7 @@
       "confidence": 0.9,
       "detail": null
     },
-    "eb6e1ffa6e214bf4": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "eb7842579ba27879": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "eb9f171121e2a1da": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "ebb5b1b785237029": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7385,12 +5095,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "ec08515a9a7a2796": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "ec1dab6b1a17c6c3": {
+    "ebf3bc990739bebc": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7400,7 +5105,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "ec6539810bde5ba4": {
+    "ec8b55c9fd0bdc38": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7410,17 +5115,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "ece97476469e5796": {
-      "choice": "good_exam_item",
-      "confidence": 0.9,
-      "detail": null
-    },
-    "ed012c7b0e2d7569": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "eda23d73bb66c419": {
+    "edc8f441f77396da": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7435,12 +5130,17 @@
       "confidence": 0.8,
       "detail": null
     },
-    "ee8bc1e05e9e6c8b": {
+    "ee6500883c07bac2": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
+    "ee87a60cb0939e51": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "ee9d5ca5b6c914b5": {
+    "ee8bc1e05e9e6c8b": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7455,20 +5155,20 @@
       "confidence": 0.8,
       "detail": "The excerpt does not present a real-time monitoring approach for HTTP requests; it mentions describe and cilium-dbg policy get."
     },
+    "ef0a367d35f65241": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
     "ef13bc691fd52a88": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "ef4534f33cc998ff": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "ef723ee8992971a8": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "ef3a0c6930c92c6c": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "efa47379922d5ee5": {
       "choice": "error",
@@ -7480,11 +5180,6 @@
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "efb7967a5d6e82fb": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "efc2be63620fd201": {
       "choice": "good_exam_item",
       "confidence": 0.9,
@@ -7495,17 +5190,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "f04e37d24c7b3d81": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "f06ab507cff909df": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "f0980e998eff41bb": {
+    "f0c12a62f1785906": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7515,12 +5205,17 @@
       "confidence": 0.8,
       "detail": null
     },
-    "f12c8917dc9980e1": {
+    "f0fd578f664b130c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "f13b7ec0bb3dd6bb": {
+    "f113a037cc8d33eb": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "f11474346951f986": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7530,32 +5225,37 @@
       "confidence": 0.8,
       "detail": null
     },
-    "f14d1264db1074fa": {
-      "choice": "good_exam_item",
-      "confidence": 0.9,
-      "detail": null
-    },
     "f156dd09c529c9f7": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "f16b88f943e0c876": {
+    "f167d11f952e932f": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "f19ba06185d0c012": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "f1dcd3a8e0be11c9": {
+    "f2055b430e4974e2": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "f24f7168352f24c7": {
+    "f2060a5aba730f63": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "f269ff44e30adce6": {
+    "f210d10aa02a5510": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "f2666955f3d080da": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7565,12 +5265,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "f2b92d4092781fc9": {
+    "f2d8b8a7f3986df1": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "f2d8b8a7f3986df1": {
+    "f2da8be10257737f": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7580,22 +5280,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "f326f74049593224": {
-      "choice": "good_exam_item",
-      "confidence": 0.9,
-      "detail": null
-    },
-    "f32e6156a0797483": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
+    "f33135726a876daf": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
     },
     "f3329aadef522a25": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "f33b9eb8b7f42224": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7610,7 +5300,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "f3b05aec1d9d278d": {
+    "f37c2a1c903c1ca7": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "f3cee8a7287025cc": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7620,7 +5315,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "f44d8319bd8f4b64": {
+    "f40396be74a68db8": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "f44c33deff529760": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7650,12 +5350,22 @@
       "confidence": 0.8,
       "detail": null
     },
-    "f4b5f1eb64a2880e": {
+    "f4c128647849be58": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "f4c128647849be58": {
+    "f4dc738384a96d7d": {
+      "choice": "error",
+      "confidence": 0,
+      "detail": "no verdict returned for this key"
+    },
+    "f4e71f3798ddd853": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "f4e86cddc0daf263": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7665,52 +5375,22 @@
       "confidence": 0.8,
       "detail": null
     },
-    "f51f4c6621c9ddb0": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "f570a41af8e9078c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "f573fd81fe3b794f": {
+    "f61e48646919761e": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "f58e6412842918bf": {
+    "f6296461a3e8c512": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "f5aef8e4f5ce0e18": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "f5c651e8ad533702": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "f5fdd29cfca22937": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "f632291f5c0806af": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "f634d6123d0571ff": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "f66478ec599bab8b": {
+    "f654ec354d272d39": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7730,27 +5410,27 @@
       "confidence": 0.8,
       "detail": null
     },
+    "f762ff144d8cc78c": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "f821d1ef90dd1ba4": {
+      "choice": "good_exam_item",
+      "confidence": 0.9,
+      "detail": null
+    },
     "f825da87d45bb12c": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "f836bf2a44070bc0": {
+    "f83b334dbd622cc0": {
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
     },
-    "f86977c82432b807": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "f881d11d5a1b41f3": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "f8edcdba23cb8baa": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7760,27 +5440,17 @@
       "confidence": 0.8,
       "detail": null
     },
-    "f99325c06723e0f3": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "f9b72371c7056e4e": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "fa01d449bf5a821d": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "fa4ccf5173bf640c": {
       "choice": "answer_not_determinable",
       "confidence": 0,
       "detail": "The excerpt does not cover Identity context in Cilium."
     },
-    "fadaac6a955def45": {
+    "fa7186f5b1517d28": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "fa80f1105b4a48af": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7789,6 +5459,11 @@
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
+    },
+    "fb424d72780edf63": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
     },
     "fb5579ff990c7626": {
       "choice": "good_exam_item",
@@ -7800,12 +5475,12 @@
       "confidence": 0.9,
       "detail": null
     },
-    "fb9c57e0b906d06b": {
-      "choice": "error",
-      "confidence": 0,
-      "detail": "no verdict returned for this key"
-    },
     "fbeaed867b8562d0": {
+      "choice": "good_exam_item",
+      "confidence": 0.8,
+      "detail": null
+    },
+    "fc0333af9f0c319d": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7813,31 +5488,6 @@
     "fc1942dd03aff71e": {
       "choice": "good_exam_item",
       "confidence": 0.9,
-      "detail": null
-    },
-    "fc1c280072b47cf7": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "fc4dc46a0403deae": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "fc50725b13069673": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "fc780d8ff8458aae": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "fc82a612a5a5b51b": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
       "detail": null
     },
     "fc9a3b95432caede": {
@@ -7855,17 +5505,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "fd3911d40d592cec": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
     "fd5053427f877dbd": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "fd91e0f7cc84b0a8": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7880,7 +5520,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "fdd95ee33a0df0d5": {
+    "fdc85bfbf90438e1": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7900,22 +5540,7 @@
       "confidence": 0.8,
       "detail": null
     },
-    "fe2d1495c24ca10e": {
-      "choice": "good_exam_item",
-      "confidence": 0.9,
-      "detail": null
-    },
     "fe3303dc8df83522": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "fe46310b61a71b81": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "fe7e3ec155e7ba35": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7934,16 +5559,6 @@
       "choice": "error",
       "confidence": 0,
       "detail": "no verdict returned for this key"
-    },
-    "feb9071a3081a012": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "fefc2fe386e33260": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
     },
     "ff0baa8057c7eb9c": {
       "choice": "good_exam_item",
@@ -7965,12 +5580,12 @@
       "confidence": 0.8,
       "detail": null
     },
-    "ff391a886b983a4b": {
+    "ff46c67cf6244e67": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
     },
-    "ff46c67cf6244e67": {
+    "ff5b5f9d0af23ce7": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null
@@ -7986,11 +5601,6 @@
       "detail": null
     },
     "ffc90905193dcc8d": {
-      "choice": "good_exam_item",
-      "confidence": 0.8,
-      "detail": null
-    },
-    "ffd5853cbb4d1239": {
       "choice": "good_exam_item",
       "confidence": 0.8,
       "detail": null

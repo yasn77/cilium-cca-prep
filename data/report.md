@@ -1,6 +1,6 @@
 # Corpus report
 
-Generated 2026-11-12T17:41:14.698Z
+Generated 2026-11-12T17:48:19.255Z
 
 ## Source
 
@@ -27,11 +27,11 @@ Dropped:
 
 ## Corpus
 
-**491 questions** in the shipped corpus, **646** quarantined.
+**490 questions** in the shipped corpus, **647** quarantined.
 
 | Domain | Weight | Questions | Floor | Status |
 |---|---|---|---|---|
-| Architecture | 20% | 102 | 100 | met |
+| Architecture | 20% | 101 | 100 | met |
 | Network Policy | 18% | 92 | 90 | met |
 | Service Mesh | 16% | 82 | 80 | met |
 | Network Observability | 10% | 52 | 50 | met |
@@ -45,7 +45,7 @@ Dropped:
 **Architecture**
 
 - `unmapped` — 86
-- `component-roles` — 12 _(thin)_
+- `component-roles` — 11 _(thin)_
 - `ipam` — 3 _(thin)_
 - `datapath-models` — 1 _(thin)_
 
@@ -106,20 +106,20 @@ Dropped:
 | Yield source | Count |
 |---|---|
 | scenario | 189 |
-| attribute | 155 |
+| attribute | 154 |
 | definition | 102 |
 | contrast | 45 |
 
-Scenario share: **38.5%** (floor 25%).
+Scenario share: **38.6%** (floor 25%).
 
 ## Difficulty
 
-SystemOne scored **491** of 491 questions on a 1–5 scale where **3.0 is the real exam**. Median **3.41**.
+SystemOne scored **490** of 490 questions on a 1–5 scale where **3.0 is the real exam**. Median **3.41**.
 
 | Band | Questions | What it is |
 |---|---|---|
 | 1.0–2.0 | 35 | Foundational recall |
-| 2.0–2.5 | 65 | Easier than the exam |
+| 2.0–2.5 | 64 | Easier than the exam |
 | 2.5–3.5 | 168 | **The real exam band** |
 | 3.5–4.5 | 219 | Harder than the exam |
 | 4.5–5.0 | 4 | Expert / deep dive |
@@ -133,14 +133,14 @@ Difficulty is scored on a 1.0–5.0 scale by SystemOne as a calibration aid for 
 | Band | Questions | Share |
 |---|---|---|
 | 1.0-2.0 | 35 | 7.1% |
-| 2.0-2.5 | 65 | 13.2% |
-| 2.5-3.5 | 168 | 34.2% |
-| 3.5-4.5 | 219 | 44.6% |
+| 2.0-2.5 | 64 | 13.1% |
+| 2.5-3.5 | 168 | 34.3% |
+| 3.5-4.5 | 219 | 44.7% |
 | 4.5-5.0 | 4 | 0.8% |
 
 ### Blueprint coverage
 
-**454 of 491 questions (92.5%)** cite one of the 63 core CCA Study Guide / playlist files (60/60 eligible blueprint files represented).
+**453 of 490 questions (92.4%)** cite one of the 63 core CCA Study Guide / playlist files (60/60 eligible blueprint files represented).
 
 ## Verification
 
@@ -157,7 +157,7 @@ Quarantine by gate:
 |---|---|
 | shape | 243 |
 | entail | 215 |
-| judge | 161 |
+| judge | 162 |
 | quote | 17 |
 | duplicate | 10 |
 
@@ -174,7 +174,7 @@ Judge histogram:
 
 ## Known weak points
 
-96 of 491 questions (19.6%) are flagged here as weaker than the rest: either they survived without a judge verdict, or the correct answer is a term short enough that the entailment check is close to a string match rather than a claim about meaning.
+96 of 490 questions (19.6%) are flagged here as weaker than the rest: either they survived without a judge verdict, or the correct answer is a term short enough that the entailment check is close to a string match rather than a claim about meaning.
 
 <details><summary>List</summary>
 

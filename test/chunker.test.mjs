@@ -69,22 +69,30 @@ test('chunker numbers duplicate headings as id1, not with a suffix', async () =>
   assert.deepEqual(anchors, ['routing', 'configuration', 'id1']);
 });
 
-test('chunker maps domains and drops unmappable sections', async () => {
+test('chunker maps domains and skips files outside the exam scope', async () => {
   const { out } = await runChunkerOn({
     'security/policy/intro.rst': `Policy\n======\n\n${LONG}\n`,
-    'unknown/path/file.rst': `Something\n=========\n\n${LONG}\n`,
+    // Not in includePaths: the chunker must ignore it rather than map it.
+    'contributing/guide.rst': `Something\n=========\n\n${LONG}\n`,
   });
   assert.equal(out.sections.length, 1);
   assert.equal(out.sections[0].domain, 'network-policy');
-  assert.ok(out.counts.dropped.unmapped_domain >= 1);
+  assert.equal(out.counts.filesOutOfScope, 1);
 });
 
 test('the committed section index has only verified or unpublished anchors', async () => {
   const data = JSON.parse(await readFile(SECTIONS, 'utf8'));
   const unexpected = data.sections.filter(
-    (s) => !['verified', 'unpublished', 'unmatched'].includes(s.renderStatus),
+    (s) => !['verified', 'verified-merged', 'unpublished', 'unmatched'].includes(s.renderStatus),
   );
   assert.equal(unexpected.length, 0);
   const verified = data.sections.filter((s) => s.renderStatus === 'verified');
   assert.ok(verified.length > 500, `expected a substantial verified section set, got ${verified.length}`);
+});
+
+test('the committed section index contains no excluded files', async () => {
+  const { excludePaths } = await import(path.join(ROOT, 'tools', 'config.mjs'));
+  const data = JSON.parse(await readFile(SECTIONS, 'utf8'));
+  const leaked = data.sections.filter((s) => excludePaths.some((re) => re.test(s.file)));
+  assert.deepEqual(leaked.map((s) => s.file), [], 'excluded files must not appear in sections.json');
 });

@@ -87,3 +87,50 @@ test('displayBlindSet normalises numeric and string answers to letters', () => {
   assert.equal(one.options[0].id, 'a');
   assert.equal(two.answer, 'a');
 });
+
+// --- difficulty ------------------------------------------------------------
+
+test('a question without a scored difficulty is treated as the real exam', () => {
+  // A partial judging run must not empty the app, so unscored means 3.0.
+  assert.equal(data.difficultyOf({}), 3);
+  assert.equal(data.difficultyOf({ difficulty: 4.2 }), 4.2);
+});
+
+test('difficultyBand returns questions near the target', () => {
+  const pool = [
+    { id: 'a', domain: 'ebpf', difficulty: 1.2 },
+    { id: 'b', domain: 'ebpf', difficulty: 2.9 },
+    { id: 'c', domain: 'ebpf', difficulty: 3.1 },
+    { id: 'd', domain: 'ebpf', difficulty: 4.8 },
+  ];
+  const mid = data.difficultyBand(pool, 3, { minimum: 1 }).map((q) => q.id);
+  assert.ok(mid.includes('b') && mid.includes('c'));
+  assert.ok(!mid.includes('d'), '4.8 is outside the default band around 3');
+  const hard = data.difficultyBand(pool, 5, { minimum: 1 }).map((q) => q.id);
+  assert.ok(hard.includes('d'));
+});
+
+test('difficultyBand widens rather than returning an empty queue', () => {
+  const pool = [{ id: 'a', domain: 'ebpf', difficulty: 5 }, { id: 'b', domain: 'ebpf', difficulty: 4.9 }];
+  const picked = data.difficultyBand(pool, 1, { minimum: 2 });
+  assert.equal(picked.length, 2, 'widened until the minimum was met');
+});
+
+test('the middle of the slider is the real exam', () => {
+  assert.match(data.difficultyTier(3).label, /real cca exam/i);
+  assert.match(data.difficultyTier(1.5).label, /warm-up/i);
+  assert.match(data.difficultyTier(4.8).label, /expert/i);
+});
+
+test('the exam paper honours a difficulty target but still fills', () => {
+  const pool = [];
+  for (const d of data.DOMAIN_ORDER) {
+    for (let i = 0; i < 20; i += 1) {
+      pool.push({ ...makeQuestion(`${d}-${i}`, d), difficulty: 1 + (i % 5) });
+    }
+  }
+  const { paper } = data.buildExamPaper(pool, 60, 3);
+  assert.equal(paper.length, 60);
+  const mostly = paper.filter((q) => Math.abs(q.difficulty - 3) <= 2).length;
+  assert.ok(mostly >= 55, `expected the paper to sit near the target, got ${mostly}/60`);
+});

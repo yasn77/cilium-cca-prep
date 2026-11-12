@@ -133,7 +133,10 @@ export const domainRules = [
   { match: /^network\/bgp-control-plane\//, domain: 'bgp' },
   { match: /^network\/bgp-toc/, domain: 'bgp' },
   { match: /^network\/egress-gateway\//, domain: 'bgp' },
-  { match: /^network\/l2-announcements\//, domain: 'bgp' },
+  { match: /^network\/l2-announcements/, domain: 'bgp' },
+  { match: /^network\/lb-ipam/, domain: 'bgp' },
+  { match: /^network\/node-ipam/, domain: 'bgp' },
+  { match: /^cheatsheet\.rst$/, domain: 'installation' },
   { match: /^network\/kubernetes\/(cnp|kpr|cilium-node)/, domain: 'installation' },
   { match: /^gettingstarted\//, domain: 'installation' },
   { match: /^operations\//, domain: 'installation' },
@@ -207,18 +210,90 @@ export const competencyRules = {
   ],
 };
 
+/**
+ * Core CCA Study Guide and official playlist documentation files.
+ *
+ * Prioritised during generation and checked by verify.mjs so overview pages are
+ * never starved by long troubleshooting or reference chapters.
+ */
+export const blueprintFiles = [
+  'overview/intro.rst',
+  'overview/component-overview.rst',
+  'gettingstarted/terminology.rst',
+  'gettingstarted/k8s-install-default.rst',
+  'gettingstarted/demo.rst',
+  'cheatsheet.rst',
+  'security/network/identity.rst',
+  'security/policy/intro.rst',
+  'security/policy/layer3.rst',
+  'security/policy/layer4.rst',
+  'security/policy/layer7.rst',
+  'security/policy/kubernetes.rst',
+  'security/policy/deny.rst',
+  'network/ebpf/intro.rst',
+  'network/ebpf/maps.rst',
+  'network/ebpf/lifeofapacket.rst',
+  'network/ebpf/iptables.rst',
+  'network/concepts/routing.rst',
+  'network/concepts/masquerading.rst',
+  'network/concepts/ipam/index.rst',
+  'network/concepts/ipam/cluster-pool.rst',
+  'network/concepts/ipam/kubernetes.rst',
+  'network/concepts/ipam/crd.rst',
+  'network/concepts/ipam/eni.rst',
+  'network/concepts/ipam/azure.rst',
+  'network/concepts/ipam/multi-pool.rst',
+  'network/kubernetes/intro.rst',
+  'network/kubernetes/concepts.rst',
+  'network/kubernetes/kubeproxy-free.rst',
+  'network/kubernetes/bandwidth-manager.rst',
+  'network/servicemesh/index.rst',
+  'network/servicemesh/ingress.rst',
+  'network/servicemesh/basic-ingress.rst',
+  'network/servicemesh/ingress-reference.rst',
+  'network/servicemesh/gateway-api/gateway-api.rst',
+  'network/servicemesh/gateway-api/http.rst',
+  'network/servicemesh/gateway-api/https.rst',
+  'network/servicemesh/gateway-api/splitting.rst',
+  'network/servicemesh/gateway-api/header.rst',
+  'network/servicemesh/mutual-authentication/mutual-authentication.rst',
+  'security/network/encryption.rst',
+  'security/network/encryption-wireguard.rst',
+  'security/network/encryption-ipsec.rst',
+  'observability/visibility.rst',
+  'observability/hubble/index.rst',
+  'observability/hubble/setup.rst',
+  'observability/hubble/hubble-cli.rst',
+  'observability/hubble/hubble-ui.rst',
+  'observability/grafana.rst',
+  'network/clustermesh/intro.rst',
+  'network/clustermesh/setup.rst',
+  'network/clustermesh/global-services.rst',
+  'network/clustermesh/affinity.rst',
+  'network/clustermesh/load-balancing.rst',
+  'network/clustermesh/policy.rst',
+  'network/bgp-control-plane/bgp-control-plane.rst',
+  'network/bgp-control-plane/bgp-control-plane-configuration.rst',
+  'network/bgp-control-plane/bgp-control-plane-operation.rst',
+  'network/egress-gateway/egress-gateway.rst',
+  'network/l2-announcements.rst',
+  'network/lb-ipam.rst',
+  'operations/performance/tuning.rst',
+  'operations/troubleshooting.rst',
+];
+
 /** Paths under Documentation/ that are in scope for question generation. */
 export const includePaths = [
+  /^cheatsheet\.rst$/,
   /^gettingstarted\//,
   /^overview\//,
   /^network\//,
   /^security\//,
   /^observability\//,
   /^operations\//,
-  /^internals\//,
 ];
 
-/** Paths that are generated, vendored or not prose and must be excluded. */
+/** Paths that are generated, vendored, out-of-curriculum, or not prose and must be excluded. */
 export const excludePaths = [
   /^contributing\//,
   /^cmdref\//,
@@ -226,12 +301,26 @@ export const excludePaths = [
   /^images\//,
   /^community\//,
   /^labs\//,
+  /^internals\//,
+  /^network\/kubernetes\/local-redirect-policy\.rst$/,
+  /^network\/kubernetes\/kata\.rst$/,
+  /^network\/servicemesh\/istio\.rst$/,
+  /^network\/clustermesh\/mcsapi\.rst$/,
+  /^network\/clustermesh\/(aks|eks|gke)-clustermesh-prep\.rst$/,
+  /^security\/(aws|azure|cassandra|elasticsearch|grpc|memcached|threat-model|restrict-pod-access|host-firewall|tls-visibility)\.rst$/,
+  /^operations\/performance\/(scalability|benchmark)/,
+  /^operations\/(upgrade|system_requirements|troubleshooting_servicemesh)/,
+  /^network\/egress-gateway\/egress-gateway-troubleshooting\.rst$/,
+  /^observability\/metrics\.rst$/,
+  /^observability\/hubble\/configuration\/tls\.rst$/,
+  /^network\/servicemesh\/envoy-(traffic-management|traffic-shifting|circuit-breaker)\.rst$/,
+  /^network\/(bird|kube-router|multicast|vtep)\.rst$/,
 ];
 
 export const chunking = {
-  // Sections much below ~120 words are usually a one-line stub with nothing to
-  // ask about; anything above maxWords is a whole page with many ideas in it.
-  minWords: 120,
+  // Overview pages often use concise 50–100 word subsections; setting minWords
+  // to 50 keeps foundational sections eligible instead of dropping them.
+  minWords: 50,
   maxWords: 2000,
 };
 

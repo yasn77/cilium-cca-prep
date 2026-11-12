@@ -10,7 +10,7 @@
  */
 import path from 'node:path';
 import { readFile } from 'node:fs/promises';
-import { domains, quota, docs } from './config.mjs';
+import { domains, quota, docs, blueprintFiles } from './config.mjs';
 import { ROOT, readJson, log } from './lib.mjs';
 
 const OUT = path.join(ROOT, 'data', 'report.md');
@@ -85,6 +85,10 @@ async function main() {
   lines.push('## Corpus');
   lines.push('');
   lines.push(`**${qs.length} questions** in the shipped corpus, **${quarantine.questions?.length ?? 0}** quarantined.`);
+  if (corpus.counts?.blueprintStarved) {
+    lines.push('');
+    lines.push(`**${corpus.counts.blueprintStarved}** blueprint files produced no questions.`);
+  }
   lines.push('');
   lines.push('| Domain | Weight | Questions | Floor | Status |');
   lines.push('|---|---|---|---|---|');
@@ -125,6 +129,74 @@ async function main() {
   lines.push('');
   lines.push(`Scenario share: **${(scenarioShare * 100).toFixed(1)}%** (floor ${quota.scenarioMinShare * 100}%).`);
   lines.push('');
+  lines.push('## Difficulty');
+  lines.push('');
+  const dbands = corpus.counts?.difficulty ?? {};
+  const scored = qs.filter((q) => typeof q.difficulty === 'number');
+  if (scored.length) {
+    const vals = scored.map((q) => q.difficulty).sort((a, b) => a - b);
+    const median = vals[Math.floor(vals.length / 2)];
+    lines.push(`SystemOne scored **${scored.length}** of ${qs.length} questions on a 1–5 scale where **3.0 is the real exam**. ` +
+      `Median **${median.toFixed(2)}**.`);
+    lines.push('');
+    lines.push('| Band | Questions | What it is |');
+    lines.push('|---|---|---|');
+    lines.push(`| 1.0–2.0 | ${dbands['1.0-2.0'] ?? 0} | Foundational recall |`);
+    lines.push(`| 2.0–2.5 | ${dbands['2.0-2.5'] ?? 0} | Easier than the exam |`);
+    lines.push(`| 2.5–3.5 | ${dbands['2.5-3.5'] ?? 0} | **The real exam band** |`);
+    lines.push(`| 3.5–4.5 | ${dbands['3.5-4.5'] ?? 0} | Harder than the exam |`);
+    lines.push(`| 4.5–5.0 | ${dbands['4.5-5.0'] ?? 0} | Expert / deep dive |`);
+    lines.push('');
+    lines.push('Difficulty is a calibration aid for the practice slider, not an official metric. ' +
+      'The exam is associate-level; a corpus that skews above the middle band is a corpus that over-trains.');
+  } else {
+    lines.push('No question has a difficulty score yet.');
+  }
+  lines.push('');
+
+  if (corpus.counts?.difficulty) {
+    lines.push('### Difficulty calibration');
+    lines.push('');
+    lines.push('Difficulty is scored on a 1.0–5.0 scale by SystemOne as a calibration aid for the app slider (where 3.0 targets the real exam). It is a model judgement, not an official exam metric.');
+    lines.push('');
+    lines.push('| Band | Questions | Share |');
+    lines.push('|---|---|---|');
+    for (const [band, n] of Object.entries(corpus.counts.difficulty)) {
+      lines.push(`| ${band} | ${n} | ${pct(n, qs.length)} |`);
+    }
+    lines.push('');
+  }
+
+  // Blueprint allow-list coverage and zero-question table.
+  {
+    const eligibleByFile = new Map();
+    for (const sec of sections.sections ?? []) {
+      if (sec.renderStatus !== 'verified' && sec.renderStatus !== 'verified-merged') continue;
+      if (sec.wordCount < 50) continue;
+      if (!blueprintFiles.includes(sec.file)) continue;
+      eligibleByFile.set(sec.file, (eligibleByFile.get(sec.file) ?? 0) + 1);
+    }
+    const shippedByFile = new Map();
+    for (const q of qs) {
+      const f = q.citations?.[0]?.file;
+      if (f) shippedByFile.set(f, (shippedByFile.get(f) ?? 0) + 1);
+    }
+    const zeroFiles = [...eligibleByFile.entries()].filter(([f]) => !shippedByFile.get(f));
+    const blueprintQs = qs.filter((q) => blueprintFiles.includes(q.citations?.[0]?.file)).length;
+    lines.push('### Blueprint coverage');
+    lines.push('');
+    lines.push(
+      `**${blueprintQs} of ${qs.length} questions (${pct(blueprintQs, qs.length)})** cite one of the ${blueprintFiles.length} core CCA Study Guide / playlist files ` +
+      `(${eligibleByFile.size - zeroFiles.length}/${eligibleByFile.size} eligible blueprint files represented).`,
+    );
+    lines.push('');
+    if (zeroFiles.length) {
+      lines.push('| Blueprint file with 0 questions | Eligible sections |');
+      lines.push('|---|---|');
+      for (const [f, n] of zeroFiles) lines.push(`| \`${f}\` | ${n} |`);
+      lines.push('');
+    }
+  }
   lines.push('## Verification');
   lines.push('');
   lines.push('A candidate ships only if all four gates pass:');

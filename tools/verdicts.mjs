@@ -30,14 +30,20 @@ export function mergeVerdicts(primary, secondary) {
       merged[id] = { choice: 'error', detail: 'no judge returned a verdict' };
       continue;
     }
+    const difficultyFields =
+      typeof a?.difficulty === 'number'
+        ? { difficulty: a.difficulty, ...(a.difficultyDistribution ? { difficultyDistribution: a.difficultyDistribution } : {}) }
+        : typeof b?.difficulty === 'number'
+          ? { difficulty: b.difficulty, ...(b.difficultyDistribution ? { difficultyDistribution: b.difficultyDistribution } : {}) }
+          : {};
     if (real.length === 1) {
-      merged[id] = real[0];
+      merged[id] = { ...real[0], ...difficultyFields };
       continue;
     }
     const strict = real.find((v) => v.choice !== 'good_exam_item');
     merged[id] = strict
-      ? { ...strict, also: real.filter((v) => v !== strict).map((v) => v.choice) }
-      : real[0];
+      ? { ...strict, ...difficultyFields, also: real.filter((v) => v !== strict).map((v) => v.choice) }
+      : { ...real[0], ...difficultyFields };
   }
   return merged;
 }

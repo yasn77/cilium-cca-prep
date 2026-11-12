@@ -1,59 +1,64 @@
 {
-  "generatedAt": "2026-11-08T19:06:12.501Z",
-  "templates": 39,
-  "ai": 1558,
-  "consideredSections": 2,
+  "generatedAt": "2026-11-12T17:35:28.206Z",
+  "templates": 56,
+  "ai": 1363,
+  "consideredSections": 13,
   "usage": {
-    "calls": 2,
-    "promptTokens": 5125,
-    "completionTokens": 1471
+    "calls": 13,
+    "promptTokens": 17071,
+    "completionTokens": 15386
   },
-  "rejections": {},
+  "rejections": {
+    "option-unbound-reference": 7,
+    "quote-too-short": 1,
+    "unbound-reference": 3,
+    "meta-reference-to-source": 1
+  },
   "coverage": {
     "architecture": {
-      "count": 299,
+      "count": 282,
       "floor": 100,
       "weight": 20,
       "met": true
     },
     "network-policy": {
-      "count": 236,
+      "count": 243,
       "floor": 90,
       "weight": 18,
       "met": true
     },
     "service-mesh": {
-      "count": 295,
+      "count": 221,
       "floor": 80,
       "weight": 16,
       "met": true
     },
     "observability": {
-      "count": 138,
+      "count": 112,
       "floor": 50,
       "weight": 10,
       "met": true
     },
     "installation": {
-      "count": 168,
+      "count": 134,
       "floor": 50,
       "weight": 10,
       "met": true
     },
     "cluster-mesh": {
-      "count": 178,
+      "count": 136,
       "floor": 50,
       "weight": 10,
       "met": true
     },
     "ebpf": {
-      "count": 89,
+      "count": 88,
       "floor": 25,
       "weight": 10,
       "met": true
     },
     "bgp": {
-      "count": 155,
+      "count": 147,
       "floor": 30,
       "weight": 6,
       "met": true

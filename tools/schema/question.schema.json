@@ -135,6 +135,12 @@
         "scenario"
       ]
     },
+    "difficulty": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "Associate-level difficulty, 1 (foundational) to 5 (expert), from SystemOne's score primitive."
+    },
     "provenance": {
       "type": "object",
       "required": [

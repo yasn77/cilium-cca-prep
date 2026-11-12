@@ -9,10 +9,12 @@ import {
   questions,
   buildExamPaper,
   domainBreakdown,
+  difficultyTier,
+  difficultyOf,
   PASS_MARK,
 } from './data.js';
 import { recordSession } from './progress.js';
-import { attachmentBlocks, citationBlock, el, fill, richText } from './ui.js';
+import { attachmentBlocks, citationBlock, difficultyBadge, el, fill, richText } from './ui.js';
 
 const DURATION_SECONDS = 90 * 60;
 
@@ -23,6 +25,8 @@ let deadline = 0;
 let timerHandle = null;
 let container = null;
 let submitted = false;
+// 3.0 is the real exam; the paper is drawn from that band by default.
+let targetDifficulty = 3;
 
 export function start(root) {
   container = root;
@@ -56,12 +60,13 @@ function renderIntro() {
             el('div', { text: `${short.map((d) => DOMAINS[d].label).join(', ')} do not have enough questions to fill their quota; the paper is topped up from other domains.` }),
           ])
         : null,
+    difficultyControl(),
     el('button', { class: 'btn btn-primary btn-block', type: 'button', text: 'Start the timed exam', onclick: startExam }),
   ]);
 }
 
 function startExam() {
-  const built = buildExamPaper(questions(), 60);
+  const built = buildExamPaper(questions(), 60, targetDifficulty);
   paper = built.paper;
   answers = {};
   current = 0;
@@ -70,6 +75,38 @@ function startExam() {
   renderExam();
   clearInterval(timerHandle);
   timerHandle = setInterval(tick, 1000);
+}
+
+function difficultyControl() {
+  const tier = difficultyTier(targetDifficulty);
+  const output = el('span', { class: 'slider-value', text: targetDifficulty.toFixed(1) });
+  const note = el('div', { class: 'slider-note', text: `${tier.label} — ${tier.note}` });
+
+  const input = el('input', {
+    type: 'range',
+    min: '1',
+    max: '5',
+    step: '0.5',
+    value: String(targetDifficulty),
+    class: 'difficulty-slider',
+    'aria-label': 'Paper difficulty',
+    oninput: (e) => {
+      targetDifficulty = Number(e.target.value);
+      const t = difficultyTier(targetDifficulty);
+      output.textContent = targetDifficulty.toFixed(1);
+      note.textContent = `${t.label} — ${t.note}`;
+    },
+  });
+
+  return el('div', { class: 'filter-group' }, [
+    el('div', { class: 'filter-label', text: 'Difficulty' }, [
+      el('span', { class: 'slider-scale', text: 'easier' }),
+      output,
+      el('span', { class: 'slider-scale', text: 'harder' }),
+    ]),
+    input,
+    note,
+  ]);
 }
 
 function tick() {
@@ -119,6 +156,7 @@ function renderExam() {
     el('div', { class: 'q-meta' }, [
       el('span', { class: 'chip chip-accent', text: DOMAINS[q.domain]?.label ?? q.domain }),
       el('span', { class: 'chip', text: `Question ${current + 1}` }),
+      difficultyBadge(difficultyOf(q)),
     ]),
     el('div', { class: 'q-stem' }, [richText(q.stem)]),
     ...attachmentBlocks(q.attachments),
@@ -225,7 +263,10 @@ function submit(timedOut) {
       : el('p', { class: 'faint', text: 'A clean sheet. Nothing to review.' }),
     ...wrong.map((q) =>
       el('details', { class: 'review-item' }, [
-        el('summary', {}, [richText(q.stem.slice(0, 110) + (q.stem.length > 110 ? '…' : ''))]),
+        el('summary', {}, [
+          difficultyBadge(difficultyOf(q)),
+          richText(q.stem.slice(0, 110) + (q.stem.length > 110 ? '…' : '')),
+        ]),
         el('div', { class: 'review-body' }, [
           el('div', { class: 'faint', style: 'margin-bottom:8px' }, [
             `You answered ${(answers[q.id] ?? '—').toUpperCase()}; the answer is ${q.answer.toUpperCase()}.`,

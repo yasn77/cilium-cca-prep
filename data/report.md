@@ -1,6 +1,6 @@
 # Corpus report
 
-Generated 2026-11-08T19:06:31.669Z
+Generated 2026-11-12T17:41:14.698Z
 
 ## Source
 
@@ -16,100 +16,131 @@ Generated 2026-11-08T19:06:31.669Z
 
 ## Sections
 
-Parsed **1141** sections from 186 files, 156162 words. Anchors verified against the live site: **1129**, unpublished pages: 12, unmatched: 0.
+Parsed **681** sections from 150 files, 114487 words. Anchors verified against the live site: **669**, unpublished pages: 12, unmatched: 0.
 
 Dropped:
 
-- `too_short`: 718
+- `too_short`: 39
 - `too_long`: 0
-- `unmapped_domain`: 57
-- `empty`: 111
+- `unmapped_domain`: 4
+- `empty`: 84
 
 ## Corpus
 
-**685 questions** in the shipped corpus, **912** quarantined.
+**491 questions** in the shipped corpus, **646** quarantined.
 
 | Domain | Weight | Questions | Floor | Status |
 |---|---|---|---|---|
-| Architecture | 20% | 156 | 100 | met |
-| Network Policy | 18% | 105 | 90 | met |
-| Service Mesh | 16% | 113 | 80 | met |
-| Network Observability | 10% | 59 | 50 | met |
-| Installation and Configuration | 10% | 79 | 50 | met |
-| Cluster Mesh | 10% | 64 | 50 | met |
-| eBPF | 10% | 26 | 25 | met |
-| BGP and External Networking | 6% | 83 | 30 | met |
+| Architecture | 20% | 102 | 100 | met |
+| Network Policy | 18% | 92 | 90 | met |
+| Service Mesh | 16% | 82 | 80 | met |
+| Network Observability | 10% | 52 | 50 | met |
+| Installation and Configuration | 10% | 52 | 50 | met |
+| Cluster Mesh | 10% | 52 | 50 | met |
+| eBPF | 10% | 27 | 25 | met |
+| BGP and External Networking | 6% | 32 | 30 | met |
 
 <details><summary>Coverage by competency</summary>
 
 **Architecture**
 
-- `unmapped` — 147
-- `component-roles` — 8 _(thin)_
+- `unmapped` — 86
+- `component-roles` — 12 _(thin)_
+- `ipam` — 3 _(thin)_
 - `datapath-models` — 1 _(thin)_
 
 **BGP and External Networking**
 
-- `bgp-peering` — 28
-- `bgp-advertisement` — 22 _(thin)_
-- `egress-gateway` — 21 _(thin)_
-- `bgp-control-plane` — 12 _(thin)_
+- `bgp-advertisement` — 10 _(thin)_
+- `bgp-control-plane` — 10 _(thin)_
+- `egress-gateway` — 9 _(thin)_
+- `l2-announcements` — 1 _(thin)_
+- `unmapped` — 1
+- `bgp-peering` — 1 _(thin)_
 
 **Cluster Mesh**
 
-- `unmapped` — 24
-- `mesh-benefits` — 22 _(thin)_
-- `global-services` — 16 _(thin)_
-- `mesh-setup` — 2 _(thin)_
+- `mesh-benefits` — 25
+- `global-services` — 17 _(thin)_
+- `unmapped` — 5
+- `mesh-setup` — 5 _(thin)_
 
 **eBPF**
 
 - `unmapped` — 12
-- `ebpf-role` — 10 _(thin)_
+- `ebpf-role` — 9 _(thin)_
 - `bpf-maps` — 3 _(thin)_
+- `ebpf-versus-iptables` — 2 _(thin)_
 - `ebpf-program-model` — 1 _(thin)_
 
 **Installation and Configuration**
 
-- `unmapped` — 57
-- `upgrade` — 9 _(thin)_
-- `cli-configuration` — 6 _(thin)_
-- `install` — 6 _(thin)_
-- `connectivity-test` — 1 _(thin)_
+- `unmapped` — 48
+- `install` — 4 _(thin)_
 
 **Network Policy**
 
-- `unmapped` — 75
-- `policy-rule-structure` — 24 _(thin)_
-- `policy-intent` — 5 _(thin)_
-- `identity-model` — 1 _(thin)_
+- `unmapped` — 64
+- `policy-rule-structure` — 16 _(thin)_
+- `policy-intent` — 7 _(thin)_
+- `policy-enforcement-modes` — 3 _(thin)_
+- `identity-model` — 2 _(thin)_
 
 **Network Observability**
 
-- `hubble-capabilities` — 32
-- `hubble-cli` — 19 _(thin)_
-- `l7-visibility` — 4 _(thin)_
-- `metrics` — 2 _(thin)_
-- `unmapped` — 2
+- `hubble-capabilities` — 24 _(thin)_
+- `unmapped` — 12
+- `metrics` — 6 _(thin)_
+- `hubble-ui` — 5 _(thin)_
+- `l7-visibility` — 5 _(thin)_
 
 **Service Mesh**
 
-- `unmapped` — 73
-- `ingress` — 20 _(thin)_
+- `unmapped` — 41
+- `ingress` — 26
 - `encryption` — 10 _(thin)_
-- `sidecar-versus-sidecarless` — 6 _(thin)_
-- `gateway-api` — 4 _(thin)_
+- `gateway-api` — 5 _(thin)_
 
 </details>
 
 | Yield source | Count |
 |---|---|
-| scenario | 289 |
-| attribute | 188 |
-| definition | 115 |
-| contrast | 93 |
+| scenario | 189 |
+| attribute | 155 |
+| definition | 102 |
+| contrast | 45 |
 
-Scenario share: **42.2%** (floor 25%).
+Scenario share: **38.5%** (floor 25%).
+
+## Difficulty
+
+SystemOne scored **491** of 491 questions on a 1–5 scale where **3.0 is the real exam**. Median **3.41**.
+
+| Band | Questions | What it is |
+|---|---|---|
+| 1.0–2.0 | 35 | Foundational recall |
+| 2.0–2.5 | 65 | Easier than the exam |
+| 2.5–3.5 | 168 | **The real exam band** |
+| 3.5–4.5 | 219 | Harder than the exam |
+| 4.5–5.0 | 4 | Expert / deep dive |
+
+Difficulty is a calibration aid for the practice slider, not an official metric. The exam is associate-level; a corpus that skews above the middle band is a corpus that over-trains.
+
+### Difficulty calibration
+
+Difficulty is scored on a 1.0–5.0 scale by SystemOne as a calibration aid for the app slider (where 3.0 targets the real exam). It is a model judgement, not an official exam metric.
+
+| Band | Questions | Share |
+|---|---|---|
+| 1.0-2.0 | 35 | 7.1% |
+| 2.0-2.5 | 65 | 13.2% |
+| 2.5-3.5 | 168 | 34.2% |
+| 3.5-4.5 | 219 | 44.6% |
+| 4.5-5.0 | 4 | 0.8% |
+
+### Blueprint coverage
+
+**454 of 491 questions (92.5%)** cite one of the 63 core CCA Study Guide / playlist files (60/60 eligible blueprint files represented).
 
 ## Verification
 
@@ -124,127 +155,123 @@ Quarantine by gate:
 
 | Gate | Rejected |
 |---|---|
-| shape | 409 |
-| judge | 258 |
-| entail | 211 |
-| duplicate | 23 |
-| quote | 11 |
+| shape | 243 |
+| entail | 215 |
+| judge | 161 |
+| quote | 17 |
+| duplicate | 10 |
 
 Judge histogram:
 
 | Category | Count |
 |---|---|
-| good_exam_item | 1177 |
-| wording_broken | 79 |
-| trivia_not_in_blueprint | 175 |
-| answer_not_determinable | 113 |
-| distractors_too_obvious | 50 |
+| good_exam_item | 1111 |
+| wording_broken | 72 |
+| distractors_too_obvious | 40 |
+| answer_not_determinable | 111 |
+| trivia_not_in_blueprint | 62 |
 | ambiguity_two_correct | 3 |
 
 ## Known weak points
 
-100 of 685 questions (14.6%) are flagged here as weaker than the rest: either they survived without a judge verdict, or the correct answer is a term short enough that the entailment check is close to a string match rather than a claim about meaning.
+96 of 491 questions (19.6%) are flagged here as weaker than the rest: either they survived without a judge verdict, or the correct answer is a term short enough that the entailment check is close to a string match rather than a claim about meaning.
 
 <details><summary>List</summary>
 
-- `2ba10100a28ba3ba` — architecture — An engineer sets `monitor-aggregation` to `medium` and wants to ensure that, on average, o
-- `39ba7c9fe0ccfa0c` — architecture — In a CiliumLocalRedirectPolicy with a serviceMatcher, which field selects the backend pods
-- `43bb37c7e0b646d7` — architecture — An engineer wants to reduce per-packet latency by pre-allocating map entries, accepting th
 - `47fa56912f3b7898` — architecture — An engineer wants pods in namespace `empire` to draw IPv4 addresses from one pool and IPv6
 - `4e5ab41f5dce0b32` — architecture — A Cilium operator is creating an ENI. Which two API calls does it use to create and attach
 - `69bcbede817a9fa8` — architecture — An engineer runs `kubectl -n kube-system exec ds/cilium -- cilium-dbg status --verbose | g
 - `7332745f242d3aee` — architecture — Which Helm values are required to enable per-service DSR with IPIP dispatch using the serv
-- `80ab674774cdb14e` — architecture — Which annotation values are accepted by service.cilium.io/src-ranges-policy to control whe
-- `89686573040820c3` — architecture — On a cluster with only Cilium VXLAN enabled and an underlying network MTU of 1500, an engi
 - `8e47aefd95c13d7d` — architecture — Which API calls does the operator use to create and attach a new ENI to the EC2 instance?
 - `8e5497ab8912216d` — architecture — A team wants the CIDR list in loadBalancerSourceRanges to block traffic from certain CIDRs
 - `98e7ecfeedc668ff` — architecture — A platform team runs Cilium on nodes whose devices are auto-detected, and Cilium selects m
+- `a8f9fdaf1c27a561` — architecture — Which Helm value enables Kubernetes IPAM mode in Cilium?
 - `b285c0049be314d2` — architecture — Which two packages does each node need installed in order to run NodePort XDP on AWS with 
-- `c3361b7fd271dd85` — architecture — An engineer wants the operator-driven migration to create the multi-pool pool under a name
+- `ce69817643d13983` — architecture — A cluster administrator wants to change the kvstore endpoint and credentials that the cili
 - `d588e093e6a7ff4f` — architecture — Which Helm values are required to opt into DSR IPIP on a per-service basis through the ser
-- `e0a57b1010f1d20d` — architecture — In a serviceMatcher policy, which field selects the backend pods where traffic is redirect
 - `e3653c4b9e5709c3` — architecture — An engineer wants to prevent Cilium from creating the NodePort and ClusterIP services that
-- `465a49dfebaa71ef` — bgp — Which field in a CiliumBGPPeerConfig is used to configure an RFC-2385 TCP MD5 password for
-- `629f919e9b58d369` — bgp — A platform team is deploying Kubernetes clusters in datacenter networks and wants BGP fail
-- `674c0160083b5815` — bgp — Which field in the BGP peer configuration sets the HoldTimer?
-- `6e17b4a815d4997b` — bgp — Which timer parameter has a default of 120 seconds?
-- `7d73aedc58406f02` — bgp — An engineer is configuring a CiliumBGPAdvertisement to advertise Pod CIDR ranges in a clus
+- `e8788ad23f7880b4` — architecture — An engineer needs to confirm which exact version of the Cilium docker container will run o
+- `ff5b5f9d0af23ce7` — architecture — An engineer sets `ipam: kubernetes` in the Cilium ConfigMap with `enable-ipv4` set to `tru
 - `9c08bf6eca3f0b89` — bgp — Which advertisementType in a CiliumBGPAdvertisement is used to advertise IP addresses assi
 - `a5d3bc3ed07b349c` — bgp — Which field is used to configure multiple gateway nodes within a single egress gateway pol
-- `f04e37d24c7b3d81` — bgp — Which field of the CiliumBGPPeerConfig resource carries the time advertised to the peer wi
-- `f634d6123d0571ff` — bgp — Which pair of fields on a CiliumBGPAdvertisement controls the advertised prefix length for
-- `198abce3e0a266b7` — cluster-mesh — You are using Cilium's Gateway API implementation and want to route traffic to a service t
-- `237c216a1f45d8c1` — cluster-mesh — Which resource must an engineer create in order to export a Service through the Multi-Clus
+- `5a185f1558acd7ed` — cluster-mesh — An engineer has a Global Headless Service in a Cluster Mesh and wants to stop Cilium from 
 - `63823e7063020339` — cluster-mesh — After setting `service.cilium.io/affinity=local` in cluster 1, an engineer inspects endpoi
+- `649e3abc66890da6` — cluster-mesh — Which of the following is listed as an option for configuring TLS certificates automatical
+- `6c6b6b807e522ac3` — cluster-mesh — An engineer wants a Global Service to keep serving its own cluster's endpoints while also 
+- `7f47589d33a98ca1` — cluster-mesh — An engineer wants Cilium to handle TLS certificate generation for Cluster Mesh automatical
 - `8651c3d468030793` — cluster-mesh — Which annotation, when added to an existing global service, stops that service from being 
-- `9c663ec30e24422d` — cluster-mesh — A pod has a hostname defined via a StatefulSet and belongs to an exported Service rebel-ba
 - `b49d989d402738a7` — cluster-mesh — An engineer is choosing how to expose the Cluster Mesh control plane. They want a stable L
-- `b9f6f0825f69474b` — cluster-mesh — Which annotation key is used to specify the preferred endpoint destination for a global se
-- `c65c43d26362c21f` — cluster-mesh — You are preparing the first AKS cluster for a Cluster Mesh and want Cilium to manage pod n
-- `d031e8bfe1dd77c5` — cluster-mesh — Which clustermesh.apiserver.service.type option requires ClusterIPs to be routable between
+- `cbb557411e154759` — cluster-mesh — An engineer inspects a clustermesh-apiserver pod and wants to know which container is resp
+- `d2dec3d3884e2fdc` — cluster-mesh — An engineer installs Cilium in two clusters using Helm and wants Cluster Mesh to work over
 - `1371730b0bdd58bd` — ebpf — A platform team wants Cilium to drop malicious or unexpected traffic as early as possible,
 - `18fba1c24c40d05a` — ebpf — A Cilium datapath designer wants a BPF program that inspects packet data at the earliest p
 - `1926eda389a76d11` — ebpf — An engineer observes that a node is running out of capacity for its local endpoints. Accor
 - `3fe78a0b6c28c9df` — ebpf — A network engineer is configuring Cilium to protect a node against Distributed Denial of S
-- `911430a3c97b9bb0` — ebpf — In the Cilium datapath, the Socket operations hook is attached to the root cgroup. What sp
 - `a13d99c23b831278` — ebpf — Users report that connections to clusterIP services fail on a node. You suspect the BPF cg
 - `b4c8498ad5c867ba` — ebpf — A platform team enables BPF masquerading on a cluster and wants to know which network devi
 - `e205c09cc80b7860` — ebpf — Which setting must be enabled for Cilium to probe the kernel and possibly use jiffies?
 - `eb635bf16f46be11` — ebpf — An engineer runs `cilium status` inside a Cilium pod to check whether eBPF host-routing is
-- `05a4ecb43eca8d24` — installation — A benchmark run reports a total transfer rate of 32 accumulated connections. Which metric 
-- `09f7b44f89559c60` — installation — A cluster runs Cilium in VXLAN overlay network mode on Linux hosts that have not been reco
-- `2fe10c3d8cf31023` — installation — An engineer is reviewing the ports that should be available on each Cilium node and wants 
+- `076afbd18cf167c4` — installation — Which special identity represents any network endpoint outside of the cluster?
+- `2ed52143fcf4e04a` — installation — A `cilium install` on your cluster fails and some Cilium pods are not being deployed. Whic
+- `3792ec4a3e932093` — installation — A new endpoint is created but some of the metadata needed to derive its security identity 
 - `3c99f5675449a516` — installation — Which field do CiliumNetworkPolicies use to match on pod labels in order to identify the s
-- `3f3c3937d8729ff4` — installation — A team deploys Cilium using WireGuard for encryption and asks which UDP port must be permi
-- `659e9378095ccbe1` — installation — An engineer is debugging an Ingress issue and wants to verify if the request is reaching t
-- `8843b2c78b19a81d` — installation — A team is evaluating how many request/response messages per second can be transmitted over
-- `8dd5943c6e6b430a` — installation — A cluster uses Cilium in VXLAN overlay network mode on Linux hosts that have not been reco
-- `9348d9d9def000b6` — installation — A benchmark measures the number of connections per second that can be established in seque
-- `a64ba647e4d57364` — installation — An engineer is preparing firewall rules for a Cilium cluster that uses WireGuard encryptio
-- `a6854cc7d6bcaa03` — installation — During troubleshooting, an engineer runs `kubectl get cec cilium-ingress-default-basic-ing
-- `b3fd439387d02624` — installation — By default, which of the following does Cilium ignore when evaluating labels for identitie
-- `c220cd99cfe13e25` — installation — An engineer deploys Cilium with WireGuard encryption on nodes behind a restrictive firewal
-- `caadee6363c83ea4` — installation — You want to keep the any-cluster behaviour for a single CiliumNetworkPolicy even though `p
-- `cd26eb87b8bab42c` — installation — A cluster uses Cilium in VXLAN overlay network mode, and Linux has not been configured oth
-- `d6da07fbf00cf725` — installation — Which port is described as the Mutual Authentication port that should be available on each
-- `2ce7b40dff281619` — network-policy — An engineer deploys the Cloud City demo and wants to confirm that the door manager service
-- `5e6fab343b239c46` — network-policy — A cluster administrator notices that `XfrmInNoStates` errors are increasing after a key ro
+- `4081bb26c730699c` — installation — A pod is started with the label app=benchmark. Which label does its Cilium endpoint carry?
+- `6b18ec645c2ad242` — installation — Which labels are associated with the well-known identity for the cilium-operator deploymen
+- `7f832c819f00c6ad` — installation — A pod was launched on a node before Cilium was installed, so Cilium does not manage it. Wh
+- `8415e75fcfb3bb36` — installation — A script runs a Cilium CLI command and the command fails with an error. What does the Cili
+- `a7f1efb023a24467` — installation — A pod is created with the label `foo: bar`. Which label does the Cilium endpoint associate
+- `b01646bc9a317d06` — installation — Which special identity is given to the IPs used as the source address for connections comi
+- `c8ac3ec715a1ff1b` — installation — A pod in the kube-system namespace is labelled k8s-app=kube-dns and eks.amazonaws.com/comp
+- `cc943d7477358a7a` — installation — You are working in a single terminal session and want Cilium CLI tab completion for subcom
+- `d1fb071f02a116a8` — installation — You have applied a Cilium Network Policy named rule1 to your cluster and want to confirm t
+- `deae08560cbd3382` — installation — An engineer wants to see the security identities that the local Cilium agent is managing. 
+- `fc0333af9f0c319d` — installation — Which of the following is listed as a supported label source?
+- `5bb0de73e892fa59` — network-policy — An application team complains that requests to forbidden destinations hang for a long time
+- `623f97ca6121cc33` — network-policy — You need to allow egress from selected endpoints to a set of destination CIDRs, but must c
 - `6d9cd2c4983f7386` — network-policy — A Cilium log contains a warning similar to `Device eth0 does not exist`. Which Helm settin
-- `72f28fc684a93ee5` — network-policy — In the policy shown, which section causes the rule to apply to connections coming from pod
-- `a1dd88d8141ef40c` — network-policy — Which XFRM error is described as Cilium dropping packets that would otherwise have left th
+- `7004d2c4c0b90b1e` — network-policy — Rather than listing CIDRs inline, a team maintains a reusable set of prefixes and wants a 
+- `80de9b324b0d6507` — network-policy — Rather than listing destination CIDRs inline, you want a policy field that can reference p
+- `85578d06bbe93055` — network-policy — Which entity should be used in a CiliumNetworkPolicy to allow traffic from the Cilium Envo
+- `96ce5b6d77b8aea9` — network-policy — An engineer wants Cilium to permit all traffic from any source on ingress and to any desti
 - `a6a0006dbecaf4d7` — network-policy — An engineer is designing an egress policy for endpoints with label env=prod. They want to 
-- `a6ea2fe404760362` — network-policy — Which label is used in the example to define the pods that are part of the elasticsearch s
 - `aa3bcbb23a132136` — network-policy — A platform team runs Cilium with WireGuard enabled on nodes that sit behind firewalls, and
-- `d4934fe7fe8e009a` — network-policy — An engineer is preparing to deploy the demo application for the first time. The guide note
-- `ef723ee8992971a8` — network-policy — An engineer is deploying the demo application described in the guide to secure communicati
-- `f5fdd29cfca22937` — network-policy — You need to determine whether the derivative policy generated from a ToGroups rule is actu
+- `ae127d0d56d90f5f` — network-policy — A team wants to allow traffic to a set of pods from 10.0.0.0/8, but must exclude the subne
+- `cf98391de5e2f87d` — network-policy — Which entity includes all containers running in host networking mode on the local host?
+- `f61e48646919761e` — network-policy — Which field on a CiliumNetworkPolicy controls whether the policy switches selected endpoin
 - `fddea97dd4ba2db2` — network-policy — An engineer is writing a CiliumNetworkPolicy for endpoints with label env=prod. They want 
-- `0406c752e9069e48` — observability — A network engineer wants to configure Hubble metrics to include the Kubernetes namespace n
-- `1cd4c5133fa3b940` — observability — You are installing Cilium with Helm and want Hubble to export a custom set of dynamic metr
-- `459f5631b12ab900` — observability — What does Hubble build on top of in order to enable deep visibility into the communication
-- `45d72eb3bfb5c5fb` — observability — An engineer wants a list of namespaces that had network flows within the last one hour. Wh
-- `851a8ef5bb937f60` — observability — An engineer is investigating slow IP releases and wants latency figures for releasing an I
-- `8b0bea1216628c26` — observability — A platform team runs Cilium 1.16 with Hubble metrics already enabled. They want the Hubble
-- `9ff7fea2c305636a` — observability — A node is reported as short of addresses, and the operator must decide how many more IPs t
-- `b2eb8c4b40454912` — observability — A platform team wants Hubble flows written straight into the container logs rather than in
-- `c0d9b33f885d08ab` — observability — An engineer wants to retrieve a continuous stream of flow related events from the Observer
-- `ce142e7ce920fba3` — observability — An engineer wants to know which namespaces in the cluster have had network flows during th
-- `e9b526cd8d935bc4` — observability — A tool needs a summary of the information that GetNodes would return, without retrieving t
-- `07aa7c31eead4d9d` — service-mesh — Which resource kind is defined by the envoy-traffic-management-test.yaml file to configure
+- `06c6c235b70bce09` — observability — A colleague asks which command you should run to confirm that Hubble has been enabled and 
+- `1391c49b8c903cb4` — observability — A user reports that `hubble observe` returns nothing. The engineer first wants to confirm 
+- `1acd66e8fdb20035` — observability — A team wants to enable metrics for both the Cilium agent and the Cilium Operator, but not 
+- `375d6fc93fd0f6c0` — observability — An engineer wants cluster-wide visibility into the network and security layer of a Kuberne
+- `3d62053d42b63d50` — observability — Before following a guide on setting up Hubble, an engineer is unsure whether Cilium itself
+- `4a4c9fa0c9a8b3a9` — observability — An engineer wants to inspect network flows and gain visibility into what is happening at t
+- `4aac1579169e631a` — observability — An engineer wants to confirm that traffic between two pods is actually being protected by 
+- `641f37166f96dda1` — observability — You run `cilium hubble ui` and the terminal shows `Forwarding from 0.0.0.0:12000 -> 8081`.
+- `79a37ecd96fdb07d` — observability — You are about to inspect network flows with the Hubble CLI on a cluster where Cilium is al
+- `9f0633da4abd960c` — observability — Which command does the guidance recommend to verify that you can communicate with the Hubb
+- `bd1f2fb2a373b4a4` — observability — You want to confirm that Cilium and Hubble are correctly installed before enabling the Hub
+- `cbfa28532b7a1cb6` — observability — An engineer runs `cilium status` and sees that Cilium and Hubble are up and running. Which
+- `e0eb8cb3330727b1` — observability — An engineer is stuck while working through the flow-inspection guide and wants to ask a qu
+- `e12a8aa4959b6d31` — observability — An engineer is checking which Cilium components are deployed as DaemonSets and which as De
+- `eb3a47a647a246b9` — observability — A colleague cannot reach Grafana at http://localhost:3000 after starting the documented po
+- `f210d10aa02a5510` — observability — An engineer runs `cilium status` to check whether the observability layer is healthy. Whic
+- `fa7186f5b1517d28` — observability — An engineer runs a port-forward for the prometheus service in the cilium-monitoring namesp
+- `fa80f1105b4a48af` — observability — An engineer is troubleshooting a request/response exchange and wants to isolate the server
 - `175ed6c3580a4b31` — service-mesh — An engineer runs `kubectl get cep -l app=echo -o=jsonpath='{.items[0].status.identity.id}'
 - `26de10fc6cf5877b` — service-mesh — An engineer wants to expose the Cilium ingress controller Envoy listener on the host netwo
+- `3b52df1f06412e27` — service-mesh — An engineer has an older Ingress manifest that predates the `ingressClassName` field and w
 - `4016973c94f97897` — service-mesh — An engineer enables the Cilium ingress controller in host network mode and does not set in
 - `47d1ca85a8c1636b` — service-mesh — In a RequestHeaderModifier filter, which action is used to change the value of an existing
 - `5bacf65cef4c970b` — service-mesh — Which field is used to specify the IP address of a Cilium Gateway?
 - `5c5b21836387ddad` — service-mesh — You apply the following Service manifest to prepare the backend for TLS. A client connects
 - `7e3e7d5c8d560787` — service-mesh — A colleague has retrieved the Cilium Identity for the echo Pod and now wants to check that
-- `ace5ee02d23ee35f` — service-mesh — You have a local Kubernetes cluster running Cilium and Istio, and you want to follow the d
+- `b296ac43f1cad550` — service-mesh — You want to reach the demo applications by host name through the Gateway. Which host names
 - `b44e7c47c5a088dd` — service-mesh — An engineer wants to pin a Cilium Gateway to a specific IP address using the Gateway API's
 - `c4efbbbdc8bc1810` — service-mesh — You are checking an HTTPRoute and want to confirm that the services it references were fou
 - `d63b1dcec341efcc` — service-mesh — In a Cilium Gateway API RequestHeaderModifier filter, which keyword is used to delete head
+- `e327a506cc528fe9` — service-mesh — Which component's configuration flag is `ingress-lb-annotation-prefixes`, which governs th
 - `e32948a7b455801d` — service-mesh — A Cilium Gateway API HTTPRoute includes a RequestHeaderModifier filter with the configurat
 - `e4a7de15750109cd` — service-mesh — Which condition type indicates that all referenced secrets were found and have permission 
-- `eb7842579ba27879` — service-mesh — You have a local Kubernetes cluster running Cilium and Istio, and you want to follow the d
 - `f3025dcb567a41bb` — service-mesh — An engineer is exposing Cilium's Envoy DaemonSet through a Loadbalancer Service in a clust
 - `fe3303dc8df83522` — service-mesh — Which keyword is used in a RequestHeaderModifier filter to delete one or more headers from
 

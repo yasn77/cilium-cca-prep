@@ -144,6 +144,24 @@ export function attachmentBlocks(attachments) {
   return (attachments ?? []).map((a) => attachmentBlock(a));
 }
 
+/**
+ * Difficulty chip.
+ *
+ * Colour is the tier, and the number is the SystemOne score, so a question you
+ * miss can be judged as "that was a stretch item" rather than a knowledge gap.
+ */
+export function difficultyBadge(value) {
+  if (typeof value !== 'number') return null;
+  const tone =
+    value <= 2.5 ? 'var(--good)' : value <= 3.6 ? 'var(--accent)' : value <= 4.5 ? 'var(--warn)' : 'var(--bad)';
+  return el('span', {
+    class: 'chip chip-difficulty',
+    style: `color:${tone};border-color:${tone}`,
+    title: `Difficulty ${value.toFixed(1)} — 3.0 is the real exam`,
+    text: `difficulty ${value.toFixed(1)}`,
+  });
+}
+
 export function citationBlock(citation) {
   const url = citation.url || '#';
   return el('a', { class: 'citation', href: url, target: '_blank', rel: 'noreferrer noopener' }, [

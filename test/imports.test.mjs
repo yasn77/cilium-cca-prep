@@ -98,7 +98,7 @@ test('every module imports the sibling helpers it uses', async () => {
 
 test('ui.js exports the helpers the screens rely on', async () => {
   const names = await exportsOf('ui.js');
-  for (const expected of ['el', 'fill', 'richText', 'citationBlock', 'attachmentBlock', 'attachmentBlocks', 'optionButton', 'toast']) {
+  for (const expected of ['el', 'fill', 'richText', 'citationBlock', 'attachmentBlock', 'attachmentBlocks', 'difficultyBadge', 'optionButton', 'toast']) {
     assert.ok(names.has(expected), `ui.js should export ${expected}`);
   }
 });

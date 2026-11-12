@@ -17,7 +17,7 @@
  */
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
-import { docs, domains, quota, providers } from './config.mjs';
+import { docs, domains, quota, providers, blueprintFiles } from './config.mjs';
 import {
   ROOT,
   stableId,
@@ -58,7 +58,7 @@ const MANIFESTS_ONLY = args.has('--manifests-only');
 // The chunker's own floor is 120; keeping this equal to it means the whole
 // verified index is generation-eligible, which matters for the domains that
 // are documented in many short sections (eBPF, BGP, Cluster Mesh).
-const MIN_GEN_WORDS = 120;
+const MIN_GEN_WORDS = 50;
 
 const SYSTEM_PROMPT = `You write multiple-choice exam questions for a study app used to prepare engineers for the Cilium Certified Associate (CCA) certification.
 
@@ -76,6 +76,19 @@ Hard rules, in order of importance:
 
 Good, with an attachment: the attachments carry the CiliumNetworkPolicy named rule1 with endpointSelector org=empire, class=deathstar and an HTTP rule allowing only POST /v1/request-landing. The stem may then say "After this policy is applied, a pod labelled app=xwing sends POST /v1/request-landing and gets no response. Why?" — the reader has been shown the policy.
 Bad: the same question with no attachment. The reader has to guess what the policy allows.
+
+9. Write at ASSOCIATE level, the level of the Cilium Certified Associate exam. Short stems of one to three sentences. Ask about:
+   - what a component does (agent vs operator vs CNI vs Hubble Relay)
+   - the identity-based security model and the three enforcement modes
+   - a standard cilium or hubble CLI command and what it shows
+   - reading a common CiliumNetworkPolicy or Gateway API manifest
+   - comparing two core features (WireGuard vs IPsec, Ingress vs Gateway API,
+     encapsulation vs native routing, sidecar vs sidecarless)
+   Do NOT ask about: internal gRPC service names or ports, eBPF map internals or
+   struct names, socket-level tracing internals, obscure ConfigMap or Helm flags,
+   cloud-provider setup steps, version-migration flags, or scale-benchmark
+   numbers. If the source excerpt only supports that kind of detail, write
+   nothing for this section rather than mining trivia from it.
 
 Return JSON only, with this exact shape and nothing outside it:
 {"questions":[{"stem":"...","options":[{"id":"a","text":"..."},{"id":"b","text":"..."},{"id":"c","text":"..."},{"id":"d","text":"..."}],"answer":"a","explanation":"...","optionRationale":{"b":"...","c":"...","d":"..."},"quote":"verbatim excerpt text","yieldSource":"scenario","attachments":[{"kind":"manifest","title":"The policy under test","language":"yaml","body":"apiVersion: cilium.io/v2\\nkind: CiliumNetworkPolicy\\n..."}]}]}
@@ -119,6 +132,8 @@ Write ${need} question${need === 1 ? '' : 's'} about this excerpt. At least ${Ma
  * caller loops for the remainder.
  */
 const MAX_QUESTIONS_PER_CALL = 6;
+// No section may produce more than this, however high --per-section is set.
+const PER_SECTION_CEILING = 6;
 
 async function generateForSection(section, need, cfg) {
   const rows = [];
@@ -358,8 +373,28 @@ async function main() {
   log('gen-ai', `model ${cfg.model} @ ${cfg.baseUrl}`);
 
   const usable = data.sections.filter(
-    (s) => s.renderStatus === 'verified' && s.renderedAnchor && s.wordCount >= MIN_GEN_WORDS,
+    (s) => (s.renderStatus === 'verified' || s.renderStatus === 'verified-merged') && s.renderedAnchor && s.wordCount >= MIN_GEN_WORDS,
   );
+
+/**
+ * Blueprint-first ordering.
+ *
+ * The Cilium docs are three kinds of page: short overviews of a concept, long
+ * reference chapters, and deep troubleshooting/migration guides. Sorting by
+ * `wordCount` descending — which is what this used to do — fills the quota from
+ * the longest pages, and in this documentation that means socket-level tracing,
+ * DSR/IPIP edge cases and cloud-provider setup steps. Measured before this
+ * change: 338 of 685 questions came from 30 sections, and 11 core overview pages
+ * produced none.
+ *
+ * Order is now: blueprint pages first (the ones the official study guide links
+ * to), then everything else, each group in document order. Within a domain the
+ * round-robin below spreads the work so a partial run stays balanced.
+ */
+function blueprintRank(section) {
+  const idx = blueprintFiles.indexOf(section.file);
+  return idx === -1 ? Number.MAX_SAFE_INTEGER : idx;
+}
 
   // Round-robin across domains by remaining deficit.
   //
@@ -372,8 +407,15 @@ async function main() {
     if (!byDomainSections.has(s.domain)) byDomainSections.set(s.domain, []);
     byDomainSections.get(s.domain).push(s);
   }
-  // Largest sections first within a domain: more distinct facts per request.
-  for (const list of byDomainSections.values()) list.sort((a, b) => b.wordCount - a.wordCount);
+  // Blueprint pages first, then document order. Never by size.
+  for (const list of byDomainSections.values()) {
+    list.sort((a, b) => {
+      const ra = blueprintRank(a);
+      const rb = blueprintRank(b);
+      if (ra !== rb) return ra - rb;
+      return a.id.localeCompare(b.id);
+    });
+  }
 
   const seen = new Set();
   const order = [];
@@ -406,22 +448,34 @@ async function main() {
     for (const section of order) {
       if (!/```(?:yaml|json)/.test(section.text)) continue;
       const have = existingBySection.get(section.id)?.length ?? 0;
-      work.push({ section, need: Math.max(1, PER_SECTION - have) });
+      work.push({ section, need: Math.max(1, Math.min(PER_SECTION, PER_SECTION_CEILING) - have) });
     }
     log('gen-ai', `manifests-only: ${work.length} sections with a YAML or JSON block`);
   } else if (SECTION_FILTER) {
     for (const section of order) {
       if (!section.id.includes(SECTION_FILTER)) continue;
       const have = existingBySection.get(section.id)?.length ?? 0;
-      work.push({ section, need: Math.max(1, PER_SECTION - have) });
+      work.push({ section, need: Math.max(1, Math.min(PER_SECTION, PER_SECTION_CEILING) - have) });
     }
     log('gen-ai', `targeted mode: ${work.length} sections matching "${SECTION_FILTER}"`);
   } else {
+    const shippedFiles = new Set((shipped.questions ?? []).map((q) => q.citations?.[0]?.file).filter(Boolean));
+    const backfilledFiles = new Set();
     for (const section of order) {
       const have = existingBySection.get(section.id)?.length ?? 0;
+      const isStarvedBlueprint =
+        blueprintFiles.includes(section.file) &&
+        !shippedFiles.has(section.file) &&
+        !backfilledFiles.has(section.file);
+      if (isStarvedBlueprint) {
+        const need = Math.max(1, Math.min(PER_SECTION, 3) - have);
+        backfilledFiles.add(section.file);
+        work.push({ section, need, blueprintBackfill: true });
+        continue;
+      }
       const domainDeficit = deficits[section.domain] ?? 0;
       if (domainDeficit <= 0) continue;
-      const need = Math.min(PER_SECTION - have, domainDeficit);
+      const need = Math.min(Math.min(PER_SECTION, PER_SECTION_CEILING) - have, domainDeficit);
       if (need <= 0) continue;
       work.push({ section, need });
     }
@@ -435,8 +489,8 @@ async function main() {
       if (budgetLeft <= 0) return;
       const item = work[cursor];
       cursor += 1;
-      const { section, need } = item;
-      if (!SECTION_FILTER && !MANIFESTS_ONLY && (deficits[section.domain] ?? 0) <= 0) continue;
+      const { section, need, blueprintBackfill } = item;
+      if (!SECTION_FILTER && !MANIFESTS_ONLY && !blueprintBackfill && (deficits[section.domain] ?? 0) <= 0) continue;
       budgetLeft -= 1;
       considered += 1;
 

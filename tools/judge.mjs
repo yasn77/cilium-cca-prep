@@ -12,7 +12,7 @@
  * so the corpus is visibly un-judged rather than silently blessed.
  */
 import { readJson, readJsonl, writeJson, log } from './lib.mjs';
-import { judge, judgeConfig, DEFECT_CATEGORIES } from './systemone.mjs';
+import { judge, scoreDifficulty, judgeConfig, DEFECT_CATEGORIES } from './systemone.mjs';
 import path from 'node:path';
 import { ROOT } from './lib.mjs';
 
@@ -76,10 +76,14 @@ async function main() {
   const kept = Object.fromEntries(
     Object.entries(previous).filter(([id]) => targetIds.has(id)),
   );
-  const todo = REJUDGE ? all : all.filter((q) => !kept[q.id]);
+  const todoChoice = REJUDGE ? all : all.filter((q) => !kept[q.id]?.choice);
+  const todoDifficulty = REJUDGE ? all : all.filter((q) => typeof kept[q.id]?.difficulty !== 'number');
 
-  log('judge', `${all.length} candidates, ${Object.keys(kept).length} already judged, ${todo.length} to judge`);
-  if (!todo.length) {
+  log(
+    'judge',
+    `${all.length} candidates, ${Object.keys(kept).length} already judged, ${todoChoice.length} to judge quality, ${todoDifficulty.length} to score difficulty`,
+  );
+  if (!todoChoice.length && !todoDifficulty.length) {
     // Preserve the original timestamp: rewriting it makes the file differ on
     // every run, which turns a no-op refresh into a 14,000-line pull request.
     await writeJson(OUT, {
@@ -94,35 +98,68 @@ async function main() {
     return;
   }
 
-  log('judge', `judging ${todo.length} via ${cfg.model} at ${cfg.baseUrl} (key from ${cfg.keySource})`);
+  log('judge', `via ${cfg.model} at ${cfg.baseUrl} (key from ${cfg.keySource})`);
 
-  const items = todo.map((q) => ({
-    key: q.id,
-    stem: q.stem,
-    options: q.options,
-    answer: q.answer,
-    explanation: q.explanation,
-    quote: q.citations?.[0]?.quote ?? '',
-  }));
+  // Score difficulty in the same pass. Two primitives per candidate, both
+  // batched: the fairness choice and the five-level score.
+  let difficulty = new Map();
+  if (todoDifficulty.length) {
+    const difficultyItems = todoDifficulty.map((q) => ({
+      key: q.id,
+      stem: q.stem,
+      options: q.options,
+      answer: q.answer,
+      file: q.citations?.[0]?.file ?? null,
+      hasAttachment: Boolean(q.attachments?.length),
+    }));
+    try {
+      difficulty = await scoreDifficulty(difficultyItems, cfg);
+    } catch (err) {
+      // Difficulty is a calibration aid, not a gate. Losing it must not block the
+      // quality judgement or the deploy.
+      log('judge', `difficulty scoring skipped: ${err.message}`);
+    }
+  }
 
-  let results;
-  try {
-    results = await judge(items, cfg);
-  } catch (err) {
-    log('judge', `judging failed: ${err.message}`);
-    log('judge', 'writing an empty verdict file so the pipeline can continue');
-    await writeJson(OUT, {
-      generatedAt: new Date().toISOString(),
-      model: cfg.model,
-      configured: true,
-      error: err.message,
-      verdicts: {},
-    });
-    return;
+  let results = new Map();
+  if (todoChoice.length) {
+    const items = todoChoice.map((q) => ({
+      key: q.id,
+      stem: q.stem,
+      options: q.options,
+      answer: q.answer,
+      explanation: q.explanation,
+      quote: q.citations?.[0]?.quote ?? '',
+    }));
+    try {
+      results = await judge(items, cfg);
+    } catch (err) {
+      log('judge', `judging failed: ${err.message}`);
+      log('judge', 'writing an empty verdict file so the pipeline can continue');
+      await writeJson(OUT, {
+        generatedAt: new Date().toISOString(),
+        model: cfg.model,
+        configured: true,
+        error: err.message,
+        verdicts: {},
+      });
+      return;
+    }
   }
 
   const verdicts = { ...kept };
-  for (const [key, v] of results) verdicts[key] = v;
+  for (const [key, v] of results) {
+    verdicts[key] = { ...(verdicts[key] ?? {}), ...v };
+  }
+  for (const [key, d] of difficulty) {
+    if (d?.difficulty != null && verdicts[key]) {
+      verdicts[key] = {
+        ...verdicts[key],
+        difficulty: d.difficulty,
+        difficultyDistribution: d.distribution,
+      };
+    }
+  }
   const histogram = histogramOf(verdicts);
 
   await writeJson(OUT, {
@@ -133,6 +170,12 @@ async function main() {
     histogram,
     verdicts: sortKeys(verdicts),
   });
+
+  const scored = Object.values(verdicts).filter((v) => typeof v.difficulty === 'number');
+  if (scored.length) {
+    const mean = scored.reduce((a, v) => a + v.difficulty, 0) / scored.length;
+    log('judge', `difficulty: ${scored.length} scored, mean ${mean.toFixed(2)}`);
+  }
 
   log('judge', `histogram: ${JSON.stringify(histogram)}`);
   const good = histogram.good_exam_item ?? 0;

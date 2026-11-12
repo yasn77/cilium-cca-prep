@@ -125,6 +125,76 @@ async function post(cfg, payload, attempts = 3) {
  * Judge a list of items. Returns a map key -> { choice, probabilities, confidence }.
  * Items must carry: key, stem, options[{id,text}], answer, explanation, quote.
  */
+/**
+ * Difficulty rubric, as an ordered `score` question.
+ *
+ * Five levels because SystemOne's score primitive allows up to ten and a
+ * five-point scale maps cleanly onto the slider the app exposes. The middle
+ * level is the real exam, which is what the slider defaults to.
+ */
+export const DIFFICULTY_LEVELS = [
+  'Foundational recall: a basic definition, the high-level role of a component, or a primary use case.',
+  'Easy associate: a standard concept or a common CLI command taken from the getting-started guides.',
+  'CCA exam target: a practical scenario, reading a standard policy or manifest, or comparing two core features.',
+  'Hard / advanced: a specific configuration parameter, an interaction between features, or detailed troubleshooting.',
+  'Expert / deep dive: low-level datapath internals, obscure edge-case caveats, or kernel and scale tuning.',
+];
+
+function buildDifficultyPayload(items, model, state) {
+  const questions = {};
+  for (const item of items) {
+    questions[item.key] = {
+      type: 'score',
+      instructions: {
+        question: item.stem,
+        options: item.options.map((o) => `${o.id}) ${o.text}`),
+        marked_answer: item.answer,
+        source_file: item.file ?? null,
+        has_attachment: Boolean(item.hasAttachment),
+        ask: 'Rate how difficult this question is for a candidate sitting the Cilium Certified Associate exam. The middle level is the real exam.',
+      },
+      criteria: DIFFICULTY_LEVELS,
+    };
+  }
+  return { state, model, questions };
+}
+
+/**
+ * Score difficulty for each item.
+ *
+ * Returns a map key -> { difficulty (1.00-5.00), distribution, confidence }.
+ * SystemOne answers with a score on the 0-4 index scale plus the probability of
+ * each level, so the continuous value is `score + 1`.
+ */
+export async function scoreDifficulty(items, cfg = judgeConfig()) {
+  if (!cfg.configured) throw new Error('judge provider has no API key');
+
+  const state =
+    'You are calibrating question difficulty for a study app preparing engineers for the Cilium Certified Associate exam, ' +
+    'an entry-level multiple-choice certification. The exam tests conceptual understanding, standard CLI usage and reading ' +
+    'common manifests; it is not an expert or internals exam.';
+
+  const out = new Map();
+  for (let i = 0; i < items.length; i += cfg.batchSize) {
+    const batch = items.slice(i, i + cfg.batchSize);
+    const data = await post(cfg, buildDifficultyPayload(batch, cfg.model, state));
+    const answers = data.answers ?? {};
+    for (const item of batch) {
+      const a = answers[item.key];
+      if (!a || typeof a.score !== 'number') {
+        out.set(item.key, { difficulty: null, distribution: a?.probabilities ?? {}, confidence: a?.confidence ?? 0 });
+        continue;
+      }
+      out.set(item.key, {
+        difficulty: Number((a.score + 1).toFixed(2)),
+        distribution: a.probabilities ?? {},
+        confidence: a.confidence ?? 0,
+      });
+    }
+  }
+  return out;
+}
+
 export async function judge(items, cfg = judgeConfig()) {
   if (!cfg.configured) throw new Error('judge provider has no API key');
 

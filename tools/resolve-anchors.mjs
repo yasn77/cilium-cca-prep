@@ -146,23 +146,18 @@ async function main() {
     const hits = page.sections.filter((r) => normalise(r.text) === want);
 
     if (s.mergedFrom && s.mergedFrom.length > 1) {
-      // The merged blob spans several headings; it must not be cited as if it
-      // were one section, so record the union of its parts and let the
-      // generator work from the first heading's anchor.
-      const parts = s.mergedFrom.map((id) => {
-        const part = data.sections.find((x) => x.id === id);
-        if (!part) return null;
-        const ph = page.sections.find((r) => normalise(r.text) === normalise(part.title));
-        return ph ? { id: part.id, renderedAnchor: ph.id, title: part.title } : null;
-      });
-      const resolved = parts.filter(Boolean);
-      s.mergedParts = resolved;
-      s.renderedAnchor = resolved[0]?.renderedAnchor ?? null;
-      s.renderStatus = resolved.length ? 'verified-merged' : 'unmatched';
-      if (resolved.length) verified += 1;
+      // A merged section spans several headings. Its own title is the first
+      // part's heading, so resolving that way is enough to anchor the citation;
+      // the absorbed siblings no longer exist as separate entries.
+      const exact = hits.find((h) => h.id === s.anchor);
+      const own = exact ?? hits[0] ?? null;
+      s.mergedParts = [{ id: s.id, renderedAnchor: own?.id ?? null, title: s.title }];
+      s.renderedAnchor = own?.id ?? null;
+      s.renderStatus = own ? 'verified-merged' : 'unmatched';
+      if (own) verified += 1;
       else {
         unmatched += 1;
-        problems.push(`${s.id} :: merged section matched none of its parts`);
+        problems.push(`${s.id} :: merged section heading "${s.title}" not found`);
       }
       continue;
     }

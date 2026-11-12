@@ -2,14 +2,33 @@
  * Practice mode: filtered single questions, immediate feedback, per-option
  * rationale on a wrong answer, and the citation that settles it.
  */
-import { DOMAINS, DOMAIN_ORDER, questions, getState } from './data.js';
+import {
+  DOMAINS,
+  DOMAIN_ORDER,
+  questions,
+  getState,
+  difficultyBand,
+  difficultyTier,
+  difficultyOf,
+} from './data.js';
 import { recordAnswer, toggleFlag, isFlagged, statsFor, recordSession } from './progress.js';
-import { attachmentBlocks, citationBlock, el, fill, optionButton, richText, toast } from './ui.js';
+import {
+  attachmentBlocks,
+  citationBlock,
+  difficultyBadge,
+  el,
+  fill,
+  optionButton,
+  richText,
+  toast,
+} from './ui.js';
 
 const filters = {
   domains: new Set(DOMAIN_ORDER),
   scope: 'all', // all | unseen | wrong | flagged
   yieldSource: 'any', // any | scenario | other
+  // 1 = easiest, 5 = hardest. 3 is the real exam and the default.
+  difficulty: 3,
 };
 
 let queue = [];
@@ -35,7 +54,7 @@ function pool() {
     seen.add(q.id);
     out.push(q);
   }
-  return out;
+  return difficultyBand(out, filters.difficulty, { minimum: 8 });
 }
 
 function shuffle(a) {
@@ -92,6 +111,7 @@ function renderSetup() {
           null,
         ),
       ]),
+      difficultyControl(),
       el('div', { class: 'filter-group' }, [
         el('div', { class: 'filter-label', text: 'Domains' }),
         el(
@@ -170,6 +190,44 @@ function renderSetup() {
   });
 }
 
+/**
+ * The difficulty slider.
+ *
+ * The middle is the real exam and is where it starts. Left is a warm-up, right
+ * is over-training for the deep-dive questions the exam only occasionally asks.
+ */
+function difficultyControl() {
+  const tier = difficultyTier(filters.difficulty);
+  const output = el('span', { class: 'slider-value', text: `${filters.difficulty.toFixed(1)}` });
+  const note = el('div', { class: 'slider-note', text: `${tier.label} — ${tier.note}` });
+
+  const input = el('input', {
+    type: 'range',
+    min: '1',
+    max: '5',
+    step: '0.5',
+    value: String(filters.difficulty),
+    class: 'difficulty-slider',
+    'aria-label': 'Question difficulty',
+    oninput: (e) => {
+      filters.difficulty = Number(e.target.value);
+      const t = difficultyTier(filters.difficulty);
+      output.textContent = filters.difficulty.toFixed(1);
+      note.textContent = `${t.label} — ${t.note}`;
+    },
+  });
+
+  return el('div', { class: 'filter-group' }, [
+    el('div', { class: 'filter-label', text: 'Difficulty' }, [
+      el('span', { class: 'slider-scale', text: 'easier' }),
+      output,
+      el('span', { class: 'slider-scale', text: 'harder' }),
+    ]),
+    input,
+    note,
+  ]);
+}
+
 function begin() {
   queue = shuffle(pool()).slice(0, 40);
   index = 0;
@@ -190,6 +248,7 @@ function renderQuestion() {
     el('span', { class: 'chip chip-accent', text: DOMAINS[q.domain]?.label ?? q.domain }),
     q.competency ? el('span', { class: 'chip', text: q.competency.replace(/-/g, ' ') }) : null,
     el('span', { class: 'chip', text: q.yieldSource }),
+    difficultyBadge(difficultyOf(q)),
     stat ? el('span', { class: 'chip', text: `seen ${stat.attempts}×` }) : null,
   ]);
 

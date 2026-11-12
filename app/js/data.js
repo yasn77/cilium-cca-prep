@@ -98,9 +98,56 @@ export function countByDomain(list = questions()) {
  * and tops up from whatever domains still have spare questions when a domain
  * cannot meet its quota.
  */
-export function buildExamPaper(pool = questions(), size = 60) {
+/**
+ * Difficulty, as a number on the question.
+ *
+ * Scored by SystemOne on a 1–5 scale where 3 is the real exam. A question that
+ * has not been scored yet is treated as 3 rather than hidden, so a partial
+ * judging run does not empty the app.
+ */
+export function difficultyOf(q) {
+  return typeof q?.difficulty === 'number' ? q.difficulty : 3;
+}
+
+/**
+ * Questions within `target ± tolerance`, widened until there are enough.
+ *
+ * The slider asks for "harder" or "easier" relative to the real exam, not for an
+ * exact band, so a hard cut would produce an empty queue. Widening is the honest
+ * fallback: you always get questions, and the tier label tells you how close the
+ * match is.
+ */
+export function difficultyBand(pool, target = 3, { tolerance = 0.8, minimum = 8 } = {}) {
+  let band = tolerance;
+  let picked = pool.filter((q) => Math.abs(difficultyOf(q) - target) <= band);
+  while (picked.length < minimum && band < 4) {
+    band += 0.4;
+    picked = pool.filter((q) => Math.abs(difficultyOf(q) - target) <= band);
+  }
+  return picked;
+}
+
+/** The tier label for a slider position, used in the caption under it. */
+export const DIFFICULTY_TIERS = [
+  { max: 2.0, label: 'Warm-up', note: 'foundational recall' },
+  { max: 2.5, label: 'Easier than the real exam', note: 'core concepts and standard CLI' },
+  { max: 3.6, label: 'Real CCA exam', note: 'the default calibration' },
+  { max: 4.5, label: 'Harder than the real exam', note: 'advanced configuration and troubleshooting' },
+  { max: 5.1, label: 'Expert / deep dive', note: 'internals and edge cases' },
+];
+
+export function difficultyTier(value) {
+  return DIFFICULTY_TIERS.find((t) => value < t.max) ?? DIFFICULTY_TIERS[DIFFICULTY_TIERS.length - 1];
+}
+
+export function buildExamPaper(pool = questions(), size = 60, target = null) {
+  // When a difficulty is requested, draw the paper from that band first and
+  // fall back to the wider pool for any domain the band cannot fill.
+  const narrow = target === null ? pool : difficultyBand(pool, target, { minimum: size });
   const byDomain = Object.fromEntries(DOMAIN_ORDER.map((d) => [d, []]));
-  for (const q of pool) if (byDomain[q.domain]) byDomain[q.domain].push(q);
+  const byDomainAll = Object.fromEntries(DOMAIN_ORDER.map((d) => [d, []]));
+  for (const q of narrow) if (byDomain[q.domain]) byDomain[q.domain].push(q);
+  for (const q of pool) if (byDomainAll[q.domain]) byDomainAll[q.domain].push(q);
 
   const totalWeight = DOMAIN_ORDER.reduce((a, d) => a + DOMAINS[d].weight, 0);
   const exact = DOMAIN_ORDER.map((d) => ({ d, v: (DOMAINS[d].weight / totalWeight) * size }));
@@ -119,9 +166,15 @@ export function buildExamPaper(pool = questions(), size = 60) {
   const shortfall = {};
   for (const d of DOMAIN_ORDER) {
     const want = quota[d];
-    const have = shuffle(byDomain[d]).slice(0, want);
-    paper.push(...have);
-    if (have.length < want) shortfall[d] = want - have.length;
+    // Prefer the difficulty band, then the full pool for this domain.
+    const inBand = shuffle(byDomain[d]).slice(0, want);
+    paper.push(...inBand);
+    if (inBand.length < want) {
+      const used = new Set(inBand.map((q) => q.id));
+      const filler = shuffle(byDomainAll[d].filter((q) => !used.has(q.id))).slice(0, want - inBand.length);
+      paper.push(...filler);
+      if (inBand.length + filler.length < want) shortfall[d] = want - inBand.length - filler.length;
+    }
   }
 
   // Top up any shortfall from domains with spare questions.

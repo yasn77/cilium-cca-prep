@@ -28,7 +28,7 @@ on:
       per_section:
         description: 'Questions to request per documentation section'
         required: false
-        default: '8'
+        default: '4'
       manifests_only:
         description: 'Generate only from sections that contain a manifest (ignores coverage deficits)'
         type: boolean
@@ -85,14 +85,14 @@ jobs:
         # A missing credential is not a failure: the script logs that it skipped
         # generation, and the site still deploys with whatever corpus exists.
         run: |
-          ARGS="--per-section=${{ inputs.per_section || '8' }} --limit=${{ inputs.limit || '0' }}"
+          ARGS="--per-section=${{ inputs.per_section || '4' }} --limit=${{ inputs.limit || '0' }}"
           if [ "${{ inputs.manifests_only }}" = "true" ]; then ARGS="$ARGS --manifests-only"; fi
           echo "gen-ai $ARGS"
           node tools/gen-ai.mjs $ARGS
 
       - name: Generate without a model
         if: ${{ inputs.skip_ai }}
-        run: node tools/gen-ai.mjs --per-section=${{ inputs.per_section || '8' }} --limit=0
+        run: node tools/gen-ai.mjs --per-section=${{ inputs.per_section || '4' }} --limit=0
 
       - name: Judge candidate quality with SystemOne
         env:

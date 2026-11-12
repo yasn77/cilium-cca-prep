@@ -25,7 +25,7 @@ import { ROOT, stableId, citationUrl, readJson, writeJsonl, log, normaliseSpace 
 
 const SECTIONS = path.join(ROOT, 'corpus', 'sections.json');
 const OUT = path.join(ROOT, 'candidates', 'templates.jsonl');
-const MIN_WORDS = 120;
+const MIN_WORDS = 50;
 
 /** Capitalise the first letter and end with exactly one full stop. */
 function sentenceCase(text) {
@@ -343,7 +343,7 @@ async function main() {
   const docsSha = sources?.docs?.sha ?? 'unknown';
 
   const usable = data.sections.filter(
-    (s) => s.renderStatus === 'verified' && s.renderedAnchor && !s.tooShort && s.wordCount >= MIN_WORDS,
+    (s) => (s.renderStatus === 'verified' || s.renderStatus === 'verified-merged') && s.renderedAnchor && !s.tooShort && s.wordCount >= MIN_WORDS,
   );
 
   // Pool of every definition across a domain, used for distractors. Distractors

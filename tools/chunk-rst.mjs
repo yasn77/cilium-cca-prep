@@ -22,7 +22,23 @@ import {
   domainRules,
   competencyRules,
   domains,
+  includePaths,
+  excludePaths,
 } from './config.mjs';
+
+/**
+ * Is this documentation file in the exam's scope?
+ *
+ * fetch-docs applies the same filter when it downloads, but the chunker also has
+ * to apply it: a corpus/docs directory left over from an earlier run may still
+ * contain files that are now out of scope, and walking them would pull the
+ * expert-level chapters back in.
+ */
+function inScope(rel) {
+  if (!rel.endsWith('.rst')) return false;
+  if (excludePaths.some((re) => re.test(rel))) return false;
+  return includePaths.some((re) => re.test(rel));
+}
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const DOCS_DIR = path.join(ROOT, 'corpus', 'docs');
@@ -438,7 +454,9 @@ async function walk(dir, prefix = '') {
 }
 
 async function main() {
-  const files = (await walk(DOCS_DIR)).sort();
+  const allFiles = (await walk(DOCS_DIR)).sort();
+  const files = allFiles.filter((f) => inScope(f));
+  const outOfScope = allFiles.length - files.length;
   const kept = [];
   const dropped = {
     too_short: [],
@@ -466,10 +484,11 @@ async function main() {
     const usable = parsed.filter(
       (s) => s.text && s.text.replace(/```/g, '').trim().length >= 40,
     );
-    // Short siblings are kept as individual sections here so each keeps its own
-    // verified anchor. Merging is a generation-time decision, applied later over
-    // the resolved set, so a citation can still point at the exact heading.
-    const merged = usable;
+    // Merge short sibling sections up to their shared parent, so an overview
+    // page made of many 40-90 word subsections becomes one eligible unit
+    // instead of being dropped. The parent heading's anchor is kept, so the
+    // citation still resolves.
+    const merged = mergeShortSections(usable);
 
     for (const s of merged) {
       // Short sections stay in the index (their anchor is real and may be cited
@@ -503,6 +522,7 @@ async function main() {
         competency: assignCompetency(s, domain),
         wordCount: s.wordCount,
         tooShort,
+        mergedFrom: s.mergedFrom && s.mergedFrom.length > 1 ? s.mergedFrom : undefined,
         text: s.text,
       });
     }
@@ -516,6 +536,7 @@ async function main() {
     generatedAt: new Date().toISOString(),
     counts: {
       files: files.length,
+      filesOutOfScope: outOfScope,
       filesWithIncludes: inlinedIncludes,
       sections: kept.length,
       words: kept.reduce((a, s) => a + s.wordCount, 0),

@@ -240,10 +240,11 @@ test('a real verdict from either judge stands alone', () => {
 
 test('when both judges give a real verdict the stricter one wins', () => {
   const merged = mergeVerdicts(
-    { q1: { choice: 'good_exam_item' } },
+    { q1: { choice: 'good_exam_item', difficulty: 2.8 } },
     { q1: { choice: 'ambiguity_two_correct' } },
   );
   assert.equal(merged.q1.choice, 'ambiguity_two_correct');
+  assert.equal(merged.q1.difficulty, 2.8);
   assert.deepEqual(merged.q1.also, ['good_exam_item']);
 });
 

@@ -21,7 +21,7 @@
  */
 import { readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
-import { docs, domains, quota, schemaVersion } from './config.mjs';
+import { docs, domains, quota, schemaVersion, blueprintFiles } from './config.mjs';
 import {
   ROOT,
   stableId,
@@ -119,7 +119,9 @@ async function main() {
   for (const s of sectionData.sections) {
     const key = `${s.file}#${s.renderedAnchor ?? s.anchor}`;
     sections.set(key, s);
-    if (s.renderStatus === 'verified' && s.renderedAnchor) verifiedAnchors.add(key);
+    if ((s.renderStatus === 'verified' || s.renderStatus === 'verified-merged') && s.renderedAnchor) {
+      verifiedAnchors.add(key);
+    }
   }
 
   const templates = await readJsonl(TEMPLATES);
@@ -218,6 +220,9 @@ async function main() {
     seenStems.push(q.stem);
     corpus.push({
       ...q,
+      // Difficulty is a calibration aid for the slider, never a gate. Absent
+      // means the judge has not scored it yet; the app treats that as 3.0.
+      ...(typeof verdict?.difficulty === 'number' ? { difficulty: verdict.difficulty } : {}),
       provenance: {
         ...q.provenance,
         checks: {
@@ -225,6 +230,7 @@ async function main() {
           quoteVerbatim: true,
           answerEntailed: true,
           judgeVerdict: verdict?.choice ?? (judgeRan ? null : 'not-configured'),
+          difficultyScored: typeof verdict?.difficulty === 'number',
         },
       },
     });
@@ -293,6 +299,28 @@ async function main() {
     ? shipped.filter((q) => q.yieldSource === 'scenario').length / shipped.length
     : 0;
 
+  // Anti-regression: every blueprint page that has an eligible section must
+  // contribute at least one question. Before this check, 11 core overview pages
+  // produced nothing while long troubleshooting chapters absorbed the quotas.
+  const blueprintStarved = [];
+  {
+    const eligible = new Map();
+    for (const sec of sections.values()) {
+      if (sec.renderStatus !== 'verified' && sec.renderStatus !== 'verified-merged') continue;
+      if (sec.wordCount < 50) continue;
+      if (!blueprintFiles.includes(sec.file)) continue;
+      eligible.set(sec.file, (eligible.get(sec.file) ?? 0) + 1);
+    }
+    const shippedFiles = new Map();
+    for (const q of shipped) {
+      const f = q.citations?.[0]?.file;
+      if (f) shippedFiles.set(f, (shippedFiles.get(f) ?? 0) + 1);
+    }
+    for (const [file, n] of eligible) {
+      if (!shippedFiles.get(file)) blueprintStarved.push(`${file} (${n} eligible sections, 0 questions)`);
+    }
+  }
+
   shipped.sort((a, b) => (a.domain === b.domain ? a.id.localeCompare(b.id) : a.domain.localeCompare(b.domain)));
 
   await writeJson(CORPUS, {
@@ -308,8 +336,21 @@ async function main() {
         return acc;
       }, {}),
       scenarioShare: Number(scenarioShare.toFixed(3)),
+      difficulty: (() => {
+        const bands = { '1.0-2.0': 0, '2.0-2.5': 0, '2.5-3.5': 0, '3.5-4.5': 0, '4.5-5.0': 0 };
+        for (const q of shipped) {
+          const d = typeof q.difficulty === 'number' ? q.difficulty : 3;
+          if (d <= 2) bands['1.0-2.0'] += 1;
+          else if (d <= 2.5) bands['2.0-2.5'] += 1;
+          else if (d <= 3.5) bands['2.5-3.5'] += 1;
+          else if (d <= 4.5) bands['3.5-4.5'] += 1;
+          else bands['4.5-5.0'] += 1;
+        }
+        return bands;
+      })(),
       judgeRan,
       judgeSource: judgeRan ? judgeSource : null,
+      blueprintStarved: blueprintStarved.length,
       retired: retiredAway,
     },
     questions: shipped,
@@ -352,7 +393,15 @@ async function main() {
       log('verify', `${unjudged}/${shipped.length} shipped questions are unjudged (judge source: ${judgeSource})`);
     }
   }
+  if (blueprintStarved.length) {
+    log('verify', `blueprint files with no questions: ${blueprintStarved.length}`);
+    for (const b of blueprintStarved.slice(0, 15)) log('verify', `  ${b}`);
+  }
+
   const shortDomains = Object.entries(coverage).filter(([, c]) => !c.met);
+  if (blueprintStarved.length && process.argv.includes('--enforce-blueprint')) {
+    problems.push(`${blueprintStarved.length} blueprint files produced no questions`);
+  }
   if (shortDomains.length && process.argv.includes('--enforce-floor')) {
     problems.push(`below floor: ${shortDomains.map(([d, c]) => `${d} ${c.count}/${c.floor}`).join(', ')}`);
   }

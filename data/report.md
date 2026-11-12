@@ -1,6 +1,6 @@
 # Corpus report
 
-Generated 2026-11-12T17:54:57.681Z
+Generated 2026-11-12T18:02:01.207Z
 
 ## Source
 
@@ -10,8 +10,8 @@ Generated 2026-11-12T17:54:57.681Z
 | Ref | `v1.20.4` |
 | Commit | `beb276d2f38d4aadfda14710acf8d14a0f1ba723` |
 | Retrieval route | tarball |
-| Files pulled | 186 |
-| Bytes | 1650968 |
+| Files pulled | 150 |
+| Bytes | 1121646 |
 | Licence | CC BY 4.0 (documentation); Apache-2.0 (code) |
 
 ## Sections
@@ -27,7 +27,7 @@ Dropped:
 
 ## Corpus
 
-**506 questions** in the shipped corpus, **631** quarantined.
+**508 questions** in the shipped corpus, **636** quarantined.
 
 | Domain | Weight | Questions | Floor | Status |
 |---|---|---|---|---|
@@ -38,7 +38,7 @@ Dropped:
 | Installation and Configuration | 10% | 54 | 50 | met |
 | Cluster Mesh | 10% | 52 | 50 | met |
 | eBPF | 10% | 26 | 25 | met |
-| BGP and External Networking | 6% | 40 | 30 | met |
+| BGP and External Networking | 6% | 42 | 30 | met |
 
 <details><summary>Coverage by competency</summary>
 
@@ -54,7 +54,7 @@ Dropped:
 - `bgp-control-plane` — 13 _(thin)_
 - `bgp-advertisement` — 11 _(thin)_
 - `egress-gateway` — 9 _(thin)_
-- `bgp-peering` — 5 _(thin)_
+- `bgp-peering` — 7 _(thin)_
 - `l2-announcements` — 1 _(thin)_
 - `unmapped` — 1
 
@@ -82,8 +82,8 @@ Dropped:
 
 - `unmapped` — 66
 - `policy-rule-structure` — 17 _(thin)_
-- `policy-intent` — 10 _(thin)_
-- `policy-enforcement-modes` — 3 _(thin)_
+- `policy-intent` — 9 _(thin)_
+- `policy-enforcement-modes` — 4 _(thin)_
 - `identity-model` — 2 _(thin)_
 
 **Network Observability**
@@ -105,23 +105,23 @@ Dropped:
 
 | Yield source | Count |
 |---|---|
-| scenario | 192 |
-| attribute | 161 |
-| definition | 98 |
-| contrast | 55 |
+| scenario | 193 |
+| attribute | 160 |
+| definition | 99 |
+| contrast | 56 |
 
-Scenario share: **37.9%** (floor 25%).
+Scenario share: **38.0%** (floor 25%).
 
 ## Difficulty
 
-SystemOne scored **504** of 506 questions on a 1–5 scale where **3.0 is the real exam**. Median **3.47**.
+SystemOne scored **508** of 508 questions on a 1–5 scale where **3.0 is the real exam**. Median **3.47**.
 
 | Band | Questions | What it is |
 |---|---|---|
 | 1.0–2.0 | 33 | Foundational recall |
 | 2.0–2.5 | 60 | Easier than the exam |
 | 2.5–3.5 | 166 | **The real exam band** |
-| 3.5–4.5 | 242 | Harder than the exam |
+| 3.5–4.5 | 244 | Harder than the exam |
 | 4.5–5.0 | 5 | Expert / deep dive |
 
 Difficulty is a calibration aid for the practice slider, not an official metric. The exam is associate-level; a corpus that skews above the middle band is a corpus that over-trains.
@@ -133,14 +133,14 @@ Difficulty is scored on a 1.0–5.0 scale by SystemOne as a calibration aid for 
 | Band | Questions | Share |
 |---|---|---|
 | 1.0-2.0 | 33 | 6.5% |
-| 2.0-2.5 | 60 | 11.9% |
-| 2.5-3.5 | 166 | 32.8% |
-| 3.5-4.5 | 242 | 47.8% |
+| 2.0-2.5 | 60 | 11.8% |
+| 2.5-3.5 | 166 | 32.7% |
+| 3.5-4.5 | 244 | 48.0% |
 | 4.5-5.0 | 5 | 1.0% |
 
 ### Blueprint coverage
 
-**461 of 506 questions (91.1%)** cite one of the 63 core CCA Study Guide / playlist files (60/60 eligible blueprint files represented).
+**463 of 508 questions (91.1%)** cite one of the 63 core CCA Study Guide / playlist files (60/60 eligible blueprint files represented).
 
 ## Verification
 
@@ -156,8 +156,8 @@ Quarantine by gate:
 | Gate | Rejected |
 |---|---|
 | shape | 243 |
-| entail | 215 |
-| judge | 145 |
+| entail | 217 |
+| judge | 148 |
 | quote | 17 |
 | duplicate | 11 |
 
@@ -165,16 +165,16 @@ Judge histogram:
 
 | Category | Count |
 |---|---|
-| good_exam_item | 1111 |
-| wording_broken | 72 |
-| distractors_too_obvious | 40 |
-| answer_not_determinable | 111 |
-| trivia_not_in_blueprint | 62 |
+| good_exam_item | 908 |
+| distractors_too_obvious | 35 |
+| wording_broken | 65 |
+| answer_not_determinable | 88 |
+| trivia_not_in_blueprint | 45 |
 | ambiguity_two_correct | 3 |
 
 ## Known weak points
 
-95 of 506 questions (18.8%) are flagged here as weaker than the rest: either they survived without a judge verdict, or the correct answer is a term short enough that the entailment check is close to a string match rather than a claim about meaning.
+94 of 508 questions (18.5%) are flagged here as weaker than the rest: either they survived without a judge verdict, or the correct answer is a term short enough that the entailment check is close to a string match rather than a claim about meaning.
 
 <details><summary>List</summary>
 
@@ -225,7 +225,6 @@ Judge histogram:
 - `deae08560cbd3382` — installation — An engineer wants to see the security identities that the local Cilium agent is managing. 
 - `f575a95b2f44a7fd` — installation — A pod in the kube-system namespace is labelled k8s-app=kube-dns and eks.amazonaws.com/comp
 - `222b03385efc6cd5` — network-policy — A Cluster Mesh deployment needs longer than usual to complete a key rotation across severa
-- `519a2a4bccbc41b0` — network-policy — In the policy shown, which HTTP method and path are permitted for traffic from the "luke" 
 - `5bb0de73e892fa59` — network-policy — An application team complains that requests to forbidden destinations hang for a long time
 - `7004d2c4c0b90b1e` — network-policy — A team wants to allow traffic to a set of pods from 10.0.0.0/8, but must exclude the subne
 - `80de9b324b0d6507` — network-policy — You need to allow egress from selected endpoints to a set of destination CIDRs, but must c

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-12T17:35:29.038Z",
+  "generatedAt": "2026-11-12T18:00:11.923Z",
   "model": "jev-latest",
   "configured": true,
   "categories": [
@@ -11,11 +11,11 @@
     "wording_broken"
   ],
   "histogram": {
-    "good_exam_item": 1111,
-    "wording_broken": 72,
-    "distractors_too_obvious": 40,
-    "answer_not_determinable": 111,
-    "trivia_not_in_blueprint": 62,
+    "good_exam_item": 908,
+    "distractors_too_obvious": 35,
+    "wording_broken": 65,
+    "answer_not_determinable": 88,
+    "trivia_not_in_blueprint": 45,
     "ambiguity_two_correct": 3
   },
   "verdicts": {
@@ -77,26 +77,6 @@
         "2": 0.97,
         "3": 0.02,
         "4": 0
-      }
-    },
-    "0049288931bc30f6": {
-      "choice": "wording_broken",
-      "probabilities": {
-        "good_exam_item": 0.27,
-        "answer_not_determinable": 0.13,
-        "distractors_too_obvious": 0.03,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.24,
-        "wording_broken": 0.3
-      },
-      "confidence": 0.16,
-      "difficulty": 3.27,
-      "difficultyDistribution": {
-        "0": 0.06,
-        "1": 0.14,
-        "2": 0.3,
-        "3": 0.49,
-        "4": 0.01
       }
     },
     "00777ac876a5437a": {
@@ -279,26 +259,6 @@
         "4": 0
       }
     },
-    "01d36a8487750592": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.52,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.23,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.15,
-        "wording_broken": 0.05
-      },
-      "confidence": 0.42,
-      "difficulty": 3.8,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.16,
-        "3": 0.81,
-        "4": 0.01
-      }
-    },
     "01ed064839c72add": {
       "choice": "answer_not_determinable",
       "probabilities": {
@@ -337,26 +297,6 @@
         "2": 0.12,
         "3": 0.8,
         "4": 0.04
-      }
-    },
-    "027e8500ceab001a": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.74,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.16,
-        "ambiguity_two_correct": 0.04,
-        "trivia_not_in_blueprint": 0.03,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.69,
-      "difficulty": 4.06,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.06,
-        "3": 0.78,
-        "4": 0.15
       }
     },
     "027f304fa9ec7fa8": {
@@ -459,26 +399,6 @@
         "4": 0.01
       }
     },
-    "02a5871c8a3e7ed1": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.8,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.15,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.02,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.76,
-      "difficulty": 3.17,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.16,
-        "2": 0.51,
-        "3": 0.33,
-        "4": 0
-      }
-    },
     "02c14556b8068d9c": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -519,24 +439,24 @@
         "4": 0
       }
     },
-    "030a26026c6f304d": {
+    "02f7a9803f68eedf": {
       "choice": "good_exam_item",
       "probabilities": {
-        "good_exam_item": 0.47,
+        "good_exam_item": 0.65,
         "answer_not_determinable": 0.05,
-        "distractors_too_obvious": 0.24,
+        "distractors_too_obvious": 0.08,
         "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.2,
-        "wording_broken": 0.02
+        "trivia_not_in_blueprint": 0.03,
+        "wording_broken": 0.17
       },
-      "confidence": 0.36,
-      "difficulty": 4.26,
+      "confidence": 0.58,
+      "difficulty": 2.98,
       "difficultyDistribution": {
         "0": 0,
-        "1": 0,
-        "2": 0.02,
-        "3": 0.68,
-        "4": 0.3
+        "1": 0.06,
+        "2": 0.9,
+        "3": 0.04,
+        "4": 0
       }
     },
     "030deec258d0a7fe": {
@@ -579,26 +499,6 @@
         "4": 0.2
       }
     },
-    "0354f88a65a377ae": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.68,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.2,
-        "ambiguity_two_correct": 0,
-        "trivia_not_in_blueprint": 0.1,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.62,
-      "difficulty": 3.66,
-      "difficultyDistribution": {
-        "0": 0.02,
-        "1": 0.03,
-        "2": 0.24,
-        "3": 0.7,
-        "4": 0.01
-      }
-    },
     "03a54fd143e7e1a7": {
       "choice": "answer_not_determinable",
       "probabilities": {
@@ -617,6 +517,26 @@
         "2": 0.07,
         "3": 0.89,
         "4": 0.03
+      }
+    },
+    "03e96ae2fcc504a7": {
+      "choice": "good_exam_item",
+      "probabilities": {
+        "good_exam_item": 0.5,
+        "answer_not_determinable": 0.17,
+        "distractors_too_obvious": 0.11,
+        "ambiguity_two_correct": 0.15,
+        "trivia_not_in_blueprint": 0.03,
+        "wording_broken": 0.04
+      },
+      "confidence": 0.4,
+      "difficulty": 3.11,
+      "difficultyDistribution": {
+        "0": 0,
+        "1": 0.02,
+        "2": 0.86,
+        "3": 0.12,
+        "4": 0
       }
     },
     "03ed158661e3fde4": {
@@ -697,26 +617,6 @@
         "2": 0.22,
         "3": 0.73,
         "4": 0.03
-      }
-    },
-    "045f0b2f323b0c36": {
-      "choice": "trivia_not_in_blueprint",
-      "probabilities": {
-        "good_exam_item": 0.12,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.11,
-        "ambiguity_two_correct": 0,
-        "trivia_not_in_blueprint": 0.75,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.7,
-      "difficulty": 2.57,
-      "difficultyDistribution": {
-        "0": 0.07,
-        "1": 0.48,
-        "2": 0.27,
-        "3": 0.16,
-        "4": 0.02
       }
     },
     "0472aa005a56c31c": {
@@ -919,6 +819,26 @@
         "4": 0
       }
     },
+    "06a348013e18d01e": {
+      "choice": "good_exam_item",
+      "probabilities": {
+        "good_exam_item": 0.81,
+        "answer_not_determinable": 0.02,
+        "distractors_too_obvious": 0.11,
+        "ambiguity_two_correct": 0.02,
+        "trivia_not_in_blueprint": 0.01,
+        "wording_broken": 0.03
+      },
+      "confidence": 0.77,
+      "difficulty": 2.97,
+      "difficultyDistribution": {
+        "0": 0.02,
+        "1": 0.14,
+        "2": 0.71,
+        "3": 0.13,
+        "4": 0
+      }
+    },
     "06c6c235b70bce09": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -937,46 +857,6 @@
         "2": 0.05,
         "3": 0,
         "4": 0
-      }
-    },
-    "06edad5bd7d15b16": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.49,
-        "answer_not_determinable": 0.05,
-        "distractors_too_obvious": 0.18,
-        "ambiguity_two_correct": 0.05,
-        "trivia_not_in_blueprint": 0.2,
-        "wording_broken": 0.03
-      },
-      "confidence": 0.39,
-      "difficulty": 4.63,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0.01,
-        "3": 0.34,
-        "4": 0.65
-      }
-    },
-    "07035367e9b7e8a5": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.66,
-        "answer_not_determinable": 0.03,
-        "distractors_too_obvious": 0.17,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.11,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.59,
-      "difficulty": 4.05,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.02,
-        "3": 0.88,
-        "4": 0.09
       }
     },
     "076afbd18cf167c4": {
@@ -1017,26 +897,6 @@
         "2": 0.17,
         "3": 0.66,
         "4": 0
-      }
-    },
-    "07b99ffe43e25082": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.66,
-        "answer_not_determinable": 0.05,
-        "distractors_too_obvious": 0.16,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.1,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.59,
-      "difficulty": 3.92,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.08,
-        "3": 0.89,
-        "4": 0.02
       }
     },
     "07bd2b3e7d69f45d": {
@@ -1199,26 +1059,6 @@
         "4": 0
       }
     },
-    "093a307e9ee7a076": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.35,
-        "answer_not_determinable": 0.32,
-        "distractors_too_obvious": 0.16,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.1,
-        "wording_broken": 0.05
-      },
-      "confidence": 0.22,
-      "difficulty": 3.92,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.08,
-        "3": 0.88,
-        "4": 0.03
-      }
-    },
     "095da766ba25ddc5": {
       "choice": "trivia_not_in_blueprint",
       "probabilities": {
@@ -1319,26 +1159,6 @@
         "4": 0
       }
     },
-    "09e254285ac682bb": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.71,
-        "answer_not_determinable": 0.06,
-        "distractors_too_obvious": 0.08,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.07,
-        "wording_broken": 0.06
-      },
-      "confidence": 0.65,
-      "difficulty": 3.54,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.04,
-        "2": 0.38,
-        "3": 0.58,
-        "4": 0
-      }
-    },
     "0a084b216d86aeef": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -1357,26 +1177,6 @@
         "2": 0.18,
         "3": 0.62,
         "4": 0.03
-      }
-    },
-    "0ad971291ba61f33": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.6,
-        "answer_not_determinable": 0.12,
-        "distractors_too_obvious": 0.22,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.02,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.52,
-      "difficulty": 2.98,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.07,
-        "2": 0.87,
-        "3": 0.06,
-        "4": 0
       }
     },
     "0af6f59ad4e443a7": {
@@ -1517,26 +1317,6 @@
         "2": 0.19,
         "3": 0.41,
         "4": 0.01
-      }
-    },
-    "0c63e06640d26dc9": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.45,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.14,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.37,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.34,
-      "difficulty": 3.98,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0.03,
-        "3": 0.94,
-        "4": 0.03
       }
     },
     "0c6bc08730adbfd9": {
@@ -1699,26 +1479,6 @@
         "4": 0.01
       }
     },
-    "0ddcd72f9bb7501b": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.5,
-        "answer_not_determinable": 0.03,
-        "distractors_too_obvious": 0.21,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.2,
-        "wording_broken": 0.05
-      },
-      "confidence": 0.4,
-      "difficulty": 3.84,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.02,
-        "2": 0.12,
-        "3": 0.83,
-        "4": 0.02
-      }
-    },
     "0e02acd9dab31cae": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -1737,26 +1497,6 @@
         "2": 0.25,
         "3": 0.71,
         "4": 0.01
-      }
-    },
-    "0e39b9685e0698a3": {
-      "choice": "trivia_not_in_blueprint",
-      "probabilities": {
-        "good_exam_item": 0.38,
-        "answer_not_determinable": 0.07,
-        "distractors_too_obvious": 0.13,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.39,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.27,
-      "difficulty": 4.15,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0.03,
-        "3": 0.77,
-        "4": 0.2
       }
     },
     "0e45850b7aad078c": {
@@ -1797,26 +1537,6 @@
         "2": 0.25,
         "3": 0.67,
         "4": 0.02
-      }
-    },
-    "0ebad14f47b795e8": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.69,
-        "answer_not_determinable": 0.03,
-        "distractors_too_obvious": 0.19,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.06,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.63,
-      "difficulty": 3.98,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0.06,
-        "3": 0.89,
-        "4": 0.05
       }
     },
     "0f138c18557ce81d": {
@@ -1917,26 +1637,6 @@
         "2": 0.7,
         "3": 0.29,
         "4": 0
-      }
-    },
-    "10747841bfed1250": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.37,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.16,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.25,
-        "wording_broken": 0.18
-      },
-      "confidence": 0.24,
-      "difficulty": 3.94,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.02,
-        "2": 0.07,
-        "3": 0.82,
-        "4": 0.08
       }
     },
     "107c503d280c97dc": {
@@ -2159,26 +1859,6 @@
         "4": 0.01
       }
     },
-    "126f9bf4eae26b54": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.47,
-        "answer_not_determinable": 0.03,
-        "distractors_too_obvious": 0.08,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.38,
-        "wording_broken": 0.03
-      },
-      "confidence": 0.36,
-      "difficulty": 3.19,
-      "difficultyDistribution": {
-        "0": 0.1,
-        "1": 0.18,
-        "2": 0.2,
-        "3": 0.49,
-        "4": 0.03
-      }
-    },
     "12cb6a8fd98fe0f1": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -2237,26 +1917,6 @@
         "2": 0.05,
         "3": 0.89,
         "4": 0.05
-      }
-    },
-    "136f9e6685470593": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.53,
-        "answer_not_determinable": 0.13,
-        "distractors_too_obvious": 0.22,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.08,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.44,
-      "difficulty": 3.73,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.27,
-        "3": 0.71,
-        "4": 0.01
       }
     },
     "1371730b0bdd58bd": {
@@ -2479,46 +2139,6 @@
         "4": 0
       }
     },
-    "164da9f7d3896181": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.7,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.19,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.07,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.64,
-      "difficulty": 3.82,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.02,
-        "2": 0.16,
-        "3": 0.77,
-        "4": 0.04
-      }
-    },
-    "16e281616b525014": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.73,
-        "answer_not_determinable": 0.03,
-        "distractors_too_obvious": 0.19,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.03,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.68,
-      "difficulty": 3.36,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.04,
-        "2": 0.56,
-        "3": 0.4,
-        "4": 0
-      }
-    },
     "1713da1c52b258bf": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -2657,26 +2277,6 @@
         "2": 0.15,
         "3": 0.49,
         "4": 0.04
-      }
-    },
-    "1834599aeb26720f": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.56,
-        "answer_not_determinable": 0.12,
-        "distractors_too_obvious": 0.09,
-        "ambiguity_two_correct": 0.11,
-        "trivia_not_in_blueprint": 0.06,
-        "wording_broken": 0.06
-      },
-      "confidence": 0.47,
-      "difficulty": 3.06,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.13,
-        "2": 0.68,
-        "3": 0.19,
-        "4": 0
       }
     },
     "18947b8895c26f8b": {
@@ -2919,66 +2519,6 @@
         "4": 0
       }
     },
-    "1adcf9dbb1e78b6e": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.44,
-        "answer_not_determinable": 0.18,
-        "distractors_too_obvious": 0.26,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.09,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.33,
-      "difficulty": 4.07,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0.02,
-        "3": 0.88,
-        "4": 0.1
-      }
-    },
-    "1aebb77a40732ae8": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.74,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.15,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.07,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.69,
-      "difficulty": 3.97,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0.05,
-        "3": 0.91,
-        "4": 0.04
-      }
-    },
-    "1af0cf1c9d372284": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.69,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.11,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.17,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.63,
-      "difficulty": 3.95,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.05,
-        "3": 0.92,
-        "4": 0.02
-      }
-    },
     "1b39610ca0a16afc": {
       "choice": "answer_not_determinable",
       "probabilities": {
@@ -3057,26 +2597,6 @@
         "2": 0.81,
         "3": 0.09,
         "4": 0
-      }
-    },
-    "1baeabcb857e927e": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.37,
-        "answer_not_determinable": 0.29,
-        "distractors_too_obvious": 0.11,
-        "ambiguity_two_correct": 0.09,
-        "trivia_not_in_blueprint": 0.12,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.24,
-      "difficulty": 3.89,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0.11,
-        "3": 0.88,
-        "4": 0.01
       }
     },
     "1bf9d6e83f995005": {
@@ -3177,46 +2697,6 @@
         "2": 0.08,
         "3": 0.9,
         "4": 0.01
-      }
-    },
-    "1d239bd372c5ec04": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.43,
-        "answer_not_determinable": 0.1,
-        "distractors_too_obvious": 0.09,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.16,
-        "wording_broken": 0.19
-      },
-      "confidence": 0.32,
-      "difficulty": 3.67,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.08,
-        "2": 0.27,
-        "3": 0.5,
-        "4": 0.14
-      }
-    },
-    "1d6cb40b7f2955da": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.64,
-        "answer_not_determinable": 0.05,
-        "distractors_too_obvious": 0.16,
-        "ambiguity_two_correct": 0.04,
-        "trivia_not_in_blueprint": 0.06,
-        "wording_broken": 0.05
-      },
-      "confidence": 0.57,
-      "difficulty": 2.88,
-      "difficultyDistribution": {
-        "0": 0.07,
-        "1": 0.26,
-        "2": 0.4,
-        "3": 0.27,
-        "4": 0
       }
     },
     "1d9f5e50a8af8f2d": {
@@ -3419,26 +2899,6 @@
         "4": 0.04
       }
     },
-    "1f1120ab509f5832": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.68,
-        "answer_not_determinable": 0.03,
-        "distractors_too_obvious": 0.15,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.12,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.62,
-      "difficulty": 3.82,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.15,
-        "3": 0.82,
-        "4": 0.01
-      }
-    },
     "2003df99f271b1a7": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -3519,26 +2979,6 @@
         "4": 0
       }
     },
-    "21593ea3a16ceaf6": {
-      "choice": "trivia_not_in_blueprint",
-      "probabilities": {
-        "good_exam_item": 0.35,
-        "answer_not_determinable": 0.05,
-        "distractors_too_obvious": 0.16,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.38,
-        "wording_broken": 0.03
-      },
-      "confidence": 0.26,
-      "difficulty": 3.93,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.05,
-        "2": 0.08,
-        "3": 0.75,
-        "4": 0.11
-      }
-    },
     "218e26dfa1d7b5f0": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -3559,26 +2999,6 @@
         "4": 0.01
       }
     },
-    "219b8d674ebdf11b": {
-      "choice": "answer_not_determinable",
-      "probabilities": {
-        "good_exam_item": 0.07,
-        "answer_not_determinable": 0.63,
-        "distractors_too_obvious": 0.06,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.17,
-        "wording_broken": 0.06
-      },
-      "confidence": 0.56,
-      "difficulty": 3.95,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.05,
-        "3": 0.92,
-        "4": 0.02
-      }
-    },
     "222b03385efc6cd5": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -3597,26 +3017,6 @@
         "2": 0.08,
         "3": 0.89,
         "4": 0.02
-      }
-    },
-    "223bd981d9eceb23": {
-      "choice": "distractors_too_obvious",
-      "probabilities": {
-        "good_exam_item": 0.38,
-        "answer_not_determinable": 0.08,
-        "distractors_too_obvious": 0.4,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.04,
-        "wording_broken": 0.09
-      },
-      "confidence": 0.28,
-      "difficulty": 3.7,
-      "difficultyDistribution": {
-        "0": 0.02,
-        "1": 0.06,
-        "2": 0.15,
-        "3": 0.73,
-        "4": 0.04
       }
     },
     "2252b1976fe51e07": {
@@ -3657,26 +3057,6 @@
         "2": 0.69,
         "3": 0.12,
         "4": 0
-      }
-    },
-    "229a99417cde8ce0": {
-      "choice": "answer_not_determinable",
-      "probabilities": {
-        "good_exam_item": 0.15,
-        "answer_not_determinable": 0.27,
-        "distractors_too_obvious": 0.09,
-        "ambiguity_two_correct": 0.04,
-        "trivia_not_in_blueprint": 0.24,
-        "wording_broken": 0.21
-      },
-      "confidence": 0.12,
-      "difficulty": 3.42,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.03,
-        "2": 0.52,
-        "3": 0.44,
-        "4": 0.01
       }
     },
     "23072c6eb514a372": {
@@ -3839,26 +3219,6 @@
         "4": 0.04
       }
     },
-    "25ba830e844d6201": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.62,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.2,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.09,
-        "wording_broken": 0.05
-      },
-      "confidence": 0.54,
-      "difficulty": 3.78,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.21,
-        "3": 0.77,
-        "4": 0.01
-      }
-    },
     "25e5fa5a37577f6c": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -3879,26 +3239,6 @@
         "4": 0
       }
     },
-    "26242edcee00aac7": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.74,
-        "answer_not_determinable": 0.03,
-        "distractors_too_obvious": 0.14,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.07,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.69,
-      "difficulty": 4.02,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.06,
-        "3": 0.84,
-        "4": 0.09
-      }
-    },
     "263507e30915c931": {
       "choice": "answer_not_determinable",
       "probabilities": {
@@ -3917,26 +3257,6 @@
         "2": 0.54,
         "3": 0.38,
         "4": 0
-      }
-    },
-    "265a3cb9cbba9f7a": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.34,
-        "answer_not_determinable": 0.28,
-        "distractors_too_obvious": 0.06,
-        "ambiguity_two_correct": 0.05,
-        "trivia_not_in_blueprint": 0.06,
-        "wording_broken": 0.21
-      },
-      "confidence": 0.21,
-      "difficulty": 3.82,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.16,
-        "3": 0.8,
-        "4": 0.02
       }
     },
     "26637b8c06d32de2": {
@@ -4239,46 +3559,6 @@
         "4": 0.04
       }
     },
-    "293f320a902cee2e": {
-      "choice": "answer_not_determinable",
-      "probabilities": {
-        "good_exam_item": 0.1,
-        "answer_not_determinable": 0.35,
-        "distractors_too_obvious": 0.08,
-        "ambiguity_two_correct": 0.21,
-        "trivia_not_in_blueprint": 0.23,
-        "wording_broken": 0.03
-      },
-      "confidence": 0.22,
-      "difficulty": 3.6,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.09,
-        "2": 0.26,
-        "3": 0.6,
-        "4": 0.05
-      }
-    },
-    "2967bb45b23b733d": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.78,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.15,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.01,
-        "wording_broken": 0.03
-      },
-      "confidence": 0.74,
-      "difficulty": 2.93,
-      "difficultyDistribution": {
-        "0": 0.03,
-        "1": 0.39,
-        "2": 0.23,
-        "3": 0.33,
-        "4": 0.02
-      }
-    },
     "29c8b4d3345d5e4f": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -4339,26 +3619,6 @@
         "4": 0
       }
     },
-    "2b278021d1464ed0": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.36,
-        "answer_not_determinable": 0.03,
-        "distractors_too_obvious": 0.03,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.27,
-        "wording_broken": 0.29
-      },
-      "confidence": 0.23,
-      "difficulty": 2.89,
-      "difficultyDistribution": {
-        "0": 0.09,
-        "1": 0.37,
-        "2": 0.13,
-        "3": 0.4,
-        "4": 0.01
-      }
-    },
     "2b31f3b2f111ac65": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -4399,26 +3659,6 @@
         "4": 0
       }
     },
-    "2b65004a18bffa79": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.69,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.1,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.14,
-        "wording_broken": 0.04
-      },
-      "confidence": 0.63,
-      "difficulty": 3.56,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.05,
-        "2": 0.33,
-        "3": 0.6,
-        "4": 0.01
-      }
-    },
     "2b6b4d6e10c866aa": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -4437,46 +3677,6 @@
         "2": 0.37,
         "3": 0.57,
         "4": 0
-      }
-    },
-    "2ba10100a28ba3ba": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.7,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.21,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.06,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.64,
-      "difficulty": 3.76,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.05,
-        "2": 0.12,
-        "3": 0.81,
-        "4": 0.01
-      }
-    },
-    "2bcb46a21d975a4b": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.51,
-        "answer_not_determinable": 0.11,
-        "distractors_too_obvious": 0.16,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.12,
-        "wording_broken": 0.08
-      },
-      "confidence": 0.41,
-      "difficulty": 3.92,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.07,
-        "3": 0.91,
-        "4": 0.01
       }
     },
     "2c3a98ee96f78593": {
@@ -4517,6 +3717,26 @@
         "2": 0.49,
         "3": 0.42,
         "4": 0.02
+      }
+    },
+    "2c6fd02bd3620d03": {
+      "choice": "wording_broken",
+      "probabilities": {
+        "good_exam_item": 0.12,
+        "answer_not_determinable": 0.22,
+        "distractors_too_obvious": 0.01,
+        "ambiguity_two_correct": 0.04,
+        "trivia_not_in_blueprint": 0.01,
+        "wording_broken": 0.6
+      },
+      "confidence": 0.52,
+      "difficulty": 3.24,
+      "difficultyDistribution": {
+        "0": 0,
+        "1": 0.02,
+        "2": 0.72,
+        "3": 0.25,
+        "4": 0.01
       }
     },
     "2c71687b4b8f4eea": {
@@ -4599,46 +3819,6 @@
         "4": 0
       }
     },
-    "2ceea7285d2d40ce": {
-      "choice": "wording_broken",
-      "probabilities": {
-        "good_exam_item": 0.19,
-        "answer_not_determinable": 0.25,
-        "distractors_too_obvious": 0.04,
-        "ambiguity_two_correct": 0.04,
-        "trivia_not_in_blueprint": 0.07,
-        "wording_broken": 0.41
-      },
-      "confidence": 0.29,
-      "difficulty": 3.77,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.21,
-        "3": 0.77,
-        "4": 0.01
-      }
-    },
-    "2cf904bb525da1f0": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.31,
-        "answer_not_determinable": 0.08,
-        "distractors_too_obvious": 0.27,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.19,
-        "wording_broken": 0.13
-      },
-      "confidence": 0.17,
-      "difficulty": 3.08,
-      "difficultyDistribution": {
-        "0": 0.03,
-        "1": 0.11,
-        "2": 0.62,
-        "3": 0.24,
-        "4": 0
-      }
-    },
     "2d1b279deb0460f0": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -4697,26 +3877,6 @@
         "2": 0.03,
         "3": 0.46,
         "4": 0.5
-      }
-    },
-    "2e241a7fc92fb0f8": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.52,
-        "answer_not_determinable": 0.07,
-        "distractors_too_obvious": 0.25,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.05,
-        "wording_broken": 0.08
-      },
-      "confidence": 0.42,
-      "difficulty": 3.06,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.03,
-        "2": 0.88,
-        "3": 0.09,
-        "4": 0
       }
     },
     "2e314c0715fa8545": {
@@ -5059,26 +4219,6 @@
         "4": 0
       }
     },
-    "30a561377f227c96": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.66,
-        "answer_not_determinable": 0.04,
-        "distractors_too_obvious": 0.15,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.1,
-        "wording_broken": 0.03
-      },
-      "confidence": 0.59,
-      "difficulty": 3.99,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0.05,
-        "3": 0.9,
-        "4": 0.05
-      }
-    },
     "31456d99195c60f3": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -5159,26 +4299,6 @@
         "4": 0
       }
     },
-    "31d5d113692527be": {
-      "choice": "answer_not_determinable",
-      "probabilities": {
-        "good_exam_item": 0.17,
-        "answer_not_determinable": 0.39,
-        "distractors_too_obvious": 0.09,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.03,
-        "wording_broken": 0.29
-      },
-      "confidence": 0.27,
-      "difficulty": 3.67,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.05,
-        "2": 0.24,
-        "3": 0.65,
-        "4": 0.05
-      }
-    },
     "32296d4a8171e44f": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -5217,46 +4337,6 @@
         "2": 0.45,
         "3": 0.21,
         "4": 0
-      }
-    },
-    "326c119727b36eba": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.8,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.16,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.02,
-        "wording_broken": 0
-      },
-      "confidence": 0.76,
-      "difficulty": 3.78,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.19,
-        "3": 0.78,
-        "4": 0.01
-      }
-    },
-    "327bb74903f53eb0": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.72,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.07,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.14,
-        "wording_broken": 0.03
-      },
-      "confidence": 0.66,
-      "difficulty": 4.03,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.02,
-        "2": 0.12,
-        "3": 0.62,
-        "4": 0.23
       }
     },
     "32ff1d40172201a0": {
@@ -5337,26 +4417,6 @@
         "2": 0.55,
         "3": 0.43,
         "4": 0
-      }
-    },
-    "340a14d5b8ff880c": {
-      "choice": "answer_not_determinable",
-      "probabilities": {
-        "good_exam_item": 0.22,
-        "answer_not_determinable": 0.55,
-        "distractors_too_obvious": 0.09,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.11,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.46,
-      "difficulty": 4.08,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.03,
-        "3": 0.8,
-        "4": 0.15
       }
     },
     "3466eaa66722a2ec": {
@@ -5599,26 +4659,6 @@
         "4": 0.01
       }
     },
-    "368eb1219092bf47": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.57,
-        "answer_not_determinable": 0.04,
-        "distractors_too_obvious": 0.24,
-        "ambiguity_two_correct": 0.04,
-        "trivia_not_in_blueprint": 0.07,
-        "wording_broken": 0.04
-      },
-      "confidence": 0.48,
-      "difficulty": 3.23,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.13,
-        "2": 0.52,
-        "3": 0.35,
-        "4": 0
-      }
-    },
     "36930e8942d696da": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -5639,23 +4679,23 @@
         "4": 0
       }
     },
-    "36a88fd94a5e437a": {
+    "36b8621267325906": {
       "choice": "good_exam_item",
       "probabilities": {
-        "good_exam_item": 0.66,
-        "answer_not_determinable": 0.04,
-        "distractors_too_obvious": 0.19,
+        "good_exam_item": 0.79,
+        "answer_not_determinable": 0.11,
+        "distractors_too_obvious": 0.05,
         "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.07,
+        "trivia_not_in_blueprint": 0.01,
         "wording_broken": 0.01
       },
-      "confidence": 0.59,
-      "difficulty": 3.75,
+      "confidence": 0.75,
+      "difficulty": 2.89,
       "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.23,
-        "3": 0.76,
+        "0": 0.01,
+        "1": 0.15,
+        "2": 0.79,
+        "3": 0.05,
         "4": 0
       }
     },
@@ -5677,26 +4717,6 @@
         "2": 0.28,
         "3": 0.15,
         "4": 0
-      }
-    },
-    "3703292035fe7d91": {
-      "choice": "wording_broken",
-      "probabilities": {
-        "good_exam_item": 0.12,
-        "answer_not_determinable": 0.2,
-        "distractors_too_obvious": 0.02,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.26,
-        "wording_broken": 0.38
-      },
-      "confidence": 0.26,
-      "difficulty": 4.24,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0.02,
-        "3": 0.7,
-        "4": 0.28
       }
     },
     "370a1de3cde88bc8": {
@@ -5799,46 +4819,6 @@
         "4": 0.05
       }
     },
-    "38267b2c9065a370": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.43,
-        "answer_not_determinable": 0.03,
-        "distractors_too_obvious": 0.23,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.27,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.32,
-      "difficulty": 3.09,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.21,
-        "2": 0.49,
-        "3": 0.3,
-        "4": 0
-      }
-    },
-    "382aa1d4598d2f42": {
-      "choice": "answer_not_determinable",
-      "probabilities": {
-        "good_exam_item": 0.12,
-        "answer_not_determinable": 0.34,
-        "distractors_too_obvious": 0.18,
-        "ambiguity_two_correct": 0.05,
-        "trivia_not_in_blueprint": 0.09,
-        "wording_broken": 0.22
-      },
-      "confidence": 0.21,
-      "difficulty": 3.86,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.12,
-        "3": 0.86,
-        "4": 0.01
-      }
-    },
     "384eee301ef43bbf": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -5877,46 +4857,6 @@
         "2": 0.18,
         "3": 0.79,
         "4": 0.02
-      }
-    },
-    "38625f33ef00ae8f": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.53,
-        "answer_not_determinable": 0.04,
-        "distractors_too_obvious": 0.23,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.14,
-        "wording_broken": 0.03
-      },
-      "confidence": 0.44,
-      "difficulty": 4.08,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.1,
-        "3": 0.65,
-        "4": 0.23
-      }
-    },
-    "38673010487645e0": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.68,
-        "answer_not_determinable": 0.06,
-        "distractors_too_obvious": 0.13,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.05,
-        "wording_broken": 0.07
-      },
-      "confidence": 0.62,
-      "difficulty": 4.65,
-      "difficultyDistribution": {
-        "0": 0.02,
-        "1": 0.01,
-        "2": 0.04,
-        "3": 0.15,
-        "4": 0.78
       }
     },
     "38bc3e392853bd15": {
@@ -6099,26 +5039,6 @@
         "4": 0
       }
     },
-    "3a63d521a557962f": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.38,
-        "answer_not_determinable": 0.05,
-        "distractors_too_obvious": 0.19,
-        "ambiguity_two_correct": 0.06,
-        "trivia_not_in_blueprint": 0.25,
-        "wording_broken": 0.07
-      },
-      "confidence": 0.26,
-      "difficulty": 4.11,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0.04,
-        "3": 0.81,
-        "4": 0.15
-      }
-    },
     "3a9c93dae4e5330a": {
       "choice": "distractors_too_obvious",
       "probabilities": {
@@ -6196,26 +5116,6 @@
         "1": 0.06,
         "2": 0.73,
         "3": 0.21,
-        "4": 0
-      }
-    },
-    "3b6527b2000ef05a": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.75,
-        "answer_not_determinable": 0.06,
-        "distractors_too_obvious": 0.12,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.02,
-        "wording_broken": 0.03
-      },
-      "confidence": 0.7,
-      "difficulty": 3.13,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.84,
-        "3": 0.14,
         "4": 0
       }
     },
@@ -6359,46 +5259,6 @@
         "4": 0
       }
     },
-    "3c2bedf06b4ceb03": {
-      "choice": "wording_broken",
-      "probabilities": {
-        "good_exam_item": 0.05,
-        "answer_not_determinable": 0.11,
-        "distractors_too_obvious": 0.03,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.06,
-        "wording_broken": 0.74
-      },
-      "confidence": 0.69,
-      "difficulty": 3.76,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.24,
-        "3": 0.74,
-        "4": 0.01
-      }
-    },
-    "3c56332b55b8ab4a": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.43,
-        "answer_not_determinable": 0.09,
-        "distractors_too_obvious": 0.18,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.21,
-        "wording_broken": 0.06
-      },
-      "confidence": 0.32,
-      "difficulty": 2.98,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.38,
-        "2": 0.27,
-        "3": 0.32,
-        "4": 0.02
-      }
-    },
     "3c65c8d45a0725e5": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -6417,66 +5277,6 @@
         "2": 0.4,
         "3": 0.53,
         "4": 0.01
-      }
-    },
-    "3c6d1e629a84114c": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.8,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.16,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.02,
-        "wording_broken": 0
-      },
-      "confidence": 0.76,
-      "difficulty": 4.03,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.06,
-        "3": 0.82,
-        "4": 0.11
-      }
-    },
-    "3c79fbc500fc3128": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.63,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.29,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.05,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.56,
-      "difficulty": 3.93,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.09,
-        "3": 0.86,
-        "4": 0.04
-      }
-    },
-    "3c88ac0f35e75289": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.44,
-        "answer_not_determinable": 0.19,
-        "distractors_too_obvious": 0.13,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.17,
-        "wording_broken": 0.04
-      },
-      "confidence": 0.33,
-      "difficulty": 3.95,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.08,
-        "3": 0.85,
-        "4": 0.06
       }
     },
     "3c8abe3b04db0c42": {
@@ -6536,46 +5336,6 @@
         "1": 0.06,
         "2": 0.46,
         "3": 0.48,
-        "4": 0
-      }
-    },
-    "3cb1471f6bf84de7": {
-      "choice": "wording_broken",
-      "probabilities": {
-        "good_exam_item": 0.33,
-        "answer_not_determinable": 0.08,
-        "distractors_too_obvious": 0.05,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.15,
-        "wording_broken": 0.36
-      },
-      "confidence": 0.23,
-      "difficulty": 4.11,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0.03,
-        "3": 0.82,
-        "4": 0.15
-      }
-    },
-    "3cde625bd226f640": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.56,
-        "answer_not_determinable": 0.12,
-        "distractors_too_obvious": 0.15,
-        "ambiguity_two_correct": 0.06,
-        "trivia_not_in_blueprint": 0.04,
-        "wording_broken": 0.07
-      },
-      "confidence": 0.47,
-      "difficulty": 3.61,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.07,
-        "2": 0.25,
-        "3": 0.68,
         "4": 0
       }
     },
@@ -6779,26 +5539,6 @@
         "4": 0.05
       }
     },
-    "3e89d2c0350e9c64": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.55,
-        "answer_not_determinable": 0.07,
-        "distractors_too_obvious": 0.1,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.07,
-        "wording_broken": 0.2
-      },
-      "confidence": 0.46,
-      "difficulty": 3.63,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.03,
-        "2": 0.33,
-        "3": 0.62,
-        "4": 0.02
-      }
-    },
     "3eafb1df04e537be": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -6817,26 +5557,6 @@
         "2": 0.02,
         "3": 0,
         "4": 0
-      }
-    },
-    "3ec09cd09fdbc6ac": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.6,
-        "answer_not_determinable": 0.04,
-        "distractors_too_obvious": 0.16,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.11,
-        "wording_broken": 0.08
-      },
-      "confidence": 0.52,
-      "difficulty": 3.71,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.05,
-        "2": 0.2,
-        "3": 0.71,
-        "4": 0.03
       }
     },
     "3f114e7bc1b972fb": {
@@ -6939,24 +5659,24 @@
         "4": 0.18
       }
     },
-    "400b1a53d4ad48d0": {
+    "4000bab5556c0885": {
       "choice": "good_exam_item",
       "probabilities": {
-        "good_exam_item": 0.65,
-        "answer_not_determinable": 0.04,
-        "distractors_too_obvious": 0.13,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.13,
-        "wording_broken": 0.03
+        "good_exam_item": 0.58,
+        "answer_not_determinable": 0.03,
+        "distractors_too_obvious": 0.24,
+        "ambiguity_two_correct": 0.01,
+        "trivia_not_in_blueprint": 0.05,
+        "wording_broken": 0.09
       },
-      "confidence": 0.58,
-      "difficulty": 3.77,
+      "confidence": 0.5,
+      "difficulty": 3.41,
       "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.04,
-        "2": 0.13,
-        "3": 0.8,
-        "4": 0.02
+        "0": 0.05,
+        "1": 0.13,
+        "2": 0.24,
+        "3": 0.51,
+        "4": 0.07
       }
     },
     "4016973c94f97897": {
@@ -7219,26 +5939,6 @@
         "4": 0
       }
     },
-    "41f1549f1f2b6d97": {
-      "choice": "trivia_not_in_blueprint",
-      "probabilities": {
-        "good_exam_item": 0.21,
-        "answer_not_determinable": 0.14,
-        "distractors_too_obvious": 0.17,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.38,
-        "wording_broken": 0.08
-      },
-      "confidence": 0.26,
-      "difficulty": 4.03,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0.02,
-        "3": 0.92,
-        "4": 0.06
-      }
-    },
     "425dd35beb21a68e": {
       "choice": "wording_broken",
       "probabilities": {
@@ -7277,46 +5977,6 @@
         "2": 0.23,
         "3": 0.75,
         "4": 0.01
-      }
-    },
-    "42ba37161f82ac47": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.59,
-        "answer_not_determinable": 0.09,
-        "distractors_too_obvious": 0.09,
-        "ambiguity_two_correct": 0.04,
-        "trivia_not_in_blueprint": 0.13,
-        "wording_broken": 0.06
-      },
-      "confidence": 0.51,
-      "difficulty": 3.93,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.11,
-        "3": 0.82,
-        "4": 0.06
-      }
-    },
-    "42e5119fa38133bf": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.58,
-        "answer_not_determinable": 0.05,
-        "distractors_too_obvious": 0.13,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.22,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.5,
-      "difficulty": 3.96,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.05,
-        "3": 0.92,
-        "4": 0.02
       }
     },
     "42e93b5966ff5b1c": {
@@ -7379,46 +6039,6 @@
         "4": 0.02
       }
     },
-    "4353a4f02211a4c8": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.42,
-        "answer_not_determinable": 0.03,
-        "distractors_too_obvious": 0.15,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.36,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.3,
-      "difficulty": 3.9,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.03,
-        "2": 0.04,
-        "3": 0.92,
-        "4": 0.01
-      }
-    },
-    "43bb37c7e0b646d7": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.58,
-        "answer_not_determinable": 0.06,
-        "distractors_too_obvious": 0.25,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.06,
-        "wording_broken": 0.04
-      },
-      "confidence": 0.5,
-      "difficulty": 3.83,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.13,
-        "3": 0.83,
-        "4": 0.02
-      }
-    },
     "43ce819b90322fb1": {
       "choice": "answer_not_determinable",
       "probabilities": {
@@ -7437,46 +6057,6 @@
         "2": 0.46,
         "3": 0.11,
         "4": 0
-      }
-    },
-    "4421eee6405909be": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.4,
-        "answer_not_determinable": 0.23,
-        "distractors_too_obvious": 0.14,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.12,
-        "wording_broken": 0.08
-      },
-      "confidence": 0.28,
-      "difficulty": 4.19,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0.1,
-        "3": 0.59,
-        "4": 0.31
-      }
-    },
-    "4488008d4db8ee29": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.8,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.08,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.06,
-        "wording_broken": 0.04
-      },
-      "confidence": 0.76,
-      "difficulty": 3.17,
-      "difficultyDistribution": {
-        "0": 0.02,
-        "1": 0.06,
-        "2": 0.65,
-        "3": 0.26,
-        "4": 0.01
       }
     },
     "44bb05b9863ee25e": {
@@ -7517,86 +6097,6 @@
         "2": 0.65,
         "3": 0.24,
         "4": 0
-      }
-    },
-    "44e2dfd94e2121f3": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.71,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.08,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.17,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.65,
-      "difficulty": 4.33,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.08,
-        "3": 0.46,
-        "4": 0.45
-      }
-    },
-    "45b4c994cc25ffe0": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.73,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.06,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.01,
-        "wording_broken": 0.16
-      },
-      "confidence": 0.68,
-      "difficulty": 2.92,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.13,
-        "2": 0.82,
-        "3": 0.05,
-        "4": 0
-      }
-    },
-    "45ba83e91cf4e077": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.82,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.11,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.01,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.78,
-      "difficulty": 3.06,
-      "difficultyDistribution": {
-        "0": 0.03,
-        "1": 0.1,
-        "2": 0.64,
-        "3": 0.22,
-        "4": 0.01
-      }
-    },
-    "463bac086df5e639": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.67,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.18,
-        "ambiguity_two_correct": 0.05,
-        "trivia_not_in_blueprint": 0.05,
-        "wording_broken": 0.03
-      },
-      "confidence": 0.6,
-      "difficulty": 3.95,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.05,
-        "3": 0.92,
-        "4": 0.02
       }
     },
     "465a49dfebaa71ef": {
@@ -7697,26 +6197,6 @@
         "2": 0.63,
         "3": 0.35,
         "4": 0.01
-      }
-    },
-    "4711697c28b77d67": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.66,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.11,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.18,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.59,
-      "difficulty": 4.1,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.02,
-        "2": 0.11,
-        "3": 0.6,
-        "4": 0.26
       }
     },
     "4729763384d795e1": {
@@ -7999,26 +6479,6 @@
         "4": 0.01
       }
     },
-    "497ec1c9f18c1457": {
-      "choice": "wording_broken",
-      "probabilities": {
-        "good_exam_item": 0.19,
-        "answer_not_determinable": 0.26,
-        "distractors_too_obvious": 0.08,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.09,
-        "wording_broken": 0.35
-      },
-      "confidence": 0.22,
-      "difficulty": 3.28,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.06,
-        "2": 0.58,
-        "3": 0.35,
-        "4": 0
-      }
-    },
     "498f2bdac51d0abb": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -8199,26 +6659,6 @@
         "4": 0.08
       }
     },
-    "4b40344f41030fd6": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.67,
-        "answer_not_determinable": 0.06,
-        "distractors_too_obvious": 0.18,
-        "ambiguity_two_correct": 0.05,
-        "trivia_not_in_blueprint": 0.03,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.6,
-      "difficulty": 3.69,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.28,
-        "3": 0.71,
-        "4": 0
-      }
-    },
     "4b739a8fb99328dd": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -8257,26 +6697,6 @@
         "2": 0.34,
         "3": 0.6,
         "4": 0
-      }
-    },
-    "4bc1de953dd91347": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.68,
-        "answer_not_determinable": 0.08,
-        "distractors_too_obvious": 0.08,
-        "ambiguity_two_correct": 0.05,
-        "trivia_not_in_blueprint": 0.05,
-        "wording_broken": 0.06
-      },
-      "confidence": 0.62,
-      "difficulty": 3.77,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.03,
-        "2": 0.18,
-        "3": 0.78,
-        "4": 0.01
       }
     },
     "4c1a5f76e124505a": {
@@ -8419,26 +6839,6 @@
         "4": 0.01
       }
     },
-    "4d3d2f7dcc88b427": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.65,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.22,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.07,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.58,
-      "difficulty": 3.89,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.1,
-        "3": 0.84,
-        "4": 0.04
-      }
-    },
     "4d3fa5cce1e8f1c8": {
       "choice": "wording_broken",
       "probabilities": {
@@ -8557,46 +6957,6 @@
         "2": 0.19,
         "3": 0.01,
         "4": 0
-      }
-    },
-    "4e56f2b0a3ea34e7": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.62,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.32,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.02,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.54,
-      "difficulty": 2.76,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.35,
-        "2": 0.53,
-        "3": 0.1,
-        "4": 0.01
-      }
-    },
-    "4e5ab41f5dce0b32": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.59,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.1,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.27,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.51,
-      "difficulty": 3.24,
-      "difficultyDistribution": {
-        "0": 0.05,
-        "1": 0.19,
-        "2": 0.26,
-        "3": 0.47,
-        "4": 0.03
       }
     },
     "4e6a9145714dab90": {
@@ -8739,26 +7099,6 @@
         "4": 0
       }
     },
-    "50bfae872d87cac8": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.35,
-        "answer_not_determinable": 0.28,
-        "distractors_too_obvious": 0.21,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.11,
-        "wording_broken": 0.03
-      },
-      "confidence": 0.22,
-      "difficulty": 3.86,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.13,
-        "3": 0.85,
-        "4": 0.01
-      }
-    },
     "50ca0e402a34929c": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -8777,26 +7117,6 @@
         "2": 0.27,
         "3": 0.68,
         "4": 0
-      }
-    },
-    "50e995a2592811ec": {
-      "choice": "trivia_not_in_blueprint",
-      "probabilities": {
-        "good_exam_item": 0.11,
-        "answer_not_determinable": 0.24,
-        "distractors_too_obvious": 0.08,
-        "ambiguity_two_correct": 0.05,
-        "trivia_not_in_blueprint": 0.33,
-        "wording_broken": 0.19
-      },
-      "confidence": 0.2,
-      "difficulty": 3.87,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.04,
-        "2": 0.1,
-        "3": 0.8,
-        "4": 0.06
       }
     },
     "510ca52374177945": {
@@ -8836,6 +7156,26 @@
         "1": 0.18,
         "2": 0.69,
         "3": 0.12,
+        "4": 0
+      }
+    },
+    "519a2a4bccbc41b0": {
+      "choice": "wording_broken",
+      "probabilities": {
+        "good_exam_item": 0.34,
+        "answer_not_determinable": 0.16,
+        "distractors_too_obvious": 0.09,
+        "ambiguity_two_correct": 0.01,
+        "trivia_not_in_blueprint": 0.04,
+        "wording_broken": 0.36
+      },
+      "confidence": 0.23,
+      "difficulty": 3.02,
+      "difficultyDistribution": {
+        "0": 0,
+        "1": 0,
+        "2": 0.97,
+        "3": 0.03,
         "4": 0
       }
     },
@@ -8979,26 +7319,6 @@
         "4": 0.02
       }
     },
-    "53500467549af5ad": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.43,
-        "answer_not_determinable": 0.22,
-        "distractors_too_obvious": 0.08,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.21,
-        "wording_broken": 0.04
-      },
-      "confidence": 0.32,
-      "difficulty": 3.95,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.09,
-        "3": 0.85,
-        "4": 0.05
-      }
-    },
     "53e53db98e83d6ab": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -9017,26 +7337,6 @@
         "2": 0.27,
         "3": 0.38,
         "4": 0.04
-      }
-    },
-    "543453a23c7217cc": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.59,
-        "answer_not_determinable": 0.03,
-        "distractors_too_obvious": 0.12,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.19,
-        "wording_broken": 0.04
-      },
-      "confidence": 0.51,
-      "difficulty": 3.59,
-      "difficultyDistribution": {
-        "0": 0.02,
-        "1": 0.05,
-        "2": 0.25,
-        "3": 0.67,
-        "4": 0.01
       }
     },
     "545dec9850604ba5": {
@@ -9079,26 +7379,6 @@
         "4": 0
       }
     },
-    "5510a4d431cd1664": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.71,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.13,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.13,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.65,
-      "difficulty": 3.9,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.08,
-        "3": 0.9,
-        "4": 0.01
-      }
-    },
     "553e1367a8fb6fcb": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -9117,86 +7397,6 @@
         "2": 0.41,
         "3": 0.57,
         "4": 0.01
-      }
-    },
-    "5550a4946c720905": {
-      "choice": "wording_broken",
-      "probabilities": {
-        "good_exam_item": 0.01,
-        "answer_not_determinable": 0.26,
-        "distractors_too_obvious": 0.01,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.05,
-        "wording_broken": 0.65
-      },
-      "confidence": 0.58,
-      "difficulty": 3.8,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.04,
-        "2": 0.18,
-        "3": 0.7,
-        "4": 0.08
-      }
-    },
-    "563ac7918492c46d": {
-      "choice": "trivia_not_in_blueprint",
-      "probabilities": {
-        "good_exam_item": 0.24,
-        "answer_not_determinable": 0.06,
-        "distractors_too_obvious": 0.06,
-        "ambiguity_two_correct": 0.05,
-        "trivia_not_in_blueprint": 0.55,
-        "wording_broken": 0.04
-      },
-      "confidence": 0.46,
-      "difficulty": 4.08,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.07,
-        "3": 0.72,
-        "4": 0.19
-      }
-    },
-    "569af4dc889f5c6b": {
-      "choice": "answer_not_determinable",
-      "probabilities": {
-        "good_exam_item": 0.16,
-        "answer_not_determinable": 0.54,
-        "distractors_too_obvious": 0.12,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.12,
-        "wording_broken": 0.03
-      },
-      "confidence": 0.45,
-      "difficulty": 4,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.07,
-        "3": 0.84,
-        "4": 0.08
-      }
-    },
-    "571466e35e0b8e93": {
-      "choice": "answer_not_determinable",
-      "probabilities": {
-        "good_exam_item": 0.06,
-        "answer_not_determinable": 0.81,
-        "distractors_too_obvious": 0.01,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.06,
-        "wording_broken": 0.04
-      },
-      "confidence": 0.77,
-      "difficulty": 3.95,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.06,
-        "3": 0.9,
-        "4": 0.03
       }
     },
     "57734b856a173189": {
@@ -9276,26 +7476,6 @@
         "1": 0.08,
         "2": 0.52,
         "3": 0.39,
-        "4": 0
-      }
-    },
-    "58682ab12720545e": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.67,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.29,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.02,
-        "wording_broken": 0
-      },
-      "confidence": 0.6,
-      "difficulty": 3.66,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.31,
-        "3": 0.68,
         "4": 0
       }
     },
@@ -9396,26 +7576,6 @@
         "1": 0.02,
         "2": 0.85,
         "3": 0.13,
-        "4": 0
-      }
-    },
-    "59aa728b3c4311c9": {
-      "choice": "answer_not_determinable",
-      "probabilities": {
-        "good_exam_item": 0.28,
-        "answer_not_determinable": 0.29,
-        "distractors_too_obvious": 0.26,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.05,
-        "wording_broken": 0.1
-      },
-      "confidence": 0.15,
-      "difficulty": 3.2,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.04,
-        "2": 0.73,
-        "3": 0.23,
         "4": 0
       }
     },
@@ -9799,26 +7959,6 @@
         "4": 0
       }
     },
-    "5ca265fe24bdacf6": {
-      "choice": "answer_not_determinable",
-      "probabilities": {
-        "good_exam_item": 0.3,
-        "answer_not_determinable": 0.34,
-        "distractors_too_obvious": 0.06,
-        "ambiguity_two_correct": 0.06,
-        "trivia_not_in_blueprint": 0.14,
-        "wording_broken": 0.1
-      },
-      "confidence": 0.21,
-      "difficulty": 3.98,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.09,
-        "3": 0.8,
-        "4": 0.1
-      }
-    },
     "5caecf1552439516": {
       "choice": "answer_not_determinable",
       "probabilities": {
@@ -9917,46 +8057,6 @@
         "2": 0.28,
         "3": 0.56,
         "4": 0.01
-      }
-    },
-    "5d7771323c12ebef": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.68,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.11,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.18,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.62,
-      "difficulty": 3.91,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.07,
-        "3": 0.91,
-        "4": 0.01
-      }
-    },
-    "5dac369d7c670b32": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.63,
-        "answer_not_determinable": 0.08,
-        "distractors_too_obvious": 0.12,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.09,
-        "wording_broken": 0.06
-      },
-      "confidence": 0.56,
-      "difficulty": 3.88,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.11,
-        "3": 0.86,
-        "4": 0.02
       }
     },
     "5e1744977370dcea": {
@@ -10077,26 +8177,6 @@
         "2": 0.07,
         "3": 0.82,
         "4": 0.04
-      }
-    },
-    "5f428cb1c1940240": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.59,
-        "answer_not_determinable": 0.06,
-        "distractors_too_obvious": 0.22,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.04,
-        "wording_broken": 0.06
-      },
-      "confidence": 0.51,
-      "difficulty": 3.81,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.03,
-        "2": 0.11,
-        "3": 0.84,
-        "4": 0.01
       }
     },
     "5f64d7ec226e01a4": {
@@ -10259,26 +8339,6 @@
         "4": 0
       }
     },
-    "603a44141b73c99b": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.72,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.11,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.05,
-        "wording_broken": 0.09
-      },
-      "confidence": 0.66,
-      "difficulty": 4.01,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.11,
-        "3": 0.74,
-        "4": 0.14
-      }
-    },
     "60521a40497cb192": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -10359,26 +8419,6 @@
         "4": 0
       }
     },
-    "60fb420448c428b3": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.83,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.08,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.06,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.8,
-      "difficulty": 3.81,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.02,
-        "2": 0.15,
-        "3": 0.8,
-        "4": 0.02
-      }
-    },
     "60fb83f8e37db81c": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -10439,26 +8479,6 @@
         "4": 0
       }
     },
-    "61647b6289588d19": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.58,
-        "answer_not_determinable": 0.12,
-        "distractors_too_obvious": 0.06,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.11,
-        "wording_broken": 0.11
-      },
-      "confidence": 0.5,
-      "difficulty": 3.97,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0.06,
-        "3": 0.89,
-        "4": 0.05
-      }
-    },
     "61f9286ac49fbd03": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -10497,46 +8517,6 @@
         "2": 0.62,
         "3": 0.35,
         "4": 0
-      }
-    },
-    "629f919e9b58d369": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.5,
-        "answer_not_determinable": 0.08,
-        "distractors_too_obvious": 0.19,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.18,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.4,
-      "difficulty": 3.91,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.02,
-        "2": 0.06,
-        "3": 0.88,
-        "4": 0.03
-      }
-    },
-    "62c390902605a508": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.43,
-        "answer_not_determinable": 0.08,
-        "distractors_too_obvious": 0.16,
-        "ambiguity_two_correct": 0.05,
-        "trivia_not_in_blueprint": 0.09,
-        "wording_broken": 0.19
-      },
-      "confidence": 0.32,
-      "difficulty": 3.47,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.48,
-        "3": 0.49,
-        "4": 0.01
       }
     },
     "62c951df9c55fdfc": {
@@ -10617,26 +8597,6 @@
         "2": 0.2,
         "3": 0.02,
         "4": 0
-      }
-    },
-    "63823e7063020339": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.39,
-        "answer_not_determinable": 0.05,
-        "distractors_too_obvious": 0.08,
-        "ambiguity_two_correct": 0.06,
-        "trivia_not_in_blueprint": 0.33,
-        "wording_broken": 0.09
-      },
-      "confidence": 0.27,
-      "difficulty": 3.76,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.19,
-        "3": 0.78,
-        "4": 0.01
       }
     },
     "63ae3ee80e96423c": {
@@ -10739,26 +8699,6 @@
         "4": 0
       }
     },
-    "64577020ef45c4eb": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.35,
-        "answer_not_determinable": 0.12,
-        "distractors_too_obvious": 0.31,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.11,
-        "wording_broken": 0.1
-      },
-      "confidence": 0.22,
-      "difficulty": 3.48,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.19,
-        "2": 0.12,
-        "3": 0.68,
-        "4": 0.01
-      }
-    },
     "649e3abc66890da6": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -10839,26 +8779,6 @@
         "4": 0.05
       }
     },
-    "653f9a7e447e4c3c": {
-      "choice": "distractors_too_obvious",
-      "probabilities": {
-        "good_exam_item": 0.2,
-        "answer_not_determinable": 0.16,
-        "distractors_too_obvious": 0.29,
-        "ambiguity_two_correct": 0.04,
-        "trivia_not_in_blueprint": 0.06,
-        "wording_broken": 0.25
-      },
-      "confidence": 0.15,
-      "difficulty": 2.84,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.21,
-        "2": 0.74,
-        "3": 0.05,
-        "4": 0
-      }
-    },
     "657c646c72f18fcd": {
       "choice": "wording_broken",
       "probabilities": {
@@ -10877,26 +8797,6 @@
         "2": 0.63,
         "3": 0.35,
         "4": 0.01
-      }
-    },
-    "6588d4249ae38f88": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.72,
-        "answer_not_determinable": 0.04,
-        "distractors_too_obvious": 0.11,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.06,
-        "wording_broken": 0.05
-      },
-      "confidence": 0.66,
-      "difficulty": 3.97,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.12,
-        "3": 0.72,
-        "4": 0.14
       }
     },
     "65961a0fb18b9093": {
@@ -11179,46 +9079,6 @@
         "4": 0
       }
     },
-    "680173543f3f5397": {
-      "choice": "answer_not_determinable",
-      "probabilities": {
-        "good_exam_item": 0.06,
-        "answer_not_determinable": 0.56,
-        "distractors_too_obvious": 0.08,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.11,
-        "wording_broken": 0.16
-      },
-      "confidence": 0.47,
-      "difficulty": 4.62,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0.01,
-        "3": 0.35,
-        "4": 0.64
-      }
-    },
-    "6801f93e5b0c6808": {
-      "choice": "trivia_not_in_blueprint",
-      "probabilities": {
-        "good_exam_item": 0.31,
-        "answer_not_determinable": 0.05,
-        "distractors_too_obvious": 0.11,
-        "ambiguity_two_correct": 0.04,
-        "trivia_not_in_blueprint": 0.46,
-        "wording_broken": 0.03
-      },
-      "confidence": 0.35,
-      "difficulty": 3.92,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.03,
-        "2": 0.08,
-        "3": 0.83,
-        "4": 0.06
-      }
-    },
     "6846e3a9c981ebb3": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -11339,46 +9199,6 @@
         "4": 0.02
       }
     },
-    "690acab9b6c3234c": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.58,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.26,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.12,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.5,
-      "difficulty": 4.02,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0.02,
-        "3": 0.93,
-        "4": 0.05
-      }
-    },
-    "69955fc20c653224": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.78,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.13,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.06,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.74,
-      "difficulty": 3.86,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.13,
-        "3": 0.84,
-        "4": 0.02
-      }
-    },
     "699ff7b67caa885b": {
       "choice": "wording_broken",
       "probabilities": {
@@ -11457,26 +9277,6 @@
         "2": 0.03,
         "3": 0.9,
         "4": 0.07
-      }
-    },
-    "69e71f174dd0f8dd": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.72,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.21,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.03,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.66,
-      "difficulty": 3.89,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.09,
-        "3": 0.89,
-        "4": 0.01
       }
     },
     "6ada5d037986672e": {
@@ -11599,26 +9399,6 @@
         "4": 0
       }
     },
-    "6bb2b86d0350cfa0": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.62,
-        "answer_not_determinable": 0.05,
-        "distractors_too_obvious": 0.27,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.03,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.54,
-      "difficulty": 3.83,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.15,
-        "3": 0.83,
-        "4": 0.01
-      }
-    },
     "6bb862945bd5c5e2": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -11676,6 +9456,26 @@
         "1": 0.64,
         "2": 0.31,
         "3": 0.03,
+        "4": 0
+      }
+    },
+    "6c09c0f08cbc9a24": {
+      "choice": "good_exam_item",
+      "probabilities": {
+        "good_exam_item": 0.73,
+        "answer_not_determinable": 0.05,
+        "distractors_too_obvious": 0.13,
+        "ambiguity_two_correct": 0.01,
+        "trivia_not_in_blueprint": 0.03,
+        "wording_broken": 0.05
+      },
+      "confidence": 0.68,
+      "difficulty": 3,
+      "difficultyDistribution": {
+        "0": 0,
+        "1": 0.09,
+        "2": 0.82,
+        "3": 0.09,
         "4": 0
       }
     },
@@ -11859,26 +9659,6 @@
         "4": 0.01
       }
     },
-    "6d9cd2c4983f7386": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.52,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.26,
-        "ambiguity_two_correct": 0.04,
-        "trivia_not_in_blueprint": 0.14,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.42,
-      "difficulty": 3.88,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.07,
-        "3": 0.9,
-        "4": 0.01
-      }
-    },
     "6da5392396cabfec": {
       "choice": "wording_broken",
       "probabilities": {
@@ -11897,26 +9677,6 @@
         "2": 0.35,
         "3": 0.64,
         "4": 0
-      }
-    },
-    "6db8e1971b971331": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.64,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.22,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.11,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.57,
-      "difficulty": 3.89,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.08,
-        "3": 0.88,
-        "4": 0.02
       }
     },
     "6dcc1bdde975c677": {
@@ -11976,66 +9736,6 @@
         "1": 0.03,
         "2": 0.58,
         "3": 0.39,
-        "4": 0
-      }
-    },
-    "6e0ef46a5aaf1a9a": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.66,
-        "answer_not_determinable": 0.03,
-        "distractors_too_obvious": 0.16,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.11,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.59,
-      "difficulty": 3.93,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.08,
-        "3": 0.87,
-        "4": 0.04
-      }
-    },
-    "6e17b4a815d4997b": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.44,
-        "answer_not_determinable": 0.06,
-        "distractors_too_obvious": 0.09,
-        "ambiguity_two_correct": 0.04,
-        "trivia_not_in_blueprint": 0.31,
-        "wording_broken": 0.06
-      },
-      "confidence": 0.33,
-      "difficulty": 4,
-      "difficultyDistribution": {
-        "0": 0.02,
-        "1": 0.02,
-        "2": 0.01,
-        "3": 0.85,
-        "4": 0.1
-      }
-    },
-    "6e9185a92ed2ccab": {
-      "choice": "wording_broken",
-      "probabilities": {
-        "good_exam_item": 0.27,
-        "answer_not_determinable": 0.19,
-        "distractors_too_obvious": 0.07,
-        "ambiguity_two_correct": 0.04,
-        "trivia_not_in_blueprint": 0.12,
-        "wording_broken": 0.31
-      },
-      "confidence": 0.17,
-      "difficulty": 3.65,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.32,
-        "3": 0.66,
         "4": 0
       }
     },
@@ -12277,26 +9977,6 @@
         "2": 0.07,
         "3": 0.01,
         "4": 0
-      }
-    },
-    "70918bcfcf0b998f": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.73,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.06,
-        "ambiguity_two_correct": 0,
-        "trivia_not_in_blueprint": 0.17,
-        "wording_broken": 0.03
-      },
-      "confidence": 0.68,
-      "difficulty": 2.86,
-      "difficultyDistribution": {
-        "0": 0.08,
-        "1": 0.12,
-        "2": 0.68,
-        "3": 0.11,
-        "4": 0.01
       }
     },
     "70c0143704d70b7b": {
@@ -12579,26 +10259,6 @@
         "4": 0.02
       }
     },
-    "7505865e70efef7f": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.29,
-        "answer_not_determinable": 0.13,
-        "distractors_too_obvious": 0.21,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.28,
-        "wording_broken": 0.06
-      },
-      "confidence": 0.15,
-      "difficulty": 3.05,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.34,
-        "2": 0.26,
-        "3": 0.39,
-        "4": 0
-      }
-    },
     "751a790ac206e18d": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -12739,26 +10399,6 @@
         "4": 0
       }
     },
-    "7649fd433f96e3cd": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.42,
-        "answer_not_determinable": 0.06,
-        "distractors_too_obvious": 0.14,
-        "ambiguity_two_correct": 0.04,
-        "trivia_not_in_blueprint": 0.23,
-        "wording_broken": 0.11
-      },
-      "confidence": 0.3,
-      "difficulty": 3.47,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.08,
-        "2": 0.35,
-        "3": 0.56,
-        "4": 0.01
-      }
-    },
     "7662a4dcaad55993": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -12859,26 +10499,6 @@
         "4": 0.01
       }
     },
-    "78341e03de81501b": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.45,
-        "answer_not_determinable": 0.08,
-        "distractors_too_obvious": 0.22,
-        "ambiguity_two_correct": 0.09,
-        "trivia_not_in_blueprint": 0.14,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.34,
-      "difficulty": 3.08,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.17,
-        "2": 0.58,
-        "3": 0.25,
-        "4": 0
-      }
-    },
     "7853f9431b3f137c": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -12896,6 +10516,26 @@
         "1": 0.18,
         "2": 0.02,
         "3": 0,
+        "4": 0
+      }
+    },
+    "7867eb52650887f7": {
+      "choice": "wording_broken",
+      "probabilities": {
+        "good_exam_item": 0.31,
+        "answer_not_determinable": 0.16,
+        "distractors_too_obvious": 0.15,
+        "ambiguity_two_correct": 0.06,
+        "trivia_not_in_blueprint": 0.01,
+        "wording_broken": 0.31
+      },
+      "confidence": 0.17,
+      "difficulty": 3.07,
+      "difficultyDistribution": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.91,
+        "3": 0.08,
         "4": 0
       }
     },
@@ -12919,26 +10559,6 @@
         "4": 0.03
       }
     },
-    "7878ac485e3ae525": {
-      "choice": "answer_not_determinable",
-      "probabilities": {
-        "good_exam_item": 0.24,
-        "answer_not_determinable": 0.32,
-        "distractors_too_obvious": 0.04,
-        "ambiguity_two_correct": 0.04,
-        "trivia_not_in_blueprint": 0.26,
-        "wording_broken": 0.1
-      },
-      "confidence": 0.18,
-      "difficulty": 4.02,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0.06,
-        "3": 0.85,
-        "4": 0.09
-      }
-    },
     "78bee704cb314a51": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -12957,26 +10577,6 @@
         "2": 0.01,
         "3": 0,
         "4": 0
-      }
-    },
-    "78f3a8a7eb254371": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.77,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.08,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.12,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.72,
-      "difficulty": 4.02,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.03,
-        "2": 0.02,
-        "3": 0.79,
-        "4": 0.15
       }
     },
     "7935ed67b4af19ba": {
@@ -13016,26 +10616,6 @@
         "1": 0.85,
         "2": 0.13,
         "3": 0.01,
-        "4": 0
-      }
-    },
-    "79a6793d31b0e65f": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.51,
-        "answer_not_determinable": 0.03,
-        "distractors_too_obvious": 0.37,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.03,
-        "wording_broken": 0.04
-      },
-      "confidence": 0.41,
-      "difficulty": 2.84,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.2,
-        "2": 0.73,
-        "3": 0.06,
         "4": 0
       }
     },
@@ -13139,26 +10719,6 @@
         "4": 0
       }
     },
-    "7acc1c6a0856d45f": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.66,
-        "answer_not_determinable": 0.11,
-        "distractors_too_obvious": 0.11,
-        "ambiguity_two_correct": 0.06,
-        "trivia_not_in_blueprint": 0.05,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.59,
-      "difficulty": 3.8,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.16,
-        "3": 0.81,
-        "4": 0.01
-      }
-    },
     "7aee47a626b0e1d1": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -13257,26 +10817,6 @@
         "2": 0.46,
         "3": 0.04,
         "4": 0
-      }
-    },
-    "7bfdd8c50e107601": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.64,
-        "answer_not_determinable": 0.04,
-        "distractors_too_obvious": 0.23,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.05,
-        "wording_broken": 0.03
-      },
-      "confidence": 0.57,
-      "difficulty": 3.84,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.13,
-        "3": 0.83,
-        "4": 0.02
       }
     },
     "7c0a82a1b311f003": {
@@ -13419,26 +10959,6 @@
         "4": 0.01
       }
     },
-    "7dfd45228b9db3b0": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.53,
-        "answer_not_determinable": 0.06,
-        "distractors_too_obvious": 0.21,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.16,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.44,
-      "difficulty": 3.74,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.23,
-        "3": 0.76,
-        "4": 0
-      }
-    },
     "7e070f815ec65ffd": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -13457,46 +10977,6 @@
         "2": 0.24,
         "3": 0.69,
         "4": 0.01
-      }
-    },
-    "7e24814727cdf942": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.45,
-        "answer_not_determinable": 0.14,
-        "distractors_too_obvious": 0.21,
-        "ambiguity_two_correct": 0.04,
-        "trivia_not_in_blueprint": 0.1,
-        "wording_broken": 0.06
-      },
-      "confidence": 0.34,
-      "difficulty": 3.47,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.07,
-        "2": 0.37,
-        "3": 0.54,
-        "4": 0.01
-      }
-    },
-    "7e2d208c4c5846e5": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.42,
-        "answer_not_determinable": 0.05,
-        "distractors_too_obvious": 0.17,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.22,
-        "wording_broken": 0.11
-      },
-      "confidence": 0.3,
-      "difficulty": 3.22,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.15,
-        "2": 0.48,
-        "3": 0.37,
-        "4": 0
       }
     },
     "7e3e7d5c8d560787": {
@@ -13519,46 +10999,6 @@
         "4": 0.03
       }
     },
-    "7e5a6ec9bf27a624": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.82,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.15,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.01,
-        "wording_broken": 0
-      },
-      "confidence": 0.78,
-      "difficulty": 3.07,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.05,
-        "2": 0.83,
-        "3": 0.12,
-        "4": 0
-      }
-    },
-    "7e6c318497b9d591": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.75,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.14,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.04,
-        "wording_broken": 0.03
-      },
-      "confidence": 0.7,
-      "difficulty": 3.89,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.09,
-        "3": 0.87,
-        "4": 0.02
-      }
-    },
     "7e95f130090f41c4": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -13577,6 +11017,26 @@
         "2": 0.51,
         "3": 0,
         "4": 0
+      }
+    },
+    "7eccd488c60b7e64": {
+      "choice": "good_exam_item",
+      "probabilities": {
+        "good_exam_item": 0.49,
+        "answer_not_determinable": 0.12,
+        "distractors_too_obvious": 0.22,
+        "ambiguity_two_correct": 0.04,
+        "trivia_not_in_blueprint": 0.08,
+        "wording_broken": 0.05
+      },
+      "confidence": 0.39,
+      "difficulty": 3.77,
+      "difficultyDistribution": {
+        "0": 0.01,
+        "1": 0.03,
+        "2": 0.14,
+        "3": 0.81,
+        "4": 0.01
       }
     },
     "7ee5ffa97632d853": {
@@ -13616,46 +11076,6 @@
         "1": 0.06,
         "2": 0.24,
         "3": 0.67,
-        "4": 0.01
-      }
-    },
-    "7f652fed3b17cf95": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.8,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.13,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.02,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.76,
-      "difficulty": 3.9,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.09,
-        "3": 0.89,
-        "4": 0.01
-      }
-    },
-    "7f81b456ca76a5de": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.38,
-        "answer_not_determinable": 0.19,
-        "distractors_too_obvious": 0.25,
-        "ambiguity_two_correct": 0.07,
-        "trivia_not_in_blueprint": 0.08,
-        "wording_broken": 0.03
-      },
-      "confidence": 0.26,
-      "difficulty": 3.89,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.1,
-        "3": 0.88,
         "4": 0.01
       }
     },
@@ -13739,26 +11159,6 @@
         "4": 0
       }
     },
-    "80a6628b6725b36a": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.26,
-        "answer_not_determinable": 0.19,
-        "distractors_too_obvious": 0.22,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.2,
-        "wording_broken": 0.11
-      },
-      "confidence": 0.11,
-      "difficulty": 3.96,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.05,
-        "3": 0.89,
-        "4": 0.05
-      }
-    },
     "80a7e53e54eaba69": {
       "choice": "wording_broken",
       "probabilities": {
@@ -13777,26 +11177,6 @@
         "2": 0.56,
         "3": 0.41,
         "4": 0.02
-      }
-    },
-    "80ab674774cdb14e": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.76,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.09,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.07,
-        "wording_broken": 0.03
-      },
-      "confidence": 0.71,
-      "difficulty": 3.82,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.04,
-        "2": 0.1,
-        "3": 0.84,
-        "4": 0.01
       }
     },
     "80b5e113247e36d4": {
@@ -13836,26 +11216,6 @@
         "1": 0.03,
         "2": 0.42,
         "3": 0.55,
-        "4": 0
-      }
-    },
-    "80f3c1ce7b399248": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.26,
-        "answer_not_determinable": 0.2,
-        "distractors_too_obvious": 0.1,
-        "ambiguity_two_correct": 0.13,
-        "trivia_not_in_blueprint": 0.14,
-        "wording_broken": 0.17
-      },
-      "confidence": 0.11,
-      "difficulty": 3.71,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.05,
-        "2": 0.17,
-        "3": 0.78,
         "4": 0
       }
     },
@@ -14037,26 +11397,6 @@
         "2": 0.08,
         "3": 0,
         "4": 0
-      }
-    },
-    "8418da60b718d399": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.66,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.21,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.09,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.59,
-      "difficulty": 3.84,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.18,
-        "3": 0.77,
-        "4": 0.04
       }
     },
     "842a6ea5de9c8421": {
@@ -14459,26 +11799,6 @@
         "4": 0
       }
     },
-    "87e854bbecdc26de": {
-      "choice": "answer_not_determinable",
-      "probabilities": {
-        "good_exam_item": 0.13,
-        "answer_not_determinable": 0.41,
-        "distractors_too_obvious": 0.26,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.15,
-        "wording_broken": 0.04
-      },
-      "confidence": 0.29,
-      "difficulty": 4.8,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.01,
-        "3": 0.16,
-        "4": 0.82
-      }
-    },
     "87fe8361ca23b7e5": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -14559,46 +11879,6 @@
         "4": 0.01
       }
     },
-    "889a43c426427089": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.65,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.09,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.23,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.58,
-      "difficulty": 3.25,
-      "difficultyDistribution": {
-        "0": 0.02,
-        "1": 0.16,
-        "2": 0.39,
-        "3": 0.42,
-        "4": 0.01
-      }
-    },
-    "88ae1e47c6181acd": {
-      "choice": "trivia_not_in_blueprint",
-      "probabilities": {
-        "good_exam_item": 0.23,
-        "answer_not_determinable": 0.17,
-        "distractors_too_obvious": 0.16,
-        "ambiguity_two_correct": 0.04,
-        "trivia_not_in_blueprint": 0.26,
-        "wording_broken": 0.14
-      },
-      "confidence": 0.11,
-      "difficulty": 3.51,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.18,
-        "2": 0.11,
-        "3": 0.7,
-        "4": 0.01
-      }
-    },
     "88bc0ed7c8283f4f": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -14617,46 +11897,6 @@
         "2": 0.39,
         "3": 0.23,
         "4": 0
-      }
-    },
-    "88c2756e98988f28": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.67,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.24,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.05,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.6,
-      "difficulty": 3.78,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.2,
-        "3": 0.78,
-        "4": 0.01
-      }
-    },
-    "88c5bbe744680b30": {
-      "choice": "wording_broken",
-      "probabilities": {
-        "good_exam_item": 0.09,
-        "answer_not_determinable": 0.09,
-        "distractors_too_obvious": 0.01,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.07,
-        "wording_broken": 0.72
-      },
-      "confidence": 0.66,
-      "difficulty": 3.98,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0.06,
-        "3": 0.89,
-        "4": 0.05
       }
     },
     "8931a47e39929aeb": {
@@ -14719,26 +11959,6 @@
         "4": 0.01
       }
     },
-    "8961951011200f92": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.67,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.26,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.04,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.6,
-      "difficulty": 3.93,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.08,
-        "3": 0.87,
-        "4": 0.04
-      }
-    },
     "897651f2604a16a8": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -14797,26 +12017,6 @@
         "2": 0.9,
         "3": 0.03,
         "4": 0
-      }
-    },
-    "89eb622207698eaa": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.72,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.2,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.01,
-        "wording_broken": 0.05
-      },
-      "confidence": 0.66,
-      "difficulty": 3.61,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.03,
-        "2": 0.33,
-        "3": 0.63,
-        "4": 0.01
       }
     },
     "8a0ca8bd067f29f1": {
@@ -15079,23 +12279,23 @@
         "4": 0.01
       }
     },
-    "8c80a150bd3d0c8b": {
+    "8ca4820c674d8d88": {
       "choice": "good_exam_item",
       "probabilities": {
-        "good_exam_item": 0.56,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.11,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.22,
-        "wording_broken": 0.06
+        "good_exam_item": 0.52,
+        "answer_not_determinable": 0.09,
+        "distractors_too_obvious": 0.17,
+        "ambiguity_two_correct": 0.18,
+        "trivia_not_in_blueprint": 0.02,
+        "wording_broken": 0.02
       },
-      "confidence": 0.47,
-      "difficulty": 3.41,
+      "confidence": 0.42,
+      "difficulty": 2.92,
       "difficultyDistribution": {
         "0": 0.01,
-        "1": 0.03,
-        "2": 0.51,
-        "3": 0.45,
+        "1": 0.13,
+        "2": 0.8,
+        "3": 0.06,
         "4": 0
       }
     },
@@ -15117,26 +12317,6 @@
         "2": 0.84,
         "3": 0.06,
         "4": 0
-      }
-    },
-    "8d18d653a79cb1b0": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.78,
-        "answer_not_determinable": 0.05,
-        "distractors_too_obvious": 0.1,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.03,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.74,
-      "difficulty": 3.9,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.08,
-        "3": 0.9,
-        "4": 0.01
       }
     },
     "8dbd6447b974b73c": {
@@ -15276,66 +12456,6 @@
         "1": 0.09,
         "2": 0.56,
         "3": 0.35,
-        "4": 0
-      }
-    },
-    "8fed59b37905715c": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.51,
-        "answer_not_determinable": 0.14,
-        "distractors_too_obvious": 0.18,
-        "ambiguity_two_correct": 0.04,
-        "trivia_not_in_blueprint": 0.08,
-        "wording_broken": 0.05
-      },
-      "confidence": 0.41,
-      "difficulty": 2.43,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.64,
-        "2": 0.28,
-        "3": 0.08,
-        "4": 0
-      }
-    },
-    "904f6d54df728d3a": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.66,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.2,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.09,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.59,
-      "difficulty": 3.9,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.08,
-        "3": 0.9,
-        "4": 0.01
-      }
-    },
-    "908fb21d24794721": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.49,
-        "answer_not_determinable": 0.11,
-        "distractors_too_obvious": 0.17,
-        "ambiguity_two_correct": 0.1,
-        "trivia_not_in_blueprint": 0.05,
-        "wording_broken": 0.08
-      },
-      "confidence": 0.39,
-      "difficulty": 3.05,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.91,
-        "3": 0.07,
         "4": 0
       }
     },
@@ -15479,26 +12599,6 @@
         "4": 0.06
       }
     },
-    "9184cd5c75d694c0": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.63,
-        "answer_not_determinable": 0.07,
-        "distractors_too_obvious": 0.14,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.11,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.56,
-      "difficulty": 3.8,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.03,
-        "2": 0.17,
-        "3": 0.78,
-        "4": 0.02
-      }
-    },
     "919b4fdba40c9f90": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -15599,26 +12699,6 @@
         "4": 0
       }
     },
-    "9357bd0819953759": {
-      "choice": "trivia_not_in_blueprint",
-      "probabilities": {
-        "good_exam_item": 0.11,
-        "answer_not_determinable": 0.06,
-        "distractors_too_obvious": 0.06,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.59,
-        "wording_broken": 0.16
-      },
-      "confidence": 0.51,
-      "difficulty": 4,
-      "difficultyDistribution": {
-        "0": 0.04,
-        "1": 0.05,
-        "2": 0.03,
-        "3": 0.63,
-        "4": 0.25
-      }
-    },
     "9440de05e1ca69bf": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -15636,26 +12716,6 @@
         "1": 0.06,
         "2": 0.14,
         "3": 0.75,
-        "4": 0.01
-      }
-    },
-    "9466aec62358347e": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.78,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.15,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.03,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.74,
-      "difficulty": 3.67,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.05,
-        "2": 0.21,
-        "3": 0.72,
         "4": 0.01
       }
     },
@@ -15859,26 +12919,6 @@
         "4": 0
       }
     },
-    "962e605a01f09c5c": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.68,
-        "answer_not_determinable": 0.05,
-        "distractors_too_obvious": 0.16,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.09,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.62,
-      "difficulty": 3.85,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.04,
-        "2": 0.08,
-        "3": 0.85,
-        "4": 0.02
-      }
-    },
     "96540e239c3338c9": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -15937,26 +12977,6 @@
         "2": 0.53,
         "3": 0.07,
         "4": 0
-      }
-    },
-    "965c7ce1d264638f": {
-      "choice": "trivia_not_in_blueprint",
-      "probabilities": {
-        "good_exam_item": 0.19,
-        "answer_not_determinable": 0.18,
-        "distractors_too_obvious": 0.21,
-        "ambiguity_two_correct": 0.1,
-        "trivia_not_in_blueprint": 0.22,
-        "wording_broken": 0.1
-      },
-      "confidence": 0.06,
-      "difficulty": 3.76,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.19,
-        "3": 0.78,
-        "4": 0.01
       }
     },
     "96aba39cf8cc3a75": {
@@ -16399,26 +13419,6 @@
         "4": 0.14
       }
     },
-    "99cecda887502da8": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.71,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.19,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.05,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.65,
-      "difficulty": 3.5,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.07,
-        "2": 0.37,
-        "3": 0.55,
-        "4": 0.01
-      }
-    },
     "99d0b1d7dbe59aca": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -16437,26 +13437,6 @@
         "2": 0.38,
         "3": 0.58,
         "4": 0.01
-      }
-    },
-    "99fd142baf441a5c": {
-      "choice": "answer_not_determinable",
-      "probabilities": {
-        "good_exam_item": 0.12,
-        "answer_not_determinable": 0.48,
-        "distractors_too_obvious": 0.06,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.06,
-        "wording_broken": 0.26
-      },
-      "confidence": 0.38,
-      "difficulty": 3.94,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.01,
-        "2": 0.09,
-        "3": 0.81,
-        "4": 0.08
       }
     },
     "9a116c3a90b15ed7": {
@@ -16759,26 +13739,6 @@
         "4": 0.02
       }
     },
-    "9c7cc8a39a86b774": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.62,
-        "answer_not_determinable": 0.04,
-        "distractors_too_obvious": 0.13,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.11,
-        "wording_broken": 0.09
-      },
-      "confidence": 0.54,
-      "difficulty": 3.76,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.21,
-        "3": 0.76,
-        "4": 0.01
-      }
-    },
     "9cbd1f7bccca5111": {
       "choice": "answer_not_determinable",
       "probabilities": {
@@ -16797,26 +13757,6 @@
         "2": 0.19,
         "3": 0.63,
         "4": 0.02
-      }
-    },
-    "9cd3cc1c6668cbed": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.6,
-        "answer_not_determinable": 0.03,
-        "distractors_too_obvious": 0.16,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.17,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.52,
-      "difficulty": 4.05,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0.03,
-        "3": 0.88,
-        "4": 0.09
       }
     },
     "9d1870d1cccd2967": {
@@ -16877,26 +13817,6 @@
         "2": 0.48,
         "3": 0.44,
         "4": 0.01
-      }
-    },
-    "9e62bd6344c6dbb3": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.88,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.05,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.04,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.86,
-      "difficulty": 3.28,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.08,
-        "2": 0.55,
-        "3": 0.37,
-        "4": 0
       }
     },
     "9e8d76be34e7b68a": {
@@ -16999,26 +13919,6 @@
         "4": 0.01
       }
     },
-    "9ff02583052ece73": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.54,
-        "answer_not_determinable": 0.11,
-        "distractors_too_obvious": 0.2,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.11,
-        "wording_broken": 0.03
-      },
-      "confidence": 0.45,
-      "difficulty": 3.72,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.27,
-        "3": 0.72,
-        "4": 0
-      }
-    },
     "a0140022fd501f7c": {
       "choice": "distractors_too_obvious",
       "probabilities": {
@@ -17056,26 +13956,6 @@
         "1": 0.18,
         "2": 0.7,
         "3": 0.12,
-        "4": 0
-      }
-    },
-    "a04ccb68c4008a7b": {
-      "choice": "answer_not_determinable",
-      "probabilities": {
-        "good_exam_item": 0.04,
-        "answer_not_determinable": 0.49,
-        "distractors_too_obvious": 0.06,
-        "ambiguity_two_correct": 0.25,
-        "trivia_not_in_blueprint": 0.02,
-        "wording_broken": 0.14
-      },
-      "confidence": 0.39,
-      "difficulty": 2.14,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.85,
-        "2": 0.13,
-        "3": 0.01,
         "4": 0
       }
     },
@@ -17117,26 +13997,6 @@
         "2": 0.2,
         "3": 0.72,
         "4": 0.01
-      }
-    },
-    "a0b05b9ad7dda774": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.63,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.28,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.06,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.56,
-      "difficulty": 3.83,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.14,
-        "3": 0.85,
-        "4": 0
       }
     },
     "a0b65a7152c2864a": {
@@ -17217,6 +14077,46 @@
         "2": 0.09,
         "3": 0.85,
         "4": 0.04
+      }
+    },
+    "a162d8dc0ad46d85": {
+      "choice": "good_exam_item",
+      "probabilities": {
+        "good_exam_item": 0.69,
+        "answer_not_determinable": 0.01,
+        "distractors_too_obvious": 0.25,
+        "ambiguity_two_correct": 0.01,
+        "trivia_not_in_blueprint": 0.03,
+        "wording_broken": 0.01
+      },
+      "confidence": 0.63,
+      "difficulty": 3.65,
+      "difficultyDistribution": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.32,
+        "3": 0.67,
+        "4": 0
+      }
+    },
+    "a17a93b5dafddf36": {
+      "choice": "good_exam_item",
+      "probabilities": {
+        "good_exam_item": 0.7,
+        "answer_not_determinable": 0.05,
+        "distractors_too_obvious": 0.11,
+        "ambiguity_two_correct": 0.01,
+        "trivia_not_in_blueprint": 0.07,
+        "wording_broken": 0.06
+      },
+      "confidence": 0.64,
+      "difficulty": 3.06,
+      "difficultyDistribution": {
+        "0": 0,
+        "1": 0.05,
+        "2": 0.84,
+        "3": 0.11,
+        "4": 0
       }
     },
     "a190663dc6896a5b": {
@@ -17359,46 +14259,6 @@
         "4": 0.09
       }
     },
-    "a23c114798a53108": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.31,
-        "answer_not_determinable": 0.24,
-        "distractors_too_obvious": 0.1,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.16,
-        "wording_broken": 0.16
-      },
-      "confidence": 0.17,
-      "difficulty": 3.92,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.07,
-        "3": 0.9,
-        "4": 0.02
-      }
-    },
-    "a26ad8633fa57d2a": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.39,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.35,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.21,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.27,
-      "difficulty": 4.18,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.02,
-        "2": 0.07,
-        "3": 0.59,
-        "4": 0.31
-      }
-    },
     "a283fb080e2f6e34": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -17519,26 +14379,6 @@
         "4": 0
       }
     },
-    "a3b456bd8b0e9c3f": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.68,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.19,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.08,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.62,
-      "difficulty": 3.78,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.07,
-        "2": 0.07,
-        "3": 0.83,
-        "4": 0.02
-      }
-    },
     "a3c70658c43dbd4d": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -17577,26 +14417,6 @@
         "2": 0.1,
         "3": 0.88,
         "4": 0.01
-      }
-    },
-    "a40d5930090e6b3d": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.64,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.16,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.1,
-        "wording_broken": 0.07
-      },
-      "confidence": 0.57,
-      "difficulty": 3.86,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.02,
-        "2": 0.1,
-        "3": 0.85,
-        "4": 0.02
       }
     },
     "a4a2f7ba25d319b7": {
@@ -18019,6 +14839,26 @@
         "4": 0
       }
     },
+    "a80f8834b68ac130": {
+      "choice": "good_exam_item",
+      "probabilities": {
+        "good_exam_item": 0.32,
+        "answer_not_determinable": 0.2,
+        "distractors_too_obvious": 0.21,
+        "ambiguity_two_correct": 0.11,
+        "trivia_not_in_blueprint": 0.05,
+        "wording_broken": 0.11
+      },
+      "confidence": 0.18,
+      "difficulty": 3.16,
+      "difficultyDistribution": {
+        "0": 0,
+        "1": 0.02,
+        "2": 0.8,
+        "3": 0.18,
+        "4": 0
+      }
+    },
     "a831703c2baa35c6": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -18037,26 +14877,6 @@
         "2": 0.16,
         "3": 0.73,
         "4": 0.03
-      }
-    },
-    "a855b0527c352e30": {
-      "choice": "trivia_not_in_blueprint",
-      "probabilities": {
-        "good_exam_item": 0.22,
-        "answer_not_determinable": 0.25,
-        "distractors_too_obvious": 0.05,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.26,
-        "wording_broken": 0.19
-      },
-      "confidence": 0.11,
-      "difficulty": 3.96,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0.07,
-        "3": 0.88,
-        "4": 0.05
       }
     },
     "a89b7fbb6c0ebe7f": {
@@ -18159,46 +14979,6 @@
         "4": 0.02
       }
     },
-    "a98761e7264c872d": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.66,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.13,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.08,
-        "wording_broken": 0.08
-      },
-      "confidence": 0.59,
-      "difficulty": 3.91,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.08,
-        "3": 0.87,
-        "4": 0.03
-      }
-    },
-    "a99f913da42a183d": {
-      "choice": "answer_not_determinable",
-      "probabilities": {
-        "good_exam_item": 0.23,
-        "answer_not_determinable": 0.37,
-        "distractors_too_obvious": 0.23,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.02,
-        "wording_broken": 0.13
-      },
-      "confidence": 0.24,
-      "difficulty": 3.05,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.07,
-        "2": 0.79,
-        "3": 0.12,
-        "4": 0.01
-      }
-    },
     "aa15627065281c77": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -18279,46 +15059,6 @@
         "4": 0.07
       }
     },
-    "aa5ec130fd881d27": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.7,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.08,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.02,
-        "wording_broken": 0.16
-      },
-      "confidence": 0.64,
-      "difficulty": 3.78,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.2,
-        "3": 0.78,
-        "4": 0.01
-      }
-    },
-    "aabc49c79db2c32f": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.49,
-        "answer_not_determinable": 0.04,
-        "distractors_too_obvious": 0.32,
-        "ambiguity_two_correct": 0.05,
-        "trivia_not_in_blueprint": 0.07,
-        "wording_broken": 0.03
-      },
-      "confidence": 0.39,
-      "difficulty": 3.64,
-      "difficultyDistribution": {
-        "0": 0.02,
-        "1": 0.08,
-        "2": 0.15,
-        "3": 0.73,
-        "4": 0.02
-      }
-    },
     "aad815bde81cd525": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -18337,26 +15077,6 @@
         "2": 0.43,
         "3": 0.14,
         "4": 0
-      }
-    },
-    "aafefd8f23fbb7df": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.4,
-        "answer_not_determinable": 0.11,
-        "distractors_too_obvious": 0.35,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.08,
-        "wording_broken": 0.03
-      },
-      "confidence": 0.28,
-      "difficulty": 4.17,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.12,
-        "3": 0.56,
-        "4": 0.31
       }
     },
     "ab36a1f619b480ee": {
@@ -18399,46 +15119,6 @@
         "4": 0.01
       }
     },
-    "ab48a0b205259b4d": {
-      "choice": "distractors_too_obvious",
-      "probabilities": {
-        "good_exam_item": 0.19,
-        "answer_not_determinable": 0.26,
-        "distractors_too_obvious": 0.45,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.04,
-        "wording_broken": 0.04
-      },
-      "confidence": 0.34,
-      "difficulty": 3.19,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.02,
-        "2": 0.79,
-        "3": 0.14,
-        "4": 0.04
-      }
-    },
-    "ab5ea3924b7bf442": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.53,
-        "answer_not_determinable": 0.06,
-        "distractors_too_obvious": 0.1,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.03,
-        "wording_broken": 0.26
-      },
-      "confidence": 0.44,
-      "difficulty": 3.43,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.56,
-        "3": 0.43,
-        "4": 0
-      }
-    },
     "abb77935b62d1c8e": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -18456,46 +15136,6 @@
         "1": 0.04,
         "2": 0.11,
         "3": 0.82,
-        "4": 0.03
-      }
-    },
-    "abcf6c1db21b5964": {
-      "choice": "wording_broken",
-      "probabilities": {
-        "good_exam_item": 0.08,
-        "answer_not_determinable": 0.09,
-        "distractors_too_obvious": 0.01,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.02,
-        "wording_broken": 0.78
-      },
-      "confidence": 0.74,
-      "difficulty": 3.05,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.03,
-        "2": 0.89,
-        "3": 0.08,
-        "4": 0
-      }
-    },
-    "abe18548e6e1e80d": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.35,
-        "answer_not_determinable": 0.23,
-        "distractors_too_obvious": 0.23,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.05,
-        "wording_broken": 0.13
-      },
-      "confidence": 0.22,
-      "difficulty": 3.87,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.13,
-        "3": 0.83,
         "4": 0.03
       }
     },
@@ -18517,66 +15157,6 @@
         "2": 0.01,
         "3": 0.86,
         "4": 0.13
-      }
-    },
-    "ac2d5fec618ed014": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.51,
-        "answer_not_determinable": 0.05,
-        "distractors_too_obvious": 0.22,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.19,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.41,
-      "difficulty": 3.96,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.06,
-        "3": 0.89,
-        "4": 0.04
-      }
-    },
-    "ac3953d5154b1bd8": {
-      "choice": "distractors_too_obvious",
-      "probabilities": {
-        "good_exam_item": 0.18,
-        "answer_not_determinable": 0.08,
-        "distractors_too_obvious": 0.41,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.23,
-        "wording_broken": 0.07
-      },
-      "confidence": 0.29,
-      "difficulty": 2.79,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.49,
-        "2": 0.25,
-        "3": 0.25,
-        "4": 0.01
-      }
-    },
-    "ad096430066a8d50": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.6,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.23,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.13,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.52,
-      "difficulty": 3.32,
-      "difficultyDistribution": {
-        "0": 0.02,
-        "1": 0.06,
-        "2": 0.5,
-        "3": 0.41,
-        "4": 0.01
       }
     },
     "ad48582217bec219": {
@@ -18637,66 +15217,6 @@
         "2": 0.01,
         "3": 0.73,
         "4": 0.26
-      }
-    },
-    "add05a782989569b": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.41,
-        "answer_not_determinable": 0.12,
-        "distractors_too_obvious": 0.16,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.07,
-        "wording_broken": 0.23
-      },
-      "confidence": 0.29,
-      "difficulty": 3.65,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.03,
-        "2": 0.29,
-        "3": 0.66,
-        "4": 0.02
-      }
-    },
-    "addb5ca2508474ca": {
-      "choice": "trivia_not_in_blueprint",
-      "probabilities": {
-        "good_exam_item": 0.42,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.1,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.45,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.34,
-      "difficulty": 3.47,
-      "difficultyDistribution": {
-        "0": 0.06,
-        "1": 0.15,
-        "2": 0.14,
-        "3": 0.57,
-        "4": 0.08
-      }
-    },
-    "ade78fc13dc4be9d": {
-      "choice": "answer_not_determinable",
-      "probabilities": {
-        "good_exam_item": 0.09,
-        "answer_not_determinable": 0.43,
-        "distractors_too_obvious": 0.04,
-        "ambiguity_two_correct": 0.05,
-        "trivia_not_in_blueprint": 0.22,
-        "wording_broken": 0.17
-      },
-      "confidence": 0.32,
-      "difficulty": 3.96,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.07,
-        "3": 0.87,
-        "4": 0.05
       }
     },
     "ae127d0d56d90f5f": {
@@ -18899,6 +15419,26 @@
         "4": 0.04
       }
     },
+    "afdd40bc30274f63": {
+      "choice": "good_exam_item",
+      "probabilities": {
+        "good_exam_item": 0.68,
+        "answer_not_determinable": 0.03,
+        "distractors_too_obvious": 0.18,
+        "ambiguity_two_correct": 0.01,
+        "trivia_not_in_blueprint": 0.01,
+        "wording_broken": 0.09
+      },
+      "confidence": 0.62,
+      "difficulty": 3.01,
+      "difficultyDistribution": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.97,
+        "3": 0.02,
+        "4": 0
+      }
+    },
     "b013257b8897d292": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -18959,26 +15499,6 @@
         "4": 0
       }
     },
-    "b06737c3b9fad09d": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.81,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.12,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.04,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.77,
-      "difficulty": 3.8,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.03,
-        "2": 0.28,
-        "3": 0.55,
-        "4": 0.14
-      }
-    },
     "b07f60ebcf523f07": {
       "choice": "wording_broken",
       "probabilities": {
@@ -19017,26 +15537,6 @@
         "2": 0.23,
         "3": 0.75,
         "4": 0.01
-      }
-    },
-    "b0fc2e92550788c8": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.46,
-        "answer_not_determinable": 0.1,
-        "distractors_too_obvious": 0.09,
-        "ambiguity_two_correct": 0.07,
-        "trivia_not_in_blueprint": 0.12,
-        "wording_broken": 0.16
-      },
-      "confidence": 0.35,
-      "difficulty": 3.95,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0.07,
-        "3": 0.9,
-        "4": 0.03
       }
     },
     "b1a4efbc89b5284e": {
@@ -19097,26 +15597,6 @@
         "2": 0.05,
         "3": 0,
         "4": 0
-      }
-    },
-    "b23c00ce530f9efe": {
-      "choice": "distractors_too_obvious",
-      "probabilities": {
-        "good_exam_item": 0.38,
-        "answer_not_determinable": 0.08,
-        "distractors_too_obvious": 0.47,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.04,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.36,
-      "difficulty": 3.94,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.16,
-        "3": 0.72,
-        "4": 0.11
       }
     },
     "b285c0049be314d2": {
@@ -19279,26 +15759,6 @@
         "4": 0.02
       }
     },
-    "b366acfd43159a94": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.67,
-        "answer_not_determinable": 0.04,
-        "distractors_too_obvious": 0.09,
-        "ambiguity_two_correct": 0.06,
-        "trivia_not_in_blueprint": 0.12,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.6,
-      "difficulty": 3.83,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.14,
-        "3": 0.83,
-        "4": 0.01
-      }
-    },
     "b3e42311a70efbe8": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -19399,26 +15859,6 @@
         "4": 0.01
       }
     },
-    "b49d989d402738a7": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.76,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.17,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.04,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.71,
-      "difficulty": 3.28,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.1,
-        "2": 0.5,
-        "3": 0.39,
-        "4": 0
-      }
-    },
     "b4c8498ad5c867ba": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -19439,26 +15879,6 @@
         "4": 0.01
       }
     },
-    "b4d886a0d60e7406": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.65,
-        "answer_not_determinable": 0.04,
-        "distractors_too_obvious": 0.28,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.01,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.58,
-      "difficulty": 1.24,
-      "difficultyDistribution": {
-        "0": 0.78,
-        "1": 0.22,
-        "2": 0,
-        "3": 0,
-        "4": 0
-      }
-    },
     "b4e1ff3065d0dee7": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -19477,26 +15897,6 @@
         "2": 0.52,
         "3": 0.08,
         "4": 0.01
-      }
-    },
-    "b50f7e906c4b64f2": {
-      "choice": "answer_not_determinable",
-      "probabilities": {
-        "good_exam_item": 0.15,
-        "answer_not_determinable": 0.41,
-        "distractors_too_obvious": 0.1,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.08,
-        "wording_broken": 0.25
-      },
-      "confidence": 0.29,
-      "difficulty": 3.55,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.08,
-        "2": 0.29,
-        "3": 0.63,
-        "4": 0
       }
     },
     "b52ffd6ff289068d": {
@@ -19819,26 +16219,6 @@
         "4": 0
       }
     },
-    "b931608fabe8f1d7": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.68,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.06,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.19,
-        "wording_broken": 0.03
-      },
-      "confidence": 0.62,
-      "difficulty": 3.94,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.06,
-        "3": 0.91,
-        "4": 0.02
-      }
-    },
     "b9483d65d48fdb09": {
       "choice": "wording_broken",
       "probabilities": {
@@ -19877,26 +16257,6 @@
         "2": 0.06,
         "3": 0.37,
         "4": 0.53
-      }
-    },
-    "b9b4815cae46ebe4": {
-      "choice": "distractors_too_obvious",
-      "probabilities": {
-        "good_exam_item": 0.33,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.43,
-        "ambiguity_two_correct": 0,
-        "trivia_not_in_blueprint": 0.22,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.32,
-      "difficulty": 4.04,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.01,
-        "3": 0.91,
-        "4": 0.07
       }
     },
     "b9c13aa961a3c531": {
@@ -19959,26 +16319,6 @@
         "4": 0.03
       }
     },
-    "ba14121bb60c9806": {
-      "choice": "trivia_not_in_blueprint",
-      "probabilities": {
-        "good_exam_item": 0.33,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.15,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.48,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.38,
-      "difficulty": 2.53,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.55,
-        "2": 0.37,
-        "3": 0.08,
-        "4": 0
-      }
-    },
     "ba4ea1f8e49860c3": {
       "choice": "answer_not_determinable",
       "probabilities": {
@@ -20019,46 +16359,6 @@
         "4": 0
       }
     },
-    "bad80f0b23926d95": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.86,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.06,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.04,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.83,
-      "difficulty": 3.78,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.18,
-        "3": 0.79,
-        "4": 0.01
-      }
-    },
-    "bb4dd9b6ccc01460": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.48,
-        "answer_not_determinable": 0.19,
-        "distractors_too_obvious": 0.15,
-        "ambiguity_two_correct": 0.05,
-        "trivia_not_in_blueprint": 0.11,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.38,
-      "difficulty": 3.89,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.09,
-        "3": 0.89,
-        "4": 0.01
-      }
-    },
     "bb503aa89bf6f9db": {
       "choice": "distractors_too_obvious",
       "probabilities": {
@@ -20077,46 +16377,6 @@
         "2": 0.03,
         "3": 0.66,
         "4": 0.3
-      }
-    },
-    "bb99b79c07ff8247": {
-      "choice": "answer_not_determinable",
-      "probabilities": {
-        "good_exam_item": 0.13,
-        "answer_not_determinable": 0.53,
-        "distractors_too_obvious": 0.11,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.08,
-        "wording_broken": 0.12
-      },
-      "confidence": 0.44,
-      "difficulty": 3.82,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.13,
-        "3": 0.84,
-        "4": 0.01
-      }
-    },
-    "bbc8fb63b7baf775": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.52,
-        "answer_not_determinable": 0.04,
-        "distractors_too_obvious": 0.04,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.36,
-        "wording_broken": 0.03
-      },
-      "confidence": 0.42,
-      "difficulty": 3.89,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.04,
-        "2": 0.04,
-        "3": 0.88,
-        "4": 0.03
       }
     },
     "bbd85215df776598": {
@@ -20157,26 +16417,6 @@
         "2": 0.14,
         "3": 0.59,
         "4": 0.18
-      }
-    },
-    "bc0ef9f9f2db8d29": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.65,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.13,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.16,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.58,
-      "difficulty": 3.67,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.29,
-        "3": 0.68,
-        "4": 0.01
       }
     },
     "bc2d6bd1f8167126": {
@@ -20499,26 +16739,6 @@
         "4": 0.1
       }
     },
-    "bea9af801fbc2647": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.57,
-        "answer_not_determinable": 0.04,
-        "distractors_too_obvious": 0.13,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.15,
-        "wording_broken": 0.1
-      },
-      "confidence": 0.48,
-      "difficulty": 3.33,
-      "difficultyDistribution": {
-        "0": 0.05,
-        "1": 0.18,
-        "2": 0.19,
-        "3": 0.55,
-        "4": 0.03
-      }
-    },
     "bee3a4a7d0d173ab": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -20537,26 +16757,6 @@
         "2": 0.35,
         "3": 0.58,
         "4": 0.01
-      }
-    },
-    "beedccc9d4b39784": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.74,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.18,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.04,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.69,
-      "difficulty": 3.61,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.34,
-        "3": 0.64,
-        "4": 0
       }
     },
     "bf21240af76735e2": {
@@ -20859,26 +17059,6 @@
         "4": 0.55
       }
     },
-    "c238fed3dcbe0de7": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.29,
-        "answer_not_determinable": 0.15,
-        "distractors_too_obvious": 0.12,
-        "ambiguity_two_correct": 0.08,
-        "trivia_not_in_blueprint": 0.2,
-        "wording_broken": 0.16
-      },
-      "confidence": 0.15,
-      "difficulty": 3.47,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.5,
-        "3": 0.47,
-        "4": 0.01
-      }
-    },
     "c274001d8faad756": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -20979,26 +17159,6 @@
         "4": 0
       }
     },
-    "c3361b7fd271dd85": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.58,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.19,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.19,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.5,
-      "difficulty": 3.93,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.06,
-        "3": 0.92,
-        "4": 0.01
-      }
-    },
     "c345245868da7487": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -21017,46 +17177,6 @@
         "2": 0.69,
         "3": 0.05,
         "4": 0
-      }
-    },
-    "c36165f45e297653": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.72,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.18,
-        "ambiguity_two_correct": 0,
-        "trivia_not_in_blueprint": 0.08,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.66,
-      "difficulty": 4,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.04,
-        "3": 0.87,
-        "4": 0.08
-      }
-    },
-    "c3981d1a3086ff94": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.69,
-        "answer_not_determinable": 0.03,
-        "distractors_too_obvious": 0.09,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.12,
-        "wording_broken": 0.06
-      },
-      "confidence": 0.63,
-      "difficulty": 3.88,
-      "difficultyDistribution": {
-        "0": 0.02,
-        "1": 0.03,
-        "2": 0.11,
-        "3": 0.72,
-        "4": 0.12
       }
     },
     "c399a526be6cc7b1": {
@@ -21156,26 +17276,6 @@
         "1": 0.05,
         "2": 0.79,
         "3": 0.14,
-        "4": 0.01
-      }
-    },
-    "c42a07cf51e69268": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.61,
-        "answer_not_determinable": 0.03,
-        "distractors_too_obvious": 0.27,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.05,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.53,
-      "difficulty": 3.79,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.19,
-        "3": 0.79,
         "4": 0.01
       }
     },
@@ -21299,26 +17399,6 @@
         "4": 0.08
       }
     },
-    "c5acd7aa20314bb1": {
-      "choice": "answer_not_determinable",
-      "probabilities": {
-        "good_exam_item": 0.22,
-        "answer_not_determinable": 0.36,
-        "distractors_too_obvious": 0.23,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.15,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.23,
-      "difficulty": 3.91,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.09,
-        "3": 0.88,
-        "4": 0.02
-      }
-    },
     "c6345583088bfb65": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -21436,6 +17516,26 @@
         "1": 0.08,
         "2": 0.56,
         "3": 0.25,
+        "4": 0.02
+      }
+    },
+    "c77e6dfb21a058fd": {
+      "choice": "good_exam_item",
+      "probabilities": {
+        "good_exam_item": 0.79,
+        "answer_not_determinable": 0.01,
+        "distractors_too_obvious": 0.09,
+        "ambiguity_two_correct": 0.02,
+        "trivia_not_in_blueprint": 0.08,
+        "wording_broken": 0.01
+      },
+      "confidence": 0.75,
+      "difficulty": 3.88,
+      "difficultyDistribution": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.12,
+        "3": 0.85,
         "4": 0.02
       }
     },
@@ -21557,26 +17657,6 @@
         "2": 0.53,
         "3": 0.36,
         "4": 0
-      }
-    },
-    "c8891e661bc8db93": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.43,
-        "answer_not_determinable": 0.17,
-        "distractors_too_obvious": 0.14,
-        "ambiguity_two_correct": 0.05,
-        "trivia_not_in_blueprint": 0.11,
-        "wording_broken": 0.1
-      },
-      "confidence": 0.32,
-      "difficulty": 3.29,
-      "difficultyDistribution": {
-        "0": 0.04,
-        "1": 0.11,
-        "2": 0.38,
-        "3": 0.45,
-        "4": 0.02
       }
     },
     "c892416afa22baf2": {
@@ -21739,26 +17819,6 @@
         "4": 0
       }
     },
-    "ca0ca3e7855d63d9": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.61,
-        "answer_not_determinable": 0.03,
-        "distractors_too_obvious": 0.12,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.18,
-        "wording_broken": 0.05
-      },
-      "confidence": 0.53,
-      "difficulty": 3.87,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.13,
-        "3": 0.81,
-        "4": 0.04
-      }
-    },
     "ca1bdfe392f82eef": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -21856,26 +17916,6 @@
         "1": 0.02,
         "2": 0.57,
         "3": 0.41,
-        "4": 0
-      }
-    },
-    "cb807ecd0be4d26e": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.51,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.45,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.01,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.41,
-      "difficulty": 2.1,
-      "difficultyDistribution": {
-        "0": 0.18,
-        "1": 0.55,
-        "2": 0.27,
-        "3": 0,
         "4": 0
       }
     },
@@ -22079,6 +18119,26 @@
         "4": 0.06
       }
     },
+    "cc943d3be92d30e7": {
+      "choice": "distractors_too_obvious",
+      "probabilities": {
+        "good_exam_item": 0.2,
+        "answer_not_determinable": 0.29,
+        "distractors_too_obvious": 0.33,
+        "ambiguity_two_correct": 0.02,
+        "trivia_not_in_blueprint": 0.1,
+        "wording_broken": 0.06
+      },
+      "confidence": 0.2,
+      "difficulty": 3.2,
+      "difficultyDistribution": {
+        "0": 0.02,
+        "1": 0.07,
+        "2": 0.61,
+        "3": 0.3,
+        "4": 0
+      }
+    },
     "cc943d7477358a7a": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -22239,66 +18299,6 @@
         "4": 0
       }
     },
-    "cdc66f754b33608f": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.62,
-        "answer_not_determinable": 0.04,
-        "distractors_too_obvious": 0.24,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.05,
-        "wording_broken": 0.03
-      },
-      "confidence": 0.54,
-      "difficulty": 3.16,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.16,
-        "2": 0.5,
-        "3": 0.33,
-        "4": 0
-      }
-    },
-    "cddacc607fdbbe5c": {
-      "choice": "trivia_not_in_blueprint",
-      "probabilities": {
-        "good_exam_item": 0.14,
-        "answer_not_determinable": 0.25,
-        "distractors_too_obvious": 0.1,
-        "ambiguity_two_correct": 0.11,
-        "trivia_not_in_blueprint": 0.34,
-        "wording_broken": 0.06
-      },
-      "confidence": 0.21,
-      "difficulty": 3.65,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.06,
-        "2": 0.25,
-        "3": 0.66,
-        "4": 0.03
-      }
-    },
-    "ce57f7a7e1fcbf5c": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.8,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.1,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.07,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.76,
-      "difficulty": 3.52,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.06,
-        "2": 0.36,
-        "3": 0.57,
-        "4": 0.01
-      }
-    },
     "ce69817643d13983": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -22419,46 +18419,6 @@
         "4": 0.1
       }
     },
-    "cfe730b4ca6fc4ce": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.81,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.08,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.05,
-        "wording_broken": 0.03
-      },
-      "confidence": 0.77,
-      "difficulty": 3.19,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.06,
-        "2": 0.66,
-        "3": 0.27,
-        "4": 0
-      }
-    },
-    "d031e8bfe1dd77c5": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.67,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.11,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.14,
-        "wording_broken": 0.04
-      },
-      "confidence": 0.6,
-      "difficulty": 3.91,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.02,
-        "2": 0.06,
-        "3": 0.87,
-        "4": 0.04
-      }
-    },
     "d0673949de24e679": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -22559,26 +18519,6 @@
         "4": 0
       }
     },
-    "d1073d77f01e1cf4": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.74,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.18,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.02,
-        "wording_broken": 0.04
-      },
-      "confidence": 0.69,
-      "difficulty": 2.73,
-      "difficultyDistribution": {
-        "0": 0.04,
-        "1": 0.31,
-        "2": 0.54,
-        "3": 0.11,
-        "4": 0
-      }
-    },
     "d1269a0fd8e53460": {
       "choice": "wording_broken",
       "probabilities": {
@@ -22617,26 +18557,6 @@
         "2": 0.13,
         "3": 0.53,
         "4": 0.09
-      }
-    },
-    "d18b74604c89b681": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.74,
-        "answer_not_determinable": 0.03,
-        "distractors_too_obvious": 0.13,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.07,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.69,
-      "difficulty": 4.03,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.09,
-        "3": 0.75,
-        "4": 0.15
       }
     },
     "d1fb071f02a116a8": {
@@ -22699,24 +18619,24 @@
         "4": 0.01
       }
     },
-    "d342fa2d114bf622": {
-      "choice": "good_exam_item",
+    "d2f5c98bef71c3d6": {
+      "choice": "wording_broken",
       "probabilities": {
-        "good_exam_item": 0.57,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.3,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.1,
-        "wording_broken": 0.01
+        "good_exam_item": 0.24,
+        "answer_not_determinable": 0.12,
+        "distractors_too_obvious": 0.05,
+        "ambiguity_two_correct": 0.08,
+        "trivia_not_in_blueprint": 0.01,
+        "wording_broken": 0.5
       },
-      "confidence": 0.48,
-      "difficulty": 3.82,
+      "confidence": 0.4,
+      "difficulty": 3.14,
       "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.03,
-        "2": 0.11,
-        "3": 0.84,
-        "4": 0.01
+        "0": 0,
+        "1": 0.02,
+        "2": 0.83,
+        "3": 0.15,
+        "4": 0
       }
     },
     "d381789466311b7d": {
@@ -22737,46 +18657,6 @@
         "2": 0.87,
         "3": 0.12,
         "4": 0
-      }
-    },
-    "d3917501e96e1fa0": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.45,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.35,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.15,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.34,
-      "difficulty": 2.36,
-      "difficultyDistribution": {
-        "0": 0.1,
-        "1": 0.59,
-        "2": 0.18,
-        "3": 0.12,
-        "4": 0.01
-      }
-    },
-    "d3ed474ed88352df": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.79,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.05,
-        "ambiguity_two_correct": 0.05,
-        "trivia_not_in_blueprint": 0.08,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.75,
-      "difficulty": 4.29,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.02,
-        "3": 0.64,
-        "4": 0.33
       }
     },
     "d4107cc93b876bbd": {
@@ -22919,6 +18799,26 @@
         "4": 0
       }
     },
+    "d50a30c96276dcc0": {
+      "choice": "good_exam_item",
+      "probabilities": {
+        "good_exam_item": 0.59,
+        "answer_not_determinable": 0.08,
+        "distractors_too_obvious": 0.23,
+        "ambiguity_two_correct": 0.05,
+        "trivia_not_in_blueprint": 0.03,
+        "wording_broken": 0.02
+      },
+      "confidence": 0.51,
+      "difficulty": 3.14,
+      "difficultyDistribution": {
+        "0": 0,
+        "1": 0.02,
+        "2": 0.82,
+        "3": 0.16,
+        "4": 0
+      }
+    },
     "d5471899839ce49f": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -22939,24 +18839,24 @@
         "4": 0.01
       }
     },
-    "d588e093e6a7ff4f": {
+    "d57a78876ae4d4a3": {
       "choice": "good_exam_item",
       "probabilities": {
-        "good_exam_item": 0.44,
-        "answer_not_determinable": 0.07,
-        "distractors_too_obvious": 0.18,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.25,
-        "wording_broken": 0.04
+        "good_exam_item": 0.72,
+        "answer_not_determinable": 0.05,
+        "distractors_too_obvious": 0.14,
+        "ambiguity_two_correct": 0.03,
+        "trivia_not_in_blueprint": 0.04,
+        "wording_broken": 0.02
       },
-      "confidence": 0.33,
-      "difficulty": 3.99,
+      "confidence": 0.66,
+      "difficulty": 3.5,
       "difficultyDistribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0.03,
-        "3": 0.94,
-        "4": 0.03
+        "0": 0.01,
+        "1": 0.07,
+        "2": 0.34,
+        "3": 0.57,
+        "4": 0.01
       }
     },
     "d596c88775b43ff6": {
@@ -23077,26 +18977,6 @@
         "2": 0.05,
         "3": 0.91,
         "4": 0.04
-      }
-    },
-    "d63b1dcec341efcc": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.57,
-        "answer_not_determinable": 0.03,
-        "distractors_too_obvious": 0.17,
-        "ambiguity_two_correct": 0.11,
-        "trivia_not_in_blueprint": 0.1,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.48,
-      "difficulty": 3.21,
-      "difficultyDistribution": {
-        "0": 0.05,
-        "1": 0.17,
-        "2": 0.32,
-        "3": 0.46,
-        "4": 0
       }
     },
     "d66a49ea972eb4aa": {
@@ -23239,26 +19119,6 @@
         "4": 0
       }
     },
-    "d8db78dd2f56b9e0": {
-      "choice": "trivia_not_in_blueprint",
-      "probabilities": {
-        "good_exam_item": 0.28,
-        "answer_not_determinable": 0.04,
-        "distractors_too_obvious": 0.21,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.38,
-        "wording_broken": 0.07
-      },
-      "confidence": 0.26,
-      "difficulty": 3.88,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.11,
-        "3": 0.82,
-        "4": 0.05
-      }
-    },
     "d8dd8e4e786eaa78": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -23357,86 +19217,6 @@
         "2": 0.58,
         "3": 0.17,
         "4": 0.01
-      }
-    },
-    "d93ea479bfa325eb": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.52,
-        "answer_not_determinable": 0.1,
-        "distractors_too_obvious": 0.18,
-        "ambiguity_two_correct": 0.06,
-        "trivia_not_in_blueprint": 0.06,
-        "wording_broken": 0.08
-      },
-      "confidence": 0.42,
-      "difficulty": 4.44,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0.01,
-        "3": 0.53,
-        "4": 0.46
-      }
-    },
-    "d94fddb00c511b30": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.82,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.1,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.05,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.78,
-      "difficulty": 3.71,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.04,
-        "2": 0.22,
-        "3": 0.71,
-        "4": 0.02
-      }
-    },
-    "d9b11519809479a9": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.55,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.24,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.13,
-        "wording_broken": 0.05
-      },
-      "confidence": 0.46,
-      "difficulty": 2.45,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.6,
-        "2": 0.35,
-        "3": 0.05,
-        "4": 0
-      }
-    },
-    "d9ba2275e57003e8": {
-      "choice": "answer_not_determinable",
-      "probabilities": {
-        "good_exam_item": 0.05,
-        "answer_not_determinable": 0.51,
-        "distractors_too_obvious": 0.02,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.29,
-        "wording_broken": 0.11
-      },
-      "confidence": 0.41,
-      "difficulty": 3.9,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.09,
-        "3": 0.88,
-        "4": 0.02
       }
     },
     "d9c75355b61a3dde": {
@@ -23617,26 +19397,6 @@
         "2": 0.09,
         "3": 0.33,
         "4": 0.39
-      }
-    },
-    "db276b836fd7ca8c": {
-      "choice": "trivia_not_in_blueprint",
-      "probabilities": {
-        "good_exam_item": 0.16,
-        "answer_not_determinable": 0.26,
-        "distractors_too_obvious": 0.1,
-        "ambiguity_two_correct": 0.05,
-        "trivia_not_in_blueprint": 0.37,
-        "wording_broken": 0.06
-      },
-      "confidence": 0.24,
-      "difficulty": 4.08,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0.01,
-        "3": 0.89,
-        "4": 0.1
       }
     },
     "db49c63beded2d68": {
@@ -23839,26 +19599,6 @@
         "4": 0
       }
     },
-    "dc9df52f47925d15": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.71,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.09,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.17,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.65,
-      "difficulty": 3.89,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.13,
-        "3": 0.81,
-        "4": 0.05
-      }
-    },
     "dca7df415b593cae": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -23976,26 +19716,6 @@
         "1": 0.03,
         "2": 0.25,
         "3": 0.72,
-        "4": 0
-      }
-    },
-    "ddea1ad7a4e5b3b7": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.53,
-        "answer_not_determinable": 0.04,
-        "distractors_too_obvious": 0.16,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.21,
-        "wording_broken": 0.04
-      },
-      "confidence": 0.44,
-      "difficulty": 3.84,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.13,
-        "3": 0.85,
         "4": 0
       }
     },
@@ -24159,26 +19879,6 @@
         "4": 0
       }
     },
-    "dfd3915839da2f4f": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.38,
-        "answer_not_determinable": 0.12,
-        "distractors_too_obvious": 0.26,
-        "ambiguity_two_correct": 0.06,
-        "trivia_not_in_blueprint": 0.16,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.26,
-      "difficulty": 3.84,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.15,
-        "3": 0.83,
-        "4": 0.01
-      }
-    },
     "dfdd0e8180d6864e": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -24279,26 +19979,6 @@
         "4": 0.95
       }
     },
-    "e0a4c4d26770256e": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.68,
-        "answer_not_determinable": 0.05,
-        "distractors_too_obvious": 0.1,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.14,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.62,
-      "difficulty": 4.09,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.02,
-        "3": 0.82,
-        "4": 0.15
-      }
-    },
     "e0eb8cb3330727b1": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -24379,26 +20059,6 @@
         "4": 0
       }
     },
-    "e1532aa529e46ce3": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.84,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.09,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.02,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.81,
-      "difficulty": 3.8,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.2,
-        "3": 0.78,
-        "4": 0.01
-      }
-    },
     "e159810f5cd5f668": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -24417,46 +20077,6 @@
         "2": 0.02,
         "3": 0.66,
         "4": 0.32
-      }
-    },
-    "e183f182a249d906": {
-      "choice": "wording_broken",
-      "probabilities": {
-        "good_exam_item": 0.05,
-        "answer_not_determinable": 0.12,
-        "distractors_too_obvious": 0.04,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.04,
-        "wording_broken": 0.74
-      },
-      "confidence": 0.69,
-      "difficulty": 3.7,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.29,
-        "3": 0.69,
-        "4": 0.01
-      }
-    },
-    "e187d35df47162be": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.49,
-        "answer_not_determinable": 0.14,
-        "distractors_too_obvious": 0.11,
-        "ambiguity_two_correct": 0.14,
-        "trivia_not_in_blueprint": 0.11,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.39,
-      "difficulty": 3.87,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0.13,
-        "3": 0.86,
-        "4": 0.01
       }
     },
     "e1b3928fd82ddde1": {
@@ -24517,26 +20137,6 @@
         "2": 0.72,
         "3": 0.05,
         "4": 0
-      }
-    },
-    "e253b00faaf0a316": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.79,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.08,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.07,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.75,
-      "difficulty": 3.9,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.16,
-        "3": 0.74,
-        "4": 0.09
       }
     },
     "e2ae630eb4849fac": {
@@ -24619,26 +20219,6 @@
         "4": 0
       }
     },
-    "e3653c4b9e5709c3": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.29,
-        "answer_not_determinable": 0.24,
-        "distractors_too_obvious": 0.26,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.08,
-        "wording_broken": 0.1
-      },
-      "confidence": 0.15,
-      "difficulty": 3.71,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.05,
-        "2": 0.18,
-        "3": 0.74,
-        "4": 0.02
-      }
-    },
     "e38b0f2fa36bbfce": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -24656,26 +20236,6 @@
         "1": 0.01,
         "2": 0.63,
         "3": 0.36,
-        "4": 0
-      }
-    },
-    "e3ebdc346e95b5c5": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.55,
-        "answer_not_determinable": 0.11,
-        "distractors_too_obvious": 0.11,
-        "ambiguity_two_correct": 0.1,
-        "trivia_not_in_blueprint": 0.05,
-        "wording_broken": 0.08
-      },
-      "confidence": 0.46,
-      "difficulty": 2.95,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.18,
-        "2": 0.69,
-        "3": 0.13,
         "4": 0
       }
     },
@@ -24699,26 +20259,6 @@
         "4": 0.07
       }
     },
-    "e4a7de15750109cd": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.59,
-        "answer_not_determinable": 0.03,
-        "distractors_too_obvious": 0.08,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.25,
-        "wording_broken": 0.04
-      },
-      "confidence": 0.51,
-      "difficulty": 3.52,
-      "difficultyDistribution": {
-        "0": 0.04,
-        "1": 0.07,
-        "2": 0.23,
-        "3": 0.65,
-        "4": 0.01
-      }
-    },
     "e4c496a49a8a2934": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -24736,26 +20276,6 @@
         "1": 0.01,
         "2": 0.12,
         "3": 0.86,
-        "4": 0.01
-      }
-    },
-    "e4c4edde4d38029b": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.6,
-        "answer_not_determinable": 0.05,
-        "distractors_too_obvious": 0.2,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.1,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.52,
-      "difficulty": 3.64,
-      "difficultyDistribution": {
-        "0": 0.02,
-        "1": 0.08,
-        "2": 0.17,
-        "3": 0.72,
         "4": 0.01
       }
     },
@@ -24777,26 +20297,6 @@
         "2": 0.06,
         "3": 0.01,
         "4": 0
-      }
-    },
-    "e58b27115d0f3ff8": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.65,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.22,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.09,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.58,
-      "difficulty": 3.61,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.02,
-        "2": 0.33,
-        "3": 0.63,
-        "4": 0.01
       }
     },
     "e5a098500b0bf3e4": {
@@ -24879,26 +20379,6 @@
         "4": 0.07
       }
     },
-    "e69ef90f3217637e": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.41,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.16,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.36,
-        "wording_broken": 0.04
-      },
-      "confidence": 0.29,
-      "difficulty": 3.86,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.08,
-        "2": 0.15,
-        "3": 0.59,
-        "4": 0.17
-      }
-    },
     "e6c9c7f7c70e10b7": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -24917,6 +20397,26 @@
         "2": 0.51,
         "3": 0.44,
         "4": 0
+      }
+    },
+    "e6ff212cb8ea68de": {
+      "choice": "answer_not_determinable",
+      "probabilities": {
+        "good_exam_item": 0.17,
+        "answer_not_determinable": 0.32,
+        "distractors_too_obvious": 0.18,
+        "ambiguity_two_correct": 0.11,
+        "trivia_not_in_blueprint": 0.15,
+        "wording_broken": 0.07
+      },
+      "confidence": 0.18,
+      "difficulty": 3.91,
+      "difficultyDistribution": {
+        "0": 0,
+        "1": 0.01,
+        "2": 0.07,
+        "3": 0.91,
+        "4": 0.01
       }
     },
     "e7186126edf14379": {
@@ -24979,26 +20479,6 @@
         "4": 0.01
       }
     },
-    "e76fa68e7890e92c": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.44,
-        "answer_not_determinable": 0.08,
-        "distractors_too_obvious": 0.27,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.17,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.33,
-      "difficulty": 3.97,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0,
-        "2": 0.05,
-        "3": 0.91,
-        "4": 0.04
-      }
-    },
     "e7753b9d0a284fdb": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -25057,26 +20537,6 @@
         "2": 0.14,
         "3": 0.7,
         "4": 0.02
-      }
-    },
-    "e7fe52027ee1fb20": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.45,
-        "answer_not_determinable": 0.12,
-        "distractors_too_obvious": 0.12,
-        "ambiguity_two_correct": 0.05,
-        "trivia_not_in_blueprint": 0.19,
-        "wording_broken": 0.07
-      },
-      "confidence": 0.34,
-      "difficulty": 3.1,
-      "difficultyDistribution": {
-        "0": 0.03,
-        "1": 0.18,
-        "2": 0.46,
-        "3": 0.32,
-        "4": 0.01
       }
     },
     "e853d944a43b238e": {
@@ -25159,26 +20619,6 @@
         "4": 0
       }
     },
-    "e8b798e30b63edf2": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.74,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.21,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.01,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.69,
-      "difficulty": 1.53,
-      "difficultyDistribution": {
-        "0": 0.55,
-        "1": 0.39,
-        "2": 0.04,
-        "3": 0.02,
-        "4": 0
-      }
-    },
     "e8e0b856f029b9de": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -25239,26 +20679,6 @@
         "4": 0.01
       }
     },
-    "e9e4e7ca1c71860d": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.64,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.05,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.23,
-        "wording_broken": 0.03
-      },
-      "confidence": 0.57,
-      "difficulty": 3.89,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.1,
-        "3": 0.84,
-        "4": 0.04
-      }
-    },
     "e9fa1722c8225547": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -25297,26 +20717,6 @@
         "2": 0.75,
         "3": 0.14,
         "4": 0
-      }
-    },
-    "ea9f90ba07e6601b": {
-      "choice": "answer_not_determinable",
-      "probabilities": {
-        "good_exam_item": 0.19,
-        "answer_not_determinable": 0.44,
-        "distractors_too_obvious": 0.15,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.19,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.33,
-      "difficulty": 3.97,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.05,
-        "3": 0.91,
-        "4": 0.03
       }
     },
     "eb3a47a647a246b9": {
@@ -25376,26 +20776,6 @@
         "1": 0.02,
         "2": 0.42,
         "3": 0.56,
-        "4": 0
-      }
-    },
-    "ebb5b1b785237029": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.67,
-        "answer_not_determinable": 0.05,
-        "distractors_too_obvious": 0.15,
-        "ambiguity_two_correct": 0.06,
-        "trivia_not_in_blueprint": 0.06,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.6,
-      "difficulty": 3.65,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.05,
-        "2": 0.25,
-        "3": 0.7,
         "4": 0
       }
     },
@@ -25459,26 +20839,6 @@
         "4": 0.01
       }
     },
-    "ec1dab6b1a17c6c3": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.83,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.12,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.02,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.8,
-      "difficulty": 3.6,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.38,
-        "3": 0.61,
-        "4": 0
-      }
-    },
     "ec416623705f278e": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -25497,86 +20857,6 @@
         "2": 0.37,
         "3": 0.56,
         "4": 0.03
-      }
-    },
-    "ec6539810bde5ba4": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.66,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.24,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.04,
-        "wording_broken": 0.04
-      },
-      "confidence": 0.59,
-      "difficulty": 3.45,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.03,
-        "2": 0.5,
-        "3": 0.47,
-        "4": 0
-      }
-    },
-    "ec8b55c9fd0bdc38": {
-      "choice": "wording_broken",
-      "probabilities": {
-        "good_exam_item": 0.02,
-        "answer_not_determinable": 0.07,
-        "distractors_too_obvious": 0.01,
-        "ambiguity_two_correct": 0,
-        "trivia_not_in_blueprint": 0.03,
-        "wording_broken": 0.87
-      },
-      "confidence": 0.84,
-      "difficulty": 2.81,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.23,
-        "2": 0.73,
-        "3": 0.04,
-        "4": 0
-      }
-    },
-    "ec9453613a5475ac": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.53,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.28,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.12,
-        "wording_broken": 0.03
-      },
-      "confidence": 0.44,
-      "difficulty": 2.62,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.5,
-        "2": 0.37,
-        "3": 0.13,
-        "4": 0
-      }
-    },
-    "ece97476469e5796": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.57,
-        "answer_not_determinable": 0.04,
-        "distractors_too_obvious": 0.09,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.1,
-        "wording_broken": 0.19
-      },
-      "confidence": 0.48,
-      "difficulty": 3.83,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.17,
-        "3": 0.8,
-        "4": 0.02
       }
     },
     "ed012c7b0e2d7569": {
@@ -25836,6 +21116,26 @@
         "1": 0.11,
         "2": 0.55,
         "3": 0.34,
+        "4": 0
+      }
+    },
+    "ef5e2cb7624ef76c": {
+      "choice": "good_exam_item",
+      "probabilities": {
+        "good_exam_item": 0.56,
+        "answer_not_determinable": 0.12,
+        "distractors_too_obvious": 0.09,
+        "ambiguity_two_correct": 0.16,
+        "trivia_not_in_blueprint": 0.06,
+        "wording_broken": 0.01
+      },
+      "confidence": 0.47,
+      "difficulty": 3.43,
+      "difficultyDistribution": {
+        "0": 0,
+        "1": 0.02,
+        "2": 0.52,
+        "3": 0.46,
         "4": 0
       }
     },
@@ -26099,26 +21399,6 @@
         "4": 0.01
       }
     },
-    "f14d1264db1074fa": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.41,
-        "answer_not_determinable": 0.05,
-        "distractors_too_obvious": 0.12,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.35,
-        "wording_broken": 0.04
-      },
-      "confidence": 0.29,
-      "difficulty": 3.71,
-      "difficultyDistribution": {
-        "0": 0.03,
-        "1": 0.04,
-        "2": 0.13,
-        "3": 0.79,
-        "4": 0.01
-      }
-    },
     "f156dd09c529c9f7": {
       "choice": "answer_not_determinable",
       "probabilities": {
@@ -26156,26 +21436,6 @@
         "1": 0.06,
         "2": 0.16,
         "3": 0.73,
-        "4": 0.04
-      }
-    },
-    "f16b88f943e0c876": {
-      "choice": "answer_not_determinable",
-      "probabilities": {
-        "good_exam_item": 0.02,
-        "answer_not_determinable": 0.61,
-        "distractors_too_obvious": 0.06,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.12,
-        "wording_broken": 0.16
-      },
-      "confidence": 0.53,
-      "difficulty": 3.98,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.05,
-        "3": 0.9,
         "4": 0.04
       }
     },
@@ -26259,26 +21519,6 @@
         "4": 0
       }
     },
-    "f2666955f3d080da": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.83,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.09,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.05,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.8,
-      "difficulty": 3.85,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.03,
-        "2": 0.09,
-        "3": 0.87,
-        "4": 0.01
-      }
-    },
     "f269ff44e30adce6": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -26317,26 +21557,6 @@
         "2": 0.21,
         "3": 0.64,
         "4": 0.05
-      }
-    },
-    "f2b92d4092781fc9": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.45,
-        "answer_not_determinable": 0.2,
-        "distractors_too_obvious": 0.15,
-        "ambiguity_two_correct": 0.06,
-        "trivia_not_in_blueprint": 0.06,
-        "wording_broken": 0.08
-      },
-      "confidence": 0.34,
-      "difficulty": 3.27,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.1,
-        "2": 0.52,
-        "3": 0.37,
-        "4": 0
       }
     },
     "f2d8b8a7f3986df1": {
@@ -26379,24 +21599,24 @@
         "4": 0.01
       }
     },
-    "f3025dcb567a41bb": {
-      "choice": "good_exam_item",
+    "f2f9cf4d7d2d315c": {
+      "choice": "wording_broken",
       "probabilities": {
-        "good_exam_item": 0.8,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.08,
-        "ambiguity_two_correct": 0.08,
-        "trivia_not_in_blueprint": 0.01,
-        "wording_broken": 0.01
+        "good_exam_item": 0.17,
+        "answer_not_determinable": 0.19,
+        "distractors_too_obvious": 0.04,
+        "ambiguity_two_correct": 0.04,
+        "trivia_not_in_blueprint": 0.04,
+        "wording_broken": 0.52
       },
-      "confidence": 0.76,
-      "difficulty": 3.69,
+      "confidence": 0.42,
+      "difficulty": 3.2,
       "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.28,
-        "3": 0.7,
-        "4": 0
+        "0": 0.01,
+        "1": 0.07,
+        "2": 0.64,
+        "3": 0.27,
+        "4": 0.01
       }
     },
     "f33135726a876daf": {
@@ -26459,26 +21679,6 @@
         "4": 0.04
       }
     },
-    "f3698b88fc6fa1e5": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.6,
-        "answer_not_determinable": 0.05,
-        "distractors_too_obvious": 0.19,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.12,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.52,
-      "difficulty": 3.8,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.18,
-        "3": 0.81,
-        "4": 0
-      }
-    },
     "f37b3b7757719126": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -26519,26 +21719,6 @@
         "4": 0
       }
     },
-    "f3b05aec1d9d278d": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.64,
-        "answer_not_determinable": 0.03,
-        "distractors_too_obvious": 0.11,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.16,
-        "wording_broken": 0.04
-      },
-      "confidence": 0.57,
-      "difficulty": 3.76,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.22,
-        "3": 0.76,
-        "4": 0.01
-      }
-    },
     "f3cee8a7287025cc": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -26557,26 +21737,6 @@
         "2": 0.14,
         "3": 0.81,
         "4": 0.03
-      }
-    },
-    "f3fe40f7ffbb1939": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.4,
-        "answer_not_determinable": 0.04,
-        "distractors_too_obvious": 0.36,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.16,
-        "wording_broken": 0.03
-      },
-      "confidence": 0.28,
-      "difficulty": 3.74,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.24,
-        "3": 0.73,
-        "4": 0.02
       }
     },
     "f40396be74a68db8": {
@@ -26799,26 +21959,6 @@
         "4": 0.03
       }
     },
-    "f506e000de492224": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.71,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.1,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.12,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.65,
-      "difficulty": 3.78,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.03,
-        "2": 0.15,
-        "3": 0.8,
-        "4": 0.01
-      }
-    },
     "f570a41af8e9078c": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -26899,26 +22039,6 @@
         "4": 0
       }
     },
-    "f634d6123d0571ff": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.72,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.08,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.14,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.66,
-      "difficulty": 3.95,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.01,
-        "2": 0.05,
-        "3": 0.9,
-        "4": 0.03
-      }
-    },
     "f654ec354d272d39": {
       "choice": "answer_not_determinable",
       "probabilities": {
@@ -26977,66 +22097,6 @@
         "2": 0.09,
         "3": 0.85,
         "4": 0.01
-      }
-    },
-    "f6cb8e2a7aba547a": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.66,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.27,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.04,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.59,
-      "difficulty": 3.46,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.06,
-        "2": 0.4,
-        "3": 0.53,
-        "4": 0
-      }
-    },
-    "f6e98b24f15fc9d4": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.65,
-        "answer_not_determinable": 0.04,
-        "distractors_too_obvious": 0.13,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.13,
-        "wording_broken": 0.03
-      },
-      "confidence": 0.58,
-      "difficulty": 3.43,
-      "difficultyDistribution": {
-        "0": 0.01,
-        "1": 0.06,
-        "2": 0.43,
-        "3": 0.49,
-        "4": 0.01
-      }
-    },
-    "f762ff144d8cc78c": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.73,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.12,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.11,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.68,
-      "difficulty": 3.62,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.05,
-        "2": 0.28,
-        "3": 0.67,
-        "4": 0
       }
     },
     "f821d1ef90dd1ba4": {
@@ -27159,24 +22219,24 @@
         "4": 0.02
       }
     },
-    "f99325c06723e0f3": {
+    "f9333f2a180cdf5f": {
       "choice": "good_exam_item",
       "probabilities": {
-        "good_exam_item": 0.57,
-        "answer_not_determinable": 0.05,
-        "distractors_too_obvious": 0.13,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.21,
-        "wording_broken": 0.02
+        "good_exam_item": 0.58,
+        "answer_not_determinable": 0.12,
+        "distractors_too_obvious": 0.1,
+        "ambiguity_two_correct": 0.04,
+        "trivia_not_in_blueprint": 0.03,
+        "wording_broken": 0.13
       },
-      "confidence": 0.48,
-      "difficulty": 4,
+      "confidence": 0.5,
+      "difficulty": 3.21,
       "difficultyDistribution": {
         "0": 0,
-        "1": 0,
-        "2": 0.04,
-        "3": 0.9,
-        "4": 0.06
+        "1": 0.02,
+        "2": 0.75,
+        "3": 0.23,
+        "4": 0
       }
     },
     "fa01d449bf5a821d": {
@@ -27339,26 +22399,6 @@
         "4": 0.66
       }
     },
-    "fb9c57e0b906d06b": {
-      "choice": "answer_not_determinable",
-      "probabilities": {
-        "good_exam_item": 0.1,
-        "answer_not_determinable": 0.32,
-        "distractors_too_obvious": 0.07,
-        "ambiguity_two_correct": 0.26,
-        "trivia_not_in_blueprint": 0.23,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.18,
-      "difficulty": 3.52,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.11,
-        "2": 0.3,
-        "3": 0.54,
-        "4": 0.05
-      }
-    },
     "fbeaed867b8562d0": {
       "choice": "wording_broken",
       "probabilities": {
@@ -27376,26 +22416,6 @@
         "1": 0.26,
         "2": 0.69,
         "3": 0.05,
-        "4": 0
-      }
-    },
-    "fc0333af9f0c319d": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.62,
-        "answer_not_determinable": 0.08,
-        "distractors_too_obvious": 0.19,
-        "ambiguity_two_correct": 0.05,
-        "trivia_not_in_blueprint": 0.04,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.54,
-      "difficulty": 2.07,
-      "difficultyDistribution": {
-        "0": 0.15,
-        "1": 0.72,
-        "2": 0.05,
-        "3": 0.08,
         "4": 0
       }
     },
@@ -27417,26 +22437,6 @@
         "2": 0.38,
         "3": 0.57,
         "4": 0.01
-      }
-    },
-    "fc82a612a5a5b51b": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.31,
-        "answer_not_determinable": 0.24,
-        "distractors_too_obvious": 0.23,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.11,
-        "wording_broken": 0.09
-      },
-      "confidence": 0.17,
-      "difficulty": 3,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.03,
-        "2": 0.93,
-        "3": 0.04,
-        "4": 0
       }
     },
     "fc9a3b95432caede": {
@@ -27599,26 +22599,6 @@
         "4": 0
       }
     },
-    "fdd95ee33a0df0d5": {
-      "choice": "trivia_not_in_blueprint",
-      "probabilities": {
-        "good_exam_item": 0.14,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.04,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.68,
-        "wording_broken": 0.12
-      },
-      "confidence": 0.62,
-      "difficulty": 3.2,
-      "difficultyDistribution": {
-        "0": 0.04,
-        "1": 0.22,
-        "2": 0.25,
-        "3": 0.48,
-        "4": 0.01
-      }
-    },
     "fddea97dd4ba2db2": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -27677,26 +22657,6 @@
         "2": 0.01,
         "3": 0.12,
         "4": 0.87
-      }
-    },
-    "fe2d1495c24ca10e": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.67,
-        "answer_not_determinable": 0.02,
-        "distractors_too_obvious": 0.2,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.06,
-        "wording_broken": 0.03
-      },
-      "confidence": 0.6,
-      "difficulty": 3.77,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.01,
-        "2": 0.22,
-        "3": 0.76,
-        "4": 0.01
       }
     },
     "fe3303dc8df83522": {
@@ -27799,26 +22759,6 @@
         "4": 0
       }
     },
-    "fefc2fe386e33260": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.74,
-        "answer_not_determinable": 0.06,
-        "distractors_too_obvious": 0.08,
-        "ambiguity_two_correct": 0.02,
-        "trivia_not_in_blueprint": 0.08,
-        "wording_broken": 0.02
-      },
-      "confidence": 0.69,
-      "difficulty": 3.9,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.02,
-        "2": 0.07,
-        "3": 0.89,
-        "4": 0.02
-      }
-    },
     "ff0baa8057c7eb9c": {
       "choice": "distractors_too_obvious",
       "probabilities": {
@@ -27899,26 +22839,6 @@
         "4": 0
       }
     },
-    "ff46c67cf6244e67": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.74,
-        "answer_not_determinable": 0.01,
-        "distractors_too_obvious": 0.16,
-        "ambiguity_two_correct": 0.01,
-        "trivia_not_in_blueprint": 0.07,
-        "wording_broken": 0.01
-      },
-      "confidence": 0.69,
-      "difficulty": 3.18,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.13,
-        "2": 0.55,
-        "3": 0.32,
-        "4": 0
-      }
-    },
     "ff5b5f9d0af23ce7": {
       "choice": "good_exam_item",
       "probabilities": {
@@ -27956,26 +22876,6 @@
         "1": 0.02,
         "2": 0.53,
         "3": 0.45,
-        "4": 0
-      }
-    },
-    "ff95c273e3e86706": {
-      "choice": "good_exam_item",
-      "probabilities": {
-        "good_exam_item": 0.33,
-        "answer_not_determinable": 0.04,
-        "distractors_too_obvious": 0.12,
-        "ambiguity_two_correct": 0.03,
-        "trivia_not_in_blueprint": 0.18,
-        "wording_broken": 0.3
-      },
-      "confidence": 0.2,
-      "difficulty": 3.34,
-      "difficultyDistribution": {
-        "0": 0,
-        "1": 0.03,
-        "2": 0.61,
-        "3": 0.36,
         "4": 0
       }
     },

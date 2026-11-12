@@ -93,6 +93,42 @@ imply precision the model does not have.
 
 ## Identity and state
 
+### The corpus is scoped to the blueprint pages, not the whole documentation
+
+**Decision.** Question generation draws from the pages the official
+`isovalent/CCA-Study-Guide` links to plus the topics the 35-video CCA playlist
+covers. Everything else is excluded, and `verify.mjs` fails if a blueprint page
+that has eligible sections produces no questions.
+
+**Why.** The earlier broad scope (`network/**`, `security/**`, `operations/**`,
+`internals/**`) produced 685 questions of which **495 (72%) came from pages
+outside the study guide** — `internals/hubble.rst` (22 questions),
+`local-redirect-policy.rst` (21), `istio.rst` (19), `mcsapi.rst` (19),
+`kata.rst` (8). Eleven core overview pages produced **none**.
+
+Three compounding causes, all fixed:
+
+1. `includePaths` accepted whole directories.
+2. The generator sorted sections by `wordCount` descending, and in this
+   documentation the longest sections are troubleshooting, migration and
+   kernel-tuning. **338 of 685 questions came from 30 sections.**
+3. `minWords` of 120 dropped short overview subsections, so overview pages were
+   ineligible before generation even started.
+
+### A question carries a difficulty score, and the app has a slider
+
+**Decision.** SystemOne scores each question 1.00–5.00 with a five-level rubric,
+where **3.0 is the real exam**. Practice and exam simulation expose a slider
+defaulting to 3.0.
+
+**Why.** The corpus is a mixture: some questions are foundational recall and some
+are deep-dive. Throwing away the hard ones loses useful over-training material;
+shipping them without a marker means every session feels harder than the exam.
+The score lets the same corpus serve a warm-up and a stretch run.
+
+Not a gate. A question without a score is treated as 3.0, so a partial judging
+run never empties the app.
+
 ### A question may carry the material it asks about
 
 **Decision.** The data model has an optional `attachments` array holding a

@@ -14,7 +14,7 @@
  *   3. entail   — the correct option's distinctive words are in the cited
  *                 section, and the distractors' are not all in it too
  *   4. judge    — SystemOne classified it as good_exam_item (when judging ran)
- *   5. shape    — schema validity, no duplicate stems
+ *   5. shape    — schema validity, no duplicate ids or near-duplicate stems
  *
  * Overrides in overrides/*.json are applied by stable id. An override that
  * targets an id no longer present fails the build rather than rotting quietly.
@@ -149,7 +149,8 @@ async function main() {
   const corpus = [];
   const quarantine = [];
   const seenStems = [];
-  const stats = { anchor: 0, quote: 0, attachment: 0, entail: 0, judge: 0, unjudged: 0, shape: 0, duplicate: 0, accepted: 0 };
+  const seenIds = new Set();
+  const stats = { anchor: 0, quote: 0, attachment: 0, entail: 0, judge: 0, unjudged: 0, shape: 0, duplicate: 0, duplicateId: 0, accepted: 0 };
 
   for (const q of all) {
     let reason = checkShape(q);
@@ -195,6 +196,17 @@ async function main() {
       continue;
     }
 
+    // A duplicate id is not a duplicate question; it means two candidates were
+    // numbered from the same ordinal pool. The app keys progress and flags by
+    // id, so the second would silently overwrite the first. The generators now
+    // share one pool per rendered anchor; this gate is the backstop that keeps
+    // such a corpus from ever being committed again.
+    if (seenIds.has(q.id)) {
+      quarantine.push({ ...q, rejection: { gate: 'shape', reason: `duplicate-id:${q.id}` } });
+      stats.duplicateId += 1;
+      continue;
+    }
+
     const verdict = verdicts[q.id];
     if (JUDGE_REQUIRED && judgeRan) {
       // A judge that failed to return a verdict has not judged the question.
@@ -217,6 +229,7 @@ async function main() {
       }
     }
 
+    seenIds.add(q.id);
     seenStems.push(q.stem);
     corpus.push({
       ...q,
@@ -386,6 +399,10 @@ async function main() {
   }
   if (orphanOverrides.length) {
     problems.push(`overrides targeting missing ids: ${JSON.stringify(orphanOverrides)}`);
+  }
+  const duplicateIds = shipped.length - new Set(shipped.map((q) => q.id)).size;
+  if (duplicateIds) {
+    problems.push(`${duplicateIds} duplicate question ids in the shipped corpus`);
   }
   if (JUDGE_REQUIRED && judgeRan) {
     const unjudged = shipped.filter((q) => q.provenance.checks.judgeVerdict !== 'good_exam_item').length;

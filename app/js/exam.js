@@ -98,13 +98,16 @@ function difficultyControl() {
     },
   });
 
-  return el('div', { class: 'filter-group' }, [
-    el('div', { class: 'filter-label', text: 'Difficulty' }, [
-      el('span', { class: 'slider-scale', text: 'easier' }),
+  return el('div', { class: 'filter-group difficulty-group' }, [
+    el('div', { class: 'slider-head' }, [
+      el('span', { class: 'filter-label', text: 'Difficulty' }),
       output,
-      el('span', { class: 'slider-scale', text: 'harder' }),
     ]),
     input,
+    el('div', { class: 'slider-ends' }, [
+      el('span', { text: 'easier' }),
+      el('span', { text: 'harder' }),
+    ]),
     note,
   ]);
 }

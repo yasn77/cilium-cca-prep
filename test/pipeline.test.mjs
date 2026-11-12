@@ -9,7 +9,7 @@ const ROOT = path.resolve(import.meta.dirname, '..');
 // programs, so the logic they expose is re-implemented nowhere: these imports
 // exercise the same functions the pipeline calls.
 
-const { quotePresent, similarity, stableId, citationUrl, tokenise } = await import(
+const { quotePresent, similarity, stableId, idKey, citationUrl, tokenise } = await import(
   path.join(ROOT, 'tools', 'lib.mjs')
 );
 const { extractJson } = await import(path.join(ROOT, 'tools', 'llm.mjs'));
@@ -32,6 +32,33 @@ test('stableId is not derived from question text', () => {
   const before = stableId('f.rst', 'anchor', 2);
   const after = stableId('f.rst', 'anchor', 2);
   assert.equal(before, after);
+});
+
+test('idKey is the tuple stableId hashes, so ordinal pools and ids agree', () => {
+  // Merged sections share a rendered anchor. Both the ordinal pool and the id
+  // must be keyed by that anchor; keying one by section.id reintroduces the
+  // duplicate ids that broke the deploy.
+  assert.equal(idKey('security/policy/layer3.rst', 'ingress'), 'security/policy/layer3.rst|ingress');
+  const merged = ['#id1', '#ingress'].map((anchor, ordinal) =>
+    stableId('security/policy/layer3.rst', 'ingress', ordinal),
+  );
+  assert.equal(new Set(merged).size, merged.length, 'different ordinals get different ids');
+});
+
+test('committed candidates and corpus have unique question ids', async () => {
+  // Guards the deploy: a collision here means two questions share learner
+  // progress and one will overwrite the other in the app.
+  for (const name of ['templates.jsonl', 'ai.jsonl']) {
+    const raw = await readFile(path.join(ROOT, 'candidates', name), 'utf8');
+    const ids = raw
+      .split('\n')
+      .filter((l) => l.trim())
+      .map((l) => JSON.parse(l).id);
+    assert.equal(new Set(ids).size, ids.length, `${name} has duplicate ids`);
+  }
+  const corpus = JSON.parse(await readFile(path.join(ROOT, 'data', 'corpus.json'), 'utf8'));
+  const ids = corpus.questions.map((q) => q.id);
+  assert.equal(new Set(ids).size, ids.length, 'data/corpus.json has duplicate ids');
 });
 
 test('citationUrl builds a docs.cilium.io anchor link', () => {

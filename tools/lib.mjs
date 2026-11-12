@@ -9,17 +9,30 @@ import { docs } from './config.mjs';
 export const ROOT = path.resolve(import.meta.dirname, '..');
 
 /**
+ * The identity of a citation target, and therefore of the ordinal pool a
+ * question draws from.
+ *
+ * One entry point, because the id and the ordinal allocation must use the same
+ * tuple. When they diverged, several sections that resolve to one rendered
+ * anchor (a short section merged into its parent heading) each started their own
+ * ordinal sequence at 0 and minted identical ids.
+ */
+export function idKey(file, anchor) {
+  return `${file}|${anchor}`;
+}
+
+/**
  * Stable question id.
  *
  * Deliberately NOT derived from the stem text: a model re-run rewrites wording
  * on almost every generation, and an id that changes with the wording throws
  * away the learner's history, wrong-answer list and flags on every regeneration.
- * The identity of a question is "the nth question asked about this section", and
- * that is stable across rewording.
+ * The identity of a question is "the nth question asked about this rendered
+ * anchor", and that is stable across rewording.
  */
 export function stableId(file, anchor, ordinal) {
   return createHash('sha256')
-    .update(`${file}|${anchor}|${ordinal}`)
+    .update(`${idKey(file, anchor)}|${ordinal}`)
     .digest('hex')
     .slice(0, 16);
 }

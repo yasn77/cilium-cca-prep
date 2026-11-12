@@ -143,6 +143,20 @@ gh variable set TYPESAFE_BASE_URL
 Pages requires a public repository on the free plan. Once the repo is public the
 workflow publishes to `https://<owner>.github.io/cilium-cca-prep/`.
 
+## Difficulty
+
+Every question carries a SystemOne difficulty score from **1.0 to 5.0**, where
+**3.0 is the real exam**. Practice and exam simulation have a slider that
+defaults to the middle.
+
+- **Left** — warm-up, foundational recall
+- **Middle** — the real CCA exam
+- **Right** — harder than the exam, for over-training the deep-dive material
+
+Each question shows its score as a colour-coded badge, so a missed question can
+be judged as a stretch item rather than a knowledge gap. Difficulty is a
+calibration aid, not an official metric, and it never gates a question.
+
 ## What a question carries
 
 A question has a stem, four or five options, one answer, an explanation, a

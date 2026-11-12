@@ -21,6 +21,7 @@ import { docs, domains, quota, providers, blueprintFiles } from './config.mjs';
 import {
   ROOT,
   stableId,
+  idKey,
   citationUrl,
   readJson,
   writeJson,
@@ -316,12 +317,13 @@ async function main() {
   const templates = await readJsonl(TEMPLATES);
   const existing = await readJsonl(OUT);
   const existingBySection = new Map();
-  // Highest ordinal already used per section, taken from every candidate rather
-  // than only the self-contained ones. Deriving the ordinal from a count means
-  // two runs can hand out the same number: the count changes whenever the
-  // filtering in front of it changes, and the result is two questions sharing an
-  // id, which breaks learner progress and the schema check.
-  const maxOrdinalBySection = new Map();
+  // Highest ordinal already used per rendered anchor, taken from every candidate
+  // rather than only the self-contained ones. Keyed by file+anchor — the tuple
+  // stableId hashes — not by section.id. Short sections merged into a parent
+  // heading share a rendered anchor, and keying by section.id let each of them
+  // start its own ordinal sequence at 0, producing two questions with one id.
+  const maxOrdinalByGroup = new Map();
+  const countByGroup = new Map();
   // Templates count towards a section's yield as well. Without this the model
   // asks the same section for questions the template tier already produced, and
   // the verifier quarantines them as near-duplicates after paying for them.
@@ -333,18 +335,32 @@ async function main() {
   for (const r of [...templates, ...existing]) {
     const sid = r.provenance?.sectionId;
     if (!sid) continue;
+    const c = r.citations?.[0];
+    const group = c?.file && c?.anchor ? idKey(c.file, c.anchor) : sid;
+    countByGroup.set(group, (countByGroup.get(group) ?? 0) + 1);
     const ordinal = Number.isInteger(r.ordinal) ? r.ordinal : null;
     if (ordinal !== null) {
-      maxOrdinalBySection.set(sid, Math.max(maxOrdinalBySection.get(sid) ?? -1, ordinal));
+      maxOrdinalByGroup.set(group, Math.max(maxOrdinalByGroup.get(group) ?? -1, ordinal));
     }
     if (checkWording(r.stem)) continue;
     if (!existingBySection.has(sid)) existingBySection.set(sid, []);
     existingBySection.get(sid).push(r);
   }
-  // Where a section's ordinals are unknown (templates carry none), fall back to
-  // the count so earlier corpora keep working.
-  for (const [sid, list] of existingBySection) {
-    if (!maxOrdinalBySection.has(sid)) maxOrdinalBySection.set(sid, list.length - 1);
+  // Where a group's ordinals are unknown (legacy rows carry none), fall back to
+  // the number of candidates in the group, not any one section's count.
+  for (const [group, n] of countByGroup) {
+    if (!maxOrdinalByGroup.has(group)) maxOrdinalByGroup.set(group, n - 1);
+  }
+
+  // Ordinals are reserved per group for the whole run. Computing "max + 1 +
+  // acceptedForSection" per section instead would hand two sections that share
+  // a rendered anchor the same number.
+  const nextOrdinalByGroup = new Map();
+  function takeOrdinal(section) {
+    const group = idKey(section.file, section.renderedAnchor ?? section.anchor);
+    const next = nextOrdinalByGroup.get(group) ?? (maxOrdinalByGroup.get(group) ?? -1) + 1;
+    nextOrdinalByGroup.set(group, next + 1);
+    return next;
   }
 
   // Coverage so far, so we only generate where there is a deficit.
@@ -518,9 +534,9 @@ function blueprintRank(section) {
           continue;
         }
         v.row.provenance.docsSha = docsSha;
-        const nextOrdinal = (maxOrdinalBySection.get(section.id) ?? -1) + 1 + acceptedForSection;
+        const nextOrdinal = takeOrdinal(section);
         v.row.ordinal = nextOrdinal;
-        v.row.id = stableId(section.file, section.renderedAnchor, nextOrdinal);
+        v.row.id = stableId(section.file, section.renderedAnchor ?? section.anchor, nextOrdinal);
         v.row.domain = section.domain;
         v.row.competency = section.competency ?? null;
         v.row.type = 'single';

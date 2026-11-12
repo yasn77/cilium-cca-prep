@@ -158,7 +158,7 @@ function renderSetup() {
       el('div', { class: 'card' }, [
         el('div', { class: 'stat-grid', style: 'margin:0' }, [
           el('div', { class: 'stat' }, [
-            el('div', { class: 'stat-value', text: String(available) }),
+            el('div', { class: 'stat-value', id: 'matchCount', text: String(available) }),
             el('div', { class: 'stat-label', text: 'matching' }),
           ]),
           el('div', { class: 'stat' }, [
@@ -214,16 +214,23 @@ function difficultyControl() {
       const t = difficultyTier(filters.difficulty);
       output.textContent = filters.difficulty.toFixed(1);
       note.textContent = `${t.label} — ${t.note}`;
+      // The pool depends on this, so the count has to follow the slider or it
+      // lies about how many questions the filters actually match.
+      const count = document.getElementById('matchCount');
+      if (count) count.textContent = String(pool().length);
     },
   });
 
-  return el('div', { class: 'filter-group' }, [
-    el('div', { class: 'filter-label', text: 'Difficulty' }, [
-      el('span', { class: 'slider-scale', text: 'easier' }),
+  return el('div', { class: 'filter-group difficulty-group' }, [
+    el('div', { class: 'slider-head' }, [
+      el('span', { class: 'filter-label', text: 'Difficulty' }),
       output,
-      el('span', { class: 'slider-scale', text: 'harder' }),
     ]),
     input,
+    el('div', { class: 'slider-ends' }, [
+      el('span', { text: 'easier' }),
+      el('span', { text: 'harder' }),
+    ]),
     note,
   ]);
 }

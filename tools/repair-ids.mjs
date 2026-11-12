@@ -18,7 +18,7 @@
  *   node tools/repair-ids.mjs --write
  */
 import path from 'node:path';
-import { ROOT, readJsonl, writeJsonl, stableId, log } from './lib.mjs';
+import { ROOT, readJsonl, writeJsonl, stableId, idKey, log } from './lib.mjs';
 
 const WRITE = process.argv.includes('--write');
 const FILES = ['templates.jsonl', 'ai.jsonl'].map((f) => path.join(ROOT, 'candidates', f));
@@ -29,11 +29,12 @@ async function main() {
     for (const row of await readJsonl(file)) before.push({ file, row });
   }
 
-  const counts = new Map();
-  for (const { row } of before) {
-    const key = row.provenance?.sectionId ?? `${row.citations?.[0]?.file}#${row.citations?.[0]?.anchor}`;
-    counts.set(key, (counts.get(key) ?? 0) + 1);
-  }
+  // Group by the tuple stableId hashes, not by section.id: merged sections share
+  // a rendered anchor and therefore share one ordinal pool.
+  const keyOf = (row) => {
+    const c = row.citations?.[0];
+    return c?.file && c?.anchor ? idKey(c.file, c.anchor) : (row.provenance?.sectionId ?? 'unknown');
+  };
 
   // Snapshot before any mutation: counting duplicates afterwards reads the new
   // ids and always reports zero, which silently skipped the repair.
@@ -44,7 +45,7 @@ async function main() {
   const nextOrdinal = new Map();
 
   for (const { row } of before) {
-    const key = row.provenance?.sectionId ?? `${row.citations?.[0]?.file}#${row.citations?.[0]?.anchor}`;
+    const key = keyOf(row);
     const file = row.citations?.[0]?.file ?? 'unknown';
     const anchor = row.citations?.[0]?.anchor ?? 'unknown';
 

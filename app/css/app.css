@@ -576,21 +576,27 @@ a.res-card:hover { border-color: var(--accent); background: color-mix(in srgb, v
 
 /* ---------- difficulty slider ---------- */
 
-.filter-label .slider-scale {
-  font-size: 0.62rem;
-  letter-spacing: 0.05em;
-  color: var(--fg-faint);
-  font-weight: 400;
+.difficulty-group { margin-bottom: 20px; }
+
+.slider-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
 }
-.filter-label .slider-value {
+.slider-value {
   color: var(--accent);
   font-weight: 700;
+  font-size: 0.95rem;
   font-variant-numeric: tabular-nums;
 }
-.filter-label {
+.slider-ends {
   display: flex;
-  align-items: center;
-  gap: 8px;
+  justify-content: space-between;
+  font-size: 0.68rem;
+  color: var(--fg-faint);
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
 }
 
 .difficulty-slider {

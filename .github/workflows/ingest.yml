@@ -118,7 +118,7 @@ jobs:
         run: node tools/judge-llm.mjs
 
       - name: Verify and build the corpus
-        run: node tools/verify.mjs --enforce-floor --strict
+        run: node tools/verify.mjs --enforce-floor --enforce-blueprint --strict
 
       - name: Build the evaluation set
         run: node tools/blind-set.mjs

@@ -9,7 +9,7 @@ const ROOT = path.resolve(import.meta.dirname, '..');
 // programs, so the logic they expose is re-implemented nowhere: these imports
 // exercise the same functions the pipeline calls.
 
-const { quotePresent, similarity, stableId, idKey, citationUrl, tokenise } = await import(
+const { quotePresent, similarity, stableId, idKey, ordinalPool, citationUrl, tokenise } = await import(
   path.join(ROOT, 'tools', 'lib.mjs')
 );
 const { extractJson } = await import(path.join(ROOT, 'tools', 'llm.mjs'));
@@ -43,6 +43,39 @@ test('idKey is the tuple stableId hashes, so ordinal pools and ids agree', () =>
     stableId('security/policy/layer3.rst', 'ingress', ordinal),
   );
   assert.equal(new Set(merged).size, merged.length, 'different ordinals get different ids');
+});
+
+test('ordinalPool hands one sequence per rendered anchor', () => {
+  const pool = ordinalPool();
+  assert.deepEqual(
+    [pool.take('a.rst', 'shared'), pool.take('a.rst', 'shared'), pool.take('a.rst', 'shared')],
+    [0, 1, 2],
+    'the same anchor continues one sequence',
+  );
+  assert.equal(pool.take('a.rst', 'other'), 0, 'a different anchor starts at 0');
+  assert.equal(pool.take('b.rst', 'shared'), 0, 'the file is part of the key');
+
+  const seeded = ordinalPool(new Map([[idKey('a.rst', 'shared'), 5]]));
+  assert.deepEqual(
+    [seeded.take('a.rst', 'shared'), seeded.take('a.rst', 'shared')],
+    [6, 7],
+    'a seeded pool continues after the highest id already in use',
+  );
+});
+
+test('sections merged into one anchor cannot mint the same id', () => {
+  // Regression for the deploy break: #id1 and #ingress both resolve to the
+  // rendered anchor "ingress", so each used to start its own ordinal at 0.
+  const pool = ordinalPool();
+  const sections = [
+    { file: 'security/policy/layer3.rst', renderedAnchor: 'ingress' },
+    { file: 'security/policy/layer3.rst', renderedAnchor: 'ingress' },
+  ];
+  const ids = sections.map((s) => {
+    const ordinal = pool.take(s.file, s.renderedAnchor);
+    return stableId(s.file, s.renderedAnchor, ordinal);
+  });
+  assert.equal(new Set(ids).size, ids.length);
 });
 
 test('committed candidates and corpus have unique question ids', async () => {

@@ -37,6 +37,27 @@ export function stableId(file, anchor, ordinal) {
     .slice(0, 16);
 }
 
+/**
+ * Hand out question ordinals, one sequence per rendered anchor.
+ *
+ * The allocator is the other half of stableId: it must be keyed by exactly the
+ * tuple stableId hashes. Two sections can resolve to the same rendered anchor
+ * (a short section merged into its parent heading), so a per-section counter
+ * hands both ordinal 0 and mints the same id. `initial` seeds the pool with the
+ * highest ordinal already in use, keyed by idKey.
+ */
+export function ordinalPool(initial = new Map()) {
+  const next = new Map();
+  return {
+    take(file, anchor) {
+      const key = idKey(file, anchor);
+      const value = next.get(key) ?? (initial.get(key) ?? -1) + 1;
+      next.set(key, value + 1);
+      return value;
+    },
+  };
+}
+
 /** The public URL of a citation, used both in the app and in link checking. */
 export function citationUrl(file, anchor) {
   return `${docs.liveBase}/${file.replace(/\.rst$/, '/')}#${anchor}`;

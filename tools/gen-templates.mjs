@@ -21,7 +21,7 @@
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { docs, chunking, domains } from './config.mjs';
-import { ROOT, stableId, idKey, citationUrl, readJson, writeJsonl, log, normaliseSpace } from './lib.mjs';
+import { ROOT, stableId, ordinalPool, citationUrl, readJson, writeJsonl, log, normaliseSpace } from './lib.mjs';
 
 const SECTIONS = path.join(ROOT, 'corpus', 'sections.json');
 const OUT = path.join(ROOT, 'candidates', 'templates.jsonl');
@@ -329,9 +329,9 @@ function shuffle(arr, seedStr) {
   return a;
 }
 
-function withOrdinal(section, rows, takeOrdinal) {
+function withOrdinal(section, rows, ordinals) {
   return rows.map((r) => {
-    const ordinal = takeOrdinal(section);
+    const ordinal = ordinals.take(section.file, section.renderedAnchor ?? section.anchor);
     return {
       id: stableId(section.file, section.renderedAnchor ?? section.anchor, ordinal),
       ordinal,
@@ -366,13 +366,7 @@ async function main() {
   // One ordinal pool per rendered anchor, not per section. Sections that resolve
   // to the same anchor (a short section merged into its parent heading) would
   // otherwise both number from 0 and mint the same stableId.
-  const nextOrdinalByGroup = new Map();
-  function takeOrdinal(section) {
-    const group = idKey(section.file, section.renderedAnchor ?? section.anchor);
-    const next = nextOrdinalByGroup.get(group) ?? 0;
-    nextOrdinalByGroup.set(group, next + 1);
-    return next;
-  }
+  const ordinals = ordinalPool();
 
   for (const section of usable) {
     const seenTerms = new Set();
@@ -521,7 +515,7 @@ async function main() {
 
     if (!rows.length) continue;
 
-    const withIds = withOrdinal(section, rows, takeOrdinal);
+    const withIds = withOrdinal(section, rows, ordinals);
     for (const r of withIds) {
       candidates.push({
         ...r,

@@ -22,6 +22,7 @@ import {
   ROOT,
   stableId,
   idKey,
+  ordinalPool,
   citationUrl,
   readJson,
   writeJson,
@@ -352,16 +353,10 @@ async function main() {
     if (!maxOrdinalByGroup.has(group)) maxOrdinalByGroup.set(group, n - 1);
   }
 
-  // Ordinals are reserved per group for the whole run. Computing "max + 1 +
-  // acceptedForSection" per section instead would hand two sections that share
-  // a rendered anchor the same number.
-  const nextOrdinalByGroup = new Map();
-  function takeOrdinal(section) {
-    const group = idKey(section.file, section.renderedAnchor ?? section.anchor);
-    const next = nextOrdinalByGroup.get(group) ?? (maxOrdinalByGroup.get(group) ?? -1) + 1;
-    nextOrdinalByGroup.set(group, next + 1);
-    return next;
-  }
+  // Ordinals are reserved per rendered anchor for the whole run. Computing
+  // "max + 1 + acceptedForSection" per section instead would hand two sections
+  // that share an anchor the same number.
+  const ordinals = ordinalPool(maxOrdinalByGroup);
 
   // Coverage so far, so we only generate where there is a deficit.
   //
@@ -534,7 +529,7 @@ function blueprintRank(section) {
           continue;
         }
         v.row.provenance.docsSha = docsSha;
-        const nextOrdinal = takeOrdinal(section);
+        const nextOrdinal = ordinals.take(section.file, section.renderedAnchor ?? section.anchor);
         v.row.ordinal = nextOrdinal;
         v.row.id = stableId(section.file, section.renderedAnchor ?? section.anchor, nextOrdinal);
         v.row.domain = section.domain;

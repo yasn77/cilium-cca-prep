@@ -218,7 +218,10 @@ appears in the app's Review tab.
 `docs/RESOURCES.md` has a verified list: the three Cilium Week sessions, the
 Isovalent CCA playlist, the free labs, and a nine-day plan. Every link was
 checked for status and duration, and the ones that look free but are not
-(KodeKloud's Pro-only course, the dead edX listing) are called out.
+(KodeKloud's Pro-only course, the dead edX listing) are called out. Re-run the
+check with `npm run verify:links`, adding `--titles` to compare every Isovalent
+lab title against the live site. The same links drive the Learn tab, from
+`data/guide.json`.
 
 ## The evaluation set
 

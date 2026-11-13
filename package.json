@@ -19,6 +19,7 @@
     "blind": "node tools/blind-set.mjs",
     "report": "node tools/report.mjs",
     "validate": "node tools/validate.mjs",
+    "verify:links": "node tools/verify-links.mjs",
     "test": "node --test \"test/*.test.mjs\"",
     "pipeline": "npm run docs && npm run chunk && npm run anchors && npm run gen:templates && npm run gen:ai && npm run judge && npm run verify && npm run report && npm run validate",
     "serve": "node tools/serve.mjs"

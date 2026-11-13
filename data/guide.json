@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "title": "One-week study plan",
   "intro": "Seven days, about two hours a day. The free videos give you coverage, the browser labs give you hands-on, and the app gives you recall and timing. Nothing here needs a cluster of your own.",
-  "verifiedOn": "2026-11-08",
+  "verifiedOn": "2026-11-13",
   "note": "Every link was checked for status, title and duration on the date above. Where something looks free but is not, that is stated.",
   "days": [
     {
@@ -25,6 +25,13 @@
           "meta": "Browser lab · free",
           "url": "https://isovalent.com/labs/cilium-getting-started/",
           "why": "Installs Cilium and runs the connectivity test. The exam asks what cilium status and cilium connectivity test actually do."
+        },
+        {
+          "kind": "lab",
+          "title": "Cilium IPAM",
+          "meta": "Browser lab · free",
+          "url": "https://isovalent.com/labs/cilium-ipam/",
+          "why": "IPAM is a named architecture competency. Tunnelling versus direct routing, and where pod addresses actually come from."
         },
         {
           "kind": "practise",
@@ -71,17 +78,24 @@
       "items": [
         {
           "kind": "lab",
-          "title": "Cilium Network Policies",
+          "title": "Isovalent Enterprise: Network Policies",
           "meta": "Browser lab · free",
           "url": "https://isovalent.com/labs/cilium-network-policies/",
-          "why": "Default deny, then L3/L4, then L7 and DNS. The exact progression the exam tests."
+          "why": "Namespaced and cluster-wide rules, explicit-deny precedence and HTTP L7 behaviour, checked with Hubble. The lab has been refreshed with Enterprise tooling (Timescape, Isopolicy); the policy composition and L7 verdicts are the CCA-relevant parts."
         },
         {
           "kind": "lab",
-          "title": "IPv6 Networking and Observability",
+          "title": "Cilium IPv6 Networking and Observability",
           "meta": "Browser lab · free",
           "url": "https://isovalent.com/labs/cilium-ipv6/",
           "why": "Hubble flows, filters and verdicts, including the drop reasons."
+        },
+        {
+          "kind": "lab",
+          "title": "Golden Signals with Hubble and Grafana",
+          "meta": "Browser lab · free",
+          "url": "https://isovalent.com/labs/hubble-grafana-golden-signals/",
+          "why": "L7 protocol visibility is a named observability competency, and this lab shows it becoming metrics without touching the app."
         },
         {
           "kind": "read",
@@ -121,7 +135,7 @@
         },
         {
           "kind": "lab",
-          "title": "Transparent Encryption with IPsec and WireGuard",
+          "title": "Cilium Transparent Encryption with IPSec and WireGuard",
           "meta": "Browser lab · free",
           "url": "https://isovalent.com/labs/cilium-transparent-encryption-with-ipsec-and-wireguard/",
           "why": "Encryption in transit is a named competency, and IPsec versus WireGuard is a favourite distinction."
@@ -179,10 +193,17 @@
       "items": [
         {
           "kind": "lab",
-          "title": "Getting Started with eBPF",
+          "title": "Getting started with eBPF",
           "meta": "Browser lab · free",
           "url": "https://isovalent.com/labs/ebpf-getting-started/",
           "why": "Programs, maps and hook points, which is what the exam asks about."
+        },
+        {
+          "kind": "lab",
+          "title": "eBPF Networking",
+          "meta": "Browser lab · free",
+          "url": "https://isovalent.com/labs/ebpf-networking/",
+          "why": "Hook points for packet processing and load balancing — the side of eBPF the versus-iptables questions are about. Do this before the opensnoop warm-up if time is short."
         },
         {
           "kind": "read",
@@ -284,7 +305,12 @@
           "url": "https://isovalent.com/labs/cilium-getting-started/"
         },
         {
-          "title": "Cilium Network Policies",
+          "title": "Cilium IPAM",
+          "meta": "Architecture, IPAM",
+          "url": "https://isovalent.com/labs/cilium-ipam/"
+        },
+        {
+          "title": "Isovalent Enterprise: Network Policies",
           "meta": "Network Policy",
           "url": "https://isovalent.com/labs/cilium-network-policies/"
         },
@@ -299,19 +325,24 @@
           "url": "https://isovalent.com/labs/cilium-gateway-api/"
         },
         {
-          "title": "Advanced Gateway API",
+          "title": "Advanced Gateway API Use Cases",
           "meta": "Service Mesh",
           "url": "https://isovalent.com/labs/cilium-gateway-api-advanced/"
         },
         {
-          "title": "Transparent Encryption with IPsec and WireGuard",
+          "title": "Cilium Transparent Encryption with IPSec and WireGuard",
           "meta": "Service Mesh",
           "url": "https://isovalent.com/labs/cilium-transparent-encryption-with-ipsec-and-wireguard/"
         },
         {
-          "title": "IPv6 Networking and Observability",
+          "title": "Cilium IPv6 Networking and Observability",
           "meta": "Observability",
           "url": "https://isovalent.com/labs/cilium-ipv6/"
+        },
+        {
+          "title": "Golden Signals with Hubble and Grafana",
+          "meta": "Observability",
+          "url": "https://isovalent.com/labs/hubble-grafana-golden-signals/"
         },
         {
           "title": "Cilium Cluster Mesh",
@@ -319,9 +350,14 @@
           "url": "https://isovalent.com/labs/cilium-cluster-mesh/"
         },
         {
-          "title": "Getting Started with eBPF",
+          "title": "Getting started with eBPF",
           "meta": "eBPF",
           "url": "https://isovalent.com/labs/ebpf-getting-started/"
+        },
+        {
+          "title": "eBPF Networking",
+          "meta": "eBPF",
+          "url": "https://isovalent.com/labs/ebpf-networking/"
         },
         {
           "title": "BGP on Cilium",
@@ -329,7 +365,7 @@
           "url": "https://isovalent.com/labs/cilium-bgp/"
         },
         {
-          "title": "LB IPAM and BGP Service Advertisement",
+          "title": "Cilium LoadBalancer IPAM and BGP Service Advertisement",
           "meta": "BGP",
           "url": "https://isovalent.com/labs/cilium-lb-ipam-bgp/"
         },
@@ -339,12 +375,12 @@
           "url": "https://isovalent.com/labs/cilium-bgp-advanced/"
         },
         {
-          "title": "Egress Gateway",
+          "title": "Cilium Egress Gateway",
           "meta": "BGP, egress",
           "url": "https://isovalent.com/labs/cilium-egress-gateway/"
         },
         {
-          "title": "LB IPAM and L2 Announcements",
+          "title": "Cilium LoadBalancer IPAM and L2 Service Announcement",
           "meta": "BGP, L2",
           "url": "https://isovalent.com/labs/cilium-lb-ipam-l2-announcements/"
         }
@@ -360,10 +396,10 @@
           "note": "The primary reference for the exam, and the source this app's questions are generated from."
         },
         {
-          "title": "CNCF CCA curriculum",
-          "meta": "Official syllabus, PDF",
-          "url": "https://github.com/cncf/curriculum/blob/main/cca/CCA_Curriculum.pdf",
-          "note": "The eight domains and their weights, straight from the publisher."
+          "title": "Linux Foundation CCA exam page",
+          "meta": "Official blueprint",
+          "url": "https://training.linuxfoundation.org/certification/cilium-certified-associate-cca/",
+          "note": "The eight domains and their weights, straight from the publisher. The CNCF curriculum repository's CCA PDF has been removed; its README still carries a five-domain draft that predates the published blueprint."
         },
         {
           "title": "Isovalent CCA Study Guide",

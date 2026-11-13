@@ -1,6 +1,6 @@
 # Free courses and resources
 
-Every link here was checked on **2026-11-08**: the HTTP status, the title, the
+Every link here was checked on **2026-11-13**: the HTTP status, the title, the
 channel, and the duration where it matters. Where something turned out not to be
 free, that is said rather than left implied.
 
@@ -58,24 +58,27 @@ app's exam simulation.
 <https://isovalent.com/labs/> — the exam's creator names these as his top
 recommendation. Browser-based, so no cluster to build.
 
-Verified working on 2026-11-08:
+Verified working on 2026-11-13:
 
 | Lab | Domain |
 |---|---|
 | [Getting Started with Cilium](https://isovalent.com/labs/cilium-getting-started/) | Architecture, Installation |
-| [Cilium Network Policies](https://isovalent.com/labs/cilium-network-policies/) | Network Policy |
+| [Cilium IPAM](https://isovalent.com/labs/cilium-ipam/) | Architecture, IPAM |
+| [Isovalent Enterprise: Network Policies](https://isovalent.com/labs/cilium-network-policies/) | Network Policy |
 | [Cilium Ingress Controller](https://isovalent.com/labs/cilium-ingress-controller/) | Service Mesh |
 | [Cilium Gateway API](https://isovalent.com/labs/cilium-gateway-api/) | Service Mesh |
-| [Advanced Gateway API](https://isovalent.com/labs/cilium-gateway-api-advanced/) | Service Mesh |
-| [Transparent Encryption with IPsec and WireGuard](https://isovalent.com/labs/cilium-transparent-encryption-with-ipsec-and-wireguard/) | Service Mesh |
-| [IPv6 Networking and Observability](https://isovalent.com/labs/cilium-ipv6/) | Observability |
-| [Cluster Mesh](https://isovalent.com/labs/cilium-cluster-mesh/) | Cluster Mesh |
-| [Getting Started with eBPF](https://isovalent.com/labs/ebpf-getting-started/) | eBPF |
+| [Advanced Gateway API Use Cases](https://isovalent.com/labs/cilium-gateway-api-advanced/) | Service Mesh |
+| [Cilium Transparent Encryption with IPSec and WireGuard](https://isovalent.com/labs/cilium-transparent-encryption-with-ipsec-and-wireguard/) | Service Mesh |
+| [Cilium IPv6 Networking and Observability](https://isovalent.com/labs/cilium-ipv6/) | Observability |
+| [Golden Signals with Hubble and Grafana](https://isovalent.com/labs/hubble-grafana-golden-signals/) | Observability |
+| [Cilium Cluster Mesh](https://isovalent.com/labs/cilium-cluster-mesh/) | Cluster Mesh |
+| [Getting started with eBPF](https://isovalent.com/labs/ebpf-getting-started/) | eBPF |
+| [eBPF Networking](https://isovalent.com/labs/ebpf-networking/) | eBPF |
 | [BGP on Cilium](https://isovalent.com/labs/cilium-bgp/) | BGP |
-| [LB IPAM and BGP Service Advertisement](https://isovalent.com/labs/cilium-lb-ipam-bgp/) | BGP |
+| [Cilium LoadBalancer IPAM and BGP Service Advertisement](https://isovalent.com/labs/cilium-lb-ipam-bgp/) | BGP |
 | [Advanced BGP Features](https://isovalent.com/labs/cilium-bgp-advanced/) | BGP |
-| [Egress Gateway](https://isovalent.com/labs/cilium-egress-gateway/) | BGP, egress |
-| [LB IPAM and L2 Announcements](https://isovalent.com/labs/cilium-lb-ipam-l2-announcements/) | BGP |
+| [Cilium Egress Gateway](https://isovalent.com/labs/cilium-egress-gateway/) | BGP, egress |
+| [Cilium LoadBalancer IPAM and L2 Service Announcement](https://isovalent.com/labs/cilium-lb-ipam-l2-announcements/) | BGP |
 
 A mutual-authentication lab is listed in the study guide but its URL now 404s —
 the lab appears to have been retired.
@@ -98,8 +101,10 @@ redistribution while the Cilium docs do not.
 
 - [Cilium documentation](https://docs.cilium.io/en/stable/) — the primary
   reference for the exam, and the source this app's corpus is generated from.
-- [CNCF CCA curriculum](https://github.com/cncf/curriculum/blob/main/cca/CCA_Curriculum.pdf)
-  — the official syllabus.
+- [Linux Foundation CCA exam page](https://training.linuxfoundation.org/certification/cilium-certified-associate-cca/)
+  — the official blueprint: eight domains at 20/18/16/10/10/10/10/6. The CNCF
+  curriculum repository's CCA PDF has been removed; its README still lists a
+  stale five-domain draft that predates the published blueprint.
 - [KubeDojo CCA path](https://kube-dojo.github.io/k8s/cca/) — free, maps the
   domains to modules. Its stated pass mark of 66% is **wrong**; the published
   mark is 75%.
